@@ -1,0 +1,346 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { useParams } from "next/navigation";
+import { getQuestionById } from "@/data/questions";
+import { getCompanyBySlug } from "@/data/companies";
+import { QUESTION_TYPE_LABELS } from "@/types";
+import { TranscriptEntry } from "@/hooks/useVoiceSession";
+
+interface SessionData {
+  questionId: string;
+  transcript: TranscriptEntry[];
+  duration: number;
+}
+
+interface Assessment {
+  overallScore: number;
+  scores: {
+    structure: number;
+    problemSolving: number;
+    businessJudgment: number;
+    communication: number;
+    quantitative: number;
+    creativity: number;
+  };
+  feedback: string;
+  strengths: string[];
+  improvements: string[];
+}
+
+export default function AssessmentPage() {
+  const params = useParams();
+  const questionId = params.questionId as string;
+  const question = getQuestionById(questionId);
+  const company = question ? getCompanyBySlug(question.companySlug) : null;
+
+  const [sessionData, setSessionData] = useState<SessionData | null>(null);
+  const [assessment, setAssessment] = useState<Assessment | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchAssessment = async () => {
+      // Get session data from sessionStorage
+      const stored = sessionStorage.getItem("lastSession");
+      if (!stored) {
+        setLoading(false);
+        return;
+      }
+
+      const data = JSON.parse(stored) as SessionData;
+      setSessionData(data);
+
+      // Check if we have a valid transcript
+      if (!data.transcript || data.transcript.length === 0) {
+        setError("No transcript available for assessment");
+        setLoading(false);
+        return;
+      }
+
+      try {
+        // Call the AI assessment API
+        const response = await fetch("/api/assessment", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            transcript: data.transcript,
+            questionTitle: question?.title || "Unknown",
+            questionType: question ? QUESTION_TYPE_LABELS[question.type] : "Unknown",
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error("Failed to generate assessment");
+        }
+
+        const assessmentData = await response.json();
+        setAssessment(assessmentData);
+
+        // Try to save session to database (optional - won't fail if Supabase not configured)
+        try {
+          await fetch("/api/sessions", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              companySlug: question?.companySlug,
+              questionId: question?.id,
+              questionTitle: question?.title,
+              questionType: question?.type,
+              transcript: data.transcript,
+              durationSeconds: data.duration,
+            }),
+          });
+        } catch (saveError) {
+          console.log("Could not save to database:", saveError);
+        }
+      } catch (err) {
+        console.error("Assessment error:", err);
+        setError("Failed to generate assessment. Please try again.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAssessment();
+  }, [question]);
+
+  const formatDuration = (seconds: number) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins}:${secs.toString().padStart(2, "0")}`;
+  };
+
+  if (!question) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <p className="text-gray-600">Question not found</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <header className="bg-white border-b border-gray-200">
+        <div className="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+          <Link
+            href={`/company/${question.companySlug}`}
+            className="text-sm text-blue-600 hover:underline"
+          >
+            ← Back to {company?.name}
+          </Link>
+          <Link
+            href="/history"
+            className="text-sm text-gray-600 hover:text-gray-900"
+          >
+            View History
+          </Link>
+        </div>
+      </header>
+
+      <main className="max-w-4xl mx-auto px-4 py-8">
+        {/* Title */}
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">
+            Interview Assessment
+          </h1>
+          <p className="text-gray-600">
+            {question.title} • {sessionData ? formatDuration(sessionData.duration) : "--:--"} session
+          </p>
+        </div>
+
+        {loading ? (
+          <div className="text-center py-12">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+            <p className="text-gray-600">Analyzing your performance with AI...</p>
+            <p className="text-sm text-gray-500 mt-2">This may take a few seconds</p>
+          </div>
+        ) : error ? (
+          <div className="text-center py-12 bg-white rounded-xl border border-gray-200">
+            <p className="text-red-600 mb-4">{error}</p>
+            <Link
+              href={`/practice/${questionId}`}
+              className="text-blue-600 hover:underline"
+            >
+              Start a new practice session
+            </Link>
+          </div>
+        ) : !sessionData ? (
+          <div className="text-center py-12 bg-white rounded-xl border border-gray-200">
+            <p className="text-gray-600 mb-4">No session data found.</p>
+            <Link
+              href={`/practice/${questionId}`}
+              className="text-blue-600 hover:underline"
+            >
+              Start a new practice session
+            </Link>
+          </div>
+        ) : assessment ? (
+          <div className="space-y-6">
+            {/* Overall Score */}
+            <div className="bg-white rounded-xl border border-gray-200 p-6">
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-xl font-semibold text-gray-900">
+                  Overall Score
+                </h2>
+                <div className="flex items-center gap-2">
+                  <ScoreRing score={assessment.overallScore} />
+                  <div className="text-4xl font-bold text-blue-600">
+                    {assessment.overallScore.toFixed(1)}
+                    <span className="text-lg text-gray-400">/5</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Score Breakdown */}
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <ScoreItem label="Structure" score={assessment.scores.structure} weight="25%" />
+                <ScoreItem label="Problem Solving" score={assessment.scores.problemSolving} weight="20%" />
+                <ScoreItem label="Business Judgment" score={assessment.scores.businessJudgment} weight="20%" />
+                <ScoreItem label="Communication" score={assessment.scores.communication} weight="15%" />
+                <ScoreItem label="Quantitative" score={assessment.scores.quantitative} weight="10%" />
+                <ScoreItem label="Creativity" score={assessment.scores.creativity} weight="10%" />
+              </div>
+            </div>
+
+            {/* Feedback */}
+            <div className="bg-white rounded-xl border border-gray-200 p-6">
+              <h2 className="text-xl font-semibold text-gray-900 mb-4">
+                AI Feedback
+              </h2>
+              <p className="text-gray-700 leading-relaxed">{assessment.feedback}</p>
+            </div>
+
+            {/* Strengths & Improvements */}
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-white rounded-xl border border-gray-200 p-6">
+                <h2 className="text-lg font-semibold text-green-700 mb-4 flex items-center gap-2">
+                  <span className="text-xl">✓</span> Strengths
+                </h2>
+                <ul className="space-y-3">
+                  {assessment.strengths.map((item, i) => (
+                    <li key={i} className="text-gray-700 flex items-start gap-2">
+                      <span className="text-green-500 mt-1">•</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="bg-white rounded-xl border border-gray-200 p-6">
+                <h2 className="text-lg font-semibold text-orange-700 mb-4 flex items-center gap-2">
+                  <span className="text-xl">↑</span> Areas to Improve
+                </h2>
+                <ul className="space-y-3">
+                  {assessment.improvements.map((item, i) => (
+                    <li key={i} className="text-gray-700 flex items-start gap-2">
+                      <span className="text-orange-500 mt-1">•</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Transcript */}
+            <div className="bg-white rounded-xl border border-gray-200 p-6">
+              <h2 className="text-xl font-semibold text-gray-900 mb-4">
+                Session Transcript
+              </h2>
+              <div className="space-y-4 max-h-96 overflow-y-auto">
+                {sessionData.transcript.map((entry, i) => (
+                  <div key={i}>
+                    <div className="text-xs font-medium text-gray-500 mb-1">
+                      {entry.role === "user" ? "You" : "AI Interviewer"}
+                    </div>
+                    <p
+                      className={`text-gray-700 p-3 rounded-lg ${
+                        entry.role === "user"
+                          ? "bg-blue-50 border-l-4 border-blue-400"
+                          : "bg-gray-50 border-l-4 border-gray-300"
+                      }`}
+                    >
+                      {entry.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Actions */}
+            <div className="flex gap-4 justify-center pt-4">
+              <Link
+                href={`/practice/${questionId}`}
+                className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+              >
+                Practice Again
+              </Link>
+              <Link
+                href={`/company/${question.companySlug}`}
+                className="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition-colors"
+              >
+                Try Another Question
+              </Link>
+            </div>
+          </div>
+        ) : null}
+      </main>
+    </div>
+  );
+}
+
+function ScoreRing({ score }: { score: number }) {
+  const percentage = (score / 5) * 100;
+  const circumference = 2 * Math.PI * 20;
+  const strokeDashoffset = circumference - (percentage / 100) * circumference;
+
+  const getColor = (s: number) => {
+    if (s >= 4) return "#22c55e";
+    if (s >= 3) return "#eab308";
+    return "#ef4444";
+  };
+
+  return (
+    <svg width="50" height="50" className="-rotate-90">
+      <circle
+        cx="25"
+        cy="25"
+        r="20"
+        fill="none"
+        stroke="#e5e7eb"
+        strokeWidth="4"
+      />
+      <circle
+        cx="25"
+        cy="25"
+        r="20"
+        fill="none"
+        stroke={getColor(score)}
+        strokeWidth="4"
+        strokeDasharray={circumference}
+        strokeDashoffset={strokeDashoffset}
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+function ScoreItem({ label, score, weight }: { label: string; score: number; weight: string }) {
+  const getColor = (s: number) => {
+    if (s >= 4) return "text-green-600 bg-green-50 border-green-200";
+    if (s >= 3) return "text-yellow-600 bg-yellow-50 border-yellow-200";
+    return "text-red-600 bg-red-50 border-red-200";
+  };
+
+  return (
+    <div className={`flex items-center justify-between p-3 rounded-lg border ${getColor(score)}`}>
+      <div>
+        <span className="text-sm font-medium">{label}</span>
+        <span className="text-xs text-gray-500 ml-1">({weight})</span>
+      </div>
+      <span className="font-bold">{score}/5</span>
+    </div>
+  );
+}
