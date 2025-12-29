@@ -541,8 +541,8 @@ export default function VideoSession({ question, userStream, onBack }: VideoSess
               End Interview?
             </h3>
             <p className="text-white/60 mb-6">
-              You&apos;ll receive your assessment and feedback after ending the
-              interview.
+              Your session will be saved and you&apos;ll receive an AI
+              assessment of your performance.
             </p>
             <div className="flex gap-3">
               <button
@@ -553,9 +553,9 @@ export default function VideoSession({ question, userStream, onBack }: VideoSess
               </button>
               <button
                 onClick={confirmEnd}
-                className="flex-1 px-4 py-2.5 bg-red-500 hover:bg-red-600 text-white rounded-xl transition-colors"
+                className="flex-1 px-4 py-2.5 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-[#0f172a] rounded-xl font-medium transition-colors"
               >
-                End & Get Feedback
+                End & Get Assessment
               </button>
             </div>
           </div>

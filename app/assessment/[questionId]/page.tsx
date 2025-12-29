@@ -42,8 +42,12 @@ export default function AssessmentPage() {
 
   useEffect(() => {
     const fetchAssessment = async () => {
-      // Get session data from sessionStorage
-      const stored = sessionStorage.getItem("lastSession");
+      // Get session data from sessionStorage (check both audio and video storage keys)
+      let stored = sessionStorage.getItem("lastSession");
+      if (!stored) {
+        // Try video interview storage key
+        stored = sessionStorage.getItem("interviewTranscript");
+      }
       if (!stored) {
         setLoading(false);
         return;
