@@ -84,6 +84,7 @@ export default function CompanyQuestionsPage() {
 
   const colors = companyColors[slug] || { bg: "bg-gray-600", text: "text-white" };
   const initials = companyInitials[slug] || company.name.charAt(0);
+  const logoUrl = company.logoUrl;
 
   const questionTypes: (QuestionType | "all")[] = [
     "all",
@@ -108,9 +109,19 @@ export default function CompanyQuestionsPage() {
             ← Back to Companies
           </Link>
           <div className="flex items-center gap-4">
-            <div className={`w-16 h-16 ${colors.bg} rounded-xl flex items-center justify-center`}>
-              <span className={`text-lg font-bold ${colors.text}`}>{initials}</span>
-            </div>
+            {logoUrl ? (
+              <div className="w-16 h-16 flex items-center justify-center">
+                <img
+                  src={logoUrl}
+                  alt={company.name}
+                  className="max-w-full max-h-full object-contain"
+                />
+              </div>
+            ) : (
+              <div className={`w-16 h-16 ${colors.bg} rounded-xl flex items-center justify-center`}>
+                <span className={`text-lg font-bold ${colors.text}`}>{initials}</span>
+              </div>
+            )}
             <div>
               <h1 className="text-2xl font-bold text-white">{company.name}</h1>
               <p className="text-gray-400">{company.questionCount} practice questions</p>
