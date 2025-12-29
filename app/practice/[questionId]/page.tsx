@@ -1,8 +1,14 @@
 import Link from "next/link";
 import { getQuestionById } from "@/data/questions";
 import { getCompanyBySlug } from "@/data/companies";
-import { QUESTION_TYPE_LABELS, DIFFICULTY_COLORS } from "@/types";
+import { QUESTION_TYPE_LABELS } from "@/types";
 import VoiceSession from "@/components/VoiceSession";
+
+const DIFFICULTY_COLORS_DARK: Record<string, string> = {
+  easy: "text-green-400 bg-green-400/10",
+  medium: "text-[#d4af37] bg-[#d4af37]/10",
+  hard: "text-red-400 bg-red-400/10",
+};
 
 export default async function PracticePage({
   params,
@@ -14,8 +20,8 @@ export default async function PracticePage({
 
   if (!question) {
     return (
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-        <p className="text-gray-400">Question not found</p>
+      <div className="min-h-screen bg-[#0f172a] flex items-center justify-center">
+        <p className="text-white/60">Question not found</p>
       </div>
     );
   }
@@ -23,22 +29,22 @@ export default async function PracticePage({
   const company = getCompanyBySlug(question.companySlug);
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white flex flex-col">
+    <div className="min-h-screen bg-[#0f172a] text-white flex flex-col">
       {/* Header */}
-      <header className="border-b border-gray-800 bg-gray-900/95 backdrop-blur sticky top-0 z-10">
+      <header className="border-b border-white/10 bg-[#0f172a]/95 backdrop-blur sticky top-0 z-10">
         <div className="max-w-6xl mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             <Link
               href={`/company/${question.companySlug}`}
-              className="text-sm text-gray-400 hover:text-white transition-colors"
+              className="text-sm text-[#d4af37] hover:text-[#f4d03f] transition-colors"
             >
               ← Back to {company?.name}
             </Link>
             <div className="flex items-center gap-3">
-              <span className={`px-2 py-1 text-xs font-medium rounded-full ${DIFFICULTY_COLORS[question.difficulty]}`}>
+              <span className={`px-2 py-1 text-xs font-medium rounded-full capitalize ${DIFFICULTY_COLORS_DARK[question.difficulty]}`}>
                 {question.difficulty}
               </span>
-              <span className="text-sm text-gray-500">
+              <span className="text-sm text-white/50">
                 {QUESTION_TYPE_LABELS[question.type]}
               </span>
             </div>
@@ -47,10 +53,10 @@ export default async function PracticePage({
       </header>
 
       {/* Question Info */}
-      <div className="border-b border-gray-800 bg-gray-900">
+      <div className="border-b border-white/10 bg-[#0f172a]">
         <div className="max-w-6xl mx-auto px-4 py-6">
-          <h1 className="text-2xl font-bold mb-2">{question.title}</h1>
-          <p className="text-gray-400">{question.description}</p>
+          <h1 className="text-2xl font-bold mb-2 font-display">{question.title}</h1>
+          <p className="text-white/60">{question.description}</p>
         </div>
       </div>
 

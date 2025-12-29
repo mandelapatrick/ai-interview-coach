@@ -3,16 +3,24 @@ import Link from "next/link";
 
 export default function SignInPage() {
   return (
-    <div className="min-h-screen bg-[#1a1a1a] flex items-center justify-center">
-      <div className="bg-[#2a2a2a] p-8 rounded-xl border border-[#3a3a3a] w-full max-w-md">
-        <Link href="/" className="text-xl font-bold text-white block text-center mb-8">
-          AceInterview<span className="text-blue-500">.ai</span>
+    <div className="min-h-screen bg-[#0f172a] flex items-center justify-center">
+      <div className="bg-[#1a2d47] p-8 rounded-xl border border-white/10 w-full max-w-md">
+        <Link href="/" className="flex items-center justify-center gap-2 mb-8">
+          <div className="w-8 h-8 bg-gradient-to-br from-[#d4af37] to-[#f4d03f] rounded-lg flex items-center justify-center">
+            <svg className="w-5 h-5 text-[#0f172a]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <span className="text-xl font-bold text-white">
+            Ace<span className="text-[#d4af37]">Interview</span>
+          </span>
         </Link>
 
-        <h1 className="text-2xl font-bold text-white text-center mb-2">
+        <h1 className="text-2xl font-bold text-white text-center mb-2 font-display">
           Welcome back
         </h1>
-        <p className="text-gray-400 text-center mb-8">
+        <p className="text-white/60 text-center mb-8">
           Sign in to continue practicing
         </p>
 
@@ -48,7 +56,7 @@ export default function SignInPage() {
           </button>
         </form>
 
-        <p className="mt-6 text-center text-sm text-gray-500">
+        <p className="mt-6 text-center text-sm text-white/40">
           By signing in, you agree to our Terms and Privacy Policy.
         </p>
       </div>

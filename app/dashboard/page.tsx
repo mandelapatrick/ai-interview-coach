@@ -4,15 +4,15 @@ import { companies } from "@/data/companies";
 
 export default function DashboardPage() {
   return (
-    <div className="min-h-screen bg-[#1a1a1a]">
+    <div className="min-h-screen bg-[#0f172a]">
       <Navbar />
 
       <main className="max-w-7xl mx-auto px-4 py-8">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-white mb-2">
+          <h1 className="text-3xl font-bold text-white mb-2 font-display">
             Companies
           </h1>
-          <p className="text-gray-400">
+          <p className="text-white/60">
             Explore interview questions from top consulting firms
           </p>
         </div>

@@ -3,7 +3,18 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
-import { QUESTION_TYPE_LABELS, TYPE_COLORS, QuestionType } from "@/types";
+import { QUESTION_TYPE_LABELS, QuestionType } from "@/types";
+
+const TYPE_COLORS_DARK: Record<QuestionType, string> = {
+  profitability: "text-blue-400 bg-blue-400/10",
+  "market-entry": "text-purple-400 bg-purple-400/10",
+  "market-sizing": "text-cyan-400 bg-cyan-400/10",
+  "m&a": "text-orange-400 bg-orange-400/10",
+  operations: "text-gray-400 bg-gray-400/10",
+  "growth-strategy": "text-emerald-400 bg-emerald-400/10",
+  pricing: "text-pink-400 bg-pink-400/10",
+  "competitive-response": "text-indigo-400 bg-indigo-400/10",
+};
 
 interface SessionWithAssessment {
   id: string;
@@ -63,9 +74,9 @@ export default function HistoryPage() {
   };
 
   const getScoreColor = (score: number) => {
-    if (score >= 4) return "text-green-600";
-    if (score >= 3) return "text-yellow-600";
-    return "text-red-600";
+    if (score >= 4) return "text-green-400";
+    if (score >= 3) return "text-[#d4af37]";
+    return "text-red-400";
   };
 
   // Calculate stats
@@ -80,107 +91,111 @@ export default function HistoryPage() {
   const totalTime = sessions.reduce((acc, s) => acc + (s.duration_seconds || 0), 0);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#0f172a]">
       <Navbar />
 
       <main className="max-w-6xl mx-auto px-4 py-8">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">
+          <h1 className="text-3xl font-bold text-white mb-2 font-display">
             Practice History
           </h1>
-          <p className="text-gray-600">
+          <p className="text-white/60">
             Track your progress and review past interview sessions.
           </p>
         </div>
 
         {/* Stats */}
         <div className="grid grid-cols-3 gap-4 mb-8">
-          <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
-            <div className="text-3xl font-bold text-gray-900">{totalSessions}</div>
-            <div className="text-sm text-gray-500">Total Sessions</div>
+          <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-4 text-center">
+            <div className="text-3xl font-bold text-white">{totalSessions}</div>
+            <div className="text-sm text-white/50">Total Sessions</div>
           </div>
-          <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
+          <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-4 text-center">
             <div className={`text-3xl font-bold ${getScoreColor(avgScore)}`}>
               {avgScore > 0 ? avgScore.toFixed(1) : "-"}
             </div>
-            <div className="text-sm text-gray-500">Average Score</div>
+            <div className="text-sm text-white/50">Average Score</div>
           </div>
-          <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
-            <div className="text-3xl font-bold text-gray-900">
+          <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-4 text-center">
+            <div className="text-3xl font-bold text-[#d4af37]">
               {Math.floor(totalTime / 60)}m
             </div>
-            <div className="text-sm text-gray-500">Total Practice Time</div>
+            <div className="text-sm text-white/50">Total Practice Time</div>
           </div>
         </div>
 
         {loading ? (
           <div className="text-center py-12">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
-            <p className="text-gray-500">Loading history...</p>
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#d4af37] mx-auto mb-4"></div>
+            <p className="text-white/50">Loading history...</p>
           </div>
         ) : sessions.length === 0 ? (
-          <div className="text-center py-12 bg-white rounded-xl border border-gray-200">
-            <div className="text-5xl mb-4">📝</div>
-            <h2 className="text-xl font-semibold text-gray-900 mb-2">
+          <div className="text-center py-12 bg-[#1a2d47] rounded-xl border border-white/10">
+            <div className="w-16 h-16 bg-gradient-to-br from-[#d4af37] to-[#f4d03f] rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-[#0f172a]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <h2 className="text-xl font-semibold text-white mb-2">
               No practice sessions yet
             </h2>
-            <p className="text-gray-600 mb-6">
+            <p className="text-white/60 mb-6">
               Complete your first interview practice to see your history here.
             </p>
             <Link
               href="/dashboard"
-              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+              className="inline-block px-6 py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-[#0f172a] rounded-lg font-medium hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
             >
               Start Practicing
             </Link>
           </div>
         ) : (
-          <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+          <div className="bg-[#1a2d47] rounded-xl border border-white/10 overflow-hidden">
             <table className="w-full">
-              <thead className="bg-gray-50 border-b border-gray-200">
+              <thead className="bg-[#152238] border-b border-white/10">
                 <tr>
-                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider">
                     Question
                   </th>
-                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider">
                     Type
                   </th>
-                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider">
                     Duration
                   </th>
-                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider">
                     Score
                   </th>
-                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider">
                     Date
                   </th>
-                  <th className="text-right px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <th className="text-right px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider">
                     Action
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-200">
+              <tbody className="divide-y divide-white/10">
                 {sessions.map((session) => {
                   const assessment = session.assessments?.[0];
                   const questionType = session.question_type as QuestionType;
 
                   return (
-                    <tr key={session.id} className="hover:bg-gray-50">
+                    <tr key={session.id} className="hover:bg-[#213754]">
                       <td className="px-6 py-4">
-                        <div className="font-medium text-gray-900">
+                        <div className="font-medium text-white">
                           {session.question_title}
                         </div>
                       </td>
                       <td className="px-6 py-4">
                         <span
                           className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${
-                            TYPE_COLORS[questionType] || "text-gray-600 bg-gray-100"
+                            TYPE_COLORS_DARK[questionType] || "text-gray-400 bg-gray-400/10"
                           }`}
                         >
                           {QUESTION_TYPE_LABELS[questionType] || session.question_type}
                         </span>
                       </td>
-                      <td className="px-6 py-4 text-gray-500">
+                      <td className="px-6 py-4 text-white/50">
                         {formatDuration(session.duration_seconds)}
                       </td>
                       <td className="px-6 py-4">
@@ -193,16 +208,16 @@ export default function HistoryPage() {
                             {assessment.overall_score.toFixed(1)}/5
                           </span>
                         ) : (
-                          <span className="text-gray-400">-</span>
+                          <span className="text-white/30">-</span>
                         )}
                       </td>
-                      <td className="px-6 py-4 text-gray-500 text-sm">
+                      <td className="px-6 py-4 text-white/50 text-sm">
                         {formatDate(session.created_at)}
                       </td>
                       <td className="px-6 py-4 text-right">
                         <Link
                           href={`/practice/${session.question_id}`}
-                          className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                          className="text-[#d4af37] hover:text-[#f4d03f] text-sm font-medium transition-colors"
                         >
                           Practice Again
                         </Link>

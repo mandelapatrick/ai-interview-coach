@@ -114,26 +114,26 @@ export default function AssessmentPage() {
 
   if (!question) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <p className="text-gray-600">Question not found</p>
+      <div className="min-h-screen bg-[#0f172a] flex items-center justify-center">
+        <p className="text-white/60">Question not found</p>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#0f172a]">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200">
+      <header className="bg-[#0f172a] border-b border-white/10">
         <div className="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
           <Link
             href={`/company/${question.companySlug}`}
-            className="text-sm text-blue-600 hover:underline"
+            className="text-sm text-[#d4af37] hover:text-[#f4d03f] transition-colors"
           >
             ← Back to {company?.name}
           </Link>
           <Link
             href="/history"
-            className="text-sm text-gray-600 hover:text-gray-900"
+            className="text-sm text-white/60 hover:text-[#d4af37] transition-colors"
           >
             View History
           </Link>
@@ -143,36 +143,36 @@ export default function AssessmentPage() {
       <main className="max-w-4xl mx-auto px-4 py-8">
         {/* Title */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">
+          <h1 className="text-3xl font-bold text-white mb-2 font-display">
             Interview Assessment
           </h1>
-          <p className="text-gray-600">
+          <p className="text-white/60">
             {question.title} • {sessionData ? formatDuration(sessionData.duration) : "--:--"} session
           </p>
         </div>
 
         {loading ? (
           <div className="text-center py-12">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-            <p className="text-gray-600">Analyzing your performance with AI...</p>
-            <p className="text-sm text-gray-500 mt-2">This may take a few seconds</p>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#d4af37] mx-auto mb-4"></div>
+            <p className="text-white/70">Analyzing your performance with AI...</p>
+            <p className="text-sm text-white/50 mt-2">This may take a few seconds</p>
           </div>
         ) : error ? (
-          <div className="text-center py-12 bg-white rounded-xl border border-gray-200">
-            <p className="text-red-600 mb-4">{error}</p>
+          <div className="text-center py-12 bg-[#1a2d47] rounded-xl border border-white/10">
+            <p className="text-red-400 mb-4">{error}</p>
             <Link
               href={`/practice/${questionId}`}
-              className="text-blue-600 hover:underline"
+              className="text-[#d4af37] hover:text-[#f4d03f] transition-colors"
             >
               Start a new practice session
             </Link>
           </div>
         ) : !sessionData ? (
-          <div className="text-center py-12 bg-white rounded-xl border border-gray-200">
-            <p className="text-gray-600 mb-4">No session data found.</p>
+          <div className="text-center py-12 bg-[#1a2d47] rounded-xl border border-white/10">
+            <p className="text-white/60 mb-4">No session data found.</p>
             <Link
               href={`/practice/${questionId}`}
-              className="text-blue-600 hover:underline"
+              className="text-[#d4af37] hover:text-[#f4d03f] transition-colors"
             >
               Start a new practice session
             </Link>
@@ -180,16 +180,16 @@ export default function AssessmentPage() {
         ) : assessment ? (
           <div className="space-y-6">
             {/* Overall Score */}
-            <div className="bg-white rounded-xl border border-gray-200 p-6">
+            <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-6">
               <div className="flex items-center justify-between mb-6">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2 className="text-xl font-semibold text-white">
                   Overall Score
                 </h2>
                 <div className="flex items-center gap-2">
                   <ScoreRing score={assessment.overallScore} />
-                  <div className="text-4xl font-bold text-blue-600">
+                  <div className="text-4xl font-bold text-[#d4af37]">
                     {assessment.overallScore.toFixed(1)}
-                    <span className="text-lg text-gray-400">/5</span>
+                    <span className="text-lg text-white/40">/5</span>
                   </div>
                 </div>
               </div>
@@ -206,37 +206,37 @@ export default function AssessmentPage() {
             </div>
 
             {/* Feedback */}
-            <div className="bg-white rounded-xl border border-gray-200 p-6">
-              <h2 className="text-xl font-semibold text-gray-900 mb-4">
+            <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-6">
+              <h2 className="text-xl font-semibold text-white mb-4">
                 AI Feedback
               </h2>
-              <p className="text-gray-700 leading-relaxed">{assessment.feedback}</p>
+              <p className="text-white/70 leading-relaxed">{assessment.feedback}</p>
             </div>
 
             {/* Strengths & Improvements */}
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-xl border border-gray-200 p-6">
-                <h2 className="text-lg font-semibold text-green-700 mb-4 flex items-center gap-2">
+              <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-6">
+                <h2 className="text-lg font-semibold text-green-400 mb-4 flex items-center gap-2">
                   <span className="text-xl">✓</span> Strengths
                 </h2>
                 <ul className="space-y-3">
                   {assessment.strengths.map((item, i) => (
-                    <li key={i} className="text-gray-700 flex items-start gap-2">
-                      <span className="text-green-500 mt-1">•</span>
+                    <li key={i} className="text-white/70 flex items-start gap-2">
+                      <span className="text-green-400 mt-1">•</span>
                       {item}
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="bg-white rounded-xl border border-gray-200 p-6">
-                <h2 className="text-lg font-semibold text-orange-700 mb-4 flex items-center gap-2">
+              <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-6">
+                <h2 className="text-lg font-semibold text-[#d4af37] mb-4 flex items-center gap-2">
                   <span className="text-xl">↑</span> Areas to Improve
                 </h2>
                 <ul className="space-y-3">
                   {assessment.improvements.map((item, i) => (
-                    <li key={i} className="text-gray-700 flex items-start gap-2">
-                      <span className="text-orange-500 mt-1">•</span>
+                    <li key={i} className="text-white/70 flex items-start gap-2">
+                      <span className="text-[#d4af37] mt-1">•</span>
                       {item}
                     </li>
                   ))}
@@ -245,21 +245,21 @@ export default function AssessmentPage() {
             </div>
 
             {/* Transcript */}
-            <div className="bg-white rounded-xl border border-gray-200 p-6">
-              <h2 className="text-xl font-semibold text-gray-900 mb-4">
+            <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-6">
+              <h2 className="text-xl font-semibold text-white mb-4">
                 Session Transcript
               </h2>
               <div className="space-y-4 max-h-96 overflow-y-auto">
                 {sessionData.transcript.map((entry, i) => (
                   <div key={i}>
-                    <div className="text-xs font-medium text-gray-500 mb-1">
+                    <div className="text-xs font-medium text-white/50 mb-1">
                       {entry.role === "user" ? "You" : "AI Interviewer"}
                     </div>
                     <p
-                      className={`text-gray-700 p-3 rounded-lg ${
+                      className={`text-white/80 p-3 rounded-lg ${
                         entry.role === "user"
-                          ? "bg-blue-50 border-l-4 border-blue-400"
-                          : "bg-gray-50 border-l-4 border-gray-300"
+                          ? "bg-[#d4af37]/10 border-l-4 border-[#d4af37]"
+                          : "bg-[#0f172a] border-l-4 border-white/20"
                       }`}
                     >
                       {entry.text}
@@ -273,13 +273,13 @@ export default function AssessmentPage() {
             <div className="flex gap-4 justify-center pt-4">
               <Link
                 href={`/practice/${questionId}`}
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                className="px-6 py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-[#0f172a] rounded-lg font-medium hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
               >
                 Practice Again
               </Link>
               <Link
                 href={`/company/${question.companySlug}`}
-                className="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition-colors"
+                className="px-6 py-3 bg-[#0f172a] text-white rounded-lg font-medium hover:bg-[#152238] transition-colors border border-white/10"
               >
                 Try Another Question
               </Link>
@@ -298,7 +298,7 @@ function ScoreRing({ score }: { score: number }) {
 
   const getColor = (s: number) => {
     if (s >= 4) return "#22c55e";
-    if (s >= 3) return "#eab308";
+    if (s >= 3) return "#d4af37";
     return "#ef4444";
   };
 
@@ -309,7 +309,7 @@ function ScoreRing({ score }: { score: number }) {
         cy="25"
         r="20"
         fill="none"
-        stroke="#e5e7eb"
+        stroke="#1a2d47"
         strokeWidth="4"
       />
       <circle
@@ -329,16 +329,16 @@ function ScoreRing({ score }: { score: number }) {
 
 function ScoreItem({ label, score, weight }: { label: string; score: number; weight: string }) {
   const getColor = (s: number) => {
-    if (s >= 4) return "text-green-600 bg-green-50 border-green-200";
-    if (s >= 3) return "text-yellow-600 bg-yellow-50 border-yellow-200";
-    return "text-red-600 bg-red-50 border-red-200";
+    if (s >= 4) return "text-green-400 bg-green-400/10 border-green-400/20";
+    if (s >= 3) return "text-[#d4af37] bg-[#d4af37]/10 border-[#d4af37]/20";
+    return "text-red-400 bg-red-400/10 border-red-400/20";
   };
 
   return (
     <div className={`flex items-center justify-between p-3 rounded-lg border ${getColor(score)}`}>
       <div>
         <span className="text-sm font-medium">{label}</span>
-        <span className="text-xs text-gray-500 ml-1">({weight})</span>
+        <span className="text-xs text-white/40 ml-1">({weight})</span>
       </div>
       <span className="font-bold">{score}/5</span>
     </div>
