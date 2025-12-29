@@ -1,13 +1,21 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
+import { auth } from "@/lib/auth";
 
-export default function LandingPage() {
+export default async function LandingPage() {
+  const session = await auth();
+
+  if (session?.user) {
+    redirect("/dashboard");
+  }
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav className="border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
           <div className="text-xl font-bold text-gray-900">
-            CaseCoach<span className="text-blue-600">AI</span>
+            AceInterview<span className="text-blue-600">.ai</span>
           </div>
           <Link
             href="/api/auth/signin"
@@ -42,7 +50,7 @@ export default function LandingPage() {
       <section className="bg-gray-50 py-20">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Why CaseCoach AI?
+            Why AceInterview.ai?
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <FeatureCard
@@ -97,7 +105,7 @@ export default function LandingPage() {
             Ready to Land Your Dream Consulting Job?
           </h2>
           <p className="text-blue-100 mb-8">
-            Join thousands of candidates who improved their case skills with CaseCoach AI.
+            Join thousands of candidates who improved their case skills with AceInterview.ai.
           </p>
           <Link
             href="/api/auth/signin"
@@ -111,7 +119,7 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="border-t border-gray-100 py-8">
         <div className="max-w-6xl mx-auto px-4 text-center text-gray-500 text-sm">
-          © 2024 CaseCoach AI. All rights reserved.
+          © 2025 AceInterview.ai. All rights reserved.
         </div>
       </footer>
     </div>
