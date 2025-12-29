@@ -1,19 +1,24 @@
+"use client";
+
 import Link from "next/link";
-import Image from "next/image";
+import { useState } from "react";
 import { Company } from "@/types";
 
 export default function CompanyCard({ company }: { company: Company }) {
+  const [imgError, setImgError] = useState(false);
+
   return (
     <Link href={`/company/${company.slug}`}>
       <div className="bg-[#2a2a2a] border border-[#3a3a3a] rounded-xl overflow-hidden hover:border-[#4a4a4a] hover:bg-[#323232] transition-all cursor-pointer">
         {/* Logo Area */}
         <div className="h-32 bg-[#1a1a1a] flex items-center justify-center">
-          {company.logoUrl ? (
-            <div className="w-20 h-20 relative bg-white rounded-lg p-2 flex items-center justify-center">
+          {company.logoUrl && !imgError ? (
+            <div className="w-20 h-20 relative bg-white rounded-lg p-3 flex items-center justify-center">
               <img
                 src={company.logoUrl}
                 alt={company.name}
                 className="max-w-full max-h-full object-contain"
+                onError={() => setImgError(true)}
               />
             </div>
           ) : (
@@ -28,7 +33,7 @@ export default function CompanyCard({ company }: { company: Company }) {
             <h3 className="text-base font-semibold text-white">
               {company.name}
             </h3>
-            <span className="text-sm text-gray-400">
+            <span className="text-sm text-gray-400 whitespace-nowrap ml-2">
               {company.questionCount} questions
             </span>
           </div>
