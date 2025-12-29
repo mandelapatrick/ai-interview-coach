@@ -10,16 +10,16 @@ export default async function LandingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#1a1a1a]">
       {/* Navigation */}
-      <nav className="border-b border-gray-100">
+      <nav className="border-b border-[#2a2a2a]">
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="text-xl font-bold text-gray-900">
-            AceInterview<span className="text-blue-600">.ai</span>
+          <div className="text-xl font-bold text-white">
+            AceInterview<span className="text-blue-500">.ai</span>
           </div>
           <Link
             href="/api/auth/signin"
-            className="text-sm text-gray-600 hover:text-gray-900"
+            className="text-sm text-gray-400 hover:text-white transition-colors"
           >
             Sign In
           </Link>
@@ -28,10 +28,10 @@ export default async function LandingPage() {
 
       {/* Hero Section */}
       <section className="max-w-6xl mx-auto px-4 py-20 text-center">
-        <h1 className="text-5xl font-bold text-gray-900 mb-6 text-balance">
+        <h1 className="text-5xl font-bold text-white mb-6 text-balance">
           Ace Your Consulting Interview
         </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+        <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
           Practice case interviews with an AI interviewer that adapts to your skill level.
           Get instant feedback and improve faster.
         </p>
@@ -42,14 +42,14 @@ export default async function LandingPage() {
           Start Practicing Free
         </Link>
         <p className="mt-4 text-sm text-gray-500">
-          No credit card required • 3 free sessions
+          No credit card required
         </p>
       </section>
 
       {/* Features Section */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-[#232323] py-20">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+          <h2 className="text-3xl font-bold text-center text-white mb-12">
             Why AceInterview.ai?
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -73,9 +73,9 @@ export default async function LandingPage() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20">
+      <section className="py-20 bg-[#1a1a1a]">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+          <h2 className="text-3xl font-bold text-center text-white mb-12">
             How It Works
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -117,7 +117,7 @@ export default async function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-gray-100 py-8">
+      <footer className="border-t border-[#2a2a2a] py-8 bg-[#1a1a1a]">
         <div className="max-w-6xl mx-auto px-4 text-center text-gray-500 text-sm">
           © 2025 AceInterview.ai. All rights reserved.
         </div>
@@ -136,10 +136,10 @@ function FeatureCard({
   description: string;
 }) {
   return (
-    <div className="bg-white p-6 rounded-xl border border-gray-200">
+    <div className="bg-[#2a2a2a] p-6 rounded-xl border border-[#3a3a3a]">
       <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
+      <p className="text-gray-400">{description}</p>
     </div>
   );
 }
@@ -158,8 +158,8 @@ function StepCard({
       <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
         {number}
       </div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
+      <p className="text-gray-400">{description}</p>
     </div>
   );
 }
