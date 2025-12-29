@@ -61,7 +61,7 @@ export default async function PracticePage({
       </div>
 
       {/* Practice Flow (Mode Selection → Lobby → Session) */}
-      <div className="flex-1 max-w-4xl mx-auto w-full">
+      <div className="flex-1 max-w-4xl mx-auto w-full min-h-0">
         <PracticeFlow question={question} />
       </div>
     </div>

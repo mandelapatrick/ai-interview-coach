@@ -93,13 +93,76 @@ export function useHeyGenAvatar(options: UseHeyGenAvatarOptions = {}) {
         session.on(SessionEvent.SESSION_STREAM_READY, () => {
           console.log("[HeyGen] Stream ready, attaching to video element");
           try {
+            // WORKAROUND: The SDK's attach() calls LiveKit's track.attach() twice
+            // (once for video, once for audio), but each call OVERWRITES srcObject
+            // with a new MediaStream containing only that track.
+            // Result: The audio attach overwrites the video, leaving only audio.
+            //
+            // Fix: Intercept srcObject setter to combine both tracks into one stream.
+
+            let videoTrack: MediaStreamTrack | null = null;
+            const originalDescriptor = Object.getOwnPropertyDescriptor(
+              HTMLMediaElement.prototype,
+              'srcObject'
+            );
+
+            if (originalDescriptor) {
+              // Temporarily override srcObject setter to capture and combine tracks
+              Object.defineProperty(videoElement, 'srcObject', {
+                set(stream: MediaStream | null) {
+                  if (stream) {
+                    const vTracks = stream.getVideoTracks();
+                    const aTracks = stream.getAudioTracks();
+
+                    console.log("[HeyGen] srcObject being set with tracks - video:", vTracks.length, "audio:", aTracks.length);
+
+                    if (vTracks.length > 0) {
+                      // First call (video track) - save it
+                      videoTrack = vTracks[0];
+                      console.log("[HeyGen] Captured video track:", videoTrack.label);
+                    }
+
+                    if (aTracks.length > 0 && vTracks.length === 0 && videoTrack) {
+                      // Second call (audio only) - add the saved video track
+                      console.log("[HeyGen] Adding captured video track to audio stream");
+                      stream.addTrack(videoTrack);
+                    }
+                  }
+                  originalDescriptor.set?.call(this, stream);
+                },
+                get() {
+                  return originalDescriptor.get?.call(this);
+                },
+                configurable: true,
+              });
+            }
+
+            // Call attach - our interceptor will combine the tracks
             session.attach(videoElement);
+
+            // Restore original srcObject behavior
+            if (originalDescriptor) {
+              Object.defineProperty(videoElement, 'srcObject', originalDescriptor);
+            }
+
+            // Verify the fix worked
+            if (videoElement.srcObject instanceof MediaStream) {
+              const stream = videoElement.srcObject;
+              console.log("[HeyGen] Final stream tracks - video:", stream.getVideoTracks().length, "audio:", stream.getAudioTracks().length);
+            }
+
             console.log("[HeyGen] Stream attached successfully");
 
-            // Ensure video plays
-            videoElement.play().catch((e) => {
-              console.log("[HeyGen] Video autoplay blocked, will play on user interaction:", e.message);
-            });
+            // Ensure video plays (start muted to bypass autoplay policy, then unmute)
+            videoElement.muted = true;
+            videoElement.play()
+              .then(() => {
+                console.log("[HeyGen] Video playing, unmuting");
+                videoElement.muted = false;
+              })
+              .catch((e) => {
+                console.log("[HeyGen] Video autoplay blocked:", e.message);
+              });
 
             onStreamReady?.();
           } catch (attachErr) {

@@ -376,9 +376,9 @@ export default function VideoSession({ question, userStream, onBack }: VideoSess
   const isLoading = isAvatarConnecting || (!isAvatarInitialized && !avatarError);
 
   return (
-    <div className="flex flex-col h-full bg-[#0f172a]">
+    <div className="flex flex-col h-full min-h-[600px] bg-[#0f172a]">
       {/* Video Area */}
-      <div className="flex-1 relative">
+      <div className="flex-1 relative min-h-[400px]">
         {/* Avatar Video (Main) */}
         <div className="absolute inset-0 bg-[#0a1122]">
           {/* Loading overlay */}
@@ -396,9 +396,25 @@ export default function VideoSession({ question, userStream, onBack }: VideoSess
             muted={false}
             className="w-full h-full object-cover"
             style={{ backgroundColor: '#0a1122' }}
-            onLoadedMetadata={() => console.log("Avatar video: loadedmetadata")}
+            onLoadedMetadata={(e) => {
+              const video = e.target as HTMLVideoElement;
+              console.log("Avatar video: loadedmetadata", {
+                videoWidth: video.videoWidth,
+                videoHeight: video.videoHeight,
+                clientWidth: video.clientWidth,
+                clientHeight: video.clientHeight,
+              });
+            }}
             onCanPlay={() => console.log("Avatar video: canplay")}
-            onPlay={() => console.log("Avatar video: playing")}
+            onPlay={(e) => {
+              const video = e.target as HTMLVideoElement;
+              console.log("Avatar video: playing", {
+                videoWidth: video.videoWidth,
+                videoHeight: video.videoHeight,
+                readyState: video.readyState,
+                srcObject: video.srcObject,
+              });
+            }}
             onError={(e) => console.error("Avatar video error:", e)}
           />
 
