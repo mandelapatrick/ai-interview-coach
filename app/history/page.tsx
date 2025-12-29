@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
 import { QUESTION_TYPE_LABELS, QuestionType } from "@/types";
 
 const TYPE_COLORS_DARK: Record<QuestionType, string> = {
@@ -91,9 +90,6 @@ export default function HistoryPage() {
   const totalTime = sessions.reduce((acc, s) => acc + (s.duration_seconds || 0), 0);
 
   return (
-    <div className="min-h-screen bg-[#0f172a]">
-      <Navbar />
-
       <main className="max-w-6xl mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-white mb-2 font-display">
@@ -230,6 +226,5 @@ export default function HistoryPage() {
           </div>
         )}
       </main>
-    </div>
   );
 }

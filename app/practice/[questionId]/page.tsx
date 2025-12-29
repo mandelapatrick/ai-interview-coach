@@ -2,7 +2,7 @@ import Link from "next/link";
 import { getQuestionById } from "@/data/questions";
 import { getCompanyBySlug } from "@/data/companies";
 import { QUESTION_TYPE_LABELS } from "@/types";
-import VoiceSession from "@/components/VoiceSession";
+import PracticeFlow from "@/components/PracticeFlow";
 
 const DIFFICULTY_COLORS_DARK: Record<string, string> = {
   easy: "text-green-400 bg-green-400/10",
@@ -60,9 +60,9 @@ export default async function PracticePage({
         </div>
       </div>
 
-      {/* Voice Session */}
+      {/* Practice Flow (Mode Selection → Lobby → Session) */}
       <div className="flex-1 max-w-4xl mx-auto w-full">
-        <VoiceSession question={question} />
+        <PracticeFlow question={question} />
       </div>
     </div>
   );
