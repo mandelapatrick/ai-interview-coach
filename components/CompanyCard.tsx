@@ -8,9 +8,9 @@ export default function CompanyCard({ company }: { company: Company }) {
     <Link href={`/company/${company.slug}`} className="block h-full">
       <div className="bg-[#2a2a2a] border border-[#3a3a3a] rounded-xl overflow-hidden hover:border-[#4a4a4a] hover:bg-[#323232] transition-all cursor-pointer h-full flex flex-col">
         {/* Logo Area */}
-        <div className="h-32 bg-[#1a1a1a] flex items-center justify-center flex-shrink-0">
+        <div className="h-32 bg-white flex items-center justify-center flex-shrink-0">
           {company.logoUrl ? (
-            <div className="w-24 h-20 bg-white rounded-lg p-3 flex items-center justify-center">
+            <div className="w-28 h-20 flex items-center justify-center">
               <img
                 src={company.logoUrl}
                 alt={company.name}
