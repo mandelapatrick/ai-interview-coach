@@ -82,9 +82,9 @@ export default function AssessmentPage() {
         const assessmentData = await response.json();
         setAssessment(assessmentData);
 
-        // Try to save session to database (optional - won't fail if Supabase not configured)
+        // Try to save session and assessment to database (optional - won't fail if Supabase not configured)
         try {
-          await fetch("/api/sessions", {
+          const sessionResponse = await fetch("/api/sessions", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -96,6 +96,25 @@ export default function AssessmentPage() {
               durationSeconds: data.duration,
             }),
           });
+
+          if (sessionResponse.ok) {
+            const sessionResult = await sessionResponse.json();
+            // Save assessment linked to the session
+            if (sessionResult.id && !sessionResult.id.startsWith("local-")) {
+              await fetch("/api/assessments", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  sessionId: sessionResult.id,
+                  overallScore: assessmentData.overallScore,
+                  scores: assessmentData.scores,
+                  feedback: assessmentData.feedback,
+                  strengths: assessmentData.strengths,
+                  improvements: assessmentData.improvements,
+                }),
+              });
+            }
+          }
         } catch (saveError) {
           console.log("Could not save to database:", saveError);
         }

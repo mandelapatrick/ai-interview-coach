@@ -174,9 +174,14 @@ export default function HistoryPage() {
                 {sessions.map((session) => {
                   const assessment = session.assessments?.[0];
                   const questionType = session.question_type as QuestionType;
+                  const hasAssessment = !!assessment;
 
                   return (
-                    <tr key={session.id} className="hover:bg-[#213754]">
+                    <tr
+                      key={session.id}
+                      className={`hover:bg-[#213754] ${hasAssessment ? "cursor-pointer" : ""}`}
+                      onClick={() => hasAssessment && (window.location.href = `/session/${session.id}`)}
+                    >
                       <td className="px-6 py-4">
                         <div className="font-medium text-white">
                           {session.question_title}
@@ -211,12 +216,24 @@ export default function HistoryPage() {
                         {formatDate(session.created_at)}
                       </td>
                       <td className="px-6 py-4 text-right">
-                        <Link
-                          href={`/practice/${session.question_id}`}
-                          className="text-[#d4af37] hover:text-[#f4d03f] text-sm font-medium transition-colors"
-                        >
-                          Practice Again
-                        </Link>
+                        <div className="flex items-center justify-end gap-3">
+                          {hasAssessment && (
+                            <Link
+                              href={`/session/${session.id}`}
+                              onClick={(e) => e.stopPropagation()}
+                              className="text-white/60 hover:text-white text-sm font-medium transition-colors"
+                            >
+                              View
+                            </Link>
+                          )}
+                          <Link
+                            href={`/practice/${session.question_id}`}
+                            onClick={(e) => e.stopPropagation()}
+                            className="text-[#d4af37] hover:text-[#f4d03f] text-sm font-medium transition-colors"
+                          >
+                            Practice Again
+                          </Link>
+                        </div>
                       </td>
                     </tr>
                   );
