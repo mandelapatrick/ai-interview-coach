@@ -1,29 +1,48 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
 import { Company } from "@/types";
 
+const companyColors: Record<string, { bg: string; text: string }> = {
+  mckinsey: { bg: "bg-blue-600", text: "text-white" },
+  bcg: { bg: "bg-green-600", text: "text-white" },
+  bain: { bg: "bg-red-600", text: "text-white" },
+  deloitte: { bg: "bg-emerald-500", text: "text-white" },
+  accenture: { bg: "bg-purple-600", text: "text-white" },
+  kearney: { bg: "bg-orange-500", text: "text-white" },
+  "oliver-wyman": { bg: "bg-sky-600", text: "text-white" },
+  "roland-berger": { bg: "bg-gray-800", text: "text-white" },
+  lek: { bg: "bg-yellow-500", text: "text-black" },
+  "strategy-and": { bg: "bg-orange-600", text: "text-white" },
+};
+
+const companyInitials: Record<string, string> = {
+  mckinsey: "McK",
+  bcg: "BCG",
+  bain: "BAIN",
+  deloitte: "D",
+  accenture: "A",
+  kearney: "K",
+  "oliver-wyman": "OW",
+  "roland-berger": "RB",
+  lek: "LEK",
+  "strategy-and": "S&",
+};
+
 export default function CompanyCard({ company }: { company: Company }) {
-  const [imgError, setImgError] = useState(false);
+  const colors = companyColors[company.slug] || { bg: "bg-gray-600", text: "text-white" };
+  const initials = companyInitials[company.slug] || company.name.charAt(0);
 
   return (
     <Link href={`/company/${company.slug}`}>
       <div className="bg-[#2a2a2a] border border-[#3a3a3a] rounded-xl overflow-hidden hover:border-[#4a4a4a] hover:bg-[#323232] transition-all cursor-pointer">
         {/* Logo Area */}
         <div className="h-32 bg-[#1a1a1a] flex items-center justify-center">
-          {company.logoUrl && !imgError ? (
-            <div className="w-20 h-20 relative bg-white rounded-lg p-3 flex items-center justify-center">
-              <img
-                src={company.logoUrl}
-                alt={company.name}
-                className="max-w-full max-h-full object-contain"
-                onError={() => setImgError(true)}
-              />
-            </div>
-          ) : (
-            <span className="text-5xl">{company.logo}</span>
-          )}
+          <div className={`w-20 h-20 ${colors.bg} rounded-xl flex items-center justify-center`}>
+            <span className={`text-xl font-bold ${colors.text}`}>
+              {initials}
+            </span>
+          </div>
         </div>
 
         {/* Content Area */}
