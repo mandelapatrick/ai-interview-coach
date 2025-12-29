@@ -1,95 +1,98 @@
-import { Company } from "@/types";
+import { Company, QUESTION_TYPE_LABELS } from "@/types";
+import { questions } from "./questions";
+
+// Derive categories from actual questions for each company
+function getCategoriesForCompany(companySlug: string): string[] {
+  const companyQuestions = questions.filter((q) => q.companySlug === companySlug);
+  const types = [...new Set(companyQuestions.map((q) => q.type))];
+  return types.map((type) => QUESTION_TYPE_LABELS[type]);
+}
+
+// Get actual question count for each company
+function getQuestionCount(companySlug: string): number {
+  return questions.filter((q) => q.companySlug === companySlug).length;
+}
 
 export const companies: Company[] = [
   {
     slug: "mckinsey",
     name: "McKinsey & Company",
     logo: "🔷",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/McKinsey_and_Company_Logo_1.svg/200px-McKinsey_and_Company_Logo_1.svg.png",
     description: "Global management consulting leader",
-    questionCount: 12,
-    categories: ["Case Interview", "Problem Solving", "Leadership"],
+    questionCount: getQuestionCount("mckinsey"),
+    categories: getCategoriesForCompany("mckinsey"),
   },
   {
     slug: "bcg",
     name: "Boston Consulting Group",
     logo: "🟢",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Boston_Consulting_Group_2020_logo.svg/200px-Boston_Consulting_Group_2020_logo.svg.png",
     description: "Strategy consulting powerhouse",
-    questionCount: 10,
-    categories: ["Case Interview", "Market Sizing", "Strategy"],
+    questionCount: getQuestionCount("bcg"),
+    categories: getCategoriesForCompany("bcg"),
   },
   {
     slug: "bain",
     name: "Bain & Company",
     logo: "🔴",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Bain_and_Company_Logo_1.svg/200px-Bain_and_Company_Logo_1.svg.png",
     description: "Results-driven consulting firm",
-    questionCount: 10,
-    categories: ["Case Interview", "Profitability", "M&A"],
+    questionCount: getQuestionCount("bain"),
+    categories: getCategoriesForCompany("bain"),
   },
   {
     slug: "deloitte",
     name: "Deloitte Consulting",
     logo: "🟩",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Deloitte.svg/200px-Deloitte.svg.png",
     description: "Big Four consulting practice",
-    questionCount: 8,
-    categories: ["Case Interview", "Operations", "Technology"],
+    questionCount: getQuestionCount("deloitte"),
+    categories: getCategoriesForCompany("deloitte"),
   },
   {
     slug: "accenture",
     name: "Accenture",
     logo: "🟣",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Accenture.svg/200px-Accenture.svg.png",
     description: "Technology and strategy consulting",
-    questionCount: 8,
-    categories: ["Case Interview", "Digital", "Strategy"],
+    questionCount: getQuestionCount("accenture"),
+    categories: getCategoriesForCompany("accenture"),
   },
   {
     slug: "kearney",
     name: "Kearney",
     logo: "🔶",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Kearney_logo.svg/200px-Kearney_logo.svg.png",
     description: "Operations-focused consulting",
-    questionCount: 6,
-    categories: ["Case Interview", "Operations", "Supply Chain"],
+    questionCount: getQuestionCount("kearney"),
+    categories: getCategoriesForCompany("kearney"),
   },
   {
     slug: "oliver-wyman",
     name: "Oliver Wyman",
     logo: "🔵",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Oliver_Wyman_logo.svg/200px-Oliver_Wyman_logo.svg.png",
     description: "Financial services expertise",
-    questionCount: 6,
-    categories: ["Case Interview", "Financial Services", "Risk"],
+    questionCount: getQuestionCount("oliver-wyman"),
+    categories: getCategoriesForCompany("oliver-wyman"),
   },
   {
     slug: "roland-berger",
     name: "Roland Berger",
     logo: "⬛",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Roland_Berger_Logo_2015.svg/200px-Roland_Berger_Logo_2015.svg.png",
     description: "European strategy consultancy",
-    questionCount: 5,
-    categories: ["Case Interview", "Strategy", "Restructuring"],
+    questionCount: getQuestionCount("roland-berger"),
+    categories: getCategoriesForCompany("roland-berger"),
   },
   {
     slug: "lek",
     name: "L.E.K. Consulting",
     logo: "🟡",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/L.E.K._Consulting_logo.svg/200px-L.E.K._Consulting_logo.svg.png",
     description: "Sharp strategic insights",
-    questionCount: 5,
-    categories: ["Case Interview", "Strategy", "Healthcare"],
+    questionCount: getQuestionCount("lek"),
+    categories: getCategoriesForCompany("lek"),
   },
   {
     slug: "strategy-and",
     name: "Strategy&",
     logo: "🟠",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Strategy%26_logo.svg/200px-Strategy%26_logo.svg.png",
     description: "PwC's strategy consulting arm",
-    questionCount: 5,
-    categories: ["Case Interview", "Strategy", "Capabilities"],
+    questionCount: getQuestionCount("strategy-and"),
+    categories: getCategoriesForCompany("strategy-and"),
   },
 ];
 
