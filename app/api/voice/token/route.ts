@@ -5,7 +5,7 @@ export async function POST() {
   // Note: In production, implement proper rate limiting and session management
   return NextResponse.json({
     url: "wss://api.x.ai/v1/realtime",
-    apiKey: process.env.XAI_API_KEY,
+    apiKey: process.env.XAI_API_KEY?.trim(),
     model: "grok-2-public",
   });
 }
