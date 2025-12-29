@@ -58,7 +58,7 @@ export default function CompanyCard({ company }: { company: Company }) {
           </div>
 
           {/* Categories */}
-          <div className="flex flex-wrap gap-2 mt-auto">
+          <div className="flex flex-wrap gap-2">
             {company.categories.slice(0, 3).map((category) => (
               <span
                 key={category}
