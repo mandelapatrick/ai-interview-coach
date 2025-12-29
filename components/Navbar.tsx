@@ -6,22 +6,22 @@ export default async function Navbar() {
   const session = await auth();
 
   return (
-    <nav className="border-b border-gray-200 bg-white">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <nav className="border-b border-[#2a2a2a] bg-[#1a1a1a]">
+      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center gap-6">
-          <Link href="/dashboard" className="text-xl font-bold text-gray-900">
-            AceInterview<span className="text-blue-600">AI</span>
+          <Link href="/dashboard" className="text-xl font-bold text-white">
+            AceInterview<span className="text-blue-500">.ai</span>
           </Link>
           <div className="hidden md:flex items-center gap-4">
             <Link
               href="/dashboard"
-              className="text-sm text-gray-600 hover:text-gray-900"
+              className="text-sm text-gray-400 hover:text-white transition-colors"
             >
               Companies
             </Link>
             <Link
               href="/history"
-              className="text-sm text-gray-600 hover:text-gray-900"
+              className="text-sm text-gray-400 hover:text-white transition-colors"
             >
               History
             </Link>
@@ -31,7 +31,7 @@ export default async function Navbar() {
         <div className="flex items-center gap-4">
           {session?.user && (
             <>
-              <span className="text-sm text-gray-600 hidden sm:inline">
+              <span className="text-sm text-gray-400 hidden sm:inline">
                 {session.user.name}
               </span>
               {session.user.image && (
@@ -44,7 +44,7 @@ export default async function Navbar() {
               <form action={handleSignOut}>
                 <button
                   type="submit"
-                  className="text-sm text-gray-500 hover:text-gray-700"
+                  className="text-sm text-gray-500 hover:text-gray-300 transition-colors"
                 >
                   Sign out
                 </button>

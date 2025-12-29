@@ -1,17 +1,49 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Company } from "@/types";
 
 export default function CompanyCard({ company }: { company: Company }) {
   return (
     <Link href={`/company/${company.slug}`}>
-      <div className="bg-white border border-gray-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-md transition-all cursor-pointer">
-        <div className="text-4xl mb-4">{company.logo}</div>
-        <h3 className="text-lg font-semibold text-gray-900 mb-1">
-          {company.name}
-        </h3>
-        <p className="text-sm text-gray-500 mb-3">{company.description}</p>
-        <div className="text-sm text-blue-600 font-medium">
-          {company.questionCount} questions
+      <div className="bg-[#2a2a2a] border border-[#3a3a3a] rounded-xl overflow-hidden hover:border-[#4a4a4a] hover:bg-[#323232] transition-all cursor-pointer">
+        {/* Logo Area */}
+        <div className="h-32 bg-[#1a1a1a] flex items-center justify-center">
+          {company.logoUrl ? (
+            <div className="w-20 h-20 relative bg-white rounded-lg p-2 flex items-center justify-center">
+              <img
+                src={company.logoUrl}
+                alt={company.name}
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
+          ) : (
+            <span className="text-5xl">{company.logo}</span>
+          )}
+        </div>
+
+        {/* Content Area */}
+        <div className="p-4">
+          {/* Name and Question Count */}
+          <div className="flex justify-between items-start mb-3">
+            <h3 className="text-base font-semibold text-white">
+              {company.name}
+            </h3>
+            <span className="text-sm text-gray-400">
+              {company.questionCount} questions
+            </span>
+          </div>
+
+          {/* Categories */}
+          <div className="flex flex-wrap gap-2">
+            {company.categories.map((category) => (
+              <span
+                key={category}
+                className="text-xs px-2 py-1 bg-[#3a3a3a] text-gray-300 rounded"
+              >
+                {category}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </Link>

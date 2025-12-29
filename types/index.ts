@@ -14,8 +14,10 @@ export interface Company {
   slug: string;
   name: string;
   logo: string;
+  logoUrl?: string;
   description: string;
   questionCount: number;
+  categories: string[];
 }
 
 export interface Question {
