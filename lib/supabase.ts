@@ -1,9 +1,12 @@
-import { createClient } from "@supabase/supabase-js";
+import { createClient, SupabaseClient } from "@supabase/supabase-js";
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+export const supabase: SupabaseClient | null =
+  supabaseUrl && supabaseAnonKey
+    ? createClient(supabaseUrl, supabaseAnonKey)
+    : null;
 
 // Types for database tables
 export interface DbSession {
@@ -37,6 +40,10 @@ export interface DbAssessment {
 
 // Helper functions
 export async function saveSession(session: Omit<DbSession, "id" | "created_at">) {
+  if (!supabase) {
+    console.log("Supabase not configured, skipping session save");
+    return null;
+  }
   const { data, error } = await supabase
     .from("sessions")
     .insert(session)
@@ -51,6 +58,10 @@ export async function saveSession(session: Omit<DbSession, "id" | "created_at">)
 }
 
 export async function saveAssessment(assessment: Omit<DbAssessment, "id" | "created_at">) {
+  if (!supabase) {
+    console.log("Supabase not configured, skipping assessment save");
+    return null;
+  }
   const { data, error } = await supabase
     .from("assessments")
     .insert(assessment)
@@ -65,6 +76,10 @@ export async function saveAssessment(assessment: Omit<DbAssessment, "id" | "crea
 }
 
 export async function getUserSessions(userEmail: string) {
+  if (!supabase) {
+    console.log("Supabase not configured, returning empty sessions");
+    return [];
+  }
   const { data, error } = await supabase
     .from("sessions")
     .select(`
@@ -82,6 +97,10 @@ export async function getUserSessions(userEmail: string) {
 }
 
 export async function getSessionWithAssessment(sessionId: string) {
+  if (!supabase) {
+    console.log("Supabase not configured");
+    return null;
+  }
   const { data, error } = await supabase
     .from("sessions")
     .select(`

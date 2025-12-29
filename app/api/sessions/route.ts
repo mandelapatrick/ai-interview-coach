@@ -9,6 +9,14 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
+    // If Supabase is not configured, return a mock session ID
+    if (!supabase) {
+      return NextResponse.json({
+        id: `local-${Date.now()}`,
+        message: "Supabase not configured - using local storage",
+      });
+    }
+
     const body = await request.json();
     const {
       companySlug,
@@ -36,13 +44,6 @@ export async function POST(request: NextRequest) {
 
     if (error) {
       console.error("Supabase error:", error);
-      // If Supabase is not configured, return a mock session ID
-      if (error.message?.includes("Invalid API key") || error.code === "PGRST301") {
-        return NextResponse.json({
-          id: `local-${Date.now()}`,
-          message: "Supabase not configured - using local storage",
-        });
-      }
       return NextResponse.json({ error: error.message }, { status: 500 });
     }
 
@@ -63,6 +64,11 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
+    // Return empty array if Supabase not configured
+    if (!supabase) {
+      return NextResponse.json([]);
+    }
+
     const { data, error } = await supabase
       .from("sessions")
       .select(`
@@ -74,10 +80,6 @@ export async function GET(request: NextRequest) {
 
     if (error) {
       console.error("Supabase error:", error);
-      // Return empty array if Supabase not configured
-      if (error.message?.includes("Invalid API key")) {
-        return NextResponse.json([]);
-      }
       return NextResponse.json({ error: error.message }, { status: 500 });
     }
 
