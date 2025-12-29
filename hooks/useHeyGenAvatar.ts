@@ -35,7 +35,11 @@ export function useHeyGenAvatar(options: UseHeyGenAvatarOptions = {}) {
 
   const sessionRef = useRef<LiveAvatarSession | null>(null);
   const videoElementRef = useRef<HTMLVideoElement | null>(null);
-  const audioBufferRef = useRef<string[]>([]);
+
+  // Progressive audio streaming - send batches instead of waiting for complete audio
+  const AUDIO_BATCH_THRESHOLD = 16000; // ~333ms of base64-encoded PCM16 audio at 24kHz
+  const pendingAudioRef = useRef<string>("");
+  const batchCountRef = useRef<number>(0);
 
   // Cleanup on unmount
   useEffect(() => {
@@ -223,40 +227,52 @@ export function useHeyGenAvatar(options: UseHeyGenAvatarOptions = {}) {
     ]
   );
 
-  // Buffer audio chunks from X.AI (Custom Mode streaming)
+  // Progressive audio streaming - send batches as they accumulate for lower latency
   const sendAudio = useCallback(
     (audioBase64: string) => {
       if (!sessionRef.current || !isInitialized) {
         return;
       }
 
-      // Buffer audio chunks - they'll be sent together when endSpeaking is called
-      audioBufferRef.current.push(audioBase64);
+      // Accumulate audio chunks
+      pendingAudioRef.current += audioBase64;
+
+      // Send batch when threshold reached (progressive streaming for lower latency)
+      if (pendingAudioRef.current.length >= AUDIO_BATCH_THRESHOLD) {
+        const batch = pendingAudioRef.current;
+        pendingAudioRef.current = "";
+        batchCountRef.current += 1;
+
+        console.log(`[HeyGen] Sending audio batch #${batchCountRef.current}, size: ${batch.length}`);
+
+        try {
+          sessionRef.current.repeatAudio(batch);
+        } catch (err) {
+          console.error("[HeyGen] Failed to send audio batch:", err);
+        }
+      }
     },
     [isInitialized]
   );
 
-  // Send all buffered audio to avatar and signal end of speaking
+  // Send any remaining buffered audio when X.AI finishes streaming
   const endSpeaking = useCallback(() => {
     if (!sessionRef.current || !isInitialized) return;
 
     try {
-      // Concatenate all buffered audio chunks
-      const fullAudio = audioBufferRef.current.join("");
-      audioBufferRef.current = []; // Clear buffer
-
-      if (fullAudio.length === 0) {
-        console.log("[HeyGen] No audio to send");
-        return;
+      // Send any remaining audio that didn't reach the batch threshold
+      if (pendingAudioRef.current.length > 0) {
+        console.log(`[HeyGen] Sending final audio batch, size: ${pendingAudioRef.current.length}`);
+        sessionRef.current.repeatAudio(pendingAudioRef.current);
+        pendingAudioRef.current = "";
       }
 
-      console.log("[HeyGen] Sending buffered audio, total length:", fullAudio.length);
-
-      // Use repeatAudio which handles chunking and sends agent.speak_end automatically
-      sessionRef.current.repeatAudio(fullAudio);
+      console.log(`[HeyGen] Audio stream complete, sent ${batchCountRef.current} batches`);
+      batchCountRef.current = 0;
     } catch (err) {
-      console.error("[HeyGen] Failed to send audio:", err);
-      audioBufferRef.current = []; // Clear buffer on error
+      console.error("[HeyGen] Failed to send final audio:", err);
+      pendingAudioRef.current = "";
+      batchCountRef.current = 0;
     }
   }, [isInitialized]);
 
@@ -266,6 +282,9 @@ export function useHeyGenAvatar(options: UseHeyGenAvatarOptions = {}) {
 
     try {
       console.log("[HeyGen] Interrupting avatar");
+      // Clear any pending audio to avoid sending stale data
+      pendingAudioRef.current = "";
+      batchCountRef.current = 0;
       sessionRef.current.interrupt();
     } catch (err) {
       console.error("[HeyGen] Failed to interrupt avatar:", err);
