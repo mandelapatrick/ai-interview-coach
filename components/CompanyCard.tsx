@@ -10,7 +10,7 @@ export default function CompanyCard({ company }: { company: Company }) {
         {/* Logo Area */}
         <div className="h-32 bg-[#1a1a1a] flex items-center justify-center flex-shrink-0">
           {company.logoUrl ? (
-            <div className="w-24 h-20 flex items-center justify-center">
+            <div className="w-24 h-20 bg-white rounded-lg p-3 flex items-center justify-center">
               <img
                 src={company.logoUrl}
                 alt={company.name}

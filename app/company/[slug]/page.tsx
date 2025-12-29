@@ -110,7 +110,7 @@ export default function CompanyQuestionsPage() {
           </Link>
           <div className="flex items-center gap-4">
             {logoUrl ? (
-              <div className="w-16 h-16 flex items-center justify-center">
+              <div className="w-16 h-16 bg-white rounded-lg p-2 flex items-center justify-center">
                 <img
                   src={logoUrl}
                   alt={company.name}
