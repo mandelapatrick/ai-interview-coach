@@ -36,7 +36,6 @@ export default function VideoSession({ question, userStream, onBack }: VideoSess
 
   const systemPrompt = getSystemPrompt(
     question.type,
-    "candidate-led", // Default format - can be made configurable later
     question.title,
     question.description
   );
