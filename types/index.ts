@@ -1,12 +1,20 @@
+export type InterviewFormat =
+  | "candidate-led"   // Typical of Bain, BCG, LEK. User drives the structure.
+  | "interviewer-led"; // Typical of McKinsey. AI drives with specific questions.
+
 export type QuestionType =
-  | "profitability"
-  | "market-entry"
-  | "market-sizing"
-  | "m&a"
-  | "operations"
-  | "growth-strategy"
-  | "pricing"
-  | "competitive-response";
+  | "profitability"        // Revenue/Cost analysis
+  | "market-entry"         // New geography or product launch
+  | "market-sizing"        // Estimation/Guesstimates
+  | "m&a"                  // Mergers & Acquisitions
+  | "operations"           // Efficiency, supply chain, bottlenecks
+  | "growth-strategy"      // Increasing revenue/share
+  | "pricing"              // Cost-based, Competitive, Value-based
+  | "competitive-response" // Reacting to a rival's move (e.g., price war)
+  | "brainteasers"         // Lateral thinking riddles
+  | "turnarounds"          // Saving a failing company
+  | "strategic-decision"   // Go/No-Go decisions (e.g., build a plant)
+  | "industry-analysis";   // Porter's 5 Forces/Landscape assessment
 
 export type Difficulty = "easy" | "medium" | "hard";
 
@@ -62,6 +70,15 @@ export const QUESTION_TYPE_LABELS: Record<QuestionType, string> = {
   "growth-strategy": "Growth Strategy",
   pricing: "Pricing",
   "competitive-response": "Competitive Response",
+  brainteasers: "Brainteasers",
+  turnarounds: "Turnarounds",
+  "strategic-decision": "Strategic Decision",
+  "industry-analysis": "Industry Analysis",
+};
+
+export const INTERVIEW_FORMAT_LABELS: Record<InterviewFormat, string> = {
+  "candidate-led": "Candidate-Led",
+  "interviewer-led": "Interviewer-Led",
 };
 
 export const DIFFICULTY_COLORS: Record<Difficulty, string> = {
@@ -79,4 +96,8 @@ export const TYPE_COLORS: Record<QuestionType, string> = {
   "growth-strategy": "text-emerald-600 bg-emerald-50",
   pricing: "text-pink-600 bg-pink-50",
   "competitive-response": "text-indigo-600 bg-indigo-50",
+  brainteasers: "text-yellow-600 bg-yellow-50",
+  turnarounds: "text-red-600 bg-red-50",
+  "strategic-decision": "text-teal-600 bg-teal-50",
+  "industry-analysis": "text-slate-600 bg-slate-50",
 };

@@ -52,6 +52,10 @@ const TYPE_COLORS_DARK: Record<QuestionType, string> = {
   "growth-strategy": "text-emerald-400 bg-emerald-400/10",
   pricing: "text-pink-400 bg-pink-400/10",
   "competitive-response": "text-indigo-400 bg-indigo-400/10",
+  brainteasers: "text-yellow-400 bg-yellow-400/10",
+  turnarounds: "text-red-400 bg-red-400/10",
+  "strategic-decision": "text-teal-400 bg-teal-400/10",
+  "industry-analysis": "text-slate-400 bg-slate-400/10",
 };
 
 export default function CompanyQuestionsPage() {
