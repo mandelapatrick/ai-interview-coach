@@ -151,6 +151,7 @@ export default function VideoSession({ question, userStream, onBack }: VideoSess
 
         ws.onopen = () => {
           console.log("[VideoSession] X.AI WebSocket connected");
+          console.log("[X.AI] System Prompt:", systemPrompt);
           ws.send(
             JSON.stringify({
               type: "session.update",

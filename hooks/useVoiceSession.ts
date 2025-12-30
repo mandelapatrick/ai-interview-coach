@@ -147,6 +147,9 @@ export function useVoiceSession(options: UseVoiceSessionOptions) {
         console.log("WebSocket connected");
         setIsConnected(true);
 
+        // Log system prompt being sent to X.AI
+        console.log("[X.AI] System Prompt:", systemPrompt);
+
         // Send session configuration
         ws.send(
           JSON.stringify({
