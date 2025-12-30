@@ -165,9 +165,9 @@ export function useVoiceSession(options: UseVoiceSessionOptions) {
               },
               turn_detection: {
                 type: "server_vad",
-                threshold: 0.6,           // Higher = less sensitive to background noise
-                prefix_padding_ms: 400,   // Audio context before speech
-                silence_duration_ms: 1200, // Wait 1.2s of silence before turn ends (allows thinking pauses)
+                threshold: 0.75,          // Higher = less sensitive to background noise
+                prefix_padding_ms: 500,   // Audio context before speech
+                silence_duration_ms: 2500, // Wait 2.5s of silence before turn ends (allows longer thinking pauses)
               },
             },
           })
