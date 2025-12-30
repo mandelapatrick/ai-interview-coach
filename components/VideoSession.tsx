@@ -164,9 +164,9 @@ export default function VideoSession({ question, userStream, onBack }: VideoSess
                 input_audio_transcription: { model: "whisper-1" },
                 turn_detection: {
                   type: "server_vad",
-                  threshold: 0.5,
-                  prefix_padding_ms: 300,
-                  silence_duration_ms: 500,
+                  threshold: 0.6,           // Higher = less sensitive to background noise
+                  prefix_padding_ms: 400,   // Audio context before speech
+                  silence_duration_ms: 1200, // Wait 1.2s of silence before turn ends (allows thinking pauses)
                 },
               },
             })
