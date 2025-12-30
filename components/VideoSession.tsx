@@ -34,11 +34,7 @@ export default function VideoSession({ question, userStream, onBack }: VideoSess
   const pendingTextRef = useRef<string>("");
   const transcriptRef = useRef<TranscriptEntry[]>([]);
 
-  const systemPrompt = getSystemPrompt(
-    question.type,
-    question.title,
-    question.description
-  );
+  const systemPrompt = getSystemPrompt(question);
 
   const {
     isInitialized: isAvatarInitialized,

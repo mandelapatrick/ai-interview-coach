@@ -14,11 +14,7 @@ export default function VoiceSession({ question }: VoiceSessionProps) {
   const router = useRouter();
   const [showEndConfirm, setShowEndConfirm] = useState(false);
 
-  const systemPrompt = getSystemPrompt(
-    question.type,
-    question.title,
-    question.description
-  );
+  const systemPrompt = getSystemPrompt(question);
 
   const {
     isConnected,

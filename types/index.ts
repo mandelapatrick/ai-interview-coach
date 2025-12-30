@@ -35,6 +35,12 @@ export interface Question {
   type: QuestionType;
   difficulty: Difficulty;
   description: string;
+  // New fields for enhanced case interviews
+  industry?: string;
+  interviewFormat?: InterviewFormat;
+  additionalInfo?: string;        // Data/exhibits for the case
+  additionalInfoImages?: string[]; // Image URLs for charts/exhibits
+  solution?: string;              // Solution key for interviewer reference
 }
 
 export interface Session {
