@@ -124,6 +124,18 @@ export const questions: Question[] = [
     additionalInfo: "ADR (Average Daily Rate): $450 (down from $480). RevPAR: $337. Labor costs: 38% of revenue (up from 32%). Energy costs: up 40%. F&B revenue: down 20% (guests eating out more). Spa/wellness: underutilized (30% capacity). Corporate vs leisure mix: 60/40 (was 40/60). New competitor: Airbnb Luxe taking 5% of leisure market.",
     solution: "Diagnosis: Margin compression from (1) ADR erosion due to corporate negotiated rates, (2) Labor cost inflation, (3) Underutilized amenities. Recommendations: (1) Yield management - reduce corporate allocation during peak periods to capture higher leisure rates, (2) Reimagine F&B - convert underperforming restaurant to grab-and-go + delivery kitchen, (3) Launch wellness packages to drive spa utilization (target 60%), (4) Automate check-in/concierge for labor efficiency. Expected margin recovery: 4-5 points within 18 months.",
   },
+  {
+    id: "bcg-6",
+    companySlug: "bcg",
+    title: "CookieCo Profitability Decline",
+    type: "profitability",
+    difficulty: "medium",
+    industry: "Consumer Packaged Goods",
+    interviewFormat: "candidate-led",
+    description: "Our client today is a national manufacturer and seller of packaged cookies in the United States, called Cookie Co. In the last two to three years, they've seen a decline in profits, whereas the rest of the industry has experienced healthy growth. They've come to us to identify the root cause of this issue and how they can reverse it.",
+    additionalInfo: "The client sells other products, but the focus today is only on their cookie segment. The scope is limited to the United States market. The case involves analysis of revenues and costs, with particular focus on cost structure including ingredients, manufacturing, warehousing, packaging, and distribution. The time period covers 2020-2022, which includes pandemic and macroeconomic factors affecting distribution costs and supply chains.",
+    solution: "The root cause of Cookie Co's profitability decline is rising distribution and supply chain costs that have affected them more significantly than competitors. During 2020-2022, the macroeconomic environment (pandemic, supply chain disruptions) led to increased distribution costs. While these costs affected the entire industry, Cookie Co was disproportionately impacted. The solution involves: 1) Identifying specific cost drivers in the distribution and supply chain, 2) Implementing cost control measures for distribution and warehousing, 3) Evaluating packaging efficiency, 4) Benchmarking against competitors to understand why they managed costs better, and 5) Considering strategic alternatives for distribution network optimization. Strong performance indicators: Correctly identifies profitability as revenue minus costs framework, develops hypothesis that costs are the issue given market growth context, systematically walks through cost structure chronologically, connects macroeconomic context to distribution cost increases, recognizes industry-wide vs company-specific cost factors.",
+  },
 
   // Bain (Candidate-led)
   {
