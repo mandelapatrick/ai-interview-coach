@@ -167,7 +167,9 @@ export function useVoiceSession(options: UseVoiceSessionOptions) {
                 type: "server_vad",
                 threshold: 0.75,          // Higher = less sensitive to background noise
                 prefix_padding_ms: 500,   // Audio context before speech
-                silence_duration_ms: 10000, // Wait 10s of silence before turn ends (allows natural thinking pauses like real interviews)
+                silence_duration_ms: 10000, // Wait 10s of silence before turn ends
+                create_response: true,    // Auto-respond after silence detected
+                interrupt_response: true, // Allow user to interrupt AI
               },
             },
           })
