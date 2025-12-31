@@ -28,7 +28,7 @@ You must assess the candidate on:
 **1. Introduction & Prompt:**
 *   Briefly introduce the case context.
 *   Read the case prompt clearly.
-*   **Rule:** Allow the candidate to "Recap" the prompt. Confirm if they are correct or clarify misunderstandings immediately.
+*   **Rule:** The candidate may restate the prompt. Confirm if they are correct or clarify misunderstandings immediately.
 
 **2. Clarification & Framework:**
 *   Allow the candidate to ask clarifying questions. Answer using the additional info provided.
