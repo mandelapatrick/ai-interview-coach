@@ -3,12 +3,15 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { useHeyGenAvatar } from "@/hooks/useHeyGenAvatar";
+import { useAnamAvatar } from "@/hooks/useAnamAvatar";
 import { Question } from "@/types";
 import { getSystemPrompt } from "@/data/prompts";
+import type { AvatarProvider } from "./VideoLobby";
 
 interface VideoSessionProps {
   question: Question;
   userStream: MediaStream;
+  avatarProvider: AvatarProvider;
   onBack: () => void;
 }
 
@@ -18,7 +21,7 @@ interface TranscriptEntry {
   timestamp: Date;
 }
 
-export default function VideoSession({ question, userStream, onBack }: VideoSessionProps) {
+export default function VideoSession({ question, userStream, avatarProvider, onBack }: VideoSessionProps) {
   const router = useRouter();
   const [showEndConfirm, setShowEndConfirm] = useState(false);
   const [isTranscriptExpanded, setIsTranscriptExpanded] = useState(true);
@@ -36,17 +39,8 @@ export default function VideoSession({ question, userStream, onBack }: VideoSess
 
   const systemPrompt = getSystemPrompt(question);
 
-  const {
-    isInitialized: isAvatarInitialized,
-    isConnecting: isAvatarConnecting,
-    isTalking: isAvatarTalking,
-    error: avatarError,
-    initializeAvatar,
-    sendAudio: avatarSendAudio,
-    endSpeaking: avatarEndSpeaking,
-    interrupt: avatarInterrupt,
-    stopAvatar,
-  } = useHeyGenAvatar({
+  // HeyGen avatar hook
+  const heygenAvatar = useHeyGenAvatar({
     onAvatarTranscription: (text) => {
       console.log("Avatar said:", text);
       setTranscript((prev) => {
@@ -61,10 +55,54 @@ export default function VideoSession({ question, userStream, onBack }: VideoSess
       console.log("User said (LiveAvatar):", text);
     },
     onStreamReady: () => {
-      console.log("Avatar stream is ready!");
+      console.log("HeyGen stream is ready!");
     },
-    onError: (err) => console.error("Avatar error:", err),
+    onError: (err) => console.error("HeyGen error:", err),
   });
+
+  // Anam avatar hook
+  const anamAvatar = useAnamAvatar({
+    onAvatarTranscription: (text) => {
+      console.log("Anam avatar said:", text);
+    },
+    onUserTranscription: (text) => {
+      console.log("User said (Anam):", text);
+    },
+    onStreamReady: () => {
+      console.log("Anam stream is ready!");
+    },
+    onError: (err) => console.error("Anam error:", err),
+  });
+
+  // Unified avatar interface
+  const avatar = avatarProvider === "heygen" ? {
+    isInitialized: heygenAvatar.isInitialized,
+    isConnecting: heygenAvatar.isConnecting,
+    isTalking: heygenAvatar.isTalking,
+    error: heygenAvatar.error,
+    initializeAvatar: heygenAvatar.initializeAvatar,
+    sendAudio: heygenAvatar.sendAudio,
+    endSpeaking: heygenAvatar.endSpeaking,
+    interrupt: heygenAvatar.interrupt,
+    stopAvatar: heygenAvatar.stopAvatar,
+    // Anam-specific methods (unused for HeyGen)
+    streamTextChunk: null as ((chunk: string, isLast?: boolean) => void) | null,
+    endTalkStream: null as (() => void) | null,
+  } : {
+    isInitialized: anamAvatar.isInitialized,
+    isConnecting: anamAvatar.isConnecting,
+    isTalking: anamAvatar.isTalking,
+    error: anamAvatar.error,
+    initializeAvatar: anamAvatar.initializeAvatar,
+    // HeyGen-specific methods (unused for Anam)
+    sendAudio: null as ((audio: string) => void) | null,
+    endSpeaking: null as (() => void) | null,
+    interrupt: anamAvatar.interrupt,
+    stopAvatar: anamAvatar.stopAvatar,
+    // Anam-specific methods
+    streamTextChunk: anamAvatar.streamTextChunk,
+    endTalkStream: anamAvatar.endTalkStream,
+  };
 
   // Keep transcript ref in sync
   useEffect(() => {
@@ -101,11 +139,11 @@ export default function VideoSession({ question, userStream, onBack }: VideoSess
     const initAvatar = async () => {
       if (avatarVideoRef.current && !avatarInitializedRef.current) {
         avatarInitializedRef.current = true;
-        console.log("[VideoSession] Initializing avatar...");
+        console.log(`[VideoSession] Initializing ${avatarProvider} avatar...`);
 
-        const success = await initializeAvatar(avatarVideoRef.current);
+        const success = await avatar.initializeAvatar(avatarVideoRef.current);
         if (!success) {
-          console.error("[VideoSession] Failed to initialize avatar");
+          console.error(`[VideoSession] Failed to initialize ${avatarProvider} avatar`);
           avatarInitializedRef.current = false;
         }
       }
@@ -114,11 +152,11 @@ export default function VideoSession({ question, userStream, onBack }: VideoSess
     // Small delay to ensure video element is ready
     const timer = setTimeout(initAvatar, 100);
     return () => clearTimeout(timer);
-  }, [initializeAvatar]);
+  }, [avatar.initializeAvatar, avatarProvider]);
 
   // Step 2: Connect to X.AI only after avatar is initialized
   useEffect(() => {
-    if (!isAvatarInitialized || xaiConnectedRef.current) return;
+    if (!avatar.isInitialized || xaiConnectedRef.current) return;
 
     const connectToXAI = async () => {
       xaiConnectedRef.current = true;
@@ -160,11 +198,11 @@ export default function VideoSession({ question, userStream, onBack }: VideoSess
                 input_audio_transcription: { model: "whisper-1" },
                 turn_detection: {
                   type: "server_vad",
-                  threshold: 0.75,          // Higher = less sensitive to background noise
-                  prefix_padding_ms: 500,   // Audio context before speech
-                  silence_duration_ms: 10000, // Wait 10s of silence before turn ends
-                  create_response: true,    // Auto-respond after silence detected
-                  interrupt_response: true, // Allow user to interrupt AI
+                  threshold: 0.75,
+                  prefix_padding_ms: 500,
+                  silence_duration_ms: 10000,
+                  create_response: true,
+                  interrupt_response: true,
                 },
               },
             })
@@ -235,21 +273,23 @@ export default function VideoSession({ question, userStream, onBack }: VideoSess
             }
 
             switch (data.type) {
-              // Pipe audio to avatar (handle both event type formats)
+              // Pipe audio to HeyGen avatar (only used when avatarProvider is "heygen")
               case "response.audio.delta":
               case "response.output_audio.delta":
-                if (data.delta) {
-                  avatarSendAudio(data.delta);
+                if (data.delta && avatarProvider === "heygen" && avatar.sendAudio) {
+                  avatar.sendAudio(data.delta);
                 }
                 break;
 
               case "response.audio.done":
               case "response.output_audio.done":
                 console.log("[X.AI] Audio stream complete");
-                avatarEndSpeaking();
+                if (avatarProvider === "heygen" && avatar.endSpeaking) {
+                  avatar.endSpeaking();
+                }
                 break;
 
-              // Update transcript with AI speech (handle both event type formats)
+              // Update transcript with AI speech and stream text to Anam
               case "response.audio_transcript.delta":
               case "response.output_audio_transcript.delta":
                 if (data.delta) {
@@ -261,12 +301,20 @@ export default function VideoSession({ question, userStream, onBack }: VideoSess
                     }
                     return [...prev, { role: "assistant", text: data.delta, timestamp: new Date() }];
                   });
+                  // Stream text to Anam avatar
+                  if (avatarProvider === "anam" && avatar.streamTextChunk) {
+                    avatar.streamTextChunk(data.delta, false);
+                  }
                 }
                 break;
 
               case "response.audio_transcript.done":
               case "response.output_audio_transcript.done":
                 pendingTextRef.current = "";
+                // End the talk stream for Anam
+                if (avatarProvider === "anam" && avatar.endTalkStream) {
+                  avatar.endTalkStream();
+                }
                 break;
 
               case "response.text.delta":
@@ -282,6 +330,10 @@ export default function VideoSession({ question, userStream, onBack }: VideoSess
                     }
                     return [...prev, { role: "assistant", text: textDelta, timestamp: new Date() }];
                   });
+                  // Stream text to Anam avatar
+                  if (avatarProvider === "anam" && avatar.streamTextChunk) {
+                    avatar.streamTextChunk(textDelta, false);
+                  }
                 }
                 break;
 
@@ -295,17 +347,25 @@ export default function VideoSession({ question, userStream, onBack }: VideoSess
                     }
                     return [...prev, { role: "assistant", text: data.part.text, timestamp: new Date() }];
                   });
+                  // Stream text to Anam avatar
+                  if (avatarProvider === "anam" && avatar.streamTextChunk) {
+                    avatar.streamTextChunk(data.part.text, false);
+                  }
                 }
                 break;
 
               case "response.done":
                 pendingTextRef.current = "";
+                // End the talk stream for Anam
+                if (avatarProvider === "anam" && avatar.endTalkStream) {
+                  avatar.endTalkStream();
+                }
                 break;
 
               // User speech transcription
               case "conversation.item.input_audio_transcription.completed":
                 if (data.transcript) {
-                  avatarInterrupt();
+                  avatar.interrupt();
                   setTranscript((prev) => [
                     ...prev,
                     { role: "user", text: data.transcript!, timestamp: new Date() },
@@ -328,7 +388,7 @@ export default function VideoSession({ question, userStream, onBack }: VideoSess
     };
 
     connectToXAI();
-  }, [isAvatarInitialized, systemPrompt, userStream, avatarSendAudio, avatarEndSpeaking, avatarInterrupt]);
+  }, [avatar.isInitialized, systemPrompt, userStream, avatar.sendAudio, avatar.endSpeaking, avatar.interrupt, avatar.streamTextChunk, avatar.endTalkStream, avatarProvider]);
 
   const cleanup = useCallback(async () => {
     if (wsRef.current) {
@@ -339,8 +399,8 @@ export default function VideoSession({ question, userStream, onBack }: VideoSess
       audioContextRef.current.close();
       audioContextRef.current = null;
     }
-    await stopAvatar();
-  }, [stopAvatar]);
+    await avatar.stopAvatar();
+  }, [avatar.stopAvatar]);
 
   const handleEnd = () => {
     if (transcript.length > 0) {
@@ -372,7 +432,7 @@ export default function VideoSession({ question, userStream, onBack }: VideoSess
     return `${mins}:${secs.toString().padStart(2, "0")}`;
   };
 
-  const isLoading = isAvatarConnecting || (!isAvatarInitialized && !avatarError);
+  const isLoading = avatar.isConnecting || (!avatar.isInitialized && !avatar.error);
 
   return (
     <div className="flex flex-col h-full min-h-[600px] bg-[#0f172a]">
@@ -384,7 +444,9 @@ export default function VideoSession({ question, userStream, onBack }: VideoSess
           {isLoading && (
             <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-[#0a1122]">
               <div className="w-16 h-16 border-4 border-[#d4af37] border-t-transparent rounded-full animate-spin mb-4" />
-              <p className="text-white/60">Connecting to AI interviewer...</p>
+              <p className="text-white/60">
+                Connecting to {avatarProvider === "heygen" ? "HeyGen" : "Anam"} AI interviewer...
+              </p>
             </div>
           )}
           {/* Video element for avatar stream */}
@@ -418,12 +480,19 @@ export default function VideoSession({ question, userStream, onBack }: VideoSess
           />
 
           {/* Speaking Indicator */}
-          {isAvatarTalking && (
+          {avatar.isTalking && (
             <div className="absolute top-4 left-4 flex items-center gap-2 px-3 py-1.5 bg-black/50 rounded-full backdrop-blur-sm">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
               <span className="text-white text-sm">Speaking</span>
             </div>
           )}
+
+          {/* Avatar Provider Badge */}
+          <div className="absolute top-4 left-1/2 -translate-x-1/2 px-3 py-1 bg-black/50 rounded-full backdrop-blur-sm">
+            <span className="text-white/60 text-xs">
+              {avatarProvider === "heygen" ? "HeyGen" : "Anam"} Avatar
+            </span>
+          </div>
 
           {/* User Video (PiP) */}
           <div className="absolute top-4 right-4 w-48 h-36 bg-[#1a2744] rounded-lg overflow-hidden shadow-xl border border-white/10">

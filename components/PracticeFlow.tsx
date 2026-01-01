@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Question } from "@/types";
 import InterviewModeSelector from "./InterviewModeSelector";
-import VideoLobby from "./VideoLobby";
+import VideoLobby, { AvatarProvider } from "./VideoLobby";
 import VideoSession from "./VideoSession";
 import VoiceSession from "./VoiceSession";
 
@@ -16,6 +16,7 @@ interface PracticeFlowProps {
 export default function PracticeFlow({ question }: PracticeFlowProps) {
   const [flowState, setFlowState] = useState<FlowState>("mode-select");
   const [userStream, setUserStream] = useState<MediaStream | null>(null);
+  const [avatarProvider, setAvatarProvider] = useState<AvatarProvider>("heygen");
 
   const handleModeSelect = (mode: "audio" | "video") => {
     if (mode === "audio") {
@@ -25,8 +26,9 @@ export default function PracticeFlow({ question }: PracticeFlowProps) {
     }
   };
 
-  const handleVideoLobbyJoin = (stream: MediaStream) => {
+  const handleVideoLobbyJoin = (stream: MediaStream, provider: AvatarProvider) => {
     setUserStream(stream);
+    setAvatarProvider(provider);
     setFlowState("video-session");
   };
 
@@ -60,6 +62,7 @@ export default function PracticeFlow({ question }: PracticeFlowProps) {
         <VideoSession
           question={question}
           userStream={userStream}
+          avatarProvider={avatarProvider}
           onBack={handleVideoSessionBack}
         />
       ) : null;

@@ -15,6 +15,7 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@anam-ai/js-sdk": "^4.7.0",
     "@heygen/liveavatar-web-sdk": "^0.0.10",
     "@heygen/streaming-avatar": "^2.1.0",
     "@supabase/supabase-js": "^2.89.0",

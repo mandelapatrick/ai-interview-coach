@@ -2,8 +2,10 @@
 
 import { useState, useEffect, useRef } from "react";
 
+export type AvatarProvider = "heygen" | "anam";
+
 interface VideoLobbyProps {
-  onJoin: (stream: MediaStream) => void;
+  onJoin: (stream: MediaStream, avatarProvider: AvatarProvider) => void;
   onBack: () => void;
 }
 
@@ -21,6 +23,7 @@ export default function VideoLobby({ onJoin, onBack }: VideoLobbyProps) {
   const [microphones, setMicrophones] = useState<MediaDeviceInfo[]>([]);
   const [selectedCamera, setSelectedCamera] = useState<string>("");
   const [selectedMicrophone, setSelectedMicrophone] = useState<string>("");
+  const [selectedAvatarProvider, setSelectedAvatarProvider] = useState<AvatarProvider>("heygen");
   const [permissionError, setPermissionError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -145,7 +148,7 @@ export default function VideoLobby({ onJoin, onBack }: VideoLobbyProps) {
 
   const handleJoin = () => {
     if (stream) {
-      onJoin(stream);
+      onJoin(stream, selectedAvatarProvider);
     }
   };
 
@@ -269,6 +272,17 @@ export default function VideoLobby({ onJoin, onBack }: VideoLobbyProps) {
                 {mic.label}
               </option>
             ))}
+          </select>
+        </div>
+        <div>
+          <label className="block text-sm text-white/60 mb-2">AI Avatar</label>
+          <select
+            value={selectedAvatarProvider}
+            onChange={(e) => setSelectedAvatarProvider(e.target.value as AvatarProvider)}
+            className="w-full px-4 py-3 bg-[#1a2d47] text-white rounded-lg border border-white/10 focus:border-[#d4af37] focus:outline-none"
+          >
+            <option value="heygen">HeyGen Live Avatar</option>
+            <option value="anam">Anam AI (Layla)</option>
           </select>
         </div>
       </div>
