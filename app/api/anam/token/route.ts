@@ -3,12 +3,12 @@ import { NextResponse } from "next/server";
 // Anam Avatar IDs - Update this with your preferred avatar from https://docs.anam.ai/resources/avatar-gallery
 const ANAM_AVATARS = {
   // Default avatar (Layla) - TODO: Update with actual Layla avatar ID from gallery
-  layla: "30fa96d0-26c4-4e55-94a0-517025942e18", // Currently using Cara as placeholder
+  layla: "ae2ea8c1-db28-47e3-b6ea-493e4ed3c554", // Currently using Cara as placeholder
 };
 
 // Voice IDs from Anam
 const ANAM_VOICES = {
-  default: "6bfbe25a-979d-40f3-a92b-5394170af54b",
+  default: "a57043ba-5976-4fbb-b065-d3aad4f5338b",
 };
 
 // LLM IDs from Anam - Use CUSTOMER_CLIENT_V1 when handling conversation externally

@@ -16,7 +16,7 @@ interface PracticeFlowProps {
 export default function PracticeFlow({ question }: PracticeFlowProps) {
   const [flowState, setFlowState] = useState<FlowState>("mode-select");
   const [userStream, setUserStream] = useState<MediaStream | null>(null);
-  const [avatarProvider, setAvatarProvider] = useState<AvatarProvider>("heygen");
+  const [avatarProvider, setAvatarProvider] = useState<AvatarProvider>("anam");
 
   const handleModeSelect = (mode: "audio" | "video") => {
     if (mode === "audio") {

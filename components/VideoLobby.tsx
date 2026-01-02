@@ -23,7 +23,7 @@ export default function VideoLobby({ onJoin, onBack }: VideoLobbyProps) {
   const [microphones, setMicrophones] = useState<MediaDeviceInfo[]>([]);
   const [selectedCamera, setSelectedCamera] = useState<string>("");
   const [selectedMicrophone, setSelectedMicrophone] = useState<string>("");
-  const [selectedAvatarProvider, setSelectedAvatarProvider] = useState<AvatarProvider>("heygen");
+  const [selectedAvatarProvider, setSelectedAvatarProvider] = useState<AvatarProvider>("anam");
   const [permissionError, setPermissionError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
