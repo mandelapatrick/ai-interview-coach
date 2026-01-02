@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 // Anam Avatar IDs - Update this with your preferred avatar from https://docs.anam.ai/resources/avatar-gallery
 const ANAM_AVATARS = {
@@ -11,16 +11,19 @@ const ANAM_VOICES = {
   default: "a57043ba-5976-4fbb-b065-d3aad4f5338b",
 };
 
-// LLM IDs from Anam - Use CUSTOMER_CLIENT_V1 when handling conversation externally
+// LLM IDs from Anam (use UUIDs, not display names)
 const ANAM_LLMS = {
-  customerClient: "CUSTOMER_CLIENT_V1", // For client-side/external conversation handling
-  gpt4Mini: "0934d97d-0c3a-4f33-91b0-5e136a0ef466",
-  llama70b: "ANAM_LLAMA_v3_3_70B_V1",
+  kimiK2Instruct: "7736a22f-2d79-4720-952c-25fdca55ad40", // kimi-k2-instruct-0905
+  kimiK2: "88190a76-3e87-4935-ab39-f4f73038815a", // kimi-k2
+  gpt4Mini: "0934d97d-0c3a-4f33-91b0-5e136a0ef466", // gpt-4.1-mini
+  llama70b: "ANAM_LLAMA_v3_3_70B_V1", // llama-3.3-70b
 };
 
-export async function POST() {
+export async function POST(request: NextRequest) {
   try {
     const apiKey = process.env.ANAM_API_KEY;
+    const body = await request.json();
+    const { systemPrompt } = body;
 
     console.log("[Anam API] Token request received");
 
@@ -32,7 +35,16 @@ export async function POST() {
       );
     }
 
+    if (!systemPrompt) {
+      console.error("[Anam API] System prompt not provided");
+      return NextResponse.json(
+        { error: "System prompt is required" },
+        { status: 400 }
+      );
+    }
+
     console.log("[Anam API] Requesting session token from Anam...");
+    console.log("[Anam API] Using LLM:", ANAM_LLMS.kimiK2Instruct);
 
     // Generate a new session token from Anam API
     const tokenResponse = await fetch(
@@ -47,8 +59,8 @@ export async function POST() {
           personaConfig: {
             avatarId: ANAM_AVATARS.layla,
             voiceId: ANAM_VOICES.default,
-            llmId: ANAM_LLMS.customerClient, // Use client-side processing since X.AI handles conversation
-            systemPrompt: "You are an AI interviewer conducting a case interview.",
+            llmId: ANAM_LLMS.kimiK2Instruct, // Anam handles conversation with Kimi K2 LLM
+            systemPrompt: systemPrompt,
           },
         }),
       }

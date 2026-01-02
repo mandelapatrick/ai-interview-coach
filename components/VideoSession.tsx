@@ -60,16 +60,38 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
     onError: (err) => console.error("HeyGen error:", err),
   });
 
-  // Anam avatar hook
+  // Anam avatar hook - Anam handles full conversation with its own LLM
   const anamAvatar = useAnamAvatar({
+    systemPrompt,
+    onAvatarStartTalking: () => {
+      console.log("Anam avatar started talking");
+    },
+    onAvatarStopTalking: () => {
+      console.log("Anam avatar stopped talking");
+    },
     onAvatarTranscription: (text) => {
       console.log("Anam avatar said:", text);
+      setTranscript((prev) => {
+        const last = prev[prev.length - 1];
+        if (last && last.role === "assistant") {
+          return [...prev.slice(0, -1), { ...last, text: last.text + text }];
+        }
+        return [...prev, { role: "assistant", text, timestamp: new Date() }];
+      });
     },
     onUserTranscription: (text) => {
       console.log("User said (Anam):", text);
+      setTranscript((prev) => {
+        const last = prev[prev.length - 1];
+        if (last && last.role === "user") {
+          return [...prev.slice(0, -1), { ...last, text: last.text + " " + text }];
+        }
+        return [...prev, { role: "user", text, timestamp: new Date() }];
+      });
     },
     onStreamReady: () => {
-      console.log("Anam stream is ready!");
+      console.log("Anam stream is ready - conversation handled by Anam");
+      setIsSessionStarted(true);
     },
     onError: (err) => console.error("Anam error:", err),
   });
@@ -85,23 +107,17 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
     endSpeaking: heygenAvatar.endSpeaking,
     interrupt: heygenAvatar.interrupt,
     stopAvatar: heygenAvatar.stopAvatar,
-    // Anam-specific methods (unused for HeyGen)
-    streamTextChunk: null as ((chunk: string, isLast?: boolean) => void) | null,
-    endTalkStream: null as (() => void) | null,
   } : {
     isInitialized: anamAvatar.isInitialized,
     isConnecting: anamAvatar.isConnecting,
     isTalking: anamAvatar.isTalking,
     error: anamAvatar.error,
     initializeAvatar: anamAvatar.initializeAvatar,
-    // HeyGen-specific methods (unused for Anam)
+    // HeyGen-specific methods (unused for Anam - Anam handles conversation natively)
     sendAudio: null as ((audio: string) => void) | null,
     endSpeaking: null as (() => void) | null,
     interrupt: anamAvatar.interrupt,
     stopAvatar: anamAvatar.stopAvatar,
-    // Anam-specific methods
-    streamTextChunk: anamAvatar.streamTextChunk,
-    endTalkStream: anamAvatar.endTalkStream,
   };
 
   // Keep transcript ref in sync
@@ -154,8 +170,10 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
     return () => clearTimeout(timer);
   }, [avatar.initializeAvatar, avatarProvider]);
 
-  // Step 2: Connect to X.AI only after avatar is initialized
+  // Step 2: Connect to X.AI only after avatar is initialized (HeyGen only)
+  // Anam handles conversation natively with its own LLM
   useEffect(() => {
+    if (avatarProvider !== "heygen") return; // Anam handles conversation natively
     if (!avatar.isInitialized || xaiConnectedRef.current) return;
 
     const connectToXAI = async () => {
@@ -273,10 +291,10 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
             }
 
             switch (data.type) {
-              // Pipe audio to HeyGen avatar (only used when avatarProvider is "heygen")
+              // Pipe audio to HeyGen avatar
               case "response.audio.delta":
               case "response.output_audio.delta":
-                if (data.delta && avatarProvider === "heygen" && avatar.sendAudio) {
+                if (data.delta && avatar.sendAudio) {
                   avatar.sendAudio(data.delta);
                 }
                 break;
@@ -284,12 +302,12 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
               case "response.audio.done":
               case "response.output_audio.done":
                 console.log("[X.AI] Audio stream complete");
-                if (avatarProvider === "heygen" && avatar.endSpeaking) {
+                if (avatar.endSpeaking) {
                   avatar.endSpeaking();
                 }
                 break;
 
-              // Update transcript with AI speech and stream text to Anam
+              // Update transcript with AI speech
               case "response.audio_transcript.delta":
               case "response.output_audio_transcript.delta":
                 if (data.delta) {
@@ -301,20 +319,12 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
                     }
                     return [...prev, { role: "assistant", text: data.delta, timestamp: new Date() }];
                   });
-                  // Stream text to Anam avatar
-                  if (avatarProvider === "anam" && avatar.streamTextChunk) {
-                    avatar.streamTextChunk(data.delta, false);
-                  }
                 }
                 break;
 
               case "response.audio_transcript.done":
               case "response.output_audio_transcript.done":
                 pendingTextRef.current = "";
-                // End the talk stream for Anam
-                if (avatarProvider === "anam" && avatar.endTalkStream) {
-                  avatar.endTalkStream();
-                }
                 break;
 
               case "response.text.delta":
@@ -330,10 +340,6 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
                     }
                     return [...prev, { role: "assistant", text: textDelta, timestamp: new Date() }];
                   });
-                  // Stream text to Anam avatar
-                  if (avatarProvider === "anam" && avatar.streamTextChunk) {
-                    avatar.streamTextChunk(textDelta, false);
-                  }
                 }
                 break;
 
@@ -347,19 +353,11 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
                     }
                     return [...prev, { role: "assistant", text: data.part.text, timestamp: new Date() }];
                   });
-                  // Stream text to Anam avatar
-                  if (avatarProvider === "anam" && avatar.streamTextChunk) {
-                    avatar.streamTextChunk(data.part.text, false);
-                  }
                 }
                 break;
 
               case "response.done":
                 pendingTextRef.current = "";
-                // End the talk stream for Anam
-                if (avatarProvider === "anam" && avatar.endTalkStream) {
-                  avatar.endTalkStream();
-                }
                 break;
 
               // User speech transcription
@@ -388,7 +386,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
     };
 
     connectToXAI();
-  }, [avatar.isInitialized, systemPrompt, userStream, avatar.sendAudio, avatar.endSpeaking, avatar.interrupt, avatar.streamTextChunk, avatar.endTalkStream, avatarProvider]);
+  }, [avatar.isInitialized, systemPrompt, userStream, avatar.sendAudio, avatar.endSpeaking, avatar.interrupt, avatarProvider]);
 
   const cleanup = useCallback(async () => {
     if (wsRef.current) {

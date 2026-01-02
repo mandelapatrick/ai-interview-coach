@@ -5,6 +5,7 @@ import { createClient, AnamEvent } from "@anam-ai/js-sdk";
 import type { AnamClient } from "@anam-ai/js-sdk";
 
 export interface UseAnamAvatarOptions {
+  systemPrompt: string;
   onAvatarStartTalking?: () => void;
   onAvatarStopTalking?: () => void;
   onStreamReady?: () => void;
@@ -13,8 +14,9 @@ export interface UseAnamAvatarOptions {
   onError?: (error: string) => void;
 }
 
-export function useAnamAvatar(options: UseAnamAvatarOptions = {}) {
+export function useAnamAvatar(options: UseAnamAvatarOptions) {
   const {
+    systemPrompt,
     onAvatarStartTalking,
     onAvatarStopTalking,
     onStreamReady,
@@ -30,7 +32,6 @@ export function useAnamAvatar(options: UseAnamAvatarOptions = {}) {
 
   const clientRef = useRef<AnamClient | null>(null);
   const videoElementIdRef = useRef<string | null>(null);
-  const talkStreamRef = useRef<ReturnType<AnamClient["createTalkMessageStream"]> | null>(null);
 
   // Cleanup on unmount
   useEffect(() => {
@@ -54,9 +55,13 @@ export function useAnamAvatar(options: UseAnamAvatarOptions = {}) {
         }
         videoElementIdRef.current = videoElement.id;
 
-        // Step 1: Get session token from our API
-        console.log("[Anam] Fetching session token...");
-        const tokenRes = await fetch("/api/anam/token", { method: "POST" });
+        // Step 1: Get session token from our API with system prompt
+        console.log("[Anam] Fetching session token with system prompt...");
+        const tokenRes = await fetch("/api/anam/token", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ systemPrompt }),
+        });
         if (!tokenRes.ok) {
           const errorData = await tokenRes.json();
           throw new Error(errorData.error || "Failed to get Anam token");
@@ -139,6 +144,7 @@ export function useAnamAvatar(options: UseAnamAvatarOptions = {}) {
       }
     },
     [
+      systemPrompt,
       onAvatarStartTalking,
       onAvatarStopTalking,
       onStreamReady,
@@ -149,93 +155,12 @@ export function useAnamAvatar(options: UseAnamAvatarOptions = {}) {
     ]
   );
 
-  // Send text to make the avatar speak
-  const talk = useCallback(
-    async (text: string) => {
-      if (!clientRef.current || !isInitialized) {
-        console.warn("[Anam] Cannot talk - not initialized");
-        return;
-      }
-
-      try {
-        console.log("[Anam] Sending text to avatar:", text.substring(0, 50) + "...");
-        setIsTalking(true);
-        onAvatarStartTalking?.();
-        await clientRef.current.talk(text);
-      } catch (err) {
-        console.error("[Anam] Failed to send talk command:", err);
-        setIsTalking(false);
-        onAvatarStopTalking?.();
-      }
-    },
-    [isInitialized, onAvatarStartTalking, onAvatarStopTalking]
-  );
-
-  // Create a streaming talk session for real-time text streaming
-  const createTalkStream = useCallback(() => {
-    if (!clientRef.current || !isInitialized) {
-      console.warn("[Anam] Cannot create talk stream - not initialized");
-      return null;
-    }
-
-    try {
-      talkStreamRef.current = clientRef.current.createTalkMessageStream();
-      setIsTalking(true);
-      onAvatarStartTalking?.();
-      console.log("[Anam] Talk stream created");
-      return talkStreamRef.current;
-    } catch (err) {
-      console.error("[Anam] Failed to create talk stream:", err);
-      return null;
-    }
-  }, [isInitialized, onAvatarStartTalking]);
-
-  // Stream a text chunk to the avatar
-  const streamTextChunk = useCallback(
-    (chunk: string, isLast: boolean = false) => {
-      if (!talkStreamRef.current || !talkStreamRef.current.isActive()) {
-        // Create a new stream if needed
-        const stream = createTalkStream();
-        if (!stream) return;
-        talkStreamRef.current = stream;
-      }
-
-      try {
-        talkStreamRef.current.streamMessageChunk(chunk, isLast);
-        if (isLast) {
-          console.log("[Anam] Sent final chunk, ending stream");
-        }
-      } catch (err) {
-        console.error("[Anam] Failed to stream text chunk:", err);
-      }
-    },
-    [createTalkStream]
-  );
-
-  // End the current talk stream
-  const endTalkStream = useCallback(() => {
-    if (talkStreamRef.current && talkStreamRef.current.isActive()) {
-      try {
-        talkStreamRef.current.endMessage();
-        console.log("[Anam] Talk stream ended");
-      } catch (err) {
-        console.error("[Anam] Failed to end talk stream:", err);
-      }
-    }
-    talkStreamRef.current = null;
-    setIsTalking(false);
-    onAvatarStopTalking?.();
-  }, [onAvatarStopTalking]);
-
   // Interrupt the avatar (stop it from speaking)
   const interrupt = useCallback(() => {
-    if (talkStreamRef.current && talkStreamRef.current.isActive()) {
-      endTalkStream();
-    }
     setIsTalking(false);
     onAvatarStopTalking?.();
     console.log("[Anam] Avatar interrupted");
-  }, [endTalkStream, onAvatarStopTalking]);
+  }, [onAvatarStopTalking]);
 
   // Stop and cleanup the avatar session
   const stopAvatar = useCallback(async () => {
@@ -245,7 +170,6 @@ export function useAnamAvatar(options: UseAnamAvatarOptions = {}) {
       console.log("[Anam] Stopping avatar session");
       await clientRef.current.stopStreaming();
       clientRef.current = null;
-      talkStreamRef.current = null;
       setIsInitialized(false);
       setIsTalking(false);
     } catch (err) {
@@ -259,10 +183,6 @@ export function useAnamAvatar(options: UseAnamAvatarOptions = {}) {
     isTalking,
     error,
     initializeAvatar,
-    talk,
-    createTalkStream,
-    streamTextChunk,
-    endTalkStream,
     interrupt,
     stopAvatar,
   };
