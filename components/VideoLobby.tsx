@@ -152,156 +152,169 @@ export default function VideoLobby({ onJoin, onBack }: VideoLobbyProps) {
     }
   };
 
+  // Get short label for device (truncate long names)
+  const getShortLabel = (label: string, maxLength: number = 20) => {
+    if (label.length <= maxLength) return label;
+    return label.slice(0, maxLength) + "...";
+  };
+
   if (isLoading) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-[60vh]">
-        <div className="w-12 h-12 border-4 border-[#d4af37] border-t-transparent rounded-full animate-spin mb-4" />
-        <p className="text-white/60">Requesting camera access...</p>
+      <div className="flex items-center justify-center h-full min-h-[calc(100vh-200px)]">
+        <div className="flex flex-col items-center">
+          <div className="w-12 h-12 border-4 border-[#d4af37] border-t-transparent rounded-full animate-spin mb-4" />
+          <p className="text-white/60">Requesting camera access...</p>
+        </div>
       </div>
     );
   }
 
   if (permissionError) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-[60vh] px-4">
-        <div className="w-16 h-16 rounded-full bg-red-500/20 flex items-center justify-center mb-4">
-          <CameraOffIcon className="w-8 h-8 text-red-400" />
+      <div className="flex items-center justify-center h-full min-h-[calc(100vh-200px)] px-4">
+        <div className="flex flex-col items-center">
+          <div className="w-16 h-16 rounded-full bg-red-500/20 flex items-center justify-center mb-4">
+            <CameraOffIcon className="w-8 h-8 text-red-400" />
+          </div>
+          <h3 className="text-xl font-semibold text-white mb-2">
+            Camera Access Required
+          </h3>
+          <p className="text-white/60 text-center max-w-md mb-6">
+            {permissionError}
+          </p>
+          <button
+            onClick={onBack}
+            className="px-6 py-3 bg-[#1a2d47] text-white rounded-lg hover:bg-[#152238] transition-colors border border-white/10"
+          >
+            Go Back
+          </button>
         </div>
-        <h3 className="text-xl font-semibold text-white mb-2">
-          Camera Access Required
-        </h3>
-        <p className="text-white/60 text-center max-w-md mb-6">
-          {permissionError}
-        </p>
-        <button
-          onClick={onBack}
-          className="px-6 py-3 bg-[#1a2d47] text-white rounded-lg hover:bg-[#152238] transition-colors border border-white/10"
-        >
-          Go Back
-        </button>
       </div>
     );
   }
 
   return (
-    <div className="flex flex-col items-center px-4 py-8">
-      <h2 className="text-2xl font-bold text-white mb-2 font-display">
-        Ready to Join?
-      </h2>
-      <p className="text-white/60 mb-8">
-        Check your camera and microphone before joining
-      </p>
+    <div className="flex items-center justify-center h-full min-h-[calc(100vh-200px)] px-4 lg:px-8">
+      <div className="flex flex-col lg:flex-row items-center lg:items-center gap-8 lg:gap-16 w-full max-w-5xl">
+        {/* Left side - Video Preview */}
+        <div className="flex flex-col items-center flex-1 w-full lg:max-w-[600px]">
+          {/* Video Container */}
+          <div className="relative w-full aspect-video bg-[#1e293b] rounded-xl overflow-hidden shadow-2xl">
+            <video
+              ref={videoRef}
+              autoPlay
+              playsInline
+              muted
+              className={`w-full h-full object-cover ${!isVideoEnabled ? "hidden" : ""}`}
+            />
+            {!isVideoEnabled && (
+              <div className="absolute inset-0 flex items-center justify-center bg-[#1e293b]">
+                <div className="w-20 h-20 rounded-full bg-[#374151] flex items-center justify-center">
+                  <CameraOffIcon className="w-10 h-10 text-white/40" />
+                </div>
+              </div>
+            )}
 
-      {/* Video Preview */}
-      <div className="relative w-full max-w-2xl aspect-video bg-[#0f172a] rounded-2xl overflow-hidden mb-6 border border-white/10">
-        <video
-          ref={videoRef}
-          autoPlay
-          playsInline
-          muted
-          className={`w-full h-full object-cover ${
-            !isVideoEnabled ? "hidden" : ""
-          }`}
-        />
-        {!isVideoEnabled && (
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-24 h-24 rounded-full bg-[#1a2d47] flex items-center justify-center">
-              <CameraOffIcon className="w-12 h-12 text-white/40" />
+            {/* Control Overlay - centered at bottom */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+              <button
+                onClick={toggleAudio}
+                className={`w-11 h-11 rounded-full flex items-center justify-center transition-all ${
+                  isAudioEnabled
+                    ? "bg-[#3c4043] hover:bg-[#4a4f52]"
+                    : "bg-[#ea4335] hover:bg-[#d33426]"
+                }`}
+                title={isAudioEnabled ? "Turn off microphone" : "Turn on microphone"}
+              >
+                {isAudioEnabled ? (
+                  <MicIcon className="w-5 h-5 text-white" />
+                ) : (
+                  <MicOffIcon className="w-5 h-5 text-white" />
+                )}
+              </button>
+              <button
+                onClick={toggleVideo}
+                className={`w-11 h-11 rounded-full flex items-center justify-center transition-all ${
+                  isVideoEnabled
+                    ? "bg-[#3c4043] hover:bg-[#4a4f52]"
+                    : "bg-[#ea4335] hover:bg-[#d33426]"
+                }`}
+                title={isVideoEnabled ? "Turn off camera" : "Turn on camera"}
+              >
+                {isVideoEnabled ? (
+                  <VideoIcon className="w-5 h-5 text-white" />
+                ) : (
+                  <VideoOffIcon className="w-5 h-5 text-white" />
+                )}
+              </button>
             </div>
           </div>
-        )}
 
-        {/* Control Overlay */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3">
+          {/* Device Selectors - pill buttons below video */}
+          <div className="flex flex-wrap items-center justify-center gap-2 mt-4">
+            <div className="relative">
+              <select
+                value={selectedMicrophone}
+                onChange={(e) => setSelectedMicrophone(e.target.value)}
+                className="appearance-none pl-8 pr-6 py-2 bg-transparent text-white/80 text-sm rounded-full border border-white/20 hover:bg-white/5 focus:outline-none focus:border-white/40 cursor-pointer"
+              >
+                {microphones.map((mic) => (
+                  <option key={mic.deviceId} value={mic.deviceId} className="bg-[#1e293b] text-white">
+                    {getShortLabel(mic.label)}
+                  </option>
+                ))}
+              </select>
+              <MicIcon className="absolute left-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-white/60 pointer-events-none" />
+              <ChevronDownIcon className="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-white/60 pointer-events-none" />
+            </div>
+
+            <div className="relative">
+              <select
+                value={selectedCamera}
+                onChange={(e) => setSelectedCamera(e.target.value)}
+                className="appearance-none pl-8 pr-6 py-2 bg-transparent text-white/80 text-sm rounded-full border border-white/20 hover:bg-white/5 focus:outline-none focus:border-white/40 cursor-pointer"
+              >
+                {cameras.map((camera) => (
+                  <option key={camera.deviceId} value={camera.deviceId} className="bg-[#1e293b] text-white">
+                    {getShortLabel(camera.label)}
+                  </option>
+                ))}
+              </select>
+              <VideoIcon className="absolute left-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-white/60 pointer-events-none" />
+              <ChevronDownIcon className="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-white/60 pointer-events-none" />
+            </div>
+          </div>
+        </div>
+
+        {/* Right side - Join CTA */}
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left lg:min-w-[280px]">
+          <div className="w-12 h-12 rounded-full bg-[#d4af37]/20 flex items-center justify-center mb-4">
+            <VideoIcon className="w-6 h-6 text-[#d4af37]" />
+          </div>
+
+          <h2 className="text-2xl font-semibold text-white mb-2 font-display">
+            Ready to join?
+          </h2>
+
+          <p className="text-white/50 text-sm mb-6">
+            Your interview will begin when you click join
+          </p>
+
           <button
-            onClick={toggleAudio}
-            className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors ${
-              isAudioEnabled
-                ? "bg-[#1a2d47] hover:bg-[#152238]"
-                : "bg-red-600 hover:bg-red-700"
-            }`}
+            onClick={handleJoin}
+            disabled={!stream}
+            className="w-full lg:w-auto px-10 py-3 bg-[#d4af37] hover:bg-[#c4a030] text-[#0f172a] rounded-full font-medium transition-all disabled:opacity-50 disabled:cursor-not-allowed mb-3"
           >
-            {isAudioEnabled ? (
-              <MicIcon className="w-6 h-6 text-white" />
-            ) : (
-              <MicOffIcon className="w-6 h-6 text-white" />
-            )}
+            Join now
           </button>
+
           <button
-            onClick={toggleVideo}
-            className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors ${
-              isVideoEnabled
-                ? "bg-[#1a2d47] hover:bg-[#152238]"
-                : "bg-red-600 hover:bg-red-700"
-            }`}
+            onClick={onBack}
+            className="w-full lg:w-auto px-10 py-3 text-[#d4af37] hover:bg-[#d4af37]/10 rounded-full font-medium transition-all border border-[#d4af37]/30"
           >
-            {isVideoEnabled ? (
-              <VideoIcon className="w-6 h-6 text-white" />
-            ) : (
-              <VideoOffIcon className="w-6 h-6 text-white" />
-            )}
+            Go back
           </button>
         </div>
-      </div>
-
-      {/* Device Selection */}
-      <div className="w-full max-w-md space-y-4 mb-8">
-        <div>
-          <label className="block text-sm text-white/60 mb-2">Camera</label>
-          <select
-            value={selectedCamera}
-            onChange={(e) => setSelectedCamera(e.target.value)}
-            className="w-full px-4 py-3 bg-[#1a2d47] text-white rounded-lg border border-white/10 focus:border-[#d4af37] focus:outline-none"
-          >
-            {cameras.map((camera) => (
-              <option key={camera.deviceId} value={camera.deviceId}>
-                {camera.label}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div>
-          <label className="block text-sm text-white/60 mb-2">Microphone</label>
-          <select
-            value={selectedMicrophone}
-            onChange={(e) => setSelectedMicrophone(e.target.value)}
-            className="w-full px-4 py-3 bg-[#1a2d47] text-white rounded-lg border border-white/10 focus:border-[#d4af37] focus:outline-none"
-          >
-            {microphones.map((mic) => (
-              <option key={mic.deviceId} value={mic.deviceId}>
-                {mic.label}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div>
-          <label className="block text-sm text-white/60 mb-2">AI Avatar</label>
-          <select
-            value={selectedAvatarProvider}
-            onChange={(e) => setSelectedAvatarProvider(e.target.value as AvatarProvider)}
-            className="w-full px-4 py-3 bg-[#1a2d47] text-white rounded-lg border border-white/10 focus:border-[#d4af37] focus:outline-none"
-          >
-            <option value="heygen">HeyGen Live Avatar</option>
-            <option value="anam">Anam AI (Layla)</option>
-          </select>
-        </div>
-      </div>
-
-      {/* Action Buttons */}
-      <div className="flex gap-4">
-        <button
-          onClick={onBack}
-          className="px-6 py-3 bg-[#1a2d47] text-white rounded-lg hover:bg-[#152238] transition-colors border border-white/10"
-        >
-          Back
-        </button>
-        <button
-          onClick={handleJoin}
-          disabled={!stream}
-          className="px-8 py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-[#0f172a] rounded-lg font-semibold hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          Join Interview
-        </button>
       </div>
     </div>
   );
@@ -345,6 +358,14 @@ function CameraOffIcon({ className }: { className?: string }) {
   return (
     <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+    </svg>
+  );
+}
+
+function ChevronDownIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
     </svg>
   );
 }
