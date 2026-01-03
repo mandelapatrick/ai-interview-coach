@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { useHeyGenAvatar } from "@/hooks/useHeyGenAvatar";
 import { useAnamAvatar } from "@/hooks/useAnamAvatar";
+import { useVideoRecorder, uploadRecording } from "@/hooks/useVideoRecorder";
 import { Question } from "@/types";
 import { getSystemPrompt } from "@/data/prompts";
 import { getCompanyBySlug } from "@/data/companies";
@@ -45,6 +46,19 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
   const pendingTextRef = useRef<string>("");
   const transcriptRef = useRef<TranscriptEntry[]>([]);
   const transcriptContainerRef = useRef<HTMLDivElement>(null);
+
+  // Video recording refs
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const animationFrameRef = useRef<number | null>(null);
+  const [isUploading, setIsUploading] = useState(false);
+
+  // Video recorder hook
+  const {
+    isRecording,
+    startRecording,
+    stopRecording,
+    error: recordingError,
+  } = useVideoRecorder();
 
   const company = getCompanyBySlug(question.companySlug);
 
@@ -147,6 +161,93 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
       if (timerRef.current) clearInterval(timerRef.current);
     };
   }, [isSessionStarted]);
+
+  // Canvas compositor for video recording
+  useEffect(() => {
+    if (!isSessionStarted || !canvasRef.current) return;
+
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    // Set canvas size (720p for good quality/size balance)
+    canvas.width = 1280;
+    canvas.height = 720;
+
+    const drawFrame = () => {
+      // Draw avatar video (main view)
+      if (avatarVideoRef.current && avatarVideoRef.current.readyState >= 2) {
+        ctx.drawImage(avatarVideoRef.current, 0, 0, canvas.width, canvas.height);
+      } else {
+        // Draw placeholder background if avatar not ready
+        ctx.fillStyle = "#0a1122";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      }
+
+      // Draw user video (picture-in-picture, bottom-right)
+      if (userVideoRef.current && userVideoRef.current.readyState >= 2 && isVideoEnabled) {
+        const pipWidth = 240;
+        const pipHeight = 180;
+        const pipX = canvas.width - pipWidth - 20;
+        const pipY = canvas.height - pipHeight - 20;
+
+        // Draw border/background for PiP
+        ctx.fillStyle = "#1a2744";
+        ctx.fillRect(pipX - 4, pipY - 4, pipWidth + 8, pipHeight + 8);
+
+        // Draw user video
+        ctx.drawImage(userVideoRef.current, pipX, pipY, pipWidth, pipHeight);
+      }
+
+      // Draw recording indicator
+      ctx.fillStyle = "#ef4444";
+      ctx.beginPath();
+      ctx.arc(30, 30, 8, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = "white";
+      ctx.font = "14px sans-serif";
+      ctx.fillText("REC", 45, 35);
+
+      // Draw timer
+      const mins = Math.floor(duration / 60);
+      const secs = duration % 60;
+      const timeStr = `${mins}:${secs.toString().padStart(2, "0")}`;
+      ctx.fillStyle = "rgba(0, 0, 0, 0.5)";
+      ctx.fillRect(canvas.width - 80, 15, 65, 30);
+      ctx.fillStyle = "white";
+      ctx.font = "16px monospace";
+      ctx.fillText(timeStr, canvas.width - 70, 37);
+
+      animationFrameRef.current = requestAnimationFrame(drawFrame);
+    };
+
+    // Start the render loop
+    drawFrame();
+
+    // Start recording after a short delay to ensure streams are ready
+    const recordingTimer = setTimeout(() => {
+      if (canvasRef.current && !isRecording) {
+        // Capture canvas stream with audio from user's microphone
+        const canvasStream = canvasRef.current.captureStream(30);
+
+        // Add audio track from user stream
+        const audioTracks = userStream.getAudioTracks();
+        audioTracks.forEach((track) => {
+          canvasStream.addTrack(track);
+        });
+
+        startRecording(canvasStream);
+        console.log("[VideoSession] Started composite recording");
+      }
+    }, 1000);
+
+    return () => {
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current);
+      }
+      clearTimeout(recordingTimer);
+    };
+  }, [isSessionStarted, isVideoEnabled, duration, startRecording, isRecording, userStream]);
 
   // Set user video stream
   useEffect(() => {
@@ -452,17 +553,38 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
   };
 
   const confirmEnd = async () => {
-    // Store transcript for assessment
+    setIsUploading(true);
+
+    // Stop recording and get the blob
+    let recordingUrl: string | null = null;
+    if (isRecording) {
+      try {
+        const blob = await stopRecording();
+        if (blob && blob.size > 0) {
+          console.log("[VideoSession] Recording stopped, blob size:", blob.size);
+          // Generate a temporary session ID for the recording
+          const tempSessionId = `temp-${Date.now()}`;
+          recordingUrl = await uploadRecording(blob, tempSessionId);
+          console.log("[VideoSession] Recording uploaded:", recordingUrl);
+        }
+      } catch (err) {
+        console.error("[VideoSession] Failed to stop/upload recording:", err);
+      }
+    }
+
+    // Store transcript and recording URL for assessment
     sessionStorage.setItem(
       "interviewTranscript",
       JSON.stringify({
         questionId: question.id,
         transcript: transcriptRef.current,
         duration,
+        videoRecordingUrl: recordingUrl,
       })
     );
 
     await cleanup();
+    setIsUploading(false);
     router.push(`/assessment/${question.id}`);
   };
 
@@ -505,6 +627,14 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
 
   return (
     <div className="flex h-full min-h-[600px] bg-[#0f172a]">
+      {/* Hidden canvas for video compositing/recording */}
+      <canvas
+        ref={canvasRef}
+        className="hidden"
+        width={1280}
+        height={720}
+      />
+
       {/* Main Video Area - Left Side */}
       <div className="flex-1 relative">
         {/* Avatar Video (Main) */}
@@ -792,27 +922,43 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
       {showEndConfirm && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
           <div className="bg-white rounded-2xl p-6 max-w-md w-full mx-4 shadow-2xl">
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">
-              End Interview?
-            </h3>
-            <p className="text-gray-500 mb-6">
-              Your session will be saved and you&apos;ll receive an AI
-              assessment of your performance.
-            </p>
-            <div className="flex gap-3">
-              <button
-                onClick={() => setShowEndConfirm(false)}
-                className="flex-1 px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-xl transition-colors"
-              >
-                Continue
-              </button>
-              <button
-                onClick={confirmEnd}
-                className="flex-1 px-4 py-2.5 bg-[#d4af37] hover:bg-[#b8972e] text-white rounded-xl font-medium transition-colors"
-              >
-                End & Get Assessment
-              </button>
-            </div>
+            {isUploading ? (
+              <>
+                <div className="flex flex-col items-center py-4">
+                  <div className="w-12 h-12 border-4 border-[#d4af37] border-t-transparent rounded-full animate-spin mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    Saving Recording...
+                  </h3>
+                  <p className="text-gray-500 text-center text-sm">
+                    Please wait while we save your session recording.
+                  </p>
+                </div>
+              </>
+            ) : (
+              <>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  End Interview?
+                </h3>
+                <p className="text-gray-500 mb-6">
+                  Your session will be saved and you&apos;ll receive an AI
+                  assessment of your performance.
+                </p>
+                <div className="flex gap-3">
+                  <button
+                    onClick={() => setShowEndConfirm(false)}
+                    className="flex-1 px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-xl transition-colors"
+                  >
+                    Continue
+                  </button>
+                  <button
+                    onClick={confirmEnd}
+                    className="flex-1 px-4 py-2.5 bg-[#d4af37] hover:bg-[#b8972e] text-white rounded-xl font-medium transition-colors"
+                  >
+                    End & Get Assessment
+                  </button>
+                </div>
+              </>
+            )}
           </div>
         </div>
       )}

@@ -19,6 +19,7 @@ interface SessionWithAssessment {
   company_slug: string;
   duration_seconds: number;
   transcript: string;
+  video_recording_url: string | null;
   created_at: string;
   assessments: Array<{
     overall_score: number;
@@ -158,6 +159,43 @@ export default function SessionDetailPage() {
 
         {assessment ? (
           <div className="space-y-6">
+            {/* Session Recording */}
+            {session.video_recording_url && (
+              <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-6">
+                <h2 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+                  <svg className="w-5 h-5 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                  Session Recording
+                </h2>
+                <div className="rounded-lg overflow-hidden bg-black">
+                  <video
+                    src={session.video_recording_url}
+                    controls
+                    className="w-full max-h-[400px]"
+                    preload="metadata"
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div className="flex items-center justify-between mt-3">
+                  <p className="text-white/40 text-sm">
+                    Watch your interview recording to review your performance.
+                  </p>
+                  <a
+                    href={session.video_recording_url}
+                    download
+                    className="text-[#d4af37] hover:text-[#f4d03f] text-sm flex items-center gap-1 transition-colors"
+                  >
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Download
+                  </a>
+                </div>
+              </div>
+            )}
+
             {/* Overall Score */}
             <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-6">
               <div className="flex items-center justify-between mb-6">

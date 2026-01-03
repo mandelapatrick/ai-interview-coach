@@ -26,6 +26,7 @@ interface SessionWithAssessment {
   question_type: string;
   company_slug: string;
   duration_seconds: number;
+  video_recording_url: string | null;
   created_at: string;
   assessments: Array<{
     overall_score: number;
@@ -166,6 +167,9 @@ export default function HistoryPage() {
                   <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider">
                     Score
                   </th>
+                  <th className="text-center px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider">
+                    Recording
+                  </th>
                   <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider">
                     Date
                   </th>
@@ -214,6 +218,17 @@ export default function HistoryPage() {
                           </span>
                         ) : (
                           <span className="text-white/30">-</span>
+                        )}
+                      </td>
+                      <td className="px-6 py-4 text-center">
+                        {session.video_recording_url ? (
+                          <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#d4af37]/10" title="Recording available">
+                            <svg className="w-4 h-4 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            </svg>
+                          </span>
+                        ) : (
+                          <span className="text-white/20">-</span>
                         )}
                       </td>
                       <td className="px-6 py-4 text-white/50 text-sm">
