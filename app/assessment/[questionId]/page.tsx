@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { getQuestionById } from "@/data/questions";
 import { getCompanyBySlug } from "@/data/companies";
-import { QUESTION_TYPE_LABELS } from "@/types";
+import { QUESTION_TYPE_LABELS, PM_QUESTION_TYPE_LABELS, PMQuestionType, InterviewTrack } from "@/types";
 import { TranscriptEntry } from "@/hooks/useVoiceSession";
 
 interface SessionData {
@@ -14,19 +14,31 @@ interface SessionData {
   duration: number;
 }
 
+interface ConsultingScores {
+  structure: number;
+  problemSolving: number;
+  businessJudgment: number;
+  communication: number;
+  quantitative: number;
+  creativity: number;
+}
+
+interface PMScores {
+  productThinking: number;
+  communication: number;
+  userEmpathy: number;
+  technicalDepth: number;
+  analyticalSkills: number;
+  creativity: number;
+}
+
 interface Assessment {
   overallScore: number;
-  scores: {
-    structure: number;
-    problemSolving: number;
-    businessJudgment: number;
-    communication: number;
-    quantitative: number;
-    creativity: number;
-  };
+  scores: ConsultingScores | PMScores;
   feedback: string;
   strengths: string[];
   improvements: string[];
+  track?: InterviewTrack;
 }
 
 export default function AssessmentPage() {
@@ -64,6 +76,12 @@ export default function AssessmentPage() {
       }
 
       try {
+        // Get the appropriate type label based on track
+        const isPM = question?.track === "product-management";
+        const typeLabel = isPM && question
+          ? PM_QUESTION_TYPE_LABELS[question.type as PMQuestionType]
+          : question ? QUESTION_TYPE_LABELS[question.type as keyof typeof QUESTION_TYPE_LABELS] : "Unknown";
+
         // Call the AI assessment API
         const response = await fetch("/api/assessment", {
           method: "POST",
@@ -71,7 +89,8 @@ export default function AssessmentPage() {
           body: JSON.stringify({
             transcript: data.transcript,
             questionTitle: question?.title || "Unknown",
-            questionType: question ? QUESTION_TYPE_LABELS[question.type] : "Unknown",
+            questionType: typeLabel,
+            track: question?.track || "consulting",
           }),
         });
 
@@ -219,12 +238,25 @@ export default function AssessmentPage() {
 
               {/* Score Breakdown */}
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <ScoreItem label="Structure" score={assessment.scores.structure} weight="25%" />
-                <ScoreItem label="Problem Solving" score={assessment.scores.problemSolving} weight="20%" />
-                <ScoreItem label="Business Judgment" score={assessment.scores.businessJudgment} weight="20%" />
-                <ScoreItem label="Communication" score={assessment.scores.communication} weight="15%" />
-                <ScoreItem label="Quantitative" score={assessment.scores.quantitative} weight="10%" />
-                <ScoreItem label="Creativity" score={assessment.scores.creativity} weight="10%" />
+                {assessment.track === "product-management" ? (
+                  <>
+                    <ScoreItem label="Product Thinking" score={(assessment.scores as PMScores).productThinking} weight="25%" />
+                    <ScoreItem label="Communication" score={(assessment.scores as PMScores).communication} weight="20%" />
+                    <ScoreItem label="User Empathy" score={(assessment.scores as PMScores).userEmpathy} weight="15%" />
+                    <ScoreItem label="Technical Depth" score={(assessment.scores as PMScores).technicalDepth} weight="15%" />
+                    <ScoreItem label="Analytical Skills" score={(assessment.scores as PMScores).analyticalSkills} weight="15%" />
+                    <ScoreItem label="Creativity" score={(assessment.scores as PMScores).creativity} weight="10%" />
+                  </>
+                ) : (
+                  <>
+                    <ScoreItem label="Structure" score={(assessment.scores as ConsultingScores).structure} weight="25%" />
+                    <ScoreItem label="Problem Solving" score={(assessment.scores as ConsultingScores).problemSolving} weight="20%" />
+                    <ScoreItem label="Business Judgment" score={(assessment.scores as ConsultingScores).businessJudgment} weight="20%" />
+                    <ScoreItem label="Communication" score={(assessment.scores as ConsultingScores).communication} weight="15%" />
+                    <ScoreItem label="Quantitative" score={(assessment.scores as ConsultingScores).quantitative} weight="10%" />
+                    <ScoreItem label="Creativity" score={(assessment.scores as ConsultingScores).creativity} weight="10%" />
+                  </>
+                )}
               </div>
             </div>
 

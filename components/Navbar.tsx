@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { auth } from "@/lib/auth";
 import { handleSignOut } from "@/lib/actions";
+import NavDropdown from "./NavDropdown";
 
 export default async function Navbar() {
   const session = await auth();
@@ -21,12 +22,7 @@ export default async function Navbar() {
             </span>
           </Link>
           <div className="hidden md:flex items-center gap-4">
-            <Link
-              href="/dashboard"
-              className="text-sm text-white/70 hover:text-[#d4af37] transition-colors"
-            >
-              Companies
-            </Link>
+            <NavDropdown />
             <Link
               href="/history"
               className="text-sm text-white/70 hover:text-[#d4af37] transition-colors"

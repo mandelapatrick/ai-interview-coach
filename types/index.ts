@@ -2,6 +2,8 @@ export type InterviewFormat =
   | "candidate-led"   // Typical of Bain, BCG, LEK. User drives the structure.
   | "interviewer-led"; // Typical of McKinsey. AI drives with specific questions.
 
+export type InterviewTrack = "consulting" | "product-management";
+
 export type QuestionType =
   | "profitability"        // Revenue/Cost analysis
   | "market-entry"         // New geography or product launch
@@ -16,6 +18,16 @@ export type QuestionType =
   | "strategic-decision"   // Go/No-Go decisions (e.g., build a plant)
   | "industry-analysis";   // Porter's 5 Forces/Landscape assessment
 
+export type PMQuestionType =
+  | "product-sense"   // Product design questions
+  | "behavioral"      // Leadership & Drive, STAR method
+  | "technical"       // System design, architecture
+  | "execution"       // Metrics, Analytics
+  | "strategy"        // Market analysis, competitive positioning
+  | "estimation";     // Market sizing, capacity planning
+
+export type AllQuestionTypes = QuestionType | PMQuestionType;
+
 export type Difficulty = "easy" | "medium" | "hard";
 
 export interface Company {
@@ -26,15 +38,17 @@ export interface Company {
   description: string;
   questionCount: number;
   categories: string[];
+  track: InterviewTrack;
 }
 
 export interface Question {
   id: string;
   companySlug: string;
   title: string;
-  type: QuestionType;
+  type: AllQuestionTypes;
   difficulty: Difficulty;
   description: string;
+  track: InterviewTrack;
   // New fields for enhanced case interviews
   industry?: string;
   interviewFormat?: InterviewFormat;
@@ -106,4 +120,49 @@ export const TYPE_COLORS: Record<QuestionType, string> = {
   turnarounds: "text-red-600 bg-red-50",
   "strategic-decision": "text-teal-600 bg-teal-50",
   "industry-analysis": "text-slate-600 bg-slate-50",
+};
+
+// PM Interview Types
+export const PM_QUESTION_TYPE_LABELS: Record<PMQuestionType, string> = {
+  "product-sense": "Product Sense",
+  behavioral: "Behavioral",
+  technical: "Technical",
+  execution: "Execution",
+  strategy: "Strategy",
+  estimation: "Estimation",
+};
+
+export const PM_TYPE_COLORS: Record<PMQuestionType, string> = {
+  "product-sense": "text-violet-600 bg-violet-50",
+  behavioral: "text-amber-600 bg-amber-50",
+  technical: "text-blue-600 bg-blue-50",
+  execution: "text-teal-600 bg-teal-50",
+  strategy: "text-rose-600 bg-rose-50",
+  estimation: "text-indigo-600 bg-indigo-50",
+};
+
+// Dark background variants for PM types
+export const PM_TYPE_COLORS_DARK: Record<PMQuestionType, string> = {
+  "product-sense": "text-violet-400 bg-violet-400/10",
+  behavioral: "text-amber-400 bg-amber-400/10",
+  technical: "text-blue-400 bg-blue-400/10",
+  execution: "text-teal-400 bg-teal-400/10",
+  strategy: "text-rose-400 bg-rose-400/10",
+  estimation: "text-indigo-400 bg-indigo-400/10",
+};
+
+// Dark background variants for consulting types
+export const TYPE_COLORS_DARK: Record<QuestionType, string> = {
+  profitability: "text-blue-400 bg-blue-400/10",
+  "market-entry": "text-purple-400 bg-purple-400/10",
+  "market-sizing": "text-cyan-400 bg-cyan-400/10",
+  "m&a": "text-orange-400 bg-orange-400/10",
+  operations: "text-gray-400 bg-gray-400/10",
+  "growth-strategy": "text-emerald-400 bg-emerald-400/10",
+  pricing: "text-pink-400 bg-pink-400/10",
+  "competitive-response": "text-indigo-400 bg-indigo-400/10",
+  brainteasers: "text-yellow-400 bg-yellow-400/10",
+  turnarounds: "text-red-400 bg-red-400/10",
+  "strategic-decision": "text-teal-400 bg-teal-400/10",
+  "industry-analysis": "text-slate-400 bg-slate-400/10",
 };

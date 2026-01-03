@@ -1,16 +1,20 @@
-import { Company, QUESTION_TYPE_LABELS } from "@/types";
+import { Company, QUESTION_TYPE_LABELS, PM_QUESTION_TYPE_LABELS, InterviewTrack, QuestionType, PMQuestionType } from "@/types";
 import { questions } from "./questions";
+import { pmQuestions } from "./pm-questions";
 
 // Derive categories from actual questions for each company
-function getCategoriesForCompany(companySlug: string): string[] {
-  const companyQuestions = questions.filter((q) => q.companySlug === companySlug);
+function getCategoriesForCompany(companySlug: string, track: InterviewTrack = "consulting"): string[] {
+  const questionPool = track === "consulting" ? questions : pmQuestions;
+  const companyQuestions = questionPool.filter((q) => q.companySlug === companySlug);
   const types = [...new Set(companyQuestions.map((q) => q.type))];
-  return types.map((type) => QUESTION_TYPE_LABELS[type]);
+  const labels = track === "consulting" ? QUESTION_TYPE_LABELS : PM_QUESTION_TYPE_LABELS;
+  return types.map((type) => labels[type as keyof typeof labels] || type);
 }
 
 // Get actual question count for each company
-function getQuestionCount(companySlug: string): number {
-  return questions.filter((q) => q.companySlug === companySlug).length;
+function getQuestionCount(companySlug: string, track: InterviewTrack = "consulting"): number {
+  const questionPool = track === "consulting" ? questions : pmQuestions;
+  return questionPool.filter((q) => q.companySlug === companySlug).length;
 }
 
 export const companies: Company[] = [
@@ -22,6 +26,7 @@ export const companies: Company[] = [
     description: "Global management consulting leader",
     questionCount: getQuestionCount("mckinsey"),
     categories: getCategoriesForCompany("mckinsey"),
+    track: "consulting",
   },
   {
     slug: "bcg",
@@ -31,6 +36,7 @@ export const companies: Company[] = [
     description: "Strategy consulting powerhouse",
     questionCount: getQuestionCount("bcg"),
     categories: getCategoriesForCompany("bcg"),
+    track: "consulting",
   },
   {
     slug: "bain",
@@ -40,6 +46,7 @@ export const companies: Company[] = [
     description: "Results-driven consulting firm",
     questionCount: getQuestionCount("bain"),
     categories: getCategoriesForCompany("bain"),
+    track: "consulting",
   },
   {
     slug: "deloitte",
@@ -49,6 +56,7 @@ export const companies: Company[] = [
     description: "Big Four consulting practice",
     questionCount: getQuestionCount("deloitte"),
     categories: getCategoriesForCompany("deloitte"),
+    track: "consulting",
   },
   {
     slug: "accenture",
@@ -58,6 +66,7 @@ export const companies: Company[] = [
     description: "Technology and strategy consulting",
     questionCount: getQuestionCount("accenture"),
     categories: getCategoriesForCompany("accenture"),
+    track: "consulting",
   },
   {
     slug: "kearney",
@@ -67,6 +76,7 @@ export const companies: Company[] = [
     description: "Operations-focused consulting",
     questionCount: getQuestionCount("kearney"),
     categories: getCategoriesForCompany("kearney"),
+    track: "consulting",
   },
   {
     slug: "oliver-wyman",
@@ -76,6 +86,7 @@ export const companies: Company[] = [
     description: "Financial services expertise",
     questionCount: getQuestionCount("oliver-wyman"),
     categories: getCategoriesForCompany("oliver-wyman"),
+    track: "consulting",
   },
   {
     slug: "roland-berger",
@@ -85,6 +96,7 @@ export const companies: Company[] = [
     description: "European strategy consultancy",
     questionCount: getQuestionCount("roland-berger"),
     categories: getCategoriesForCompany("roland-berger"),
+    track: "consulting",
   },
   {
     slug: "lek",
@@ -94,6 +106,7 @@ export const companies: Company[] = [
     description: "Sharp strategic insights",
     questionCount: getQuestionCount("lek"),
     categories: getCategoriesForCompany("lek"),
+    track: "consulting",
   },
   {
     slug: "strategy-and",
@@ -103,9 +116,322 @@ export const companies: Company[] = [
     description: "PwC's strategy consulting arm",
     questionCount: getQuestionCount("strategy-and"),
     categories: getCategoriesForCompany("strategy-and"),
+    track: "consulting",
   },
 ];
 
+// PM Companies
+export const pmCompanies: Company[] = [
+  {
+    slug: "meta",
+    name: "Meta (Facebook)",
+    logo: "M",
+    logoUrl: "/logos/Meta.png",
+    description: "Social media and metaverse leader",
+    questionCount: getQuestionCount("meta", "product-management"),
+    categories: getCategoriesForCompany("meta", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "google",
+    name: "Google",
+    logo: "G",
+    logoUrl: "/logos/Google.png",
+    description: "Search and cloud technology giant",
+    questionCount: getQuestionCount("google", "product-management"),
+    categories: getCategoriesForCompany("google", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "amazon",
+    name: "Amazon",
+    logo: "A",
+    logoUrl: "/logos/Amazon.png",
+    description: "E-commerce and cloud computing leader",
+    questionCount: getQuestionCount("amazon", "product-management"),
+    categories: getCategoriesForCompany("amazon", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "microsoft",
+    name: "Microsoft",
+    logo: "M",
+    logoUrl: "/logos/Microsoft.png",
+    description: "Enterprise software and cloud solutions",
+    questionCount: getQuestionCount("microsoft", "product-management"),
+    categories: getCategoriesForCompany("microsoft", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "apple",
+    name: "Apple",
+    logo: "A",
+    logoUrl: "/logos/Apple.png",
+    description: "Consumer electronics and software",
+    questionCount: getQuestionCount("apple", "product-management"),
+    categories: getCategoriesForCompany("apple", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "uber",
+    name: "Uber",
+    logo: "U",
+    logoUrl: "/logos/Uber.png",
+    description: "Ride-sharing and delivery platform",
+    questionCount: getQuestionCount("uber", "product-management"),
+    categories: getCategoriesForCompany("uber", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "lyft",
+    name: "Lyft",
+    logo: "L",
+    logoUrl: "/logos/Lyft.png",
+    description: "Ride-sharing transportation network",
+    questionCount: getQuestionCount("lyft", "product-management"),
+    categories: getCategoriesForCompany("lyft", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "airbnb",
+    name: "Airbnb",
+    logo: "A",
+    logoUrl: "/logos/Airbnb.png",
+    description: "Global hospitality marketplace",
+    questionCount: getQuestionCount("airbnb", "product-management"),
+    categories: getCategoriesForCompany("airbnb", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "tiktok",
+    name: "TikTok",
+    logo: "T",
+    logoUrl: "/logos/TikTok.png",
+    description: "Short-form video platform",
+    questionCount: getQuestionCount("tiktok", "product-management"),
+    categories: getCategoriesForCompany("tiktok", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "netflix",
+    name: "Netflix",
+    logo: "N",
+    logoUrl: "/logos/Netflix.png",
+    description: "Streaming entertainment service",
+    questionCount: getQuestionCount("netflix", "product-management"),
+    categories: getCategoriesForCompany("netflix", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "dropbox",
+    name: "Dropbox",
+    logo: "D",
+    logoUrl: "/logos/Dropbox.png",
+    description: "Cloud storage and collaboration",
+    questionCount: getQuestionCount("dropbox", "product-management"),
+    categories: getCategoriesForCompany("dropbox", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "linkedin",
+    name: "LinkedIn",
+    logo: "L",
+    logoUrl: "/logos/LinkedIn.png",
+    description: "Professional networking platform",
+    questionCount: getQuestionCount("linkedin", "product-management"),
+    categories: getCategoriesForCompany("linkedin", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "doordash",
+    name: "DoorDash",
+    logo: "D",
+    logoUrl: "/logos/DoorDash.png",
+    description: "Food delivery marketplace",
+    questionCount: getQuestionCount("doordash", "product-management"),
+    categories: getCategoriesForCompany("doordash", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "salesforce",
+    name: "Salesforce",
+    logo: "S",
+    logoUrl: "/logos/Salesforce.png",
+    description: "CRM and enterprise software",
+    questionCount: getQuestionCount("salesforce", "product-management"),
+    categories: getCategoriesForCompany("salesforce", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "coinbase",
+    name: "Coinbase",
+    logo: "C",
+    logoUrl: "/logos/Coinbase.png",
+    description: "Cryptocurrency exchange platform",
+    questionCount: getQuestionCount("coinbase", "product-management"),
+    categories: getCategoriesForCompany("coinbase", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "pinterest",
+    name: "Pinterest",
+    logo: "P",
+    logoUrl: "/logos/Pinterest.png",
+    description: "Visual discovery and bookmarking",
+    questionCount: getQuestionCount("pinterest", "product-management"),
+    categories: getCategoriesForCompany("pinterest", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "twitter",
+    name: "Twitter",
+    logo: "T",
+    logoUrl: "/logos/Twitter.png",
+    description: "Social media and microblogging",
+    questionCount: getQuestionCount("twitter", "product-management"),
+    categories: getCategoriesForCompany("twitter", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "yelp",
+    name: "Yelp",
+    logo: "Y",
+    logoUrl: "/logos/Yelp.png",
+    description: "Local business reviews platform",
+    questionCount: getQuestionCount("yelp", "product-management"),
+    categories: getCategoriesForCompany("yelp", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "adobe",
+    name: "Adobe",
+    logo: "A",
+    logoUrl: "/logos/Adobe.png",
+    description: "Creative and document software",
+    questionCount: getQuestionCount("adobe", "product-management"),
+    categories: getCategoriesForCompany("adobe", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "intuit",
+    name: "Intuit",
+    logo: "I",
+    logoUrl: "/logos/Intuit.png",
+    description: "Financial software solutions",
+    questionCount: getQuestionCount("intuit", "product-management"),
+    categories: getCategoriesForCompany("intuit", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "capital-one",
+    name: "Capital One",
+    logo: "C",
+    logoUrl: "/logos/CapitalOne.png",
+    description: "Digital banking and financial services",
+    questionCount: getQuestionCount("capital-one", "product-management"),
+    categories: getCategoriesForCompany("capital-one", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "zoom",
+    name: "Zoom",
+    logo: "Z",
+    logoUrl: "/logos/Zoom.png",
+    description: "Video communications platform",
+    questionCount: getQuestionCount("zoom", "product-management"),
+    categories: getCategoriesForCompany("zoom", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "etsy",
+    name: "Etsy",
+    logo: "E",
+    logoUrl: "/logos/Etsy.png",
+    description: "Handmade and vintage marketplace",
+    questionCount: getQuestionCount("etsy", "product-management"),
+    categories: getCategoriesForCompany("etsy", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "ebay",
+    name: "eBay",
+    logo: "E",
+    logoUrl: "/logos/eBay.png",
+    description: "Online auction and shopping",
+    questionCount: getQuestionCount("ebay", "product-management"),
+    categories: getCategoriesForCompany("ebay", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "affirm",
+    name: "Affirm",
+    logo: "A",
+    logoUrl: "/logos/Affirm.png",
+    description: "Buy now, pay later fintech",
+    questionCount: getQuestionCount("affirm", "product-management"),
+    categories: getCategoriesForCompany("affirm", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "brex",
+    name: "Brex",
+    logo: "B",
+    logoUrl: "/logos/Brex.png",
+    description: "Business financial services",
+    questionCount: getQuestionCount("brex", "product-management"),
+    categories: getCategoriesForCompany("brex", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "roblox",
+    name: "Roblox",
+    logo: "R",
+    logoUrl: "/logos/Roblox.png",
+    description: "Gaming and metaverse platform",
+    questionCount: getQuestionCount("roblox", "product-management"),
+    categories: getCategoriesForCompany("roblox", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "glassdoor",
+    name: "Glassdoor",
+    logo: "G",
+    logoUrl: "/logos/Glassdoor.png",
+    description: "Job search and company reviews",
+    questionCount: getQuestionCount("glassdoor", "product-management"),
+    categories: getCategoriesForCompany("glassdoor", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "quora",
+    name: "Quora",
+    logo: "Q",
+    logoUrl: "/logos/Quora.png",
+    description: "Q&A knowledge platform",
+    questionCount: getQuestionCount("quora", "product-management"),
+    categories: getCategoriesForCompany("quora", "product-management"),
+    track: "product-management",
+  },
+  {
+    slug: "redfin",
+    name: "Redfin",
+    logo: "R",
+    logoUrl: "/logos/Redfin.png",
+    description: "Real estate technology company",
+    questionCount: getQuestionCount("redfin", "product-management"),
+    categories: getCategoriesForCompany("redfin", "product-management"),
+    track: "product-management",
+  },
+];
+
+// Get all companies across both tracks
+export const allCompanies: Company[] = [...companies, ...pmCompanies];
+
+// Get companies by track
+export function getCompaniesByTrack(track: InterviewTrack): Company[] {
+  return track === "consulting" ? companies : pmCompanies;
+}
+
 export function getCompanyBySlug(slug: string): Company | undefined {
-  return companies.find((c) => c.slug === slug);
+  return allCompanies.find((c) => c.slug === slug);
 }

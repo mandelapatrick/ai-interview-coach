@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const ASSESSMENT_PROMPT = `You are an expert management consulting interview coach. Analyze the following case interview transcript and provide a detailed assessment.
+const CONSULTING_ASSESSMENT_PROMPT = `You are an expert management consulting interview coach. Analyze the following case interview transcript and provide a detailed assessment.
 
 Score each criterion on a scale of 1-5:
 - 1: Poor - Major gaps, needs significant improvement
@@ -33,9 +33,42 @@ Respond in this exact JSON format:
   "improvements": ["<area 1>", "<area 2>", "<area 3>"]
 }`;
 
+const PM_ASSESSMENT_PROMPT = `You are an expert Product Management interview coach. Analyze the following PM interview transcript and provide a detailed assessment.
+
+Score each criterion on a scale of 1-5:
+- 1: Poor - Major gaps, needs significant improvement
+- 2: Below Average - Some understanding but notable weaknesses
+- 3: Average - Meets basic expectations
+- 4: Good - Strong performance with minor areas to improve
+- 5: Excellent - Outstanding, PM-ready
+
+Criteria to evaluate:
+1. Product Thinking (25%) - Did they deeply understand user needs, design thoughtful solutions, and define clear success metrics?
+2. Communication (20%) - Was their delivery clear, structured, and persuasive?
+3. User Empathy (15%) - Did they demonstrate deep understanding of user problems and behaviors?
+4. Technical Depth (15%) - Did they show ability to reason about technical constraints and tradeoffs?
+5. Analytical Skills (15%) - Were they comfortable with metrics, data, and quantitative reasoning?
+6. Creativity (10%) - Did they show novel ideas and innovative approaches?
+
+Respond in this exact JSON format:
+{
+  "overallScore": <number 1-5 with one decimal>,
+  "scores": {
+    "productThinking": <number 1-5>,
+    "communication": <number 1-5>,
+    "userEmpathy": <number 1-5>,
+    "technicalDepth": <number 1-5>,
+    "analyticalSkills": <number 1-5>,
+    "creativity": <number 1-5>
+  },
+  "feedback": "<2-3 sentence overall assessment>",
+  "strengths": ["<strength 1>", "<strength 2>", "<strength 3>"],
+  "improvements": ["<area 1>", "<area 2>", "<area 3>"]
+}`;
+
 export async function POST(request: NextRequest) {
   try {
-    const { transcript, questionTitle, questionType } = await request.json();
+    const { transcript, questionTitle, questionType, track } = await request.json();
 
     if (!transcript || transcript.length === 0) {
       return NextResponse.json(
@@ -43,6 +76,10 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
+
+    const isPM = track === "product-management";
+    const assessmentPrompt = isPM ? PM_ASSESSMENT_PROMPT : CONSULTING_ASSESSMENT_PROMPT;
+    const interviewType = isPM ? "PM Interview" : "Case Interview";
 
     // Format transcript for the AI
     const formattedTranscript = transcript
@@ -62,11 +99,11 @@ export async function POST(request: NextRequest) {
         messages: [
           {
             role: "system",
-            content: ASSESSMENT_PROMPT,
+            content: assessmentPrompt,
           },
           {
             role: "user",
-            content: `Case Interview Assessment Request
+            content: `${interviewType} Assessment Request
 
 Question: ${questionTitle}
 Type: ${questionType}
@@ -108,23 +145,36 @@ Please provide your assessment in the specified JSON format.`,
         throw new Error("No JSON found in response");
       }
       const assessment = JSON.parse(jsonMatch[0]);
+      // Add track info to response for the frontend
+      assessment.track = track || "consulting";
       return NextResponse.json(assessment);
     } catch (parseError) {
       console.error("Failed to parse assessment:", parseError, content);
-      // Return a fallback assessment
+      // Return a fallback assessment based on track
+      const fallbackScores = isPM
+        ? {
+            productThinking: 3,
+            communication: 3,
+            userEmpathy: 3,
+            technicalDepth: 3,
+            analyticalSkills: 3,
+            creativity: 3,
+          }
+        : {
+            structure: 3,
+            problemSolving: 3,
+            businessJudgment: 3,
+            communication: 3,
+            quantitative: 3,
+            creativity: 3,
+          };
       return NextResponse.json({
         overallScore: 3.0,
-        scores: {
-          structure: 3,
-          problemSolving: 3,
-          businessJudgment: 3,
-          communication: 3,
-          quantitative: 3,
-          creativity: 3,
-        },
+        scores: fallbackScores,
         feedback: "Assessment could not be fully parsed. Please try again.",
-        strengths: ["Completed the interview", "Engaged with the case"],
+        strengths: ["Completed the interview", "Engaged with the question"],
         improvements: ["Continue practicing", "Work on structure"],
+        track: track || "consulting",
       });
     }
   } catch (error) {

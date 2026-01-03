@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getQuestionById } from "@/data/questions";
 import { getCompanyBySlug } from "@/data/companies";
-import { QUESTION_TYPE_LABELS } from "@/types";
+import { QUESTION_TYPE_LABELS, PM_QUESTION_TYPE_LABELS, PMQuestionType } from "@/types";
 import PracticeFlow from "@/components/PracticeFlow";
 
 const DIFFICULTY_COLORS_DARK: Record<string, string> = {
@@ -27,6 +27,10 @@ export default async function PracticePage({
   }
 
   const company = getCompanyBySlug(question.companySlug);
+  const isPM = question.track === "product-management";
+  const typeLabel = isPM
+    ? PM_QUESTION_TYPE_LABELS[question.type as PMQuestionType]
+    : QUESTION_TYPE_LABELS[question.type as keyof typeof QUESTION_TYPE_LABELS];
 
   return (
     <div className="min-h-screen bg-[#0f172a] text-white flex flex-col">
@@ -45,7 +49,7 @@ export default async function PracticePage({
                 {question.difficulty}
               </span>
               <span className="text-sm text-white/50">
-                {QUESTION_TYPE_LABELS[question.type]}
+                {typeLabel}
               </span>
             </div>
           </div>
