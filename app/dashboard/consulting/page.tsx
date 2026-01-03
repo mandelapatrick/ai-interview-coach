@@ -52,10 +52,10 @@ export default function ConsultingDashboardPage() {
               className="group relative bg-gradient-to-br from-[#1a2d47] to-[#0f172a] border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
             >
               <div className="flex items-start justify-between mb-4">
-                <div className="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center overflow-hidden">
-                  {company.logo ? (
+                <div className="w-14 h-14 rounded-xl bg-white flex items-center justify-center overflow-hidden">
+                  {company.logoUrl ? (
                     <img
-                      src={company.logo}
+                      src={company.logoUrl}
                       alt={company.name}
                       className="w-10 h-10 object-contain"
                     />
