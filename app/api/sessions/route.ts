@@ -25,6 +25,7 @@ export async function POST(request: NextRequest) {
       questionType,
       transcript,
       durationSeconds,
+      videoRecordingUrl,
     } = body;
 
     const { data, error } = await supabase
@@ -38,6 +39,7 @@ export async function POST(request: NextRequest) {
         question_type: questionType,
         transcript: JSON.stringify(transcript),
         duration_seconds: durationSeconds,
+        video_recording_url: videoRecordingUrl || null,
       })
       .select()
       .single();

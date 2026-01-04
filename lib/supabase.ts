@@ -19,6 +19,7 @@ export interface DbSession {
   question_type: string;
   transcript: string;
   duration_seconds: number;
+  video_recording_url: string | null;
   created_at: string;
 }
 
