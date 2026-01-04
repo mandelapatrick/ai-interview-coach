@@ -5,7 +5,7 @@ interface TranscriptEntry {
   text: string;
 }
 
-const HINT_SYSTEM_PROMPT = `You are a helpful interview coach providing hints during a practice case interview. Your goal is to help the candidate make progress without giving away the answer directly.
+const HINT_SYSTEM_PROMPT_WITH_SOLUTION = `You are a helpful interview coach providing hints during a practice case interview. Your goal is to help the candidate make progress without giving away the answer directly.
 
 Guidelines:
 - Identify what the candidate has already figured out from the conversation
@@ -22,13 +22,37 @@ Hint progression:
 - Hint 2: More specific area to focus on ("Consider looking at the cost side of the equation...")
 - Hint 3: Pointed guidance without the answer ("The data shows something interesting about fuel costs...")`;
 
+const HINT_SYSTEM_PROMPT_WITHOUT_SOLUTION = `You are a helpful interview coach providing hints during a practice product management or open-ended interview. Your goal is to help the candidate think through the problem systematically without giving away specific answers.
+
+Guidelines:
+- Identify what the candidate has already covered from the conversation
+- Identify areas they might be missing or could explore further
+- Provide a gentle nudge toward better frameworks or considerations
+- Use Socratic questioning when possible ("Have you considered...", "What about...")
+- Keep hints brief (1-3 sentences maximum)
+- Frame hints as thought-provoking questions or gentle suggestions
+- Be encouraging and supportive in tone
+
+For product management questions, consider prompting about:
+- User segments and personas
+- Problem definition and prioritization
+- Metrics and success criteria
+- Trade-offs and constraints
+- Market and competitive landscape
+- Technical feasibility
+
+Hint progression:
+- Hint 1: Very subtle, general direction ("Think about who your different user types might be...")
+- Hint 2: More specific framework suggestion ("Consider what metrics would indicate success...")
+- Hint 3: Pointed guidance ("Have you thought about how this affects different stakeholders?")`;
+
 export async function POST(request: NextRequest) {
   try {
-    const { solution, transcript, questionTitle, hintNumber } = await request.json();
+    const { solution, transcript, questionTitle, questionDescription, hintNumber } = await request.json();
 
-    if (!solution) {
+    if (!questionTitle) {
       return NextResponse.json(
-        { error: "No solution provided" },
+        { error: "No question title provided" },
         { status: 400 }
       );
     }
@@ -48,22 +72,12 @@ export async function POST(request: NextRequest) {
       hintLevel === 2 ? "more specific but still indirect" :
       "pointed and helpful but still not revealing the answer";
 
-    const response = await fetch("https://api.x.ai/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${process.env.XAI_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: "grok-3-fast",
-        messages: [
-          {
-            role: "system",
-            content: HINT_SYSTEM_PROMPT,
-          },
-          {
-            role: "user",
-            content: `Generate a hint for this case interview.
+    // Use different prompts based on whether we have a solution
+    const hasSolution = solution && solution.trim().length > 0;
+    const systemPrompt = hasSolution ? HINT_SYSTEM_PROMPT_WITH_SOLUTION : HINT_SYSTEM_PROMPT_WITHOUT_SOLUTION;
+
+    const userContent = hasSolution
+      ? `Generate a hint for this case interview.
 
 Question: ${questionTitle}
 
@@ -75,7 +89,35 @@ ${formattedTranscript}
 
 This is hint #${hintLevel}. The hint should be ${hintDescription}.
 
-Provide ONLY the hint text, nothing else. Do not include any preamble like "Here's a hint:" - just the hint itself.`,
+Provide ONLY the hint text, nothing else. Do not include any preamble like "Here's a hint:" - just the hint itself.`
+      : `Generate a hint for this interview question.
+
+Question: ${questionTitle}
+${questionDescription ? `\nDescription: ${questionDescription}` : ""}
+
+Conversation so far:
+${formattedTranscript}
+
+This is hint #${hintLevel}. The hint should be ${hintDescription}.
+
+Help the candidate think about frameworks, considerations, or areas they might be missing. Provide ONLY the hint text, nothing else. Do not include any preamble like "Here's a hint:" - just the hint itself.`;
+
+    const response = await fetch("https://api.x.ai/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${process.env.XAI_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "grok-3-fast",
+        messages: [
+          {
+            role: "system",
+            content: systemPrompt,
+          },
+          {
+            role: "user",
+            content: userContent,
           },
         ],
         temperature: 0.7,

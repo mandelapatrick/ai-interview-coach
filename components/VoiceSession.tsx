@@ -72,6 +72,7 @@ export default function VoiceSession({ question }: VoiceSessionProps) {
           solution: question.solution,
           transcript: transcript,
           questionTitle: question.title,
+          questionDescription: question.description,
           hintNumber: hintCount + 1,
         }),
       });

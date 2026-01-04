@@ -524,6 +524,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
           solution: question.solution,
           transcript: transcript,
           questionTitle: question.title,
+          questionDescription: question.description,
           hintNumber: hintCount + 1,
         }),
       });
