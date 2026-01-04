@@ -1,63 +1,15 @@
--- Create the session-recordings storage bucket
--- Run this in the Supabase SQL Editor (https://supabase.com/dashboard/project/_/sql)
+-- Session Recordings Storage Setup
+--
+-- IMPORTANT: Storage bucket and policies must be created via Supabase Dashboard UI
+-- This file only handles the database column addition.
+--
+-- Follow these steps in order:
 
--- 1. Create the storage bucket for session recordings
-INSERT INTO storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
-VALUES (
-  'session-recordings',
-  'session-recordings',
-  true,  -- Public bucket so videos can be played directly
-  524288000,  -- 500MB file size limit
-  ARRAY['video/webm', 'video/mp4', 'video/x-matroska']::text[]
-)
-ON CONFLICT (id) DO UPDATE SET
-  public = EXCLUDED.public,
-  file_size_limit = EXCLUDED.file_size_limit,
-  allowed_mime_types = EXCLUDED.allowed_mime_types;
+-- ============================================
+-- STEP 1: Run this SQL to add the column
+-- ============================================
 
--- 2. Enable RLS on storage.objects (if not already enabled)
-ALTER TABLE storage.objects ENABLE ROW LEVEL SECURITY;
-
--- 3. Policy: Allow authenticated users to upload their own recordings
--- Files are stored in user-specific folders: {user_email}/{timestamp}-{session_id}.webm
-CREATE POLICY "Users can upload their own recordings"
-ON storage.objects
-FOR INSERT
-TO authenticated
-WITH CHECK (
-  bucket_id = 'session-recordings'
-  AND (storage.foldername(name))[1] = replace(auth.email(), '@', '_')
-);
-
--- 4. Policy: Allow authenticated users to read their own recordings
-CREATE POLICY "Users can read their own recordings"
-ON storage.objects
-FOR SELECT
-TO authenticated
-USING (
-  bucket_id = 'session-recordings'
-  AND (storage.foldername(name))[1] = replace(auth.email(), '@', '_')
-);
-
--- 5. Policy: Allow public read access to all recordings (for video playback)
--- This is needed because the video player loads the URL directly
-CREATE POLICY "Public read access for recordings"
-ON storage.objects
-FOR SELECT
-TO public
-USING (bucket_id = 'session-recordings');
-
--- 6. Policy: Allow authenticated users to delete their own recordings
-CREATE POLICY "Users can delete their own recordings"
-ON storage.objects
-FOR DELETE
-TO authenticated
-USING (
-  bucket_id = 'session-recordings'
-  AND (storage.foldername(name))[1] = replace(auth.email(), '@', '_')
-);
-
--- 7. Add video_recording_url column to sessions table (if not exists)
+-- Add video_recording_url column to sessions table (if not exists)
 DO $$
 BEGIN
   IF NOT EXISTS (
@@ -67,3 +19,44 @@ BEGIN
     ALTER TABLE sessions ADD COLUMN video_recording_url TEXT;
   END IF;
 END $$;
+
+-- ============================================
+-- STEP 2: Create storage bucket via Dashboard
+-- ============================================
+--
+-- 1. Go to Storage in your Supabase Dashboard
+-- 2. Click "New bucket"
+-- 3. Name: session-recordings
+-- 4. Check "Public bucket" (required for video playback)
+-- 5. Click "Create bucket"
+--
+-- ============================================
+-- STEP 3: Create storage policies via Dashboard
+-- ============================================
+--
+-- Go to Storage > session-recordings > Policies tab
+-- Click "New Policy" and create these policies:
+--
+-- POLICY 1: Allow uploads (INSERT)
+-- ---------------------------------
+-- Policy name: Allow authenticated uploads
+-- Allowed operation: INSERT
+-- Target roles: authenticated
+-- WITH CHECK expression:
+--   bucket_id = 'session-recordings'
+--
+-- POLICY 2: Allow public reads (SELECT)
+-- -------------------------------------
+-- Policy name: Allow public read access
+-- Allowed operation: SELECT
+-- Target roles: public (or anon)
+-- USING expression:
+--   bucket_id = 'session-recordings'
+--
+-- POLICY 3: Allow delete own files (DELETE)
+-- -----------------------------------------
+-- Policy name: Allow authenticated deletes
+-- Allowed operation: DELETE
+-- Target roles: authenticated
+-- USING expression:
+--   bucket_id = 'session-recordings'

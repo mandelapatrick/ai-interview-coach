@@ -1,52 +1,78 @@
-# Supabase Setup
+# Supabase Setup for Session Recordings
 
-## Session Recordings Storage
+## Quick Setup Guide
 
-To enable video recording storage, run the SQL migration in your Supabase project:
+### Step 1: Add Database Column
 
-### Option 1: Using Supabase Dashboard
+Run this SQL in the **SQL Editor**:
 
-1. Go to your [Supabase Dashboard](https://supabase.com/dashboard)
-2. Select your project
-3. Navigate to **SQL Editor**
-4. Copy the contents of `migrations/001_create_session_recordings_bucket.sql`
-5. Paste and run the SQL
-
-### Option 2: Using Supabase CLI
-
-```bash
-supabase db push
+```sql
+ALTER TABLE sessions ADD COLUMN IF NOT EXISTS video_recording_url TEXT;
 ```
 
-## What the Migration Does
+### Step 2: Create Storage Bucket
 
-1. **Creates `session-recordings` bucket** with:
-   - 500MB file size limit
-   - Allowed MIME types: `video/webm`, `video/mp4`, `video/x-matroska`
-   - Public access enabled for video playback
+1. Go to **Storage** in your Supabase Dashboard
+2. Click **"New bucket"**
+3. Enter name: `session-recordings`
+4. ✅ Check **"Public bucket"** (required for video playback)
+5. Click **"Create bucket"**
 
-2. **Configures RLS Policies**:
-   - Users can upload recordings to their own folder (`{user_email}/`)
-   - Users can read and delete their own recordings
-   - Public read access for video playback in the browser
+### Step 3: Create Storage Policies
 
-3. **Updates `sessions` table**:
-   - Adds `video_recording_url` column if it doesn't exist
+Go to **Storage** → **session-recordings** → **Policies** tab
 
-## Storage Structure
+#### Policy 1: Allow Uploads
 
-Recordings are stored with the following path pattern:
-```
-session-recordings/
-  └── user_example_com/           # User's email (@ replaced with _)
-      └── 1234567890-temp-123.webm  # Timestamp-sessionId.webm
-```
+1. Click **"New Policy"** → **"For full customization"**
+2. Policy name: `Allow authenticated uploads`
+3. Allowed operation: **INSERT**
+4. Target roles: **authenticated**
+5. WITH CHECK expression:
+   ```sql
+   true
+   ```
+6. Click **"Review"** → **"Save policy"**
 
-## Environment Variables
+#### Policy 2: Allow Public Reads
 
-Make sure these are set in your `.env.local`:
+1. Click **"New Policy"** → **"For full customization"**
+2. Policy name: `Allow public read access`
+3. Allowed operation: **SELECT**
+4. Target roles: **anon** (public)
+5. USING expression:
+   ```sql
+   true
+   ```
+6. Click **"Review"** → **"Save policy"**
 
-```env
-NEXT_PUBLIC_SUPABASE_URL=your-project-url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
-```
+#### Policy 3: Allow Deletes (Optional)
+
+1. Click **"New Policy"** → **"For full customization"**
+2. Policy name: `Allow authenticated deletes`
+3. Allowed operation: **DELETE**
+4. Target roles: **authenticated**
+5. USING expression:
+   ```sql
+   true
+   ```
+6. Click **"Review"** → **"Save policy"**
+
+---
+
+## Verification
+
+After setup, you should see:
+- ✅ `session-recordings` bucket in Storage
+- ✅ 2-3 policies listed under the bucket
+- ✅ `video_recording_url` column in the `sessions` table
+
+## Troubleshooting
+
+**Error: "must be owner of table objects"**
+- Storage policies cannot be created via SQL Editor
+- Use the Dashboard UI as described above
+
+**Videos not playing**
+- Ensure the bucket is set to **Public**
+- Check that the SELECT policy allows `anon` role
