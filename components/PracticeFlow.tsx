@@ -6,8 +6,9 @@ import InterviewModeSelector from "./InterviewModeSelector";
 import VideoLobby, { AvatarProvider } from "./VideoLobby";
 import VideoSession from "./VideoSession";
 import VoiceSession from "./VoiceSession";
+import AnamAudioSession from "./AnamAudioSession";
 
-type FlowState = "mode-select" | "audio" | "video-lobby" | "video-session";
+type FlowState = "mode-select" | "audio" | "audio-xai" | "video-lobby" | "video-session";
 
 interface PracticeFlowProps {
   question: Question;
@@ -18,9 +19,11 @@ export default function PracticeFlow({ question }: PracticeFlowProps) {
   const [userStream, setUserStream] = useState<MediaStream | null>(null);
   const [avatarProvider, setAvatarProvider] = useState<AvatarProvider>("anam");
 
-  const handleModeSelect = (mode: "audio" | "video") => {
+  const handleModeSelect = (mode: "audio" | "audio-xai" | "video") => {
     if (mode === "audio") {
-      setFlowState("audio");
+      setFlowState("audio"); // Uses Anam (Kimi K2) - default
+    } else if (mode === "audio-xai") {
+      setFlowState("audio-xai"); // Uses X.AI (Grok)
     } else {
       setFlowState("video-lobby");
     }
@@ -50,6 +53,9 @@ export default function PracticeFlow({ question }: PracticeFlowProps) {
       return <InterviewModeSelector onSelectMode={handleModeSelect} />;
 
     case "audio":
+      return <AnamAudioSession question={question} />;
+
+    case "audio-xai":
       return <VoiceSession question={question} />;
 
     case "video-lobby":
