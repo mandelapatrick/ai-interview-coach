@@ -687,7 +687,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
   const isLoading = avatar.isConnecting || (!avatar.isInitialized && !avatar.error);
 
   return (
-    <div className="flex h-full min-h-[600px] bg-[#0f172a]">
+    <div className="flex h-full bg-[#0f172a]">
       {/* Hidden canvas for video compositing/recording */}
       <canvas
         ref={canvasRef}
@@ -810,7 +810,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
       </div>
 
       {/* Right Sidebar */}
-      <div className="w-[360px] h-full bg-white flex flex-col border-l border-gray-200 overflow-hidden">
+      <div className="w-[360px] h-full max-h-[calc(100vh-170px)] bg-white flex flex-col border-l border-gray-200 overflow-hidden">
         {/* Header - Company & Timer */}
         <div className="p-4 border-b border-gray-100 flex-shrink-0">
           <div className="flex items-start justify-between">
