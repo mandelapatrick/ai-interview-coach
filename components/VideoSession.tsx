@@ -812,7 +812,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
       {/* Right Sidebar */}
       <div className="w-[360px] h-full bg-white flex flex-col border-l border-gray-200 overflow-hidden">
         {/* Header - Company & Timer */}
-        <div className="p-4 border-b border-gray-100">
+        <div className="p-4 border-b border-gray-100 flex-shrink-0">
           <div className="flex items-start justify-between">
             <div className="flex items-center gap-3">
               {company?.logoUrl ? (
@@ -846,7 +846,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
 
         {/* Exhibits Section */}
         {question.additionalInfoImages && question.additionalInfoImages.length > 0 && (
-          <div className="p-4 border-b border-gray-100">
+          <div className="p-4 border-b border-gray-100 flex-shrink-0">
             <h3 className="text-xs font-medium text-gray-500 uppercase tracking-wider mb-3">Exhibits</h3>
             <div className="flex gap-2">
               {question.additionalInfoImages.map((_, index) => (
@@ -883,7 +883,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
 
         {/* Hint Button (when no exhibits) */}
         {(!question.additionalInfoImages || question.additionalInfoImages.length === 0) && (
-          <div className="p-4 border-b border-gray-100">
+          <div className="p-4 border-b border-gray-100 flex-shrink-0">
             <button
               onClick={handleGetHint}
               disabled={isLoadingHint || hintCount >= 3}
@@ -905,7 +905,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
         )}
 
         {/* Live Conversation */}
-        <div className="flex-1 flex flex-col min-h-0">
+        <div className="flex-1 flex flex-col min-h-0 overflow-hidden">
           <div className="p-4 pb-2">
             <div className="flex items-center gap-2">
               <svg className="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -936,7 +936,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
         </div>
 
         {/* Bottom Controls */}
-        <div className="p-4 border-t border-gray-100">
+        <div className="p-4 border-t border-gray-100 flex-shrink-0">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-sm text-gray-500">
               <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
