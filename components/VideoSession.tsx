@@ -810,7 +810,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
       </div>
 
       {/* Right Sidebar */}
-      <div className="w-[360px] bg-white flex flex-col border-l border-gray-200">
+      <div className="w-[360px] h-full bg-white flex flex-col border-l border-gray-200 overflow-hidden">
         {/* Header - Company & Timer */}
         <div className="p-4 border-b border-gray-100">
           <div className="flex items-start justify-between">
