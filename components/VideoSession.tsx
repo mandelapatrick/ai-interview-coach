@@ -227,14 +227,67 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
     // Start recording after a short delay to ensure streams are ready
     const recordingTimer = setTimeout(() => {
       if (canvasRef.current && !isRecording) {
-        // Capture canvas stream with audio from user's microphone
+        // Capture canvas stream
         const canvasStream = canvasRef.current.captureStream(30);
 
-        // Add audio track from user stream
-        const audioTracks = userStream.getAudioTracks();
-        audioTracks.forEach((track) => {
-          canvasStream.addTrack(track);
-        });
+        try {
+          // Create audio context for mixing user mic + avatar audio
+          const recordingAudioContext = new AudioContext();
+          const destination = recordingAudioContext.createMediaStreamDestination();
+
+          // Add user microphone audio
+          const userAudioSource = recordingAudioContext.createMediaStreamSource(userStream);
+          userAudioSource.connect(destination);
+
+          // Add avatar video audio (AI interviewer voice)
+          if (avatarVideoRef.current) {
+            let avatarAudioAdded = false;
+
+            // Method 1: Try to get audio from the avatar's srcObject MediaStream
+            if (avatarVideoRef.current.srcObject) {
+              const avatarStream = avatarVideoRef.current.srcObject as MediaStream;
+              const avatarAudioTracks = avatarStream.getAudioTracks();
+              if (avatarAudioTracks.length > 0) {
+                const avatarAudioStream = new MediaStream(avatarAudioTracks);
+                const avatarAudioSource = recordingAudioContext.createMediaStreamSource(avatarAudioStream);
+                avatarAudioSource.connect(destination);
+                avatarAudioAdded = true;
+                console.log("[VideoSession] Added avatar audio from srcObject");
+              }
+            }
+
+            // Method 2: Capture audio directly from the video element
+            if (!avatarAudioAdded) {
+              try {
+                const avatarElementSource = recordingAudioContext.createMediaElementSource(avatarVideoRef.current);
+                avatarElementSource.connect(destination);
+                // Also connect to speakers so user can still hear it
+                avatarElementSource.connect(recordingAudioContext.destination);
+                avatarAudioAdded = true;
+                console.log("[VideoSession] Added avatar audio from media element");
+              } catch (e) {
+                console.log("[VideoSession] Could not capture avatar element audio:", e);
+              }
+            }
+
+            if (!avatarAudioAdded) {
+              console.log("[VideoSession] Warning: Could not capture avatar audio");
+            }
+          }
+
+          // Add mixed audio track to canvas stream
+          const mixedAudioTrack = destination.stream.getAudioTracks()[0];
+          if (mixedAudioTrack) {
+            canvasStream.addTrack(mixedAudioTrack);
+          }
+        } catch (audioErr) {
+          console.error("[VideoSession] Failed to set up audio mixing:", audioErr);
+          // Fallback: just add user audio
+          const audioTracks = userStream.getAudioTracks();
+          audioTracks.forEach((track) => {
+            canvasStream.addTrack(track);
+          });
+        }
 
         startRecording(canvasStream);
         console.log("[VideoSession] Started composite recording");
@@ -567,6 +620,12 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
           const tempSessionId = `temp-${Date.now()}`;
           recordingUrl = await uploadRecording(blob, tempSessionId);
           console.log("[VideoSession] Recording uploaded:", recordingUrl);
+
+          // If upload failed or returned null, create a local blob URL as fallback
+          if (!recordingUrl) {
+            recordingUrl = URL.createObjectURL(blob);
+            console.log("[VideoSession] Using local blob URL:", recordingUrl);
+          }
         }
       } catch (err) {
         console.error("[VideoSession] Failed to stop/upload recording:", err);
@@ -574,8 +633,9 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
     }
 
     // Store transcript and recording URL for assessment
+    // Use the same key as audio sessions so the latest session always wins
     sessionStorage.setItem(
-      "interviewTranscript",
+      "lastSession",
       JSON.stringify({
         questionId: question.id,
         transcript: transcriptRef.current,

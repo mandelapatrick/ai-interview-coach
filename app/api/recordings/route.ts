@@ -1,6 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { supabase } from "@/lib/supabase";
+import { createClient } from "@supabase/supabase-js";
+
+// Create a Supabase client with service role key for server-side uploads (bypasses RLS)
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+const supabaseAdmin = supabaseUrl && supabaseServiceKey
+  ? createClient(supabaseUrl, supabaseServiceKey)
+  : null;
 
 export async function POST(request: NextRequest) {
   try {
@@ -10,7 +18,7 @@ export async function POST(request: NextRequest) {
     }
 
     // If Supabase is not configured, return a mock URL
-    if (!supabase) {
+    if (!supabaseAdmin) {
       console.log("Supabase not configured, skipping recording upload");
       return NextResponse.json({
         url: null,
@@ -35,8 +43,8 @@ export async function POST(request: NextRequest) {
     const arrayBuffer = await file.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
 
-    // Upload to Supabase Storage
-    const { data, error } = await supabase.storage
+    // Upload to Supabase Storage using admin client (bypasses RLS)
+    const { data, error } = await supabaseAdmin.storage
       .from("session-recordings")
       .upload(filename, buffer, {
         contentType: "video/webm",
@@ -58,7 +66,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Get the public URL
-    const { data: urlData } = supabase.storage
+    const { data: urlData } = supabaseAdmin.storage
       .from("session-recordings")
       .getPublicUrl(data.path);
 
