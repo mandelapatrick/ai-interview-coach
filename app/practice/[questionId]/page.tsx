@@ -33,7 +33,7 @@ export default async function PracticePage({
     : QUESTION_TYPE_LABELS[question.type as keyof typeof QUESTION_TYPE_LABELS];
 
   return (
-    <div className="min-h-screen bg-[#0f172a] text-white flex flex-col">
+    <div className="h-screen bg-[#0f172a] text-white flex flex-col overflow-hidden">
       {/* Header */}
       <header className="border-b border-white/10 bg-[#0f172a]/95 backdrop-blur sticky top-0 z-10">
         <div className="max-w-6xl mx-auto px-4 py-3">
@@ -65,7 +65,7 @@ export default async function PracticePage({
       </div>
 
       {/* Practice Flow (Mode Selection → Lobby → Session) */}
-      <div className="flex-1 max-w-4xl mx-auto w-full min-h-0">
+      <div className="flex-1 w-full min-h-0 overflow-hidden">
         <PracticeFlow question={question} />
       </div>
     </div>
