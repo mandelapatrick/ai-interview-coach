@@ -1,7 +1,11 @@
 import { signIn } from "@/lib/auth";
 import Link from "next/link";
 
-const isGoogleConfigured = !!(process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET);
+const isGoogleConfigured = !!(
+  process.env.GOOGLE_CLIENT_ID &&
+  process.env.GOOGLE_CLIENT_SECRET &&
+  process.env.AUTH_SECRET
+);
 
 export default function SignInPage() {
   return (
@@ -62,7 +66,7 @@ export default function SignInPage() {
           <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4">
             <p className="text-red-400 text-sm font-medium mb-2">Google Sign-In Not Configured</p>
             <p className="text-white/60 text-sm">
-              The server is missing Google OAuth credentials. Please contact the administrator to configure GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET.
+              The server is missing required authentication credentials. Please contact the administrator to configure AUTH_SECRET, GOOGLE_CLIENT_ID, and GOOGLE_CLIENT_SECRET.
             </p>
           </div>
         )}

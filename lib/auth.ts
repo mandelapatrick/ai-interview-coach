@@ -3,21 +3,28 @@ import Google from "next-auth/providers/google";
 
 const googleClientId = process.env.GOOGLE_CLIENT_ID;
 const googleClientSecret = process.env.GOOGLE_CLIENT_SECRET;
+const authSecret = process.env.AUTH_SECRET;
 
-if (!googleClientId || !googleClientSecret) {
+// Check for missing environment variables
+const missingVars: string[] = [];
+if (!googleClientId) missingVars.push("GOOGLE_CLIENT_ID");
+if (!googleClientSecret) missingVars.push("GOOGLE_CLIENT_SECRET");
+if (!authSecret) missingVars.push("AUTH_SECRET");
+
+if (missingVars.length > 0) {
   console.error(
     "\n" +
     "╔════════════════════════════════════════════════════════════════╗\n" +
-    "║  MISSING GOOGLE OAUTH CREDENTIALS                              ║\n" +
+    "║  MISSING AUTHENTICATION ENVIRONMENT VARIABLES                  ║\n" +
     "╠════════════════════════════════════════════════════════════════╣\n" +
-    "║  Google Sign-In will not work until you configure:             ║\n" +
+    "║  The following required variables are not set:                 ║\n" +
     "║                                                                ║\n" +
-    "║  1. GOOGLE_CLIENT_ID                                           ║\n" +
-    "║  2. GOOGLE_CLIENT_SECRET                                       ║\n" +
+    missingVars.map(v => `║  - ${v.padEnd(58)}║\n`).join("") +
     "║                                                                ║\n" +
-    "║  Add these to your .env.local file.                            ║\n" +
+    "║  Add these to your environment variables.                      ║\n" +
     "║                                                                ║\n" +
-    "║  Get credentials at: https://console.cloud.google.com/apis     ║\n" +
+    "║  AUTH_SECRET: Generate with `openssl rand -base64 32`          ║\n" +
+    "║  Google credentials: https://console.cloud.google.com/apis     ║\n" +
     "╚════════════════════════════════════════════════════════════════╝\n"
   );
 }
