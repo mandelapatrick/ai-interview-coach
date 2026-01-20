@@ -95,6 +95,7 @@ const CONSULTING_TYPE_COLORS_DARK: Record<QuestionType, string> = {
 
 const PM_TYPE_COLORS_DARK: Record<PMQuestionType, string> = {
   "product-sense": "text-violet-400 bg-violet-400/10",
+  "analytical-thinking": "text-emerald-400 bg-emerald-400/10",
   behavioral: "text-amber-400 bg-amber-400/10",
   technical: "text-blue-400 bg-blue-400/10",
   execution: "text-teal-400 bg-teal-400/10",

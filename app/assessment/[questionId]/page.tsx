@@ -41,11 +41,18 @@ interface ProductSenseScores {
   communicationStructure: number;
 }
 
-type AssessmentSchema = "product-sense" | "pm-generic" | "consulting";
+interface AnalyticalThinkingScores {
+  productRationale: number;
+  measuringImpact: number;
+  settingGoals: number;
+  evaluatingTradeoffs: number;
+}
+
+type AssessmentSchema = "product-sense" | "analytical-thinking" | "pm-generic" | "consulting";
 
 interface Assessment {
   overallScore: number;
-  scores: ConsultingScores | PMScores | ProductSenseScores;
+  scores: ConsultingScores | PMScores | ProductSenseScores | AnalyticalThinkingScores;
   feedback: string;
   strengths: string[];
   improvements: string[];
@@ -285,6 +292,13 @@ export default function AssessmentPage() {
                     <ScoreItem label="Solution Development" score={(assessment.scores as ProductSenseScores).solutionDevelopment} weight="20%" />
                     <ScoreItem label="Communication" score={(assessment.scores as ProductSenseScores).communicationStructure} weight="10%" />
                   </>
+                ) : assessment.assessmentSchema === "analytical-thinking" ? (
+                  <>
+                    <ScoreItem label="Product Rationale" score={(assessment.scores as AnalyticalThinkingScores).productRationale} weight="15%" />
+                    <ScoreItem label="Measuring Impact" score={(assessment.scores as AnalyticalThinkingScores).measuringImpact} weight="35%" />
+                    <ScoreItem label="Setting Goals" score={(assessment.scores as AnalyticalThinkingScores).settingGoals} weight="25%" />
+                    <ScoreItem label="Evaluating Tradeoffs" score={(assessment.scores as AnalyticalThinkingScores).evaluatingTradeoffs} weight="25%" />
+                  </>
                 ) : assessment.track === "product-management" ? (
                   <>
                     <ScoreItem label="Product Thinking" score={(assessment.scores as PMScores).productThinking} weight="25%" />
@@ -315,8 +329,8 @@ export default function AssessmentPage() {
               <p className="text-white/70 leading-relaxed">{assessment.feedback}</p>
             </div>
 
-            {/* Dimension-Specific Feedback (Product Sense only) */}
-            {assessment.assessmentSchema === "product-sense" && assessment.dimensionFeedback && (
+            {/* Dimension-Specific Feedback (Product Sense and Analytical Thinking) */}
+            {(assessment.assessmentSchema === "product-sense" || assessment.assessmentSchema === "analytical-thinking") && assessment.dimensionFeedback && (
               <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-6">
                 <h2 className="text-xl font-semibold text-white mb-4">
                   Detailed Dimension Feedback
@@ -468,11 +482,17 @@ function ScoreItem({ label, score, weight }: { label: string; score: number; wei
 
 function formatDimensionName(dimension: string): string {
   const names: Record<string, string> = {
+    // Product Sense dimensions
     productMotivation: "Product Motivation & Mission",
     targetAudience: "Target Audience",
     problemIdentification: "Problem Identification",
     solutionDevelopment: "Solution Development",
     communicationStructure: "Communication Structure",
+    // Analytical Thinking dimensions
+    productRationale: "Product Rationale",
+    measuringImpact: "Measuring Impact",
+    settingGoals: "Setting Goals",
+    evaluatingTradeoffs: "Evaluating Tradeoffs",
   };
   return names[dimension] || dimension;
 }

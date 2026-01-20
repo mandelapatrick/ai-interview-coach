@@ -178,13 +178,121 @@ Respond in this exact JSON format:
 
 function formatDimensionName(dimensionId: string): string {
   const names: Record<string, string> = {
+    // Product Sense dimensions
     productMotivation: "Product Motivation & Mission",
     targetAudience: "Target Audience",
     problemIdentification: "Problem Identification",
     solutionDevelopment: "Solution Development",
     communicationStructure: "Communication Structure",
+    // Analytical Thinking dimensions
+    productRationale: "Product Rationale",
+    measuringImpact: "Measuring Impact",
+    settingGoals: "Setting Goals",
+    evaluatingTradeoffs: "Evaluating Tradeoffs",
   };
   return names[dimensionId] || dimensionId;
+}
+
+// Build the Analytical Thinking specific assessment prompt with calibrated rubric and few-shot examples
+function buildAnalyticalThinkingPrompt(): string {
+  const rubricConfig = getRubricConfig("analytical-thinking");
+  if (!rubricConfig) {
+    return PM_ASSESSMENT_PROMPT; // Fallback to generic PM prompt
+  }
+
+  const { rubric, calibratedExamples } = rubricConfig;
+
+  // Build rubric section
+  const rubricSection = rubric.dimensions
+    .map((dim) => {
+      const fiveStarCriteria = dim.scoringCriteria.find((c) => c.score === 5);
+      return `### ${dim.name} (Weight: ${dim.weight}%)
+${dim.description}
+
+**5/5 Score Requirements:**
+${fiveStarCriteria?.indicators.map((i) => `- ${i}`).join("\n") || ""}
+
+**Common Issues:**
+${dim.commonIssues.map((i) => `- ${i}`).join("\n")}`;
+    })
+    .join("\n\n");
+
+  // Build few-shot examples section (use first 2 examples)
+  const examplesSection = calibratedExamples
+    .slice(0, 2)
+    .map(
+      (ex) => `### Example: ${ex.questionTitle} (${ex.company})
+
+**Response Summary:**
+${ex.transcriptSummary}
+
+**Scores:**
+${Object.entries(ex.scores)
+  .map(([dim, score]) => `- ${formatDimensionName(dim)}: ${score}/5 - ${ex.scoreJustifications[dim]}`)
+  .join("\n")}
+
+**Overall Score:** ${ex.overallScore}/5
+
+**Strengths:** ${ex.strengths.join(", ")}
+**Areas for Improvement:** ${ex.improvements.join(", ")}`
+    )
+    .join("\n\n---\n\n");
+
+  return `You are an expert Product Management interview coach specializing in Analytical Thinking (AT) interviews.
+Analyze the following interview transcript using the calibrated rubric below.
+
+## CRITICAL SCORING RULES - READ FIRST
+
+1. ONLY evaluate content that is ACTUALLY in the transcript - do NOT fabricate, assume, or invent any candidate responses
+2. If the candidate provided NO substantive response or stayed silent, score ALL dimensions 1/5
+3. If the transcript contains only the interviewer speaking with no meaningful candidate response, score ALL dimensions 1/5
+4. You MUST quote specific text from the transcript as evidence for each score - if you cannot quote actual evidence from the candidate, the score must be 1/5
+5. Do NOT assume the candidate said something they did not say
+6. An empty or minimal response is NOT "meeting expectations" - it is a 1/5
+
+## Scoring Scale
+- 1 = Major gaps/issues (including: no response, minimal response, off-topic response)
+- 2 = Below expectations
+- 3 = Meets expectations (passing) - requires substantive, on-topic response
+- 4 = Above expectations
+- 5 = Exceptional
+
+## Evaluation Framework
+
+${rubricSection}
+
+## Calibrated Examples (use these as scoring anchors)
+
+${examplesSection}
+
+## Scoring Instructions
+
+1. Score each dimension independently on a 1-5 scale
+2. Use the calibrated examples as anchors for what different scores look like
+3. A score of 3/5 is passing - this REQUIRES the candidate to have provided substantive, relevant content
+4. QUOTE specific evidence from the transcript for each score - if you cannot quote the candidate, score 1/5
+5. If the candidate said nothing or gave minimal/irrelevant responses, ALL scores must be 1/5
+6. Calculate overall score as weighted average: Product Rationale (15%) + Measuring Impact (35%) + Setting Goals (25%) + Evaluating Tradeoffs (25%)
+
+Respond in this exact JSON format:
+{
+  "overallScore": <number 1-5 with one decimal>,
+  "scores": {
+    "productRationale": <number 1-5>,
+    "measuringImpact": <number 1-5>,
+    "settingGoals": <number 1-5>,
+    "evaluatingTradeoffs": <number 1-5>
+  },
+  "feedback": "<2-3 sentence overall assessment>",
+  "strengths": ["<strength 1>", "<strength 2>", "<strength 3>"],
+  "improvements": ["<area 1>", "<area 2>", "<area 3>"],
+  "dimensionFeedback": {
+    "productRationale": "<quote what candidate said, then feedback. If candidate said nothing relevant, state 'No substantive response provided'>",
+    "measuringImpact": "<quote what candidate said, then feedback. If candidate said nothing relevant, state 'No substantive response provided'>",
+    "settingGoals": "<quote what candidate said, then feedback. If candidate said nothing relevant, state 'No substantive response provided'>",
+    "evaluatingTradeoffs": "<quote what candidate said, then feedback. If candidate said nothing relevant, state 'No substantive response provided'>"
+  }
+}`;
 }
 
 export async function POST(request: NextRequest) {
@@ -200,14 +308,19 @@ export async function POST(request: NextRequest) {
 
     const isPM = track === "product-management";
     const isProductSense = isPM && questionType === "Product Sense";
+    // Analytical Thinking detection - "Execution" type maps to AT assessment
+    const isAnalyticalThinking = isPM && (questionType === "Analytical Thinking" || questionType === "Execution");
 
     // Select the appropriate prompt based on question type
     let assessmentPrompt: string;
-    let assessmentSchema: "product-sense" | "pm-generic" | "consulting";
+    let assessmentSchema: "product-sense" | "analytical-thinking" | "pm-generic" | "consulting";
 
     if (isProductSense) {
       assessmentPrompt = buildProductSensePrompt();
       assessmentSchema = "product-sense";
+    } else if (isAnalyticalThinking) {
+      assessmentPrompt = buildAnalyticalThinkingPrompt();
+      assessmentSchema = "analytical-thinking";
     } else if (isPM) {
       assessmentPrompt = PM_ASSESSMENT_PROMPT;
       assessmentSchema = "pm-generic";
@@ -218,9 +331,11 @@ export async function POST(request: NextRequest) {
 
     const interviewType = isProductSense
       ? "Product Sense Interview"
-      : isPM
-        ? "PM Interview"
-        : "Case Interview";
+      : isAnalyticalThinking
+        ? "Analytical Thinking Interview"
+        : isPM
+          ? "PM Interview"
+          : "Case Interview";
 
     // Format transcript for the AI
     const formattedTranscript = transcript
@@ -305,8 +420,8 @@ Please provide your assessment in the specified JSON format. Remember: you must 
       assessment.track = track || "consulting";
       assessment.assessmentSchema = assessmentSchema;
 
-      // Save to calibration dataset for Product Sense assessments
-      if (assessmentSchema === "product-sense") {
+      // Save to calibration dataset for Product Sense and Analytical Thinking assessments
+      if (assessmentSchema === "product-sense" || assessmentSchema === "analytical-thinking") {
         saveCalibrationTranscript({
           questionTitle,
           questionType,
@@ -330,6 +445,13 @@ Please provide your assessment in the specified JSON format. Remember: you must 
           problemIdentification: 3,
           solutionDevelopment: 3,
           communicationStructure: 3,
+        };
+      } else if (assessmentSchema === "analytical-thinking") {
+        fallbackScores = {
+          productRationale: 3,
+          measuringImpact: 3,
+          settingGoals: 3,
+          evaluatingTradeoffs: 3,
         };
       } else if (assessmentSchema === "pm-generic") {
         fallbackScores = {

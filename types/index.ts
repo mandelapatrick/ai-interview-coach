@@ -19,12 +19,13 @@ export type QuestionType =
   | "industry-analysis";   // Porter's 5 Forces/Landscape assessment
 
 export type PMQuestionType =
-  | "product-sense"   // Product design questions
-  | "behavioral"      // Leadership & Drive, STAR method
-  | "technical"       // System design, architecture
-  | "execution"       // Metrics, Analytics
-  | "strategy"        // Market analysis, competitive positioning
-  | "estimation";     // Market sizing, capacity planning
+  | "product-sense"        // Product design questions
+  | "analytical-thinking"  // Metrics, NSM, Goals, Tradeoffs (Meta AT interview)
+  | "behavioral"           // Leadership & Drive, STAR method
+  | "technical"            // System design, architecture
+  | "execution"            // Legacy: maps to analytical-thinking
+  | "strategy"             // Market analysis, competitive positioning
+  | "estimation";          // Market sizing, capacity planning
 
 export type AllQuestionTypes = QuestionType | PMQuestionType;
 
@@ -90,6 +91,14 @@ export interface ProductSenseScores {
   communicationStructure: number;
 }
 
+// Analytical Thinking specific scores (4 dimensions)
+export interface AnalyticalThinkingScores {
+  productRationale: number;
+  measuringImpact: number;
+  settingGoals: number;
+  evaluatingTradeoffs: number;
+}
+
 // Generic PM scores (6 dimensions)
 export interface PMGenericScores {
   productThinking: number;
@@ -111,7 +120,7 @@ export interface ConsultingScores {
 }
 
 // Assessment schema types
-export type AssessmentSchema = "product-sense" | "pm-generic" | "consulting";
+export type AssessmentSchema = "product-sense" | "analytical-thinking" | "pm-generic" | "consulting";
 
 export const QUESTION_TYPE_LABELS: Record<QuestionType, string> = {
   profitability: "Profitability",
@@ -157,6 +166,7 @@ export const TYPE_COLORS: Record<QuestionType, string> = {
 // PM Interview Types
 export const PM_QUESTION_TYPE_LABELS: Record<PMQuestionType, string> = {
   "product-sense": "Product Sense",
+  "analytical-thinking": "Analytical Thinking",
   behavioral: "Behavioral",
   technical: "Technical",
   execution: "Execution",
@@ -166,6 +176,7 @@ export const PM_QUESTION_TYPE_LABELS: Record<PMQuestionType, string> = {
 
 export const PM_TYPE_COLORS: Record<PMQuestionType, string> = {
   "product-sense": "text-violet-600 bg-violet-50",
+  "analytical-thinking": "text-emerald-600 bg-emerald-50",
   behavioral: "text-amber-600 bg-amber-50",
   technical: "text-blue-600 bg-blue-50",
   execution: "text-teal-600 bg-teal-50",
@@ -176,6 +187,7 @@ export const PM_TYPE_COLORS: Record<PMQuestionType, string> = {
 // Dark background variants for PM types
 export const PM_TYPE_COLORS_DARK: Record<PMQuestionType, string> = {
   "product-sense": "text-violet-400 bg-violet-400/10",
+  "analytical-thinking": "text-emerald-400 bg-emerald-400/10",
   behavioral: "text-amber-400 bg-amber-400/10",
   technical: "text-blue-400 bg-blue-400/10",
   execution: "text-teal-400 bg-teal-400/10",
