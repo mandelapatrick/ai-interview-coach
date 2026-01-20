@@ -81,6 +81,38 @@ export interface Assessment {
   improvements: string[];
 }
 
+// Product Sense specific scores (5 dimensions)
+export interface ProductSenseScores {
+  productMotivation: number;
+  targetAudience: number;
+  problemIdentification: number;
+  solutionDevelopment: number;
+  communicationStructure: number;
+}
+
+// Generic PM scores (6 dimensions)
+export interface PMGenericScores {
+  productThinking: number;
+  communication: number;
+  userEmpathy: number;
+  technicalDepth: number;
+  analyticalSkills: number;
+  creativity: number;
+}
+
+// Consulting scores (6 dimensions)
+export interface ConsultingScores {
+  structure: number;
+  problemSolving: number;
+  businessJudgment: number;
+  communication: number;
+  quantitative: number;
+  creativity: number;
+}
+
+// Assessment schema types
+export type AssessmentSchema = "product-sense" | "pm-generic" | "consulting";
+
 export const QUESTION_TYPE_LABELS: Record<QuestionType, string> = {
   profitability: "Profitability",
   "market-entry": "Market Entry",

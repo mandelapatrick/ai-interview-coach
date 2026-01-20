@@ -33,13 +33,25 @@ interface PMScores {
   creativity: number;
 }
 
+interface ProductSenseScores {
+  productMotivation: number;
+  targetAudience: number;
+  problemIdentification: number;
+  solutionDevelopment: number;
+  communicationStructure: number;
+}
+
+type AssessmentSchema = "product-sense" | "pm-generic" | "consulting";
+
 interface Assessment {
   overallScore: number;
-  scores: ConsultingScores | PMScores;
+  scores: ConsultingScores | PMScores | ProductSenseScores;
   feedback: string;
   strengths: string[];
   improvements: string[];
   track?: InterviewTrack;
+  assessmentSchema?: AssessmentSchema;
+  dimensionFeedback?: Record<string, string>;
 }
 
 export default function AssessmentPage() {
@@ -265,7 +277,15 @@ export default function AssessmentPage() {
 
               {/* Score Breakdown */}
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {assessment.track === "product-management" ? (
+                {assessment.assessmentSchema === "product-sense" ? (
+                  <>
+                    <ScoreItem label="Product Motivation" score={(assessment.scores as ProductSenseScores).productMotivation} weight="20%" />
+                    <ScoreItem label="Target Audience" score={(assessment.scores as ProductSenseScores).targetAudience} weight="25%" />
+                    <ScoreItem label="Problem Identification" score={(assessment.scores as ProductSenseScores).problemIdentification} weight="25%" />
+                    <ScoreItem label="Solution Development" score={(assessment.scores as ProductSenseScores).solutionDevelopment} weight="20%" />
+                    <ScoreItem label="Communication" score={(assessment.scores as ProductSenseScores).communicationStructure} weight="10%" />
+                  </>
+                ) : assessment.track === "product-management" ? (
                   <>
                     <ScoreItem label="Product Thinking" score={(assessment.scores as PMScores).productThinking} weight="25%" />
                     <ScoreItem label="Communication" score={(assessment.scores as PMScores).communication} weight="20%" />
@@ -294,6 +314,25 @@ export default function AssessmentPage() {
               </h2>
               <p className="text-white/70 leading-relaxed">{assessment.feedback}</p>
             </div>
+
+            {/* Dimension-Specific Feedback (Product Sense only) */}
+            {assessment.assessmentSchema === "product-sense" && assessment.dimensionFeedback && (
+              <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-6">
+                <h2 className="text-xl font-semibold text-white mb-4">
+                  Detailed Dimension Feedback
+                </h2>
+                <div className="space-y-4">
+                  {Object.entries(assessment.dimensionFeedback).map(([dimension, feedback]) => (
+                    <div key={dimension} className="border-l-2 border-[#d4af37]/50 pl-4">
+                      <h3 className="text-sm font-medium text-[#d4af37] mb-1">
+                        {formatDimensionName(dimension)}
+                      </h3>
+                      <p className="text-white/70 text-sm">{feedback}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Strengths & Improvements */}
             <div className="grid md:grid-cols-2 gap-6">
@@ -425,4 +464,15 @@ function ScoreItem({ label, score, weight }: { label: string; score: number; wei
       <span className="font-bold">{score}/5</span>
     </div>
   );
+}
+
+function formatDimensionName(dimension: string): string {
+  const names: Record<string, string> = {
+    productMotivation: "Product Motivation & Mission",
+    targetAudience: "Target Audience",
+    problemIdentification: "Problem Identification",
+    solutionDevelopment: "Solution Development",
+    communicationStructure: "Communication Structure",
+  };
+  return names[dimension] || dimension;
 }
