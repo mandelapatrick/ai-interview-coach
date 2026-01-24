@@ -838,6 +838,24 @@ export const pmQuestions: Question[] = [
     track: "product-management",
     description: "How would you design an app to help people choose which cheese to buy?",
   },
+  {
+    id: "meta-91",
+    companySlug: "meta",
+    title: "Design an amusement park app",
+    type: "product-sense",
+    difficulty: "medium",
+    track: "product-management",
+    description: "You are a PM at Meta. How would you design an app for an amusement park?",
+  },
+  {
+    id: "meta-92",
+    companySlug: "meta",
+    title: "Evaluate Meta entering the fitness space",
+    type: "product-sense",
+    difficulty: "hard",
+    track: "product-management",
+    description: "Let's imagine that you are a product manager at Meta, and you have six months to evaluate if Meta should enter the fitness space.",
+  },
 
   // ============================================
   // GOOGLE - ~80 questions

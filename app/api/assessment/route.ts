@@ -189,6 +189,26 @@ function formatDimensionName(dimensionId: string): string {
     measuringImpact: "Measuring Impact",
     settingGoals: "Setting Goals",
     evaluatingTradeoffs: "Evaluating Tradeoffs",
+    // Behavioral dimensions
+    situationContext: "Situation & Context",
+    taskOwnership: "Task & Ownership",
+    actionDetail: "Action & Decision-Making",
+    resultImpact: "Result & Impact",
+    // Technical dimensions
+    requirementsClarity: "Requirements & Scope",
+    architectureDesign: "Architecture & Design",
+    tradeoffAnalysis: "Tradeoff Analysis",
+    technicalCommunication: "Technical Communication",
+    // Strategy dimensions
+    marketUnderstanding: "Market Understanding",
+    competitiveAnalysis: "Competitive Analysis",
+    strategicOptions: "Strategic Options & Go-to-Market",
+    decisionFramework: "Decision Framework & Risk Assessment",
+    // Estimation dimensions
+    problemDecomposition: "Problem Decomposition",
+    assumptionQuality: "Assumption Quality",
+    calculationAccuracy: "Calculation Accuracy",
+    sanityCheck: "Sanity Check & Validation",
   };
   return names[dimensionId] || dimensionId;
 }
@@ -295,6 +315,110 @@ Respond in this exact JSON format:
 }`;
 }
 
+// Generic rubric-based prompt builder for behavioral, technical, strategy, estimation
+function buildRubricPrompt(questionType: string, interviewTypeName: string): string {
+  const rubricConfig = getRubricConfig(questionType);
+  if (!rubricConfig) {
+    return PM_ASSESSMENT_PROMPT; // Fallback to generic PM prompt
+  }
+
+  const { rubric, calibratedExamples } = rubricConfig;
+
+  // Build rubric section
+  const rubricSection = rubric.dimensions
+    .map((dim) => {
+      const fiveStarCriteria = dim.scoringCriteria.find((c) => c.score === 5);
+      return `### ${dim.name} (Weight: ${dim.weight}%)
+${dim.description}
+
+**5/5 Score Requirements:**
+${fiveStarCriteria?.indicators.map((i) => `- ${i}`).join("\n") || ""}
+
+**Common Issues:**
+${dim.commonIssues.map((i) => `- ${i}`).join("\n")}`;
+    })
+    .join("\n\n");
+
+  // Build few-shot examples section (use first 2 examples)
+  const examplesSection = calibratedExamples
+    .slice(0, 2)
+    .map(
+      (ex) => `### Example: ${ex.questionTitle} (${ex.company})
+
+**Response Summary:**
+${ex.transcriptSummary}
+
+**Scores:**
+${Object.entries(ex.scores)
+  .map(([dim, score]) => `- ${formatDimensionName(dim)}: ${score}/5 - ${ex.scoreJustifications[dim]}`)
+  .join("\n")}
+
+**Overall Score:** ${ex.overallScore}/5
+
+**Strengths:** ${ex.strengths.join(", ")}
+**Areas for Improvement:** ${ex.improvements.join(", ")}`
+    )
+    .join("\n\n---\n\n");
+
+  // Build dimension score keys for JSON format
+  const dimensionKeys = rubric.dimensions.map(d => d.id);
+  const scoresJson = dimensionKeys.map(k => `    "${k}": <number 1-5>`).join(",\n");
+  const feedbackJson = dimensionKeys.map(k => `    "${k}": "<quote what candidate said, then feedback>"`).join(",\n");
+
+  // Build weight string for weighted average
+  const weightStr = rubric.dimensions.map(d => `${d.name} (${d.weight}%)`).join(" + ");
+
+  return `You are an expert Product Management interview coach specializing in ${interviewTypeName} interviews.
+Analyze the following interview transcript using the calibrated rubric below.
+
+## CRITICAL SCORING RULES - READ FIRST
+
+1. ONLY evaluate content that is ACTUALLY in the transcript - do NOT fabricate, assume, or invent any candidate responses
+2. If the candidate provided NO substantive response or stayed silent, score ALL dimensions 1/5
+3. If the transcript contains only the interviewer speaking with no meaningful candidate response, score ALL dimensions 1/5
+4. You MUST quote specific text from the transcript as evidence for each score - if you cannot quote actual evidence from the candidate, the score must be 1/5
+5. Do NOT assume the candidate said something they did not say
+6. An empty or minimal response is NOT "meeting expectations" - it is a 1/5
+
+## Scoring Scale
+- 1 = Major gaps/issues (including: no response, minimal response, off-topic response)
+- 2 = Below expectations
+- 3 = Meets expectations (passing) - requires substantive, on-topic response
+- 4 = Above expectations
+- 5 = Exceptional
+
+## Evaluation Framework
+
+${rubricSection}
+
+## Calibrated Examples (use these as scoring anchors)
+
+${examplesSection}
+
+## Scoring Instructions
+
+1. Score each dimension independently on a 1-5 scale
+2. Use the calibrated examples as anchors for what different scores look like
+3. A score of 3/5 is passing - this REQUIRES the candidate to have provided substantive, relevant content
+4. QUOTE specific evidence from the transcript for each score - if you cannot quote the candidate, score 1/5
+5. If the candidate said nothing or gave minimal/irrelevant responses, ALL scores must be 1/5
+6. Calculate overall score as weighted average: ${weightStr}
+
+Respond in this exact JSON format:
+{
+  "overallScore": <number 1-5 with one decimal>,
+  "scores": {
+${scoresJson}
+  },
+  "feedback": "<2-3 sentence overall assessment>",
+  "strengths": ["<strength 1>", "<strength 2>", "<strength 3>"],
+  "improvements": ["<area 1>", "<area 2>", "<area 3>"],
+  "dimensionFeedback": {
+${feedbackJson}
+  }
+}`;
+}
+
 export async function POST(request: NextRequest) {
   try {
     const { transcript, questionTitle, questionType, track } = await request.json();
@@ -310,10 +434,14 @@ export async function POST(request: NextRequest) {
     const isProductSense = isPM && questionType === "Product Sense";
     // Analytical Thinking detection - "Execution" type maps to AT assessment
     const isAnalyticalThinking = isPM && (questionType === "Analytical Thinking" || questionType === "Execution");
+    const isBehavioral = isPM && questionType === "Behavioral";
+    const isTechnical = isPM && questionType === "Technical";
+    const isStrategy = isPM && questionType === "Strategy";
+    const isEstimation = isPM && questionType === "Estimation";
 
     // Select the appropriate prompt based on question type
     let assessmentPrompt: string;
-    let assessmentSchema: "product-sense" | "analytical-thinking" | "pm-generic" | "consulting";
+    let assessmentSchema: "product-sense" | "analytical-thinking" | "behavioral" | "technical" | "strategy" | "estimation" | "pm-generic" | "consulting";
 
     if (isProductSense) {
       assessmentPrompt = buildProductSensePrompt();
@@ -321,6 +449,18 @@ export async function POST(request: NextRequest) {
     } else if (isAnalyticalThinking) {
       assessmentPrompt = buildAnalyticalThinkingPrompt();
       assessmentSchema = "analytical-thinking";
+    } else if (isBehavioral) {
+      assessmentPrompt = buildRubricPrompt("behavioral", "Behavioral");
+      assessmentSchema = "behavioral";
+    } else if (isTechnical) {
+      assessmentPrompt = buildRubricPrompt("technical", "Technical");
+      assessmentSchema = "technical";
+    } else if (isStrategy) {
+      assessmentPrompt = buildRubricPrompt("strategy", "Strategy");
+      assessmentSchema = "strategy";
+    } else if (isEstimation) {
+      assessmentPrompt = buildRubricPrompt("estimation", "Estimation");
+      assessmentSchema = "estimation";
     } else if (isPM) {
       assessmentPrompt = PM_ASSESSMENT_PROMPT;
       assessmentSchema = "pm-generic";
@@ -333,9 +473,17 @@ export async function POST(request: NextRequest) {
       ? "Product Sense Interview"
       : isAnalyticalThinking
         ? "Analytical Thinking Interview"
-        : isPM
-          ? "PM Interview"
-          : "Case Interview";
+        : isBehavioral
+          ? "Behavioral Interview"
+          : isTechnical
+            ? "Technical Interview"
+            : isStrategy
+              ? "Strategy Interview"
+              : isEstimation
+                ? "Estimation Interview"
+                : isPM
+                  ? "PM Interview"
+                  : "Case Interview";
 
     // Format transcript for the AI
     const formattedTranscript = transcript
@@ -420,8 +568,9 @@ Please provide your assessment in the specified JSON format. Remember: you must 
       assessment.track = track || "consulting";
       assessment.assessmentSchema = assessmentSchema;
 
-      // Save to calibration dataset for Product Sense and Analytical Thinking assessments
-      if (assessmentSchema === "product-sense" || assessmentSchema === "analytical-thinking") {
+      // Save to calibration dataset for all rubric-based assessments
+      const rubricBasedSchemas = ["product-sense", "analytical-thinking", "behavioral", "technical", "strategy", "estimation"];
+      if (rubricBasedSchemas.includes(assessmentSchema)) {
         saveCalibrationTranscript({
           questionTitle,
           questionType,
@@ -452,6 +601,34 @@ Please provide your assessment in the specified JSON format. Remember: you must 
           measuringImpact: 3,
           settingGoals: 3,
           evaluatingTradeoffs: 3,
+        };
+      } else if (assessmentSchema === "behavioral") {
+        fallbackScores = {
+          situationContext: 3,
+          taskOwnership: 3,
+          actionDetail: 3,
+          resultImpact: 3,
+        };
+      } else if (assessmentSchema === "technical") {
+        fallbackScores = {
+          requirementsClarity: 3,
+          architectureDesign: 3,
+          tradeoffAnalysis: 3,
+          technicalCommunication: 3,
+        };
+      } else if (assessmentSchema === "strategy") {
+        fallbackScores = {
+          marketUnderstanding: 3,
+          competitiveAnalysis: 3,
+          strategicOptions: 3,
+          decisionFramework: 3,
+        };
+      } else if (assessmentSchema === "estimation") {
+        fallbackScores = {
+          problemDecomposition: 3,
+          assumptionQuality: 3,
+          calculationAccuracy: 3,
+          sanityCheck: 3,
         };
       } else if (assessmentSchema === "pm-generic") {
         fallbackScores = {

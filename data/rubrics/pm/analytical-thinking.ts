@@ -1,4 +1,4 @@
-import { AssessmentRubric, CalibratedExample } from "./types";
+import { AssessmentRubric, CalibratedExample } from "../types";
 
 export const analyticalThinkingRubric: AssessmentRubric = {
   questionType: "analytical-thinking",
