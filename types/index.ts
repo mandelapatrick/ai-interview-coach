@@ -42,6 +42,8 @@ export interface Company {
   track: InterviewTrack;
 }
 
+export type Frequency = "high" | "medium" | "low";
+
 export interface Question {
   id: string;
   companySlug: string;
@@ -50,6 +52,10 @@ export interface Question {
   difficulty: Difficulty;
   description: string;
   track: InterviewTrack;
+  // Frequency data from interview reports
+  numFirstRound?: number;         // Number of times asked in first round
+  numFinalRound?: number;         // Number of times asked in final/on-site round
+  frequency?: Frequency;          // Derived frequency level (high/medium/low)
   // New fields for enhanced case interviews
   industry?: string;
   interviewFormat?: InterviewFormat;
@@ -210,3 +216,30 @@ export const TYPE_COLORS_DARK: Record<QuestionType, string> = {
   "strategic-decision": "text-teal-400 bg-teal-400/10",
   "industry-analysis": "text-slate-400 bg-slate-400/10",
 };
+
+// Frequency labels and colors
+export const FREQUENCY_LABELS: Record<Frequency, string> = {
+  high: "High",
+  medium: "Medium",
+  low: "Low",
+};
+
+export const FREQUENCY_COLORS: Record<Frequency, string> = {
+  high: "text-red-600 bg-red-50",
+  medium: "text-orange-600 bg-orange-50",
+  low: "text-green-600 bg-green-50",
+};
+
+export const FREQUENCY_COLORS_DARK: Record<Frequency, string> = {
+  high: "text-red-400 bg-red-400/10",
+  medium: "text-orange-400 bg-orange-400/10",
+  low: "text-green-400 bg-green-400/10",
+};
+
+// Helper to calculate frequency from round counts
+export function calculateFrequency(numFirstRound: number = 0, numFinalRound: number = 0): Frequency {
+  const total = numFirstRound + numFinalRound;
+  if (total >= 5) return "high";
+  if (total >= 2) return "medium";
+  return "low";
+}

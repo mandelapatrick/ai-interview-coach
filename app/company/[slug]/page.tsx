@@ -10,8 +10,10 @@ import {
   PMQuestionType,
   AllQuestionTypes,
   Difficulty,
+  Frequency,
   QUESTION_TYPE_LABELS,
   PM_QUESTION_TYPE_LABELS,
+  FREQUENCY_LABELS,
 } from "@/types";
 
 const companyColors: Record<string, { bg: string; text: string }> = {
@@ -78,6 +80,12 @@ const DIFFICULTY_COLORS_DARK: Record<Difficulty, string> = {
   hard: "text-red-400 bg-red-400/10",
 };
 
+const FREQUENCY_COLORS_DARK: Record<Frequency, string> = {
+  high: "text-red-400 bg-red-400/10",
+  medium: "text-orange-400 bg-orange-400/10",
+  low: "text-green-400 bg-green-400/10",
+};
+
 const CONSULTING_TYPE_COLORS_DARK: Record<QuestionType, string> = {
   profitability: "text-blue-400 bg-blue-400/10",
   "market-entry": "text-purple-400 bg-purple-400/10",
@@ -118,16 +126,18 @@ export default function CompanyQuestionsPage() {
 
   const [typeFilter, setTypeFilter] = useState<AllQuestionTypes | "all">("all");
   const [difficultyFilter, setDifficultyFilter] = useState<Difficulty | "all">("all");
+  const [frequencyFilter, setFrequencyFilter] = useState<Frequency | "all">("all");
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredQuestions = useMemo(() => {
     return allQuestions.filter((q) => {
       const matchesType = typeFilter === "all" || q.type === typeFilter;
       const matchesDifficulty = difficultyFilter === "all" || q.difficulty === difficultyFilter;
+      const matchesFrequency = frequencyFilter === "all" || q.frequency === frequencyFilter;
       const matchesSearch = q.title.toLowerCase().includes(searchQuery.toLowerCase());
-      return matchesType && matchesDifficulty && matchesSearch;
+      return matchesType && matchesDifficulty && matchesFrequency && matchesSearch;
     });
-  }, [allQuestions, typeFilter, difficultyFilter, searchQuery]);
+  }, [allQuestions, typeFilter, difficultyFilter, frequencyFilter, searchQuery]);
 
   if (!company) {
     return (
@@ -239,6 +249,18 @@ export default function CompanyQuestionsPage() {
               ))}
             </select>
 
+            {/* Frequency Filter */}
+            <select
+              value={frequencyFilter}
+              onChange={(e) => setFrequencyFilter(e.target.value as Frequency | "all")}
+              className="px-4 py-2 bg-[#1a2d47] border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
+            >
+              <option value="all">All Frequencies</option>
+              <option value="high">High Frequency</option>
+              <option value="medium">Medium Frequency</option>
+              <option value="low">Low Frequency</option>
+            </select>
+
             <span className="text-sm text-white/50">
               {filteredQuestions.length} questions
             </span>
@@ -254,6 +276,9 @@ export default function CompanyQuestionsPage() {
               <tr>
                 <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider">
                   Title
+                </th>
+                <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider">
+                  Frequency
                 </th>
                 <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider">
                   Type
@@ -272,6 +297,15 @@ export default function CompanyQuestionsPage() {
                   <td className="px-6 py-4">
                     <div className="font-medium text-white">{question.title}</div>
                     <div className="text-sm text-white/50 mt-1">{question.description}</div>
+                  </td>
+                  <td className="px-6 py-4">
+                    {question.frequency ? (
+                      <span className={`inline-flex px-2 py-1 text-xs font-medium rounded-full capitalize ${FREQUENCY_COLORS_DARK[question.frequency]}`}>
+                        {FREQUENCY_LABELS[question.frequency]}
+                      </span>
+                    ) : (
+                      <span className="text-white/30 text-xs">—</span>
+                    )}
                   </td>
                   <td className="px-6 py-4">
                     <span className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${ALL_TYPE_COLORS_DARK[question.type]}`}>
