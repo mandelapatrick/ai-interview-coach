@@ -3,8 +3,7 @@
 import { useRef, useEffect, useState, useCallback } from "react";
 import { Question } from "@/types";
 import { useDualAnamAvatars, TranscriptEntry } from "@/hooks/useDualAnamAvatars";
-import { getSystemPrompt } from "@/data/prompts";
-import { getCandidatePrompt } from "@/data/prompts/learn/candidate";
+import { getSystemPrompt, getCandidatePrompt } from "@/data/prompts";
 import ClarifyingQuestionModal from "./ClarifyingQuestionModal";
 
 interface LearnSessionProps {

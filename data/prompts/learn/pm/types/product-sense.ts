@@ -1,5 +1,5 @@
 /**
- * Candidate Prompt for Learn Mode
+ * Product Sense Candidate Prompt for Learn Mode
  * Structured Product Sense interview approach with explicit check-in points
  */
 
@@ -9,7 +9,7 @@ import { getRubricConfig } from "@/data/rubrics";
 /**
  * Get the candidate prompt for Product Sense interviews
  */
-export function getCandidatePrompt(question: Question): string {
+export function getProductSenseCandidatePrompt(question: Question): string {
   const rubricConfig = getRubricConfig(question.type);
 
   // Extract excellence indicators (score 5) from each dimension
@@ -156,6 +156,7 @@ function getFrameworkGuidance(question: Question): string {
 }
 
 /**
- * Export for use in LearnSession
+ * Backward compatibility exports
  */
-export { getCandidatePrompt as getLearnCandidatePrompt };
+export { getProductSenseCandidatePrompt as getCandidatePrompt };
+export { getProductSenseCandidatePrompt as getLearnCandidatePrompt };
