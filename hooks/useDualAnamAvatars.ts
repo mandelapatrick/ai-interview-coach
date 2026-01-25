@@ -4,6 +4,13 @@ import { useState, useRef, useCallback, useEffect } from "react";
 import { createClient, AnamEvent } from "@anam-ai/js-sdk";
 import type { AnamClient } from "@anam-ai/js-sdk";
 
+// Explicit turn state machine to prevent race conditions
+type TurnState =
+  | "interviewer_speaking"
+  | "waiting_for_candidate"
+  | "candidate_speaking"
+  | "waiting_for_interviewer";
+
 export interface TranscriptEntry {
   speaker: "interviewer" | "candidate";
   text: string;
@@ -69,6 +76,7 @@ export function useDualAnamAvatars(
   const turnCountRef = useRef(0);
   const isInterviewerTalkingRef = useRef(false);
   const isCandidateTalkingRef = useRef(false);
+  const turnStateRef = useRef<TurnState>("interviewer_speaking");
 
   // Timeout refs for fallback speech-end detection
   const interviewerSpeechTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -203,17 +211,16 @@ export function useDualAnamAvatars(
             turnCountRef.current++;
             console.log("[DualAnam] Sending interviewer's message to candidate:", spokenText.substring(0, 50) + "...");
 
-            // Clear speaker while transitioning (no one is actively speaking)
+            // Atomic turn state transition - candidate's turn now
+            turnStateRef.current = "waiting_for_candidate";
             updateSpeaker(null);
 
-            // Send the interviewer's text to the candidate as "user input"
-            setTimeout(() => {
-              try {
-                candidateClient.sendUserMessage(spokenText);
-              } catch (err) {
-                console.error("[DualAnam] Failed to send message to candidate:", err);
-              }
-            }, 1000);
+            // Send message immediately (turn state guards protect against race conditions)
+            try {
+              candidateClient.sendUserMessage(spokenText);
+            } catch (err) {
+              console.error("[DualAnam] Failed to send message to candidate:", err);
+            }
           }
         };
 
@@ -226,20 +233,29 @@ export function useDualAnamAvatars(
           AnamEvent.MESSAGE_STREAM_EVENT_RECEIVED,
           (event: { role: string; content: string }) => {
             if (event.role === "persona") {
+              // GUARD: Only allow interviewer speech if turn state permits
+              if (turnStateRef.current !== "interviewer_speaking" &&
+                  turnStateRef.current !== "waiting_for_interviewer") {
+                console.log("[DualAnam] Ignoring interviewer speech - not their turn, state:", turnStateRef.current);
+                interviewerClient.interruptPersona();
+                return;
+              }
+
               // Clear any existing timeout
               if (interviewerSpeechTimeoutRef.current) {
                 clearTimeout(interviewerSpeechTimeoutRef.current);
               }
 
-              // Prevent overlap: only start if candidate is not talking
-              if (!isInterviewerTalkingRef.current && !isCandidateTalkingRef.current) {
+              // Start interviewer speaking
+              if (!isInterviewerTalkingRef.current) {
                 isInterviewerTalkingRef.current = true;
+                turnStateRef.current = "interviewer_speaking";
                 updateSpeaker("interviewer");
+                // Interrupt candidate as safety
+                candidateClient.interruptPersona();
                 console.log("[DualAnam] Interviewer started speaking");
               }
-              if (isInterviewerTalkingRef.current) {
-                currentInterviewerTextRef.current += event.content;
-              }
+              currentInterviewerTextRef.current += event.content;
 
               // Set timeout to detect end of speech (fallback if MESSAGE_HISTORY_UPDATED doesn't fire)
               interviewerSpeechTimeoutRef.current = setTimeout(() => {
@@ -288,17 +304,16 @@ export function useDualAnamAvatars(
           if (!isPausedRef.current && turnCountRef.current < 10 && spokenText) {
             console.log("[DualAnam] Sending candidate's response to interviewer:", spokenText.substring(0, 50) + "...");
 
-            // Clear speaker while transitioning (no one is actively speaking)
+            // Atomic turn state transition - interviewer's turn now
+            turnStateRef.current = "waiting_for_interviewer";
             updateSpeaker(null);
 
-            // Send the candidate's text to the interviewer as "user input"
-            setTimeout(() => {
-              try {
-                interviewerClient.sendUserMessage(spokenText);
-              } catch (err) {
-                console.error("[DualAnam] Failed to send message to interviewer:", err);
-              }
-            }, 1000);
+            // Send message immediately (turn state guards protect against race conditions)
+            try {
+              interviewerClient.sendUserMessage(spokenText);
+            } catch (err) {
+              console.error("[DualAnam] Failed to send message to interviewer:", err);
+            }
           } else if (turnCountRef.current >= 10) {
             // End the interview after 10 turns
             onSessionEnd?.();
@@ -309,20 +324,29 @@ export function useDualAnamAvatars(
           AnamEvent.MESSAGE_STREAM_EVENT_RECEIVED,
           (event: { role: string; content: string }) => {
             if (event.role === "persona") {
+              // GUARD: Only allow candidate speech if turn state permits
+              if (turnStateRef.current !== "candidate_speaking" &&
+                  turnStateRef.current !== "waiting_for_candidate") {
+                console.log("[DualAnam] Ignoring candidate speech - not their turn, state:", turnStateRef.current);
+                candidateClient.interruptPersona();
+                return;
+              }
+
               // Clear any existing timeout
               if (candidateSpeechTimeoutRef.current) {
                 clearTimeout(candidateSpeechTimeoutRef.current);
               }
 
-              // Prevent overlap: only start if interviewer is not talking
-              if (!isCandidateTalkingRef.current && !isInterviewerTalkingRef.current) {
+              // Start candidate speaking
+              if (!isCandidateTalkingRef.current) {
                 isCandidateTalkingRef.current = true;
+                turnStateRef.current = "candidate_speaking";
                 updateSpeaker("candidate");
+                // Interrupt interviewer as safety
+                interviewerClient.interruptPersona();
                 console.log("[DualAnam] Candidate started speaking");
               }
-              if (isCandidateTalkingRef.current) {
-                currentCandidateTextRef.current += event.content;
-              }
+              currentCandidateTextRef.current += event.content;
 
               // Set timeout to detect end of speech (fallback if MESSAGE_HISTORY_UPDATED doesn't fire)
               candidateSpeechTimeoutRef.current = setTimeout(() => {
@@ -362,7 +386,9 @@ export function useDualAnamAvatars(
         // Start candidate stream (will be muted until their turn)
         console.log("[DualAnam] Starting candidate stream...");
         await candidateClient.streamToVideoElement(candidateVideo.id);
-        console.log("[DualAnam] Candidate stream started");
+        // Immediately interrupt any auto-greeting the candidate might try
+        candidateClient.interruptPersona();
+        console.log("[DualAnam] Candidate stream started (auto-greeting interrupted)");
 
         console.log("[DualAnam] Streams started successfully");
 
@@ -451,6 +477,7 @@ export function useDualAnamAvatars(
       setIsInitialized(false);
       setCurrentSpeaker(null);
       setIsPaused(false);
+      turnStateRef.current = "interviewer_speaking"; // Reset turn state
 
       console.log("[DualAnam] Avatars stopped");
     } catch (err) {
