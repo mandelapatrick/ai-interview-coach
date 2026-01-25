@@ -318,12 +318,20 @@ export default function CompanyQuestionsPage() {
                     </span>
                   </td>
                   <td className="px-6 py-4 text-right">
-                    <Link
-                      href={`/practice/${question.id}`}
-                      className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-[#0f172a] text-sm font-medium rounded-lg hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
-                    >
-                      Practice
-                    </Link>
+                    <div className="flex gap-2 justify-end">
+                      <Link
+                        href={`/learn/${question.id}`}
+                        className="inline-flex items-center px-4 py-2 bg-[#1a2d47] text-white text-sm font-medium rounded-lg hover:bg-[#243a5a] transition-all border border-white/10"
+                      >
+                        Learn
+                      </Link>
+                      <Link
+                        href={`/practice/${question.id}`}
+                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-[#0f172a] text-sm font-medium rounded-lg hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
+                      >
+                        Practice
+                      </Link>
+                    </div>
                   </td>
                 </tr>
               ))}
