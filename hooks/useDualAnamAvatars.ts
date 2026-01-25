@@ -59,6 +59,7 @@ export function useDualAnamAvatars(
   const [error, setError] = useState<string | null>(null);
 
   // Refs
+  const isPausedRef = useRef(false); // Ref version of isPaused for use in event listeners
   const interviewerClientRef = useRef<AnamClient | null>(null);
   const candidateClientRef = useRef<AnamClient | null>(null);
   const interviewerVideoRef = useRef<HTMLVideoElement | null>(null);
@@ -69,6 +70,11 @@ export function useDualAnamAvatars(
   const isInterviewerTalkingRef = useRef(false);
   const isCandidateTalkingRef = useRef(false);
 
+  // Timeout refs for fallback speech-end detection
+  const interviewerSpeechTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const candidateSpeechTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const SPEECH_END_TIMEOUT = 3000; // 3 seconds of silence = speech ended
+
   // Cleanup on unmount
   useEffect(() => {
     return () => {
@@ -77,6 +83,12 @@ export function useDualAnamAvatars(
       }
       if (candidateClientRef.current) {
         candidateClientRef.current.stopStreaming().catch(console.error);
+      }
+      if (interviewerSpeechTimeoutRef.current) {
+        clearTimeout(interviewerSpeechTimeoutRef.current);
+      }
+      if (candidateSpeechTimeoutRef.current) {
+        clearTimeout(candidateSpeechTimeoutRef.current);
       }
     };
   }, []);
@@ -163,6 +175,48 @@ export function useDualAnamAvatars(
         const candidateClient = createClient(candidateToken);
         candidateClientRef.current = candidateClient;
 
+        // Helper function to handle interviewer finishing speaking
+        const handleInterviewerFinished = () => {
+          if (!isInterviewerTalkingRef.current || !currentInterviewerTextRef.current) return;
+
+          const spokenText = currentInterviewerTextRef.current.trim();
+          console.log("[DualAnam] Interviewer finished speaking:", spokenText.substring(0, 50) + "...");
+
+          addToTranscript({
+            speaker: "interviewer",
+            text: spokenText,
+            timestamp: new Date(),
+          });
+
+          // Reset for next turn
+          currentInterviewerTextRef.current = "";
+          isInterviewerTalkingRef.current = false;
+
+          // Clear timeout since we're handling the turn pass
+          if (interviewerSpeechTimeoutRef.current) {
+            clearTimeout(interviewerSpeechTimeoutRef.current);
+            interviewerSpeechTimeoutRef.current = null;
+          }
+
+          // Now trigger candidate to respond by sending interviewer's message
+          if (!isPausedRef.current && turnCountRef.current < 10 && spokenText) {
+            turnCountRef.current++;
+            console.log("[DualAnam] Sending interviewer's message to candidate:", spokenText.substring(0, 50) + "...");
+
+            // Clear speaker while transitioning (no one is actively speaking)
+            updateSpeaker(null);
+
+            // Send the interviewer's text to the candidate as "user input"
+            setTimeout(() => {
+              try {
+                candidateClient.sendUserMessage(spokenText);
+              } catch (err) {
+                console.error("[DualAnam] Failed to send message to candidate:", err);
+              }
+            }, 1000);
+          }
+        };
+
         // Set up interviewer event listeners
         interviewerClient.addListener(AnamEvent.SESSION_READY, () => {
           console.log("[DualAnam] Interviewer session ready");
@@ -172,6 +226,11 @@ export function useDualAnamAvatars(
           AnamEvent.MESSAGE_STREAM_EVENT_RECEIVED,
           (event: { role: string; content: string }) => {
             if (event.role === "persona") {
+              // Clear any existing timeout
+              if (interviewerSpeechTimeoutRef.current) {
+                clearTimeout(interviewerSpeechTimeoutRef.current);
+              }
+
               // Prevent overlap: only start if candidate is not talking
               if (!isInterviewerTalkingRef.current && !isCandidateTalkingRef.current) {
                 isInterviewerTalkingRef.current = true;
@@ -181,6 +240,12 @@ export function useDualAnamAvatars(
               if (isInterviewerTalkingRef.current) {
                 currentInterviewerTextRef.current += event.content;
               }
+
+              // Set timeout to detect end of speech (fallback if MESSAGE_HISTORY_UPDATED doesn't fire)
+              interviewerSpeechTimeoutRef.current = setTimeout(() => {
+                console.log("[DualAnam] Interviewer speech timeout triggered");
+                handleInterviewerFinished();
+              }, SPEECH_END_TIMEOUT);
             }
           }
         );
@@ -188,41 +253,7 @@ export function useDualAnamAvatars(
         interviewerClient.addListener(AnamEvent.MESSAGE_HISTORY_UPDATED, () => {
           // Interviewer finished speaking
           console.log("[DualAnam] Interviewer MESSAGE_HISTORY_UPDATED, talking:", isInterviewerTalkingRef.current, "text length:", currentInterviewerTextRef.current.length);
-          if (isInterviewerTalkingRef.current && currentInterviewerTextRef.current) {
-            const spokenText = currentInterviewerTextRef.current.trim();
-            console.log("[DualAnam] Interviewer finished speaking:", spokenText.substring(0, 50) + "...");
-
-            addToTranscript({
-              speaker: "interviewer",
-              text: spokenText,
-              timestamp: new Date(),
-            });
-
-            // Reset for next turn
-            currentInterviewerTextRef.current = "";
-            isInterviewerTalkingRef.current = false;
-
-            // Now trigger candidate to respond by sending interviewer's message
-            if (!isPaused && turnCountRef.current < 10 && spokenText) {
-              turnCountRef.current++;
-              console.log("[DualAnam] Sending interviewer's message to candidate:", spokenText.substring(0, 50) + "...");
-
-              // Clear speaker while transitioning (no one is actively speaking)
-              updateSpeaker(null);
-
-              // Send the interviewer's text to the candidate as "user input"
-              // Use longer delay for more natural turn-taking
-              setTimeout(() => {
-                // Don't set speaker here - let MESSAGE_STREAM_EVENT_RECEIVED handle it
-                // when the candidate actually starts speaking
-                try {
-                  candidateClient.sendUserMessage(spokenText);
-                } catch (err) {
-                  console.error("[DualAnam] Failed to send message to candidate:", err);
-                }
-              }, 1000);
-            }
-          }
+          handleInterviewerFinished();
         });
 
         // Set up candidate event listeners
@@ -230,10 +261,59 @@ export function useDualAnamAvatars(
           console.log("[DualAnam] Candidate session ready");
         });
 
+        // Helper function to handle candidate finishing speaking
+        const handleCandidateFinished = () => {
+          if (!isCandidateTalkingRef.current || !currentCandidateTextRef.current) return;
+
+          const spokenText = currentCandidateTextRef.current.trim();
+          console.log("[DualAnam] Candidate finished speaking:", spokenText.substring(0, 50) + "...");
+
+          addToTranscript({
+            speaker: "candidate",
+            text: spokenText,
+            timestamp: new Date(),
+          });
+
+          // Reset for next turn
+          currentCandidateTextRef.current = "";
+          isCandidateTalkingRef.current = false;
+
+          // Clear timeout since we're handling the turn pass
+          if (candidateSpeechTimeoutRef.current) {
+            clearTimeout(candidateSpeechTimeoutRef.current);
+            candidateSpeechTimeoutRef.current = null;
+          }
+
+          // Switch back to interviewer for follow-up by sending candidate's response
+          if (!isPausedRef.current && turnCountRef.current < 10 && spokenText) {
+            console.log("[DualAnam] Sending candidate's response to interviewer:", spokenText.substring(0, 50) + "...");
+
+            // Clear speaker while transitioning (no one is actively speaking)
+            updateSpeaker(null);
+
+            // Send the candidate's text to the interviewer as "user input"
+            setTimeout(() => {
+              try {
+                interviewerClient.sendUserMessage(spokenText);
+              } catch (err) {
+                console.error("[DualAnam] Failed to send message to interviewer:", err);
+              }
+            }, 1000);
+          } else if (turnCountRef.current >= 10) {
+            // End the interview after 10 turns
+            onSessionEnd?.();
+          }
+        };
+
         candidateClient.addListener(
           AnamEvent.MESSAGE_STREAM_EVENT_RECEIVED,
           (event: { role: string; content: string }) => {
             if (event.role === "persona") {
+              // Clear any existing timeout
+              if (candidateSpeechTimeoutRef.current) {
+                clearTimeout(candidateSpeechTimeoutRef.current);
+              }
+
               // Prevent overlap: only start if interviewer is not talking
               if (!isCandidateTalkingRef.current && !isInterviewerTalkingRef.current) {
                 isCandidateTalkingRef.current = true;
@@ -243,6 +323,12 @@ export function useDualAnamAvatars(
               if (isCandidateTalkingRef.current) {
                 currentCandidateTextRef.current += event.content;
               }
+
+              // Set timeout to detect end of speech (fallback if MESSAGE_HISTORY_UPDATED doesn't fire)
+              candidateSpeechTimeoutRef.current = setTimeout(() => {
+                console.log("[DualAnam] Candidate speech timeout triggered");
+                handleCandidateFinished();
+              }, SPEECH_END_TIMEOUT);
             }
           }
         );
@@ -250,43 +336,7 @@ export function useDualAnamAvatars(
         candidateClient.addListener(AnamEvent.MESSAGE_HISTORY_UPDATED, () => {
           // Candidate finished speaking
           console.log("[DualAnam] Candidate MESSAGE_HISTORY_UPDATED, talking:", isCandidateTalkingRef.current, "text length:", currentCandidateTextRef.current.length);
-          if (isCandidateTalkingRef.current && currentCandidateTextRef.current) {
-            const spokenText = currentCandidateTextRef.current.trim();
-            console.log("[DualAnam] Candidate finished speaking:", spokenText.substring(0, 50) + "...");
-
-            addToTranscript({
-              speaker: "candidate",
-              text: spokenText,
-              timestamp: new Date(),
-            });
-
-            // Reset for next turn
-            currentCandidateTextRef.current = "";
-            isCandidateTalkingRef.current = false;
-
-            // Switch back to interviewer for follow-up by sending candidate's response
-            if (!isPaused && turnCountRef.current < 10 && spokenText) {
-              console.log("[DualAnam] Sending candidate's response to interviewer:", spokenText.substring(0, 50) + "...");
-
-              // Clear speaker while transitioning (no one is actively speaking)
-              updateSpeaker(null);
-
-              // Send the candidate's text to the interviewer as "user input"
-              // Use longer delay for more natural turn-taking
-              setTimeout(() => {
-                // Don't set speaker here - let MESSAGE_STREAM_EVENT_RECEIVED handle it
-                // when the interviewer actually starts speaking
-                try {
-                  interviewerClient.sendUserMessage(spokenText);
-                } catch (err) {
-                  console.error("[DualAnam] Failed to send message to interviewer:", err);
-                }
-              }, 1000);
-            } else if (turnCountRef.current >= 10) {
-              // End the interview after 10 turns
-              onSessionEnd?.();
-            }
-          }
+          handleCandidateFinished();
         });
 
         console.log("[DualAnam] Starting streams...");
@@ -336,7 +386,6 @@ export function useDualAnamAvatars(
       candidatePrompt,
       updateSpeaker,
       addToTranscript,
-      isPaused,
       onError,
       onSessionEnd,
     ]
@@ -345,6 +394,7 @@ export function useDualAnamAvatars(
   // Pause the interview
   const pause = useCallback(() => {
     setIsPaused(true);
+    isPausedRef.current = true; // Update ref for event listeners
     // Mute both avatars
     if (interviewerVideoRef.current) {
       interviewerVideoRef.current.muted = true;
@@ -357,6 +407,7 @@ export function useDualAnamAvatars(
   // Resume the interview
   const resume = useCallback(() => {
     setIsPaused(false);
+    isPausedRef.current = false; // Update ref for event listeners
     // Unmute the current speaker
     if (currentSpeaker === "interviewer" && interviewerVideoRef.current) {
       interviewerVideoRef.current.muted = false;

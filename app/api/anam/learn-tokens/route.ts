@@ -12,16 +12,18 @@ const ANAM_VOICES = {
   candidate: "a57043ba-5976-4fbb-b065-d3aad4f5338b", // Same voice for now (TODO: use different one)
 };
 
-// LLM ID
+// LLM IDs
 const ANAM_LLMS = {
   kimiK2Instruct: "7736a22f-2d79-4720-952c-25fdca55ad40",
+  gpt4Mini: "0934d97d-0c3a-4f33-91b0-5e136a0ef466",
 };
 
 async function generateToken(
   apiKey: string,
   avatarId: string,
   voiceId: string,
-  systemPrompt: string
+  systemPrompt: string,
+  llmId: string
 ): Promise<string> {
   const tokenResponse = await fetch(
     "https://api.anam.ai/v1/auth/session-token",
@@ -35,7 +37,7 @@ async function generateToken(
         personaConfig: {
           avatarId,
           voiceId,
-          llmId: ANAM_LLMS.kimiK2Instruct,
+          llmId,
           systemPrompt,
         },
       }),
@@ -85,18 +87,21 @@ export async function POST(request: NextRequest) {
     console.log("[Learn Tokens API] Generating tokens for interviewer and candidate...");
 
     // Generate both tokens in parallel
+    // Using GPT-4 Mini for candidate to get shorter, more interactive responses
     const [interviewerToken, candidateToken] = await Promise.all([
       generateToken(
         apiKey,
         ANAM_AVATARS.interviewer,
         ANAM_VOICES.interviewer,
-        interviewerPrompt
+        interviewerPrompt,
+        ANAM_LLMS.kimiK2Instruct
       ),
       generateToken(
         apiKey,
         ANAM_AVATARS.candidate,
         ANAM_VOICES.candidate,
-        candidatePrompt
+        candidatePrompt,
+        ANAM_LLMS.gpt4Mini
       ),
     ]);
 
