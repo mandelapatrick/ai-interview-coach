@@ -80,7 +80,7 @@ export default function DashboardPage() {
 
               <div className="flex items-center justify-between">
                 <div className="text-sm text-white/40">
-                  <span className="text-violet-400 font-semibold">{pmCompanies.length}</span> companies
+                  <span className="text-violet-400 font-semibold">{pmCompanies.filter(c => c.questionCount >= 5).length}</span> companies
                 </div>
                 <div className="flex items-center gap-2 text-violet-400 group-hover:translate-x-2 transition-transform">
                   <span className="text-sm font-medium">Start practicing</span>
