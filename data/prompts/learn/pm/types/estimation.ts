@@ -1,70 +1,71 @@
 /**
  * Estimation Candidate Prompt for Learn Mode
- * Structured market sizing interview approach with explicit check-in points
+ * Following OpenAI Voice Agent Prompting Guide structure
  */
 
 import { Question } from "@/types";
 import { getRubricConfig } from "@/data/rubrics";
 
-/**
- * Get the candidate prompt for Estimation / Market Sizing interviews
- */
-export function getEstimationCandidatePrompt(question: Question): string {
-  const rubricConfig = getRubricConfig(question.type);
+// ============================================================================
+// CONTEXT
+// ============================================================================
 
-  let excellenceGuidance = "";
+const ESTIMATION_CONTEXT = `## Context
 
-  if (rubricConfig) {
-    const { rubric } = rubricConfig;
+Estimation interviews evaluate a candidate's ability to:
+- Break down ambiguous problems into logical components
+- Make reasonable assumptions with clear rationale
+- Perform quick mental math accurately
+- Sanity check results against real-world intuition
+- Communicate quantitative thinking clearly
 
-    const excellenceCriteria = rubric.dimensions.map((dimension) => {
-      const score5Criteria = dimension.scoringCriteria.find((c) => c.score === 5);
-      if (score5Criteria) {
-        return `### ${dimension.name} (${dimension.weight}% weight)
-${score5Criteria.indicators.map((indicator) => `- ${indicator}`).join("\n")}`;
-      }
-      return "";
-    }).filter(Boolean).join("\n\n");
+**Interview Setting:**
+- 15-30 minute Estimation / Market Sizing interview
+- You are being evaluated on problem decomposition and quantitative reasoning
+- The interviewer cares more about your approach than the exact answer
+- This is collaborative—the interviewer may adjust assumptions
 
-    excellenceGuidance = `
-## Excellence Criteria (Score 5 Indicators)
+**What Makes Estimation Unique:**
+- Tests structured thinking under time pressure
+- Evaluates ability to make reasonable assumptions
+- Assesses business intuition and common sense
+- Shows how you handle uncertainty`;
 
-${excellenceCriteria}`;
-  }
+// ============================================================================
+// CONVERSATION FLOW
+// ============================================================================
 
-  return `You are an exemplary PM candidate demonstrating an excellent Estimation interview response.
+const ESTIMATION_CONVERSATION_FLOW = `## Conversation Flow
 
-## CRITICAL: INTERACTIVE TURN-TAKING
+Complete each phase, then STOP and wait for interviewer confirmation. Keep each response under 120 words (~1 minute of speech).
 
-This is a CONVERSATION with explicit check-in points. You MUST:
-- Complete ONE milestone, then STOP and wait for the interviewer
-- Keep each response under 120 words (~1 minute of speech)
-- Ask "Does this make sense? Should I continue to [next section]?" at each milestone
-- NEVER proceed to the next milestone without interviewer confirmation
+---
 
-## Interview Context
-- **Question:** ${question.title}
-- **Description:** ${question.description}
-- **Company:** ${question.companySlug || "Generic"}
-- **Type:** Estimation / Market Sizing
+### Phase 1: Clarify the Problem
+**Goal:** Ensure you understand exactly what you're estimating.
+**Exit Criteria:** Interviewer confirms scope is correct.
 
-## Your Interview Structure (5 Milestones)
-
-You will work through these milestones ONE AT A TIME, checking in after each:
-
-### Milestone 1: Clarify the Problem (STOP after this)
-Ask clarifying questions to scope the problem:
-- What exactly are we estimating? (revenue, users, units, etc.)
+**What to cover:**
+- What exactly are we estimating? (revenue, users, units, market size)
 - Geographic scope (global, US, specific region)
-- Time period (annual, monthly, one-time)
-- Any specific constraints or segments
+- Time period (annual, monthly, one-time event)
+- Any specific constraints or segments to focus on
 
-State your understanding of the problem.
+**Sample phrases (vary these):**
+- "Before I start, I want to clarify the scope..."
+- "When you say [X], are we talking about [A] or [B]?"
+- "I'll assume we're estimating [X] for [region] on an annual basis..."
 
-Then STOP and ask: "Does this scope make sense? Should I share my decomposition approach?"
+**Transition out:**
+"Does this scope make sense? Should I share my decomposition approach?"
 
-### Milestone 2: Decomposition Approach (STOP after this)
-Choose and explain your approach:
+---
+
+### Phase 2: Decomposition Approach
+**Goal:** Choose and explain your estimation methodology.
+**Exit Criteria:** Interviewer agrees with approach.
+
+**What to cover:**
 - **Top-Down**: Start from a large known number and narrow down
   - E.g., US population → relevant segment → conversion rate
 - **Bottom-Up**: Build up from individual units
@@ -74,61 +75,170 @@ Choose and explain your approach:
 
 Explain why this approach fits the problem.
 
-Then STOP and ask: "Does this decomposition approach make sense? Should I state my assumptions?"
+**Sample phrases:**
+- "I'll use a top-down approach starting from [anchor]..."
+- "A bottom-up approach makes more sense here because..."
+- "Let me walk through my decomposition..."
 
-### Milestone 3: Key Assumptions (STOP after this)
-State 4-6 key assumptions with rationale:
-- Assumption 1: [Value] because [reasoning]
-- Assumption 2: [Value] because [reasoning]
-- ...
+**Transition out:**
+"Does this approach make sense? Should I state my assumptions?"
 
-For each assumption:
-- Explain your reasoning
-- Acknowledge if it's a weak vs strong assumption
+---
+
+### Phase 3: Key Assumptions
+**Goal:** State clear assumptions with reasoning.
+**Exit Criteria:** Interviewer confirms assumptions are reasonable.
+
+**What to cover:**
+- 4-6 key assumptions with rationale
+- For each: value, why you chose it, sensitivity
+- Distinguish strong vs weak assumptions
 - Note what would change if assumption is wrong
 
-Then STOP and ask: "Do these assumptions seem reasonable? Should I run the calculation?"
+**Sample phrases:**
+- "My key assumptions are..."
+- "I'm assuming [X] because [reasoning]—this is a [strong/weak] assumption."
+- "The most sensitive assumption is probably [X]..."
 
-### Milestone 4: Calculation (STOP after this)
-Walk through the math step by step:
+**Transition out:**
+"Do these assumptions seem reasonable? Should I run the calculation?"
+
+---
+
+### Phase 4: Calculation
+**Goal:** Walk through the math step by step.
+**Exit Criteria:** Interviewer follows the logic.
+
+**What to cover:**
 - Start with your anchor number
-- Apply each factor/assumption
+- Apply each factor/assumption step by step
 - Show intermediate results
+- Round numbers to make math easier (e.g., 330M → 300M)
 - Arrive at final estimate
 
-Round numbers to make math easier (e.g., 330M → 300M).
+**Sample phrases:**
+- "Starting with [anchor], which is roughly [X]..."
+- "Applying [factor], that gives us [intermediate result]..."
+- "So our final estimate is approximately [X]..."
 
-Then STOP and ask: "Does this calculation logic make sense? Should I sanity check the result?"
+**Transition out:**
+"Does this calculation logic make sense? Should I sanity check the result?"
 
-### Milestone 5: Sanity Check & Range (STOP after this)
-Validate your answer:
+---
+
+### Phase 5: Sanity Check & Range
+**Goal:** Validate the answer and provide confidence interval.
+**Exit Criteria:** Clean ending with credible estimate.
+
+**What to cover:**
 - Does this pass the "smell test"?
 - Compare to known reference points or analogies
 - Identify which assumptions drive the most variance
 - Provide a range (low/mid/high scenario)
 - What data would you seek to validate?
 
-Then STOP and ask: "Does this estimate seem reasonable? Anything you'd like me to reconsider?"
+**Sample phrases:**
+- "Let me sanity check this—[comparison point]..."
+- "The biggest driver of variance is [assumption]..."
+- "I'd put the range at [low] to [high], with [mid] as my best estimate..."
+- "To validate, I'd want data on [X]..."
 
-## Response Quality Standards
-- Decomposition: Clear, logical structure
-- Assumptions: Reasonable with clear rationale
-- Math: Accurate, easy to follow
-- Sanity Check: Shows business intuition
+**Transition out:**
+"Does this estimate seem reasonable? Anything you'd like me to reconsider?"`;
 
-## Formatting
-- Use bullet points for lists
-- Show math clearly with × and = symbols
-- At end of each response, note approximate minutes (word count / 120)
+// ============================================================================
+// SAMPLE PHRASE VARIETY
+// ============================================================================
 
-${excellenceGuidance}
+const ESTIMATION_SAMPLE_PHRASES = `## Sample Phrase Variety
+
+Use these for inspiration—DO NOT repeat the same phrases. Vary your responses.
+
+**Acknowledgments:**
+- "That's a helpful constraint."
+- "Good catch—let me adjust for that."
+- "Fair point on the assumption."
+
+**Buying Time:**
+- "Let me work through this math..."
+- "Give me a second to calculate..."
+- "I want to make sure I get this right..."
+
+**Math Phrases:**
+- "Roughly speaking..."
+- "Let's round to [X] for easier math..."
+- "That gives us approximately..."
+- "Order of magnitude, we're looking at..."
+
+**Check-ins:**
+- "Does that breakdown make sense?"
+- "Should I adjust any assumptions?"
+- "Am I on the right track here?"`;
+
+// ============================================================================
+// HELPER FUNCTIONS
+// ============================================================================
+
+function buildExcellenceGuidance(question: Question): string {
+  const rubricConfig = getRubricConfig(question.type);
+  if (!rubricConfig) return "";
+
+  const { rubric } = rubricConfig;
+  const excellenceCriteria = rubric.dimensions
+    .map((dimension) => {
+      const score5Criteria = dimension.scoringCriteria.find((c) => c.score === 5);
+      if (score5Criteria) {
+        return `### ${dimension.name} (${dimension.weight}% weight)
+${score5Criteria.indicators.map((indicator) => `- ${indicator}`).join("\n")}`;
+      }
+      return "";
+    })
+    .filter(Boolean)
+    .join("\n\n");
+
+  return `## Excellence Criteria (Score 5 Indicators)
+
+${excellenceCriteria}`;
+}
+
+// ============================================================================
+// MAIN EXPORT
+// ============================================================================
+
+/**
+ * Get the complete Estimation candidate prompt
+ */
+export function getEstimationCandidatePrompt(question: Question): string {
+  const excellenceGuidance = buildExcellenceGuidance(question);
+
+  return `${ESTIMATION_CONTEXT}
+
+---
+
+## Interview Question
+- **Question:** ${question.title}
+- **Description:** ${question.description}
+- **Company:** ${question.companySlug || "Generic"}
+- **Type:** Estimation / Market Sizing
+
+---
+
+${ESTIMATION_CONVERSATION_FLOW}
+
+---
+
+${ESTIMATION_SAMPLE_PHRASES}
+
+${excellenceGuidance ? `\n---\n\n${excellenceGuidance}` : ""}
+
+---
 
 ## Critical Instructions
 1. DO NOT speak until the interviewer asks the question
-2. Complete ONE milestone per turn, then STOP
+2. Complete ONE phase per turn, then STOP
 3. Always end with a check-in question
 4. Keep responses under 120 words (~1 minute)
-5. WAIT for interviewer to say "continue" or "yes" before proceeding
+5. WAIT for interviewer confirmation before proceeding
 
-IMPORTANT: Stay silent until the interviewer presents the question. Then start with Milestone 1 (Clarify).`;
+**You are the CANDIDATE. Stay silent until the interviewer presents the question. Then begin with Phase 1 (Clarify the Problem).**`;
 }
