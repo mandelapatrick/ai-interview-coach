@@ -1,10 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 
-// Anam Avatar IDs - Update this with your preferred avatar from https://docs.anam.ai/resources/avatar-gallery
-const ANAM_AVATARS = {
-  // Default avatar (Layla) - TODO: Update with actual Layla avatar ID from gallery
-  layla: "ae2ea8c1-db28-47e3-b6ea-493e4ed3c554", // Currently using Cara as placeholder
-};
+// Anam Avatar IDs - randomly select one per session
+const ANAM_AVATAR_IDS = [
+  "edf6fdcb-acab-44b8-b974-ded72665ee26",
+  "8a339c9f-0666-46bd-ab27-e90acd0409dc",
+  "ae2ea8c1-db28-47e3-b6ea-493e4ed3c554",
+  "8dd64886-ce4b-47d5-b837-619660854768",
+];
+
+function getRandomAvatar(): string {
+  return ANAM_AVATAR_IDS[Math.floor(Math.random() * ANAM_AVATAR_IDS.length)];
+}
 
 // Voice IDs from Anam
 const ANAM_VOICES = {
@@ -57,7 +63,7 @@ export async function POST(request: NextRequest) {
         },
         body: JSON.stringify({
           personaConfig: {
-            avatarId: ANAM_AVATARS.layla,
+            avatarId: getRandomAvatar(),
             voiceId: ANAM_VOICES.default,
             llmId: ANAM_LLMS.kimiK2Instruct, // Anam handles conversation with Kimi K2 LLM
             systemPrompt: systemPrompt,
