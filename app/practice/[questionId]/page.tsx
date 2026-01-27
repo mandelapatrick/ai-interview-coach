@@ -44,14 +44,9 @@ export default async function PracticePage({
             >
               ← Back to {company?.name}
             </Link>
-            <div className="flex items-center gap-3">
-              <span className={`px-2 py-1 text-xs font-medium rounded-full capitalize ${DIFFICULTY_COLORS_DARK[question.difficulty]}`}>
-                {question.difficulty}
-              </span>
-              <span className="text-sm text-white/50">
-                {typeLabel}
-              </span>
-            </div>
+            <span className="text-sm text-white/50">
+              {typeLabel}
+            </span>
           </div>
         </div>
       </header>

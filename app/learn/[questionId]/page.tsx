@@ -48,9 +48,6 @@ export default async function LearnPage({
               <span className="px-2 py-1 text-xs font-medium rounded-full bg-violet-400/10 text-violet-400">
                 Learn Mode
               </span>
-              <span className={`px-2 py-1 text-xs font-medium rounded-full capitalize ${DIFFICULTY_COLORS_DARK[question.difficulty]}`}>
-                {question.difficulty}
-              </span>
               <span className="text-sm text-white/50">
                 {typeLabel}
               </span>

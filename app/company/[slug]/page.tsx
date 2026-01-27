@@ -236,19 +236,6 @@ export default function CompanyQuestionsPage() {
               ))}
             </select>
 
-            {/* Difficulty Filter */}
-            <select
-              value={difficultyFilter}
-              onChange={(e) => setDifficultyFilter(e.target.value as Difficulty | "all")}
-              className="px-4 py-2 bg-[#1a2d47] border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
-            >
-              {difficulties.map((diff) => (
-                <option key={diff} value={diff}>
-                  {diff === "all" ? "All Difficulties" : diff.charAt(0).toUpperCase() + diff.slice(1)}
-                </option>
-              ))}
-            </select>
-
             {/* Frequency Filter */}
             <select
               value={frequencyFilter}
@@ -283,9 +270,6 @@ export default function CompanyQuestionsPage() {
                 <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider w-40">
                   Type
                 </th>
-                <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider w-28">
-                  Difficulty
-                </th>
                 <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider w-44">
                   Action
                 </th>
@@ -310,11 +294,6 @@ export default function CompanyQuestionsPage() {
                   <td className="px-6 py-4 w-40">
                     <span className={`inline-flex px-2 py-1 text-xs font-medium rounded-full whitespace-nowrap ${ALL_TYPE_COLORS_DARK[question.type]}`}>
                       {typeLabels[question.type as keyof typeof typeLabels]}
-                    </span>
-                  </td>
-                  <td className="px-6 py-4 w-28">
-                    <span className={`inline-flex px-2 py-1 text-xs font-medium rounded-full capitalize ${DIFFICULTY_COLORS_DARK[question.difficulty]}`}>
-                      {question.difficulty}
                     </span>
                   </td>
                   <td className="px-6 py-4 w-44">
