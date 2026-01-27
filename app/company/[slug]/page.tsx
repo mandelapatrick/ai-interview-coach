@@ -308,7 +308,7 @@ export default function CompanyQuestionsPage() {
                     )}
                   </td>
                   <td className="px-6 py-4">
-                    <span className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${ALL_TYPE_COLORS_DARK[question.type]}`}>
+                    <span className={`inline-flex px-2 py-1 text-xs font-medium rounded-full whitespace-nowrap ${ALL_TYPE_COLORS_DARK[question.type]}`}>
                       {typeLabels[question.type as keyof typeof typeLabels]}
                     </span>
                   </td>
