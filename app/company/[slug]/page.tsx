@@ -286,7 +286,7 @@ export default function CompanyQuestionsPage() {
                 <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider w-28">
                   Difficulty
                 </th>
-                <th className="text-right px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider w-44">
+                <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider w-44">
                   Action
                 </th>
               </tr>
@@ -317,8 +317,8 @@ export default function CompanyQuestionsPage() {
                       {question.difficulty}
                     </span>
                   </td>
-                  <td className="px-6 py-4 text-right w-44">
-                    <div className="flex gap-2 justify-end">
+                  <td className="px-6 py-4 w-44">
+                    <div className="flex gap-2">
                       <Link
                         href={`/learn/${question.id}`}
                         className="inline-flex items-center px-4 py-2 bg-[#1a2d47] text-white text-sm font-medium rounded-lg hover:bg-[#243a5a] transition-all border border-white/10"
