@@ -27,12 +27,17 @@ export interface DbAssessment {
   id: string;
   session_id: string;
   overall_score: number;
+  // Legacy consulting-specific columns (kept for backward compatibility)
   structure_score: number;
   problem_solving_score: number;
   business_judgment_score: number;
   communication_score: number;
   quantitative_score: number;
   creativity_score: number;
+  // New flexible columns for all assessment types
+  assessment_schema?: string; // "product-sense" | "analytical-thinking" | "pm-generic" | "consulting"
+  scores?: Record<string, number>; // JSONB - dimension scores vary by schema
+  dimension_feedback?: Record<string, string>; // JSONB - per-dimension feedback
   feedback: string;
   strengths: string[];
   improvements: string[];

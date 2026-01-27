@@ -151,6 +151,8 @@ export default function AssessmentPage() {
                   feedback: assessmentData.feedback,
                   strengths: assessmentData.strengths,
                   improvements: assessmentData.improvements,
+                  assessmentSchema: assessmentData.assessmentSchema,
+                  dimensionFeedback: assessmentData.dimensionFeedback,
                 }),
               });
             }

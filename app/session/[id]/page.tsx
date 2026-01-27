@@ -11,6 +11,42 @@ interface TranscriptEntry {
   text: string;
 }
 
+// Score type interfaces for different assessment schemas
+interface ConsultingScores {
+  structure: number;
+  problemSolving: number;
+  businessJudgment: number;
+  communication: number;
+  quantitative: number;
+  creativity: number;
+}
+
+interface PMScores {
+  productThinking: number;
+  communication: number;
+  userEmpathy: number;
+  technicalDepth: number;
+  analyticalSkills: number;
+  creativity: number;
+}
+
+interface ProductSenseScores {
+  productMotivation: number;
+  targetAudience: number;
+  problemIdentification: number;
+  solutionDevelopment: number;
+  communicationStructure: number;
+}
+
+interface AnalyticalThinkingScores {
+  productRationale: number;
+  measuringImpact: number;
+  settingGoals: number;
+  evaluatingTradeoffs: number;
+}
+
+type AssessmentSchema = "product-sense" | "analytical-thinking" | "pm-generic" | "consulting";
+
 interface SessionWithAssessment {
   id: string;
   question_id: string;
@@ -23,12 +59,17 @@ interface SessionWithAssessment {
   created_at: string;
   assessments: Array<{
     overall_score: number;
+    // Legacy consulting-specific columns
     structure_score: number;
     problem_solving_score: number;
     business_judgment_score: number;
     communication_score: number;
     quantitative_score: number;
     creativity_score: number;
+    // New flexible columns
+    assessment_schema?: AssessmentSchema;
+    scores?: ConsultingScores | PMScores | ProductSenseScores | AnalyticalThinkingScores;
+    dimension_feedback?: Record<string, string>;
     feedback: string;
     strengths: string[];
     improvements: string[];
@@ -211,16 +252,64 @@ export default function SessionDetailPage() {
                 </div>
               </div>
 
-              {/* Score Breakdown */}
+              {/* Score Breakdown - Dynamic based on assessment schema */}
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <ScoreItem label="Structure" score={assessment.structure_score} weight="25%" />
-                <ScoreItem label="Problem Solving" score={assessment.problem_solving_score} weight="20%" />
-                <ScoreItem label="Business Judgment" score={assessment.business_judgment_score} weight="20%" />
-                <ScoreItem label="Communication" score={assessment.communication_score} weight="15%" />
-                <ScoreItem label="Quantitative" score={assessment.quantitative_score} weight="10%" />
-                <ScoreItem label="Creativity" score={assessment.creativity_score} weight="10%" />
+                {assessment.assessment_schema === "product-sense" && assessment.scores ? (
+                  <>
+                    <ScoreItem label="Product Motivation" score={(assessment.scores as ProductSenseScores).productMotivation} weight="20%" />
+                    <ScoreItem label="Target Audience" score={(assessment.scores as ProductSenseScores).targetAudience} weight="25%" />
+                    <ScoreItem label="Problem Identification" score={(assessment.scores as ProductSenseScores).problemIdentification} weight="25%" />
+                    <ScoreItem label="Solution Development" score={(assessment.scores as ProductSenseScores).solutionDevelopment} weight="20%" />
+                    <ScoreItem label="Communication" score={(assessment.scores as ProductSenseScores).communicationStructure} weight="10%" />
+                  </>
+                ) : assessment.assessment_schema === "analytical-thinking" && assessment.scores ? (
+                  <>
+                    <ScoreItem label="Product Rationale" score={(assessment.scores as AnalyticalThinkingScores).productRationale} weight="15%" />
+                    <ScoreItem label="Measuring Impact" score={(assessment.scores as AnalyticalThinkingScores).measuringImpact} weight="35%" />
+                    <ScoreItem label="Setting Goals" score={(assessment.scores as AnalyticalThinkingScores).settingGoals} weight="25%" />
+                    <ScoreItem label="Evaluating Tradeoffs" score={(assessment.scores as AnalyticalThinkingScores).evaluatingTradeoffs} weight="25%" />
+                  </>
+                ) : assessment.assessment_schema === "pm-generic" && assessment.scores ? (
+                  <>
+                    <ScoreItem label="Product Thinking" score={(assessment.scores as PMScores).productThinking} weight="25%" />
+                    <ScoreItem label="Communication" score={(assessment.scores as PMScores).communication} weight="20%" />
+                    <ScoreItem label="User Empathy" score={(assessment.scores as PMScores).userEmpathy} weight="15%" />
+                    <ScoreItem label="Technical Depth" score={(assessment.scores as PMScores).technicalDepth} weight="15%" />
+                    <ScoreItem label="Analytical Skills" score={(assessment.scores as PMScores).analyticalSkills} weight="15%" />
+                    <ScoreItem label="Creativity" score={(assessment.scores as PMScores).creativity} weight="10%" />
+                  </>
+                ) : (
+                  // Default: consulting or legacy assessments without assessment_schema
+                  <>
+                    <ScoreItem label="Structure" score={assessment.scores ? (assessment.scores as ConsultingScores).structure : assessment.structure_score} weight="25%" />
+                    <ScoreItem label="Problem Solving" score={assessment.scores ? (assessment.scores as ConsultingScores).problemSolving : assessment.problem_solving_score} weight="20%" />
+                    <ScoreItem label="Business Judgment" score={assessment.scores ? (assessment.scores as ConsultingScores).businessJudgment : assessment.business_judgment_score} weight="20%" />
+                    <ScoreItem label="Communication" score={assessment.scores ? (assessment.scores as ConsultingScores).communication : assessment.communication_score} weight="15%" />
+                    <ScoreItem label="Quantitative" score={assessment.scores ? (assessment.scores as ConsultingScores).quantitative : assessment.quantitative_score} weight="10%" />
+                    <ScoreItem label="Creativity" score={assessment.scores ? (assessment.scores as ConsultingScores).creativity : assessment.creativity_score} weight="10%" />
+                  </>
+                )}
               </div>
             </div>
+
+            {/* Dimension-Specific Feedback (Product Sense and Analytical Thinking) */}
+            {(assessment.assessment_schema === "product-sense" || assessment.assessment_schema === "analytical-thinking") && assessment.dimension_feedback && (
+              <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-6">
+                <h2 className="text-xl font-semibold text-white mb-4">
+                  Detailed Dimension Feedback
+                </h2>
+                <div className="space-y-4">
+                  {Object.entries(assessment.dimension_feedback).map(([dimension, feedback]) => (
+                    <div key={dimension} className="border-l-2 border-[#d4af37]/50 pl-4">
+                      <h3 className="text-sm font-medium text-[#d4af37] mb-1">
+                        {formatDimensionName(dimension)}
+                      </h3>
+                      <p className="text-white/70 text-sm">{feedback}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Feedback */}
             <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-6">
@@ -387,4 +476,21 @@ function ScoreItem({ label, score, weight }: { label: string; score: number; wei
       <span className="font-bold">{score}/5</span>
     </div>
   );
+}
+
+function formatDimensionName(dimension: string): string {
+  const names: Record<string, string> = {
+    // Product Sense dimensions
+    productMotivation: "Product Motivation & Mission",
+    targetAudience: "Target Audience",
+    problemIdentification: "Problem Identification",
+    solutionDevelopment: "Solution Development",
+    communicationStructure: "Communication Structure",
+    // Analytical Thinking dimensions
+    productRationale: "Product Rationale",
+    measuringImpact: "Measuring Impact",
+    settingGoals: "Setting Goals",
+    evaluatingTradeoffs: "Evaluating Tradeoffs",
+  };
+  return names[dimension] || dimension;
 }

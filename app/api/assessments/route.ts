@@ -25,23 +25,33 @@ export async function POST(request: NextRequest) {
       feedback,
       strengths,
       improvements,
+      assessmentSchema,
+      dimensionFeedback,
     } = body;
+
+    // Build insert object with new JSONB columns
+    const insertData: Record<string, unknown> = {
+      session_id: sessionId,
+      overall_score: overallScore,
+      // Store full scores object in JSONB column
+      scores: scores,
+      assessment_schema: assessmentSchema,
+      dimension_feedback: dimensionFeedback,
+      feedback,
+      strengths,
+      improvements,
+      // Legacy consulting columns (for backward compatibility)
+      structure_score: scores?.structure ?? 0,
+      problem_solving_score: scores?.problemSolving ?? 0,
+      business_judgment_score: scores?.businessJudgment ?? 0,
+      communication_score: scores?.communication ?? 0,
+      quantitative_score: scores?.quantitative ?? 0,
+      creativity_score: scores?.creativity ?? 0,
+    };
 
     const { data, error } = await supabase
       .from("assessments")
-      .insert({
-        session_id: sessionId,
-        overall_score: overallScore,
-        structure_score: scores.structure,
-        problem_solving_score: scores.problemSolving,
-        business_judgment_score: scores.businessJudgment,
-        communication_score: scores.communication,
-        quantitative_score: scores.quantitative,
-        creativity_score: scores.creativity,
-        feedback,
-        strengths,
-        improvements,
-      })
+      .insert(insertData)
       .select()
       .single();
 
