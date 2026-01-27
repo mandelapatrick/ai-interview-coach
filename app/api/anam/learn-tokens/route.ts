@@ -1,23 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
 
-// Anam Avatar IDs - randomly select 2 unique avatars per session
-const ANAM_AVATAR_IDS = [
-  "edf6fdcb-acab-44b8-b974-ded72665ee26",
-  "8a339c9f-0666-46bd-ab27-e90acd0409dc",
-  "ae2ea8c1-db28-47e3-b6ea-493e4ed3c554",
-  "8dd64886-ce4b-47d5-b837-619660854768",
+// Anam Avatars with corresponding voices - randomly select 2 unique per session
+const ANAM_AVATARS = [
+  { avatarId: "edf6fdcb-acab-44b8-b974-ded72665ee26", voiceId: "d79f2051-3a89-4fcc-8c71-cf5d53f9d9e0" },
+  { avatarId: "8a339c9f-0666-46bd-ab27-e90acd0409dc", voiceId: "e36f160f-5f2b-4684-94c0-fcdf9f8be7c5" },
+  { avatarId: "ae2ea8c1-db28-47e3-b6ea-493e4ed3c554", voiceId: "f013d22e-276a-4111-ac6d-32ec86ca42fe" },
+  { avatarId: "8dd64886-ce4b-47d5-b837-619660854768", voiceId: "fe81aa2c-ad74-486e-b8e6-57ec0906366f" },
 ];
 
-function getTwoRandomAvatars(): [string, string] {
-  const shuffled = [...ANAM_AVATAR_IDS].sort(() => Math.random() - 0.5);
+type Avatar = { avatarId: string; voiceId: string };
+
+function getTwoRandomAvatars(): [Avatar, Avatar] {
+  const shuffled = [...ANAM_AVATARS].sort(() => Math.random() - 0.5);
   return [shuffled[0], shuffled[1]];
 }
-
-// Voice IDs from Anam - Using same voice for both for now
-const ANAM_VOICES = {
-  interviewer: "a57043ba-5976-4fbb-b065-d3aad4f5338b", // Professional voice
-  candidate: "a57043ba-5976-4fbb-b065-d3aad4f5338b", // Same voice for now (TODO: use different one)
-};
 
 // LLM IDs
 const ANAM_LLMS = {
@@ -93,24 +89,24 @@ export async function POST(request: NextRequest) {
 
     console.log("[Learn Tokens API] Generating tokens for interviewer and candidate...");
 
-    // Select two unique random avatars
-    const [interviewerAvatar, candidateAvatar] = getTwoRandomAvatars();
-    console.log("[Learn Tokens API] Selected avatars - Interviewer:", interviewerAvatar, "Candidate:", candidateAvatar);
+    // Select two unique random avatars with their corresponding voices
+    const [interviewer, candidate] = getTwoRandomAvatars();
+    console.log("[Learn Tokens API] Selected - Interviewer:", interviewer.avatarId, "Candidate:", candidate.avatarId);
 
     // Generate both tokens in parallel
     // Using GPT-4 Mini for candidate to get shorter, more interactive responses
     const [interviewerToken, candidateToken] = await Promise.all([
       generateToken(
         apiKey,
-        interviewerAvatar,
-        ANAM_VOICES.interviewer,
+        interviewer.avatarId,
+        interviewer.voiceId,
         interviewerPrompt,
         ANAM_LLMS.kimiK2Instruct
       ),
       generateToken(
         apiKey,
-        candidateAvatar,
-        ANAM_VOICES.candidate,
+        candidate.avatarId,
+        candidate.voiceId,
         candidatePrompt,
         ANAM_LLMS.gpt4Mini
       ),

@@ -1,21 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 
-// Anam Avatar IDs - randomly select one per session
-const ANAM_AVATAR_IDS = [
-  "edf6fdcb-acab-44b8-b974-ded72665ee26",
-  "8a339c9f-0666-46bd-ab27-e90acd0409dc",
-  "ae2ea8c1-db28-47e3-b6ea-493e4ed3c554",
-  "8dd64886-ce4b-47d5-b837-619660854768",
+// Anam Avatars with corresponding voices - randomly select one per session
+const ANAM_AVATARS = [
+  { avatarId: "edf6fdcb-acab-44b8-b974-ded72665ee26", voiceId: "d79f2051-3a89-4fcc-8c71-cf5d53f9d9e0" },
+  { avatarId: "8a339c9f-0666-46bd-ab27-e90acd0409dc", voiceId: "e36f160f-5f2b-4684-94c0-fcdf9f8be7c5" },
+  { avatarId: "ae2ea8c1-db28-47e3-b6ea-493e4ed3c554", voiceId: "f013d22e-276a-4111-ac6d-32ec86ca42fe" },
+  { avatarId: "8dd64886-ce4b-47d5-b837-619660854768", voiceId: "fe81aa2c-ad74-486e-b8e6-57ec0906366f" },
 ];
 
-function getRandomAvatar(): string {
-  return ANAM_AVATAR_IDS[Math.floor(Math.random() * ANAM_AVATAR_IDS.length)];
+function getRandomAvatar(): { avatarId: string; voiceId: string } {
+  return ANAM_AVATARS[Math.floor(Math.random() * ANAM_AVATARS.length)];
 }
-
-// Voice IDs from Anam
-const ANAM_VOICES = {
-  default: "a57043ba-5976-4fbb-b065-d3aad4f5338b",
-};
 
 // LLM IDs from Anam (use UUIDs, not display names)
 const ANAM_LLMS = {
@@ -49,7 +44,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    const selectedAvatar = getRandomAvatar();
     console.log("[Anam API] Requesting session token from Anam...");
+    console.log("[Anam API] Using avatar:", selectedAvatar.avatarId, "voice:", selectedAvatar.voiceId);
     console.log("[Anam API] Using LLM:", ANAM_LLMS.kimiK2Instruct);
 
     // Generate a new session token from Anam API
@@ -63,8 +60,8 @@ export async function POST(request: NextRequest) {
         },
         body: JSON.stringify({
           personaConfig: {
-            avatarId: getRandomAvatar(),
-            voiceId: ANAM_VOICES.default,
+            avatarId: selectedAvatar.avatarId,
+            voiceId: selectedAvatar.voiceId,
             llmId: ANAM_LLMS.kimiK2Instruct, // Anam handles conversation with Kimi K2 LLM
             systemPrompt: systemPrompt,
           },
