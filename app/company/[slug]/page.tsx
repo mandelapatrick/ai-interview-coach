@@ -106,7 +106,7 @@ const PM_TYPE_COLORS_DARK: Record<PMQuestionType, string> = {
   "analytical-thinking": "text-emerald-400 bg-emerald-400/10",
   behavioral: "text-amber-400 bg-amber-400/10",
   technical: "text-blue-400 bg-blue-400/10",
-  execution: "text-teal-400 bg-teal-400/10",
+  execution: "text-emerald-400 bg-emerald-400/10",
   strategy: "text-rose-400 bg-rose-400/10",
   estimation: "text-indigo-400 bg-indigo-400/10",
 };
@@ -166,9 +166,9 @@ export default function CompanyQuestionsPage() {
   const pmTypes: (PMQuestionType | "all")[] = [
     "all",
     "product-sense",
+    "analytical-thinking",
     "behavioral",
     "technical",
-    "execution",
     "strategy",
     "estimation",
   ];

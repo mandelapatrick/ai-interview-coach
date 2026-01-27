@@ -75,7 +75,7 @@ export default function DashboardPage() {
                 Product Management
               </h2>
               <p className="text-white/60 mb-6">
-                PM interviews from Meta, Google, Amazon, and other tech giants. Practice product sense, execution, strategy, and behavioral questions.
+                PM interviews from Meta, Google, Amazon, and other tech giants. Practice product sense, analytical thinking, strategy, and behavioral questions.
               </p>
 
               <div className="flex items-center justify-between">

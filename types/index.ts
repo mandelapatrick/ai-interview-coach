@@ -175,7 +175,7 @@ export const PM_QUESTION_TYPE_LABELS: Record<PMQuestionType, string> = {
   "analytical-thinking": "Analytical Thinking",
   behavioral: "Behavioral",
   technical: "Technical",
-  execution: "Execution",
+  execution: "Analytical Thinking",
   strategy: "Strategy",
   estimation: "Estimation",
 };
@@ -185,7 +185,7 @@ export const PM_TYPE_COLORS: Record<PMQuestionType, string> = {
   "analytical-thinking": "text-emerald-600 bg-emerald-50",
   behavioral: "text-amber-600 bg-amber-50",
   technical: "text-blue-600 bg-blue-50",
-  execution: "text-teal-600 bg-teal-50",
+  execution: "text-emerald-600 bg-emerald-50",
   strategy: "text-rose-600 bg-rose-50",
   estimation: "text-indigo-600 bg-indigo-50",
 };
@@ -196,7 +196,7 @@ export const PM_TYPE_COLORS_DARK: Record<PMQuestionType, string> = {
   "analytical-thinking": "text-emerald-400 bg-emerald-400/10",
   behavioral: "text-amber-400 bg-amber-400/10",
   technical: "text-blue-400 bg-blue-400/10",
-  execution: "text-teal-400 bg-teal-400/10",
+  execution: "text-emerald-400 bg-emerald-400/10",
   strategy: "text-rose-400 bg-rose-400/10",
   estimation: "text-indigo-400 bg-indigo-400/10",
 };
