@@ -277,16 +277,16 @@ export default function CompanyQuestionsPage() {
                 <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider">
                   Title
                 </th>
-                <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider">
+                <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider w-28">
                   Frequency
                 </th>
-                <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider">
+                <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider w-40">
                   Type
                 </th>
-                <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider">
+                <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider w-28">
                   Difficulty
                 </th>
-                <th className="text-right px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider">
+                <th className="text-right px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider w-44">
                   Action
                 </th>
               </tr>
@@ -298,7 +298,7 @@ export default function CompanyQuestionsPage() {
                     <div className="font-medium text-white">{question.title}</div>
                     <div className="text-sm text-white/50 mt-1">{question.description}</div>
                   </td>
-                  <td className="px-6 py-4">
+                  <td className="px-6 py-4 w-28">
                     {question.frequency ? (
                       <span className={`inline-flex px-2 py-1 text-xs font-medium rounded-full capitalize ${FREQUENCY_COLORS_DARK[question.frequency]}`}>
                         {FREQUENCY_LABELS[question.frequency]}
@@ -307,17 +307,17 @@ export default function CompanyQuestionsPage() {
                       <span className="text-white/30 text-xs">—</span>
                     )}
                   </td>
-                  <td className="px-6 py-4">
+                  <td className="px-6 py-4 w-40">
                     <span className={`inline-flex px-2 py-1 text-xs font-medium rounded-full whitespace-nowrap ${ALL_TYPE_COLORS_DARK[question.type]}`}>
                       {typeLabels[question.type as keyof typeof typeLabels]}
                     </span>
                   </td>
-                  <td className="px-6 py-4">
+                  <td className="px-6 py-4 w-28">
                     <span className={`inline-flex px-2 py-1 text-xs font-medium rounded-full capitalize ${DIFFICULTY_COLORS_DARK[question.difficulty]}`}>
                       {question.difficulty}
                     </span>
                   </td>
-                  <td className="px-6 py-4 text-right">
+                  <td className="px-6 py-4 text-right w-44">
                     <div className="flex gap-2 justify-end">
                       <Link
                         href={`/learn/${question.id}`}
