@@ -4,7 +4,8 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { useHeyGenAvatar } from "@/hooks/useHeyGenAvatar";
 import { useAnamAvatar } from "@/hooks/useAnamAvatar";
-import { useVideoRecorder, uploadRecording } from "@/hooks/useVideoRecorder";
+import { useVideoRecorder } from "@/hooks/useVideoRecorder";
+import { setPendingRecording } from "@/lib/recordingTransfer";
 import { Question } from "@/types";
 import { getSystemPrompt } from "@/data/prompts";
 import { getCompanyBySlug } from "@/data/companies";
@@ -50,7 +51,6 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
   // Video recording refs
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationFrameRef = useRef<number | null>(null);
-  const [isUploading, setIsUploading] = useState(false);
 
   // Video recorder hook
   const {
@@ -607,45 +607,32 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
   };
 
   const confirmEnd = async () => {
-    setIsUploading(true);
-
-    // Stop recording and get the blob
-    let recordingUrl: string | null = null;
+    // Stop recording and store blob for transfer to assessment page
     if (isRecording) {
       try {
         const blob = await stopRecording();
         if (blob && blob.size > 0) {
           console.log("[VideoSession] Recording stopped, blob size:", blob.size);
-          // Generate a temporary session ID for the recording
-          const tempSessionId = `temp-${Date.now()}`;
-          recordingUrl = await uploadRecording(blob, tempSessionId);
-          console.log("[VideoSession] Recording uploaded:", recordingUrl);
-
-          // If upload failed or returned null, create a local blob URL as fallback
-          if (!recordingUrl) {
-            recordingUrl = URL.createObjectURL(blob);
-            console.log("[VideoSession] Using local blob URL:", recordingUrl);
-          }
+          // Store blob for upload on assessment page
+          setPendingRecording(blob);
         }
       } catch (err) {
-        console.error("[VideoSession] Failed to stop/upload recording:", err);
+        console.error("[VideoSession] Failed to stop recording:", err);
       }
     }
 
-    // Store transcript and recording URL for assessment
-    // Use the same key as audio sessions so the latest session always wins
+    // Store transcript for assessment (recording URL will be added by assessment page after upload)
     sessionStorage.setItem(
       "lastSession",
       JSON.stringify({
         questionId: question.id,
         transcript: transcriptRef.current,
         duration,
-        videoRecordingUrl: recordingUrl,
       })
     );
 
     await cleanup();
-    setIsUploading(false);
+    // Navigate immediately - upload will happen in background on assessment page
     router.push(`/assessment/${question.id}`);
   };
 
@@ -983,43 +970,27 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
       {showEndConfirm && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
           <div className="bg-white rounded-2xl p-6 max-w-md w-full mx-4 shadow-2xl">
-            {isUploading ? (
-              <>
-                <div className="flex flex-col items-center py-4">
-                  <div className="w-12 h-12 border-4 border-[#d4af37] border-t-transparent rounded-full animate-spin mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    Saving Recording...
-                  </h3>
-                  <p className="text-gray-500 text-center text-sm">
-                    Please wait while we save your session recording.
-                  </p>
-                </div>
-              </>
-            ) : (
-              <>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  End Interview?
-                </h3>
-                <p className="text-gray-500 mb-6">
-                  Your session will be saved and you&apos;ll receive an AI
-                  assessment of your performance.
-                </p>
-                <div className="flex gap-3">
-                  <button
-                    onClick={() => setShowEndConfirm(false)}
-                    className="flex-1 px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-xl transition-colors"
-                  >
-                    Continue
-                  </button>
-                  <button
-                    onClick={confirmEnd}
-                    className="flex-1 px-4 py-2.5 bg-[#d4af37] hover:bg-[#b8972e] text-white rounded-xl font-medium transition-colors"
-                  >
-                    End & Get Assessment
-                  </button>
-                </div>
-              </>
-            )}
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              End Interview?
+            </h3>
+            <p className="text-gray-500 mb-6">
+              Your session will be saved and you&apos;ll receive an AI
+              assessment of your performance.
+            </p>
+            <div className="flex gap-3">
+              <button
+                onClick={() => setShowEndConfirm(false)}
+                className="flex-1 px-4 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-xl transition-colors"
+              >
+                Continue
+              </button>
+              <button
+                onClick={confirmEnd}
+                className="flex-1 px-4 py-2.5 bg-[#d4af37] hover:bg-[#b8972e] text-white rounded-xl font-medium transition-colors"
+              >
+                End & Get Assessment
+              </button>
+            </div>
           </div>
         </div>
       )}

@@ -7,6 +7,8 @@ import { getQuestionById } from "@/data/questions";
 import { getCompanyBySlug } from "@/data/companies";
 import { QUESTION_TYPE_LABELS, PM_QUESTION_TYPE_LABELS, PMQuestionType, InterviewTrack } from "@/types";
 import { TranscriptEntry } from "@/hooks/useVoiceSession";
+import { getPendingRecording } from "@/lib/recordingTransfer";
+import { uploadRecording } from "@/hooks/useVideoRecorder";
 
 interface SessionData {
   questionId: string;
@@ -71,6 +73,37 @@ export default function AssessmentPage() {
   const [assessment, setAssessment] = useState<Assessment | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [videoRecordingUrl, setVideoRecordingUrl] = useState<string | null>(null);
+
+  // Handle background upload of video recording
+  useEffect(() => {
+    const uploadPendingRecording = async () => {
+      const blob = getPendingRecording();
+      if (blob && blob.size > 0) {
+        console.log("[Assessment] Uploading pending recording, blob size:", blob.size);
+        try {
+          const tempSessionId = `temp-${Date.now()}`;
+          const url = await uploadRecording(blob, tempSessionId);
+          if (url) {
+            console.log("[Assessment] Recording uploaded:", url);
+            setVideoRecordingUrl(url);
+          } else {
+            // Fallback to local blob URL
+            const localUrl = URL.createObjectURL(blob);
+            console.log("[Assessment] Using local blob URL:", localUrl);
+            setVideoRecordingUrl(localUrl);
+          }
+        } catch (err) {
+          console.error("[Assessment] Failed to upload recording:", err);
+          // Fallback to local blob URL
+          const localUrl = URL.createObjectURL(blob);
+          setVideoRecordingUrl(localUrl);
+        }
+      }
+    };
+
+    uploadPendingRecording();
+  }, []);
 
   useEffect(() => {
     const fetchAssessment = async () => {
@@ -245,7 +278,7 @@ export default function AssessmentPage() {
         ) : assessment ? (
           <div className="space-y-6">
             {/* Session Recording */}
-            {sessionData?.videoRecordingUrl && (
+            {(videoRecordingUrl || sessionData?.videoRecordingUrl) && (
               <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-6">
                 <h2 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
                   <svg className="w-5 h-5 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -255,7 +288,7 @@ export default function AssessmentPage() {
                 </h2>
                 <div className="rounded-lg overflow-hidden bg-black">
                   <video
-                    src={sessionData.videoRecordingUrl}
+                    src={videoRecordingUrl || sessionData.videoRecordingUrl || ''}
                     controls
                     className="w-full max-h-[400px]"
                     preload="metadata"
