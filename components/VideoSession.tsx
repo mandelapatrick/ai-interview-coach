@@ -752,7 +752,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
                 autoPlay
                 playsInline
                 muted
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover -scale-x-100"
               />
             ) : (
               <div className="w-full h-full flex items-center justify-center bg-[#1a2744]">

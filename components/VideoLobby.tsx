@@ -205,7 +205,7 @@ export default function VideoLobby({ onJoin, onBack }: VideoLobbyProps) {
               autoPlay
               playsInline
               muted
-              className={`w-full h-full object-cover ${!isVideoEnabled ? "hidden" : ""}`}
+              className={`w-full h-full object-cover -scale-x-100 ${!isVideoEnabled ? "hidden" : ""}`}
             />
             {!isVideoEnabled && (
               <div className="absolute inset-0 flex items-center justify-center bg-[#1e293b]">
