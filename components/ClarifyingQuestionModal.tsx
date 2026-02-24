@@ -39,15 +39,15 @@ export default function ClarifyingQuestionModal({
   ];
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-      <div className="bg-[#1a2d47] rounded-xl p-6 max-w-lg w-full mx-4 border border-white/10">
+    <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50">
+      <div className="bg-white rounded-xl p-6 max-w-lg w-full mx-4 border border-gray-200">
         <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-semibold text-white">
+          <h3 className="text-lg font-semibold text-gray-900">
             Ask a Clarifying Question
           </h3>
           <button
             onClick={onClose}
-            className="text-white/50 hover:text-white transition-colors"
+            className="text-gray-400 hover:text-gray-900 transition-colors"
           >
             <svg
               className="w-6 h-6"
@@ -65,7 +65,7 @@ export default function ClarifyingQuestionModal({
           </button>
         </div>
 
-        <p className="text-white/60 text-sm mb-4">
+        <p className="text-gray-500 text-sm mb-4">
           The interview will pause while you ask a question. The expert candidate
           will respond to help you understand their approach.
         </p>
@@ -75,14 +75,14 @@ export default function ClarifyingQuestionModal({
             value={question}
             onChange={(e) => setQuestion(e.target.value)}
             placeholder="Type your question here..."
-            className="w-full px-4 py-3 bg-[#0f172a] border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent resize-none"
+            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent resize-none"
             rows={3}
             autoFocus
           />
 
           {/* Example questions */}
           <div className="mt-4">
-            <p className="text-xs text-white/40 mb-2">Example questions:</p>
+            <p className="text-xs text-gray-400 mb-2">Example questions:</p>
             <div className="flex flex-wrap gap-2">
               {exampleQuestions.map((example, idx) => (
                 <button
@@ -101,7 +101,7 @@ export default function ClarifyingQuestionModal({
             <button
               type="button"
               onClick={onClose}
-              className="px-4 py-2 bg-[#0f172a] text-white rounded-lg hover:bg-[#1e293b] transition-all border border-white/10"
+              className="px-4 py-2 bg-gray-50 text-gray-900 rounded-lg hover:bg-gray-100 transition-all border border-gray-200"
             >
               Cancel
             </button>

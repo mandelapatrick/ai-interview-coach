@@ -127,10 +127,10 @@ export default function SessionDetailPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-[#0f172a] flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#d4af37] mx-auto mb-4"></div>
-          <p className="text-white/70">Loading session...</p>
+          <p className="text-gray-600">Loading session...</p>
         </div>
       </div>
     );
@@ -138,7 +138,7 @@ export default function SessionDetailPage() {
 
   if (error || !session) {
     return (
-      <div className="min-h-screen bg-[#0f172a] flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <p className="text-red-400 mb-4">{error || "Session not found"}</p>
           <Link
@@ -159,9 +159,9 @@ export default function SessionDetailPage() {
     : [];
 
   return (
-    <div className="min-h-screen bg-[#0f172a]">
+    <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-[#0f172a] border-b border-white/10">
+      <header className="bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
           <Link
             href="/history"
@@ -169,7 +169,7 @@ export default function SessionDetailPage() {
           >
             ← Back to History
           </Link>
-          <span className="text-sm text-white/40">
+          <span className="text-sm text-gray-400">
             {formatDate(session.created_at)}
           </span>
         </div>
@@ -178,10 +178,10 @@ export default function SessionDetailPage() {
       <main className="max-w-4xl mx-auto px-4 py-8">
         {/* Title */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-white mb-2 font-display">
+          <h1 className="text-3xl font-bold text-gray-900 mb-2 font-display">
             Interview Assessment
           </h1>
-          <p className="text-white/60">
+          <p className="text-gray-500">
             {session.question_title} • {formatDuration(session.duration_seconds)} session
           </p>
           <div className="flex items-center gap-3 mt-2">
@@ -193,7 +193,7 @@ export default function SessionDetailPage() {
               {QUESTION_TYPE_LABELS[session.question_type as QuestionType] || session.question_type}
             </span>
             {company && (
-              <span className="text-white/40 text-sm">{company.name}</span>
+              <span className="text-gray-400 text-sm">{company.name}</span>
             )}
           </div>
         </div>
@@ -202,8 +202,8 @@ export default function SessionDetailPage() {
           <div className="space-y-6">
             {/* Session Recording */}
             {session.video_recording_url && (
-              <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-6">
-                <h2 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+              <div className="bg-white rounded-xl border border-gray-200 p-6">
+                <h2 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
                   <svg className="w-5 h-5 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                   </svg>
@@ -220,7 +220,7 @@ export default function SessionDetailPage() {
                   </video>
                 </div>
                 <div className="flex items-center justify-between mt-3">
-                  <p className="text-white/40 text-sm">
+                  <p className="text-gray-400 text-sm">
                     Watch your interview recording to review your performance.
                   </p>
                   <a
@@ -238,16 +238,16 @@ export default function SessionDetailPage() {
             )}
 
             {/* Overall Score */}
-            <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-6">
+            <div className="bg-white rounded-xl border border-gray-200 p-6">
               <div className="flex items-center justify-between mb-6">
-                <h2 className="text-xl font-semibold text-white">
+                <h2 className="text-xl font-semibold text-gray-900">
                   Overall Score
                 </h2>
                 <div className="flex items-center gap-2">
                   <ScoreRing score={assessment.overall_score} />
                   <div className="text-4xl font-bold text-[#d4af37]">
                     {assessment.overall_score.toFixed(1)}
-                    <span className="text-lg text-white/40">/5</span>
+                    <span className="text-lg text-gray-400">/5</span>
                   </div>
                 </div>
               </div>
@@ -294,8 +294,8 @@ export default function SessionDetailPage() {
 
             {/* Dimension-Specific Feedback (Product Sense and Analytical Thinking) */}
             {(assessment.assessment_schema === "product-sense" || assessment.assessment_schema === "analytical-thinking") && assessment.dimension_feedback && (
-              <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-6">
-                <h2 className="text-xl font-semibold text-white mb-4">
+              <div className="bg-white rounded-xl border border-gray-200 p-6">
+                <h2 className="text-xl font-semibold text-gray-900 mb-4">
                   Detailed Dimension Feedback
                 </h2>
                 <div className="space-y-4">
@@ -304,7 +304,7 @@ export default function SessionDetailPage() {
                       <h3 className="text-sm font-medium text-[#d4af37] mb-1">
                         {formatDimensionName(dimension)}
                       </h3>
-                      <p className="text-white/70 text-sm">{feedback}</p>
+                      <p className="text-gray-600 text-sm">{feedback}</p>
                     </div>
                   ))}
                 </div>
@@ -312,22 +312,22 @@ export default function SessionDetailPage() {
             )}
 
             {/* Feedback */}
-            <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-6">
-              <h2 className="text-xl font-semibold text-white mb-4">
+            <div className="bg-white rounded-xl border border-gray-200 p-6">
+              <h2 className="text-xl font-semibold text-gray-900 mb-4">
                 AI Feedback
               </h2>
-              <p className="text-white/70 leading-relaxed">{assessment.feedback}</p>
+              <p className="text-gray-600 leading-relaxed">{assessment.feedback}</p>
             </div>
 
             {/* Strengths & Improvements */}
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-6">
+              <div className="bg-white rounded-xl border border-gray-200 p-6">
                 <h2 className="text-lg font-semibold text-green-400 mb-4 flex items-center gap-2">
                   <span className="text-xl">✓</span> Strengths
                 </h2>
                 <ul className="space-y-3">
                   {assessment.strengths?.map((item, i) => (
-                    <li key={i} className="text-white/70 flex items-start gap-2">
+                    <li key={i} className="text-gray-600 flex items-start gap-2">
                       <span className="text-green-400 mt-1">•</span>
                       {item}
                     </li>
@@ -335,13 +335,13 @@ export default function SessionDetailPage() {
                 </ul>
               </div>
 
-              <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-6">
+              <div className="bg-white rounded-xl border border-gray-200 p-6">
                 <h2 className="text-lg font-semibold text-[#d4af37] mb-4 flex items-center gap-2">
                   <span className="text-xl">↑</span> Areas to Improve
                 </h2>
                 <ul className="space-y-3">
                   {assessment.improvements?.map((item, i) => (
-                    <li key={i} className="text-white/70 flex items-start gap-2">
+                    <li key={i} className="text-gray-600 flex items-start gap-2">
                       <span className="text-[#d4af37] mt-1">•</span>
                       {item}
                     </li>
@@ -352,21 +352,21 @@ export default function SessionDetailPage() {
 
             {/* Transcript */}
             {transcript.length > 0 && (
-              <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-6">
-                <h2 className="text-xl font-semibold text-white mb-4">
+              <div className="bg-white rounded-xl border border-gray-200 p-6">
+                <h2 className="text-xl font-semibold text-gray-900 mb-4">
                   Session Transcript
                 </h2>
                 <div className="space-y-4 max-h-96 overflow-y-auto">
                   {transcript.map((entry, i) => (
                     <div key={i}>
-                      <div className="text-xs font-medium text-white/50 mb-1">
+                      <div className="text-xs font-medium text-gray-400 mb-1">
                         {entry.role === "user" ? "You" : "AI Interviewer"}
                       </div>
                       <p
-                        className={`text-white/80 p-3 rounded-lg ${
+                        className={`text-gray-700 p-3 rounded-lg ${
                           entry.role === "user"
                             ? "bg-[#d4af37]/10 border-l-4 border-[#d4af37]"
-                            : "bg-[#0f172a] border-l-4 border-white/20"
+                            : "bg-gray-50 border-l-4 border-gray-300"
                         }`}
                       >
                         {entry.text}
@@ -381,22 +381,22 @@ export default function SessionDetailPage() {
             <div className="flex gap-4 justify-center pt-4">
               <Link
                 href={`/practice/${session.question_id}`}
-                className="px-6 py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-[#0f172a] rounded-lg font-medium hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
+                className="px-6 py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-lg font-medium hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
               >
                 Practice Again
               </Link>
               <Link
                 href="/history"
-                className="px-6 py-3 bg-[#0f172a] text-white rounded-lg font-medium hover:bg-[#152238] transition-colors border border-white/10"
+                className="px-6 py-3 bg-white text-gray-900 rounded-lg font-medium hover:bg-gray-50 transition-colors border border-gray-200"
               >
                 View All Sessions
               </Link>
             </div>
           </div>
         ) : (
-          <div className="text-center py-12 bg-[#1a2d47] rounded-xl border border-white/10">
-            <p className="text-white/60 mb-4">No assessment available for this session.</p>
-            <p className="text-white/40 text-sm">
+          <div className="text-center py-12 bg-white rounded-xl border border-gray-200">
+            <p className="text-gray-500 mb-4">No assessment available for this session.</p>
+            <p className="text-gray-400 text-sm">
               Assessments are generated when you complete an interview practice session.
             </p>
           </div>
@@ -442,7 +442,7 @@ function ScoreRing({ score }: { score: number }) {
         cy="25"
         r="20"
         fill="none"
-        stroke="#1a2d47"
+        stroke="#e5e7eb"
         strokeWidth="4"
       />
       <circle
@@ -471,7 +471,7 @@ function ScoreItem({ label, score, weight }: { label: string; score: number; wei
     <div className={`flex items-center justify-between p-3 rounded-lg border ${getColor(score)}`}>
       <div>
         <span className="text-sm font-medium">{label}</span>
-        <span className="text-xs text-white/40 ml-1">({weight})</span>
+        <span className="text-xs text-gray-400 ml-1">({weight})</span>
       </div>
       <span className="font-bold">{score}/5</span>
     </div>

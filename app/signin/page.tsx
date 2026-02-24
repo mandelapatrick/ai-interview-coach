@@ -3,24 +3,24 @@ import Link from "next/link";
 
 export default function SignInPage() {
   return (
-    <div className="min-h-screen bg-[#0f172a] flex items-center justify-center">
-      <div className="bg-[#1a2d47] p-8 rounded-xl border border-white/10 w-full max-w-md">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="bg-white p-8 rounded-xl border border-gray-200 w-full max-w-md shadow-sm">
         <Link href="/" className="flex items-center justify-center gap-2 mb-8">
           <div className="w-8 h-8 bg-gradient-to-br from-[#d4af37] to-[#f4d03f] rounded-lg flex items-center justify-center">
-            <svg className="w-5 h-5 text-[#0f172a]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
               <polyline points="22 4 12 14.01 9 11.01"/>
             </svg>
           </div>
-          <span className="text-xl font-bold text-white">
+          <span className="text-xl font-bold text-gray-900">
             Ace<span className="text-[#d4af37]">Interview</span>
           </span>
         </Link>
 
-        <h1 className="text-2xl font-bold text-white text-center mb-2 font-display">
+        <h1 className="text-2xl font-bold text-gray-900 text-center mb-2 font-display">
           Welcome back
         </h1>
-        <p className="text-white/60 text-center mb-8">
+        <p className="text-gray-500 text-center mb-8">
           Sign in to continue practicing
         </p>
 
@@ -32,7 +32,7 @@ export default function SignInPage() {
         >
           <button
             type="submit"
-            className="w-full flex items-center justify-center gap-3 bg-white text-gray-700 px-4 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+            className="w-full flex items-center justify-center gap-3 bg-white text-gray-700 px-4 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors border border-gray-200"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24">
               <path
@@ -56,7 +56,7 @@ export default function SignInPage() {
           </button>
         </form>
 
-        <p className="mt-6 text-center text-sm text-white/40">
+        <p className="mt-6 text-center text-sm text-gray-400">
           By signing in, you agree to our Terms and Privacy Policy.
         </p>
       </div>

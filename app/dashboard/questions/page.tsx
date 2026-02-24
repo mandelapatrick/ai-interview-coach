@@ -125,16 +125,16 @@ export default function QuestionBankPage() {
     <div className="max-w-6xl mx-auto px-6 py-8">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-white mb-2 font-display">
+        <h1 className="text-3xl font-bold text-gray-900 mb-2 font-display">
           {pageTitle}
         </h1>
-        <p className="text-white/60">
+        <p className="text-gray-500">
           Browse and practice {trackFilter === "consulting" ? "consulting" : "product management"} interview questions from top companies.
         </p>
       </div>
 
       {/* Filters */}
-      <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-4 mb-6">
+      <div className="bg-white rounded-xl border border-gray-200 p-4 mb-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Search */}
           <div className="md:col-span-3">
@@ -144,10 +144,10 @@ export default function QuestionBankPage() {
                 placeholder="Search questions..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full bg-[#152238] border border-white/10 rounded-lg px-4 py-2.5 pl-10 text-white placeholder:text-white/40 focus:outline-none focus:border-[#d4af37]/50 focus:ring-1 focus:ring-[#d4af37]/50"
+                className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 pl-10 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#d4af37]/50 focus:ring-1 focus:ring-[#d4af37]/50"
               />
               <svg
-                className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40"
+                className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -161,11 +161,11 @@ export default function QuestionBankPage() {
 
           {/* Company Filter */}
           <div>
-            <label className="block text-sm text-white/50 mb-1.5">Company</label>
+            <label className="block text-sm text-gray-400 mb-1.5">Company</label>
             <select
               value={companyFilter}
               onChange={(e) => setCompanyFilter(e.target.value)}
-              className="w-full bg-[#152238] border border-white/10 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#d4af37]/50 appearance-none cursor-pointer"
+              className="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-gray-900 focus:outline-none focus:border-[#d4af37]/50 appearance-none cursor-pointer"
             >
               <option value="all">All Companies</option>
               {filteredCompanies.map((company) => (
@@ -178,11 +178,11 @@ export default function QuestionBankPage() {
 
           {/* Type Filter */}
           <div>
-            <label className="block text-sm text-white/50 mb-1.5">Question Type</label>
+            <label className="block text-sm text-gray-400 mb-1.5">Question Type</label>
             <select
               value={typeFilter}
               onChange={(e) => setTypeFilter(e.target.value)}
-              className="w-full bg-[#152238] border border-white/10 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#d4af37]/50 appearance-none cursor-pointer"
+              className="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-gray-900 focus:outline-none focus:border-[#d4af37]/50 appearance-none cursor-pointer"
             >
               <option value="all">All Types</option>
               {availableTypes.map((type) => (
@@ -195,7 +195,7 @@ export default function QuestionBankPage() {
 
           {/* Results count */}
           <div className="flex items-end">
-            <span className="text-sm text-white/50">
+            <span className="text-sm text-gray-400">
               {filteredQuestions.length} question{filteredQuestions.length !== 1 ? "s" : ""} found
             </span>
           </div>
@@ -204,9 +204,9 @@ export default function QuestionBankPage() {
 
       {/* Questions List */}
       {filteredQuestions.length === 0 ? (
-        <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-12 text-center">
+        <div className="bg-white rounded-xl border border-gray-200 p-12 text-center">
           <svg
-            className="w-12 h-12 text-white/30 mx-auto mb-4"
+            className="w-12 h-12 text-gray-300 mx-auto mb-4"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -215,8 +215,8 @@ export default function QuestionBankPage() {
             <circle cx="11" cy="11" r="8" />
             <line x1="21" y1="21" x2="16.65" y2="16.65" />
           </svg>
-          <h3 className="text-lg font-semibold text-white mb-2">No questions found</h3>
-          <p className="text-white/50">Try adjusting your filters or search term.</p>
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">No questions found</h3>
+          <p className="text-gray-400">Try adjusting your filters or search term.</p>
         </div>
       ) : (
         <div className="space-y-3">
@@ -225,12 +225,12 @@ export default function QuestionBankPage() {
             return (
               <div
                 key={question.id}
-                className="bg-[#1a2d47] rounded-xl border border-white/10 p-4 hover:border-white/20 transition-all"
+                className="bg-white rounded-xl border border-gray-200 p-4 hover:border-gray-300 transition-all"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex items-start gap-4 flex-1 min-w-0">
                     {/* Company Logo */}
-                    <div className="w-10 h-10 rounded-lg bg-[#152238] flex items-center justify-center flex-shrink-0 overflow-hidden">
+                    <div className="w-10 h-10 rounded-lg bg-gray-50 flex items-center justify-center flex-shrink-0 overflow-hidden">
                       {companyLogo ? (
                         <img
                           src={companyLogo}
@@ -246,17 +246,17 @@ export default function QuestionBankPage() {
 
                     {/* Question Info */}
                     <div className="flex-1 min-w-0">
-                      <h3 className="font-medium text-white mb-1 truncate">
+                      <h3 className="font-medium text-gray-900 mb-1 truncate">
                         {question.title}
                       </h3>
-                      <p className="text-sm text-white/50 line-clamp-2 mb-2">
+                      <p className="text-sm text-gray-400 line-clamp-2 mb-2">
                         {question.description}
                       </p>
                       <div className="flex items-center gap-2 flex-wrap">
-                        <span className="text-xs text-white/40">
+                        <span className="text-xs text-gray-400">
                           {getCompanyName(question.companySlug)}
                         </span>
-                        <span className="text-white/20">•</span>
+                        <span className="text-gray-200">&bull;</span>
                         <span
                           className={`text-xs px-2 py-0.5 rounded-full ${getTypeColor(question)}`}
                         >
@@ -270,7 +270,7 @@ export default function QuestionBankPage() {
                   <div className="flex flex-col gap-2 flex-shrink-0">
                     <Link
                       href={`/practice/${question.id}`}
-                      className="px-4 py-2 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-[#0f172a] rounded-lg font-medium text-sm hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all text-center"
+                      className="px-4 py-2 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-lg font-medium text-sm hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all text-center"
                     >
                       Practice
                     </Link>

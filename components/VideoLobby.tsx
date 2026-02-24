@@ -163,7 +163,7 @@ export default function VideoLobby({ onJoin, onBack }: VideoLobbyProps) {
       <div className="flex items-center justify-center h-full min-h-[calc(100vh-200px)]">
         <div className="flex flex-col items-center">
           <div className="w-12 h-12 border-4 border-[#d4af37] border-t-transparent rounded-full animate-spin mb-4" />
-          <p className="text-white/60">Requesting camera access...</p>
+          <p className="text-gray-500">Requesting camera access...</p>
         </div>
       </div>
     );
@@ -176,15 +176,15 @@ export default function VideoLobby({ onJoin, onBack }: VideoLobbyProps) {
           <div className="w-16 h-16 rounded-full bg-red-500/20 flex items-center justify-center mb-4">
             <CameraOffIcon className="w-8 h-8 text-red-400" />
           </div>
-          <h3 className="text-xl font-semibold text-white mb-2">
+          <h3 className="text-xl font-semibold text-gray-900 mb-2">
             Camera Access Required
           </h3>
-          <p className="text-white/60 text-center max-w-md mb-6">
+          <p className="text-gray-500 text-center max-w-md mb-6">
             {permissionError}
           </p>
           <button
             onClick={onBack}
-            className="px-6 py-3 bg-[#1a2d47] text-white rounded-lg hover:bg-[#152238] transition-colors border border-white/10"
+            className="px-6 py-3 bg-white text-gray-900 rounded-lg hover:bg-gray-50 transition-colors border border-gray-200"
           >
             Go Back
           </button>
@@ -199,7 +199,7 @@ export default function VideoLobby({ onJoin, onBack }: VideoLobbyProps) {
         {/* Left side - Video Preview */}
         <div className="flex flex-col items-center flex-1 w-full lg:max-w-[600px]">
           {/* Video Container */}
-          <div className="relative w-full aspect-video bg-[#1e293b] rounded-xl overflow-hidden shadow-2xl">
+          <div className="relative w-full aspect-video bg-gray-100 rounded-xl overflow-hidden shadow-2xl">
             <video
               ref={videoRef}
               autoPlay
@@ -208,9 +208,9 @@ export default function VideoLobby({ onJoin, onBack }: VideoLobbyProps) {
               className={`w-full h-full object-cover -scale-x-100 ${!isVideoEnabled ? "hidden" : ""}`}
             />
             {!isVideoEnabled && (
-              <div className="absolute inset-0 flex items-center justify-center bg-[#1e293b]">
+              <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
                 <div className="w-20 h-20 rounded-full bg-[#374151] flex items-center justify-center">
-                  <CameraOffIcon className="w-10 h-10 text-white/40" />
+                  <CameraOffIcon className="w-10 h-10 text-gray-400" />
                 </div>
               </div>
             )}
@@ -256,32 +256,32 @@ export default function VideoLobby({ onJoin, onBack }: VideoLobbyProps) {
               <select
                 value={selectedMicrophone}
                 onChange={(e) => setSelectedMicrophone(e.target.value)}
-                className="appearance-none pl-8 pr-6 py-2 bg-transparent text-white/80 text-sm rounded-full border border-white/20 hover:bg-white/5 focus:outline-none focus:border-white/40 cursor-pointer"
+                className="appearance-none pl-8 pr-6 py-2 bg-transparent text-gray-700 text-sm rounded-full border border-gray-300 hover:bg-gray-50 focus:outline-none focus:border-gray-400 cursor-pointer"
               >
                 {microphones.map((mic) => (
-                  <option key={mic.deviceId} value={mic.deviceId} className="bg-[#1e293b] text-white">
+                  <option key={mic.deviceId} value={mic.deviceId} className="bg-white text-gray-900">
                     {getShortLabel(mic.label)}
                   </option>
                 ))}
               </select>
-              <MicIcon className="absolute left-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-white/60 pointer-events-none" />
-              <ChevronDownIcon className="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-white/60 pointer-events-none" />
+              <MicIcon className="absolute left-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+              <ChevronDownIcon className="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-gray-400 pointer-events-none" />
             </div>
 
             <div className="relative">
               <select
                 value={selectedCamera}
                 onChange={(e) => setSelectedCamera(e.target.value)}
-                className="appearance-none pl-8 pr-6 py-2 bg-transparent text-white/80 text-sm rounded-full border border-white/20 hover:bg-white/5 focus:outline-none focus:border-white/40 cursor-pointer"
+                className="appearance-none pl-8 pr-6 py-2 bg-transparent text-gray-700 text-sm rounded-full border border-gray-300 hover:bg-gray-50 focus:outline-none focus:border-gray-400 cursor-pointer"
               >
                 {cameras.map((camera) => (
-                  <option key={camera.deviceId} value={camera.deviceId} className="bg-[#1e293b] text-white">
+                  <option key={camera.deviceId} value={camera.deviceId} className="bg-white text-gray-900">
                     {getShortLabel(camera.label)}
                   </option>
                 ))}
               </select>
-              <VideoIcon className="absolute left-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-white/60 pointer-events-none" />
-              <ChevronDownIcon className="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-white/60 pointer-events-none" />
+              <VideoIcon className="absolute left-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+              <ChevronDownIcon className="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-gray-400 pointer-events-none" />
             </div>
           </div>
         </div>
@@ -292,18 +292,18 @@ export default function VideoLobby({ onJoin, onBack }: VideoLobbyProps) {
             <VideoIcon className="w-6 h-6 text-[#d4af37]" />
           </div>
 
-          <h2 className="text-2xl font-semibold text-white mb-2 font-display">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-2 font-display">
             Ready to join?
           </h2>
 
-          <p className="text-white/50 text-sm mb-6">
+          <p className="text-gray-400 text-sm mb-6">
             Your interview will begin when you click join
           </p>
 
           <button
             onClick={handleJoin}
             disabled={!stream}
-            className="w-full lg:w-auto px-10 py-3 bg-[#d4af37] hover:bg-[#c4a030] text-[#0f172a] rounded-full font-medium transition-all disabled:opacity-50 disabled:cursor-not-allowed mb-3"
+            className="w-full lg:w-auto px-10 py-3 bg-[#d4af37] hover:bg-[#c4a030] text-white rounded-full font-medium transition-all disabled:opacity-50 disabled:cursor-not-allowed mb-3"
           >
             Join now
           </button>

@@ -22,7 +22,7 @@ export default function NavDropdown() {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1 text-sm text-white/70 hover:text-[#d4af37] transition-colors"
+        className="flex items-center gap-1 text-sm text-gray-500 hover:text-[#d4af37] transition-colors"
       >
         Interview Prep
         <svg
@@ -36,51 +36,51 @@ export default function NavDropdown() {
       </button>
 
       {isOpen && (
-        <div className="absolute top-full left-0 mt-2 w-56 bg-[#1a2d47] border border-white/10 rounded-lg shadow-xl overflow-hidden z-50">
+        <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden z-50">
           <Link
             href="/dashboard/consulting"
-            className="block px-4 py-3 hover:bg-[#213754] transition-colors group"
+            className="block px-4 py-3 hover:bg-gray-50 transition-colors group"
             onClick={() => setIsOpen(false)}
           >
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center">
-                <svg className="w-4 h-4 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center">
+                <svg className="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
                   <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
                   <line x1="12" y1="22.08" x2="12" y2="12" />
                 </svg>
               </div>
               <div>
-                <div className="text-sm font-medium text-white group-hover:text-[#d4af37] transition-colors">
+                <div className="text-sm font-medium text-gray-900 group-hover:text-[#d4af37] transition-colors">
                   Consulting
                 </div>
-                <div className="text-xs text-white/50">
+                <div className="text-xs text-gray-400">
                   MBB & Big 4 case interviews
                 </div>
               </div>
             </div>
           </Link>
 
-          <div className="border-t border-white/10" />
+          <div className="border-t border-gray-100" />
 
           <Link
             href="/dashboard/pm"
-            className="block px-4 py-3 hover:bg-[#213754] transition-colors group"
+            className="block px-4 py-3 hover:bg-gray-50 transition-colors group"
             onClick={() => setIsOpen(false)}
           >
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-violet-500/20 flex items-center justify-center">
-                <svg className="w-4 h-4 text-violet-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <div className="w-8 h-8 rounded-lg bg-violet-50 flex items-center justify-center">
+                <svg className="w-4 h-4 text-violet-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
                   <line x1="3" y1="9" x2="21" y2="9" />
                   <line x1="9" y1="21" x2="9" y2="9" />
                 </svg>
               </div>
               <div>
-                <div className="text-sm font-medium text-white group-hover:text-[#d4af37] transition-colors">
+                <div className="text-sm font-medium text-gray-900 group-hover:text-[#d4af37] transition-colors">
                   Product Management
                 </div>
-                <div className="text-xs text-white/50">
+                <div className="text-xs text-gray-400">
                   FAANG & tech company PMs
                 </div>
               </div>

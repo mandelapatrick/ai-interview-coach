@@ -70,7 +70,7 @@ const BookIcon = () => (
 const LogoMark = ({ size = "md" }: { size?: "sm" | "md" }) => (
   <div className={`${size === "sm" ? "w-7 h-7" : "w-8 h-8"} bg-gradient-to-br from-[#d4af37] to-[#f4d03f] rounded-lg flex items-center justify-center flex-shrink-0`}>
     <svg
-      className={`${size === "sm" ? "w-4 h-4" : "w-5 h-5"} text-[#0f172a]`}
+      className={`${size === "sm" ? "w-4 h-4" : "w-5 h-5"} text-white`}
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -90,10 +90,10 @@ const UserAvatar = ({ user, size = "md" }: { user: SidebarProps["user"]; size?: 
     <img
       src={user.image}
       alt=""
-      className={`${dim} rounded-full ring-2 ring-[#d4af37]/30 flex-shrink-0`}
+      className={`${dim} rounded-full ring-2 ring-gray-200 flex-shrink-0`}
     />
   ) : (
-    <div className={`${dim} rounded-full bg-[#d4af37]/20 flex items-center justify-center flex-shrink-0`}>
+    <div className={`${dim} rounded-full bg-[#d4af37]/10 flex items-center justify-center flex-shrink-0`}>
       <svg className="w-4 h-4 text-[#d4af37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
         <circle cx="12" cy="7" r="4" />
@@ -145,8 +145,8 @@ export default function Sidebar({ user }: SidebarProps) {
               <div
                 className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all cursor-pointer ${
                   active
-                    ? "bg-[#1a2d47] text-[#d4af37]"
-                    : "text-white/60 hover:bg-[#1a2d47] hover:text-white"
+                    ? "bg-[#d4af37]/10 text-[#d4af37]"
+                    : "text-gray-500 hover:bg-gray-100 hover:text-gray-900"
                 } ${collapsed ? "justify-center" : ""}`}
                 title={collapsed ? item.name : undefined}
               >
@@ -154,7 +154,7 @@ export default function Sidebar({ user }: SidebarProps) {
                 {!collapsed && (
                   <>
                     <span className="font-medium flex-1">{item.name}</span>
-                    <svg className="w-4 h-4 text-white/40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg className="w-4 h-4 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <polyline points="9 18 15 12 9 6" />
                     </svg>
                   </>
@@ -162,12 +162,12 @@ export default function Sidebar({ user }: SidebarProps) {
               </div>
               {/* Hover flyout submenu */}
               <div className="absolute left-full top-0 ml-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <div className="bg-[#152238] border border-white/10 rounded-xl py-2 min-w-[200px] shadow-xl">
+                <div className="bg-white border border-gray-200 rounded-xl py-2 min-w-[200px] shadow-lg">
                   {item.subItems!.map((subItem) => (
                     <Link
                       key={subItem.href}
                       href={subItem.href}
-                      className="flex items-center gap-3 px-4 py-2.5 text-white/70 hover:bg-[#1a2d47] hover:text-white transition-all"
+                      className="flex items-center gap-3 px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-all"
                     >
                       <BookIcon />
                       <span className="font-medium">{subItem.name}</span>
@@ -185,8 +185,8 @@ export default function Sidebar({ user }: SidebarProps) {
               href={item.href}
               className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all ${
                 active
-                  ? "bg-[#1a2d47] text-[#d4af37]"
-                  : "text-white/60 hover:bg-[#1a2d47] hover:text-white"
+                  ? "bg-[#d4af37]/10 text-[#d4af37]"
+                  : "text-gray-500 hover:bg-gray-100 hover:text-gray-900"
               } ${collapsed ? "justify-center" : ""}`}
               title={collapsed ? item.name : undefined}
             >
@@ -212,8 +212,8 @@ export default function Sidebar({ user }: SidebarProps) {
               href={item.href}
               className={`flex items-center gap-3 px-3 py-3 rounded-lg transition-all ${
                 active
-                  ? "bg-[#1a2d47] text-[#d4af37]"
-                  : "text-white/60 hover:bg-[#1a2d47] hover:text-white"
+                  ? "bg-[#d4af37]/10 text-[#d4af37]"
+                  : "text-gray-500 hover:bg-gray-100 hover:text-gray-900"
               }`}
             >
               <span className={active ? "text-[#d4af37]" : ""}>{item.icon}</span>
@@ -221,7 +221,7 @@ export default function Sidebar({ user }: SidebarProps) {
             </Link>
             {/* Inline sub-items for mobile */}
             {hasSubItems && (
-              <ul className="mt-1 ml-4 space-y-1 border-l border-white/10 pl-3">
+              <ul className="mt-1 ml-4 space-y-1 border-l border-gray-200 pl-3">
                 {item.subItems!.map((subItem) => (
                   <li key={subItem.href}>
                     <Link
@@ -229,7 +229,7 @@ export default function Sidebar({ user }: SidebarProps) {
                       className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm transition-all ${
                         pathname.startsWith(subItem.href.split("?")[0]) && pathname.includes(subItem.href.split("?")[1] ?? "")
                           ? "text-[#d4af37]"
-                          : "text-white/50 hover:text-white hover:bg-[#1a2d47]"
+                          : "text-gray-400 hover:text-gray-900 hover:bg-gray-100"
                       }`}
                     >
                       <BookIcon />
@@ -249,16 +249,16 @@ export default function Sidebar({ user }: SidebarProps) {
     <>
       {/* ===== DESKTOP SIDEBAR (hidden on mobile) ===== */}
       <aside
-        className={`hidden md:flex fixed left-0 top-0 h-screen bg-[#0f172a] border-r border-white/10 flex-col transition-all duration-300 z-50 ${
+        className={`hidden md:flex fixed left-0 top-0 h-screen bg-white border-r border-gray-200 flex-col transition-all duration-300 z-50 ${
           collapsed ? "w-16" : "w-56"
         }`}
       >
         {/* Logo */}
-        <div className={`p-4 border-b border-white/10 ${collapsed ? "px-3" : ""}`}>
+        <div className={`p-4 border-b border-gray-200 ${collapsed ? "px-3" : ""}`}>
           <Link href="/dashboard" className="flex items-center gap-2">
             <LogoMark />
             {!collapsed && (
-              <span className="text-lg font-bold text-white whitespace-nowrap">
+              <span className="text-lg font-bold text-gray-900 whitespace-nowrap">
                 Ace<span className="text-[#d4af37]">Interview</span>
               </span>
             )}
@@ -274,20 +274,20 @@ export default function Sidebar({ user }: SidebarProps) {
         {user && (
           <div className={`px-2 pb-2 ${collapsed ? "px-2" : ""}`}>
             <div
-              className={`flex items-center gap-3 px-3 py-2.5 rounded-lg bg-[#1a2d47]/50 ${
+              className={`flex items-center gap-3 px-3 py-2.5 rounded-lg bg-gray-50 ${
                 collapsed ? "justify-center" : ""
               }`}
             >
               <UserAvatar user={user} />
               {!collapsed && (
                 <div className="flex-1 min-w-0">
-                  <div className="text-sm font-medium text-white truncate">
+                  <div className="text-sm font-medium text-gray-900 truncate">
                     {user.name || "User"}
                   </div>
                   <form action="/api/auth/signout" method="POST">
                     <button
                       type="submit"
-                      className="text-xs text-white/50 hover:text-[#d4af37] transition-colors"
+                      className="text-xs text-gray-400 hover:text-[#d4af37] transition-colors"
                     >
                       Sign out
                     </button>
@@ -299,10 +299,10 @@ export default function Sidebar({ user }: SidebarProps) {
         )}
 
         {/* Collapse Toggle */}
-        <div className="p-4 border-t border-white/10">
+        <div className="p-4 border-t border-gray-200">
           <button
             onClick={toggleCollapsed}
-            className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-white/60 hover:bg-[#1a2d47] hover:text-white transition-all w-full ${
+            className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-400 hover:bg-gray-100 hover:text-gray-900 transition-all w-full ${
               collapsed ? "justify-center" : ""
             }`}
             title={collapsed ? "Expand sidebar" : "Collapse sidebar"}
@@ -325,10 +325,10 @@ export default function Sidebar({ user }: SidebarProps) {
       </aside>
 
       {/* ===== MOBILE TOP HEADER (hidden on desktop) ===== */}
-      <header className="md:hidden fixed top-0 left-0 right-0 z-40 h-14 bg-[#0f172a] border-b border-white/10 flex items-center px-4 gap-3">
+      <header className="md:hidden fixed top-0 left-0 right-0 z-40 h-14 bg-white border-b border-gray-200 flex items-center px-4 gap-3">
         <button
           onClick={() => setMobileOpen(true)}
-          className="p-2 -ml-2 rounded-lg text-white/70 hover:text-white hover:bg-[#1a2d47] transition-all"
+          className="p-2 -ml-2 rounded-lg text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-all"
           aria-label="Open navigation menu"
         >
           <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -340,7 +340,7 @@ export default function Sidebar({ user }: SidebarProps) {
 
         <Link href="/dashboard" className="flex items-center gap-2 flex-1">
           <LogoMark size="sm" />
-          <span className="text-base font-bold text-white">
+          <span className="text-base font-bold text-gray-900">
             Ace<span className="text-[#d4af37]">Interview</span>
           </span>
         </Link>
@@ -351,7 +351,7 @@ export default function Sidebar({ user }: SidebarProps) {
       {/* ===== MOBILE DRAWER ===== */}
       {/* Backdrop */}
       <div
-        className={`md:hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm transition-opacity duration-300 ${
+        className={`md:hidden fixed inset-0 z-50 bg-black/30 backdrop-blur-sm transition-opacity duration-300 ${
           mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setMobileOpen(false)}
@@ -360,26 +360,26 @@ export default function Sidebar({ user }: SidebarProps) {
 
       {/* Drawer panel */}
       <aside
-        className={`md:hidden fixed left-0 top-0 h-screen w-72 bg-[#0f172a] border-r border-white/10 flex flex-col z-50 transition-transform duration-300 ${
+        className={`md:hidden fixed left-0 top-0 h-screen w-72 bg-white border-r border-gray-200 flex flex-col z-50 transition-transform duration-300 ${
           mobileOpen ? "translate-x-0" : "-translate-x-full"
         }`}
         aria-label="Navigation drawer"
       >
         {/* Drawer header */}
-        <div className="h-14 px-4 border-b border-white/10 flex items-center justify-between flex-shrink-0">
+        <div className="h-14 px-4 border-b border-gray-200 flex items-center justify-between flex-shrink-0">
           <Link
             href="/dashboard"
             className="flex items-center gap-2"
             onClick={() => setMobileOpen(false)}
           >
             <LogoMark />
-            <span className="text-lg font-bold text-white">
+            <span className="text-lg font-bold text-gray-900">
               Ace<span className="text-[#d4af37]">Interview</span>
             </span>
           </Link>
           <button
             onClick={() => setMobileOpen(false)}
-            className="p-2 rounded-lg text-white/60 hover:text-white hover:bg-[#1a2d47] transition-all"
+            className="p-2 rounded-lg text-gray-400 hover:text-gray-900 hover:bg-gray-100 transition-all"
             aria-label="Close navigation menu"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -396,17 +396,17 @@ export default function Sidebar({ user }: SidebarProps) {
 
         {/* Drawer user profile */}
         {user && (
-          <div className="px-2 pb-4 border-t border-white/10 pt-3 flex-shrink-0">
-            <div className="flex items-center gap-3 px-3 py-3 rounded-lg bg-[#1a2d47]/50">
+          <div className="px-2 pb-4 border-t border-gray-200 pt-3 flex-shrink-0">
+            <div className="flex items-center gap-3 px-3 py-3 rounded-lg bg-gray-50">
               <UserAvatar user={user} />
               <div className="flex-1 min-w-0">
-                <div className="text-sm font-medium text-white truncate">
+                <div className="text-sm font-medium text-gray-900 truncate">
                   {user.name || "User"}
                 </div>
                 <form action="/api/auth/signout" method="POST">
                   <button
                     type="submit"
-                    className="text-xs text-white/50 hover:text-[#d4af37] transition-colors"
+                    className="text-xs text-gray-400 hover:text-[#d4af37] transition-colors"
                   >
                     Sign out
                   </button>

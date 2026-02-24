@@ -141,8 +141,8 @@ export default function CompanyQuestionsPage() {
 
   if (!company) {
     return (
-      <div className="min-h-screen bg-[#0f172a] flex items-center justify-center">
-        <p className="text-white/60">Company not found</p>
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <p className="text-gray-500">Company not found</p>
       </div>
     );
   }
@@ -181,9 +181,9 @@ export default function CompanyQuestionsPage() {
   const difficulties: (Difficulty | "all")[] = ["all", "easy", "medium", "hard"];
 
   return (
-    <div className="min-h-screen bg-[#0f172a]">
+    <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-[#0f172a] border-b border-white/10">
+      <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <Link href={backLink} className="text-sm text-[#d4af37] hover:text-[#f4d03f] mb-4 inline-block">
             ← {backText}
@@ -203,15 +203,15 @@ export default function CompanyQuestionsPage() {
               </div>
             )}
             <div>
-              <h1 className="text-2xl font-bold text-white font-display">{company.name}</h1>
-              <p className="text-white/60">{company.questionCount} practice questions</p>
+              <h1 className="text-2xl font-bold text-gray-900 font-display">{company.name}</h1>
+              <p className="text-gray-500">{company.questionCount} practice questions</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Filters */}
-      <div className="bg-[#0f172a] border-b border-white/10">
+      <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex flex-wrap gap-4 items-center">
             {/* Search */}
@@ -220,14 +220,14 @@ export default function CompanyQuestionsPage() {
               placeholder="Search questions..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="px-4 py-2 bg-[#1a2d47] border border-white/10 rounded-lg text-sm text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:border-transparent w-64"
+              className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:border-transparent w-64"
             />
 
             {/* Type Filter */}
             <select
               value={typeFilter}
               onChange={(e) => setTypeFilter(e.target.value as AllQuestionTypes | "all")}
-              className="px-4 py-2 bg-[#1a2d47] border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
+              className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
             >
               {questionTypes.map((type) => (
                 <option key={type} value={type}>
@@ -240,7 +240,7 @@ export default function CompanyQuestionsPage() {
             <select
               value={frequencyFilter}
               onChange={(e) => setFrequencyFilter(e.target.value as Frequency | "all")}
-              className="px-4 py-2 bg-[#1a2d47] border border-white/10 rounded-lg text-sm text-white focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
+              className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
             >
               <option value="all">All Frequencies</option>
               <option value="high">High Frequency</option>
@@ -248,7 +248,7 @@ export default function CompanyQuestionsPage() {
               <option value="low">Low Frequency</option>
             </select>
 
-            <span className="text-sm text-white/50">
+            <span className="text-sm text-gray-400">
               {filteredQuestions.length} questions
             </span>
           </div>
@@ -257,30 +257,30 @@ export default function CompanyQuestionsPage() {
 
       {/* Questions Table */}
       <div className="max-w-7xl mx-auto px-4 py-6">
-        <div className="bg-[#1a2d47] rounded-xl border border-white/10 overflow-hidden">
+        <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
           <table className="w-full">
-            <thead className="bg-[#152238] border-b border-white/10">
+            <thead className="bg-gray-50 border-b border-gray-200">
               <tr>
-                <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider">
+                <th className="text-left px-6 py-3 text-xs font-medium text-gray-400 uppercase tracking-wider">
                   Title
                 </th>
-                <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider w-28">
+                <th className="text-left px-6 py-3 text-xs font-medium text-gray-400 uppercase tracking-wider w-28">
                   Frequency
                 </th>
-                <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider w-40">
+                <th className="text-left px-6 py-3 text-xs font-medium text-gray-400 uppercase tracking-wider w-40">
                   Type
                 </th>
-                <th className="text-left px-6 py-3 text-xs font-medium text-white/50 uppercase tracking-wider w-44">
+                <th className="text-left px-6 py-3 text-xs font-medium text-gray-400 uppercase tracking-wider w-44">
                   Action
                 </th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-white/10">
+            <tbody className="divide-y divide-gray-200">
               {filteredQuestions.map((question) => (
-                <tr key={question.id} className="hover:bg-[#213754]">
+                <tr key={question.id} className="hover:bg-gray-100">
                   <td className="px-6 py-4">
-                    <div className="font-medium text-white">{question.title}</div>
-                    <div className="text-sm text-white/50 mt-1">{question.description}</div>
+                    <div className="font-medium text-gray-900">{question.title}</div>
+                    <div className="text-sm text-gray-400 mt-1">{question.description}</div>
                   </td>
                   <td className="px-6 py-4 w-28">
                     {question.frequency ? (
@@ -288,7 +288,7 @@ export default function CompanyQuestionsPage() {
                         {FREQUENCY_LABELS[question.frequency]}
                       </span>
                     ) : (
-                      <span className="text-white/30 text-xs">—</span>
+                      <span className="text-gray-300 text-xs">—</span>
                     )}
                   </td>
                   <td className="px-6 py-4 w-40">
@@ -300,13 +300,13 @@ export default function CompanyQuestionsPage() {
                     <div className="flex gap-2">
                       <Link
                         href={`/learn/${question.id}`}
-                        className="inline-flex items-center px-4 py-2 bg-[#1a2d47] text-white text-sm font-medium rounded-lg hover:bg-[#243a5a] transition-all border border-white/10"
+                        className="inline-flex items-center px-4 py-2 bg-white text-gray-900 text-sm font-medium rounded-lg hover:bg-gray-100 transition-all border border-gray-200"
                       >
                         Learn
                       </Link>
                       <Link
                         href={`/practice/${question.id}`}
-                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-[#0f172a] text-sm font-medium rounded-lg hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
+                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white text-sm font-medium rounded-lg hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
                       >
                         Practice
                       </Link>
@@ -318,7 +318,7 @@ export default function CompanyQuestionsPage() {
           </table>
 
           {filteredQuestions.length === 0 && (
-            <div className="px-6 py-12 text-center text-white/50">
+            <div className="px-6 py-12 text-center text-gray-400">
               No questions match your filters.
             </div>
           )}
