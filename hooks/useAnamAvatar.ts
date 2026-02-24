@@ -32,6 +32,7 @@ export function useAnamAvatar(options: UseAnamAvatarOptions) {
 
   const clientRef = useRef<AnamClient | null>(null);
   const videoElementIdRef = useRef<string | null>(null);
+  const isTalkingRef = useRef(false);
 
   // Cleanup on unmount
   useEffect(() => {
@@ -102,20 +103,27 @@ export function useAnamAvatar(options: UseAnamAvatarOptions) {
         client.addListener(AnamEvent.MESSAGE_STREAM_EVENT_RECEIVED, (event: { role: string; content: string }) => {
           if (event.role === "persona") {
             // Avatar is speaking
-            if (!isTalking) {
+            if (!isTalkingRef.current) {
+              isTalkingRef.current = true;
               setIsTalking(true);
               onAvatarStartTalking?.();
             }
             onAvatarTranscription?.(event.content);
           } else if (event.role === "user") {
-            // User is speaking
+            // User is speaking - avatar stops talking
+            if (isTalkingRef.current) {
+              isTalkingRef.current = false;
+              setIsTalking(false);
+              onAvatarStopTalking?.();
+            }
             onUserTranscription?.(event.content);
           }
         });
 
         client.addListener(AnamEvent.MESSAGE_HISTORY_UPDATED, () => {
           // A conversation turn ended
-          if (isTalking) {
+          if (isTalkingRef.current) {
+            isTalkingRef.current = false;
             setIsTalking(false);
             onAvatarStopTalking?.();
           }
@@ -123,6 +131,7 @@ export function useAnamAvatar(options: UseAnamAvatarOptions) {
 
         client.addListener(AnamEvent.TALK_STREAM_INTERRUPTED, () => {
           console.log("[Anam] Talk stream interrupted by user");
+          isTalkingRef.current = false;
           setIsTalking(false);
           onAvatarStopTalking?.();
         });
@@ -151,12 +160,12 @@ export function useAnamAvatar(options: UseAnamAvatarOptions) {
       onUserTranscription,
       onAvatarTranscription,
       onError,
-      isTalking,
     ]
   );
 
   // Interrupt the avatar (stop it from speaking)
   const interrupt = useCallback(() => {
+    isTalkingRef.current = false;
     setIsTalking(false);
     onAvatarStopTalking?.();
     console.log("[Anam] Avatar interrupted");
@@ -171,6 +180,7 @@ export function useAnamAvatar(options: UseAnamAvatarOptions) {
       await clientRef.current.stopStreaming();
       clientRef.current = null;
       setIsInitialized(false);
+      isTalkingRef.current = false;
       setIsTalking(false);
     } catch (err) {
       console.error("[Anam] Failed to stop avatar:", err);
