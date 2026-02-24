@@ -1,42 +1,38 @@
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
 import { pmCompanies } from "@/data/companies";
 import { PM_QUESTION_TYPE_LABELS, PM_TYPE_COLORS, PMQuestionType } from "@/types";
 
 export default function PMDashboardPage() {
   return (
-    <div className="min-h-screen bg-[#0f172a]">
-      <Navbar />
-
-      <main className="max-w-7xl mx-auto px-4 py-12">
-        <div className="mb-8">
-          <Link
-            href="/dashboard"
-            className="inline-flex items-center gap-2 text-white/60 hover:text-[#d4af37] transition-colors mb-4"
+    <div className="max-w-6xl mx-auto px-6 py-8">
+      <div className="mb-8">
+        <Link
+          href="/dashboard"
+          className="inline-flex items-center gap-2 text-white/60 hover:text-[#d4af37] transition-colors mb-4"
+        >
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
           >
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-            Back to tracks
-          </Link>
-          <h1 className="text-4xl font-bold text-white mb-2 font-display">
-            Product Management Interview Prep
-          </h1>
-          <p className="text-white/60 text-lg">
-            Practice PM interviews from Meta, Google, Amazon, and other top tech
-            companies.
-          </p>
-        </div>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+          Back to Home
+        </Link>
+        <h1 className="text-3xl font-bold text-white mb-2 font-display">
+          Product Management Interview Prep
+        </h1>
+        <p className="text-white/60">
+          Practice PM interviews from Meta, Google, Amazon, and other top tech
+          companies.
+        </p>
+      </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {pmCompanies
@@ -99,7 +95,6 @@ export default function PMDashboardPage() {
             </Link>
           ))}
         </div>
-      </main>
-    </div>
+      </div>
   );
 }
