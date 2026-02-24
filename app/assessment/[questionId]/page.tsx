@@ -224,7 +224,7 @@ export default function AssessmentPage() {
       <header className="bg-[#0f172a] border-b border-white/10">
         <div className="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
           <Link
-            href={question.track === "product-management" ? "/dashboard/pm" : "/dashboard/consulting"}
+            href={`/dashboard/questions?track=${question.track}`}
             className="text-sm text-[#d4af37] hover:text-[#f4d03f] transition-colors"
           >
             ← Back to Question Bank
@@ -448,7 +448,7 @@ export default function AssessmentPage() {
                 Practice Again
               </Link>
               <Link
-                href={question.track === "product-management" ? "/dashboard/pm" : "/dashboard/consulting"}
+                href={`/dashboard/questions?track=${question.track}`}
                 className="px-6 py-3 bg-[#0f172a] text-white rounded-lg font-medium hover:bg-[#152238] transition-colors border border-white/10"
               >
                 Try Another Question
