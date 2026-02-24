@@ -23,7 +23,10 @@ const allCompanies = [...companies, ...pmCompanies];
 
 // Get unique question types for each track
 const consultingTypes = Object.keys(QUESTION_TYPE_LABELS) as QuestionType[];
-const pmTypes = Object.keys(PM_QUESTION_TYPE_LABELS) as PMQuestionType[];
+// Filter out 'execution' as it's a legacy type that maps to 'analytical-thinking'
+const pmTypes = (Object.keys(PM_QUESTION_TYPE_LABELS) as PMQuestionType[]).filter(
+  (t) => t !== "execution"
+);
 
 export default function QuestionBankPage() {
   const searchParams = useSearchParams();
