@@ -22,9 +22,9 @@ const config: Config = {
           },
         },
         surface: {
-          dark: '#152238',
-          card: '#1a2d47',
-          elevated: '#213754',
+          dark: '#f9fafb',
+          card: '#ffffff',
+          elevated: '#f3f4f6',
         },
       },
       fontFamily: {
@@ -32,7 +32,7 @@ const config: Config = {
         sans: ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
       },
       backgroundImage: {
-        'brand-gradient': 'linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0d4a4a 100%)',
+        'brand-gradient': 'linear-gradient(135deg, #ffffff 0%, #f9fafb 50%, #f3f4f6 100%)',
         'gold-gradient': 'linear-gradient(135deg, #d4af37 0%, #f4d03f 50%, #d4af37 100%)',
       },
     },

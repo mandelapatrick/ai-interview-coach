@@ -87,10 +87,10 @@ function PulsingCircle({ isActive, isSpeaking }: { isActive: boolean; isSpeaking
 // Status Badge Component
 function StatusBadge({ status }: { status: "idle" | "connecting" | "listening" | "speaking" }) {
   const configs = {
-    idle: { text: "Ready", bg: "bg-white/10", textColor: "text-white/50" },
+    idle: { text: "Ready", bg: "bg-gray-100", textColor: "text-gray-400" },
     connecting: { text: "Connecting...", bg: "bg-[#d4af37]/20", textColor: "text-[#d4af37]" },
     listening: { text: "Listening", bg: "bg-[#d4af37]/20", textColor: "text-[#d4af37]" },
-    speaking: { text: "Speaking", bg: "bg-[#d4af37]", textColor: "text-[#0f172a]" },
+    speaking: { text: "Speaking", bg: "bg-[#d4af37]", textColor: "text-white" },
   };
 
   const config = configs[status];
@@ -141,9 +141,9 @@ function ControlButton({
   tooltip?: string;
 }) {
   const variants = {
-    default: `bg-white/10 hover:bg-white/20 text-white ${active ? "bg-[#d4af37]/20 text-[#d4af37]" : ""}`,
+    default: `bg-gray-100 hover:bg-gray-200 text-gray-600 ${active ? "bg-[#d4af37]/10 text-[#d4af37]" : ""}`,
     danger: "bg-red-500/90 hover:bg-red-500 text-white",
-    primary: "bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-[#0f172a] hover:shadow-lg hover:shadow-[#d4af37]/25",
+    primary: "bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white hover:shadow-lg hover:shadow-[#d4af37]/25",
   };
 
   return (
@@ -327,7 +327,7 @@ export default function AnamAudioSession({ question }: AnamAudioSessionProps) {
   };
 
   return (
-    <div className="flex flex-col h-full bg-[#0f172a]">
+    <div className="flex flex-col h-full bg-white">
       {/* Hidden video element for Anam (audio still plays) */}
       <video
         ref={hiddenVideoRef}
@@ -368,7 +368,7 @@ export default function AnamAudioSession({ question }: AnamAudioSessionProps) {
         {!isSessionStarted && !isLoading ? (
           <button
             onClick={startSession}
-            className="flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-[#0f172a] rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all hover:scale-105 active:scale-95"
+            className="flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all hover:scale-105 active:scale-95"
           >
             <MicIcon />
             Start Interview
@@ -405,7 +405,7 @@ export default function AnamAudioSession({ question }: AnamAudioSessionProps) {
 
       {/* Error Display */}
       {anamAvatar.error && (
-        <div className="mx-6 mb-4 p-4 bg-red-900/50 border border-red-700 rounded-xl text-red-200 text-sm">
+        <div className="mx-6 mb-4 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700 text-sm">
           {anamAvatar.error}
         </div>
       )}
@@ -441,24 +441,24 @@ export default function AnamAudioSession({ question }: AnamAudioSessionProps) {
 
       {/* End Confirmation Modal */}
       {showEndConfirm && (
-        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-          <div className="bg-[#1a2d47] rounded-xl p-6 max-w-md mx-4 border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-4">
+        <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl p-6 max-w-md mx-4 border border-gray-200 shadow-xl">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">
               End Interview?
             </h3>
-            <p className="text-white/60 mb-6">
+            <p className="text-gray-500 mb-6">
               Your session will be saved and you&apos;ll receive an AI assessment of your performance.
             </p>
             <div className="flex gap-4">
               <button
                 onClick={() => setShowEndConfirm(false)}
-                className="flex-1 px-4 py-2 bg-[#0f172a] text-white rounded-lg hover:bg-[#152238] transition-colors border border-white/10"
+                className="flex-1 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"
               >
                 Continue
               </button>
               <button
                 onClick={confirmEnd}
-                className="flex-1 px-4 py-2 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-[#0f172a] rounded-lg hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all font-medium"
+                className="flex-1 px-4 py-2 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-lg hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all font-medium"
               >
                 End & Get Assessment
               </button>
@@ -487,11 +487,11 @@ function TranscriptBubble({ entry }: { entry: TranscriptEntry }) {
       <div
         className={`max-w-[85%] rounded-2xl px-4 py-3 shadow-sm ${
           isUser
-            ? "bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-[#0f172a]"
+            ? "bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white"
             : "bg-white text-gray-800 border border-gray-100"
         }`}
       >
-        <div className={`text-xs mb-1 font-medium ${isUser ? "text-[#0f172a]/50" : "text-gray-400"}`}>
+        <div className={`text-xs mb-1 font-medium ${isUser ? "text-white/70" : "text-gray-400"}`}>
           {isUser ? "You" : "AI Interviewer"}
         </div>
         <p className="whitespace-pre-wrap text-sm leading-relaxed">{entry.text}</p>

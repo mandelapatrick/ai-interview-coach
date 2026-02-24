@@ -674,7 +674,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
   const isLoading = avatar.isConnecting || (!avatar.isInitialized && !avatar.error);
 
   return (
-    <div className="flex h-full bg-[#0f172a]">
+    <div className="flex h-full bg-gray-50">
       {/* Hidden canvas for video compositing/recording */}
       <canvas
         ref={canvasRef}
@@ -686,10 +686,10 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
       {/* Main Video Area - Left Side */}
       <div className="flex-1 relative">
         {/* Avatar Video (Main) */}
-        <div className="absolute inset-0 bg-[#0a1122] rounded-2xl overflow-hidden m-2">
+        <div className="absolute inset-0 bg-gray-900 rounded-2xl overflow-hidden m-2">
           {/* Loading overlay */}
           {isLoading && (
-            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-[#0a1122]">
+            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-gray-900">
               <div className="w-16 h-16 border-4 border-[#d4af37] border-t-transparent rounded-full animate-spin mb-4" />
               <p className="text-white/60">
                 Connecting to AI interviewer...
@@ -732,7 +732,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
           </div>
 
           {/* User Video (PiP) - Bottom Right */}
-          <div className="absolute bottom-6 right-6 w-56 h-40 bg-[#1a2744] rounded-xl overflow-hidden shadow-xl border-2 border-white/20">
+          <div className="absolute bottom-6 right-6 w-56 h-40 bg-gray-800 rounded-xl overflow-hidden shadow-xl border-2 border-gray-600">
             {isVideoEnabled ? (
               <video
                 ref={userVideoRef}
@@ -742,9 +742,9 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
                 className="w-full h-full object-cover -scale-x-100"
               />
             ) : (
-              <div className="w-full h-full flex items-center justify-center bg-[#1a2744]">
-                <div className="w-14 h-14 rounded-full bg-[#0f172a] flex items-center justify-center">
-                  <svg className="w-7 h-7 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="w-full h-full flex items-center justify-center bg-gray-800">
+                <div className="w-14 h-14 rounded-full bg-gray-700 flex items-center justify-center">
+                  <svg className="w-7 h-7 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
                 </div>
@@ -809,7 +809,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
                   className="w-8 h-8 object-contain"
                 />
               ) : (
-                <div className="w-8 h-8 bg-[#0f172a] rounded-lg flex items-center justify-center text-white font-bold text-sm">
+                <div className="w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center text-white font-bold text-sm">
                   {company?.name?.charAt(0) || "?"}
                 </div>
               )}

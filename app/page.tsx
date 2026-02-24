@@ -10,24 +10,24 @@ export default async function LandingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0f172a]">
+    <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="border-b border-white/10">
+      <nav className="border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-gradient-to-br from-[#d4af37] to-[#f4d03f] rounded-lg flex items-center justify-center">
-              <svg className="w-5 h-5 text-[#0f172a]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
                 <polyline points="22 4 12 14.01 9 11.01"/>
               </svg>
             </div>
-            <span className="text-xl font-bold text-white">
+            <span className="text-xl font-bold text-gray-900">
               Ace<span className="text-[#d4af37]">Interview</span>
             </span>
           </div>
           <Link
             href="/api/auth/signin"
-            className="text-sm text-white/70 hover:text-[#d4af37] transition-colors"
+            className="text-sm text-gray-500 hover:text-[#d4af37] transition-colors"
           >
             Sign In
           </Link>
@@ -39,48 +39,48 @@ export default async function LandingPage() {
         {/* Background decoration */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#d4af37]/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#1e3a5f]/50 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gray-100/80 rounded-full blur-3xl"></div>
         </div>
 
         <div className="relative">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 text-balance font-display">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 text-balance font-display">
             Master Your <span className="text-[#d4af37]">Case Interview</span>
           </h1>
-          <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-500 mb-8 max-w-2xl mx-auto">
             Practice case interviews with an AI interviewer that adapts to your skill level.
             Get instant feedback and improve faster.
           </p>
           <Link
             href="/api/auth/signin"
-            className="inline-block bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-[#0f172a] px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
+            className="inline-block bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
           >
             Start Practicing Free
           </Link>
-          <p className="mt-4 text-sm text-white/50">
+          <p className="mt-4 text-sm text-gray-400">
             No credit card required
           </p>
         </div>
       </section>
 
       {/* Company logos */}
-      <section className="border-y border-white/10 py-8 bg-[#0f172a]">
+      <section className="border-y border-gray-200 py-8 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
-          <p className="text-center text-white/40 text-sm uppercase tracking-wider mb-6">Prepare for top consulting firms</p>
+          <p className="text-center text-gray-400 text-sm uppercase tracking-wider mb-6">Prepare for top consulting firms</p>
           <div className="flex justify-center items-center gap-8 md:gap-12 flex-wrap">
             {['McKinsey', 'BCG', 'Bain', 'Deloitte', 'Accenture'].map((firm) => (
-              <span key={firm} className="text-white/50 font-semibold text-lg">{firm}</span>
+              <span key={firm} className="text-gray-400 font-semibold text-lg">{firm}</span>
             ))}
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="bg-[#152238] py-20">
+      <section className="bg-gray-50 py-20">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-4 font-display">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-4 font-display">
             Why AceInterview?
           </h2>
-          <p className="text-center text-white/60 mb-12 max-w-xl mx-auto">
+          <p className="text-center text-gray-500 mb-12 max-w-xl mx-auto">
             Everything you need to ace your consulting case interview
           </p>
           <div className="grid md:grid-cols-3 gap-8">
@@ -116,9 +116,9 @@ export default async function LandingPage() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 bg-[#0f172a]">
+      <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-12 font-display">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12 font-display">
             How It Works
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -144,15 +144,15 @@ export default async function LandingPage() {
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-[#d4af37] to-[#f4d03f] py-16">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-[#0f172a] mb-4 font-display">
+          <h2 className="text-3xl font-bold text-white mb-4 font-display">
             Ready to Land Your Dream Consulting Job?
           </h2>
-          <p className="text-[#0f172a]/70 mb-8">
+          <p className="text-white/80 mb-8">
             Join thousands of candidates who improved their case skills with AceInterview.
           </p>
           <Link
             href="/api/auth/signin"
-            className="inline-block bg-[#0f172a] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#1e3a5f] transition-colors"
+            className="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-50 transition-colors"
           >
             Get Started Now
           </Link>
@@ -160,8 +160,8 @@ export default async function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-white/10 py-8 bg-[#0f172a]">
-        <div className="max-w-6xl mx-auto px-4 text-center text-white/50 text-sm">
+      <footer className="border-t border-gray-200 py-8 bg-white">
+        <div className="max-w-6xl mx-auto px-4 text-center text-gray-400 text-sm">
           © 2025 AceInterview.ai. All rights reserved.
         </div>
       </footer>
@@ -179,12 +179,12 @@ function FeatureCard({
   description: string;
 }) {
   return (
-    <div className="bg-[#1a2d47] p-6 rounded-xl border border-white/10 hover:border-[#d4af37]/30 transition-colors">
-      <div className="w-12 h-12 bg-gradient-to-br from-[#d4af37] to-[#f4d03f] rounded-lg flex items-center justify-center text-[#0f172a] mb-4">
+    <div className="bg-white p-6 rounded-xl border border-gray-200 hover:border-[#d4af37]/30 transition-colors shadow-sm">
+      <div className="w-12 h-12 bg-gradient-to-br from-[#d4af37] to-[#f4d03f] rounded-lg flex items-center justify-center text-white mb-4">
         {icon}
       </div>
-      <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
-      <p className="text-white/60">{description}</p>
+      <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-500">{description}</p>
     </div>
   );
 }
@@ -200,11 +200,11 @@ function StepCard({
 }) {
   return (
     <div className="text-center">
-      <div className="w-12 h-12 bg-gradient-to-br from-[#d4af37] to-[#f4d03f] text-[#0f172a] rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+      <div className="w-12 h-12 bg-gradient-to-br from-[#d4af37] to-[#f4d03f] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
         {number}
       </div>
-      <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
-      <p className="text-white/60">{description}</p>
+      <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-500">{description}</p>
     </div>
   );
 }

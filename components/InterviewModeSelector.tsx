@@ -13,10 +13,10 @@ export default function InterviewModeSelector({
 
   return (
     <div className="flex flex-col items-center justify-center min-h-[60vh] px-4">
-      <h2 className="text-2xl font-bold text-white mb-2 font-display">
+      <h2 className="text-2xl font-bold text-gray-900 mb-2 font-display">
         Choose Interview Mode
       </h2>
-      <p className="text-white/60 mb-8 text-center max-w-md">
+      <p className="text-gray-500 mb-8 text-center max-w-md">
         Select how you&apos;d like to practice this case interview
       </p>
 
@@ -24,49 +24,49 @@ export default function InterviewModeSelector({
         {/* Audio Interview Option (Default - Kimi K2) */}
         <button
           onClick={() => onSelectMode("audio")}
-          className="group relative flex flex-col items-center p-8 bg-[#1a2d47] rounded-2xl border border-white/10 hover:border-[#d4af37]/50 transition-all hover:shadow-lg hover:shadow-[#d4af37]/10"
+          className="group relative flex flex-col items-center p-8 bg-white rounded-2xl border border-gray-200 hover:border-[#d4af37]/50 transition-all hover:shadow-lg hover:shadow-[#d4af37]/10"
         >
-          <div className="w-16 h-16 rounded-full bg-[#0f172a] flex items-center justify-center mb-4 group-hover:bg-[#d4af37]/10 transition-colors">
+          <div className="w-16 h-16 rounded-full bg-gray-50 flex items-center justify-center mb-4 group-hover:bg-[#d4af37]/10 transition-colors">
             <MicrophoneIcon className="w-8 h-8 text-[#d4af37]" />
           </div>
-          <h3 className="text-lg font-semibold text-white mb-2">
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">
             Audio Interview
           </h3>
-          <p className="text-sm text-white/50 text-center">
+          <p className="text-sm text-gray-400 text-center">
             Voice-only conversation with AI interviewer. Great for quick
             practice on the go.
           </p>
           <div className="mt-4 flex flex-col items-center gap-2">
-            <div className="px-4 py-2 bg-[#0f172a] rounded-full text-sm text-white/60">
+            <div className="px-4 py-2 bg-gray-50 rounded-full text-sm text-gray-500">
               Microphone only
             </div>
-            <span className="text-xs text-white/40">Powered by Kimi K2</span>
+            <span className="text-xs text-gray-400">Powered by Kimi K2</span>
           </div>
         </button>
 
         {/* Video Interview Option */}
         <button
           onClick={() => onSelectMode("video")}
-          className="group relative flex flex-col items-center p-8 bg-gradient-to-br from-[#1a2d47] to-[#152238] rounded-2xl border border-[#d4af37]/30 hover:border-[#d4af37] transition-all hover:shadow-lg hover:shadow-[#d4af37]/20"
+          className="group relative flex flex-col items-center p-8 bg-white rounded-2xl border border-[#d4af37]/30 hover:border-[#d4af37] transition-all hover:shadow-lg hover:shadow-[#d4af37]/20"
         >
-          <div className="absolute -top-3 -right-3 px-3 py-1 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-[#0f172a] text-xs font-bold rounded-full">
+          <div className="absolute -top-3 -right-3 px-3 py-1 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white text-xs font-bold rounded-full">
             NEW
           </div>
-          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#d4af37]/20 to-[#f4d03f]/10 flex items-center justify-center mb-4 group-hover:from-[#d4af37]/30 group-hover:to-[#f4d03f]/20 transition-colors">
+          <div className="w-16 h-16 rounded-full bg-[#d4af37]/10 flex items-center justify-center mb-4 group-hover:from-[#d4af37]/30 group-hover:to-[#f4d03f]/20 transition-colors">
             <VideoIcon className="w-8 h-8 text-[#d4af37]" />
           </div>
-          <h3 className="text-lg font-semibold text-white mb-2">
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">
             Video Interview
           </h3>
-          <p className="text-sm text-white/50 text-center">
+          <p className="text-sm text-gray-400 text-center">
             Face-to-face with an AI avatar interviewer. The most realistic
             interview experience.
           </p>
           <div className="mt-4 flex flex-col items-center gap-2">
-            <div className="px-4 py-2 bg-[#0f172a] rounded-full text-sm text-[#d4af37]">
+            <div className="px-4 py-2 bg-gray-50 rounded-full text-sm text-[#d4af37]">
               Camera + Microphone
             </div>
-            <span className="text-xs text-white/40">Powered by Kimi K2</span>
+            <span className="text-xs text-gray-400">Powered by Kimi K2</span>
           </div>
         </button>
       </div>
@@ -74,7 +74,7 @@ export default function InterviewModeSelector({
       {/* Advanced Options Toggle */}
       <button
         onClick={() => setShowAdvanced(!showAdvanced)}
-        className="mt-6 text-sm text-white/40 hover:text-white/60 transition-colors flex items-center gap-1"
+        className="mt-6 text-sm text-gray-400 hover:text-gray-500 transition-colors flex items-center gap-1"
       >
         {showAdvanced ? "Hide" : "Show"} alternative models
         <ChevronIcon className={`w-4 h-4 transition-transform ${showAdvanced ? "rotate-180" : ""}`} />
@@ -85,14 +85,14 @@ export default function InterviewModeSelector({
         <div className="mt-4 w-full max-w-md">
           <button
             onClick={() => onSelectMode("audio-xai")}
-            className="w-full flex items-center gap-4 p-4 bg-[#1a2d47]/50 rounded-xl border border-white/5 hover:border-white/20 transition-all"
+            className="w-full flex items-center gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-gray-300 transition-all"
           >
-            <div className="w-10 h-10 rounded-full bg-[#0f172a] flex items-center justify-center">
-              <MicrophoneIcon className="w-5 h-5 text-white/60" />
+            <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center">
+              <MicrophoneIcon className="w-5 h-5 text-gray-500" />
             </div>
             <div className="text-left">
-              <h4 className="text-sm font-medium text-white">Audio Interview (Grok)</h4>
-              <p className="text-xs text-white/40">Alternative model powered by X.AI</p>
+              <h4 className="text-sm font-medium text-gray-900">Audio Interview (Grok)</h4>
+              <p className="text-xs text-gray-400">Alternative model powered by X.AI</p>
             </div>
           </button>
         </div>

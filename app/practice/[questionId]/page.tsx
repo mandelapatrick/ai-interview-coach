@@ -20,8 +20,8 @@ export default async function PracticePage({
 
   if (!question) {
     return (
-      <div className="min-h-screen bg-[#0f172a] flex items-center justify-center">
-        <p className="text-white/60">Question not found</p>
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <p className="text-gray-500">Question not found</p>
       </div>
     );
   }
@@ -33,9 +33,9 @@ export default async function PracticePage({
     : QUESTION_TYPE_LABELS[question.type as keyof typeof QUESTION_TYPE_LABELS];
 
   return (
-    <div className="h-screen bg-[#0f172a] text-white flex flex-col overflow-hidden">
+    <div className="h-screen bg-gray-50 text-gray-900 flex flex-col overflow-hidden">
       {/* Header */}
-      <header className="border-b border-white/10 bg-[#0f172a]/95 backdrop-blur sticky top-0 z-10">
+      <header className="border-b border-gray-200 bg-white/95 backdrop-blur sticky top-0 z-10">
         <div className="max-w-6xl mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             <Link
@@ -44,7 +44,7 @@ export default async function PracticePage({
             >
               ← Back to Question Bank
             </Link>
-            <span className="text-sm text-white/50">
+            <span className="text-sm text-gray-400">
               {typeLabel}
             </span>
           </div>
@@ -52,10 +52,10 @@ export default async function PracticePage({
       </header>
 
       {/* Question Info */}
-      <div className="border-b border-white/10 bg-[#0f172a]">
+      <div className="border-b border-gray-200 bg-white">
         <div className="max-w-6xl mx-auto px-4 py-6">
           <h1 className="text-2xl font-bold mb-2 font-display">{question.title}</h1>
-          <p className="text-white/60">{question.description}</p>
+          <p className="text-gray-500">{question.description}</p>
         </div>
       </div>
 

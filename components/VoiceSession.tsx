@@ -95,7 +95,7 @@ export default function VoiceSession({ question }: VoiceSessionProps) {
   return (
     <div className="flex flex-col h-full">
       {/* Status Bar */}
-      <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
+      <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200">
         <div className="flex items-center gap-4">
           {isRecording && (
             <div className="flex items-center gap-2">
@@ -103,13 +103,13 @@ export default function VoiceSession({ question }: VoiceSessionProps) {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
               </span>
-              <span className="text-sm text-white/60">Recording</span>
+              <span className="text-sm text-gray-500">Recording</span>
             </div>
           )}
           {isSpeaking && (
             <div className="flex items-center gap-2">
               <span className="text-[#d4af37]">🔊</span>
-              <span className="text-sm text-white/60">AI Speaking</span>
+              <span className="text-sm text-gray-500">AI Speaking</span>
             </div>
           )}
         </div>
@@ -121,14 +121,14 @@ export default function VoiceSession({ question }: VoiceSessionProps) {
       {/* Transcript Area */}
       <div className="flex-1 overflow-y-auto p-6 space-y-4">
         {transcript.length === 0 && !isRecording && (
-          <div className="text-center text-white/50 py-12">
+          <div className="text-center text-gray-400 py-12">
             <p>Click &quot;Start Interview&quot; to begin your practice session.</p>
             <p className="text-sm mt-2">Make sure your microphone is ready.</p>
           </div>
         )}
 
         {transcript.length === 0 && isRecording && (
-          <div className="text-center text-white/60 py-12">
+          <div className="text-center text-gray-500 py-12">
             <div className="animate-pulse">
               <p>Connecting to AI interviewer...</p>
               <p className="text-sm mt-2">The interview will begin shortly.</p>
@@ -143,18 +143,18 @@ export default function VoiceSession({ question }: VoiceSessionProps) {
 
       {/* Error Display */}
       {error && (
-        <div className="mx-6 mb-4 p-4 bg-red-900/50 border border-red-700 rounded-lg text-red-200">
+        <div className="mx-6 mb-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700">
           {error}
         </div>
       )}
 
       {/* Controls */}
-      <div className="p-6 border-t border-white/10">
+      <div className="p-6 border-t border-gray-200">
         <div className="flex justify-center gap-4">
           {!isRecording ? (
             <button
               onClick={startSession}
-              className="flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-[#0f172a] rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
+              className="flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
             >
               <MicIcon />
               Start Interview
@@ -164,7 +164,7 @@ export default function VoiceSession({ question }: VoiceSessionProps) {
               <button
                 onClick={handleGetHint}
                 disabled={isLoadingHint || hintCount >= 3}
-                className="flex items-center gap-2 px-6 py-4 bg-[#1a2d47] text-white rounded-full font-medium hover:bg-[#243a5a] transition-colors border border-white/10 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex items-center gap-2 px-6 py-4 bg-white text-gray-900 rounded-full font-medium hover:bg-gray-100 transition-colors border border-gray-200 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isLoadingHint ? (
                   <svg className="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
@@ -190,24 +190,24 @@ export default function VoiceSession({ question }: VoiceSessionProps) {
 
       {/* End Confirmation Modal */}
       {showEndConfirm && (
-        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-          <div className="bg-[#1a2d47] rounded-xl p-6 max-w-md mx-4 border border-white/10">
-            <h3 className="text-xl font-semibold text-white mb-4">
+        <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl p-6 max-w-md mx-4 border border-gray-200">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">
               End Interview?
             </h3>
-            <p className="text-white/60 mb-6">
+            <p className="text-gray-500 mb-6">
               Your session will be saved and you&apos;ll receive an AI assessment of your performance.
             </p>
             <div className="flex gap-4">
               <button
                 onClick={() => setShowEndConfirm(false)}
-                className="flex-1 px-4 py-2 bg-[#0f172a] text-white rounded-lg hover:bg-[#152238] transition-colors border border-white/10"
+                className="flex-1 px-4 py-2 bg-gray-50 text-gray-900 rounded-lg hover:bg-gray-50 transition-colors border border-gray-200"
               >
                 Continue
               </button>
               <button
                 onClick={confirmEnd}
-                className="flex-1 px-4 py-2 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-[#0f172a] rounded-lg hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all font-medium"
+                className="flex-1 px-4 py-2 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-lg hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all font-medium"
               >
                 End & Get Assessment
               </button>
@@ -236,11 +236,11 @@ function TranscriptBubble({ entry }: { entry: TranscriptEntry }) {
       <div
         className={`max-w-[80%] rounded-2xl px-4 py-3 ${
           isUser
-            ? "bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-[#0f172a]"
-            : "bg-[#1a2d47] text-white border border-white/10"
+            ? "bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white"
+            : "bg-white text-gray-900 border border-gray-200"
         }`}
       >
-        <div className={`text-xs mb-1 ${isUser ? "text-[#0f172a]/60" : "text-white/50"}`}>
+        <div className={`text-xs mb-1 ${isUser ? "text-white/80" : "text-gray-400"}`}>
           {isUser ? "You" : "AI Interviewer"}
         </div>
         <p className="whitespace-pre-wrap">{entry.text}</p>

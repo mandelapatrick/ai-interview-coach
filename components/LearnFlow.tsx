@@ -54,15 +54,15 @@ export default function LearnFlow({ question }: LearnFlowProps) {
                 </svg>
               </div>
               <h2 className="text-3xl font-bold mb-4 font-display">Learn Mode</h2>
-              <p className="text-lg text-white/70 mb-6">
+              <p className="text-lg text-gray-600 mb-6">
                 Watch a simulated interview between an AI interviewer and an expert candidate.
                 Learn how to structure your answers and what excellent responses look like.
               </p>
             </div>
 
-            <div className="bg-[#1a2d47] rounded-xl p-6 mb-8 text-left">
-              <h3 className="font-semibold mb-4 text-white/90">What to expect:</h3>
-              <ul className="space-y-3 text-white/70">
+            <div className="bg-white rounded-xl p-6 mb-8 text-left border border-gray-200">
+              <h3 className="font-semibold mb-4 text-gray-800">What to expect:</h3>
+              <ul className="space-y-3 text-gray-600">
                 <li className="flex items-start gap-3">
                   <span className="text-violet-400 mt-1">
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -74,7 +74,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
                     </svg>
                   </span>
                   <span>
-                    <strong className="text-white/90">Two AI avatars</strong> - An interviewer asks
+                    <strong className="text-gray-800">Two AI avatars</strong> - An interviewer asks
                     questions, and an expert candidate demonstrates quality responses
                   </span>
                 </li>
@@ -89,7 +89,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
                     </svg>
                   </span>
                   <span>
-                    <strong className="text-white/90">Interactive controls</strong> - Pause anytime
+                    <strong className="text-gray-800">Interactive controls</strong> - Pause anytime
                     to absorb key points or ask clarifying questions
                   </span>
                 </li>
@@ -104,7 +104,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
                     </svg>
                   </span>
                   <span>
-                    <strong className="text-white/90">Best practices</strong> - See frameworks,
+                    <strong className="text-gray-800">Best practices</strong> - See frameworks,
                     structured thinking, and communication patterns in action
                   </span>
                 </li>
@@ -130,14 +130,14 @@ export default function LearnFlow({ question }: LearnFlowProps) {
           <div className="max-w-4xl mx-auto w-full">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold mb-4 font-display">Session Complete</h2>
-              <p className="text-lg text-white/70">
+              <p className="text-lg text-gray-600">
                 Here&apos;s a summary of the interview demonstration you just watched.
               </p>
             </div>
 
             {/* Transcript Summary */}
-            <div className="bg-[#1a2d47] rounded-xl p-6 mb-8">
-              <h3 className="font-semibold mb-4 text-white/90">Conversation Transcript</h3>
+            <div className="bg-white rounded-xl p-6 mb-8 border border-gray-200">
+              <h3 className="font-semibold mb-4 text-gray-800">Conversation Transcript</h3>
               <div className="space-y-4 max-h-96 overflow-y-auto">
                 {sessionTranscript.length > 0 ? (
                   sessionTranscript.map((entry, idx) => (
@@ -158,11 +158,11 @@ export default function LearnFlow({ question }: LearnFlowProps) {
                       >
                         {entry.speaker}
                       </span>
-                      <p className="text-white/80 mt-1">{entry.text}</p>
+                      <p className="text-gray-700 mt-1">{entry.text}</p>
                     </div>
                   ))
                 ) : (
-                  <p className="text-white/50 text-center py-4">
+                  <p className="text-gray-400 text-center py-4">
                     No transcript available.
                   </p>
                 )}
@@ -173,13 +173,13 @@ export default function LearnFlow({ question }: LearnFlowProps) {
             <div className="flex justify-center gap-4">
               <button
                 onClick={handleBackToIntro}
-                className="px-6 py-3 bg-[#1a2d47] text-white font-medium rounded-xl hover:bg-[#243a5a] transition-all border border-white/10"
+                className="px-6 py-3 bg-white text-gray-900 font-medium rounded-xl hover:bg-gray-100 transition-all border border-gray-200"
               >
                 Watch Again
               </button>
               <a
                 href={`/practice/${question.id}`}
-                className="px-6 py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-[#0f172a] font-medium rounded-xl hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
+                className="px-6 py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white font-medium rounded-xl hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
               >
                 Practice Now
               </a>

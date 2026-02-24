@@ -77,27 +77,27 @@ export default function DashboardPage() {
     <div className="max-w-4xl mx-auto px-6 py-8">
       {/* Welcome Section */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-white mb-2 font-display">
+        <h1 className="text-3xl font-bold text-gray-900 mb-2 font-display">
           Welcome to AceInterview!
         </h1>
-        <p className="text-white/60">Ready to get started?</p>
+        <p className="text-gray-500">Ready to get started?</p>
       </div>
 
       {/* Based on your recent practice */}
       <section className="mb-8">
-        <h2 className="text-lg font-semibold text-white mb-4">
+        <h2 className="text-lg font-semibold text-gray-900 mb-4">
           Based on your recent practice
         </h2>
-        <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-8">
+        <div className="bg-white rounded-xl border border-gray-200 p-8">
           {loading ? (
             <div className="flex flex-col items-center justify-center py-8">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#d4af37] mb-4"></div>
-              <p className="text-white/50">Loading...</p>
+              <p className="text-gray-400">Loading...</p>
             </div>
           ) : sessions.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-8">
               <svg
-                className="w-12 h-12 text-white/30 mb-4"
+                className="w-12 h-12 text-gray-300 mb-4"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -106,10 +106,10 @@ export default function DashboardPage() {
                 <circle cx="11" cy="11" r="8" />
                 <line x1="21" y1="21" x2="16.65" y2="16.65" />
               </svg>
-              <h3 className="text-lg font-semibold text-white mb-2">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 Hmmm, no activity.
               </h3>
-              <p className="text-white/50 text-center mb-4 max-w-md">
+              <p className="text-gray-400 text-center mb-4 max-w-md">
                 We&apos;ll suggest personalized questions based on your practice
                 history. Begin by exploring the question bank.
               </p>
@@ -129,7 +129,7 @@ export default function DashboardPage() {
                   <Link
                     key={session.id}
                     href={`/session/${session.id}`}
-                    className="flex items-center justify-between p-4 rounded-lg bg-[#152238] hover:bg-[#1c3a5c] transition-colors"
+                    className="flex items-center justify-between p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors"
                   >
                     <div className="flex items-center gap-4">
                       <div className="w-10 h-10 rounded-lg bg-[#d4af37]/10 flex items-center justify-center">
@@ -144,7 +144,7 @@ export default function DashboardPage() {
                         </svg>
                       </div>
                       <div>
-                        <div className="font-medium text-white text-sm">
+                        <div className="font-medium text-gray-900 text-sm">
                           {session.question_title}
                         </div>
                         <div className="flex items-center gap-2 mt-1">
@@ -157,7 +157,7 @@ export default function DashboardPage() {
                             {QUESTION_TYPE_LABELS[questionType] ||
                               session.question_type}
                           </span>
-                          <span className="text-xs text-white/40">
+                          <span className="text-xs text-gray-400">
                             {formatDate(session.created_at)}
                           </span>
                         </div>
@@ -188,13 +188,13 @@ export default function DashboardPage() {
 
       {/* Pick back up */}
       <section className="mb-8">
-        <h2 className="text-lg font-semibold text-white mb-4">Pick back up</h2>
-        <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-8">
+        <h2 className="text-lg font-semibold text-gray-900 mb-4">Pick back up</h2>
+        <div className="bg-white rounded-xl border border-gray-200 p-8">
           <div className="flex flex-col items-center justify-center py-4">
-            <h3 className="text-lg font-semibold text-white mb-2">
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
               Nothing in progress
             </h3>
-            <p className="text-white/50 text-center mb-4">
+            <p className="text-gray-400 text-center mb-4">
               Practice sessions you&apos;ve started will show up here.
             </p>
             <Link
@@ -209,16 +209,16 @@ export default function DashboardPage() {
 
       {/* Quick access to tracks */}
       <section>
-        <h2 className="text-lg font-semibold text-white mb-4">
+        <h2 className="text-lg font-semibold text-gray-900 mb-4">
           Browse by track
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Link
             href="/dashboard/consulting"
-            className="group bg-[#1a2d47] rounded-xl border border-white/10 p-6 hover:border-blue-500/50 transition-all"
+            className="group bg-white rounded-xl border border-gray-200 p-6 hover:border-blue-500/50 transition-all"
           >
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center group-hover:scale-110 transition-transform">
                 <svg
                   className="w-6 h-6 text-blue-400"
                   viewBox="0 0 24 24"
@@ -232,20 +232,20 @@ export default function DashboardPage() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">
+                <h3 className="font-semibold text-gray-900 group-hover:text-blue-400 transition-colors">
                   Consulting
                 </h3>
-                <p className="text-sm text-white/50">MBB & Big 4 case interviews</p>
+                <p className="text-sm text-gray-400">MBB & Big 4 case interviews</p>
               </div>
             </div>
           </Link>
 
           <Link
             href="/dashboard/pm"
-            className="group bg-[#1a2d47] rounded-xl border border-white/10 p-6 hover:border-violet-500/50 transition-all"
+            className="group bg-white rounded-xl border border-gray-200 p-6 hover:border-violet-500/50 transition-all"
           >
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-violet-500/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center group-hover:scale-110 transition-transform">
                 <svg
                   className="w-6 h-6 text-violet-400"
                   viewBox="0 0 24 24"
@@ -259,10 +259,10 @@ export default function DashboardPage() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-white group-hover:text-violet-400 transition-colors">
+                <h3 className="font-semibold text-gray-900 group-hover:text-violet-400 transition-colors">
                   Product Management
                 </h3>
-                <p className="text-sm text-white/50">FAANG & tech company PMs</p>
+                <p className="text-sm text-gray-400">FAANG & tech company PMs</p>
               </div>
             </div>
           </Link>
