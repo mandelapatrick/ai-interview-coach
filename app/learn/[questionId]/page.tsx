@@ -39,10 +39,10 @@ export default async function LearnPage({
         <div className="max-w-6xl mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             <Link
-              href={`/company/${question.companySlug}`}
+              href={`/dashboard/questions?track=${question.track}`}
               className="text-sm text-[#d4af37] hover:text-[#f4d03f] transition-colors"
             >
-              ← Back to {company?.name}
+              ← Back to Question Bank
             </Link>
             <div className="flex items-center gap-3">
               <span className="px-2 py-1 text-xs font-medium rounded-full bg-violet-400/10 text-violet-400">

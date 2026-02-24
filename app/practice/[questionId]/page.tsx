@@ -39,10 +39,10 @@ export default async function PracticePage({
         <div className="max-w-6xl mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             <Link
-              href={`/company/${question.companySlug}`}
+              href={`/dashboard/questions?track=${question.track}`}
               className="text-sm text-[#d4af37] hover:text-[#f4d03f] transition-colors"
             >
-              ← Back to {company?.name}
+              ← Back to Question Bank
             </Link>
             <span className="text-sm text-white/50">
               {typeLabel}

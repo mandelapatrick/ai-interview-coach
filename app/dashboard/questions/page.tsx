@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { questions as consultingQuestions } from "@/data/questions";
 import { pmQuestions } from "@/data/pm-questions";
 import { companies, pmCompanies } from "@/data/companies";
@@ -25,14 +26,23 @@ const consultingTypes = Object.keys(QUESTION_TYPE_LABELS) as QuestionType[];
 const pmTypes = Object.keys(PM_QUESTION_TYPE_LABELS) as PMQuestionType[];
 
 export default function QuestionBankPage() {
+  const searchParams = useSearchParams();
+  const trackFromUrl = searchParams.get("track") as InterviewTrack | null;
+
   const [search, setSearch] = useState("");
-  const [trackFilter, setTrackFilter] = useState<InterviewTrack | "all">("all");
   const [companyFilter, setCompanyFilter] = useState<string>("all");
   const [typeFilter, setTypeFilter] = useState<string>("all");
 
+  // Track is determined by URL param
+  const trackFilter = trackFromUrl || "product-management";
+
+  // Get page title based on track
+  const pageTitle = trackFilter === "consulting"
+    ? "Consulting Question Bank"
+    : "Product Management Question Bank";
+
   // Filter companies based on selected track
   const filteredCompanies = useMemo(() => {
-    if (trackFilter === "all") return allCompanies;
     return allCompanies.filter((c) => c.track === trackFilter);
   }, [trackFilter]);
 
@@ -40,22 +50,9 @@ export default function QuestionBankPage() {
   const availableTypes = useMemo(() => {
     if (trackFilter === "consulting") {
       return consultingTypes.map((t) => ({ value: t, label: QUESTION_TYPE_LABELS[t] }));
-    } else if (trackFilter === "product-management") {
-      return pmTypes.map((t) => ({ value: t, label: PM_QUESTION_TYPE_LABELS[t] }));
     }
-    // All tracks - combine both
-    return [
-      ...consultingTypes.map((t) => ({ value: t, label: QUESTION_TYPE_LABELS[t] })),
-      ...pmTypes.filter((t) => t !== "execution").map((t) => ({ value: t, label: PM_QUESTION_TYPE_LABELS[t] })),
-    ];
+    return pmTypes.map((t) => ({ value: t, label: PM_QUESTION_TYPE_LABELS[t] }));
   }, [trackFilter]);
-
-  // Reset company and type filter when track changes
-  const handleTrackChange = (newTrack: InterviewTrack | "all") => {
-    setTrackFilter(newTrack);
-    setCompanyFilter("all");
-    setTypeFilter("all");
-  };
 
   // Filter questions
   const filteredQuestions = useMemo(() => {
@@ -71,8 +68,8 @@ export default function QuestionBankPage() {
         }
       }
 
-      // Track filter
-      if (trackFilter !== "all" && q.track !== trackFilter) {
+      // Track filter - always filter by selected track
+      if (q.track !== trackFilter) {
         return false;
       }
 
@@ -126,18 +123,18 @@ export default function QuestionBankPage() {
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-white mb-2 font-display">
-          Question Bank
+          {pageTitle}
         </h1>
         <p className="text-white/60">
-          Browse and practice interview questions from top companies.
+          Browse and practice {trackFilter === "consulting" ? "consulting" : "product management"} interview questions from top companies.
         </p>
       </div>
 
       {/* Filters */}
       <div className="bg-[#1a2d47] rounded-xl border border-white/10 p-4 mb-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Search */}
-          <div className="md:col-span-4">
+          <div className="md:col-span-3">
             <div className="relative">
               <input
                 type="text"
@@ -157,20 +154,6 @@ export default function QuestionBankPage() {
                 <line x1="21" y1="21" x2="16.65" y2="16.65" />
               </svg>
             </div>
-          </div>
-
-          {/* Track Filter */}
-          <div>
-            <label className="block text-sm text-white/50 mb-1.5">Track</label>
-            <select
-              value={trackFilter}
-              onChange={(e) => handleTrackChange(e.target.value as InterviewTrack | "all")}
-              className="w-full bg-[#152238] border border-white/10 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#d4af37]/50 appearance-none cursor-pointer"
-            >
-              <option value="all">All Tracks</option>
-              <option value="consulting">Consulting</option>
-              <option value="product-management">Product Management</option>
-            </select>
           </div>
 
           {/* Company Filter */}
@@ -275,16 +258,6 @@ export default function QuestionBankPage() {
                           className={`text-xs px-2 py-0.5 rounded-full ${getTypeColor(question)}`}
                         >
                           {getTypeLabel(question)}
-                        </span>
-                        <span className="text-white/20">•</span>
-                        <span
-                          className={`text-xs px-2 py-0.5 rounded-full ${
-                            question.track === "consulting"
-                              ? "text-blue-400 bg-blue-400/10"
-                              : "text-violet-400 bg-violet-400/10"
-                          }`}
-                        >
-                          {question.track === "consulting" ? "Consulting" : "PM"}
                         </span>
                       </div>
                     </div>

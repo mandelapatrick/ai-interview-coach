@@ -4,10 +4,16 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+interface SubMenuItem {
+  name: string;
+  href: string;
+}
+
 interface NavItem {
   name: string;
   href: string;
   icon: React.ReactNode;
+  subItems?: SubMenuItem[];
 }
 
 interface SidebarProps {
@@ -37,6 +43,10 @@ const navItems: NavItem[] = [
         <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
       </svg>
     ),
+    subItems: [
+      { name: "Product Management", href: "/dashboard/questions?track=product-management" },
+      { name: "Consulting", href: "/dashboard/questions?track=consulting" },
+    ],
   },
   {
     name: "History",
@@ -112,6 +122,69 @@ export default function Sidebar({ user }: SidebarProps) {
         <ul className="space-y-1 px-2">
           {navItems.map((item) => {
             const active = isActive(item.href);
+            const hasSubItems = item.subItems && item.subItems.length > 0;
+
+            if (hasSubItems) {
+              return (
+                <li key={item.href} className="relative group">
+                  <div
+                    className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all cursor-pointer ${
+                      active
+                        ? "bg-[#1a2d47] text-[#d4af37]"
+                        : "text-white/60 hover:bg-[#1a2d47] hover:text-white"
+                    } ${collapsed ? "justify-center" : ""}`}
+                    title={collapsed ? item.name : undefined}
+                  >
+                    <span className={active ? "text-[#d4af37]" : ""}>
+                      {item.icon}
+                    </span>
+                    {!collapsed && (
+                      <>
+                        <span className="font-medium flex-1">{item.name}</span>
+                        <svg
+                          className="w-4 h-4 text-white/40"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <polyline points="9 18 15 12 9 6" />
+                        </svg>
+                      </>
+                    )}
+                  </div>
+                  {/* Sub-menu */}
+                  <div className={`absolute ${collapsed ? "left-full top-0" : "left-full top-0"} ml-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50`}>
+                    <div className="bg-[#152238] border border-white/10 rounded-xl py-2 min-w-[200px] shadow-xl">
+                      {item.subItems!.map((subItem) => (
+                        <Link
+                          key={subItem.href}
+                          href={subItem.href}
+                          className="flex items-center gap-3 px-4 py-2.5 text-white/70 hover:bg-[#1a2d47] hover:text-white transition-all"
+                        >
+                          <svg
+                            className="w-4 h-4 text-[#d4af37]"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                          </svg>
+                          <span className="font-medium">{subItem.name}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </li>
+              );
+            }
+
             return (
               <li key={item.href}>
                 <Link
