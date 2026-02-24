@@ -17,8 +17,9 @@ export default async function DashboardLayout({
     <div className="min-h-screen bg-[#0f172a]">
       <Sidebar user={session?.user} />
 
-      {/* Main content area with left margin for sidebar */}
-      <div className="transition-all duration-300 ml-16 lg:ml-56">
+      {/* Main content area — full width on mobile (sidebar becomes a drawer),
+          offset by sidebar width on desktop */}
+      <div className="transition-all duration-300 pt-14 md:pt-0 md:ml-16 lg:ml-56">
         {/* Page content */}
         <main>{children}</main>
       </div>
