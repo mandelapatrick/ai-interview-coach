@@ -44,10 +44,7 @@ export default function InterviewModeSelector({
           onClick={() => onSelectMode("video")}
           className="group relative flex flex-col items-center p-8 bg-white rounded-2xl border border-[#d4af37]/30 hover:border-[#d4af37] transition-all hover:shadow-lg hover:shadow-[#d4af37]/20"
         >
-          <div className="absolute -top-3 -right-3 px-3 py-1 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white text-xs font-bold rounded-full">
-            NEW
-          </div>
-          <div className="w-16 h-16 rounded-full bg-[#d4af37]/10 flex items-center justify-center mb-4 group-hover:from-[#d4af37]/30 group-hover:to-[#f4d03f]/20 transition-colors">
+<div className="w-16 h-16 rounded-full bg-[#d4af37]/10 flex items-center justify-center mb-4 group-hover:from-[#d4af37]/30 group-hover:to-[#f4d03f]/20 transition-colors">
             <VideoIcon className="w-8 h-8 text-[#d4af37]" />
           </div>
           <h3 className="text-lg font-semibold text-gray-900 mb-2">
