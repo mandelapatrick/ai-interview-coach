@@ -35,7 +35,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
   switch (flowState) {
     case "intro":
       return (
-        <div className="h-full flex items-center justify-center p-8">
+        <div className="min-h-full flex items-center justify-center p-8">
           <div className="max-w-2xl text-center">
             <div className="mb-6">
               <div className="w-20 h-20 mx-auto bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4">
