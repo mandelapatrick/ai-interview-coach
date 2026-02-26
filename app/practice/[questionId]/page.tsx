@@ -60,7 +60,7 @@ export default async function PracticePage({
       </div>
 
       {/* Practice Flow (Mode Selection → Lobby → Session) */}
-      <div className="flex-1 w-full min-h-0 overflow-hidden">
+      <div className="flex-1 w-full min-h-0 overflow-y-auto">
         <PracticeFlow question={question} />
       </div>
     </div>

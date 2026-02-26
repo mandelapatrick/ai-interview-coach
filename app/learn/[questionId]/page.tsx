@@ -65,7 +65,7 @@ export default async function LearnPage({
       </div>
 
       {/* Learn Flow (Intro → Watching → Paused → Summary) */}
-      <div className="flex-1 w-full min-h-0 overflow-hidden">
+      <div className="flex-1 w-full min-h-0 overflow-y-auto">
         <LearnFlow question={question} />
       </div>
     </div>
