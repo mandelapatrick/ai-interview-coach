@@ -214,7 +214,7 @@ export default function DashboardPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Link
-            href="/dashboard/consulting"
+            href="/dashboard/questions?track=consulting"
             className="group bg-white rounded-xl border border-gray-200 p-6 hover:border-blue-500/50 transition-all"
           >
             <div className="flex items-center gap-4">
@@ -241,7 +241,7 @@ export default function DashboardPage() {
           </Link>
 
           <Link
-            href="/dashboard/pm"
+            href="/dashboard/questions?track=product-management"
             className="group bg-white rounded-xl border border-gray-200 p-6 hover:border-violet-500/50 transition-all"
           >
             <div className="flex items-center gap-4">
