@@ -61,23 +61,6 @@ export default function InterviewModeSelector({
           </div>
         </button>
       </div>
-
-      {/* Alternative Models */}
-      <div className="mt-6 w-full max-w-md">
-        <p className="text-xs text-gray-500 text-center mb-3">Alternative models</p>
-        <button
-          onClick={() => onSelectMode("audio-xai")}
-          className="w-full flex items-center gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-gray-300 transition-all"
-        >
-          <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center">
-            <MicrophoneIcon className="w-5 h-5 text-gray-500" />
-          </div>
-          <div className="text-left">
-            <h4 className="text-sm font-medium text-gray-900">Audio Interview (Grok)</h4>
-            <p className="text-xs text-gray-600">Alternative model powered by X.AI</p>
-          </div>
-        </button>
-      </div>
     </div>
   );
 }
