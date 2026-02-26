@@ -147,13 +147,13 @@ export default function Sidebar({ user }: SidebarProps) {
                   active
                     ? "bg-[#d4af37]/10 text-[#d4af37]"
                     : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
-                } ${collapsed ? "justify-center" : ""}`}
+                }`}
                 title={collapsed ? item.name : undefined}
               >
-                <span className={active ? "text-[#d4af37]" : ""}>{item.icon}</span>
+                <span className={`flex items-center min-h-[24px] flex-shrink-0 ${active ? "text-[#d4af37]" : ""}`}>{item.icon}</span>
                 {!collapsed && (
                   <>
-                    <span className="font-medium flex-1">{item.name}</span>
+                    <span className="font-medium flex-1 whitespace-nowrap">{item.name}</span>
                     <svg className="w-4 h-4 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <polyline points="9 18 15 12 9 6" />
                     </svg>
@@ -187,11 +187,11 @@ export default function Sidebar({ user }: SidebarProps) {
                 active
                   ? "bg-[#d4af37]/10 text-[#d4af37]"
                   : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
-              } ${collapsed ? "justify-center" : ""}`}
+              }`}
               title={collapsed ? item.name : undefined}
             >
-              <span className={active ? "text-[#d4af37]" : ""}>{item.icon}</span>
-              {!collapsed && <span className="font-medium">{item.name}</span>}
+              <span className={`flex items-center min-h-[24px] flex-shrink-0 ${active ? "text-[#d4af37]" : ""}`}>{item.icon}</span>
+              {!collapsed && <span className="font-medium whitespace-nowrap">{item.name}</span>}
             </Link>
           </li>
         );
@@ -249,13 +249,13 @@ export default function Sidebar({ user }: SidebarProps) {
     <>
       {/* ===== DESKTOP SIDEBAR (hidden on mobile) ===== */}
       <aside
-        className={`hidden md:flex fixed left-0 top-0 h-screen bg-white border-r border-gray-200 flex-col transition-all duration-300 z-50 ${
+        className={`hidden md:flex fixed left-0 top-0 h-screen bg-white border-r border-gray-200 flex-col transition-all duration-300 z-50 overflow-hidden ${
           collapsed ? "w-16" : "w-56"
         }`}
       >
         {/* Logo */}
-        <div className={`p-4 border-b border-gray-200 ${collapsed ? "px-3" : ""}`}>
-          <Link href="/dashboard" className="flex items-center gap-2">
+        <div className="p-4 border-b border-gray-200">
+          <Link href="/dashboard" className="flex items-center gap-2 min-h-[32px]">
             <LogoMark />
             {!collapsed && (
               <span className="text-lg font-bold text-gray-900 whitespace-nowrap">
@@ -272,11 +272,9 @@ export default function Sidebar({ user }: SidebarProps) {
 
         {/* User Profile */}
         {user && (
-          <div className={`px-2 pb-2 ${collapsed ? "px-2" : ""}`}>
+          <div className="px-2 pb-2">
             <div
-              className={`flex items-center gap-3 px-3 py-2.5 rounded-lg bg-gray-50 ${
-                collapsed ? "justify-center" : ""
-              }`}
+              className="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-gray-50 min-h-[56px]"
             >
               <UserAvatar user={user} />
               {!collapsed && (
@@ -302,9 +300,7 @@ export default function Sidebar({ user }: SidebarProps) {
         <div className="p-4 border-t border-gray-200">
           <button
             onClick={toggleCollapsed}
-            className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-400 hover:bg-gray-100 hover:text-gray-900 transition-all w-full ${
-              collapsed ? "justify-center" : ""
-            }`}
+            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-gray-400 hover:bg-gray-100 hover:text-gray-900 transition-all w-full"
             title={collapsed ? "Expand sidebar" : "Collapse sidebar"}
           >
             <svg
@@ -319,7 +315,7 @@ export default function Sidebar({ user }: SidebarProps) {
               <polyline points="11 17 6 12 11 7" />
               <polyline points="18 17 13 12 18 7" />
             </svg>
-            {!collapsed && <span className="font-medium">Collapse</span>}
+            {!collapsed && <span className="font-medium whitespace-nowrap">Collapse</span>}
           </button>
         </div>
       </aside>
