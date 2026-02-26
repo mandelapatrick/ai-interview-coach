@@ -237,7 +237,7 @@ export default function QuestionBankPage() {
                 key={question.id}
                 className="bg-white rounded-xl border border-gray-200 p-4 hover:border-gray-300 transition-all"
               >
-                <div className="flex items-start justify-between gap-4">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
                   <div className="flex items-start gap-4 flex-1 min-w-0">
                     {/* Company Logo */}
                     <div className="w-10 h-10 rounded-lg bg-gray-50 flex items-center justify-center flex-shrink-0 overflow-hidden">
@@ -277,16 +277,16 @@ export default function QuestionBankPage() {
                   </div>
 
                   {/* Practice & Learn Buttons */}
-                  <div className="flex flex-col gap-2 flex-shrink-0">
+                  <div className="flex flex-row gap-2 sm:flex-col sm:flex-shrink-0">
                     <Link
                       href={`/practice/${question.id}`}
-                      className="px-4 py-2 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-lg font-medium text-sm hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all text-center"
+                      className="flex-1 sm:flex-none px-4 py-2 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-lg font-medium text-sm hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all text-center"
                     >
                       Practice
                     </Link>
                     <Link
                       href={`/learn/${question.id}`}
-                      className="px-4 py-2 border border-[#d4af37] text-[#d4af37] rounded-lg font-medium text-sm hover:bg-[#d4af37]/10 transition-all text-center"
+                      className="flex-1 sm:flex-none px-4 py-2 border border-[#d4af37] text-[#d4af37] rounded-lg font-medium text-sm hover:bg-[#d4af37]/10 transition-all text-center"
                     >
                       Learn
                     </Link>
