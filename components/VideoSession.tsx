@@ -674,7 +674,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
   const isLoading = avatar.isConnecting || (!avatar.isInitialized && !avatar.error);
 
   return (
-    <div className="flex h-full bg-gray-50">
+    <div className="flex flex-col md:flex-row h-full bg-gray-50">
       {/* Hidden canvas for video compositing/recording */}
       <canvas
         ref={canvasRef}
@@ -683,10 +683,10 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
         height={720}
       />
 
-      {/* Main Video Area - Left Side */}
-      <div className="flex-1 relative">
+      {/* Main Video Area - Top on mobile, Left on desktop */}
+      <div className="flex-1 relative min-h-0">
         {/* Avatar Video (Main) */}
-        <div className="absolute inset-0 bg-gray-900 rounded-2xl overflow-hidden m-2">
+        <div className="absolute inset-0 bg-gray-900 rounded-2xl overflow-hidden m-1 md:m-2">
           {/* Loading overlay */}
           {isLoading && (
             <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-gray-900">
@@ -723,8 +723,29 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
             onError={(e) => console.error("Avatar video error:", e)}
           />
 
-          {/* Interviewer Label - Top Left */}
-          <div className="absolute top-4 left-4 flex items-center gap-2 px-3 py-1.5 bg-black/50 rounded-lg backdrop-blur-sm">
+          {/* Mobile-only top bar: Timer + End Interview button */}
+          <div className="absolute top-3 left-3 right-3 flex items-center justify-between md:hidden z-10">
+            <div className="flex items-center gap-2 px-3 py-1.5 bg-black/50 rounded-lg backdrop-blur-sm">
+              {avatar.isTalking && (
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+              )}
+              <span className="text-white text-sm font-medium">Interviewer</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-white font-mono text-sm font-semibold bg-black/50 px-3 py-1.5 rounded-lg backdrop-blur-sm">
+                {formatTime(duration)}
+              </span>
+              <button
+                onClick={handleEnd}
+                className="px-3 py-1.5 bg-[#d4af37] hover:bg-[#b8972e] text-white rounded-lg font-medium transition-colors text-sm"
+              >
+                End
+              </button>
+            </div>
+          </div>
+
+          {/* Interviewer Label - Top Left (desktop only) */}
+          <div className="absolute top-4 left-4 hidden md:flex items-center gap-2 px-3 py-1.5 bg-black/50 rounded-lg backdrop-blur-sm">
             {avatar.isTalking && (
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
             )}
@@ -732,7 +753,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
           </div>
 
           {/* User Video (PiP) - Bottom Right */}
-          <div className="absolute bottom-6 right-6 w-56 h-40 bg-gray-800 rounded-xl overflow-hidden shadow-xl border-2 border-gray-600">
+          <div className="absolute bottom-2 right-2 md:bottom-6 md:right-6 w-28 h-20 md:w-56 md:h-40 bg-gray-800 rounded-xl overflow-hidden shadow-xl border-2 border-gray-600">
             {isVideoEnabled ? (
               <video
                 ref={userVideoRef}
@@ -796,8 +817,8 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
         </div>
       </div>
 
-      {/* Right Sidebar */}
-      <div className="w-[360px] h-full max-h-[calc(100vh-170px)] bg-white flex flex-col border-l border-gray-200 overflow-hidden">
+      {/* Right Sidebar - hidden on mobile, full sidebar on desktop */}
+      <div className="hidden md:flex flex-shrink-0 md:w-[360px] md:h-full md:max-h-[calc(100vh-170px)] bg-white flex-col border-l border-gray-200 overflow-hidden">
         {/* Header - Company & Timer */}
         <div className="p-4 border-b border-gray-100 flex-shrink-0">
           <div className="flex items-start justify-between">
