@@ -46,7 +46,7 @@ export default function QuestionBankPage() {
 
   // Filter companies based on selected track
   const filteredCompanies = useMemo(() => {
-    return allCompanies.filter((c) => c.track === trackFilter);
+    return allCompanies.filter((c) => c.track === trackFilter && c.questionCount >= 6);
   }, [trackFilter]);
 
   // Get question types based on selected track
@@ -56,6 +56,11 @@ export default function QuestionBankPage() {
     }
     return pmTypes.map((t) => ({ value: t, label: PM_QUESTION_TYPE_LABELS[t] }));
   }, [trackFilter]);
+
+  // Set of valid company slugs (companies with 6+ questions)
+  const validCompanySlugs = useMemo(() => {
+    return new Set(filteredCompanies.map((c) => c.slug));
+  }, [filteredCompanies]);
 
   // Filter questions
   const filteredQuestions = useMemo(() => {
@@ -76,6 +81,11 @@ export default function QuestionBankPage() {
         return false;
       }
 
+      // Hide questions from companies with fewer than 6 questions
+      if (!validCompanySlugs.has(q.companySlug)) {
+        return false;
+      }
+
       // Company filter
       if (companyFilter !== "all" && q.companySlug !== companyFilter) {
         return false;
@@ -88,7 +98,7 @@ export default function QuestionBankPage() {
 
       return true;
     });
-  }, [search, trackFilter, companyFilter, typeFilter]);
+  }, [search, trackFilter, companyFilter, typeFilter, validCompanySlugs]);
 
   const getTypeColor = (question: Question) => {
     if (question.track === "consulting") {

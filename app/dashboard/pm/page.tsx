@@ -36,7 +36,7 @@ export default function PMDashboardPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {pmCompanies
-            .filter((company) => company.questionCount >= 5)
+            .filter((company) => company.questionCount >= 6)
             .sort((a, b) => b.questionCount - a.questionCount)
             .map((company) => (
             <Link
