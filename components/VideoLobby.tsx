@@ -194,8 +194,8 @@ export default function VideoLobby({ onJoin, onBack }: VideoLobbyProps) {
   }
 
   return (
-    <div className="flex items-center justify-center h-full min-h-[calc(100vh-200px)] px-4 lg:px-8">
-      <div className="flex flex-col lg:flex-row items-center lg:items-center gap-8 lg:gap-16 w-full max-w-5xl">
+    <div className="flex items-start lg:items-center justify-center py-8 lg:py-0 min-h-[calc(100vh-200px)] px-4 lg:px-8">
+      <div className="flex flex-col lg:flex-row items-center lg:items-center gap-6 lg:gap-16 w-full max-w-5xl">
         {/* Left side - Video Preview */}
         <div className="flex flex-col items-center flex-1 w-full lg:max-w-[600px]">
           {/* Video Container */}
@@ -251,12 +251,12 @@ export default function VideoLobby({ onJoin, onBack }: VideoLobbyProps) {
           </div>
 
           {/* Device Selectors - pill buttons below video */}
-          <div className="flex flex-wrap items-center justify-center gap-2 mt-4">
+          <div className="flex flex-wrap items-center justify-center gap-2 mt-4 w-full">
             <div className="relative">
               <select
                 value={selectedMicrophone}
                 onChange={(e) => setSelectedMicrophone(e.target.value)}
-                className="appearance-none pl-8 pr-6 py-2 bg-transparent text-gray-700 text-sm rounded-full border border-gray-300 hover:bg-gray-50 focus:outline-none focus:border-gray-400 cursor-pointer"
+                className="appearance-none pl-8 pr-6 py-2 bg-transparent text-gray-700 text-sm rounded-full border border-gray-300 hover:bg-gray-50 focus:outline-none focus:border-gray-400 cursor-pointer max-w-[150px] sm:max-w-none"
               >
                 {microphones.map((mic) => (
                   <option key={mic.deviceId} value={mic.deviceId} className="bg-white text-gray-900">
@@ -272,7 +272,7 @@ export default function VideoLobby({ onJoin, onBack }: VideoLobbyProps) {
               <select
                 value={selectedCamera}
                 onChange={(e) => setSelectedCamera(e.target.value)}
-                className="appearance-none pl-8 pr-6 py-2 bg-transparent text-gray-700 text-sm rounded-full border border-gray-300 hover:bg-gray-50 focus:outline-none focus:border-gray-400 cursor-pointer"
+                className="appearance-none pl-8 pr-6 py-2 bg-transparent text-gray-700 text-sm rounded-full border border-gray-300 hover:bg-gray-50 focus:outline-none focus:border-gray-400 cursor-pointer max-w-[150px] sm:max-w-none"
               >
                 {cameras.map((camera) => (
                   <option key={camera.deviceId} value={camera.deviceId} className="bg-white text-gray-900">
