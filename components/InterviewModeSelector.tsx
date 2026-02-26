@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-
 interface InterviewModeSelectorProps {
   onSelectMode: (mode: "audio" | "audio-xai" | "video") => void;
 }
@@ -9,8 +7,6 @@ interface InterviewModeSelectorProps {
 export default function InterviewModeSelector({
   onSelectMode,
 }: InterviewModeSelectorProps) {
-  const [showAdvanced, setShowAdvanced] = useState(false);
-
   return (
     <div className="flex flex-col items-center justify-center min-h-[60vh] px-4">
       <h2 className="text-2xl font-bold text-gray-900 mb-2 font-display">
@@ -40,7 +36,6 @@ export default function InterviewModeSelector({
             <div className="px-4 py-2 bg-gray-50 rounded-full text-sm text-gray-600">
               Microphone only
             </div>
-            <span className="text-xs text-gray-600">Powered by Kimi K2</span>
           </div>
         </button>
 
@@ -49,10 +44,7 @@ export default function InterviewModeSelector({
           onClick={() => onSelectMode("video")}
           className="group relative flex flex-col items-center p-8 bg-white rounded-2xl border border-[#d4af37]/30 hover:border-[#d4af37] transition-all hover:shadow-lg hover:shadow-[#d4af37]/20"
         >
-          <div className="absolute -top-3 -right-3 px-3 py-1 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white text-xs font-bold rounded-full">
-            NEW
-          </div>
-          <div className="w-16 h-16 rounded-full bg-[#d4af37]/10 flex items-center justify-center mb-4 group-hover:from-[#d4af37]/30 group-hover:to-[#f4d03f]/20 transition-colors">
+<div className="w-16 h-16 rounded-full bg-[#d4af37]/10 flex items-center justify-center mb-4 group-hover:from-[#d4af37]/30 group-hover:to-[#f4d03f]/20 transition-colors">
             <VideoIcon className="w-8 h-8 text-[#d4af37]" />
           </div>
           <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -66,37 +58,9 @@ export default function InterviewModeSelector({
             <div className="px-4 py-2 bg-gray-50 rounded-full text-sm text-[#d4af37]">
               Camera + Microphone
             </div>
-            <span className="text-xs text-gray-600">Powered by Kimi K2</span>
           </div>
         </button>
       </div>
-
-      {/* Advanced Options Toggle */}
-      <button
-        onClick={() => setShowAdvanced(!showAdvanced)}
-        className="mt-6 text-sm text-gray-600 hover:text-gray-700 transition-colors flex items-center gap-1"
-      >
-        {showAdvanced ? "Hide" : "Show"} alternative models
-        <ChevronIcon className={`w-4 h-4 transition-transform ${showAdvanced ? "rotate-180" : ""}`} />
-      </button>
-
-      {/* Advanced Options */}
-      {showAdvanced && (
-        <div className="mt-4 w-full max-w-md">
-          <button
-            onClick={() => onSelectMode("audio-xai")}
-            className="w-full flex items-center gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-gray-300 transition-all"
-          >
-            <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center">
-              <MicrophoneIcon className="w-5 h-5 text-gray-500" />
-            </div>
-            <div className="text-left">
-              <h4 className="text-sm font-medium text-gray-900">Audio Interview (Grok)</h4>
-              <p className="text-xs text-gray-600">Alternative model powered by X.AI</p>
-            </div>
-          </button>
-        </div>
-      )}
     </div>
   );
 }
@@ -137,20 +101,3 @@ function VideoIcon({ className }: { className?: string }) {
   );
 }
 
-function ChevronIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M19 9l-7 7-7-7"
-      />
-    </svg>
-  );
-}
