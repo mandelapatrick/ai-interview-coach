@@ -2,14 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import {
-  QUESTION_TYPE_LABELS,
-  PM_QUESTION_TYPE_LABELS,
-  TYPE_COLORS_DARK,
-  PM_TYPE_COLORS_DARK,
-  QuestionType,
-  PMQuestionType,
-} from "@/types";
 
 interface SessionWithAssessment {
   id: string;
@@ -59,8 +51,6 @@ export default function HistoryPage() {
       month: "short",
       day: "numeric",
       year: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
     });
   };
 
@@ -74,26 +64,6 @@ export default function HistoryPage() {
     if (score >= 4) return "text-green-400";
     if (score >= 3) return "text-[#d4af37]";
     return "text-red-400";
-  };
-
-  const getTypeColor = (questionType: string) => {
-    if (TYPE_COLORS_DARK[questionType as QuestionType]) {
-      return TYPE_COLORS_DARK[questionType as QuestionType];
-    }
-    if (PM_TYPE_COLORS_DARK[questionType as PMQuestionType]) {
-      return PM_TYPE_COLORS_DARK[questionType as PMQuestionType];
-    }
-    return "text-gray-600 bg-gray-400/10";
-  };
-
-  const getTypeLabel = (questionType: string) => {
-    if (QUESTION_TYPE_LABELS[questionType as QuestionType]) {
-      return QUESTION_TYPE_LABELS[questionType as QuestionType];
-    }
-    if (PM_QUESTION_TYPE_LABELS[questionType as PMQuestionType]) {
-      return PM_QUESTION_TYPE_LABELS[questionType as PMQuestionType];
-    }
-    return questionType;
   };
 
   // Calculate stats
@@ -177,27 +147,24 @@ export default function HistoryPage() {
         <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-gray-50 border-b border-gray-200">
+              <thead className="border-b border-gray-200">
                 <tr>
-                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-600 uppercase tracking-wider">
+                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-500 tracking-wider">
                     Question
                   </th>
-                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-600 uppercase tracking-wider">
-                    Type
-                  </th>
-                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-600 uppercase tracking-wider">
+                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-500 tracking-wider">
                     Duration
                   </th>
-                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-600 uppercase tracking-wider">
-                    Score
-                  </th>
-                  <th className="text-center px-6 py-3 text-xs font-medium text-gray-600 uppercase tracking-wider">
-                    Recording
-                  </th>
-                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-600 uppercase tracking-wider">
+                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-500 tracking-wider">
                     Date
                   </th>
-                  <th className="text-right px-6 py-3 text-xs font-medium text-gray-600 uppercase tracking-wider">
+                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-500 tracking-wider">
+                    Score
+                  </th>
+                  <th className="text-center px-6 py-3 text-xs font-medium text-gray-500 tracking-wider">
+                    Recording
+                  </th>
+                  <th className="text-right px-6 py-3 text-xs font-medium text-gray-500 tracking-wider">
                     Action
                   </th>
                 </tr>
@@ -205,7 +172,6 @@ export default function HistoryPage() {
               <tbody className="divide-y divide-gray-200">
                 {sessions.map((session) => {
                   const assessment = session.assessments?.[0];
-                  const questionType = session.question_type;
                   const hasAssessment = !!assessment;
 
                   return (
@@ -219,44 +185,62 @@ export default function HistoryPage() {
                         (window.location.href = `/session/${session.id}`)
                       }
                     >
+                      {/* Question */}
                       <td className="px-6 py-4">
                         <div className="font-medium text-gray-900">
                           {session.question_title}
                         </div>
                       </td>
-                      <td className="px-6 py-4">
-                        <span
-                          className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${getTypeColor(
-                            questionType
-                          )}`}
-                        >
-                          {getTypeLabel(questionType)}
-                        </span>
-                      </td>
+                      {/* Duration */}
                       <td className="px-6 py-4 text-gray-600">
                         {formatDuration(session.duration_seconds)}
                       </td>
+                      {/* Date */}
+                      <td className="px-6 py-4 text-gray-600 text-sm">
+                        {formatDate(session.created_at)}
+                      </td>
+                      {/* Score - circular progress ring */}
                       <td className="px-6 py-4">
                         {assessment && assessment.overall_score != null ? (
-                          <span
-                            className={`font-semibold ${getScoreColor(
-                              assessment.overall_score
-                            )}`}
-                          >
-                            {assessment.overall_score.toFixed(1)}/5
-                          </span>
+                          <div className="flex items-center gap-2">
+                            <svg width="24" height="24" viewBox="0 0 24 24" className="shrink-0">
+                              <circle
+                                cx="12"
+                                cy="12"
+                                r="10"
+                                fill="none"
+                                stroke="#e5e7eb"
+                                strokeWidth="3"
+                              />
+                              <circle
+                                cx="12"
+                                cy="12"
+                                r="10"
+                                fill="none"
+                                stroke="#f59e0b"
+                                strokeWidth="3"
+                                strokeLinecap="round"
+                                strokeDasharray={`${(assessment.overall_score / 5) * 62.83} 62.83`}
+                                transform="rotate(-90 12 12)"
+                              />
+                            </svg>
+                            <span className="text-sm font-medium text-gray-700">
+                              {Math.round(assessment.overall_score)}/5
+                            </span>
+                          </div>
                         ) : (
                           <span className="text-gray-500">-</span>
                         )}
                       </td>
+                      {/* Recording */}
                       <td className="px-6 py-4 text-center">
                         {session.video_recording_url ? (
                           <span
-                            className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#d4af37]/10"
+                            className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-teal-50"
                             title="Recording available"
                           >
                             <svg
-                              className="w-4 h-4 text-[#d4af37]"
+                              className="w-4 h-4 text-teal-500"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke="currentColor"
@@ -273,28 +257,20 @@ export default function HistoryPage() {
                           <span className="text-gray-400">-</span>
                         )}
                       </td>
-                      <td className="px-6 py-4 text-gray-600 text-sm">
-                        {formatDate(session.created_at)}
-                      </td>
+                      {/* Action - Practice link */}
                       <td className="px-6 py-4 text-right">
-                        <div className="flex items-center justify-end gap-3">
-                          {hasAssessment && (
-                            <Link
-                              href={`/session/${session.id}`}
-                              onClick={(e) => e.stopPropagation()}
-                              className="text-gray-500 hover:text-gray-900 text-sm font-medium transition-colors"
-                            >
-                              View
-                            </Link>
-                          )}
-                          <Link
-                            href={`/practice/${session.question_id}`}
-                            onClick={(e) => e.stopPropagation()}
-                            className="text-[#d4af37] hover:text-[#f4d03f] text-sm font-medium transition-colors"
-                          >
-                            Practice Again
-                          </Link>
-                        </div>
+                        <Link
+                          href={`/practice/${session.question_id}`}
+                          onClick={(e) => e.stopPropagation()}
+                          className="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 text-sm font-medium transition-colors"
+                        >
+                          Practice
+                          <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-teal-50">
+                            <svg className="w-3.5 h-3.5 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </span>
+                        </Link>
                       </td>
                     </tr>
                   );
