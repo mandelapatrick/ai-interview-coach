@@ -5,9 +5,9 @@ import { QUESTION_TYPE_LABELS, PM_QUESTION_TYPE_LABELS, PMQuestionType } from "@
 import LearnFlow from "@/components/LearnFlow";
 
 const DIFFICULTY_COLORS_DARK: Record<string, string> = {
-  easy: "text-green-400 bg-green-400/10",
+  easy: "text-green-600 bg-green-400/10",
   medium: "text-[#d4af37] bg-[#d4af37]/10",
-  hard: "text-red-400 bg-red-400/10",
+  hard: "text-red-600 bg-red-400/10",
 };
 
 export default async function LearnPage({
@@ -45,10 +45,10 @@ export default async function LearnPage({
               ← Back to Question Bank
             </Link>
             <div className="flex items-center gap-3">
-              <span className="px-2 py-1 text-xs font-medium rounded-full bg-violet-400/10 text-violet-400">
+              <span className="px-2 py-1 text-xs font-medium rounded-full bg-violet-400/10 text-violet-600">
                 Learn Mode
               </span>
-              <span className="text-sm text-gray-400">
+              <span className="text-sm text-gray-600">
                 {typeLabel}
               </span>
             </div>

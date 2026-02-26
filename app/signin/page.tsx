@@ -20,7 +20,7 @@ export default function SignInPage() {
         <h1 className="text-2xl font-bold text-gray-900 text-center mb-2 font-display">
           Welcome back
         </h1>
-        <p className="text-gray-500 text-center mb-8">
+        <p className="text-gray-600 text-center mb-8">
           Sign in to continue practicing
         </p>
 
@@ -56,7 +56,7 @@ export default function SignInPage() {
           </button>
         </form>
 
-        <p className="mt-6 text-center text-sm text-gray-400">
+        <p className="mt-6 text-center text-sm text-gray-600">
           By signing in, you agree to our Terms and Privacy Policy.
         </p>
       </div>

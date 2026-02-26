@@ -29,7 +29,7 @@ export default function CompanyCard({ company }: { company: Company }) {
             <h3 className="text-base font-semibold text-gray-900 group-hover:text-[#d4af37] transition-colors line-clamp-1">
               {company.name}
             </h3>
-            <span className="text-sm text-gray-400 whitespace-nowrap ml-2">
+            <span className="text-sm text-gray-600 whitespace-nowrap ml-2">
               {company.questionCount} questions
             </span>
           </div>
@@ -39,7 +39,7 @@ export default function CompanyCard({ company }: { company: Company }) {
             {company.categories.slice(0, 3).map((category) => (
               <span
                 key={category}
-                className="text-xs px-2 py-1 bg-gray-50 text-gray-500 rounded border border-gray-200"
+                className="text-xs px-2 py-1 bg-gray-50 text-gray-600 rounded border border-gray-200"
               >
                 {category}
               </span>

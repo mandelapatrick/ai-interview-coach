@@ -87,7 +87,7 @@ function PulsingCircle({ isActive, isSpeaking }: { isActive: boolean; isSpeaking
 // Status Badge Component
 function StatusBadge({ status }: { status: "idle" | "connecting" | "listening" | "speaking" }) {
   const configs = {
-    idle: { text: "Ready", bg: "bg-gray-100", textColor: "text-gray-400" },
+    idle: { text: "Ready", bg: "bg-gray-100", textColor: "text-gray-600" },
     connecting: { text: "Connecting...", bg: "bg-[#d4af37]/20", textColor: "text-[#d4af37]" },
     listening: { text: "Listening", bg: "bg-[#d4af37]/20", textColor: "text-[#d4af37]" },
     speaking: { text: "Speaking", bg: "bg-[#d4af37]", textColor: "text-white" },
@@ -418,13 +418,13 @@ export default function AnamAudioSession({ question }: AnamAudioSessionProps) {
           </div>
           <div className="flex-1 overflow-y-auto p-4 space-y-3">
             {!isSessionStarted && !isLoading && (
-              <div className="text-center text-gray-400 py-8">
+              <div className="text-center text-gray-600 py-8">
                 <p>Your conversation will appear here.</p>
               </div>
             )}
 
             {isLoading && (
-              <div className="text-center text-gray-400 py-8">
+              <div className="text-center text-gray-600 py-8">
                 <div className="flex items-center justify-center gap-2">
                   <LoadingSpinner />
                   <span>Connecting...</span>
@@ -491,7 +491,7 @@ function TranscriptBubble({ entry }: { entry: TranscriptEntry }) {
             : "bg-white text-gray-800 border border-gray-100"
         }`}
       >
-        <div className={`text-xs mb-1 font-medium ${isUser ? "text-white/70" : "text-gray-400"}`}>
+        <div className={`text-xs mb-1 font-medium ${isUser ? "text-white/70" : "text-gray-600"}`}>
           {isUser ? "You" : "AI Interviewer"}
         </div>
         <p className="whitespace-pre-wrap text-sm leading-relaxed">{entry.text}</p>

@@ -27,7 +27,7 @@ export default async function LandingPage() {
           </div>
           <Link
             href="/api/auth/signin"
-            className="text-sm text-gray-500 hover:text-[#d4af37] transition-colors"
+            className="text-sm text-gray-600 hover:text-[#d4af37] transition-colors"
           >
             Sign In
           </Link>
@@ -46,7 +46,7 @@ export default async function LandingPage() {
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 text-balance font-display">
             Master Your <span className="text-[#d4af37]">Case Interview</span>
           </h1>
-          <p className="text-xl text-gray-500 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Practice case interviews with an AI interviewer that adapts to your skill level.
             Get instant feedback and improve faster.
           </p>
@@ -56,7 +56,7 @@ export default async function LandingPage() {
           >
             Start Practicing Free
           </Link>
-          <p className="mt-4 text-sm text-gray-400">
+          <p className="mt-4 text-sm text-gray-600">
             No credit card required
           </p>
         </div>
@@ -65,10 +65,10 @@ export default async function LandingPage() {
       {/* Company logos */}
       <section className="border-y border-gray-200 py-8 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
-          <p className="text-center text-gray-400 text-sm uppercase tracking-wider mb-6">Prepare for top consulting firms</p>
+          <p className="text-center text-gray-600 text-sm uppercase tracking-wider mb-6">Prepare for top consulting firms</p>
           <div className="flex justify-center items-center gap-8 md:gap-12 flex-wrap">
             {['McKinsey', 'BCG', 'Bain', 'Deloitte', 'Accenture'].map((firm) => (
-              <span key={firm} className="text-gray-400 font-semibold text-lg">{firm}</span>
+              <span key={firm} className="text-gray-500 font-semibold text-lg">{firm}</span>
             ))}
           </div>
         </div>
@@ -80,7 +80,7 @@ export default async function LandingPage() {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-4 font-display">
             Why AceInterview?
           </h2>
-          <p className="text-center text-gray-500 mb-12 max-w-xl mx-auto">
+          <p className="text-center text-gray-600 mb-12 max-w-xl mx-auto">
             Everything you need to ace your consulting case interview
           </p>
           <div className="grid md:grid-cols-3 gap-8">
@@ -161,7 +161,7 @@ export default async function LandingPage() {
 
       {/* Footer */}
       <footer className="border-t border-gray-200 py-8 bg-white">
-        <div className="max-w-6xl mx-auto px-4 text-center text-gray-400 text-sm">
+        <div className="max-w-6xl mx-auto px-4 text-center text-gray-600 text-sm">
           © 2025 AceInterview.ai. All rights reserved.
         </div>
       </footer>
@@ -184,7 +184,7 @@ function FeatureCard({
         {icon}
       </div>
       <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-500">{description}</p>
+      <p className="text-gray-600">{description}</p>
     </div>
   );
 }
@@ -204,7 +204,7 @@ function StepCard({
         {number}
       </div>
       <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-500">{description}</p>
+      <p className="text-gray-600">{description}</p>
     </div>
   );
 }

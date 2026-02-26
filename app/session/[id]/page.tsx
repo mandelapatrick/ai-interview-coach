@@ -169,7 +169,7 @@ export default function SessionDetailPage() {
           >
             ← Back to History
           </Link>
-          <span className="text-sm text-gray-400">
+          <span className="text-sm text-gray-600">
             {formatDate(session.created_at)}
           </span>
         </div>
@@ -193,7 +193,7 @@ export default function SessionDetailPage() {
               {QUESTION_TYPE_LABELS[session.question_type as QuestionType] || session.question_type}
             </span>
             {company && (
-              <span className="text-gray-400 text-sm">{company.name}</span>
+              <span className="text-gray-600 text-sm">{company.name}</span>
             )}
           </div>
         </div>
@@ -220,7 +220,7 @@ export default function SessionDetailPage() {
                   </video>
                 </div>
                 <div className="flex items-center justify-between mt-3">
-                  <p className="text-gray-400 text-sm">
+                  <p className="text-gray-600 text-sm">
                     Watch your interview recording to review your performance.
                   </p>
                   <a
@@ -247,7 +247,7 @@ export default function SessionDetailPage() {
                   <ScoreRing score={assessment.overall_score} />
                   <div className="text-4xl font-bold text-[#d4af37]">
                     {assessment.overall_score.toFixed(1)}
-                    <span className="text-lg text-gray-400">/5</span>
+                    <span className="text-lg text-gray-600">/5</span>
                   </div>
                 </div>
               </div>
@@ -359,7 +359,7 @@ export default function SessionDetailPage() {
                 <div className="space-y-4 max-h-96 overflow-y-auto">
                   {transcript.map((entry, i) => (
                     <div key={i}>
-                      <div className="text-xs font-medium text-gray-400 mb-1">
+                      <div className="text-xs font-medium text-gray-600 mb-1">
                         {entry.role === "user" ? "You" : "AI Interviewer"}
                       </div>
                       <p
@@ -396,7 +396,7 @@ export default function SessionDetailPage() {
         ) : (
           <div className="text-center py-12 bg-white rounded-xl border border-gray-200">
             <p className="text-gray-500 mb-4">No assessment available for this session.</p>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-600 text-sm">
               Assessments are generated when you complete an interview practice session.
             </p>
           </div>
@@ -408,20 +408,20 @@ export default function SessionDetailPage() {
 
 function getTypeColor(type: QuestionType): string {
   const colors: Record<QuestionType, string> = {
-    profitability: "text-blue-400 bg-blue-400/10",
-    "market-entry": "text-purple-400 bg-purple-400/10",
-    "market-sizing": "text-cyan-400 bg-cyan-400/10",
-    "m&a": "text-orange-400 bg-orange-400/10",
-    operations: "text-gray-400 bg-gray-400/10",
-    "growth-strategy": "text-emerald-400 bg-emerald-400/10",
-    pricing: "text-pink-400 bg-pink-400/10",
-    "competitive-response": "text-indigo-400 bg-indigo-400/10",
-    brainteasers: "text-yellow-400 bg-yellow-400/10",
-    turnarounds: "text-red-400 bg-red-400/10",
-    "strategic-decision": "text-teal-400 bg-teal-400/10",
-    "industry-analysis": "text-slate-400 bg-slate-400/10",
+    profitability: "text-blue-600 bg-blue-400/10",
+    "market-entry": "text-purple-600 bg-purple-400/10",
+    "market-sizing": "text-cyan-600 bg-cyan-400/10",
+    "m&a": "text-orange-600 bg-orange-400/10",
+    operations: "text-gray-600 bg-gray-400/10",
+    "growth-strategy": "text-emerald-600 bg-emerald-400/10",
+    pricing: "text-pink-600 bg-pink-400/10",
+    "competitive-response": "text-indigo-600 bg-indigo-400/10",
+    brainteasers: "text-yellow-600 bg-yellow-400/10",
+    turnarounds: "text-red-600 bg-red-400/10",
+    "strategic-decision": "text-teal-600 bg-teal-400/10",
+    "industry-analysis": "text-slate-600 bg-slate-400/10",
   };
-  return colors[type] || "text-gray-400 bg-gray-400/10";
+  return colors[type] || "text-gray-600 bg-gray-400/10";
 }
 
 function ScoreRing({ score }: { score: number }) {
@@ -471,7 +471,7 @@ function ScoreItem({ label, score, weight }: { label: string; score: number; wei
     <div className={`flex items-center justify-between p-3 rounded-lg border ${getColor(score)}`}>
       <div>
         <span className="text-sm font-medium">{label}</span>
-        <span className="text-xs text-gray-400 ml-1">({weight})</span>
+        <span className="text-xs text-gray-600 ml-1">({weight})</span>
       </div>
       <span className="font-bold">{score}/5</span>
     </div>

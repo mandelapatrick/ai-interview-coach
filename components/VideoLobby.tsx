@@ -296,7 +296,7 @@ export default function VideoLobby({ onJoin, onBack }: VideoLobbyProps) {
             Ready to join?
           </h2>
 
-          <p className="text-gray-400 text-sm mb-6">
+          <p className="text-gray-600 text-sm mb-6">
             Your interview will begin when you click join
           </p>
 

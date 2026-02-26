@@ -162,7 +162,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
                     </div>
                   ))
                 ) : (
-                  <p className="text-gray-400 text-center py-4">
+                  <p className="text-gray-600 text-center py-4">
                     No transcript available.
                   </p>
                 )}

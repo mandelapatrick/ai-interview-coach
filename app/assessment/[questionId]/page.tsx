@@ -253,7 +253,7 @@ export default function AssessmentPage() {
           <div className="text-center py-12">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#d4af37] mx-auto mb-4"></div>
             <p className="text-gray-600">Analyzing your performance with AI...</p>
-            <p className="text-sm text-gray-400 mt-2">This may take a few seconds</p>
+            <p className="text-sm text-gray-600 mt-2">This may take a few seconds</p>
           </div>
         ) : error ? (
           <div className="text-center py-12 bg-white rounded-xl border border-gray-200">
@@ -296,7 +296,7 @@ export default function AssessmentPage() {
                     Your browser does not support the video tag.
                   </video>
                 </div>
-                <p className="text-gray-400 text-sm mt-2">
+                <p className="text-gray-600 text-sm mt-2">
                   Watch your interview recording to review your performance.
                 </p>
               </div>
@@ -312,7 +312,7 @@ export default function AssessmentPage() {
                   <ScoreRing score={assessment.overallScore} />
                   <div className="text-4xl font-bold text-[#d4af37]">
                     {assessment.overallScore.toFixed(1)}
-                    <span className="text-lg text-gray-400">/5</span>
+                    <span className="text-lg text-gray-600">/5</span>
                   </div>
                 </div>
               </div>
@@ -422,7 +422,7 @@ export default function AssessmentPage() {
               <div className="space-y-4 max-h-96 overflow-y-auto">
                 {sessionData.transcript.map((entry, i) => (
                   <div key={i}>
-                    <div className="text-xs font-medium text-gray-400 mb-1">
+                    <div className="text-xs font-medium text-gray-600 mb-1">
                       {entry.role === "user" ? "You" : "AI Interviewer"}
                     </div>
                     <p
@@ -508,7 +508,7 @@ function ScoreItem({ label, score, weight }: { label: string; score: number; wei
     <div className={`flex items-center justify-between p-3 rounded-lg border ${getColor(score)}`}>
       <div>
         <span className="text-sm font-medium">{label}</span>
-        <span className="text-xs text-gray-400 ml-1">({weight})</span>
+        <span className="text-xs text-gray-600 ml-1">({weight})</span>
       </div>
       <span className="font-bold">{score}/5</span>
     </div>

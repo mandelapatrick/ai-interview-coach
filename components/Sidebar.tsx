@@ -146,7 +146,7 @@ export default function Sidebar({ user }: SidebarProps) {
                 className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all cursor-pointer ${
                   active
                     ? "bg-[#d4af37]/10 text-[#d4af37]"
-                    : "text-gray-500 hover:bg-gray-100 hover:text-gray-900"
+                    : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
                 } ${collapsed ? "justify-center" : ""}`}
                 title={collapsed ? item.name : undefined}
               >
@@ -186,7 +186,7 @@ export default function Sidebar({ user }: SidebarProps) {
               className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all ${
                 active
                   ? "bg-[#d4af37]/10 text-[#d4af37]"
-                  : "text-gray-500 hover:bg-gray-100 hover:text-gray-900"
+                  : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
               } ${collapsed ? "justify-center" : ""}`}
               title={collapsed ? item.name : undefined}
             >
@@ -213,7 +213,7 @@ export default function Sidebar({ user }: SidebarProps) {
               className={`flex items-center gap-3 px-3 py-3 rounded-lg transition-all ${
                 active
                   ? "bg-[#d4af37]/10 text-[#d4af37]"
-                  : "text-gray-500 hover:bg-gray-100 hover:text-gray-900"
+                  : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
               }`}
             >
               <span className={active ? "text-[#d4af37]" : ""}>{item.icon}</span>
@@ -229,7 +229,7 @@ export default function Sidebar({ user }: SidebarProps) {
                       className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm transition-all ${
                         pathname.startsWith(subItem.href.split("?")[0]) && pathname.includes(subItem.href.split("?")[1] ?? "")
                           ? "text-[#d4af37]"
-                          : "text-gray-400 hover:text-gray-900 hover:bg-gray-100"
+                          : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
                       }`}
                     >
                       <BookIcon />
@@ -287,7 +287,7 @@ export default function Sidebar({ user }: SidebarProps) {
                   <form action="/api/auth/signout" method="POST">
                     <button
                       type="submit"
-                      className="text-xs text-gray-400 hover:text-[#d4af37] transition-colors"
+                      className="text-xs text-gray-600 hover:text-[#d4af37] transition-colors"
                     >
                       Sign out
                     </button>

@@ -75,40 +75,40 @@ const companyInitials: Record<string, string> = {
 };
 
 const DIFFICULTY_COLORS_DARK: Record<Difficulty, string> = {
-  easy: "text-green-400 bg-green-400/10",
+  easy: "text-green-600 bg-green-400/10",
   medium: "text-[#d4af37] bg-[#d4af37]/10",
-  hard: "text-red-400 bg-red-400/10",
+  hard: "text-red-600 bg-red-400/10",
 };
 
 const FREQUENCY_COLORS_DARK: Record<Frequency, string> = {
-  high: "text-red-400 bg-red-400/10",
-  medium: "text-orange-400 bg-orange-400/10",
-  low: "text-green-400 bg-green-400/10",
+  high: "text-red-600 bg-red-400/10",
+  medium: "text-orange-600 bg-orange-400/10",
+  low: "text-green-600 bg-green-400/10",
 };
 
 const CONSULTING_TYPE_COLORS_DARK: Record<QuestionType, string> = {
-  profitability: "text-blue-400 bg-blue-400/10",
-  "market-entry": "text-purple-400 bg-purple-400/10",
-  "market-sizing": "text-cyan-400 bg-cyan-400/10",
-  "m&a": "text-orange-400 bg-orange-400/10",
-  operations: "text-gray-400 bg-gray-400/10",
-  "growth-strategy": "text-emerald-400 bg-emerald-400/10",
-  pricing: "text-pink-400 bg-pink-400/10",
-  "competitive-response": "text-indigo-400 bg-indigo-400/10",
-  brainteasers: "text-yellow-400 bg-yellow-400/10",
-  turnarounds: "text-red-400 bg-red-400/10",
-  "strategic-decision": "text-teal-400 bg-teal-400/10",
-  "industry-analysis": "text-slate-400 bg-slate-400/10",
+  profitability: "text-blue-600 bg-blue-400/10",
+  "market-entry": "text-purple-600 bg-purple-400/10",
+  "market-sizing": "text-cyan-600 bg-cyan-400/10",
+  "m&a": "text-orange-600 bg-orange-400/10",
+  operations: "text-gray-600 bg-gray-400/10",
+  "growth-strategy": "text-emerald-600 bg-emerald-400/10",
+  pricing: "text-pink-600 bg-pink-400/10",
+  "competitive-response": "text-indigo-600 bg-indigo-400/10",
+  brainteasers: "text-yellow-600 bg-yellow-400/10",
+  turnarounds: "text-red-600 bg-red-400/10",
+  "strategic-decision": "text-teal-600 bg-teal-400/10",
+  "industry-analysis": "text-slate-600 bg-slate-400/10",
 };
 
 const PM_TYPE_COLORS_DARK: Record<PMQuestionType, string> = {
-  "product-sense": "text-violet-400 bg-violet-400/10",
-  "analytical-thinking": "text-emerald-400 bg-emerald-400/10",
-  behavioral: "text-amber-400 bg-amber-400/10",
-  technical: "text-blue-400 bg-blue-400/10",
-  execution: "text-emerald-400 bg-emerald-400/10",
-  strategy: "text-rose-400 bg-rose-400/10",
-  estimation: "text-indigo-400 bg-indigo-400/10",
+  "product-sense": "text-violet-600 bg-violet-400/10",
+  "analytical-thinking": "text-emerald-600 bg-emerald-400/10",
+  behavioral: "text-amber-600 bg-amber-400/10",
+  technical: "text-blue-600 bg-blue-400/10",
+  execution: "text-emerald-600 bg-emerald-400/10",
+  strategy: "text-rose-600 bg-rose-400/10",
+  estimation: "text-indigo-600 bg-indigo-400/10",
 };
 
 const ALL_TYPE_COLORS_DARK: Record<AllQuestionTypes, string> = {
@@ -248,7 +248,7 @@ export default function CompanyQuestionsPage() {
               <option value="low">Low Frequency</option>
             </select>
 
-            <span className="text-sm text-gray-400">
+            <span className="text-sm text-gray-600">
               {filteredQuestions.length} questions
             </span>
           </div>
@@ -261,7 +261,7 @@ export default function CompanyQuestionsPage() {
           <table className="w-full">
             <thead className="bg-gray-50 border-b border-gray-200">
               <tr>
-                <th className="text-left px-6 py-3 text-xs font-medium text-gray-400 uppercase tracking-wider">
+                <th className="text-left px-6 py-3 text-xs font-medium text-gray-600 uppercase tracking-wider">
                   Title
                 </th>
                 <th className="text-left px-6 py-3 text-xs font-medium text-gray-400 uppercase tracking-wider w-28">
@@ -280,7 +280,7 @@ export default function CompanyQuestionsPage() {
                 <tr key={question.id} className="hover:bg-gray-100">
                   <td className="px-6 py-4">
                     <div className="font-medium text-gray-900">{question.title}</div>
-                    <div className="text-sm text-gray-400 mt-1">{question.description}</div>
+                    <div className="text-sm text-gray-600 mt-1">{question.description}</div>
                   </td>
                   <td className="px-6 py-4 w-28">
                     {question.frequency ? (
@@ -288,7 +288,7 @@ export default function CompanyQuestionsPage() {
                         {FREQUENCY_LABELS[question.frequency]}
                       </span>
                     ) : (
-                      <span className="text-gray-300 text-xs">—</span>
+                      <span className="text-gray-500 text-xs">—</span>
                     )}
                   </td>
                   <td className="px-6 py-4 w-40">
@@ -318,7 +318,7 @@ export default function CompanyQuestionsPage() {
           </table>
 
           {filteredQuestions.length === 0 && (
-            <div className="px-6 py-12 text-center text-gray-400">
+            <div className="px-6 py-12 text-center text-gray-600">
               No questions match your filters.
             </div>
           )}

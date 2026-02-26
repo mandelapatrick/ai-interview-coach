@@ -82,7 +82,7 @@ export default function ClarifyingQuestionModal({
 
           {/* Example questions */}
           <div className="mt-4">
-            <p className="text-xs text-gray-400 mb-2">Example questions:</p>
+            <p className="text-xs text-gray-600 mb-2">Example questions:</p>
             <div className="flex flex-wrap gap-2">
               {exampleQuestions.map((example, idx) => (
                 <button

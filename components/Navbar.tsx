@@ -35,7 +35,7 @@ export default async function Navbar() {
         <div className="flex items-center gap-4">
           {session?.user && (
             <>
-              <span className="text-sm text-gray-500 hidden sm:inline">
+              <span className="text-sm text-gray-600 hidden sm:inline">
                 {session.user.name}
               </span>
               {session.user.image && (
@@ -48,7 +48,7 @@ export default async function Navbar() {
               <form action={handleSignOut}>
                 <button
                   type="submit"
-                  className="text-sm text-gray-400 hover:text-[#d4af37] transition-colors"
+                  className="text-sm text-gray-600 hover:text-[#d4af37] transition-colors"
                 >
                   Sign out
                 </button>

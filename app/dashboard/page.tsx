@@ -18,24 +18,24 @@ interface SessionWithAssessment {
 }
 
 const TYPE_COLORS: Record<string, string> = {
-  profitability: "text-blue-400 bg-blue-400/10",
-  "market-entry": "text-purple-400 bg-purple-400/10",
-  "market-sizing": "text-cyan-400 bg-cyan-400/10",
-  "m&a": "text-orange-400 bg-orange-400/10",
-  operations: "text-gray-400 bg-gray-400/10",
-  "growth-strategy": "text-emerald-400 bg-emerald-400/10",
-  pricing: "text-pink-400 bg-pink-400/10",
-  "competitive-response": "text-indigo-400 bg-indigo-400/10",
-  brainteasers: "text-yellow-400 bg-yellow-400/10",
-  turnarounds: "text-red-400 bg-red-400/10",
-  "strategic-decision": "text-teal-400 bg-teal-400/10",
-  "industry-analysis": "text-slate-400 bg-slate-400/10",
-  "product-sense": "text-violet-400 bg-violet-400/10",
-  "analytical-thinking": "text-emerald-400 bg-emerald-400/10",
-  behavioral: "text-amber-400 bg-amber-400/10",
-  technical: "text-blue-400 bg-blue-400/10",
-  strategy: "text-rose-400 bg-rose-400/10",
-  estimation: "text-indigo-400 bg-indigo-400/10",
+  profitability: "text-blue-600 bg-blue-400/10",
+  "market-entry": "text-purple-600 bg-purple-400/10",
+  "market-sizing": "text-cyan-600 bg-cyan-400/10",
+  "m&a": "text-orange-600 bg-orange-400/10",
+  operations: "text-gray-600 bg-gray-400/10",
+  "growth-strategy": "text-emerald-600 bg-emerald-400/10",
+  pricing: "text-pink-600 bg-pink-400/10",
+  "competitive-response": "text-indigo-600 bg-indigo-400/10",
+  brainteasers: "text-yellow-600 bg-yellow-400/10",
+  turnarounds: "text-red-600 bg-red-400/10",
+  "strategic-decision": "text-teal-600 bg-teal-400/10",
+  "industry-analysis": "text-slate-600 bg-slate-400/10",
+  "product-sense": "text-violet-600 bg-violet-400/10",
+  "analytical-thinking": "text-emerald-600 bg-emerald-400/10",
+  behavioral: "text-amber-600 bg-amber-400/10",
+  technical: "text-blue-600 bg-blue-400/10",
+  strategy: "text-rose-600 bg-rose-400/10",
+  estimation: "text-indigo-600 bg-indigo-400/10",
 };
 
 export default function DashboardPage() {
@@ -80,7 +80,7 @@ export default function DashboardPage() {
         <h1 className="text-3xl font-bold text-gray-900 mb-2 font-display">
           Welcome to AceInterview!
         </h1>
-        <p className="text-gray-500">Ready to get started?</p>
+        <p className="text-gray-600">Ready to get started?</p>
       </div>
 
       {/* Based on your recent practice */}
@@ -92,12 +92,12 @@ export default function DashboardPage() {
           {loading ? (
             <div className="flex flex-col items-center justify-center py-8">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#d4af37] mb-4"></div>
-              <p className="text-gray-400">Loading...</p>
+              <p className="text-gray-600">Loading...</p>
             </div>
           ) : sessions.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-8">
               <svg
-                className="w-12 h-12 text-gray-300 mb-4"
+                className="w-12 h-12 text-gray-500 mb-4"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -109,7 +109,7 @@ export default function DashboardPage() {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 Hmmm, no activity.
               </h3>
-              <p className="text-gray-400 text-center mb-4 max-w-md">
+              <p className="text-gray-600 text-center mb-4 max-w-md">
                 We&apos;ll suggest personalized questions based on your practice
                 history. Begin by exploring the question bank.
               </p>
@@ -157,7 +157,7 @@ export default function DashboardPage() {
                             {QUESTION_TYPE_LABELS[questionType] ||
                               session.question_type}
                           </span>
-                          <span className="text-xs text-gray-400">
+                          <span className="text-xs text-gray-600">
                             {formatDate(session.created_at)}
                           </span>
                         </div>
@@ -194,7 +194,7 @@ export default function DashboardPage() {
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
               Nothing in progress
             </h3>
-            <p className="text-gray-400 text-center mb-4">
+            <p className="text-gray-600 text-center mb-4">
               Practice sessions you&apos;ve started will show up here.
             </p>
             <Link
@@ -235,7 +235,7 @@ export default function DashboardPage() {
                 <h3 className="font-semibold text-gray-900 group-hover:text-blue-400 transition-colors">
                   Consulting
                 </h3>
-                <p className="text-sm text-gray-400">MBB & Big 4 case interviews</p>
+                <p className="text-sm text-gray-600">MBB & Big 4 case interviews</p>
               </div>
             </div>
           </Link>
@@ -262,7 +262,7 @@ export default function DashboardPage() {
                 <h3 className="font-semibold text-gray-900 group-hover:text-violet-400 transition-colors">
                   Product Management
                 </h3>
-                <p className="text-sm text-gray-400">FAANG & tech company PMs</p>
+                <p className="text-sm text-gray-600">FAANG & tech company PMs</p>
               </div>
             </div>
           </Link>

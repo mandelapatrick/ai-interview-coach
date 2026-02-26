@@ -814,7 +814,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
                 </div>
               )}
               <div>
-                <div className="text-sm text-gray-500">{company?.name}</div>
+                <div className="text-sm text-gray-600">{company?.name}</div>
                 <h2 className="font-semibold text-gray-900 text-sm leading-tight">{question.title}</h2>
               </div>
             </div>
@@ -826,7 +826,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
           </div>
 
           {/* Description */}
-          <p className="mt-3 text-xs text-gray-500 line-clamp-2">
+          <p className="mt-3 text-xs text-gray-600 line-clamp-2">
             {question.description}
           </p>
         </div>
@@ -834,7 +834,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
         {/* Exhibits Section */}
         {question.additionalInfoImages && question.additionalInfoImages.length > 0 && (
           <div className="p-4 border-b border-gray-100 flex-shrink-0">
-            <h3 className="text-xs font-medium text-gray-500 uppercase tracking-wider mb-3">Exhibits</h3>
+            <h3 className="text-xs font-medium text-gray-600 uppercase tracking-wider mb-3">Exhibits</h3>
             <div className="flex gap-2">
               {question.additionalInfoImages.map((_, index) => (
                 <button
@@ -851,7 +851,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
             <button
               onClick={handleGetHint}
               disabled={isLoadingHint || hintCount >= 3}
-              className="mt-3 w-full py-2 text-sm text-gray-500 hover:text-gray-700 flex items-center justify-center gap-1.5 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="mt-3 w-full py-2 text-sm text-gray-600 hover:text-gray-700 flex items-center justify-center gap-1.5 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoadingHint ? (
                 <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
@@ -874,7 +874,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
             <button
               onClick={handleGetHint}
               disabled={isLoadingHint || hintCount >= 3}
-              className="w-full py-2 text-sm text-gray-500 hover:text-gray-700 flex items-center justify-center gap-1.5 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full py-2 text-sm text-gray-600 hover:text-gray-700 flex items-center justify-center gap-1.5 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoadingHint ? (
                 <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
@@ -915,7 +915,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
               </div>
             ))}
             {transcript.length === 0 && (
-              <p className="text-gray-400 text-sm text-center py-8">
+              <p className="text-gray-600 text-sm text-center py-8">
                 Conversation will appear here...
               </p>
             )}
@@ -925,7 +925,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
         {/* Bottom Controls */}
         <div className="p-4 border-t border-gray-100 flex-shrink-0">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2 text-sm text-gray-500">
+            <div className="flex items-center gap-2 text-sm text-gray-600">
               <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
               Recording in progress
             </div>

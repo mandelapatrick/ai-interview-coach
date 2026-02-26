@@ -103,13 +103,13 @@ export default function VoiceSession({ question }: VoiceSessionProps) {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
               </span>
-              <span className="text-sm text-gray-500">Recording</span>
+              <span className="text-sm text-gray-600">Recording</span>
             </div>
           )}
           {isSpeaking && (
             <div className="flex items-center gap-2">
               <span className="text-[#d4af37]">🔊</span>
-              <span className="text-sm text-gray-500">AI Speaking</span>
+              <span className="text-sm text-gray-600">AI Speaking</span>
             </div>
           )}
         </div>
@@ -121,14 +121,14 @@ export default function VoiceSession({ question }: VoiceSessionProps) {
       {/* Transcript Area */}
       <div className="flex-1 overflow-y-auto p-6 space-y-4">
         {transcript.length === 0 && !isRecording && (
-          <div className="text-center text-gray-400 py-12">
+          <div className="text-center text-gray-600 py-12">
             <p>Click &quot;Start Interview&quot; to begin your practice session.</p>
             <p className="text-sm mt-2">Make sure your microphone is ready.</p>
           </div>
         )}
 
         {transcript.length === 0 && isRecording && (
-          <div className="text-center text-gray-500 py-12">
+          <div className="text-center text-gray-600 py-12">
             <div className="animate-pulse">
               <p>Connecting to AI interviewer...</p>
               <p className="text-sm mt-2">The interview will begin shortly.</p>
@@ -240,7 +240,7 @@ function TranscriptBubble({ entry }: { entry: TranscriptEntry }) {
             : "bg-white text-gray-900 border border-gray-200"
         }`}
       >
-        <div className={`text-xs mb-1 ${isUser ? "text-white/80" : "text-gray-400"}`}>
+        <div className={`text-xs mb-1 ${isUser ? "text-white/80" : "text-gray-600"}`}>
           {isUser ? "You" : "AI Interviewer"}
         </div>
         <p className="whitespace-pre-wrap">{entry.text}</p>

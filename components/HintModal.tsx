@@ -78,7 +78,7 @@ export default function HintModal({ hint, hintNumber, onClose }: HintModalProps)
 
         {/* Hint usage note */}
         {hintNumber >= 3 && (
-          <p className="text-xs text-gray-400 text-center mt-3">
+          <p className="text-xs text-gray-600 text-center mt-3">
             Maximum hints reached for this session
           </p>
         )}

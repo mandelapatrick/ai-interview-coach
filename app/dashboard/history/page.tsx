@@ -83,7 +83,7 @@ export default function HistoryPage() {
     if (PM_TYPE_COLORS_DARK[questionType as PMQuestionType]) {
       return PM_TYPE_COLORS_DARK[questionType as PMQuestionType];
     }
-    return "text-gray-400 bg-gray-400/10";
+    return "text-gray-600 bg-gray-400/10";
   };
 
   const getTypeLabel = (questionType: string) => {
@@ -122,26 +122,26 @@ export default function HistoryPage() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
         <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
           <div className="text-3xl font-bold text-gray-900">{totalSessions}</div>
-          <div className="text-sm text-gray-400">Total Sessions</div>
+          <div className="text-sm text-gray-600">Total Sessions</div>
         </div>
         <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
           <div className={`text-3xl font-bold ${getScoreColor(avgScore)}`}>
             {avgScore > 0 ? avgScore.toFixed(1) : "-"}
           </div>
-          <div className="text-sm text-gray-400">Average Score</div>
+          <div className="text-sm text-gray-600">Average Score</div>
         </div>
         <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
           <div className="text-3xl font-bold text-[#d4af37]">
             {Math.floor(totalTime / 60)}m
           </div>
-          <div className="text-sm text-gray-400">Total Practice Time</div>
+          <div className="text-sm text-gray-600">Total Practice Time</div>
         </div>
       </div>
 
       {loading ? (
         <div className="text-center py-12">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#d4af37] mx-auto mb-4"></div>
-          <p className="text-gray-400">Loading history...</p>
+          <p className="text-gray-600">Loading history...</p>
         </div>
       ) : sessions.length === 0 ? (
         <div className="text-center py-12 bg-white rounded-xl border border-gray-200">
@@ -179,25 +179,25 @@ export default function HistoryPage() {
             <table className="w-full">
               <thead className="bg-gray-50 border-b border-gray-200">
                 <tr>
-                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-400 uppercase tracking-wider">
+                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-600 uppercase tracking-wider">
                     Question
                   </th>
-                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-400 uppercase tracking-wider">
+                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-600 uppercase tracking-wider">
                     Type
                   </th>
-                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-400 uppercase tracking-wider">
+                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-600 uppercase tracking-wider">
                     Duration
                   </th>
-                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-400 uppercase tracking-wider">
+                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-600 uppercase tracking-wider">
                     Score
                   </th>
-                  <th className="text-center px-6 py-3 text-xs font-medium text-gray-400 uppercase tracking-wider">
+                  <th className="text-center px-6 py-3 text-xs font-medium text-gray-600 uppercase tracking-wider">
                     Recording
                   </th>
-                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-400 uppercase tracking-wider">
+                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-600 uppercase tracking-wider">
                     Date
                   </th>
-                  <th className="text-right px-6 py-3 text-xs font-medium text-gray-400 uppercase tracking-wider">
+                  <th className="text-right px-6 py-3 text-xs font-medium text-gray-600 uppercase tracking-wider">
                     Action
                   </th>
                 </tr>
@@ -233,7 +233,7 @@ export default function HistoryPage() {
                           {getTypeLabel(questionType)}
                         </span>
                       </td>
-                      <td className="px-6 py-4 text-gray-400">
+                      <td className="px-6 py-4 text-gray-600">
                         {formatDuration(session.duration_seconds)}
                       </td>
                       <td className="px-6 py-4">
@@ -246,7 +246,7 @@ export default function HistoryPage() {
                             {assessment.overall_score.toFixed(1)}/5
                           </span>
                         ) : (
-                          <span className="text-gray-300">-</span>
+                          <span className="text-gray-500">-</span>
                         )}
                       </td>
                       <td className="px-6 py-4 text-center">
@@ -270,10 +270,10 @@ export default function HistoryPage() {
                             </svg>
                           </span>
                         ) : (
-                          <span className="text-gray-200">-</span>
+                          <span className="text-gray-400">-</span>
                         )}
                       </td>
-                      <td className="px-6 py-4 text-gray-400 text-sm">
+                      <td className="px-6 py-4 text-gray-600 text-sm">
                         {formatDate(session.created_at)}
                       </td>
                       <td className="px-6 py-4 text-right">

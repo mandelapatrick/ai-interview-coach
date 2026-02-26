@@ -102,9 +102,9 @@ export default function QuestionBankPage() {
 
   const getTypeColor = (question: Question) => {
     if (question.track === "consulting") {
-      return TYPE_COLORS_DARK[question.type as QuestionType] || "text-gray-400 bg-gray-400/10";
+      return TYPE_COLORS_DARK[question.type as QuestionType] || "text-gray-600 bg-gray-400/10";
     }
-    return PM_TYPE_COLORS_DARK[question.type as PMQuestionType] || "text-gray-400 bg-gray-400/10";
+    return PM_TYPE_COLORS_DARK[question.type as PMQuestionType] || "text-gray-600 bg-gray-400/10";
   };
 
   const getTypeLabel = (question: Question) => {
@@ -171,7 +171,7 @@ export default function QuestionBankPage() {
 
           {/* Company Filter */}
           <div>
-            <label className="block text-sm text-gray-400 mb-1.5">Company</label>
+            <label className="block text-sm text-gray-600 mb-1.5">Company</label>
             <select
               value={companyFilter}
               onChange={(e) => setCompanyFilter(e.target.value)}
@@ -188,7 +188,7 @@ export default function QuestionBankPage() {
 
           {/* Type Filter */}
           <div>
-            <label className="block text-sm text-gray-400 mb-1.5">Question Type</label>
+            <label className="block text-sm text-gray-600 mb-1.5">Question Type</label>
             <select
               value={typeFilter}
               onChange={(e) => setTypeFilter(e.target.value)}
@@ -205,7 +205,7 @@ export default function QuestionBankPage() {
 
           {/* Results count */}
           <div className="flex items-end">
-            <span className="text-sm text-gray-400">
+            <span className="text-sm text-gray-600">
               {filteredQuestions.length} question{filteredQuestions.length !== 1 ? "s" : ""} found
             </span>
           </div>
@@ -216,7 +216,7 @@ export default function QuestionBankPage() {
       {filteredQuestions.length === 0 ? (
         <div className="bg-white rounded-xl border border-gray-200 p-12 text-center">
           <svg
-            className="w-12 h-12 text-gray-300 mx-auto mb-4"
+            className="w-12 h-12 text-gray-500 mx-auto mb-4"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -226,7 +226,7 @@ export default function QuestionBankPage() {
             <line x1="21" y1="21" x2="16.65" y2="16.65" />
           </svg>
           <h3 className="text-lg font-semibold text-gray-900 mb-2">No questions found</h3>
-          <p className="text-gray-400">Try adjusting your filters or search term.</p>
+          <p className="text-gray-600">Try adjusting your filters or search term.</p>
         </div>
       ) : (
         <div className="space-y-3">
@@ -259,14 +259,14 @@ export default function QuestionBankPage() {
                       <h3 className="font-medium text-gray-900 mb-1 truncate">
                         {question.title}
                       </h3>
-                      <p className="text-sm text-gray-400 line-clamp-2 mb-2">
+                      <p className="text-sm text-gray-600 line-clamp-2 mb-2">
                         {question.description}
                       </p>
                       <div className="flex items-center gap-2 flex-wrap">
-                        <span className="text-xs text-gray-400">
+                        <span className="text-xs text-gray-600">
                           {getCompanyName(question.companySlug)}
                         </span>
-                        <span className="text-gray-200">&bull;</span>
+                        <span className="text-gray-400">&bull;</span>
                         <span
                           className={`text-xs px-2 py-0.5 rounded-full ${getTypeColor(question)}`}
                         >

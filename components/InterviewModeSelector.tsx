@@ -16,7 +16,7 @@ export default function InterviewModeSelector({
       <h2 className="text-2xl font-bold text-gray-900 mb-2 font-display">
         Choose Interview Mode
       </h2>
-      <p className="text-gray-500 mb-8 text-center max-w-md">
+      <p className="text-gray-600 mb-8 text-center max-w-md">
         Select how you&apos;d like to practice this case interview
       </p>
 
@@ -32,15 +32,15 @@ export default function InterviewModeSelector({
           <h3 className="text-lg font-semibold text-gray-900 mb-2">
             Audio Interview
           </h3>
-          <p className="text-sm text-gray-400 text-center">
+          <p className="text-sm text-gray-600 text-center">
             Voice-only conversation with AI interviewer. Great for quick
             practice on the go.
           </p>
           <div className="mt-4 flex flex-col items-center gap-2">
-            <div className="px-4 py-2 bg-gray-50 rounded-full text-sm text-gray-500">
+            <div className="px-4 py-2 bg-gray-50 rounded-full text-sm text-gray-600">
               Microphone only
             </div>
-            <span className="text-xs text-gray-400">Powered by Kimi K2</span>
+            <span className="text-xs text-gray-600">Powered by Kimi K2</span>
           </div>
         </button>
 
@@ -58,7 +58,7 @@ export default function InterviewModeSelector({
           <h3 className="text-lg font-semibold text-gray-900 mb-2">
             Video Interview
           </h3>
-          <p className="text-sm text-gray-400 text-center">
+          <p className="text-sm text-gray-600 text-center">
             Face-to-face with an AI avatar interviewer. The most realistic
             interview experience.
           </p>
@@ -66,7 +66,7 @@ export default function InterviewModeSelector({
             <div className="px-4 py-2 bg-gray-50 rounded-full text-sm text-[#d4af37]">
               Camera + Microphone
             </div>
-            <span className="text-xs text-gray-400">Powered by Kimi K2</span>
+            <span className="text-xs text-gray-600">Powered by Kimi K2</span>
           </div>
         </button>
       </div>
@@ -74,7 +74,7 @@ export default function InterviewModeSelector({
       {/* Advanced Options Toggle */}
       <button
         onClick={() => setShowAdvanced(!showAdvanced)}
-        className="mt-6 text-sm text-gray-400 hover:text-gray-500 transition-colors flex items-center gap-1"
+        className="mt-6 text-sm text-gray-600 hover:text-gray-700 transition-colors flex items-center gap-1"
       >
         {showAdvanced ? "Hide" : "Show"} alternative models
         <ChevronIcon className={`w-4 h-4 transition-transform ${showAdvanced ? "rotate-180" : ""}`} />
@@ -92,7 +92,7 @@ export default function InterviewModeSelector({
             </div>
             <div className="text-left">
               <h4 className="text-sm font-medium text-gray-900">Audio Interview (Grok)</h4>
-              <p className="text-xs text-gray-400">Alternative model powered by X.AI</p>
+              <p className="text-xs text-gray-600">Alternative model powered by X.AI</p>
             </div>
           </button>
         </div>

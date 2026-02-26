@@ -22,7 +22,7 @@ export default function NavDropdown() {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1 text-sm text-gray-500 hover:text-[#d4af37] transition-colors"
+        className="flex items-center gap-1 text-sm text-gray-600 hover:text-[#d4af37] transition-colors"
       >
         Interview Prep
         <svg
@@ -54,7 +54,7 @@ export default function NavDropdown() {
                 <div className="text-sm font-medium text-gray-900 group-hover:text-[#d4af37] transition-colors">
                   Consulting
                 </div>
-                <div className="text-xs text-gray-400">
+                <div className="text-xs text-gray-600">
                   MBB & Big 4 case interviews
                 </div>
               </div>
@@ -80,7 +80,7 @@ export default function NavDropdown() {
                 <div className="text-sm font-medium text-gray-900 group-hover:text-[#d4af37] transition-colors">
                   Product Management
                 </div>
-                <div className="text-xs text-gray-400">
+                <div className="text-xs text-gray-600">
                   FAANG & tech company PMs
                 </div>
               </div>

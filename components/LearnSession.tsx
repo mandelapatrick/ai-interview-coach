@@ -189,7 +189,7 @@ export default function LearnSession({ question, onEnd }: LearnSessionProps) {
           <div className="p-4 border-b border-gray-200">
             <div className="flex items-center justify-between mb-2">
               <h3 className="font-semibold text-gray-900">Live Transcript</h3>
-              <span className="text-sm text-gray-400">{formatDuration(duration)}</span>
+              <span className="text-sm text-gray-600">{formatDuration(duration)}</span>
             </div>
             {error && (
               <div className="p-2 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400 text-sm">
@@ -204,7 +204,7 @@ export default function LearnSession({ question, onEnd }: LearnSessionProps) {
             className="flex-1 overflow-y-auto p-4 space-y-3"
           >
             {transcript.length === 0 ? (
-              <p className="text-gray-400 text-center text-sm py-8">
+              <p className="text-gray-600 text-center text-sm py-8">
                 {isConnecting
                   ? "Connecting to avatars..."
                   : "The interview will begin shortly..."}

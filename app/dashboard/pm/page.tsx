@@ -53,12 +53,12 @@ export default function PMDashboardPage() {
                       className="w-10 h-10 object-contain"
                     />
                   ) : (
-                    <span className="text-2xl font-bold text-slate-400">
+                    <span className="text-2xl font-bold text-slate-600">
                       {company.name.charAt(0)}
                     </span>
                   )}
                 </div>
-                <div className="text-sm text-gray-400">
+                <div className="text-sm text-gray-600">
                   {company.questionCount} questions
                 </div>
               </div>
@@ -67,7 +67,7 @@ export default function PMDashboardPage() {
                 {company.name}
               </h2>
 
-              <p className="text-gray-400 text-sm mb-4 line-clamp-2">
+              <p className="text-gray-600 text-sm mb-4 line-clamp-2">
                 {company.description}
               </p>
 
@@ -87,7 +87,7 @@ export default function PMDashboardPage() {
                   );
                 })}
                 {company.categories.length > 3 && (
-                  <span className="px-2 py-1 rounded-md text-xs font-medium text-gray-400 bg-gray-100">
+                  <span className="px-2 py-1 rounded-md text-xs font-medium text-gray-600 bg-gray-100">
                     +{company.categories.length - 3} more
                   </span>
                 )}

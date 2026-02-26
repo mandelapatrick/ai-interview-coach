@@ -5,9 +5,9 @@ import { QUESTION_TYPE_LABELS, PM_QUESTION_TYPE_LABELS, PMQuestionType } from "@
 import PracticeFlow from "@/components/PracticeFlow";
 
 const DIFFICULTY_COLORS_DARK: Record<string, string> = {
-  easy: "text-green-400 bg-green-400/10",
+  easy: "text-green-600 bg-green-400/10",
   medium: "text-[#d4af37] bg-[#d4af37]/10",
-  hard: "text-red-400 bg-red-400/10",
+  hard: "text-red-600 bg-red-400/10",
 };
 
 export default async function PracticePage({
@@ -44,7 +44,7 @@ export default async function PracticePage({
             >
               ← Back to Question Bank
             </Link>
-            <span className="text-sm text-gray-400">
+            <span className="text-sm text-gray-600">
               {typeLabel}
             </span>
           </div>
