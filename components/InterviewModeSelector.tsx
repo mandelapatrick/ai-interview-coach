@@ -8,7 +8,7 @@ export default function InterviewModeSelector({
   onSelectMode,
 }: InterviewModeSelectorProps) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[60vh] px-4">
+    <div className="flex flex-col items-center justify-start md:justify-center min-h-[60vh] px-4 pt-8 md:pt-0">
       <h2 className="hidden md:block text-2xl font-bold text-gray-900 mb-2 font-display">
         Choose Interview Mode
       </h2>
