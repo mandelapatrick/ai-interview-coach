@@ -35,12 +35,12 @@ export default function LearnFlow({ question }: LearnFlowProps) {
   switch (flowState) {
     case "intro":
       return (
-        <div className="min-h-full flex items-center justify-center p-8">
-          <div className="max-w-2xl text-center">
-            <div className="mb-6 hidden sm:block">
-              <div className="w-20 h-20 mx-auto bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4">
+        <div className="min-h-full flex items-center justify-center p-4 md:p-8">
+          <div className="max-w-2xl text-center w-full">
+            <div className="mb-4 md:mb-6 hidden sm:block">
+              <div className="w-16 h-16 md:w-20 md:h-20 mx-auto bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center mb-3 md:mb-4">
                 <svg
-                  className="w-10 h-10 text-white"
+                  className="w-8 h-8 md:w-10 md:h-10 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -53,16 +53,16 @@ export default function LearnFlow({ question }: LearnFlowProps) {
                   />
                 </svg>
               </div>
-              <h2 className="text-3xl font-bold mb-4 font-display">Learn Mode</h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4 font-display">Learn Mode</h2>
+              <p className="text-base md:text-lg text-gray-600 mb-4 md:mb-6">
                 Watch a simulated interview between an AI interviewer and an expert candidate.
                 Learn how to structure your answers and what excellent responses look like.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 mb-8 text-left border border-gray-200">
-              <h3 className="font-semibold mb-4 text-gray-800">What to expect:</h3>
-              <ul className="space-y-3 text-gray-600">
+            <div className="bg-white rounded-xl p-4 md:p-6 mb-6 md:mb-8 text-left border border-gray-200">
+              <h3 className="font-semibold mb-3 md:mb-4 text-gray-800">What to expect:</h3>
+              <ul className="space-y-3 text-gray-600 text-sm md:text-base">
                 <li className="flex items-start gap-3">
                   <span className="text-violet-400 mt-1">
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -113,7 +113,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
 
             <button
               onClick={handleStartWatching}
-              className="px-8 py-3 bg-gradient-to-r from-violet-500 to-purple-600 text-white font-medium rounded-xl hover:shadow-lg hover:shadow-violet-500/25 transition-all"
+              className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-violet-500 to-purple-600 text-white font-medium rounded-xl hover:shadow-lg hover:shadow-violet-500/25 transition-all"
             >
               Start Learning
             </button>
@@ -126,19 +126,19 @@ export default function LearnFlow({ question }: LearnFlowProps) {
 
     case "summary":
       return (
-        <div className="h-full flex flex-col p-8 overflow-auto">
+        <div className="h-full flex flex-col p-4 md:p-8 overflow-auto">
           <div className="max-w-4xl mx-auto w-full">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold mb-4 font-display">Session Complete</h2>
-              <p className="text-lg text-gray-600">
+            <div className="text-center mb-6 md:mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-2 md:mb-4 font-display">Session Complete</h2>
+              <p className="text-base md:text-lg text-gray-600">
                 Here&apos;s a summary of the interview demonstration you just watched.
               </p>
             </div>
 
             {/* Transcript Summary */}
-            <div className="bg-white rounded-xl p-6 mb-8 border border-gray-200">
-              <h3 className="font-semibold mb-4 text-gray-800">Conversation Transcript</h3>
-              <div className="space-y-4 max-h-96 overflow-y-auto">
+            <div className="bg-white rounded-xl p-4 md:p-6 mb-6 md:mb-8 border border-gray-200">
+              <h3 className="font-semibold mb-3 md:mb-4 text-gray-800">Conversation Transcript</h3>
+              <div className="space-y-3 md:space-y-4 max-h-96 overflow-y-auto">
                 {sessionTranscript.length > 0 ? (
                   sessionTranscript.map((entry, idx) => (
                     <div
@@ -158,7 +158,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
                       >
                         {entry.speaker}
                       </span>
-                      <p className="text-gray-700 mt-1">{entry.text}</p>
+                      <p className="text-gray-700 mt-1 text-sm md:text-base">{entry.text}</p>
                     </div>
                   ))
                 ) : (
@@ -170,7 +170,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex justify-center gap-4">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 md:gap-4">
               <button
                 onClick={handleBackToIntro}
                 className="px-6 py-3 bg-white text-gray-900 font-medium rounded-xl hover:bg-gray-100 transition-all border border-gray-200"
@@ -179,7 +179,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
               </button>
               <a
                 href={`/practice/${question.id}`}
-                className="px-6 py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white font-medium rounded-xl hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
+                className="px-6 py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white font-medium rounded-xl hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all text-center"
               >
                 Practice Now
               </a>

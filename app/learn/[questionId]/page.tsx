@@ -36,19 +36,20 @@ export default async function LearnPage({
     <div className="h-screen bg-gray-50 text-gray-900 flex flex-col overflow-hidden">
       {/* Header */}
       <header className="border-b border-gray-200 bg-white/95 backdrop-blur sticky top-0 z-10">
-        <div className="max-w-6xl mx-auto px-4 py-3">
+        <div className="max-w-6xl mx-auto px-3 py-2 md:px-4 md:py-3">
           <div className="flex items-center justify-between">
             <Link
               href={`/dashboard/questions?track=${question.track}`}
               className="text-sm text-[#d4af37] hover:text-[#f4d03f] transition-colors"
             >
-              ← Back to Question Bank
+              <span className="hidden sm:inline">← Back to Question Bank</span>
+              <span className="sm:hidden">← Back</span>
             </Link>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 md:gap-3">
               <span className="px-2 py-1 text-xs font-medium rounded-full bg-violet-400/10 text-violet-600">
                 Learn Mode
               </span>
-              <span className="text-sm text-gray-600">
+              <span className="text-xs md:text-sm text-gray-600 hidden sm:inline">
                 {typeLabel}
               </span>
             </div>
@@ -58,9 +59,9 @@ export default async function LearnPage({
 
       {/* Question Info */}
       <div className="border-b border-gray-200 bg-white">
-        <div className="max-w-6xl mx-auto px-4 py-6">
-          <h1 className="text-2xl font-bold mb-2 font-display">{question.title}</h1>
-          <p className="text-gray-500">{question.description}</p>
+        <div className="max-w-6xl mx-auto px-3 py-3 md:px-4 md:py-6">
+          <h1 className="text-lg md:text-2xl font-bold mb-1 md:mb-2 font-display">{question.title}</h1>
+          <p className="text-gray-500 text-sm md:text-base line-clamp-2 md:line-clamp-none">{question.description}</p>
         </div>
       </div>
 

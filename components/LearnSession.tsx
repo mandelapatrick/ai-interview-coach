@@ -115,11 +115,11 @@ export default function LearnSession({ question, onEnd }: LearnSessionProps) {
   return (
     <div className="h-full flex flex-col bg-white">
       {/* Main Content */}
-      <div className="flex-1 flex min-h-0">
-        {/* Video Section - Side by Side */}
-        <div className="flex-1 flex gap-4 p-4">
+      <div className="flex-1 flex flex-col md:flex-row min-h-0">
+        {/* Video Section - Vertical on mobile, Side by Side on desktop */}
+        <div className="flex-1 flex flex-col md:flex-row gap-1 md:gap-4 p-1 md:p-4 min-h-0">
           {/* Interviewer Video */}
-          <div className="flex-1 relative rounded-xl overflow-hidden bg-gray-100">
+          <div className="flex-1 relative rounded-xl overflow-hidden bg-gray-100 min-h-0">
             <video
               ref={interviewerVideoRef}
               autoPlay
@@ -127,31 +127,37 @@ export default function LearnSession({ question, onEnd }: LearnSessionProps) {
               className="w-full h-full object-cover"
             />
             {/* Interviewer Label */}
-            <div className="absolute top-4 left-4 flex items-center gap-2">
+            <div className="absolute top-2 left-2 md:top-4 md:left-4 flex items-center gap-2">
               <div
-                className={`px-3 py-1.5 rounded-lg text-sm font-medium ${
+                className={`px-2 py-1 md:px-3 md:py-1.5 rounded-lg text-xs md:text-sm font-medium backdrop-blur-sm ${
                   currentSpeaker === "interviewer"
-                    ? "bg-blue-500 text-gray-900"
-                    : "bg-black/50 text-gray-500"
+                    ? "bg-blue-500 text-white"
+                    : "bg-black/50 text-gray-300"
                 }`}
               >
                 Interviewer
               </div>
               {currentSpeaker === "interviewer" && (
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                <div className="w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full animate-pulse" />
               )}
+            </div>
+            {/* Mobile-only timer overlay on first video */}
+            <div className="absolute top-2 right-2 md:hidden">
+              <span className="text-white font-mono text-xs font-semibold bg-black/50 px-2 py-1 rounded-lg backdrop-blur-sm">
+                {formatDuration(duration)}
+              </span>
             </div>
             {/* Loading overlay */}
             {isConnecting && (
               <div className="absolute inset-0 bg-gray-100 flex flex-col items-center justify-center">
-                <div className="w-12 h-12 border-4 border-blue-400/30 border-t-blue-400 rounded-full animate-spin mb-4" />
-                <p className="text-gray-500">Connecting interviewer...</p>
+                <div className="w-10 h-10 md:w-12 md:h-12 border-4 border-blue-400/30 border-t-blue-400 rounded-full animate-spin mb-3 md:mb-4" />
+                <p className="text-gray-500 text-sm">Connecting interviewer...</p>
               </div>
             )}
           </div>
 
           {/* Candidate Video */}
-          <div className="flex-1 relative rounded-xl overflow-hidden bg-gray-100">
+          <div className="flex-1 relative rounded-xl overflow-hidden bg-gray-100 min-h-0">
             <video
               ref={candidateVideoRef}
               autoPlay
@@ -159,32 +165,32 @@ export default function LearnSession({ question, onEnd }: LearnSessionProps) {
               className="w-full h-full object-cover"
             />
             {/* Candidate Label */}
-            <div className="absolute top-4 left-4 flex items-center gap-2">
+            <div className="absolute top-2 left-2 md:top-4 md:left-4 flex items-center gap-2">
               <div
-                className={`px-3 py-1.5 rounded-lg text-sm font-medium ${
+                className={`px-2 py-1 md:px-3 md:py-1.5 rounded-lg text-xs md:text-sm font-medium backdrop-blur-sm ${
                   currentSpeaker === "candidate"
-                    ? "bg-violet-500 text-gray-900"
-                    : "bg-black/50 text-gray-500"
+                    ? "bg-violet-500 text-white"
+                    : "bg-black/50 text-gray-300"
                 }`}
               >
                 Expert Candidate
               </div>
               {currentSpeaker === "candidate" && (
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                <div className="w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full animate-pulse" />
               )}
             </div>
             {/* Loading overlay */}
             {isConnecting && (
               <div className="absolute inset-0 bg-gray-100 flex flex-col items-center justify-center">
-                <div className="w-12 h-12 border-4 border-violet-400/30 border-t-violet-400 rounded-full animate-spin mb-4" />
-                <p className="text-gray-500">Connecting candidate...</p>
+                <div className="w-10 h-10 md:w-12 md:h-12 border-4 border-violet-400/30 border-t-violet-400 rounded-full animate-spin mb-3 md:mb-4" />
+                <p className="text-gray-500 text-sm">Connecting candidate...</p>
               </div>
             )}
           </div>
         </div>
 
-        {/* Sidebar - Transcript */}
-        <div className="w-96 border-l border-gray-200 flex flex-col bg-gray-50">
+        {/* Sidebar - Transcript (hidden on mobile) */}
+        <div className="hidden md:flex w-96 border-l border-gray-200 flex-col bg-gray-50">
           {/* Header */}
           <div className="p-4 border-b border-gray-200">
             <div className="flex items-center justify-between mb-2">
@@ -236,36 +242,43 @@ export default function LearnSession({ question, onEnd }: LearnSessionProps) {
         </div>
       </div>
 
+      {/* Mobile error display */}
+      {error && (
+        <div className="md:hidden mx-2 mb-1 p-2 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400 text-xs">
+          {error}
+        </div>
+      )}
+
       {/* Control Bar */}
-      <div className="border-t border-gray-200 p-4 bg-gray-50">
-        <div className="max-w-4xl mx-auto flex items-center justify-center gap-4">
+      <div className="border-t border-gray-200 p-2 md:p-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto flex items-center justify-center gap-2 md:gap-4">
           {/* Pause/Resume Button */}
           <button
             onClick={isPaused ? resume : pause}
             disabled={!isInitialized}
-            className="px-6 py-2.5 bg-gray-100 text-gray-900 font-medium rounded-lg hover:bg-gray-200 transition-all border border-gray-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+            className="px-3 py-2 md:px-6 md:py-2.5 bg-gray-100 text-gray-900 font-medium rounded-lg hover:bg-gray-200 transition-all border border-gray-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-1.5 md:gap-2 text-sm md:text-base"
           >
             {isPaused ? (
               <>
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 20 20">
                   <path
                     fillRule="evenodd"
                     d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
                     clipRule="evenodd"
                   />
                 </svg>
-                Resume
+                <span className="hidden sm:inline">Resume</span>
               </>
             ) : (
               <>
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 20 20">
                   <path
                     fillRule="evenodd"
                     d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z"
                     clipRule="evenodd"
                   />
                 </svg>
-                Pause
+                <span className="hidden sm:inline">Pause</span>
               </>
             )}
           </button>
@@ -274,9 +287,9 @@ export default function LearnSession({ question, onEnd }: LearnSessionProps) {
           <button
             onClick={handleOpenQuestionModal}
             disabled={!isInitialized}
-            className="px-6 py-2.5 bg-violet-500/20 text-violet-400 font-medium rounded-lg hover:bg-violet-500/30 transition-all border border-violet-500/30 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+            className="px-3 py-2 md:px-6 md:py-2.5 bg-violet-500/20 text-violet-600 font-medium rounded-lg hover:bg-violet-500/30 transition-all border border-violet-500/30 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-1.5 md:gap-2 text-sm md:text-base"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -284,15 +297,16 @@ export default function LearnSession({ question, onEnd }: LearnSessionProps) {
                 d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-            Ask Question
+            <span className="hidden sm:inline">Ask Question</span>
+            <span className="sm:hidden">Ask</span>
           </button>
 
           {/* End Interview Button */}
           <button
             onClick={() => setShowEndConfirm(true)}
-            className="px-6 py-2.5 bg-red-500/20 text-red-400 font-medium rounded-lg hover:bg-red-500/30 transition-all border border-red-500/30 flex items-center gap-2"
+            className="px-3 py-2 md:px-6 md:py-2.5 bg-red-500/20 text-red-500 font-medium rounded-lg hover:bg-red-500/30 transition-all border border-red-500/30 flex items-center gap-1.5 md:gap-2 text-sm md:text-base"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -300,7 +314,8 @@ export default function LearnSession({ question, onEnd }: LearnSessionProps) {
                 d="M6 18L18 6M6 6l12 12"
               />
             </svg>
-            End Interview
+            <span className="hidden sm:inline">End Interview</span>
+            <span className="sm:hidden">End</span>
           </button>
         </div>
       </div>
