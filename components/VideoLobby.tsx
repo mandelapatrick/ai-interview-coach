@@ -194,8 +194,8 @@ export default function VideoLobby({ onJoin, onBack }: VideoLobbyProps) {
   }
 
   return (
-    <div className="flex items-start lg:items-center justify-center py-8 lg:py-0 min-h-[calc(100vh-200px)] px-4 lg:px-8">
-      <div className="flex flex-col lg:flex-row items-center lg:items-center gap-6 lg:gap-16 w-full max-w-5xl">
+    <div className="flex items-start lg:items-center justify-center py-4 lg:py-0 min-h-[calc(100vh-200px)] px-4 lg:px-8">
+      <div className="flex flex-col lg:flex-row items-center lg:items-center gap-3 lg:gap-16 w-full max-w-5xl">
         {/* Left side - Video Preview */}
         <div className="flex flex-col items-center flex-1 w-full lg:max-w-[600px]">
           {/* Video Container */}
@@ -288,15 +288,15 @@ export default function VideoLobby({ onJoin, onBack }: VideoLobbyProps) {
 
         {/* Right side - Join CTA */}
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left lg:min-w-[280px]">
-          <div className="w-12 h-12 rounded-full bg-[#d4af37]/20 flex items-center justify-center mb-4">
+          <div className="w-12 h-12 rounded-full bg-[#d4af37]/20 hidden lg:flex items-center justify-center mb-4">
             <VideoIcon className="w-6 h-6 text-[#d4af37]" />
           </div>
 
-          <h2 className="text-2xl font-semibold text-gray-900 mb-2 font-display">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-2 font-display hidden lg:block">
             Ready to join?
           </h2>
 
-          <p className="text-gray-600 text-sm mb-6">
+          <p className="text-gray-600 text-sm mb-4 lg:mb-6">
             Your interview will begin when you click join
           </p>
 
