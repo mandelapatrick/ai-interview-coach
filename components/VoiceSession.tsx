@@ -25,12 +25,14 @@ export default function VoiceSession({ question }: VoiceSessionProps) {
     isConnected,
     isRecording,
     isSpeaking,
+    isMuted,
     transcript,
     error,
     duration,
     formatDuration,
     startSession,
     endSession,
+    toggleMute,
   } = useVoiceSession({
     systemPrompt,
     onSessionEnd: (finalTranscript) => {
@@ -162,6 +164,18 @@ export default function VoiceSession({ question }: VoiceSessionProps) {
           ) : (
             <>
               <button
+                onClick={toggleMute}
+                className={`flex items-center gap-2 px-6 py-4 rounded-full font-medium transition-colors border ${
+                  isMuted
+                    ? "bg-red-600 text-white border-red-600 hover:bg-red-700"
+                    : "bg-white text-gray-900 border-gray-200 hover:bg-gray-100"
+                }`}
+                title={isMuted ? "Unmute microphone" : "Mute microphone"}
+              >
+                {isMuted ? <MicOffIcon /> : <MicIcon />}
+                {isMuted ? "Unmute" : "Mute"}
+              </button>
+              <button
                 onClick={handleGetHint}
                 disabled={isLoadingHint || hintCount >= 3}
                 className="flex items-center gap-2 px-6 py-4 bg-white text-gray-900 rounded-full font-medium hover:bg-gray-100 transition-colors border border-gray-200 disabled:opacity-50 disabled:cursor-not-allowed"
@@ -253,6 +267,15 @@ function MicIcon() {
   return (
     <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+    </svg>
+  );
+}
+
+function MicOffIcon() {
+  return (
+    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3l18 18" />
     </svg>
   );
 }
