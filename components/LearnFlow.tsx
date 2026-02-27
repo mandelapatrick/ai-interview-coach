@@ -37,7 +37,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
       return (
         <div className="min-h-full flex items-center justify-center p-8">
           <div className="max-w-2xl text-center">
-            <div className="mb-6">
+            <div className="mb-6 hidden sm:block">
               <div className="w-20 h-20 mx-auto bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4">
                 <svg
                   className="w-10 h-10 text-white"
