@@ -9,10 +9,10 @@ export default function InterviewModeSelector({
 }: InterviewModeSelectorProps) {
   return (
     <div className="flex flex-col items-center justify-center min-h-[60vh] px-4">
-      <h2 className="text-2xl font-bold text-gray-900 mb-2 font-display">
+      <h2 className="hidden md:block text-2xl font-bold text-gray-900 mb-2 font-display">
         Choose Interview Mode
       </h2>
-      <p className="text-gray-600 mb-8 text-center max-w-md">
+      <p className="hidden md:block text-gray-600 mb-8 text-center max-w-md">
         Select how you&apos;d like to practice this case interview
       </p>
 
