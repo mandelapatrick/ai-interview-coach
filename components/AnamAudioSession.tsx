@@ -383,7 +383,14 @@ export default function AnamAudioSession({ question }: AnamAudioSessionProps) {
             />
             <ControlButton
               icon={isMuted ? <MicOffIcon /> : <MicIcon />}
-              onClick={() => setIsMuted(!isMuted)}
+              onClick={() => {
+                if (isMuted) {
+                  anamAvatar.unmuteInputAudio();
+                } else {
+                  anamAvatar.muteInputAudio();
+                }
+                setIsMuted(!isMuted);
+              }}
               active={!isMuted}
               tooltip={isMuted ? "Unmute" : "Mute"}
             />

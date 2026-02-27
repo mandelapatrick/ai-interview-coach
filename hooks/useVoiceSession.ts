@@ -20,6 +20,7 @@ export function useVoiceSession(options: UseVoiceSessionOptions) {
   const [isConnected, setIsConnected] = useState(false);
   const [isRecording, setIsRecording] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
   const [transcript, setTranscript] = useState<TranscriptEntry[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [duration, setDuration] = useState(0);
@@ -28,6 +29,7 @@ export function useVoiceSession(options: UseVoiceSessionOptions) {
   const audioContextRef = useRef<AudioContext | null>(null);
   const mediaStreamRef = useRef<MediaStream | null>(null);
   const workletNodeRef = useRef<AudioWorkletNode | null>(null);
+  const isMutedRef = useRef(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const audioQueueRef = useRef<Float32Array[]>([]);
   const isPlayingRef = useRef(false);
@@ -242,7 +244,7 @@ export function useVoiceSession(options: UseVoiceSessionOptions) {
         const processor = audioContext.createScriptProcessor(4096, 1, 1);
 
         processor.onaudioprocess = (e) => {
-          if (ws.readyState === WebSocket.OPEN) {
+          if (ws.readyState === WebSocket.OPEN && !isMutedRef.current) {
             const inputData = e.inputBuffer.getChannelData(0);
             const pcm16 = new Int16Array(inputData.length);
             for (let i = 0; i < inputData.length; i++) {
@@ -360,6 +362,18 @@ export function useVoiceSession(options: UseVoiceSessionOptions) {
     [playAudioQueue]
   );
 
+  const toggleMute = useCallback(() => {
+    const newMuted = !isMutedRef.current;
+    isMutedRef.current = newMuted;
+    setIsMuted(newMuted);
+    // Also disable the media stream track so the browser mic indicator reflects mute state
+    if (mediaStreamRef.current) {
+      mediaStreamRef.current.getAudioTracks().forEach((track) => {
+        track.enabled = !newMuted;
+      });
+    }
+  }, []);
+
   const endSession = useCallback(() => {
     // Close WebSocket
     if (wsRef.current) {
@@ -397,11 +411,13 @@ export function useVoiceSession(options: UseVoiceSessionOptions) {
     isConnected,
     isRecording,
     isSpeaking,
+    isMuted,
     transcript,
     error,
     duration,
     formatDuration,
     startSession,
     endSession,
+    toggleMute,
   };
 }

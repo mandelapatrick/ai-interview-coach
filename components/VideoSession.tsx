@@ -31,8 +31,8 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
   const [transcript, setTranscript] = useState<TranscriptEntry[]>([]);
   const [duration, setDuration] = useState(0);
   const [isSessionStarted, setIsSessionStarted] = useState(false);
-  const [isVideoEnabled, setIsVideoEnabled] = useState(true);
-  const [isAudioEnabled, setIsAudioEnabled] = useState(true);
+  const [isVideoEnabled, setIsVideoEnabled] = useState(() => userStream?.getVideoTracks()[0]?.enabled ?? true);
+  const [isAudioEnabled, setIsAudioEnabled] = useState(() => userStream?.getAudioTracks()[0]?.enabled ?? true);
   const [showExhibit, setShowExhibit] = useState<number | null>(null);
   const [hintCount, setHintCount] = useState(0);
   const [currentHint, setCurrentHint] = useState<string | null>(null);
@@ -660,6 +660,15 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
       if (audioTrack) {
         audioTrack.enabled = !audioTrack.enabled;
         setIsAudioEnabled(audioTrack.enabled);
+        // For Anam provider, also mute/unmute via the Anam SDK since it
+        // manages its own internal microphone capture independently of userStream
+        if (avatarProvider === "anam") {
+          if (!audioTrack.enabled) {
+            anamAvatar.muteInputAudio();
+          } else {
+            anamAvatar.unmuteInputAudio();
+          }
+        }
       }
     }
   };

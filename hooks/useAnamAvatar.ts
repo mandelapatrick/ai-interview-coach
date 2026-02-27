@@ -163,6 +163,22 @@ export function useAnamAvatar(options: UseAnamAvatarOptions) {
     ]
   );
 
+  // Mute the user's microphone input
+  const muteInputAudio = useCallback(() => {
+    if (clientRef.current) {
+      clientRef.current.muteInputAudio();
+      console.log("[Anam] Input audio muted");
+    }
+  }, []);
+
+  // Unmute the user's microphone input
+  const unmuteInputAudio = useCallback(() => {
+    if (clientRef.current) {
+      clientRef.current.unmuteInputAudio();
+      console.log("[Anam] Input audio unmuted");
+    }
+  }, []);
+
   // Interrupt the avatar (stop it from speaking)
   const interrupt = useCallback(() => {
     isTalkingRef.current = false;
@@ -193,6 +209,8 @@ export function useAnamAvatar(options: UseAnamAvatarOptions) {
     isTalking,
     error,
     initializeAvatar,
+    muteInputAudio,
+    unmuteInputAudio,
     interrupt,
     stopAvatar,
   };
