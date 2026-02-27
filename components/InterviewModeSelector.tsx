@@ -16,7 +16,7 @@ export default function InterviewModeSelector({
         Select how you&apos;d like to practice this case interview
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl mt-6 md:mt-0">
         {/* Audio Interview Option (Default - Kimi K2) */}
         <button
           onClick={() => onSelectMode("audio")}
