@@ -763,16 +763,15 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
 
           {/* User Video (PiP) - Bottom Right */}
           <div className="absolute bottom-2 right-2 md:bottom-6 md:right-6 w-28 h-20 md:w-56 md:h-40 bg-gray-800 rounded-xl overflow-hidden shadow-xl border-2 border-gray-600">
-            {isVideoEnabled ? (
-              <video
-                ref={userVideoRef}
-                autoPlay
-                playsInline
-                muted
-                className="w-full h-full object-cover -scale-x-100"
-              />
-            ) : (
-              <div className="w-full h-full flex items-center justify-center bg-gray-800">
+            <video
+              ref={userVideoRef}
+              autoPlay
+              playsInline
+              muted
+              className={`w-full h-full object-cover -scale-x-100 ${!isVideoEnabled ? "hidden" : ""}`}
+            />
+            {!isVideoEnabled && (
+              <div className="absolute inset-0 flex items-center justify-center bg-gray-800">
                 <div className="w-14 h-14 rounded-full bg-gray-700 flex items-center justify-center">
                   <svg className="w-7 h-7 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
