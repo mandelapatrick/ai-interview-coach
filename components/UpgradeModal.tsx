@@ -10,11 +10,11 @@ interface UpgradeModalProps {
 export default function UpgradeModal({ sessionType, onClose }: UpgradeModalProps) {
   return (
     <div
-      className="fixed inset-0 z-50 flex items-end justify-center sm:items-center bg-black/50 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
       onClick={onClose}
     >
       <div
-        className="bg-white rounded-t-2xl sm:rounded-2xl p-6 max-w-md w-full mx-4 mb-0 sm:mb-0 shadow-2xl animate-slide-up"
+        className="bg-white rounded-2xl p-6 max-w-md w-full mx-4 shadow-2xl animate-slide-up"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
