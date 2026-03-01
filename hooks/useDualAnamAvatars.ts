@@ -421,6 +421,13 @@ export function useDualAnamAvatars(
   const pause = useCallback(() => {
     setIsPaused(true);
     isPausedRef.current = true; // Update ref for event listeners
+    // Interrupt both avatars to stop them talking/animating
+    if (interviewerClientRef.current) {
+      interviewerClientRef.current.interruptPersona();
+    }
+    if (candidateClientRef.current) {
+      candidateClientRef.current.interruptPersona();
+    }
     // Mute both avatars
     if (interviewerVideoRef.current) {
       interviewerVideoRef.current.muted = true;
@@ -439,6 +446,18 @@ export function useDualAnamAvatars(
       interviewerVideoRef.current.muted = false;
     } else if (currentSpeaker === "candidate" && candidateVideoRef.current) {
       candidateVideoRef.current.muted = false;
+    }
+    // Resume the conversation by prompting the current speaker to continue
+    if (currentSpeaker === "interviewer" && interviewerClientRef.current) {
+      turnStateRef.current = "waiting_for_interviewer";
+      interviewerClientRef.current.sendUserMessage("Please continue the interview from where you left off.");
+    } else if (currentSpeaker === "candidate" && candidateClientRef.current) {
+      turnStateRef.current = "waiting_for_candidate";
+      candidateClientRef.current.sendUserMessage("Please continue your response from where you left off.");
+    } else if (interviewerClientRef.current) {
+      // Default: prompt interviewer to continue
+      turnStateRef.current = "waiting_for_interviewer";
+      interviewerClientRef.current.sendUserMessage("Please continue the interview from where you left off.");
     }
   }, [currentSpeaker]);
 
