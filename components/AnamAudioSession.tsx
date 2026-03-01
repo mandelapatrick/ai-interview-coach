@@ -9,6 +9,7 @@ import HintModal from "./HintModal";
 
 interface AnamAudioSessionProps {
   question: Question;
+  maxDurationSeconds?: number | null;
 }
 
 interface TranscriptEntry {
@@ -160,9 +161,10 @@ function ControlButton({
   );
 }
 
-export default function AnamAudioSession({ question }: AnamAudioSessionProps) {
+export default function AnamAudioSession({ question, maxDurationSeconds }: AnamAudioSessionProps) {
   const router = useRouter();
   const [showEndConfirm, setShowEndConfirm] = useState(false);
+  const [showTimeWarning, setShowTimeWarning] = useState(false);
   const [transcript, setTranscript] = useState<TranscriptEntry[]>([]);
   const [duration, setDuration] = useState(0);
   const [isSessionStarted, setIsSessionStarted] = useState(false);
@@ -230,6 +232,33 @@ export default function AnamAudioSession({ question }: AnamAudioSessionProps) {
       if (timerRef.current) clearInterval(timerRef.current);
     };
   }, [isSessionStarted]);
+
+  // Auto-end session when duration limit reached
+  useEffect(() => {
+    if (!maxDurationSeconds || !isSessionStarted) return;
+
+    if (duration >= maxDurationSeconds) {
+      // Time's up - auto end
+      setShowTimeWarning(false);
+      if (transcript.length > 0) {
+        anamAvatar.stopAvatar();
+        sessionStorage.setItem(
+          "lastSession",
+          JSON.stringify({
+            questionId: question.id,
+            transcript: transcriptRef.current,
+            duration,
+          })
+        );
+        router.push(`/assessment/${question.id}`);
+      } else {
+        anamAvatar.stopAvatar();
+        router.back();
+      }
+    } else if (duration >= maxDurationSeconds - 60 && !showTimeWarning) {
+      setShowTimeWarning(true);
+    }
+  }, [duration, maxDurationSeconds, isSessionStarted, transcript.length, anamAvatar, question.id, router, showTimeWarning]);
 
   // Initialize Anam when starting session
   const startSession = async () => {
@@ -336,6 +365,15 @@ export default function AnamAudioSession({ question }: AnamAudioSessionProps) {
         className="hidden"
         muted={false}
       />
+
+      {/* Time limit warning banner */}
+      {showTimeWarning && maxDurationSeconds && (
+        <div className="bg-amber-50 border-b border-amber-200 px-4 py-2 text-center">
+          <p className="text-sm text-amber-800 font-medium">
+            Less than 1 minute remaining in your free session
+          </p>
+        </div>
+      )}
 
       {/* Top Bar - Timer and Recording */}
       <div className="flex items-center justify-between px-6 py-4">

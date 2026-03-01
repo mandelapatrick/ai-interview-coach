@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useVoiceSession, TranscriptEntry } from "@/hooks/useVoiceSession";
 import { Question } from "@/types";
@@ -9,11 +9,13 @@ import HintModal from "./HintModal";
 
 interface VoiceSessionProps {
   question: Question;
+  maxDurationSeconds?: number | null;
 }
 
-export default function VoiceSession({ question }: VoiceSessionProps) {
+export default function VoiceSession({ question, maxDurationSeconds }: VoiceSessionProps) {
   const router = useRouter();
   const [showEndConfirm, setShowEndConfirm] = useState(false);
+  const [showTimeWarning, setShowTimeWarning] = useState(false);
   const [hintCount, setHintCount] = useState(0);
   const [currentHint, setCurrentHint] = useState<string | null>(null);
   const [isLoadingHint, setIsLoadingHint] = useState(false);
@@ -62,6 +64,18 @@ export default function VoiceSession({ question }: VoiceSessionProps) {
     endSession();
   };
 
+  // Auto-end session when duration limit reached
+  useEffect(() => {
+    if (!maxDurationSeconds || !isConnected) return;
+
+    if (duration >= maxDurationSeconds) {
+      setShowTimeWarning(false);
+      endSession();
+    } else if (duration >= maxDurationSeconds - 60 && !showTimeWarning) {
+      setShowTimeWarning(true);
+    }
+  }, [duration, maxDurationSeconds, isConnected, endSession, showTimeWarning]);
+
   const handleGetHint = async () => {
     if (isLoadingHint || hintCount >= 3) return;
 
@@ -96,6 +110,15 @@ export default function VoiceSession({ question }: VoiceSessionProps) {
 
   return (
     <div className="flex flex-col h-full">
+      {/* Time limit warning banner */}
+      {showTimeWarning && maxDurationSeconds && (
+        <div className="bg-amber-50 border-b border-amber-200 px-4 py-2 text-center">
+          <p className="text-sm text-amber-800 font-medium">
+            Less than 1 minute remaining in your free session
+          </p>
+        </div>
+      )}
+
       {/* Status Bar */}
       <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200">
         <div className="flex items-center gap-4">

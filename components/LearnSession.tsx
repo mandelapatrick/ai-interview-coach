@@ -9,9 +9,10 @@ import ClarifyingQuestionModal from "./ClarifyingQuestionModal";
 interface LearnSessionProps {
   question: Question;
   onEnd: (transcript: TranscriptEntry[]) => void;
+  maxDurationSeconds?: number | null;
 }
 
-export default function LearnSession({ question, onEnd }: LearnSessionProps) {
+export default function LearnSession({ question, onEnd, maxDurationSeconds }: LearnSessionProps) {
   const interviewerVideoRef = useRef<HTMLVideoElement>(null);
   const candidateVideoRef = useRef<HTMLVideoElement>(null);
   const transcriptContainerRef = useRef<HTMLDivElement>(null);
@@ -20,6 +21,7 @@ export default function LearnSession({ question, onEnd }: LearnSessionProps) {
   const [showEndConfirm, setShowEndConfirm] = useState(false);
   const [showQuestionModal, setShowQuestionModal] = useState(false);
   const [duration, setDuration] = useState(0);
+  const [showTimeWarning, setShowTimeWarning] = useState(false);
 
   // Get prompts
   const interviewerPrompt = getSystemPrompt(question);
@@ -99,6 +101,19 @@ export default function LearnSession({ question, onEnd }: LearnSessionProps) {
     onEnd(transcript);
   }, [stopAvatars, onEnd, transcript]);
 
+  // Auto-end session when duration limit reached
+  useEffect(() => {
+    if (!maxDurationSeconds || !isInitialized) return;
+
+    if (duration >= maxDurationSeconds) {
+      setShowTimeWarning(false);
+      handleEndInterview();
+    } else if (duration >= maxDurationSeconds - 60 && !showTimeWarning) {
+      setShowTimeWarning(true);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [duration, maxDurationSeconds, isInitialized]);
+
   // Handle clarifying question
   const handleAskQuestion = async (questionText: string) => {
     setShowQuestionModal(false);
@@ -114,6 +129,15 @@ export default function LearnSession({ question, onEnd }: LearnSessionProps) {
 
   return (
     <div className="h-full flex flex-col bg-white">
+      {/* Time limit warning banner */}
+      {showTimeWarning && maxDurationSeconds && (
+        <div className="bg-amber-50 border-b border-amber-200 px-4 py-2 text-center">
+          <p className="text-sm text-amber-800 font-medium">
+            Less than 1 minute remaining in your free session
+          </p>
+        </div>
+      )}
+
       {/* Main Content */}
       <div className="flex-1 flex flex-col md:flex-row min-h-0">
         {/* Video Section - Vertical on mobile, Side by Side on desktop */}

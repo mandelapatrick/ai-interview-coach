@@ -167,6 +167,7 @@ export default function AssessmentPage() {
               transcript: data.transcript,
               durationSeconds: data.duration,
               videoRecordingUrl: data.videoRecordingUrl,
+              sessionType: "practice",
             }),
           });
 

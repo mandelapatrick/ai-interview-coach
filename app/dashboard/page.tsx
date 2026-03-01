@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { QUESTION_TYPE_LABELS, QuestionType } from "@/types";
+import { useSubscription } from "@/hooks/useSubscription";
 
 interface SessionWithAssessment {
   id: string;
@@ -41,6 +42,17 @@ const TYPE_COLORS: Record<string, string> = {
 export default function DashboardPage() {
   const [sessions, setSessions] = useState<SessionWithAssessment[]>([]);
   const [loading, setLoading] = useState(true);
+  const {
+    plan,
+    practiceUsed,
+    learnUsed,
+    practiceLimit,
+    learnLimit,
+    billingInterval,
+    currentPeriodEnd,
+    cancelAtPeriodEnd,
+    loading: subLoading,
+  } = useSubscription();
 
   useEffect(() => {
     const fetchSessions = async () => {
@@ -82,6 +94,127 @@ export default function DashboardPage() {
         </h1>
         <p className="text-gray-600">Ready to get started?</p>
       </div>
+
+      {/* Usage Summary (free plan only) */}
+      {!subLoading && plan === "free" && (
+        <section className="mb-8">
+          <div className="bg-white rounded-xl border border-gray-200 p-6">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-lg font-semibold text-gray-900">
+                Monthly Usage
+              </h2>
+              <Link
+                href="/pricing"
+                className="text-sm text-[#d4af37] hover:text-[#f4d03f] font-medium transition-colors"
+              >
+                Upgrade to Pro
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-sm text-gray-600">Practice sessions</span>
+                  <span className="text-sm font-medium text-gray-900">
+                    {practiceUsed}/{practiceLimit}
+                  </span>
+                </div>
+                <div className="w-full bg-gray-100 rounded-full h-2">
+                  <div
+                    className={`h-2 rounded-full transition-all ${
+                      practiceLimit && practiceUsed >= practiceLimit
+                        ? "bg-red-400"
+                        : "bg-[#d4af37]"
+                    }`}
+                    style={{
+                      width: `${Math.min(100, practiceLimit ? (practiceUsed / practiceLimit) * 100 : 0)}%`,
+                    }}
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-sm text-gray-600">Learn sessions</span>
+                  <span className="text-sm font-medium text-gray-900">
+                    {learnUsed}/{learnLimit}
+                  </span>
+                </div>
+                <div className="w-full bg-gray-100 rounded-full h-2">
+                  <div
+                    className={`h-2 rounded-full transition-all ${
+                      learnLimit && learnUsed >= learnLimit
+                        ? "bg-red-400"
+                        : "bg-[#d4af37]"
+                    }`}
+                    style={{
+                      width: `${Math.min(100, learnLimit ? (learnUsed / learnLimit) * 100 : 0)}%`,
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Pro Subscription Card */}
+      {!subLoading && plan === "pro" && (
+        <section className="mb-8">
+          <div className="bg-white rounded-xl border border-gray-200 p-6">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-[#d4af37]/10 flex items-center justify-center">
+                  <svg className="w-5 h-5 text-[#d4af37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <h2 className="text-lg font-semibold text-gray-900">
+                      Pro Plan
+                    </h2>
+                    <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-[#d4af37]/10 text-[#d4af37]">
+                      Active
+                    </span>
+                  </div>
+                  <div className="text-sm text-gray-600 mt-0.5">
+                    {billingInterval && (
+                      <span>
+                        {billingInterval === "yearly" ? "Annual" : "Monthly"} billing
+                      </span>
+                    )}
+                    {currentPeriodEnd && !cancelAtPeriodEnd && (
+                      <span>
+                        {billingInterval ? " · " : ""}Renews{" "}
+                        {new Date(currentPeriodEnd).toLocaleDateString("en-US", {
+                          month: "short",
+                          day: "numeric",
+                          year: "numeric",
+                        })}
+                      </span>
+                    )}
+                    {cancelAtPeriodEnd && currentPeriodEnd && (
+                      <span className="text-amber-600 font-medium">
+                        {billingInterval ? " · " : ""}Ends{" "}
+                        {new Date(currentPeriodEnd).toLocaleDateString("en-US", {
+                          month: "short",
+                          day: "numeric",
+                          year: "numeric",
+                        })}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </div>
+              <Link
+                href="/pricing"
+                className="text-sm text-[#d4af37] hover:text-[#f4d03f] font-medium transition-colors"
+              >
+                Manage
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Based on your recent practice */}
       <section className="mb-8">

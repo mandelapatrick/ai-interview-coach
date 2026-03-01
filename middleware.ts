@@ -6,13 +6,14 @@ export default auth((req) => {
   const isOnCompany = req.nextUrl.pathname.startsWith("/company");
   const isOnPractice = req.nextUrl.pathname.startsWith("/practice");
   const isOnHistory = req.nextUrl.pathname.startsWith("/history");
+  const isOnLearn = req.nextUrl.pathname.startsWith("/learn");
 
   // Protected routes
-  if ((isOnDashboard || isOnCompany || isOnPractice || isOnHistory) && !isLoggedIn) {
+  if ((isOnDashboard || isOnCompany || isOnPractice || isOnHistory || isOnLearn) && !isLoggedIn) {
     return Response.redirect(new URL("/signin", req.nextUrl));
   }
 });
 
 export const config = {
-  matcher: ["/dashboard/:path*", "/company/:path*", "/practice/:path*", "/history/:path*"],
+  matcher: ["/dashboard/:path*", "/company/:path*", "/practice/:path*", "/history/:path*", "/learn/:path*"],
 };

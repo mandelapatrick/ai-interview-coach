@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { supabase } from "@/lib/supabase";
+import { recordUsage } from "@/lib/subscription";
 
 export async function POST(request: NextRequest) {
   try {
@@ -26,6 +27,7 @@ export async function POST(request: NextRequest) {
       transcript,
       durationSeconds,
       videoRecordingUrl,
+      sessionType,
     } = body;
 
     const { data, error } = await supabase
@@ -47,6 +49,11 @@ export async function POST(request: NextRequest) {
     if (error) {
       console.error("Supabase error:", error);
       return NextResponse.json({ error: error.message }, { status: 500 });
+    }
+
+    // Record usage for subscription tracking
+    if (sessionType === "practice" || sessionType === "learn") {
+      await recordUsage(session.user.email, sessionType, questionId);
     }
 
     return NextResponse.json(data);

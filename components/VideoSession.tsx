@@ -17,6 +17,7 @@ interface VideoSessionProps {
   userStream: MediaStream;
   avatarProvider: AvatarProvider;
   onBack: () => void;
+  maxDurationSeconds?: number | null;
 }
 
 interface TranscriptEntry {
@@ -25,9 +26,10 @@ interface TranscriptEntry {
   timestamp: Date;
 }
 
-export default function VideoSession({ question, userStream, avatarProvider, onBack }: VideoSessionProps) {
+export default function VideoSession({ question, userStream, avatarProvider, onBack, maxDurationSeconds }: VideoSessionProps) {
   const router = useRouter();
   const [showEndConfirm, setShowEndConfirm] = useState(false);
+  const [showTimeWarning, setShowTimeWarning] = useState(false);
   const [transcript, setTranscript] = useState<TranscriptEntry[]>([]);
   const [duration, setDuration] = useState(0);
   const [isSessionStarted, setIsSessionStarted] = useState(false);
@@ -161,6 +163,24 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
       if (timerRef.current) clearInterval(timerRef.current);
     };
   }, [isSessionStarted]);
+
+  // Auto-end session when duration limit reached
+  useEffect(() => {
+    if (!maxDurationSeconds || !isSessionStarted) return;
+
+    if (duration >= maxDurationSeconds) {
+      setShowTimeWarning(false);
+      if (transcript.length > 0) {
+        confirmEnd();
+      } else {
+        cleanup();
+        onBack();
+      }
+    } else if (duration >= maxDurationSeconds - 60 && !showTimeWarning) {
+      setShowTimeWarning(true);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [duration, maxDurationSeconds, isSessionStarted]);
 
   // Canvas compositor for video recording
   useEffect(() => {
@@ -684,6 +704,15 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
 
   return (
     <div className="flex flex-col md:flex-row h-full bg-gray-50">
+      {/* Time limit warning banner */}
+      {showTimeWarning && maxDurationSeconds && (
+        <div className="bg-amber-50 border-b border-amber-200 px-4 py-2 text-center w-full">
+          <p className="text-sm text-amber-800 font-medium">
+            Less than 1 minute remaining in your free session
+          </p>
+        </div>
+      )}
+
       {/* Hidden canvas for video compositing/recording */}
       <canvas
         ref={canvasRef}

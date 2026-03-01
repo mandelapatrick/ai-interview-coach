@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import { Question } from "@/types";
+import { useSubscription } from "@/hooks/useSubscription";
 import LearnSession from "./LearnSession";
+import UpgradeModal from "./UpgradeModal";
 
 type FlowState = "intro" | "watching" | "summary";
 
@@ -15,8 +17,25 @@ export default function LearnFlow({ question }: LearnFlowProps) {
   const [sessionTranscript, setSessionTranscript] = useState<
     Array<{ speaker: "interviewer" | "candidate"; text: string; timestamp: Date }>
   >([]);
+  const [showUpgrade, setShowUpgrade] = useState(false);
 
-  const handleStartWatching = () => {
+  const { canLearn, maxDurationSeconds, loading } = useSubscription();
+
+  const handleStartWatching = async () => {
+    if (!canLearn) {
+      setShowUpgrade(true);
+      return;
+    }
+    // Record learn usage
+    try {
+      await fetch("/api/usage/record", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ sessionType: "learn", questionId: question.id }),
+      });
+    } catch (err) {
+      console.error("Failed to record learn usage:", err);
+    }
     setFlowState("watching");
   };
 
@@ -32,97 +51,113 @@ export default function LearnFlow({ question }: LearnFlowProps) {
     setSessionTranscript([]);
   };
 
+  if (loading) {
+    return (
+      <div className="min-h-full flex items-center justify-center">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#d4af37]"></div>
+      </div>
+    );
+  }
+
   switch (flowState) {
     case "intro":
       return (
-        <div className="min-h-full flex items-center justify-center p-4 md:p-8">
-          <div className="max-w-2xl text-center w-full">
-            <div className="mb-4 md:mb-6 hidden sm:block">
-              <div className="w-16 h-16 md:w-20 md:h-20 mx-auto bg-gradient-to-br from-[#1e3a5f] to-[#0f172a] rounded-2xl flex items-center justify-center mb-3 md:mb-4">
-                <svg
-                  className="w-8 h-8 md:w-10 md:h-10 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
-                  />
-                </svg>
+        <>
+          <div className="min-h-full flex items-center justify-center p-4 md:p-8">
+            <div className="max-w-2xl text-center w-full">
+              <div className="mb-4 md:mb-6 hidden sm:block">
+                <div className="w-16 h-16 md:w-20 md:h-20 mx-auto bg-gradient-to-br from-[#1e3a5f] to-[#0f172a] rounded-2xl flex items-center justify-center mb-3 md:mb-4">
+                  <svg
+                    className="w-8 h-8 md:w-10 md:h-10 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
+                <h2 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4 font-display">Learn Mode</h2>
+                <p className="text-base md:text-lg text-gray-600 mb-4 md:mb-6">
+                  Watch a simulated interview between an AI interviewer and an expert candidate.
+                  Learn how to structure your answers and what excellent responses look like.
+                </p>
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4 font-display">Learn Mode</h2>
-              <p className="text-base md:text-lg text-gray-600 mb-4 md:mb-6">
-                Watch a simulated interview between an AI interviewer and an expert candidate.
-                Learn how to structure your answers and what excellent responses look like.
-              </p>
-            </div>
 
-            <div className="bg-white rounded-xl p-4 md:p-6 mb-6 md:mb-8 text-left border border-gray-200">
-              <h3 className="font-semibold mb-3 md:mb-4 text-gray-800">What to expect:</h3>
-              <ul className="space-y-3 text-gray-600 text-sm md:text-base">
-                <li className="flex items-start gap-3">
-                  <span className="text-[#d4af37] mt-1">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </span>
-                  <span>
-                    <strong className="text-gray-800">Two AI avatars</strong> - An interviewer asks
-                    questions, and an expert candidate demonstrates quality responses
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#d4af37] mt-1">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </span>
-                  <span>
-                    <strong className="text-gray-800">Interactive controls</strong> - Pause anytime
-                    to absorb key points or ask clarifying questions
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-[#d4af37] mt-1">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </span>
-                  <span>
-                    <strong className="text-gray-800">Best practices</strong> - See frameworks,
-                    structured thinking, and communication patterns in action
-                  </span>
-                </li>
-              </ul>
-            </div>
+              <div className="bg-white rounded-xl p-4 md:p-6 mb-6 md:mb-8 text-left border border-gray-200">
+                <h3 className="font-semibold mb-3 md:mb-4 text-gray-800">What to expect:</h3>
+                <ul className="space-y-3 text-gray-600 text-sm md:text-base">
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#d4af37] mt-1">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                    <span>
+                      <strong className="text-gray-800">Two AI avatars</strong> - An interviewer asks
+                      questions, and an expert candidate demonstrates quality responses
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#d4af37] mt-1">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                    <span>
+                      <strong className="text-gray-800">Interactive controls</strong> - Pause anytime
+                      to absorb key points or ask clarifying questions
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#d4af37] mt-1">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                    <span>
+                      <strong className="text-gray-800">Best practices</strong> - See frameworks,
+                      structured thinking, and communication patterns in action
+                    </span>
+                  </li>
+                </ul>
+              </div>
 
-            <button
-              onClick={handleStartWatching}
-              className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white font-medium rounded-xl hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
-            >
-              Start Learning
-            </button>
+              <button
+                onClick={handleStartWatching}
+                className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white font-medium rounded-xl hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
+              >
+                Start Learning
+              </button>
+            </div>
           </div>
-        </div>
+          {showUpgrade && (
+            <UpgradeModal
+              sessionType="learn"
+              onClose={() => setShowUpgrade(false)}
+            />
+          )}
+        </>
       );
 
     case "watching":
-      return <LearnSession question={question} onEnd={handleSessionEnd} />;
+      return <LearnSession question={question} onEnd={handleSessionEnd} maxDurationSeconds={maxDurationSeconds} />;
 
     case "summary":
       return (

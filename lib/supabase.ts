@@ -44,6 +44,30 @@ export interface DbAssessment {
   created_at: string;
 }
 
+export interface DbUserSubscription {
+  id: string;
+  user_id: string;
+  user_email: string;
+  stripe_customer_id: string | null;
+  stripe_subscription_id: string | null;
+  plan_type: "free" | "pro";
+  billing_interval: "monthly" | "yearly" | null;
+  status: "active" | "canceled" | "past_due";
+  current_period_end: string | null;
+  cancel_at_period_end: boolean;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface DbUsageTracking {
+  id: string;
+  user_email: string;
+  session_type: "practice" | "learn";
+  question_id: string | null;
+  period_start: string;
+  created_at: string;
+}
+
 // Helper functions
 export async function saveSession(session: Omit<DbSession, "id" | "created_at">) {
   if (!supabase) {
