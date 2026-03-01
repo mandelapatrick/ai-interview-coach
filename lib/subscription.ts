@@ -1,4 +1,4 @@
-import { supabase } from "./supabase";
+import { supabase, supabaseAdmin } from "./supabase";
 import { stripe } from "./stripe";
 
 const FREE_PRACTICE_LIMIT = 1;
@@ -104,13 +104,14 @@ export async function getUserSubscription(
         ).toISOString(),
       };
 
-      // Update DB if anything changed
+      // Update DB if anything changed (use admin client to bypass RLS)
       if (
         synced.cancel_at_period_end !== (data.cancel_at_period_end || false) ||
         synced.status !== data.status ||
         synced.plan_type !== data.plan_type
       ) {
-        await supabase
+        const adminClient = supabaseAdmin || supabase;
+        await adminClient!
           .from("user_subscriptions")
           .update({ ...synced, updated_at: new Date().toISOString() })
           .eq("user_email", email);

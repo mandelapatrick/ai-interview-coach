@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { stripe } from "@/lib/stripe";
-import { supabase } from "@/lib/supabase";
+import { supabaseAdmin } from "@/lib/supabase";
 import Stripe from "stripe";
 
 export async function POST(request: NextRequest) {
@@ -69,7 +69,7 @@ export async function POST(request: NextRequest) {
 }
 
 async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
-  if (!supabase || !stripe) return;
+  if (!supabaseAdmin || !stripe) return;
 
   const email =
     session.metadata?.user_email || session.customer_email;
@@ -82,7 +82,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   const subscription = await stripe.subscriptions.retrieve(subscriptionId);
   const interval = subscription.items.data[0]?.plan?.interval;
 
-  await supabase
+  await supabaseAdmin
     .from("user_subscriptions")
     .upsert(
       {
@@ -104,7 +104,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
 }
 
 async function handleSubscriptionUpdated(subscription: Stripe.Subscription) {
-  if (!supabase) return;
+  if (!supabaseAdmin) return;
 
   const customerId = subscription.customer as string;
 
@@ -118,7 +118,7 @@ async function handleSubscriptionUpdated(subscription: Stripe.Subscription) {
   const mappedStatus = statusMap[subscription.status] || "active";
   const interval = subscription.items.data[0]?.plan?.interval;
 
-  await supabase
+  await supabaseAdmin
     .from("user_subscriptions")
     .update({
       status: mappedStatus,
@@ -134,11 +134,11 @@ async function handleSubscriptionUpdated(subscription: Stripe.Subscription) {
 }
 
 async function handleSubscriptionDeleted(subscription: Stripe.Subscription) {
-  if (!supabase) return;
+  if (!supabaseAdmin) return;
 
   const customerId = subscription.customer as string;
 
-  await supabase
+  await supabaseAdmin
     .from("user_subscriptions")
     .update({
       plan_type: "free",
@@ -153,11 +153,11 @@ async function handleSubscriptionDeleted(subscription: Stripe.Subscription) {
 }
 
 async function handlePaymentFailed(invoice: Stripe.Invoice) {
-  if (!supabase) return;
+  if (!supabaseAdmin) return;
 
   const customerId = invoice.customer as string;
 
-  await supabase
+  await supabaseAdmin
     .from("user_subscriptions")
     .update({
       status: "past_due",
