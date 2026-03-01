@@ -94,7 +94,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
         billing_interval: interval === "year" ? "yearly" : "monthly",
         status: "active",
         current_period_end: new Date(
-          subscription.items.data[0].current_period_end * 1000
+          subscription.current_period_end * 1000
         ).toISOString(),
         cancel_at_period_end: subscription.cancel_at_period_end,
         updated_at: new Date().toISOString(),
@@ -125,7 +125,7 @@ async function handleSubscriptionUpdated(subscription: Stripe.Subscription) {
       plan_type: subscription.status === "canceled" ? "free" : "pro",
       billing_interval: interval === "year" ? "yearly" : "monthly",
       current_period_end: new Date(
-        subscription.items.data[0].current_period_end * 1000
+        subscription.current_period_end * 1000
       ).toISOString(),
       cancel_at_period_end: subscription.cancel_at_period_end,
       updated_at: new Date().toISOString(),

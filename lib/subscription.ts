@@ -100,7 +100,7 @@ export async function getUserSubscription(
         status: mappedStatus,
         cancel_at_period_end: sub.cancel_at_period_end,
         current_period_end: new Date(
-          sub.items.data[0].current_period_end * 1000
+          sub.current_period_end * 1000
         ).toISOString(),
       };
 
