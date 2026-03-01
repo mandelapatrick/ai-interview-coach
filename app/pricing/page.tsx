@@ -137,12 +137,21 @@ export default function PricingPage() {
         ) : (
           <>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-display">
-              {isPro ? "Your Plan" : "Simple, transparent pricing"}
+              {isPro ? (
+                "Your Plan"
+              ) : (
+                <>
+                  Land Your Dream{" "}
+                  <span className="bg-gradient-to-r from-[#d4af37] to-[#f4d03f] bg-clip-text text-transparent">
+                    Consulting Offer
+                  </span>
+                </>
+              )}
             </h1>
             <p className="text-lg text-gray-600 max-w-xl mx-auto">
               {isPro
                 ? "Manage your Pro subscription and billing details."
-                : "Start free and upgrade when you\u2019re ready to unlock unlimited practice."}
+                : "Invest in your career. Start free and upgrade when you\u2019re ready for unlimited practice."}
             </p>
           </>
         )}
