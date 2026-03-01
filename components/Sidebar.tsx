@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 
 interface SubMenuItem {
   name: string;
@@ -104,14 +104,23 @@ const UserAvatar = ({ user, size = "md" }: { user: SidebarProps["user"]; size?: 
 
 export default function Sidebar({ user }: SidebarProps) {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const [collapsed, setCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const saved = localStorage.getItem("sidebar-collapsed");
-    if (saved !== null) {
-      setCollapsed(saved === "true");
-    }
+    const applyCollapsed = () => {
+      const isLg = window.innerWidth >= 1024; // lg breakpoint
+      if (isLg) {
+        const saved = localStorage.getItem("sidebar-collapsed");
+        setCollapsed(saved === "true"); // false if null (default expanded)
+      } else {
+        setCollapsed(true); // always collapsed on md (768–1023px) to match ml-16 layout offset
+      }
+    };
+    applyCollapsed();
+    window.addEventListener("resize", applyCollapsed);
+    return () => window.removeEventListener("resize", applyCollapsed);
   }, []);
 
   // Close mobile drawer on route change
@@ -130,6 +139,17 @@ export default function Sidebar({ user }: SidebarProps) {
       return pathname === "/dashboard";
     }
     return pathname.startsWith(href.split("?")[0]);
+  };
+
+  const isSubItemActive = (href: string) => {
+    const [path, query] = href.split("?");
+    if (!pathname.startsWith(path)) return false;
+    if (!query) return true;
+    const params = new URLSearchParams(query);
+    for (const [key, value] of params.entries()) {
+      if (searchParams.get(key) !== value) return false;
+    }
+    return true;
   };
 
   // Desktop nav items (collapse-aware, hover flyout for subitems)
@@ -163,7 +183,11 @@ export default function Sidebar({ user }: SidebarProps) {
                     <li key={subItem.href}>
                       <Link
                         href={subItem.href}
-                        className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-all whitespace-nowrap"
+                        className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-all whitespace-nowrap ${
+                          isSubItemActive(subItem.href)
+                            ? "text-[#d4af37] bg-[#d4af37]/5"
+                            : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+                        }`}
                       >
                         <span>{subItem.name}</span>
                       </Link>
@@ -223,8 +247,8 @@ export default function Sidebar({ user }: SidebarProps) {
                     <Link
                       href={subItem.href}
                       className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm transition-all ${
-                        pathname.startsWith(subItem.href.split("?")[0]) && pathname.includes(subItem.href.split("?")[1] ?? "")
-                          ? "text-[#d4af37]"
+                        isSubItemActive(subItem.href)
+                          ? "text-[#d4af37] bg-[#d4af37]/5"
                           : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
                       }`}
                     >
