@@ -38,7 +38,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
         <div className="min-h-full flex items-center justify-center p-4 md:p-8">
           <div className="max-w-2xl text-center w-full">
             <div className="mb-4 md:mb-6 hidden sm:block">
-              <div className="w-16 h-16 md:w-20 md:h-20 mx-auto bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center mb-3 md:mb-4">
+              <div className="w-16 h-16 md:w-20 md:h-20 mx-auto bg-gradient-to-br from-[#1e3a5f] to-[#0f172a] rounded-2xl flex items-center justify-center mb-3 md:mb-4">
                 <svg
                   className="w-8 h-8 md:w-10 md:h-10 text-white"
                   fill="none"
@@ -64,7 +64,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
               <h3 className="font-semibold mb-3 md:mb-4 text-gray-800">What to expect:</h3>
               <ul className="space-y-3 text-gray-600 text-sm md:text-base">
                 <li className="flex items-start gap-3">
-                  <span className="text-violet-400 mt-1">
+                  <span className="text-[#d4af37] mt-1">
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
@@ -79,7 +79,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-violet-400 mt-1">
+                  <span className="text-[#d4af37] mt-1">
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
@@ -94,7 +94,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-violet-400 mt-1">
+                  <span className="text-[#d4af37] mt-1">
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
@@ -113,7 +113,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
 
             <button
               onClick={handleStartWatching}
-              className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-violet-500 to-purple-600 text-white font-medium rounded-xl hover:shadow-lg hover:shadow-violet-500/25 transition-all"
+              className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white font-medium rounded-xl hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
             >
               Start Learning
             </button>
@@ -146,14 +146,14 @@ export default function LearnFlow({ question }: LearnFlowProps) {
                       className={`p-3 rounded-lg ${
                         entry.speaker === "interviewer"
                           ? "bg-blue-500/10 border-l-2 border-blue-400"
-                          : "bg-violet-500/10 border-l-2 border-violet-400"
+                          : "bg-[#d4af37]/10 border-l-2 border-[#d4af37]"
                       }`}
                     >
                       <span
                         className={`text-xs font-medium uppercase ${
                           entry.speaker === "interviewer"
                             ? "text-blue-400"
-                            : "text-violet-400"
+                            : "text-[#d4af37]"
                         }`}
                       >
                         {entry.speaker}
