@@ -35,6 +35,7 @@ export default function LearnSession({ question, onEnd, maxDurationSeconds }: Le
     isPaused,
     transcript,
     error,
+    reconnectingAvatar,
     initializeAvatars,
     pause,
     resume,
@@ -177,6 +178,13 @@ export default function LearnSession({ question, onEnd, maxDurationSeconds }: Le
                 <p className="text-gray-500 text-sm">Connecting interviewer...</p>
               </div>
             )}
+            {/* Reconnecting overlay */}
+            {reconnectingAvatar === "interviewer" && (
+              <div className="absolute inset-0 bg-gray-100/80 flex flex-col items-center justify-center backdrop-blur-sm">
+                <div className="w-10 h-10 border-4 border-blue-400/30 border-t-blue-400 rounded-full animate-spin mb-3" />
+                <p className="text-gray-600 text-sm">Reconnecting interviewer...</p>
+              </div>
+            )}
           </div>
 
           {/* Candidate Video */}
@@ -207,6 +215,13 @@ export default function LearnSession({ question, onEnd, maxDurationSeconds }: Le
               <div className="absolute inset-0 bg-gray-100 flex flex-col items-center justify-center">
                 <div className="w-10 h-10 md:w-12 md:h-12 border-4 border-violet-400/30 border-t-violet-400 rounded-full animate-spin mb-3 md:mb-4" />
                 <p className="text-gray-500 text-sm">Connecting candidate...</p>
+              </div>
+            )}
+            {/* Reconnecting overlay */}
+            {reconnectingAvatar === "candidate" && (
+              <div className="absolute inset-0 bg-gray-100/80 flex flex-col items-center justify-center backdrop-blur-sm">
+                <div className="w-10 h-10 border-4 border-violet-400/30 border-t-violet-400 rounded-full animate-spin mb-3" />
+                <p className="text-gray-600 text-sm">Reconnecting candidate...</p>
               </div>
             )}
           </div>

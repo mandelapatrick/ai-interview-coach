@@ -33,6 +33,7 @@ export interface UseDualAnamAvatarsReturn {
   isPaused: boolean;
   transcript: TranscriptEntry[];
   error: string | null;
+  reconnectingAvatar: "interviewer" | "candidate" | null;
   initializeAvatars: (
     interviewerVideo: HTMLVideoElement,
     candidateVideo: HTMLVideoElement
@@ -64,8 +65,14 @@ export function useDualAnamAvatars(
   const [isPaused, setIsPaused] = useState(false);
   const [transcript, setTranscript] = useState<TranscriptEntry[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const [reconnectingAvatar, setReconnectingAvatar] = useState<
+    "interviewer" | "candidate" | null
+  >(null);
 
   // Refs
+  const interviewerRetryCountRef = useRef(0);
+  const candidateRetryCountRef = useRef(0);
+  const reconnectingRef = useRef(false);
   const isPausedRef = useRef(false); // Ref version of isPaused for use in event listeners
   const interviewerClientRef = useRef<AnamClient | null>(null);
   const candidateClientRef = useRef<AnamClient | null>(null);
@@ -81,7 +88,9 @@ export function useDualAnamAvatars(
   // Timeout refs for fallback speech-end detection
   const interviewerSpeechTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const candidateSpeechTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const healthCheckIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const SPEECH_END_TIMEOUT = 3000; // 3 seconds of silence = speech ended
+  const MAX_RECONNECT_RETRIES = 2;
 
   // Cleanup on unmount
   useEffect(() => {
@@ -97,6 +106,9 @@ export function useDualAnamAvatars(
       }
       if (candidateSpeechTimeoutRef.current) {
         clearTimeout(candidateSpeechTimeoutRef.current);
+      }
+      if (healthCheckIntervalRef.current) {
+        clearInterval(healthCheckIntervalRef.current);
       }
     };
   }, []);
@@ -131,6 +143,153 @@ export function useDualAnamAvatars(
       });
     },
     [onTranscriptUpdate]
+  );
+
+  // Handle connection lost for a specific avatar
+  const handleConnectionLost = useCallback(
+    async (avatar: "interviewer" | "candidate", reason: string) => {
+      // Prevent concurrent reconnection attempts
+      if (reconnectingRef.current) return;
+
+      const retryCount =
+        avatar === "interviewer"
+          ? interviewerRetryCountRef.current
+          : candidateRetryCountRef.current;
+
+      if (retryCount >= MAX_RECONNECT_RETRIES) {
+        const msg = `${avatar} stream failed after ${MAX_RECONNECT_RETRIES} reconnection attempts`;
+        console.error("[DualAnam]", msg);
+        setError(msg);
+        onError?.(msg);
+        setReconnectingAvatar(null);
+        return;
+      }
+
+      reconnectingRef.current = true;
+      console.warn(`[DualAnam] ${avatar} connection lost (${reason}), attempting reconnect (${retryCount + 1}/${MAX_RECONNECT_RETRIES})...`);
+
+      // Update retry count
+      if (avatar === "interviewer") {
+        interviewerRetryCountRef.current++;
+      } else {
+        candidateRetryCountRef.current++;
+      }
+
+      setReconnectingAvatar(avatar);
+
+      // Pause the conversation while reconnecting
+      isPausedRef.current = true;
+      setIsPaused(true);
+
+      // Interrupt the other avatar to prevent it from talking into the void
+      try {
+        if (avatar === "interviewer" && candidateClientRef.current) {
+          candidateClientRef.current.interruptPersona();
+        } else if (avatar === "candidate" && interviewerClientRef.current) {
+          interviewerClientRef.current.interruptPersona();
+        }
+      } catch (e) {
+        console.warn("[DualAnam] Failed to interrupt other avatar during reconnect:", e);
+      }
+
+      // Stop the dead client
+      try {
+        const deadClient =
+          avatar === "interviewer"
+            ? interviewerClientRef.current
+            : candidateClientRef.current;
+        if (deadClient) {
+          await deadClient.stopStreaming().catch(() => {});
+        }
+      } catch (e) {
+        console.warn("[DualAnam] Failed to stop dead client:", e);
+      }
+
+      try {
+        // Fetch a new token for the disconnected avatar
+        const tokenRes = await fetch("/api/anam/learn-tokens", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            interviewerPrompt,
+            candidatePrompt,
+          }),
+        });
+
+        if (!tokenRes.ok) {
+          throw new Error("Failed to get reconnection token");
+        }
+
+        const tokens = await tokenRes.json();
+        const newToken =
+          avatar === "interviewer"
+            ? tokens.interviewerToken
+            : tokens.candidateToken;
+
+        // Create a new client
+        const newClient = createClient(newToken);
+
+        // Get the video element
+        const videoEl =
+          avatar === "interviewer"
+            ? interviewerVideoRef.current
+            : candidateVideoRef.current;
+
+        if (!videoEl) {
+          throw new Error("Video element not found for reconnection");
+        }
+
+        // Ensure video element has an ID
+        if (!videoEl.id) {
+          videoEl.id = `${avatar}-video-${Date.now()}`;
+        }
+
+        // Mute input audio (Learn mode = watch-only)
+        newClient.muteInputAudio();
+
+        // Register CONNECTION_CLOSED listener on the new client
+        newClient.addListener(AnamEvent.CONNECTION_CLOSED, (r: string) => {
+          console.warn(`[DualAnam] ${avatar} connection closed (reconnected client):`, r);
+          handleConnectionLost(avatar, r);
+        });
+
+        // Start streaming to the video element
+        await newClient.streamToVideoElement(videoEl.id);
+
+        // Update the client ref
+        if (avatar === "interviewer") {
+          interviewerClientRef.current = newClient;
+        } else {
+          candidateClientRef.current = newClient;
+        }
+
+        console.log(`[DualAnam] ${avatar} reconnected successfully`);
+
+        // Reset reconnecting state
+        setReconnectingAvatar(null);
+        reconnectingRef.current = false;
+
+        // Resume the conversation
+        isPausedRef.current = false;
+        setIsPaused(false);
+
+        // Prompt the reconnected avatar to continue
+        turnStateRef.current =
+          avatar === "interviewer"
+            ? "waiting_for_interviewer"
+            : "waiting_for_candidate";
+        updateSpeaker(avatar);
+        newClient.sendUserMessage(
+          "Please continue the interview from where you left off."
+        );
+      } catch (err) {
+        console.error(`[DualAnam] Reconnection failed for ${avatar}:`, err);
+        reconnectingRef.current = false;
+        // Retry by calling handleConnectionLost again (retry count already incremented)
+        handleConnectionLost(avatar, "RECONNECT_FAILED");
+      }
+    },
+    [interviewerPrompt, candidatePrompt, updateSpeaker, onError]
   );
 
   // Initialize both avatars
@@ -223,6 +382,17 @@ export function useDualAnamAvatars(
             }
           }
         };
+
+        // Set up connection closed listeners for reconnection
+        interviewerClient.addListener(AnamEvent.CONNECTION_CLOSED, (reason: string) => {
+          console.warn("[DualAnam] Interviewer connection closed:", reason);
+          handleConnectionLost("interviewer", reason);
+        });
+
+        candidateClient.addListener(AnamEvent.CONNECTION_CLOSED, (reason: string) => {
+          console.warn("[DualAnam] Candidate connection closed:", reason);
+          handleConnectionLost("candidate", reason);
+        });
 
         // Set up interviewer event listeners
         interviewerClient.addListener(AnamEvent.SESSION_READY, () => {
@@ -414,6 +584,7 @@ export function useDualAnamAvatars(
       addToTranscript,
       onError,
       onSessionEnd,
+      handleConnectionLost,
     ]
   );
 
@@ -491,6 +662,35 @@ export function useDualAnamAvatars(
     [addToTranscript, updateSpeaker]
   );
 
+  // Video track health check - detect silently dead streams
+  useEffect(() => {
+    if (!isInitialized) return;
+
+    healthCheckIntervalRef.current = setInterval(() => {
+      if (reconnectingRef.current) return;
+
+      // Check interviewer video tracks
+      const iStream = interviewerVideoRef.current?.srcObject as MediaStream | null;
+      if (iStream && iStream.getVideoTracks().every((t) => t.readyState === "ended")) {
+        console.warn("[DualAnam] Interviewer video tracks ended, triggering reconnect");
+        handleConnectionLost("interviewer", "TRACK_ENDED");
+      }
+
+      // Check candidate video tracks
+      const cStream = candidateVideoRef.current?.srcObject as MediaStream | null;
+      if (cStream && cStream.getVideoTracks().every((t) => t.readyState === "ended")) {
+        console.warn("[DualAnam] Candidate video tracks ended, triggering reconnect");
+        handleConnectionLost("candidate", "TRACK_ENDED");
+      }
+    }, 5000);
+
+    return () => {
+      if (healthCheckIntervalRef.current) {
+        clearInterval(healthCheckIntervalRef.current);
+      }
+    };
+  }, [isInitialized, handleConnectionLost]);
+
   // Stop both avatars
   const stopAvatars = useCallback(async () => {
     try {
@@ -524,6 +724,7 @@ export function useDualAnamAvatars(
     isPaused,
     transcript,
     error,
+    reconnectingAvatar,
     initializeAvatars,
     pause,
     resume,
