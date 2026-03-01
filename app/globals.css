@@ -131,3 +131,16 @@ body {
 .animate-pulse-ring {
   animation: pulse-ring 1.5s ease-in-out infinite;
 }
+
+/* Landing page utilities */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details > summary {
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
