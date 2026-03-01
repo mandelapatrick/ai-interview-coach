@@ -1,4 +1,5 @@
 import { supabase } from "./supabase";
+import { stripe } from "./stripe";
 
 const FREE_PRACTICE_LIMIT = 1;
 const FREE_LEARN_LIMIT = 1;
@@ -79,6 +80,53 @@ export async function getUserSubscription(
       currentPeriodEnd: null,
       stripeCustomerId: newSub?.stripe_customer_id || null,
     };
+  }
+
+  // Sync latest state from Stripe if user has an active subscription
+  if (data.stripe_subscription_id && stripe && data.plan_type === "pro") {
+    try {
+      const sub = await stripe.subscriptions.retrieve(data.stripe_subscription_id);
+      const interval = sub.items.data[0]?.plan?.interval;
+      const statusMap: Record<string, string> = {
+        active: "active",
+        past_due: "past_due",
+        canceled: "canceled",
+        unpaid: "past_due",
+      };
+      const mappedStatus = statusMap[sub.status] || "active";
+      const synced = {
+        plan_type: sub.status === "canceled" ? "free" : "pro",
+        billing_interval: interval === "year" ? "yearly" : "monthly",
+        status: mappedStatus,
+        cancel_at_period_end: sub.cancel_at_period_end,
+        current_period_end: new Date(
+          sub.items.data[0].current_period_end * 1000
+        ).toISOString(),
+      };
+
+      // Update DB if anything changed
+      if (
+        synced.cancel_at_period_end !== (data.cancel_at_period_end || false) ||
+        synced.status !== data.status ||
+        synced.plan_type !== data.plan_type
+      ) {
+        await supabase
+          .from("user_subscriptions")
+          .update({ ...synced, updated_at: new Date().toISOString() })
+          .eq("user_email", email);
+      }
+
+      return {
+        plan: synced.plan_type as "free" | "pro",
+        billingInterval: synced.billing_interval as "monthly" | "yearly" | null,
+        status: synced.status as "active" | "canceled" | "past_due",
+        cancelAtPeriodEnd: synced.cancel_at_period_end,
+        currentPeriodEnd: synced.current_period_end,
+        stripeCustomerId: data.stripe_customer_id || null,
+      };
+    } catch (err) {
+      console.error("Stripe sync failed, using DB state:", err);
+    }
   }
 
   return {

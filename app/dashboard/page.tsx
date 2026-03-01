@@ -172,8 +172,12 @@ export default function DashboardPage() {
                     <h2 className="text-lg font-semibold text-gray-900">
                       Pro Plan
                     </h2>
-                    <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-[#d4af37]/10 text-[#d4af37]">
-                      Active
+                    <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${
+                      cancelAtPeriodEnd
+                        ? "bg-amber-100 text-amber-600"
+                        : "bg-[#d4af37]/10 text-[#d4af37]"
+                    }`}>
+                      {cancelAtPeriodEnd ? "Cancelling" : "Active"}
                     </span>
                   </div>
                   <div className="text-sm text-gray-600 mt-0.5">
