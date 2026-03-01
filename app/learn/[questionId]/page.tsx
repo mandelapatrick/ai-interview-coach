@@ -46,7 +46,7 @@ export default async function LearnPage({
               <span className="sm:hidden">← Back</span>
             </Link>
             <div className="flex items-center gap-2 md:gap-3">
-              <span className="px-2 py-1 text-xs font-medium rounded-full bg-violet-400/10 text-violet-600">
+              <span className="px-2 py-1 text-xs font-medium rounded-full bg-[#d4af37]/10 text-[#d4af37]">
                 Learn Mode
               </span>
               <span className="text-xs md:text-sm text-gray-600 hidden sm:inline">
