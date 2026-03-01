@@ -277,8 +277,8 @@ export default function Sidebar({ user }: SidebarProps) {
               onClick={hasSubItems ? (e) => { e.preventDefault(); toggleExpanded(item.href); } : undefined}
               className={`flex items-center gap-3 px-5 py-3.5 transition-all duration-150 ${
                 active
-                  ? "bg-white/10 text-white"
-                  : "text-[#94a3b8] hover:bg-white/5 hover:text-white"
+                  ? "bg-[#d4af37]/10 text-[#d4af37]"
+                  : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
               }`}
             >
               <span className={`flex-shrink-0 ${active ? "text-[#d4af37]" : ""}`}>
@@ -286,7 +286,7 @@ export default function Sidebar({ user }: SidebarProps) {
               </span>
               <span className="font-semibold flex-1 text-[15px]">{item.name}</span>
               {hasSubItems && (
-                <span className={active ? "text-[#d4af37]" : "text-[#475569]"}>
+                <span className={active ? "text-[#d4af37]" : "text-gray-400"}>
                   <ChevronIcon open={isExpanded} />
                 </span>
               )}
@@ -304,8 +304,8 @@ export default function Sidebar({ user }: SidebarProps) {
                         href={subItem.href}
                         className={`flex items-center gap-3 pl-14 pr-5 py-3 text-sm transition-all duration-150 ${
                           subActive
-                            ? "text-[#d4af37] bg-white/5"
-                            : "text-[#64748b] hover:text-white hover:bg-white/5"
+                            ? "text-[#d4af37] bg-[#d4af37]/5"
+                            : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
                         }`}
                       >
                         <span className="w-1 h-1 rounded-full bg-current flex-shrink-0" />
@@ -421,10 +421,10 @@ export default function Sidebar({ user }: SidebarProps) {
       </aside>
 
       {/* ===== MOBILE TOP HEADER ===== */}
-      <header className="md:hidden fixed top-0 left-0 right-0 z-40 h-14 bg-[#0f172a] border-b border-white/5 flex items-center px-4 gap-3">
+      <header className="md:hidden fixed top-0 left-0 right-0 z-40 h-14 bg-white border-b border-gray-200 flex items-center px-4 gap-3">
         <button
           onClick={() => setMobileOpen(true)}
-          className="p-2 -ml-2 rounded-lg text-[#94a3b8] hover:text-white hover:bg-white/10 transition-all"
+          className="p-2 -ml-2 rounded-lg text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-all"
           aria-label="Open navigation menu"
         >
           <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -436,7 +436,7 @@ export default function Sidebar({ user }: SidebarProps) {
 
         <Link href="/dashboard" className="flex items-center gap-2 flex-1">
           <LogoMark size="sm" />
-          <span className="text-base font-bold text-white">
+          <span className="text-base font-bold text-gray-900">
             Ace<span className="text-[#d4af37]">Interview</span>
           </span>
         </Link>
@@ -455,26 +455,26 @@ export default function Sidebar({ user }: SidebarProps) {
 
       {/* ===== MOBILE DRAWER ===== */}
       <aside
-        className={`md:hidden fixed left-0 top-0 h-[100dvh] w-72 bg-[#0f172a] flex flex-col z-50 transition-transform duration-300 ${
+        className={`md:hidden fixed left-0 top-0 h-[100dvh] w-full bg-white flex flex-col z-50 transition-transform duration-300 ${
           mobileOpen ? "translate-x-0" : "-translate-x-full"
         }`}
         aria-label="Navigation drawer"
       >
         {/* Drawer header */}
-        <div className="h-16 px-5 border-b border-white/5 flex items-center justify-between flex-shrink-0">
+        <div className="h-16 px-5 border-b border-gray-200 flex items-center justify-between flex-shrink-0">
           <Link
             href="/dashboard"
             className="flex items-center gap-2.5"
             onClick={() => setMobileOpen(false)}
           >
             <LogoMark />
-            <span className="text-lg font-bold text-white">
+            <span className="text-lg font-bold text-gray-900">
               Ace<span className="text-[#d4af37]">Interview</span>
             </span>
           </Link>
           <button
             onClick={() => setMobileOpen(false)}
-            className="p-2 rounded-lg text-[#475569] hover:text-white hover:bg-white/10 transition-all"
+            className="p-2 rounded-lg text-gray-400 hover:text-gray-900 hover:bg-gray-100 transition-all"
             aria-label="Close navigation menu"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -495,7 +495,7 @@ export default function Sidebar({ user }: SidebarProps) {
                 href="/pricing"
                 className={`flex items-center gap-3 px-5 py-3.5 transition-all duration-150 ${
                   plan === "pro"
-                    ? "text-[#94a3b8] hover:bg-white/5 hover:text-white"
+                    ? "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
                     : "text-[#d4af37] hover:bg-[#d4af37]/10"
                 }`}
               >
@@ -510,12 +510,12 @@ export default function Sidebar({ user }: SidebarProps) {
 
         {/* Drawer user profile */}
         {user && (
-          <div className="border-t border-white/5 px-4 py-4 flex-shrink-0">
-            <div className="flex items-center gap-3 px-3 py-3 rounded-xl bg-white/5">
+          <div className="border-t border-gray-200 px-4 py-4 flex-shrink-0 bg-white">
+            <div className="flex items-center gap-3 px-3 py-3 rounded-xl bg-gray-50">
               <UserAvatar user={user} />
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2">
-                  <span className="text-sm font-semibold text-white truncate">
+                  <span className="text-sm font-semibold text-gray-900 truncate">
                     {user.name || "User"}
                   </span>
                   {!subLoading && <PlanBadge plan={plan} />}
@@ -523,7 +523,7 @@ export default function Sidebar({ user }: SidebarProps) {
                 <form action="/api/auth/signout" method="POST">
                   <button
                     type="submit"
-                    className="text-xs text-[#64748b] hover:text-[#d4af37] transition-colors"
+                    className="text-xs text-gray-500 hover:text-[#d4af37] transition-colors"
                   >
                     Sign out
                   </button>
