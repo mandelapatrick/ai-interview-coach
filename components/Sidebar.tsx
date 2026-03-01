@@ -376,7 +376,7 @@ export default function Sidebar({ user }: SidebarProps) {
 
       {/* Drawer panel */}
       <aside
-        className={`md:hidden fixed left-0 top-0 h-screen w-72 bg-white border-r border-gray-200 flex flex-col z-50 transition-transform duration-300 ${
+        className={`md:hidden fixed left-0 top-0 h-[100dvh] w-72 bg-white border-r border-gray-200 flex flex-col z-50 transition-transform duration-300 ${
           mobileOpen ? "translate-x-0" : "-translate-x-full"
         }`}
         aria-label="Navigation drawer"
