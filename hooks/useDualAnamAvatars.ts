@@ -471,9 +471,22 @@ export function useDualAnamAvatars(
         timestamp: new Date(),
       });
 
-      // The candidate client should respond based on its system prompt
-      // For now, we just switch to the candidate speaker
-      updateSpeaker("candidate");
+      // Send the question to the candidate avatar so it responds
+      if (candidateClientRef.current) {
+        updateSpeaker("candidate");
+        turnStateRef.current = "waiting_for_candidate";
+
+        // Unmute candidate so user hears the response
+        if (candidateVideoRef.current) {
+          candidateVideoRef.current.muted = false;
+        }
+
+        // Unpause the interview
+        isPausedRef.current = false;
+        setIsPaused(false);
+
+        candidateClientRef.current.sendUserMessage(question);
+      }
     },
     [addToTranscript, updateSpeaker]
   );

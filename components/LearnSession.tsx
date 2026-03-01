@@ -118,7 +118,6 @@ export default function LearnSession({ question, onEnd, maxDurationSeconds }: Le
   const handleAskQuestion = async (questionText: string) => {
     setShowQuestionModal(false);
     await askCandidateQuestion(questionText);
-    resume();
   };
 
   // Open question modal and pause
