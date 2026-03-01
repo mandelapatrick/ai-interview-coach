@@ -141,9 +141,10 @@ export default function Sidebar({ user }: SidebarProps) {
 
         if (hasSubItems) {
           return (
-            <li key={item.href} className="relative group">
-              <div
-                className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all cursor-pointer ${
+            <li key={item.href}>
+              <Link
+                href={item.href}
+                className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all ${
                   active
                     ? "bg-[#d4af37]/10 text-[#d4af37]"
                     : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
@@ -152,29 +153,24 @@ export default function Sidebar({ user }: SidebarProps) {
               >
                 <span className={`flex items-center min-h-[24px] flex-shrink-0 ${active ? "text-[#d4af37]" : ""}`}>{item.icon}</span>
                 {!collapsed && (
-                  <>
-                    <span className="font-medium flex-1 whitespace-nowrap">{item.name}</span>
-                    <svg className="w-4 h-4 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="9 18 15 12 9 6" />
-                    </svg>
-                  </>
+                  <span className="font-medium flex-1 whitespace-nowrap">{item.name}</span>
                 )}
-              </div>
-              {/* Hover flyout submenu */}
-              <div className="absolute left-full top-0 ml-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <div className="bg-white border border-gray-200 rounded-xl py-2 min-w-[200px] shadow-lg">
+              </Link>
+              {/* Inline sub-items */}
+              {!collapsed && (
+                <ul className="mt-1 ml-4 space-y-1 border-l border-gray-200 pl-3">
                   {item.subItems!.map((subItem) => (
-                    <Link
-                      key={subItem.href}
-                      href={subItem.href}
-                      className="flex items-center gap-3 px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-all"
-                    >
-                      <BookIcon />
-                      <span className="font-medium">{subItem.name}</span>
-                    </Link>
+                    <li key={subItem.href}>
+                      <Link
+                        href={subItem.href}
+                        className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-all whitespace-nowrap"
+                      >
+                        <span>{subItem.name}</span>
+                      </Link>
+                    </li>
                   ))}
-                </div>
-              </div>
+                </ul>
+              )}
             </li>
           );
         }
