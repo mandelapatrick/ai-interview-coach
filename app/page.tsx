@@ -62,14 +62,15 @@ export default async function LandingPage() {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 font-display leading-tight">
-                Land Your Dream{" "}
+                Master Your{" "}
                 <span className="bg-gradient-to-r from-[#d4af37] to-[#f4d03f] bg-clip-text text-transparent">
-                  Consulting Offer
-                </span>
+                  Case Interview
+                </span>{" "}
+                with AI
               </h1>
 
               <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg">
-                Practice case interviews with an AI interviewer that adapts to your skill level. Get instant feedback and walk into every interview with confidence.
+                Practice case interviews with an AI interviewer that adapts to your skill level. Get instant feedback and improve faster than ever.
               </p>
 
               {/* Dual CTAs */}
