@@ -98,7 +98,7 @@ export async function getUserSubscription(
         plan_type: sub.status === "canceled" ? "free" : "pro",
         billing_interval: interval === "year" ? "yearly" : "monthly",
         status: mappedStatus,
-        cancel_at_period_end: sub.cancel_at_period_end,
+        cancel_at_period_end: sub.cancel_at_period_end || !!sub.cancel_at,
         current_period_end: new Date(
           sub.items.data[0].current_period_end * 1000
         ).toISOString(),
