@@ -62,13 +62,6 @@ const navItems: NavItem[] = [
   },
 ];
 
-const BookIcon = () => (
-  <svg className="w-4 h-4 text-[#d4af37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
-  </svg>
-);
-
 const LogoMark = ({ size = "md" }: { size?: "sm" | "md" }) => (
   <div className={`${size === "sm" ? "w-7 h-7" : "w-8 h-8"} bg-gradient-to-br from-[#d4af37] to-[#f4d03f] rounded-lg flex items-center justify-center flex-shrink-0`}>
     <svg
@@ -104,21 +97,55 @@ const UserAvatar = ({ user, size = "md" }: { user: SidebarProps["user"]; size?: 
   );
 };
 
+// Left accent bar for active nav items (Chegg-style)
+const ActiveBar = () => (
+  <span className="absolute left-0 top-1 bottom-1 w-[3px] bg-[#d4af37] rounded-r-full" />
+);
+
+// Chevron for items with sub-items
+const ChevronIcon = ({ open }: { open: boolean }) => (
+  <svg
+    className={`w-4 h-4 transition-transform duration-200 ${open ? "rotate-90" : ""}`}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <polyline points="9 18 15 12 9 6" />
+  </svg>
+);
+
+const UpgradeIcon = () => (
+  <svg className="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+  </svg>
+);
+
+const ManagePlanIcon = () => (
+  <svg className="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="3" />
+    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+  </svg>
+);
+
 export default function Sidebar({ user }: SidebarProps) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [collapsed, setCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [expandedItem, setExpandedItem] = useState<string | null>(null);
   const { plan, loading: subLoading } = useSubscription();
 
   useEffect(() => {
     const applyCollapsed = () => {
-      const isLg = window.innerWidth >= 1024; // lg breakpoint
+      const isLg = window.innerWidth >= 1024;
       if (isLg) {
         const saved = localStorage.getItem("sidebar-collapsed");
-        setCollapsed(saved === "true"); // false if null (default expanded)
+        setCollapsed(saved === "true");
       } else {
-        setCollapsed(true); // always collapsed on md (768–1023px) to match ml-16 layout offset
+        setCollapsed(true);
       }
     };
     applyCollapsed();
@@ -126,7 +153,16 @@ export default function Sidebar({ user }: SidebarProps) {
     return () => window.removeEventListener("resize", applyCollapsed);
   }, []);
 
-  // Close mobile drawer on route change
+  // Auto-expand the active parent on mount
+  useEffect(() => {
+    for (const item of navItems) {
+      if (item.subItems && pathname.startsWith(item.href.split("?")[0])) {
+        setExpandedItem(item.href);
+        break;
+      }
+    }
+  }, [pathname]);
+
   useEffect(() => {
     setMobileOpen(false);
   }, [pathname]);
@@ -138,9 +174,7 @@ export default function Sidebar({ user }: SidebarProps) {
   };
 
   const isActive = (href: string) => {
-    if (href === "/dashboard") {
-      return pathname === "/dashboard";
-    }
+    if (href === "/dashboard") return pathname === "/dashboard";
     return pathname.startsWith(href.split("?")[0]);
   };
 
@@ -155,7 +189,11 @@ export default function Sidebar({ user }: SidebarProps) {
     return true;
   };
 
-  // Desktop nav items (collapse-aware, hover flyout for subitems)
+  const toggleExpanded = (href: string) => {
+    setExpandedItem((prev) => (prev === href ? null : href));
+  };
+
+  // ── Desktop nav items ──────────────────────────────────────────────────────
   const DesktopNavItems = () => (
     <ul className="space-y-1 px-2">
       {navItems.map((item) => {
@@ -222,44 +260,59 @@ export default function Sidebar({ user }: SidebarProps) {
     </ul>
   );
 
-  // Mobile nav items (always expanded, subitems inline)
+  // ── Mobile nav items ───────────────────────────────────────────────────────
   const MobileNavItems = () => (
-    <ul className="space-y-1 px-2">
+    <ul className="space-y-0.5">
       {navItems.map((item) => {
         const active = isActive(item.href);
-        const hasSubItems = item.subItems && item.subItems.length > 0;
+        const hasSubItems = !!(item.subItems && item.subItems.length > 0);
+        const isExpanded = expandedItem === item.href;
 
         return (
-          <li key={item.href}>
+          <li key={item.href} className="relative">
+            {active && <ActiveBar />}
             <Link
               href={item.href}
-              className={`flex items-center gap-3 px-3 py-3 rounded-lg transition-all ${
+              onClick={hasSubItems ? (e) => { e.preventDefault(); toggleExpanded(item.href); } : undefined}
+              className={`flex items-center gap-3 px-5 py-3.5 transition-all duration-150 ${
                 active
                   ? "bg-[#d4af37]/10 text-[#d4af37]"
                   : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
               }`}
             >
-              <span className={active ? "text-[#d4af37]" : ""}>{item.icon}</span>
-              <span className="font-medium">{item.name}</span>
+              <span className={`flex-shrink-0 ${active ? "text-[#d4af37]" : ""}`}>
+                {item.icon}
+              </span>
+              <span className="font-semibold flex-1 text-[15px]">{item.name}</span>
+              {hasSubItems && (
+                <span className={active ? "text-[#d4af37]" : "text-gray-400"}>
+                  <ChevronIcon open={isExpanded} />
+                </span>
+              )}
             </Link>
-            {/* Inline sub-items for mobile */}
-            {hasSubItems && (
-              <ul className="mt-1 ml-4 space-y-1 border-l border-gray-200 pl-3">
-                {item.subItems!.map((subItem) => (
-                  <li key={subItem.href}>
-                    <Link
-                      href={subItem.href}
-                      className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm transition-all ${
-                        isSubItemActive(subItem.href)
-                          ? "text-[#d4af37] bg-[#d4af37]/5"
-                          : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
-                      }`}
-                    >
-                      <BookIcon />
-                      <span>{subItem.name}</span>
-                    </Link>
-                  </li>
-                ))}
+
+            {/* Sub-items */}
+            {hasSubItems && isExpanded && (
+              <ul className="pb-1">
+                {item.subItems!.map((subItem) => {
+                  const subActive = isSubItemActive(subItem.href);
+                  return (
+                    <li key={subItem.href} className="relative">
+                      {subActive && <ActiveBar />}
+                      <Link
+                        href={subItem.href}
+                        className={`flex items-center gap-3 pl-14 pr-5 py-3 text-sm transition-all duration-150 ${
+                          subActive
+                            ? "text-[#d4af37] bg-[#d4af37]/5"
+                            : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+                        }`}
+                      >
+                        <span className="w-1 h-1 rounded-full bg-current flex-shrink-0" />
+                        <span>{subItem.name}</span>
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             )}
           </li>
@@ -270,7 +323,7 @@ export default function Sidebar({ user }: SidebarProps) {
 
   return (
     <>
-      {/* ===== DESKTOP SIDEBAR (hidden on mobile) ===== */}
+      {/* ===== DESKTOP SIDEBAR ===== */}
       <aside
         className={`hidden md:flex fixed left-0 top-0 h-screen bg-white border-r border-gray-200 flex-col transition-all duration-300 z-50 overflow-hidden ${
           collapsed ? "w-16" : "w-56"
@@ -291,7 +344,8 @@ export default function Sidebar({ user }: SidebarProps) {
         {/* Navigation */}
         <nav className="flex-1 py-4">
           <DesktopNavItems />
-          {/* Upgrade link for free users / Manage Plan for pro users */}
+
+          {/* Upgrade / Manage Plan */}
           {!subLoading && (
             <div className="px-2 mt-2">
               <Link
@@ -326,9 +380,7 @@ export default function Sidebar({ user }: SidebarProps) {
         {/* User Profile */}
         {user && (
           <div className="px-2 pb-2">
-            <div
-              className="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-gray-50 min-h-[56px]"
-            >
+            <div className={`flex items-center gap-3 px-3 py-2.5 rounded-lg bg-gray-50 min-h-[56px] ${collapsed ? "justify-center" : ""}`}>
               <UserAvatar user={user} />
               {!collapsed && (
                 <div className="flex-1 min-w-0">
@@ -376,7 +428,7 @@ export default function Sidebar({ user }: SidebarProps) {
         </div>
       </aside>
 
-      {/* ===== MOBILE TOP HEADER (hidden on desktop) ===== */}
+      {/* ===== MOBILE TOP HEADER ===== */}
       <header className="md:hidden fixed top-0 left-0 right-0 z-40 h-14 bg-white border-b border-gray-200 flex items-center px-4 gap-3">
         <button
           onClick={() => setMobileOpen(true)}
@@ -400,28 +452,27 @@ export default function Sidebar({ user }: SidebarProps) {
         {user && <UserAvatar user={user} size="sm" />}
       </header>
 
-      {/* ===== MOBILE DRAWER ===== */}
-      {/* Backdrop */}
+      {/* ===== MOBILE BACKDROP ===== */}
       <div
-        className={`md:hidden fixed inset-0 z-50 bg-black/30 backdrop-blur-sm transition-opacity duration-300 ${
+        className={`md:hidden fixed inset-0 z-50 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${
           mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setMobileOpen(false)}
         aria-hidden="true"
       />
 
-      {/* Drawer panel */}
+      {/* ===== MOBILE DRAWER ===== */}
       <aside
-        className={`md:hidden fixed left-0 top-0 h-[100dvh] w-72 bg-white border-r border-gray-200 flex flex-col z-50 transition-transform duration-300 ${
+        className={`md:hidden fixed left-0 top-0 h-[100dvh] w-full bg-white flex flex-col z-50 transition-transform duration-300 ${
           mobileOpen ? "translate-x-0" : "-translate-x-full"
         }`}
         aria-label="Navigation drawer"
       >
         {/* Drawer header */}
-        <div className="h-14 px-4 border-b border-gray-200 flex items-center justify-between flex-shrink-0">
+        <div className="h-16 px-5 border-b border-gray-200 flex items-center justify-between flex-shrink-0">
           <Link
             href="/dashboard"
-            className="flex items-center gap-2"
+            className="flex items-center gap-2.5"
             onClick={() => setMobileOpen(false)}
           >
             <LogoMark />
@@ -442,30 +493,22 @@ export default function Sidebar({ user }: SidebarProps) {
         </div>
 
         {/* Drawer nav */}
-        <nav className="flex-1 py-4 overflow-y-auto">
+        <nav className="flex-1 py-3 overflow-y-auto">
           <MobileNavItems />
-          {/* Upgrade / Manage Plan link */}
+
+          {/* Upgrade / Manage Plan */}
           {!subLoading && (
-            <div className="px-2 mt-2">
+            <div className="mt-2 relative">
               <Link
                 href="/pricing"
-                className={`flex items-center gap-3 px-3 py-3 rounded-lg transition-all ${
+                className={`flex items-center gap-3 px-5 py-3.5 transition-all duration-150 ${
                   plan === "pro"
                     ? "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
                     : "text-[#d4af37] hover:bg-[#d4af37]/10"
                 }`}
               >
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  {plan === "pro" ? (
-                    <>
-                      <circle cx="12" cy="12" r="3" />
-                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
-                    </>
-                  ) : (
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                  )}
-                </svg>
-                <span className="font-medium">
+                {plan === "pro" ? <ManagePlanIcon /> : <UpgradeIcon />}
+                <span className="font-semibold text-[15px]">
                   {plan === "pro" ? "Manage Plan" : "Upgrade"}
                 </span>
               </Link>
@@ -475,12 +518,12 @@ export default function Sidebar({ user }: SidebarProps) {
 
         {/* Drawer user profile */}
         {user && (
-          <div className="px-2 pb-4 border-t border-gray-200 pt-3 flex-shrink-0">
-            <div className="flex items-center gap-3 px-3 py-3 rounded-lg bg-gray-50">
+          <div className="border-t border-gray-200 px-4 py-4 flex-shrink-0 bg-white">
+            <div className="flex items-center gap-3 px-3 py-3 rounded-xl bg-gray-50">
               <UserAvatar user={user} />
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2">
-                  <span className="text-sm font-medium text-gray-900 truncate">
+                  <span className="text-sm font-semibold text-gray-900 truncate">
                     {user.name || "User"}
                   </span>
                   {!subLoading && <PlanBadge plan={plan} />}
@@ -488,7 +531,7 @@ export default function Sidebar({ user }: SidebarProps) {
                 <form action="/api/auth/signout" method="POST">
                   <button
                     type="submit"
-                    className="text-xs text-gray-400 hover:text-[#d4af37] transition-colors"
+                    className="text-xs text-gray-500 hover:text-[#d4af37] transition-colors"
                   >
                     Sign out
                   </button>
