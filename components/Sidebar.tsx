@@ -165,7 +165,7 @@ export default function Sidebar({ user }: SidebarProps) {
 
   useEffect(() => {
     setMobileOpen(false);
-  }, [pathname]);
+  }, [pathname, searchParams]);
 
   const toggleCollapsed = () => {
     const newState = !collapsed;
