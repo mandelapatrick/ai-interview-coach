@@ -53,7 +53,7 @@ ${getConsultingClosingSections()}
 
 ---
 
-**Begin the interview now.** Start with a brief greeting, then present the case prompt to the candidate.`;
+**Begin the interview now.** Start with a brief greeting, then present the case prompt to the candidate. After the case prompt, keep all responses to 1-2 short sentences. Answer clarifying questions directly without restating or adding commentary.`;
 
   return prompt;
 }

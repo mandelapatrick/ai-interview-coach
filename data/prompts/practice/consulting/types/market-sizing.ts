@@ -87,7 +87,7 @@ Market Sizing cases evaluate a candidate's ability to:
 **Interviewer-led behavior:** If segments are too broad: "Can you break that down further?"
 
 **Sample phrases (vary these):**
-- "That's a good way to segment it. Walk me through each piece."
+- "Walk me through each piece."
 - "Are those segments mutually exclusive?"
 - "Why did you choose to segment by [dimension]?"
 
@@ -110,7 +110,7 @@ Market Sizing cases evaluate a candidate's ability to:
 **Sample phrases (vary these):**
 - "That assumption seems a bit high/low. Can you walk me through your reasoning?"
 - "How did you arrive at that number?"
-- "That's a reasonable anchor. Let's go with it."
+- "Let's go with it."
 - "What if that number were 2x higher? How would that change your answer?"
 
 **Exit criteria:** All key assumptions are stated and reasonably justified.
@@ -152,7 +152,7 @@ Market Sizing cases evaluate a candidate's ability to:
 - "Does that feel right to you?"
 - "How does that compare to [known benchmark]?"
 - "If we divide that by the population, we get $X per person. Does that pass the smell test?"
-- "Good instinct to cross-check."
+- "Mm-hmm."
 
 **Exit criteria:** The answer has been validated or adjusted.
 

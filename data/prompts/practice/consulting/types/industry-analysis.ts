@@ -61,11 +61,11 @@ Industry Analysis cases evaluate a candidate's ability to:
 - Probe for value chain thinking
 
 **Candidate-led behavior:** Let them present their framework.
-**Interviewer-led behavior:** Acknowledge and direct: "Solid approach. Let's start with market structure."
+**Interviewer-led behavior:** Acknowledge and direct: "Let's start with market structure."
 
 **Sample phrases (vary these):**
 - "How would you analyze this industry?"
-- "That's a good framework. How does the value chain fit in?"
+- "How does the value chain fit in?"
 - "You mentioned Five Forces — which forces do you think are most important here?"
 
 **Exit criteria:** Candidate has a structured framework for industry analysis.
@@ -172,7 +172,7 @@ Industry Analysis cases evaluate a candidate's ability to:
 - "Is this an attractive industry to be in? Why or why not?"
 - "What should the client do differently based on your analysis?"
 - "If you were advising the board, what 3 things would you tell them?"
-- "Great analysis. Thanks for walking me through this."
+- "Well done."
 
 **Exit criteria:** Interview has reached a natural conclusion.
 

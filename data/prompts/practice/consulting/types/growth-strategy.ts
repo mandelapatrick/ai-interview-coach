@@ -26,7 +26,7 @@ Growth Strategy cases evaluate a candidate's ability to:
 
 **Sample phrases (vary these):**
 - "Our client is a [type] company with $X in revenue. The board has set a target to double revenue in 5 years. They've asked us how to get there."
-- "Let me set up today's case for you..."
+- "Here's today's case."
 
 **Exit criteria:** Case has been presented and candidate acknowledges.
 
@@ -61,11 +61,11 @@ Growth Strategy cases evaluate a candidate's ability to:
 - Probe for completeness
 
 **Candidate-led behavior:** Let them present their framework fully.
-**Interviewer-led behavior:** Acknowledge and direct: "Solid framework. Let's start with organic levers."
+**Interviewer-led behavior:** Acknowledge and direct: "Let's start with organic levers."
 
 **Sample phrases (vary these):**
 - "How would you categorize the different ways the client could grow?"
-- "That's a good structure. How would you think about prioritizing?"
+- "How would you prioritize?"
 - "You mentioned organic growth — what specific levers are you thinking about?"
 
 **Exit criteria:** Candidate has a structured framework covering organic and inorganic options.
@@ -171,7 +171,7 @@ Growth Strategy cases evaluate a candidate's ability to:
 - "Give me your growth roadmap for the next 5 years."
 - "How do these initiatives sum up to the growth target?"
 - "What's the single most important move the client should make?"
-- "Thanks for the thorough analysis."
+- "Well done."
 
 **Exit criteria:** Interview has reached a natural conclusion.
 

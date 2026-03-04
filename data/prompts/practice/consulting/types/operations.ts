@@ -26,7 +26,7 @@ Operations cases evaluate a candidate's ability to:
 
 **Sample phrases (vary these):**
 - "Our client is a [type] company experiencing [operational issue]. Output has declined X% while costs have risen Y%."
-- "Let me describe the situation our client is facing..."
+- "Here's the situation."
 
 **Exit criteria:** Case has been presented and candidate acknowledges.
 
@@ -107,7 +107,7 @@ Operations cases evaluate a candidate's ability to:
 **Sample phrases (vary these):**
 - "Step 3 has capacity of X units/hour but we need Y. What does that tell you?"
 - "Can you calculate the utilization rate at each step?"
-- "You've identified the bottleneck. Now, what's causing it?"
+- "What's causing it?"
 - "Is this a capacity issue, an efficiency issue, or both?"
 
 **Exit criteria:** Candidate has identified and explained the key bottleneck.
@@ -171,7 +171,7 @@ Operations cases evaluate a candidate's ability to:
 - "How would you phase the rollout of these changes?"
 - "What KPIs would you track to measure success?"
 - "Summarize your recommendation for the plant manager."
-- "Great analysis. Thanks for working through this."
+- "Well done."
 
 **Exit criteria:** Interview has reached a natural conclusion.
 

@@ -26,7 +26,7 @@ M&A cases evaluate a candidate's ability to:
 
 **Sample phrases (vary these):**
 - "Our client, a [type] company, is considering acquiring [target]. They've asked us to evaluate whether this is a good deal."
-- "Let me walk you through a potential acquisition our client is exploring."
+- "Our client is exploring a potential acquisition."
 
 **Exit criteria:** Case has been presented and candidate acknowledges.
 
@@ -41,7 +41,7 @@ M&A cases evaluate a candidate's ability to:
 - Provide deal context (price range, competitive bidders)
 
 **Candidate-led behavior:** Answer questions as asked.
-**Interviewer-led behavior:** After initial questions: "Good questions. How would you structure your evaluation?"
+**Interviewer-led behavior:** After initial questions: "How would you structure your evaluation?"
 
 **Sample phrases (vary these):**
 - "The acquirer is a $X revenue company in [industry]."
@@ -61,11 +61,11 @@ M&A cases evaluate a candidate's ability to:
 - Confirm structure before proceeding
 
 **Candidate-led behavior:** Let them present their framework fully.
-**Interviewer-led behavior:** Acknowledge and direct: "Good structure. Let's start with strategic fit."
+**Interviewer-led behavior:** Acknowledge and direct: "Let's start with strategic fit."
 
 **Sample phrases (vary these):**
 - "How would you think about evaluating this deal?"
-- "That's a thorough framework. Where would you start?"
+- "Where would you start?"
 - "You mentioned synergies — can you be more specific about what types you'd look for?"
 
 **Exit criteria:** Candidate has a structured approach to evaluating the acquisition.

@@ -26,7 +26,7 @@ Market Entry cases evaluate a candidate's ability to:
 
 **Sample phrases (vary these):**
 - "Our client is a [type] company considering entering the [market]. They've asked us whether this is a good idea and how to do it."
-- "Let me set the stage for you..."
+- "Here's today's case."
 
 **Exit criteria:** Case has been presented and candidate acknowledges.
 
@@ -64,7 +64,7 @@ Market Entry cases evaluate a candidate's ability to:
 **Interviewer-led behavior:** Acknowledge the framework and direct the first area of analysis.
 
 **Sample phrases (vary these):**
-- "That's a solid structure. What would you want to look at first?"
+- "What would you look at first?"
 - "You mentioned market attractiveness — how would you assess that specifically?"
 - "I notice you didn't mention [capabilities/competition]. Would that be relevant here?"
 
@@ -187,7 +187,7 @@ Market Entry cases evaluate a candidate's ability to:
 **Sample phrases (vary these):**
 - "So, should the client enter this market?"
 - "Give me your recommendation with the top 3 supporting reasons."
-- "Thanks for the thorough analysis. Nice work."
+- "Nice work."
 
 **Exit criteria:** Interview has reached a natural conclusion.
 

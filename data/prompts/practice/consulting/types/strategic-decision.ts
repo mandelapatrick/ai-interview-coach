@@ -61,11 +61,11 @@ Strategic Decision / Private Equity cases evaluate a candidate's ability to:
 - Confirm structure before proceeding
 
 **Candidate-led behavior:** Let them present their framework.
-**Interviewer-led behavior:** Acknowledge and direct: "Good structure. Let's start with the market."
+**Interviewer-led behavior:** Acknowledge and direct: "Let's start with the market."
 
 **Sample phrases (vary these):**
 - "How would you evaluate this decision?"
-- "That's a comprehensive framework. Where would you start?"
+- "Where would you start?"
 - "I notice you mentioned returns — what specifically would you look at?"
 
 **Exit criteria:** Candidate has a structured evaluation framework.
@@ -172,7 +172,7 @@ Strategic Decision / Private Equity cases evaluate a candidate's ability to:
 - "Would you invest? At what price?"
 - "What would make you walk away?"
 - "Give me your recommendation in 60 seconds."
-- "Thanks for the thorough analysis."
+- "Well done."
 
 **Exit criteria:** Interview has reached a natural conclusion.
 

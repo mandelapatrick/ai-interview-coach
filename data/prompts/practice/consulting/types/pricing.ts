@@ -28,7 +28,7 @@ Pricing cases evaluate a candidate's ability to:
 **Sample phrases (vary these):**
 - "Our client is launching a new [product/service] and needs help setting the price."
 - "Our client's core product has been losing market share and they suspect pricing is a factor."
-- "Let me describe the situation..."
+- "Here's the situation."
 
 **Exit criteria:** Case has been presented and candidate acknowledges.
 
@@ -67,7 +67,7 @@ Pricing cases evaluate a candidate's ability to:
 
 **Sample phrases (vary these):**
 - "How would you think about setting the right price?"
-- "That's a good framework. How do these three approaches relate to each other?"
+- "How do these three approaches relate?"
 - "Which of these would you want to analyze first?"
 
 **Exit criteria:** Candidate has a structured pricing framework.
@@ -173,7 +173,7 @@ Pricing cases evaluate a candidate's ability to:
 - "What's your recommended price and why?"
 - "How does your recommendation balance margin, volume, and competitive positioning?"
 - "What risks should the client be aware of?"
-- "Great analysis. Thanks for working through this."
+- "Well done."
 
 **Exit criteria:** Interview has reached a natural conclusion.
 

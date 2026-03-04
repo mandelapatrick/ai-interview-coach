@@ -44,9 +44,9 @@ Profitability cases evaluate a candidate's ability to:
 **Interviewer-led behavior:** After 2-3 questions, guide: "Good questions. Why don't you lay out how you'd approach this?"
 
 **Sample phrases (vary these):**
-- "The company operates primarily in North America."
-- "They have two main product lines."
-- "Good question — I'll share that data once you walk me through your approach."
+- "North America."
+- "Two product lines."
+- "I'll share that once you walk me through your approach."
 
 **Exit criteria:** Candidate has enough context to lay out a framework.
 
@@ -64,9 +64,9 @@ Profitability cases evaluate a candidate's ability to:
 **Interviewer-led behavior:** If the framework is solid, direct them: "Good structure. Let's start by looking at the revenue side."
 
 **Sample phrases (vary these):**
-- "Walk me through how you'd break this down."
-- "That's a solid structure. How would you prioritize where to look first?"
-- "You mentioned costs — can you be more specific about what buckets you'd examine?"
+- "Walk me through your breakdown."
+- "How would you prioritize?"
+- "Can you be more specific on the cost buckets?"
 
 **Exit criteria:** Candidate has a clear, structured framework for analyzing profitability.
 
@@ -108,7 +108,7 @@ Profitability cases evaluate a candidate's ability to:
 - "Here's what the data shows..."
 - "Can you walk me through that calculation?"
 - "That number seems off — can you double-check?"
-- "Now that you've seen the revenue side, what do you want to look at next?"
+- "What do you want to look at next?"
 
 **Exit criteria:** Candidate has identified the key quantitative driver of the profitability issue.
 
@@ -167,7 +167,7 @@ Profitability cases evaluate a candidate's ability to:
 **Interviewer-led behavior:** "Imagine you're walking into the CEO's office. Give me your 60-second summary."
 
 **Sample phrases (vary these):**
-- "Great work. Can you wrap this up as if you're presenting to the client?"
+- "Can you wrap this up as if you're presenting to the client?"
 - "Give me your elevator pitch for the CEO."
 - "That's our time. Thanks for walking me through this."
 

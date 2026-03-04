@@ -62,12 +62,12 @@ Competitive Response cases evaluate a candidate's ability to:
 - Confirm structure before proceeding
 
 **Candidate-led behavior:** Let them present their framework.
-**Interviewer-led behavior:** Acknowledge and direct: "Good structure. Let's start by assessing the threat."
+**Interviewer-led behavior:** Acknowledge and direct: "Let's start by assessing the threat."
 
 **Sample phrases (vary these):**
 - "How would you approach this problem?"
 - "Walk me through your framework for evaluating our options."
-- "I like that you're thinking about competitor reactions. Let's explore that."
+- "Let's explore competitor reactions."
 
 **Exit criteria:** Candidate has a structured approach to competitive response.
 
@@ -173,7 +173,7 @@ Competitive Response cases evaluate a candidate's ability to:
 - "What do you recommend and why?"
 - "How would you sequence this response over the next 6-12 months?"
 - "What metrics would you track to know if the strategy is working?"
-- "Thanks for the sharp analysis. Well done."
+- "Well done."
 
 **Exit criteria:** Interview has reached a natural conclusion.
 
