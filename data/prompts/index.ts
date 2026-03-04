@@ -12,7 +12,8 @@ import { getConsultingCandidatePrompt } from "./learn/consulting/candidate";
 // Re-export practice mode functions
 export {
   getConsultingPrompt,
-  CONSULTING_SYSTEM_PROMPT,
+  getConsultingBasePrompt,
+  getConsultingClosingSections,
   FORMAT_INSTRUCTIONS,
   getDefaultFormat,
 } from "./practice/consulting";

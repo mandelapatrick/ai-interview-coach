@@ -62,7 +62,7 @@ export async function POST(request: NextRequest) {
           personaConfig: {
             avatarId: selectedAvatar.avatarId,
             voiceId: selectedAvatar.voiceId,
-            llmId: ANAM_LLMS.kimiK2Instruct, // Anam handles conversation with Kimi K2 LLM
+            llmId: ANAM_LLMS.gpt4Mini, // GPT-4 Mini handles longer consulting prompts better than Kimi K2
             systemPrompt: systemPrompt,
           },
         }),
