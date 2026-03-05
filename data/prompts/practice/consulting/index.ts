@@ -44,6 +44,16 @@ ${getConsultingClosingSections()}
 *   **Data/Exhibits:** ${question.additionalInfo}`;
   }
 
+  if (question.additionalInfoImages && question.additionalInfoImages.length > 0) {
+    prompt += `
+*   **Exhibits Available:** ${question.additionalInfoImages.length} chart(s)/table(s) the candidate can view on screen`;
+  }
+
+  if (question.additionalQuestions && question.additionalQuestions.length > 0) {
+    prompt += `
+*   **Follow-up Questions:** ${question.additionalQuestions.join(" | ")}`;
+  }
+
   if (question.solution) {
     prompt += `
 *   **Solution Key (for your reference only - never reveal directly):** ${question.solution}`;

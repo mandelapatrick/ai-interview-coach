@@ -1,10 +1,10 @@
 import { Company, QUESTION_TYPE_LABELS, PM_QUESTION_TYPE_LABELS, InterviewTrack, QuestionType, PMQuestionType } from "@/types";
-import { questions } from "./questions";
+import { consultingQuestions } from "./consulting-questions";
 import { pmQuestions } from "./pm-questions";
 
 // Derive categories from actual questions for each company
 function getCategoriesForCompany(companySlug: string, track: InterviewTrack = "consulting"): string[] {
-  const questionPool = track === "consulting" ? questions : pmQuestions;
+  const questionPool = track === "consulting" ? consultingQuestions : pmQuestions;
   const companyQuestions = questionPool.filter((q) => q.companySlug === companySlug);
   const types = [...new Set(companyQuestions.map((q) => q.type))];
   const labels = track === "consulting" ? QUESTION_TYPE_LABELS : PM_QUESTION_TYPE_LABELS;
@@ -13,7 +13,7 @@ function getCategoriesForCompany(companySlug: string, track: InterviewTrack = "c
 
 // Get actual question count for each company
 function getQuestionCount(companySlug: string, track: InterviewTrack = "consulting"): number {
-  const questionPool = track === "consulting" ? questions : pmQuestions;
+  const questionPool = track === "consulting" ? consultingQuestions : pmQuestions;
   return questionPool.filter((q) => q.companySlug === companySlug).length;
 }
 

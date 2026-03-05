@@ -62,6 +62,9 @@ export interface Question {
   additionalInfo?: string;        // Data/exhibits for the case
   additionalInfoImages?: string[]; // Image URLs for charts/exhibits
   solution?: string;              // Solution key for interviewer reference
+  additionalQuestions?: string[];  // Follow-up questions for interviewer-led cases
+  evaluation?: string;             // Grading rubric
+  source?: string;                 // Casebook source identifier
 }
 
 export interface Session {
