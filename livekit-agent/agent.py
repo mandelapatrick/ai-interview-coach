@@ -7,8 +7,8 @@ load_dotenv(".env.local", override=False)
 
 logger = logging.getLogger("interview-agent")
 
-from livekit.agents import Agent, AgentSession, JobContext, WorkerOptions, cli
-from livekit.plugins import openai, elevenlabs, silero, anam
+from livekit.agents import Agent, AgentSession, JobContext, WorkerOptions, cli, room_io
+from livekit.plugins import openai, elevenlabs, silero, anam, noise_cancellation
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
 
 
@@ -64,6 +64,9 @@ async def entrypoint(ctx: JobContext):
         await session.start(
             agent=Agent(instructions=system_prompt),
             room=ctx.room,
+            room_input=room_io.RoomInputOptions(
+                noise_cancellation=noise_cancellation.BVC(),
+            ),
         )
         logger.info("Generating initial reply...")
         await session.generate_reply(
