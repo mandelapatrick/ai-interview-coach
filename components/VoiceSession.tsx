@@ -12,6 +12,149 @@ interface VoiceSessionProps {
   maxDurationSeconds?: number | null;
 }
 
+// Pulsing Circle Animation Component
+function PulsingCircle({ isActive, isSpeaking }: { isActive: boolean; isSpeaking: boolean }) {
+  return (
+    <div className="relative w-32 h-32 flex items-center justify-center">
+      {/* Outer pulse rings - visible when speaking */}
+      {isActive && isSpeaking && (
+        <>
+          <div
+            className="absolute w-full h-full rounded-full bg-[#d4af37]/20 animate-pulse-ring"
+            style={{ animationDelay: "0s" }}
+          />
+          <div
+            className="absolute w-[85%] h-[85%] rounded-full bg-[#d4af37]/25 animate-pulse-ring"
+            style={{ animationDelay: "0.2s" }}
+          />
+          <div
+            className="absolute w-[70%] h-[70%] rounded-full bg-[#d4af37]/30 animate-pulse-ring"
+            style={{ animationDelay: "0.4s" }}
+          />
+        </>
+      )}
+
+      {/* Listening rings - subtle expanding rings when not speaking */}
+      {isActive && !isSpeaking && (
+        <>
+          <div
+            className="absolute w-full h-full rounded-full border-2 border-[#d4af37]/20 animate-ping-slow"
+          />
+          <div
+            className="absolute w-[120%] h-[120%] rounded-full border border-[#d4af37]/10 animate-ping-slow"
+            style={{ animationDelay: "0.5s" }}
+          />
+        </>
+      )}
+
+      {/* Main circle with gradient */}
+      <div
+        className={`relative w-20 h-20 rounded-full bg-gradient-to-br from-[#f4d03f] via-[#d4af37] to-[#c9a227] transition-all duration-300 ${
+          isActive
+            ? isSpeaking
+              ? "scale-110 shadow-[0_0_40px_rgba(212,175,55,0.6)]"
+              : "scale-100 shadow-[0_0_25px_rgba(212,175,55,0.4)]"
+            : "scale-90 opacity-60 shadow-[0_0_15px_rgba(212,175,55,0.2)]"
+        }`}
+      >
+        {/* Inner highlight */}
+        <div className="absolute inset-2 rounded-full bg-gradient-to-br from-white/30 to-transparent" />
+
+        {/* Center dot */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className={`w-3 h-3 rounded-full bg-white/40 transition-all duration-300 ${
+            isSpeaking ? "scale-125" : "scale-100"
+          }`} />
+        </div>
+      </div>
+
+      {/* Glow effect */}
+      <div
+        className={`absolute w-24 h-24 rounded-full blur-xl transition-opacity duration-500 ${
+          isActive ? "opacity-50" : "opacity-0"
+        }`}
+        style={{ background: "radial-gradient(circle, #d4af37 0%, transparent 70%)" }}
+      />
+    </div>
+  );
+}
+
+// Status Badge Component
+function StatusBadge({ status }: { status: "idle" | "connecting" | "listening" | "speaking" }) {
+  const configs = {
+    idle: { text: "Ready", bg: "bg-gray-100", textColor: "text-gray-600" },
+    connecting: { text: "Connecting...", bg: "bg-[#d4af37]/20", textColor: "text-[#d4af37]" },
+    listening: { text: "Listening", bg: "bg-[#d4af37]/20", textColor: "text-[#d4af37]" },
+    speaking: { text: "Speaking", bg: "bg-[#d4af37]", textColor: "text-white" },
+  };
+
+  const config = configs[status];
+
+  return (
+    <div
+      className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full ${config.bg} ${config.textColor} text-sm font-medium transition-all duration-300`}
+    >
+      {status === "connecting" && (
+        <div className="w-2 h-2 rounded-full bg-current animate-pulse" />
+      )}
+      {status === "listening" && (
+        <div className="relative w-2 h-2">
+          <div className="absolute inset-0 rounded-full bg-current animate-ping" />
+          <div className="relative w-2 h-2 rounded-full bg-current" />
+        </div>
+      )}
+      {status === "speaking" && (
+        <div className="flex items-center gap-0.5">
+          {[0, 1, 2].map((i) => (
+            <div
+              key={i}
+              className="w-1 h-2 bg-current rounded-full animate-bounce"
+              style={{ animationDelay: `${i * 0.1}s`, animationDuration: "0.6s" }}
+            />
+          ))}
+        </div>
+      )}
+      {config.text}
+    </div>
+  );
+}
+
+// Circular Control Button Component
+function ControlButton({
+  icon,
+  onClick,
+  disabled = false,
+  active = false,
+  variant = "default",
+  tooltip
+}: {
+  icon: React.ReactNode;
+  onClick: () => void;
+  disabled?: boolean;
+  active?: boolean;
+  variant?: "default" | "danger" | "primary";
+  tooltip?: string;
+}) {
+  const variants = {
+    default: `bg-gray-100 hover:bg-gray-200 text-gray-600 ${active ? "bg-[#d4af37]/10 text-[#d4af37]" : ""}`,
+    danger: "bg-red-500/90 hover:bg-red-500 text-white",
+    primary: "bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white hover:shadow-lg hover:shadow-[#d4af37]/25",
+  };
+
+  return (
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      title={tooltip}
+      className={`relative w-12 h-12 rounded-full flex items-center justify-center transition-all duration-200 ${variants[variant]} ${
+        disabled ? "opacity-40 cursor-not-allowed" : "hover:scale-105 active:scale-95"
+      } shadow-lg`}
+    >
+      {icon}
+    </button>
+  );
+}
+
 export default function VoiceSession({ question, maxDurationSeconds }: VoiceSessionProps) {
   const router = useRouter();
   const [showEndConfirm, setShowEndConfirm] = useState(false);
@@ -24,6 +167,7 @@ export default function VoiceSession({ question, maxDurationSeconds }: VoiceSess
   const [duration, setDuration] = useState(0);
   const [isRecording, setIsRecording] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
+  const [showTranscript, setShowTranscript] = useState(false);
 
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const transcriptRef = useRef<TranscriptEntry[]>([]);
@@ -216,8 +360,16 @@ export default function VoiceSession({ question, maxDurationSeconds }: VoiceSess
   const error = livekitSession.error;
   const isSpeaking = livekitSession.isTalking;
 
+  // Determine current status
+  const getStatus = (): "idle" | "connecting" | "listening" | "speaking" => {
+    if (isRecording && transcript.length === 0) return "connecting";
+    if (!isRecording) return "idle";
+    if (isSpeaking) return "speaking";
+    return "listening";
+  };
+
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-full bg-white">
       {/* Time limit warning banner */}
       {showTimeWarning && maxDurationSeconds && (
         <div className="bg-amber-50 border-b border-amber-200 px-4 py-2 text-center">
@@ -227,116 +379,112 @@ export default function VoiceSession({ question, maxDurationSeconds }: VoiceSess
         </div>
       )}
 
-      {/* Status Bar */}
-      <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200">
-        <div className="flex items-center gap-4">
+      {/* Top Bar - Timer and Recording */}
+      <div className="flex items-center justify-between px-6 py-4">
+        <div className="flex items-center gap-3">
           {isRecording && (
-            <div className="flex items-center gap-2">
-              <span className="relative flex h-3 w-3">
+            <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/20">
+              <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
               </span>
-              <span className="text-sm text-gray-600">Recording</span>
-            </div>
-          )}
-          {isSpeaking && (
-            <div className="flex items-center gap-2">
-              <span className="text-[#d4af37]">🔊</span>
-              <span className="text-sm text-gray-600">AI Speaking</span>
+              <span className="text-xs text-red-400 font-medium">REC</span>
             </div>
           )}
         </div>
-        <div className="text-2xl font-mono text-[#d4af37]">
+        <div className="text-xl font-mono text-[#d4af37] tabular-nums">
           {formatDuration(duration)}
         </div>
       </div>
 
-      {/* Transcript Area */}
-      <div className="flex-1 overflow-y-auto p-6 space-y-4">
-        {transcript.length === 0 && !isRecording && (
-          <div className="text-center text-gray-600 py-12">
-            <p>Click &quot;Start Interview&quot; to begin your practice session.</p>
-            <p className="text-sm mt-2">Make sure your microphone is ready.</p>
-          </div>
-        )}
+      {/* Main Visualization Area */}
+      <div className="flex-shrink-0 flex flex-col items-center justify-center py-12 px-6">
+        <PulsingCircle isActive={isRecording} isSpeaking={isSpeaking} />
+        <div className="mt-6">
+          <StatusBadge status={getStatus()} />
+        </div>
+      </div>
 
-        {transcript.length === 0 && isRecording && (
-          <div className="text-center text-gray-600 py-12">
-            <div className="animate-pulse">
-              <p>Connecting to AI interviewer...</p>
-              <p className="text-sm mt-2">The interview will begin shortly.</p>
-            </div>
-          </div>
+      {/* Control Buttons */}
+      <div className="flex-shrink-0 flex items-center justify-center gap-3 py-6">
+        {!isRecording ? (
+          <button
+            onClick={startSession}
+            className="flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all hover:scale-105 active:scale-95"
+          >
+            <MicIcon />
+            Start Interview
+          </button>
+        ) : (
+          <>
+            <ControlButton
+              icon={<TranscriptIcon />}
+              onClick={() => setShowTranscript(!showTranscript)}
+              active={showTranscript}
+              tooltip="Toggle transcript"
+            />
+            <ControlButton
+              icon={isMuted ? <MicOffIcon /> : <MicIcon />}
+              onClick={toggleMute}
+              active={!isMuted}
+              tooltip={isMuted ? "Unmute" : "Mute"}
+            />
+            <ControlButton
+              icon={isLoadingHint ? <LoadingSpinner /> : <HintIcon />}
+              onClick={handleGetHint}
+              disabled={isLoadingHint || hintCount >= 3}
+              tooltip={hintCount >= 3 ? "No hints left" : `Get hint (${3 - hintCount} left)`}
+            />
+            <ControlButton
+              icon={<EndCallIcon />}
+              onClick={handleEnd}
+              variant="danger"
+              tooltip="End interview"
+            />
+          </>
         )}
-
-        {transcript.map((entry, index) => (
-          <TranscriptBubble key={index} entry={entry} />
-        ))}
       </div>
 
       {/* Error Display */}
       {error && (
-        <div className="mx-6 mb-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700">
+        <div className="mx-6 mb-4 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700 text-sm">
           {error}
         </div>
       )}
 
-      {/* Controls */}
-      <div className="p-6 border-t border-gray-200">
-        <div className="flex justify-center gap-4">
-          {!isRecording ? (
-            <button
-              onClick={startSession}
-              className="flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
-            >
-              <MicIcon />
-              Start Interview
-            </button>
-          ) : (
-            <>
-              <button
-                onClick={toggleMute}
-                className={`flex items-center gap-2 px-6 py-4 rounded-full font-medium transition-colors border ${
-                  isMuted
-                    ? "bg-red-600 text-white border-red-600 hover:bg-red-700"
-                    : "bg-white text-gray-900 border-gray-200 hover:bg-gray-100"
-                }`}
-                title={isMuted ? "Unmute microphone" : "Mute microphone"}
-              >
-                {isMuted ? <MicOffIcon /> : <MicIcon />}
-                {isMuted ? "Unmute" : "Mute"}
-              </button>
-              <button
-                onClick={handleGetHint}
-                disabled={isLoadingHint || hintCount >= 3}
-                className="flex items-center gap-2 px-6 py-4 bg-white text-gray-900 rounded-full font-medium hover:bg-gray-100 transition-colors border border-gray-200 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isLoadingHint ? (
-                  <svg className="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                  </svg>
-                ) : (
-                  <HintIcon />
-                )}
-                {isLoadingHint ? "Loading..." : hintCount >= 3 ? "No hints left" : `Get Hint${hintCount > 0 ? ` (${3 - hintCount})` : ""}`}
-              </button>
-              <button
-                onClick={handleEnd}
-                className="flex items-center gap-3 px-8 py-4 bg-red-600 text-white rounded-full font-semibold text-lg hover:bg-red-700 transition-colors"
-              >
-                <StopIcon />
-                End Interview
-              </button>
-            </>
-          )}
+      {/* Transcript Area */}
+      {showTranscript && (
+        <div className="flex-1 mx-4 mb-4 rounded-2xl bg-[#faf8f5] overflow-hidden flex flex-col shadow-xl">
+          <div className="px-4 py-3 border-b border-black/5">
+            <h3 className="text-sm font-medium text-gray-600">Transcript</h3>
+          </div>
+          <div className="flex-1 overflow-y-auto p-4 space-y-3">
+            {!isRecording && (
+              <div className="text-center text-gray-600 py-8">
+                <p>Your conversation will appear here.</p>
+              </div>
+            )}
+
+            {isRecording && transcript.length === 0 && (
+              <div className="text-center text-gray-600 py-8">
+                <div className="flex items-center justify-center gap-2">
+                  <LoadingSpinner />
+                  <span>Connecting...</span>
+                </div>
+              </div>
+            )}
+
+            {transcript.map((entry, index) => (
+              <TranscriptBubble key={index} entry={entry} />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* End Confirmation Modal */}
       {showEndConfirm && (
         <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50">
-          <div className="bg-white rounded-xl p-6 max-w-md mx-4 border border-gray-200">
+          <div className="bg-white rounded-xl p-6 max-w-md mx-4 border border-gray-200 shadow-xl">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">
               End Interview?
             </h3>
@@ -346,7 +494,7 @@ export default function VoiceSession({ question, maxDurationSeconds }: VoiceSess
             <div className="flex gap-4">
               <button
                 onClick={() => setShowEndConfirm(false)}
-                className="flex-1 px-4 py-2 bg-gray-50 text-gray-900 rounded-lg hover:bg-gray-50 transition-colors border border-gray-200"
+                className="flex-1 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"
               >
                 Continue
               </button>
@@ -377,18 +525,18 @@ function TranscriptBubble({ entry }: { entry: TranscriptEntry }) {
   const isUser = entry.role === "user";
 
   return (
-    <div className={`flex ${isUser ? "justify-end" : "justify-start"}`}>
+    <div className={`flex ${isUser ? "justify-end" : "justify-start"} animate-fade-in`}>
       <div
-        className={`max-w-[80%] rounded-2xl px-4 py-3 ${
+        className={`max-w-[85%] rounded-2xl px-4 py-3 shadow-sm ${
           isUser
             ? "bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white"
-            : "bg-white text-gray-900 border border-gray-200"
+            : "bg-white text-gray-800 border border-gray-100"
         }`}
       >
-        <div className={`text-xs mb-1 ${isUser ? "text-white/80" : "text-gray-600"}`}>
+        <div className={`text-xs mb-1 font-medium ${isUser ? "text-white/70" : "text-gray-600"}`}>
           {isUser ? "You" : "AI Interviewer"}
         </div>
-        <p className="whitespace-pre-wrap">{entry.text}</p>
+        <p className="whitespace-pre-wrap text-sm leading-relaxed">{entry.text}</p>
       </div>
     </div>
   );
@@ -396,34 +544,50 @@ function TranscriptBubble({ entry }: { entry: TranscriptEntry }) {
 
 function MicIcon() {
   return (
-    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
     </svg>
   );
 }
 
 function MicOffIcon() {
   return (
-    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3l18 18" />
+    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3 3l18 18" />
     </svg>
   );
 }
 
-function StopIcon() {
+function TranscriptIcon() {
   return (
-    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 10a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" />
+    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+    </svg>
+  );
+}
+
+function EndCallIcon() {
+  return (
+    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M16 8l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M5 3a2 2 0 00-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 002-2v-3.28a1 1 0 00-.684-.948l-4.493-1.498a1 1 0 00-1.21.502l-1.13 2.257a11.042 11.042 0 01-5.516-5.517l2.257-1.128a1 1 0 00.502-1.21L9.228 3.683A1 1 0 008.279 3H5z" />
     </svg>
   );
 }
 
 function HintIcon() {
   return (
-    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+    </svg>
+  );
+}
+
+function LoadingSpinner() {
+  return (
+    <svg className="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
     </svg>
   );
 }
