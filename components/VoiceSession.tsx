@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { useRouter } from "next/navigation";
-import { useVoiceSession, TranscriptEntry } from "@/hooks/useVoiceSession";
-import { Question } from "@/types";
+import { useLiveKitSession } from "@/hooks/useLiveKitSession";
+import { Question, TranscriptEntry } from "@/types";
 import { getSystemPrompt } from "@/data/prompts";
 import HintModal from "./HintModal";
 
@@ -20,25 +20,126 @@ export default function VoiceSession({ question, maxDurationSeconds }: VoiceSess
   const [currentHint, setCurrentHint] = useState<string | null>(null);
   const [isLoadingHint, setIsLoadingHint] = useState(false);
   const [showHintModal, setShowHintModal] = useState(false);
+  const [transcript, setTranscript] = useState<TranscriptEntry[]>([]);
+  const [duration, setDuration] = useState(0);
+  const [isRecording, setIsRecording] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
+
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const transcriptRef = useRef<TranscriptEntry[]>([]);
+  const userStreamRef = useRef<MediaStream | null>(null);
+  const dummyVideoRef = useRef<HTMLVideoElement | null>(null);
 
   const systemPrompt = getSystemPrompt(question);
 
-  const {
-    isConnected,
-    isRecording,
-    isSpeaking,
-    isMuted,
-    transcript,
-    error,
-    duration,
-    formatDuration,
-    startSession,
-    endSession,
-    toggleMute,
-  } = useVoiceSession({
+  // Keep transcript ref in sync
+  useEffect(() => {
+    transcriptRef.current = transcript;
+  }, [transcript]);
+
+  const livekitSession = useLiveKitSession({
     systemPrompt,
-    onSessionEnd: (finalTranscript) => {
-      // Store transcript in sessionStorage for assessment page
+    userStream: userStreamRef.current!,
+    avatarMode: "none",
+    onAvatarStartTalking: () => {},
+    onAvatarStopTalking: () => {},
+    onAvatarTranscription: (text) => {
+      setTranscript((prev) => {
+        const last = prev[prev.length - 1];
+        if (last && last.role === "assistant") {
+          return [...prev.slice(0, -1), { ...last, text }];
+        }
+        return [...prev, { role: "assistant", text, timestamp: new Date() }];
+      });
+    },
+    onUserTranscription: (text) => {
+      setTranscript((prev) => {
+        const last = prev[prev.length - 1];
+        if (last && last.role === "user") {
+          return [...prev.slice(0, -1), { ...last, text }];
+        }
+        return [...prev, { role: "user", text, timestamp: new Date() }];
+      });
+    },
+    onStreamReady: () => {
+      console.log("[VoiceSession] LiveKit stream ready");
+    },
+    onError: (err) => console.error("[VoiceSession] LiveKit error:", err),
+  });
+
+  // Timer for session duration
+  useEffect(() => {
+    if (isRecording) {
+      timerRef.current = setInterval(() => {
+        setDuration((d) => d + 1);
+      }, 1000);
+    } else if (timerRef.current) {
+      clearInterval(timerRef.current);
+    }
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, [isRecording]);
+
+  // Auto-end session when duration limit reached
+  useEffect(() => {
+    if (!maxDurationSeconds || !isRecording) return;
+
+    if (duration >= maxDurationSeconds) {
+      setShowTimeWarning(false);
+      endSession();
+    } else if (duration >= maxDurationSeconds - 60 && !showTimeWarning) {
+      setShowTimeWarning(true);
+    }
+  }, [duration, maxDurationSeconds, isRecording, showTimeWarning]);
+
+  const startSession = useCallback(async () => {
+    try {
+      // Request microphone access
+      const stream = await navigator.mediaDevices.getUserMedia({
+        audio: {
+          echoCancellation: true,
+          noiseSuppression: true,
+        },
+      });
+      userStreamRef.current = stream;
+
+      // Create a dummy video element for LiveKit (audio-only mode)
+      const dummyVideo = document.createElement("video");
+      dummyVideoRef.current = dummyVideo;
+
+      setIsRecording(true);
+      setTranscript([]);
+      setDuration(0);
+
+      // Small delay to ensure state is set before initializing
+      // (userStream ref needs to be populated)
+      setTimeout(async () => {
+        const success = await livekitSession.initializeSession(dummyVideo);
+        if (!success) {
+          setIsRecording(false);
+        }
+      }, 100);
+    } catch (err) {
+      console.error("[VoiceSession] Failed to start:", err);
+    }
+  }, [livekitSession]);
+
+  const endSession = useCallback(() => {
+    // Stop LiveKit
+    livekitSession.stopSession();
+
+    // Stop media stream
+    if (userStreamRef.current) {
+      userStreamRef.current.getTracks().forEach((track) => track.stop());
+      userStreamRef.current = null;
+    }
+
+    setIsRecording(false);
+
+    // Store transcript for assessment page
+    const finalTranscript = transcriptRef.current;
+    if (finalTranscript.length > 0) {
       sessionStorage.setItem(
         "lastSession",
         JSON.stringify({
@@ -48,8 +149,24 @@ export default function VoiceSession({ question, maxDurationSeconds }: VoiceSess
         })
       );
       router.push(`/assessment/${question.id}`);
-    },
-  });
+    }
+  }, [livekitSession, question.id, duration, router]);
+
+  const toggleMute = useCallback(() => {
+    const newMuted = !isMuted;
+    setIsMuted(newMuted);
+    if (userStreamRef.current) {
+      userStreamRef.current.getAudioTracks().forEach((track) => {
+        track.enabled = !newMuted;
+      });
+    }
+  }, [isMuted]);
+
+  const formatDuration = (seconds: number) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins}:${secs.toString().padStart(2, "0")}`;
+  };
 
   const handleEnd = () => {
     if (transcript.length > 0) {
@@ -63,18 +180,6 @@ export default function VoiceSession({ question, maxDurationSeconds }: VoiceSess
   const confirmEnd = () => {
     endSession();
   };
-
-  // Auto-end session when duration limit reached
-  useEffect(() => {
-    if (!maxDurationSeconds || !isConnected) return;
-
-    if (duration >= maxDurationSeconds) {
-      setShowTimeWarning(false);
-      endSession();
-    } else if (duration >= maxDurationSeconds - 60 && !showTimeWarning) {
-      setShowTimeWarning(true);
-    }
-  }, [duration, maxDurationSeconds, isConnected, endSession, showTimeWarning]);
 
   const handleGetHint = async () => {
     if (isLoadingHint || hintCount >= 3) return;
@@ -107,6 +212,9 @@ export default function VoiceSession({ question, maxDurationSeconds }: VoiceSess
       setIsLoadingHint(false);
     }
   };
+
+  const error = livekitSession.error;
+  const isSpeaking = livekitSession.isTalking;
 
   return (
     <div className="flex flex-col h-full">

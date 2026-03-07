@@ -45,9 +45,6 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
   const avatarVideoRef = useRef<HTMLVideoElement>(null);
   const userVideoRef = useRef<HTMLVideoElement>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
-  const wsRef = useRef<WebSocket | null>(null);
-  const audioContextRef = useRef<AudioContext | null>(null);
-  const pendingTextRef = useRef<string>("");
   const transcriptRef = useRef<TranscriptEntry[]>([]);
   const transcriptContainerRef = useRef<HTMLDivElement>(null);
 
@@ -124,10 +121,20 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
     onError: (err) => console.error("Anam error:", err),
   });
 
-  // LiveKit session hook - Python agent handles STT/LLM/TTS, Anam avatar for lip-sync
+  // LiveKit session hook - Python agent handles STT/LLM/TTS
+  // Used for "livekit" mode (with Anam avatar) AND "heygen" mode (audio bridge to HeyGen)
   const livekitSession = useLiveKitSession({
     systemPrompt,
     userStream,
+    avatarMode: avatarProvider === "heygen" ? "heygen" : avatarProvider === "livekit" ? "anam" : "anam",
+    onAgentAudioData: avatarProvider === "heygen" ? (base64Audio) => {
+      // Pipe LiveKit agent audio to HeyGen for lip-sync
+      heygenAvatar.sendAudio(base64Audio);
+    } : undefined,
+    onAgentSpeakingDone: avatarProvider === "heygen" ? () => {
+      // Signal HeyGen to flush remaining audio when agent stops speaking
+      heygenAvatar.endSpeaking();
+    } : undefined,
     onAvatarStartTalking: () => {
       console.log("LiveKit avatar started talking");
     },
@@ -165,23 +172,24 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
 
   // Unified avatar interface
   const avatar = avatarProvider === "heygen" ? {
-    isInitialized: heygenAvatar.isInitialized,
-    isConnecting: heygenAvatar.isConnecting,
-    isTalking: heygenAvatar.isTalking,
-    error: heygenAvatar.error,
-    initializeAvatar: heygenAvatar.initializeAvatar,
-    sendAudio: heygenAvatar.sendAudio,
-    endSpeaking: heygenAvatar.endSpeaking,
-    interrupt: heygenAvatar.interrupt,
-    stopAvatar: heygenAvatar.stopAvatar,
+    isInitialized: heygenAvatar.isInitialized && livekitSession.isInitialized,
+    isConnecting: heygenAvatar.isConnecting || livekitSession.isConnecting,
+    isTalking: livekitSession.isTalking,
+    error: heygenAvatar.error || livekitSession.error,
+    initializeAvatar: async (videoEl: HTMLVideoElement) => {
+      // HeyGen inits first (visual layer), then LiveKit connects (conversation)
+      const ok1 = await heygenAvatar.initializeAvatar(videoEl);
+      if (!ok1) return false;
+      return await livekitSession.initializeSession(videoEl);
+    },
+    interrupt: () => { heygenAvatar.interrupt(); livekitSession.interrupt(); },
+    stopAvatar: async () => { await heygenAvatar.stopAvatar(); await livekitSession.stopSession(); },
   } : avatarProvider === "livekit" ? {
     isInitialized: livekitSession.isInitialized,
     isConnecting: livekitSession.isConnecting,
     isTalking: livekitSession.isTalking,
     error: livekitSession.error,
     initializeAvatar: livekitSession.initializeSession,
-    sendAudio: null as ((audio: string) => void) | null,
-    endSpeaking: null as (() => void) | null,
     interrupt: livekitSession.interrupt,
     stopAvatar: livekitSession.stopSession,
   } : {
@@ -190,8 +198,6 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
     isTalking: anamAvatar.isTalking,
     error: anamAvatar.error,
     initializeAvatar: anamAvatar.initializeAvatar,
-    sendAudio: null as ((audio: string) => void) | null,
-    endSpeaking: null as (() => void) | null,
     interrupt: anamAvatar.interrupt,
     stopAvatar: anamAvatar.stopAvatar,
   };
@@ -378,7 +384,6 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
 
   // Track if avatar has been initialized
   const avatarInitializedRef = useRef(false);
-  const xaiConnectedRef = useRef(false);
 
   // Step 1: Initialize avatar when component mounts
   useEffect(() => {
@@ -401,233 +406,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
     initAvatar();
   }, [avatar.initializeAvatar, avatarProvider]);
 
-  // Step 2: Connect to X.AI only after avatar is initialized (HeyGen only)
-  // Anam and LiveKit handle conversation natively
-  useEffect(() => {
-    if (avatarProvider !== "heygen") return; // Anam/LiveKit handle conversation natively
-    if (!avatar.isInitialized || xaiConnectedRef.current) return;
-
-    const connectToXAI = async () => {
-      xaiConnectedRef.current = true;
-      console.log("[VideoSession] Avatar ready, connecting to X.AI...");
-
-      try {
-        setIsSessionStarted(true);
-
-        // Get X.AI token
-        const tokenRes = await fetch("/api/voice/token", { method: "POST" });
-        if (!tokenRes.ok) throw new Error("Failed to get voice token");
-        const { url, apiKey } = await tokenRes.json();
-
-        if (!apiKey) throw new Error("API key not configured");
-
-        // Set up audio context
-        audioContextRef.current = new AudioContext({ sampleRate: 24000 });
-        if (audioContextRef.current.state === "suspended") {
-          await audioContextRef.current.resume();
-        }
-
-        // Connect WebSocket to X.AI
-        console.log("[VideoSession] Connecting to X.AI WebSocket...");
-        const ws = new WebSocket(url, ["realtime", `openai-insecure-api-key.${apiKey}`]);
-        wsRef.current = ws;
-
-        ws.onopen = () => {
-          console.log("[VideoSession] X.AI WebSocket connected");
-          console.log("[X.AI] System Prompt:", systemPrompt);
-          ws.send(
-            JSON.stringify({
-              type: "session.update",
-              session: {
-                modalities: ["text", "audio"],
-                instructions: systemPrompt,
-                voice: "alloy",
-                input_audio_format: "pcm16",
-                output_audio_format: "pcm16",
-                input_audio_transcription: { model: "whisper-1" },
-                turn_detection: {
-                  type: "server_vad",
-                  threshold: 0.75,
-                  prefix_padding_ms: 500,
-                  silence_duration_ms: 10000,
-                  create_response: true,
-                  interrupt_response: true,
-                },
-              },
-            })
-          );
-
-          // Start audio capture after a brief delay
-          setTimeout(() => {
-            if (wsRef.current && audioContextRef.current) {
-              console.log("[VideoSession] Starting audio capture from microphone");
-              const source = audioContextRef.current.createMediaStreamSource(userStream);
-              const processor = audioContextRef.current.createScriptProcessor(4096, 1, 1);
-
-              processor.onaudioprocess = (e) => {
-                if (wsRef.current?.readyState === WebSocket.OPEN) {
-                  const inputData = e.inputBuffer.getChannelData(0);
-                  const pcm16 = new Int16Array(inputData.length);
-                  for (let i = 0; i < inputData.length; i++) {
-                    const s = Math.max(-1, Math.min(1, inputData[i]));
-                    pcm16[i] = s < 0 ? s * 0x8000 : s * 0x7fff;
-                  }
-                  const base64Audio = btoa(
-                    String.fromCharCode(...new Uint8Array(pcm16.buffer))
-                  );
-                  wsRef.current.send(
-                    JSON.stringify({
-                      type: "input_audio_buffer.append",
-                      audio: base64Audio,
-                    })
-                  );
-                }
-              };
-
-              source.connect(processor);
-              processor.connect(audioContextRef.current.destination);
-            }
-          }, 500);
-
-          // Trigger AI to start the interview
-          setTimeout(() => {
-            if (wsRef.current?.readyState === WebSocket.OPEN) {
-              console.log("[VideoSession] Triggering AI to start interview");
-              wsRef.current.send(
-                JSON.stringify({
-                  type: "conversation.item.create",
-                  item: {
-                    type: "message",
-                    role: "user",
-                    content: [
-                      {
-                        type: "input_text",
-                        text: "Hello, I'm ready to start the case interview. Please introduce yourself and present the case.",
-                      },
-                    ],
-                  },
-                })
-              );
-              wsRef.current.send(JSON.stringify({ type: "response.create" }));
-            }
-          }, 1000);
-        };
-
-        ws.onmessage = (event) => {
-          try {
-            const data = JSON.parse(event.data);
-            // Log non-audio messages for debugging (filter high-frequency events)
-            if (!["response.audio.delta", "response.output_audio.delta", "input_audio_buffer.speech_started", "input_audio_buffer.speech_stopped"].includes(data.type)) {
-              console.log("[X.AI]", data.type);
-            }
-
-            switch (data.type) {
-              // Pipe audio to HeyGen avatar
-              case "response.audio.delta":
-              case "response.output_audio.delta":
-                if (data.delta && avatar.sendAudio) {
-                  avatar.sendAudio(data.delta);
-                }
-                break;
-
-              case "response.audio.done":
-              case "response.output_audio.done":
-                console.log("[X.AI] Audio stream complete");
-                if (avatar.endSpeaking) {
-                  avatar.endSpeaking();
-                }
-                break;
-
-              // Update transcript with AI speech
-              case "response.audio_transcript.delta":
-              case "response.output_audio_transcript.delta":
-                if (data.delta) {
-                  pendingTextRef.current += data.delta;
-                  setTranscript((prev) => {
-                    const last = prev[prev.length - 1];
-                    if (last && last.role === "assistant") {
-                      return [...prev.slice(0, -1), { ...last, text: last.text + data.delta }];
-                    }
-                    return [...prev, { role: "assistant", text: data.delta, timestamp: new Date() }];
-                  });
-                }
-                break;
-
-              case "response.audio_transcript.done":
-              case "response.output_audio_transcript.done":
-                pendingTextRef.current = "";
-                break;
-
-              case "response.text.delta":
-              case "response.output_text.delta":
-              case "response.content_part.delta":
-                const textDelta = data.delta?.text || data.delta?.content || data.delta;
-                if (textDelta && typeof textDelta === "string") {
-                  pendingTextRef.current += textDelta;
-                  setTranscript((prev) => {
-                    const last = prev[prev.length - 1];
-                    if (last && last.role === "assistant") {
-                      return [...prev.slice(0, -1), { ...last, text: last.text + textDelta }];
-                    }
-                    return [...prev, { role: "assistant", text: textDelta, timestamp: new Date() }];
-                  });
-                }
-                break;
-
-              case "response.content_part.added":
-                if (data.part?.text) {
-                  pendingTextRef.current += data.part.text;
-                  setTranscript((prev) => {
-                    const last = prev[prev.length - 1];
-                    if (last && last.role === "assistant") {
-                      return [...prev.slice(0, -1), { ...last, text: last.text + data.part.text }];
-                    }
-                    return [...prev, { role: "assistant", text: data.part.text, timestamp: new Date() }];
-                  });
-                }
-                break;
-
-              case "response.done":
-                pendingTextRef.current = "";
-                break;
-
-              // User speech transcription
-              case "conversation.item.input_audio_transcription.completed":
-                if (data.transcript) {
-                  avatar.interrupt();
-                  setTranscript((prev) => [
-                    ...prev,
-                    { role: "user", text: data.transcript!, timestamp: new Date() },
-                  ]);
-                  wsRef.current?.send(JSON.stringify({ type: "response.create" }));
-                }
-                break;
-            }
-          } catch (e) {
-            console.error("[VideoSession] Failed to parse X.AI message:", e);
-          }
-        };
-
-        ws.onerror = (e) => console.error("[VideoSession] X.AI WebSocket error:", e);
-        ws.onclose = () => console.log("[VideoSession] X.AI WebSocket closed");
-      } catch (err) {
-        console.error("[VideoSession] Failed to connect to X.AI:", err);
-        xaiConnectedRef.current = false;
-      }
-    };
-
-    connectToXAI();
-  }, [avatar.isInitialized, systemPrompt, userStream, avatar.sendAudio, avatar.endSpeaking, avatar.interrupt, avatarProvider]);
-
   const cleanup = useCallback(async () => {
-    if (wsRef.current) {
-      wsRef.current.close();
-      wsRef.current = null;
-    }
-    if (audioContextRef.current) {
-      audioContextRef.current.close();
-      audioContextRef.current = null;
-    }
     await avatar.stopAvatar();
   }, [avatar.stopAvatar]);
 

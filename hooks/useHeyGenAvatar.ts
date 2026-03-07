@@ -35,6 +35,8 @@ export function useHeyGenAvatar(options: UseHeyGenAvatarOptions = {}) {
 
   const sessionRef = useRef<LiveAvatarSession | null>(null);
   const videoElementRef = useRef<HTMLVideoElement | null>(null);
+  const isInitializedRef = useRef(false);
+
 
   // Progressive audio streaming - send batches instead of waiting for complete audio
   const AUDIO_BATCH_THRESHOLD = 16000; // ~333ms of base64-encoded PCM16 audio at 24kHz
@@ -86,10 +88,12 @@ export function useHeyGenAvatar(options: UseHeyGenAvatarOptions = {}) {
           console.log("[HeyGen] State changed:", state);
           if (state === SessionState.CONNECTED) {
             console.log("[HeyGen] Session connected successfully");
+            isInitializedRef.current = true;
             setIsInitialized(true);
             setIsConnecting(false);
           } else if (state === SessionState.DISCONNECTED) {
             console.log("[HeyGen] Session disconnected");
+            isInitializedRef.current = false;
             setIsInitialized(false);
           }
         });
@@ -230,7 +234,8 @@ export function useHeyGenAvatar(options: UseHeyGenAvatarOptions = {}) {
   // Progressive audio streaming - send batches as they accumulate for lower latency
   const sendAudio = useCallback(
     (audioBase64: string) => {
-      if (!sessionRef.current || !isInitialized) {
+      if (!sessionRef.current || !isInitializedRef.current) {
+        console.warn("[HeyGen] sendAudio skipped — session:", !!sessionRef.current, "initialized:", isInitializedRef.current);
         return;
       }
 
@@ -252,12 +257,12 @@ export function useHeyGenAvatar(options: UseHeyGenAvatarOptions = {}) {
         }
       }
     },
-    [isInitialized]
+    []
   );
 
-  // Send any remaining buffered audio when X.AI finishes streaming
+  // Send any remaining buffered audio when agent finishes streaming
   const endSpeaking = useCallback(() => {
-    if (!sessionRef.current || !isInitialized) return;
+    if (!sessionRef.current || !isInitializedRef.current) return;
 
     try {
       // Send any remaining audio that didn't reach the batch threshold
@@ -274,7 +279,7 @@ export function useHeyGenAvatar(options: UseHeyGenAvatarOptions = {}) {
       pendingAudioRef.current = "";
       batchCountRef.current = 0;
     }
-  }, [isInitialized]);
+  }, []);
 
   // Interrupt avatar speaking
   const interrupt = useCallback(() => {

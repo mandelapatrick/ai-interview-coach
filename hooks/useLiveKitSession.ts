@@ -14,6 +14,9 @@ import {
 export interface UseLiveKitSessionOptions {
   systemPrompt: string;
   userStream: MediaStream;
+  avatarMode?: "anam" | "heygen" | "none";
+  onAgentAudioData?: (base64Audio: string) => void;
+  onAgentSpeakingDone?: () => void;
   onAvatarStartTalking?: () => void;
   onAvatarStopTalking?: () => void;
   onAvatarTranscription?: (text: string) => void;
@@ -26,6 +29,9 @@ export function useLiveKitSession(options: UseLiveKitSessionOptions) {
   const {
     systemPrompt,
     userStream,
+    avatarMode = "anam",
+    onAgentAudioData,
+    onAgentSpeakingDone,
     onAvatarStartTalking,
     onAvatarStopTalking,
     onAvatarTranscription,
@@ -47,6 +53,13 @@ export function useLiveKitSession(options: UseLiveKitSessionOptions) {
   const agentSegmentsRef = useRef(new Map<string, string>());
   const userSegmentsRef = useRef(new Map<string, string>());
   const agentAudioTrackRef = useRef<MediaStreamTrack | null>(null);
+  const audioBridgeCtxRef = useRef<AudioContext | null>(null);
+
+  // Refs to avoid stale closures in TrackSubscribed/ActiveSpeakersChanged handlers
+  const onAgentAudioDataRef = useRef(onAgentAudioData);
+  const onAgentSpeakingDoneRef = useRef(onAgentSpeakingDone);
+  useEffect(() => { onAgentAudioDataRef.current = onAgentAudioData; }, [onAgentAudioData]);
+  useEffect(() => { onAgentSpeakingDoneRef.current = onAgentSpeakingDone; }, [onAgentSpeakingDone]);
 
   // Cleanup on unmount
   useEffect(() => {
@@ -54,6 +67,10 @@ export function useLiveKitSession(options: UseLiveKitSessionOptions) {
       if (agentTimeoutRef.current) {
         clearTimeout(agentTimeoutRef.current);
         agentTimeoutRef.current = null;
+      }
+      if (audioBridgeCtxRef.current) {
+        audioBridgeCtxRef.current.close().catch(() => {});
+        audioBridgeCtxRef.current = null;
       }
       if (roomRef.current) {
         roomRef.current.disconnect();
@@ -75,7 +92,7 @@ export function useLiveKitSession(options: UseLiveKitSessionOptions) {
         const tokenRes = await fetch("/api/livekit/token", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ systemPrompt }),
+          body: JSON.stringify({ systemPrompt, avatarMode }),
         });
 
         if (!tokenRes.ok) {
@@ -125,6 +142,11 @@ export function useLiveKitSession(options: UseLiveKitSessionOptions) {
             }
 
             if (track.kind === Track.Kind.Video) {
+              // Skip video track attachment for heygen mode (HeyGen provides its own video)
+              if (avatarMode === "heygen") {
+                console.log("[LiveKit] Skipping video track (heygen mode)");
+                return;
+              }
               // Anam avatar video — attach to the video element
               const mediaStream = new MediaStream([
                 track.mediaStreamTrack,
@@ -141,11 +163,44 @@ export function useLiveKitSession(options: UseLiveKitSessionOptions) {
                 videoElementRef.current.play().catch(console.error);
               }
             } else if (track.kind === Track.Kind.Audio) {
-              // Agent TTS audio — store ref for recording capture;
-              // playback is handled by LiveKit's startAudio() + SDK audio elements
+              // Agent TTS audio — store ref for recording capture
               agentAudioTrackRef.current = track.mediaStreamTrack;
-              // Let LiveKit SDK attach its own <audio> element for playback
-              track.attach();
+
+              if (avatarMode === "heygen" && onAgentAudioDataRef.current) {
+                // Audio bridge: convert MediaStreamTrack -> PCM16 -> base64 for HeyGen
+                console.log("[LiveKit] Setting up audio bridge for HeyGen");
+                const bridgeCtx = new AudioContext({ sampleRate: 24000 });
+                audioBridgeCtxRef.current = bridgeCtx;
+
+                const source = bridgeCtx.createMediaStreamSource(
+                  new MediaStream([track.mediaStreamTrack])
+                );
+                // ScriptProcessorNode for PCM extraction
+                const processor = bridgeCtx.createScriptProcessor(4096, 1, 1);
+
+                processor.onaudioprocess = (e) => {
+                  const inputData = e.inputBuffer.getChannelData(0);
+                  const pcm16 = new Int16Array(inputData.length);
+                  for (let i = 0; i < inputData.length; i++) {
+                    const s = Math.max(-1, Math.min(1, inputData[i]));
+                    pcm16[i] = s < 0 ? s * 0x8000 : s * 0x7fff;
+                  }
+                  const uint8 = new Uint8Array(pcm16.buffer);
+                  let binaryString = '';
+                  for (let i = 0; i < uint8.length; i++) {
+                    binaryString += String.fromCharCode(uint8[i]);
+                  }
+                  onAgentAudioDataRef.current?.(binaryString);
+                };
+
+                source.connect(processor);
+                // Connect to destination to keep the processor alive (silent output)
+                processor.connect(bridgeCtx.destination);
+                // Do NOT call track.attach() — HeyGen handles playback
+              } else {
+                // Default: let LiveKit SDK attach its own <audio> element for playback
+                track.attach();
+              }
             }
           }
         );
@@ -170,6 +225,8 @@ export function useLiveKitSession(options: UseLiveKitSessionOptions) {
             isTalkingRef.current = false;
             setIsTalking(false);
             onAvatarStopTalking?.();
+            // Signal to HeyGen that agent finished speaking
+            onAgentSpeakingDoneRef.current?.();
           }
         });
 
@@ -261,6 +318,7 @@ export function useLiveKitSession(options: UseLiveKitSessionOptions) {
     [
       systemPrompt,
       userStream,
+      avatarMode,
       onAvatarStartTalking,
       onAvatarStopTalking,
       onAvatarTranscription,
@@ -282,6 +340,10 @@ export function useLiveKitSession(options: UseLiveKitSessionOptions) {
 
     try {
       console.log("[LiveKit] Stopping session");
+      if (audioBridgeCtxRef.current) {
+        await audioBridgeCtxRef.current.close().catch(() => {});
+        audioBridgeCtxRef.current = null;
+      }
       await roomRef.current.disconnect();
       roomRef.current = null;
       setIsInitialized(false);

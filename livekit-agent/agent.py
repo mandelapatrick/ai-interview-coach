@@ -1,4 +1,5 @@
 import os
+import json
 import logging
 from dotenv import load_dotenv
 
@@ -20,7 +21,17 @@ async def entrypoint(ctx: JobContext):
         def on_track_subscribed(track, publication, participant):
             logger.info(f"Subscribed to track: {track.kind} source={track.source} from {participant.identity}")
 
-        system_prompt = ctx.room.metadata or "You are a case interview coach."
+        # Parse room metadata as JSON for structured config
+        raw = ctx.room.metadata or "{}"
+        try:
+            meta = json.loads(raw)
+            system_prompt = meta.get("system_prompt", "You are a case interview coach.")
+            avatar_mode = meta.get("avatar_mode", "anam")
+        except (json.JSONDecodeError, TypeError):
+            system_prompt = raw or "You are a case interview coach."
+            avatar_mode = "anam"
+
+        logger.info(f"Avatar mode: {avatar_mode}")
 
         eleven_key = os.getenv("ELEVEN_API_KEY")
 
@@ -35,16 +46,18 @@ async def entrypoint(ctx: JobContext):
             vad=silero.VAD.load(),
         )
 
-        avatar = anam.AvatarSession(
-            persona_config=anam.PersonaConfig(
-                name="Interviewer",
-                avatarId="edf6fdcb-acab-44b8-b974-ded72665ee26",
-            ),
-            api_key=os.getenv("ANAM_API_KEY"),
-        )
+        # Only start Anam avatar when avatar_mode is "anam"
+        if avatar_mode == "anam":
+            avatar = anam.AvatarSession(
+                persona_config=anam.PersonaConfig(
+                    name="Interviewer",
+                    avatarId="edf6fdcb-acab-44b8-b974-ded72665ee26",
+                ),
+                api_key=os.getenv("ANAM_API_KEY"),
+            )
+            logger.info("Starting avatar session...")
+            await avatar.start(session, room=ctx.room)
 
-        logger.info("Starting avatar session...")
-        await avatar.start(session, room=ctx.room)
         logger.info("Starting agent session...")
         await session.start(
             agent=Agent(instructions=system_prompt),

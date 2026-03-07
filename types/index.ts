@@ -67,6 +67,12 @@ export interface Question {
   source?: string;                 // Casebook source identifier
 }
 
+export interface TranscriptEntry {
+  role: "user" | "assistant";
+  text: string;
+  timestamp: Date;
+}
+
 export interface Session {
   id: string;
   userId: string;

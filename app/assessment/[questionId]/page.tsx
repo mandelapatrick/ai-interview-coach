@@ -6,7 +6,7 @@ import { useParams } from "next/navigation";
 import { getQuestionById } from "@/data/questions";
 import { getCompanyBySlug } from "@/data/companies";
 import { QUESTION_TYPE_LABELS, PM_QUESTION_TYPE_LABELS, PMQuestionType, InterviewTrack } from "@/types";
-import { TranscriptEntry } from "@/hooks/useVoiceSession";
+import { TranscriptEntry } from "@/types";
 import { getPendingRecording } from "@/lib/recordingTransfer";
 import { uploadRecording } from "@/hooks/useVideoRecorder";
 
