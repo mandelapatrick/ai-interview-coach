@@ -51,7 +51,7 @@ async def entrypoint(ctx: JobContext):
             avatar = anam.AvatarSession(
                 persona_config=anam.PersonaConfig(
                     name="Interviewer",
-                    avatarId="edf6fdcb-acab-44b8-b974-ded72665ee26",
+                    avatarId="bdaaedfa-00f2-417a-8239-8bb89adec682",
                 ),
                 api_key=os.getenv("ANAM_API_KEY"),
             )
