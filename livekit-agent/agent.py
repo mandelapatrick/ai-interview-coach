@@ -9,6 +9,7 @@ logger = logging.getLogger("interview-agent")
 
 from livekit.agents import Agent, AgentSession, JobContext, WorkerOptions, cli
 from livekit.plugins import openai, elevenlabs, silero, anam
+from livekit.plugins.turn_detector.multilingual import MultilingualModel
 
 
 async def entrypoint(ctx: JobContext):
@@ -44,6 +45,7 @@ async def entrypoint(ctx: JobContext):
                 model="eleven_turbo_v2_5",
             ),
             vad=silero.VAD.load(),
+            turn_detection=MultilingualModel(),
         )
 
         # Only start Anam avatar when avatar_mode is "anam"
