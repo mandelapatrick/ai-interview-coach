@@ -1,12 +1,16 @@
 "use client";
 
+import { useState } from "react";
+
 interface InterviewModeSelectorProps {
-  onSelectMode: (mode: "audio" | "audio-xai" | "video") => void;
+  onSelectMode: (mode: "audio" | "audio-livekit" | "video") => void;
 }
 
 export default function InterviewModeSelector({
   onSelectMode,
 }: InterviewModeSelectorProps) {
+  const [audioProvider, setAudioProvider] = useState<"livekit" | "anam">("livekit");
+
   return (
     <div className="flex flex-col items-center justify-start md:justify-center min-h-[60vh] px-4 pt-8 md:pt-0">
       <h2 className="hidden md:block text-2xl font-bold text-gray-900 mb-2 font-display">
@@ -17,27 +21,53 @@ export default function InterviewModeSelector({
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl">
-        {/* Audio Interview Option (Default - Kimi K2) */}
-        <button
-          onClick={() => onSelectMode("audio")}
-          className="group relative flex flex-col items-center p-8 bg-white rounded-2xl border border-gray-200 hover:border-[#d4af37]/50 transition-all hover:shadow-lg hover:shadow-[#d4af37]/10"
-        >
-          <div className="w-16 h-16 rounded-full bg-gray-50 flex items-center justify-center mb-4 group-hover:bg-[#d4af37]/10 transition-colors">
-            <MicrophoneIcon className="w-8 h-8 text-[#d4af37]" />
-          </div>
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">
-            Audio Interview
-          </h3>
-          <p className="text-sm text-gray-600 text-center">
-            Voice-only conversation with AI interviewer. Great for quick
-            practice on the go.
-          </p>
-          <div className="mt-4 flex flex-col items-center gap-2">
-            <div className="px-4 py-2 bg-gray-50 rounded-full text-sm text-gray-600">
-              Microphone only
+        {/* Audio Interview Option (Default - LiveKit) */}
+        <div className="flex flex-col items-center">
+          <button
+            onClick={() => onSelectMode(audioProvider === "livekit" ? "audio" : "audio-livekit")}
+            className="group relative flex flex-col items-center p-8 bg-white rounded-2xl border border-gray-200 hover:border-[#d4af37]/50 transition-all hover:shadow-lg hover:shadow-[#d4af37]/10 w-full"
+          >
+            <div className="w-16 h-16 rounded-full bg-gray-50 flex items-center justify-center mb-4 group-hover:bg-[#d4af37]/10 transition-colors">
+              <MicrophoneIcon className="w-8 h-8 text-[#d4af37]" />
             </div>
-          </div>
-        </button>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              Audio Interview
+            </h3>
+            <p className="text-sm text-gray-600 text-center">
+              Voice-only conversation with AI interviewer. Great for quick
+              practice on the go.
+            </p>
+            <div className="mt-4 flex flex-col items-center gap-2">
+              <div className="px-4 py-2 bg-gray-50 rounded-full text-sm text-gray-600">
+                Microphone only
+              </div>
+            </div>
+          </button>
+          {process.env.NODE_ENV === "development" && (
+            <div className="mt-3 flex items-center gap-1 bg-gray-100 rounded-full p-1">
+              <button
+                onClick={() => setAudioProvider("livekit")}
+                className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+                  audioProvider === "livekit"
+                    ? "bg-white text-gray-900 shadow-sm"
+                    : "text-gray-500 hover:text-gray-700"
+                }`}
+              >
+                LiveKit
+              </button>
+              <button
+                onClick={() => setAudioProvider("anam")}
+                className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+                  audioProvider === "anam"
+                    ? "bg-white text-gray-900 shadow-sm"
+                    : "text-gray-500 hover:text-gray-700"
+                }`}
+              >
+                Anam
+              </button>
+            </div>
+          )}
+        </div>
 
         {/* Video Interview Option */}
         <button

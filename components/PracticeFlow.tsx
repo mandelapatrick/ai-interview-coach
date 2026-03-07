@@ -10,7 +10,7 @@ import VoiceSession from "./VoiceSession";
 import AnamAudioSession from "./AnamAudioSession";
 import UpgradeModal from "./UpgradeModal";
 
-type FlowState = "mode-select" | "audio" | "audio-xai" | "video-lobby" | "video-session";
+type FlowState = "mode-select" | "audio" | "audio-livekit" | "video-lobby" | "video-session";
 
 interface PracticeFlowProps {
   question: Question;
@@ -24,16 +24,16 @@ export default function PracticeFlow({ question }: PracticeFlowProps) {
 
   const { canPractice, maxDurationSeconds, loading } = useSubscription();
 
-  const handleModeSelect = (mode: "audio" | "audio-xai" | "video") => {
+  const handleModeSelect = (mode: "audio" | "audio-livekit" | "video") => {
     if (!canPractice) {
       setShowUpgrade(true);
       return;
     }
 
     if (mode === "audio") {
-      setFlowState("audio"); // Uses Anam (Kimi K2) - default
-    } else if (mode === "audio-xai") {
-      setFlowState("audio-xai"); // Uses X.AI (Grok)
+      setFlowState("audio"); // Uses LiveKit agent - default
+    } else if (mode === "audio-livekit") {
+      setFlowState("audio-livekit"); // Uses Anam (Kimi K2)
     } else {
       setFlowState("video-lobby");
     }
@@ -81,10 +81,10 @@ export default function PracticeFlow({ question }: PracticeFlowProps) {
       );
 
     case "audio":
-      return <AnamAudioSession question={question} maxDurationSeconds={maxDurationSeconds} />;
-
-    case "audio-xai":
       return <VoiceSession question={question} maxDurationSeconds={maxDurationSeconds} />;
+
+    case "audio-livekit":
+      return <AnamAudioSession question={question} maxDurationSeconds={maxDurationSeconds} />;
 
     case "video-lobby":
       return (
