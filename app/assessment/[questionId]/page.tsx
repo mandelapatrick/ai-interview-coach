@@ -348,7 +348,7 @@ export default function AssessmentPage() {
                   <>
                     <ScoreItem label="Structure" score={(assessment.scores as ConsultingScores).structure} weight="25%" />
                     <ScoreItem label="Problem Solving" score={(assessment.scores as ConsultingScores).problemSolving} weight="20%" />
-                    <ScoreItem label="Business Judgment" score={(assessment.scores as ConsultingScores).businessJudgment} weight="20%" />
+                    <ScoreItem label="Business Sense" score={(assessment.scores as ConsultingScores).businessJudgment} weight="20%" />
                     <ScoreItem label="Communication" score={(assessment.scores as ConsultingScores).communication} weight="15%" />
                     <ScoreItem label="Quantitative" score={(assessment.scores as ConsultingScores).quantitative} weight="10%" />
                     <ScoreItem label="Creativity" score={(assessment.scores as ConsultingScores).creativity} weight="10%" />
