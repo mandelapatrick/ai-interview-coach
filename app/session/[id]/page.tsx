@@ -283,7 +283,7 @@ export default function SessionDetailPage() {
                   <>
                     <ScoreItem label="Structure" score={assessment.scores ? (assessment.scores as ConsultingScores).structure : assessment.structure_score} weight="25%" />
                     <ScoreItem label="Problem Solving" score={assessment.scores ? (assessment.scores as ConsultingScores).problemSolving : assessment.problem_solving_score} weight="20%" />
-                    <ScoreItem label="Business Judgment" score={assessment.scores ? (assessment.scores as ConsultingScores).businessJudgment : assessment.business_judgment_score} weight="20%" />
+                    <ScoreItem label="Business Sense" score={assessment.scores ? (assessment.scores as ConsultingScores).businessJudgment : assessment.business_judgment_score} weight="20%" />
                     <ScoreItem label="Communication" score={assessment.scores ? (assessment.scores as ConsultingScores).communication : assessment.communication_score} weight="15%" />
                     <ScoreItem label="Quantitative" score={assessment.scores ? (assessment.scores as ConsultingScores).quantitative : assessment.quantitative_score} weight="10%" />
                     <ScoreItem label="Creativity" score={assessment.scores ? (assessment.scores as ConsultingScores).creativity : assessment.creativity_score} weight="10%" />
