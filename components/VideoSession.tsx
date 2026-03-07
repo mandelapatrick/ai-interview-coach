@@ -139,7 +139,8 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
       setTranscript((prev) => {
         const last = prev[prev.length - 1];
         if (last && last.role === "assistant") {
-          return [...prev.slice(0, -1), { ...last, text: last.text + " " + text }];
+          // Replace the last entry (LiveKit sends full accumulated text)
+          return [...prev.slice(0, -1), { ...last, text }];
         }
         return [...prev, { role: "assistant", text, timestamp: new Date() }];
       });
@@ -149,7 +150,8 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
       setTranscript((prev) => {
         const last = prev[prev.length - 1];
         if (last && last.role === "user") {
-          return [...prev.slice(0, -1), { ...last, text: last.text + " " + text }];
+          // Replace the last entry (LiveKit sends full accumulated text)
+          return [...prev.slice(0, -1), { ...last, text }];
         }
         return [...prev, { role: "user", text, timestamp: new Date() }];
       });

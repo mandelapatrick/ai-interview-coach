@@ -8,7 +8,6 @@ import {
   RemoteTrack,
   RemoteTrackPublication,
   RemoteParticipant,
-  DataPacket_Kind,
 } from "livekit-client";
 
 export interface UseLiveKitSessionOptions {
@@ -44,6 +43,8 @@ export function useLiveKitSession(options: UseLiveKitSessionOptions) {
   const isTalkingRef = useRef(false);
   const streamReadyFiredRef = useRef(false);
   const agentTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const agentSegmentsRef = useRef(new Map<string, string>());
+  const userSegmentsRef = useRef(new Map<string, string>());
 
   // Cleanup on unmount
   useEffect(() => {
@@ -185,45 +186,26 @@ export function useLiveKitSession(options: UseLiveKitSessionOptions) {
           }
         });
 
-        // Handle transcription via data messages from agent
-        room.on(
-          RoomEvent.DataReceived,
-          (
-            payload: Uint8Array,
-            participant?: RemoteParticipant,
-            kind?: DataPacket_Kind
-          ) => {
-            try {
-              const message = JSON.parse(
-                new TextDecoder().decode(payload)
-              );
-              if (message.type === "transcription") {
-                if (message.role === "agent" || message.role === "assistant") {
-                  onAvatarTranscription?.(message.text);
-                } else if (message.role === "user") {
-                  onUserTranscription?.(message.text);
-                }
-              }
-            } catch {
-              // Not a JSON message, ignore
-            }
-          }
-        );
+        // Handle built-in LiveKit transcription events with segment deduplication
+        room.on(RoomEvent.TranscriptionReceived, (segments, participant) => {
+          const isLocal = participant?.isLocal;
+          const segMap = isLocal ? userSegmentsRef.current : agentSegmentsRef.current;
+          const callback = isLocal ? onUserTranscription : onAvatarTranscription;
 
-        // Handle built-in LiveKit transcription events
-        room.on(
-          RoomEvent.TranscriptionReceived,
-          (segments, participant) => {
-            const text = segments
-              .map((s: { text: string }) => s.text)
-              .join(" ");
-            if (participant?.isLocal) {
-              onUserTranscription?.(text);
-            } else {
-              onAvatarTranscription?.(text);
-            }
+          for (const seg of segments) {
+            segMap.set(seg.id, seg.text);
           }
-        );
+
+          const fullText = Array.from(segMap.values()).join(" ");
+          if (fullText.trim()) {
+            callback?.(fullText);
+          }
+
+          const allFinal = segments.every((s: any) => s.final);
+          if (allFinal && segments.length > 0) {
+            segMap.clear();
+          }
+        });
 
         room.on(RoomEvent.Disconnected, () => {
           console.log("[LiveKit] Disconnected from room");
