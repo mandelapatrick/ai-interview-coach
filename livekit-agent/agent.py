@@ -36,7 +36,7 @@ async def entrypoint(ctx: JobContext):
         eleven_key = os.getenv("ELEVEN_API_KEY")
 
         session = AgentSession(
-            stt=elevenlabs.STT(api_key=eleven_key),
+            stt=elevenlabs.STT(api_key=eleven_key, language_code="en"),
             llm=openai.LLM(model="gpt-4o"),
             tts=elevenlabs.TTS(
                 api_key=eleven_key,

@@ -247,7 +247,9 @@ export function useLiveKitSession(options: UseLiveKitSessionOptions) {
 
           const allFinal = segments.every((s: any) => s.final);
           if (allFinal && segments.length > 0) {
-            segMap.clear();
+            for (const seg of segments) {
+              segMap.delete(seg.id);
+            }
           }
         });
 
