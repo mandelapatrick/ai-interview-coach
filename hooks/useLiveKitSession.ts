@@ -8,6 +8,7 @@ import {
   RemoteTrack,
   RemoteTrackPublication,
   RemoteParticipant,
+  LocalAudioTrack,
 } from "livekit-client";
 
 export interface UseLiveKitSessionOptions {
@@ -45,6 +46,7 @@ export function useLiveKitSession(options: UseLiveKitSessionOptions) {
   const agentTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const agentSegmentsRef = useRef(new Map<string, string>());
   const userSegmentsRef = useRef(new Map<string, string>());
+  const agentAudioTrackRef = useRef<MediaStreamTrack | null>(null);
 
   // Cleanup on unmount
   useEffect(() => {
@@ -139,26 +141,11 @@ export function useLiveKitSession(options: UseLiveKitSessionOptions) {
                 videoElementRef.current.play().catch(console.error);
               }
             } else if (track.kind === Track.Kind.Audio) {
-              // Agent TTS audio — attach to video element or play separately
-              if (videoElementRef.current) {
-                const existingSrc = videoElementRef.current
-                  .srcObject as MediaStream | null;
-                if (existingSrc) {
-                  existingSrc.addTrack(track.mediaStreamTrack);
-                } else {
-                  videoElementRef.current.srcObject = new MediaStream([
-                    track.mediaStreamTrack,
-                  ]);
-                }
-              } else {
-                // Fallback: create an audio element
-                const audioEl = document.createElement("audio");
-                audioEl.srcObject = new MediaStream([
-                  track.mediaStreamTrack,
-                ]);
-                audioEl.autoplay = true;
-                document.body.appendChild(audioEl);
-              }
+              // Agent TTS audio — store ref for recording capture;
+              // playback is handled by LiveKit's startAudio() + SDK audio elements
+              agentAudioTrackRef.current = track.mediaStreamTrack;
+              // Let LiveKit SDK attach its own <audio> element for playback
+              track.attach();
             }
           }
         );
@@ -216,6 +203,10 @@ export function useLiveKitSession(options: UseLiveKitSessionOptions) {
         await room.connect(url, token);
         console.log("[LiveKit] Connected to room:", room.name);
 
+        // Unlock audio playback on mobile browsers
+        await room.startAudio();
+        console.log("[LiveKit] Audio playback unlocked");
+
         // Log any already-connected participants
         console.log(`[LiveKit] Remote participants: ${room.remoteParticipants.size}`);
         for (const [, p] of room.remoteParticipants) {
@@ -223,19 +214,20 @@ export function useLiveKitSession(options: UseLiveKitSessionOptions) {
         }
 
         // Step 5: Publish user's microphone
-        // Use setMicrophoneEnabled so the track source is correctly set to
-        // Track.Source.Microphone — the agent's STT only subscribes to mic-source tracks.
+        // Publish the existing lobby mic track directly to preserve the user gesture chain
+        // and avoid re-requesting getUserMedia (which can fail when gesture context expires on mobile).
         if (userStream) {
           const audioTrack = userStream.getAudioTracks()[0];
-          const deviceId = audioTrack?.getSettings().deviceId;
-          // Stop the lobby's audio track — setMicrophoneEnabled will create its own
-          audioTrack?.stop();
-          await room.localParticipant.setMicrophoneEnabled(true, {
-            deviceId: deviceId ? { exact: deviceId } : undefined,
-            echoCancellation: true,
-            noiseSuppression: true,
-          });
-          console.log("[LiveKit] Microphone enabled and published");
+          if (audioTrack) {
+            const localTrack = new LocalAudioTrack(audioTrack, undefined, false);
+            await room.localParticipant.publishTrack(localTrack, {
+              source: Track.Source.Microphone,
+            });
+            console.log("[LiveKit] Published existing microphone track");
+          } else {
+            await room.localParticipant.setMicrophoneEnabled(true);
+            console.log("[LiveKit] Microphone enabled (no existing track)");
+          }
         } else {
           await room.localParticipant.setMicrophoneEnabled(true);
           console.log("[LiveKit] Microphone enabled (default device)");
@@ -308,5 +300,6 @@ export function useLiveKitSession(options: UseLiveKitSessionOptions) {
     initializeSession,
     interrupt,
     stopSession,
+    agentAudioTrackRef,
   };
 }

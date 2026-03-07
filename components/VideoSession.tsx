@@ -293,6 +293,14 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
     // Start the render loop
     drawFrame();
 
+    // Create AudioContext eagerly while still in user gesture chain
+    let recordingAudioContext: AudioContext | null = null;
+    try {
+      recordingAudioContext = new AudioContext();
+    } catch (e) {
+      console.warn("[VideoSession] Could not create AudioContext eagerly:", e);
+    }
+
     // Start recording after a short delay to ensure streams are ready
     const recordingTimer = setTimeout(() => {
       if (canvasRef.current && !isRecording) {
@@ -300,48 +308,35 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
         const canvasStream = canvasRef.current.captureStream(30);
 
         try {
-          // Create audio context for mixing user mic + avatar audio
-          const recordingAudioContext = new AudioContext();
-          const destination = recordingAudioContext.createMediaStreamDestination();
+          // Reuse eagerly-created AudioContext, or create new one as fallback
+          const audioCtx = recordingAudioContext ?? new AudioContext();
+          const destination = audioCtx.createMediaStreamDestination();
 
           // Add user microphone audio
-          const userAudioSource = recordingAudioContext.createMediaStreamSource(userStream);
+          const userAudioSource = audioCtx.createMediaStreamSource(userStream);
           userAudioSource.connect(destination);
 
-          // Add avatar video audio (AI interviewer voice)
-          if (avatarVideoRef.current) {
-            let avatarAudioAdded = false;
-
-            // Method 1: Try to get audio from the avatar's srcObject MediaStream
-            if (avatarVideoRef.current.srcObject) {
-              const avatarStream = avatarVideoRef.current.srcObject as MediaStream;
-              const avatarAudioTracks = avatarStream.getAudioTracks();
-              if (avatarAudioTracks.length > 0) {
-                const avatarAudioStream = new MediaStream(avatarAudioTracks);
-                const avatarAudioSource = recordingAudioContext.createMediaStreamSource(avatarAudioStream);
-                avatarAudioSource.connect(destination);
-                avatarAudioAdded = true;
-                console.log("[VideoSession] Added avatar audio from srcObject");
-              }
-            }
-
-            // Method 2: Capture audio directly from the video element
-            if (!avatarAudioAdded) {
-              try {
-                const avatarElementSource = recordingAudioContext.createMediaElementSource(avatarVideoRef.current);
-                avatarElementSource.connect(destination);
-                // Also connect to speakers so user can still hear it
-                avatarElementSource.connect(recordingAudioContext.destination);
-                avatarAudioAdded = true;
-                console.log("[VideoSession] Added avatar audio from media element");
-              } catch (e) {
-                console.log("[VideoSession] Could not capture avatar element audio:", e);
-              }
-            }
-
-            if (!avatarAudioAdded) {
+          // Add agent audio from LiveKit session's tracked audio ref
+          const agentTrack = livekitSession.agentAudioTrackRef.current;
+          if (agentTrack && agentTrack.readyState === "live") {
+            const agentStream = new MediaStream([agentTrack]);
+            const agentSource = audioCtx.createMediaStreamSource(agentStream);
+            agentSource.connect(destination);
+            console.log("[VideoSession] Added agent audio from LiveKit track ref");
+          } else if (avatarVideoRef.current?.srcObject) {
+            // Fallback for non-LiveKit providers: try srcObject
+            const avatarStream = avatarVideoRef.current.srcObject as MediaStream;
+            const avatarAudioTracks = avatarStream.getAudioTracks();
+            if (avatarAudioTracks.length > 0) {
+              const avatarAudioStream = new MediaStream(avatarAudioTracks);
+              const avatarAudioSource = audioCtx.createMediaStreamSource(avatarAudioStream);
+              avatarAudioSource.connect(destination);
+              console.log("[VideoSession] Added avatar audio from srcObject");
+            } else {
               console.log("[VideoSession] Warning: Could not capture avatar audio");
             }
+          } else {
+            console.log("[VideoSession] Warning: No agent audio available yet");
           }
 
           // Add mixed audio track to canvas stream
@@ -368,8 +363,11 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
         cancelAnimationFrame(animationFrameRef.current);
       }
       clearTimeout(recordingTimer);
+      if (recordingAudioContext && recordingAudioContext.state !== "closed") {
+        recordingAudioContext.close();
+      }
     };
-  }, [isSessionStarted, isVideoEnabled, duration, startRecording, isRecording, userStream]);
+  }, [isSessionStarted, isVideoEnabled, duration, startRecording, isRecording, userStream, livekitSession.agentAudioTrackRef]);
 
   // Set user video stream
   useEffect(() => {
@@ -399,9 +397,8 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
       }
     };
 
-    // Small delay to ensure video element is ready
-    const timer = setTimeout(initAvatar, 100);
-    return () => clearTimeout(timer);
+    // Call immediately to preserve user gesture chain on mobile
+    initAvatar();
   }, [avatar.initializeAvatar, avatarProvider]);
 
   // Step 2: Connect to X.AI only after avatar is initialized (HeyGen only)
@@ -789,7 +786,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
             ref={avatarVideoRef}
             autoPlay
             playsInline
-            muted={false}
+            muted
             className="w-full h-full object-cover"
             style={{ backgroundColor: '#0a1122' }}
             onLoadedMetadata={(e) => {
