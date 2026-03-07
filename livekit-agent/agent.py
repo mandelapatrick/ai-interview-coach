@@ -20,7 +20,7 @@ async def entrypoint(ctx: JobContext):
         # Log when we subscribe to participant tracks (confirms mic audio is received)
         @ctx.room.on("track_subscribed")
         def on_track_subscribed(track, publication, participant):
-            logger.info(f"Subscribed to track: {track.kind} source={track.source} from {participant.identity}")
+            logger.info(f"Subscribed to track: {track.kind} source={publication.source} from {participant.identity}")
 
         # Parse room metadata as JSON for structured config
         raw = ctx.room.metadata or "{}"
@@ -64,8 +64,10 @@ async def entrypoint(ctx: JobContext):
         await session.start(
             agent=Agent(instructions=system_prompt),
             room=ctx.room,
-            room_input=room_io.RoomInputOptions(
-                noise_cancellation=noise_cancellation.BVC(),
+            room_options=room_io.RoomOptions(
+                audio_input=room_io.AudioInputOptions(
+                    noise_cancellation=noise_cancellation.BVC(),
+                ),
             ),
         )
         logger.info("Generating initial reply...")
