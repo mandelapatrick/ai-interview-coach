@@ -1,0 +1,207 @@
+Case: Hair Restore
+Case Type: Strategic Decision
+Firm: PwC
+Channel: Management Consulted
+URL: https://www.youtube.com/watch?v=cTx_2z1tct8
+============================================================
+
+**Interviewer:** Ed,   I've   got   a   case   today   about   something   I   don't   know   if   you've   ever   thought   about.   Uh,   it's   a   case   on   hair   products.  
+**Candidate:** Oh,   interesting.  
+**Interviewer:** I   mean,   maybe   you   have.   I   shouldn't   make   assumptions.  
+**Candidate:** (laughs)  
+**Interviewer:** But,   uh,   this   is   for   our   Strategy&   and   it's   a   healthcare-focused-  
+**Candidate:** Okay.  
+**Interviewer:** ...   case,   and   it's   going   to   be   really   interesting   because,   uh,   you   know,   I   don't   know   if   you've   seen   math   like   this   before,   so   I'm   excited   to   work   through   it   with   you.   It   should   be   a   fun   case.  
+**Candidate:** Great.  
+**Interviewer:** Ready   to   get   started?  
+**Candidate:** Let's   do   it.  
+**Interviewer:** Awesome.   (instrumental music)   So   our   client   is   HealthTek,   a   US-based   pharmaceutical   company   that   has   developed   a   remedy   for   female   hair   loss   and   balding   called   Hair   Restorê.   Hair   Restorê   has   been   in   development   for   a   few   years   and   the   management   team   is   contemplating   whether   to   roll   out   the   drug   to   the   US   market   now.   It's   very   interesting   because,   uh,   you   might   be   surprised   to   know   that   Hair   Restorê   has   a   large   addressable   market.   In   fact,   in   some   age   groups,   two-thirds   of   women   explain   and   complain   that   they   have   lost   hair.   Um-  
+**Candidate:** Yes.  
+**Interviewer:** ...   and   other   age   groups,   one-third,   but   still   maybe   more   than   I   certainly   expected.   And   there   are   a   couple   of   additional   important   facts.   Hair   Restorê   went   through   a   lengthy   and   delayed   testing   process   with   the   FDA   before   getting   approval,   and   Hair   Restorê   will   now   be   unfortunately   off   patent   in   just   a   few   years.   The   two   questions   that   we   need   to   answer   today   are,   number   one,   how   would   you   determine   if   Hair   Restorê   will   be   profitable?   And   number   two,   after   all   of   our   considerations,   should   we   go   ahead   with   the   production?  
+**Candidate:** Okay.   So   lot   of   information   there.   Sounds   like   an   interesting   case.   I'm   excited   to   jump   into   it.   Um,   let   me   just   go   over   what   I   heard,   make   sure   I've   got   all   the   facts   right.   So   our   client   today   is   HealthTek.   They're   a   US-based   company,   pharmacy,   in   pharmaceuticals,   and   they   address   female   balding.   I'm   just   wondering,   do   they   also   focus   on   male   balding   or   is   it   specifically   for   females?  
+**Interviewer:** Just   female   balding-  
+**Candidate:** Okay.  
+**Interviewer:** ...   and   it's   specifically   also   focused   on,   uh,   hair   loss,   so   not   just   balding.  
+**Candidate:** Okay,   but   hair   loss   as   well.  
+**Interviewer:** But   hair   thinning,   et   cetera.   Yeah.  
+**Candidate:** Yes.   Okay,   interesting.   And   they've   been   in   development   for   a   few   years,   and   they're   basically   deciding,   do   we   roll   this   drug   out   right   now?   Um,   obviously   there's   some   complications.   They're   going   to   lose   their   patent   soon   just   because   of   how   long   the   FDA,   um,   testing   was.   They   do   have   a   large   addressable   market   though.   And   so   we're   here   today   to   decide   how   do   we   know   this   is   going   to   be   profitable   and   should   we   go   ahead   with   it?  
+**Interviewer:** Great.  
+**Candidate:** Wonderful.   Do   you   mind   if   I   just   take   a   minute   or   two   to   organize   my   thoughts?  
+**Interviewer:** You   bet.  
+**Candidate:** Thank   you.   Okay.   So   I've   come   up   with   some   thoughts   and   I'd   love   to   run   them   by   you.  
+**Interviewer:** Go   ahead.  
+**Candidate:** And   we   can   get   into   it.   So   when   I   was   deciding   whether   or   not   this   should   be   profitable   and   whether   should,   we   should   go   ahead   with   this,   I   really   wanted   to   bucket   into   three   areas,   and   I   wanted   to   really   focus   on   the   revenues   themselves.   And   within   the   revenues   we've   got   the   market   itself   in   terms   of   how   much   market   size   do   we   have,   the   price   in   which   we're   selling   this   at,   also   the   frequency   of   which   we're   selling   this   at.   Is   this   a   one,   once   a   year   thing   or   as   they   say   once   a   week   thing?   Um,   in   terms   of   the   costs,   there's   the   cost   to   produce   this,   there's   the   cost   to   distribute   this,   SG&A,   and   also   there   may   be   more   cost   with   more   testing   if   that's   required.   I   know   they've   been   through   a   lengthy   and   delayed,   um,   testing,   so   making   sure   that's   not   going   to   continue.   Uh,   and   lastly,   I   want   to   create   a   bucket   for   external   things.   So   the   FDA,   um,   the   patent   itself,   right?   We   know   that   that's   expiring   soon   so   that's   going   to   be   a   big   factor   if   we're   looking   at   a   timeline   beyond   just   the   coming   year.   I   want   to   look   at   competitors.   Maybe   there's   other   people   in   the   market   who   are,   we   would   have   to   compete   against,   or   maybe   this   is   a,   um,   proprietary   drug.   And   lastly,   the   threat   of   substitutes   in   terms   of   this   is   great   that   this   will   help   with,   um,   with   balding   and   hair   loss,   um,   but   maybe   there   are   substitutes   for   that.   And   so   we   need   to   account   for,   um,   customers   looking   out   for   those   as   well.  
+**Interviewer:** Fantastic.   Where   do   you   want   to   start?  
+**Candidate:** Let's   start   with   the   revenues.  
+**Interviewer:** Okay.   And   what   specifically   would   you   look   at   if   you   dive   into   the   data   there?   What's   the   data   that   you'd   want   here?  
+**Candidate:** Yeah.   Well,   I   would   love   to   know,   um,   I   guess   maybe   the   market   itself   in   terms   of   how   many   people   we   think   we   can   market   this   to,   and   how   many   people   would   actually   buy   it.   And   then   also   multiplying   that   by   the   price   itself,   and   also   how   frequently   are   they   buying   this?   Is   this   a   treatment,   like   I   said,   that's   once   every   day   or   is   it   once   a   year?  
+**Interviewer:** Awesome.   Uh,   and   one   of   the   things   that   we   have   to   think   about   here   because   we   have   such   high   upfront   costs   is,   uh,   either   a   net   present   value   or   a   breakeven   point.   Can   you,   can   you   factor   in   time-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   to   your,   uh,   process   here   for   calculating?  
+**Candidate:** Is   there   a...   And   I   guess   there's   two   ways   we   can   do   this.   Is...   Are   we   looking   at   this   for   the   foreseeable   future?   We're   going   to   launch   this   drug   and   we   plan   to   go   on   it   for   as   long   as   it   works,   or   is   there   a   specific   timeline   that   we're   looking   at   in   terms   of...   ?  
+**Interviewer:** What   do   you   think?   I've   told   you   a   little   bit   about   this   FDA   approval   process.   What   are   you   thinking   would   factor   in   there?   Mm-hmm.  
+**Candidate:** Yeah.   So   it's   been   lengthy   and   delayed-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   and   so   there's   obviously   a   lot   of   investment   that's   gone   into   this   already.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** And   also   we   know   that   it's   off   patent   soon.   And   I   would   imagine   once   it's   off   patent,   our   revenues   themselves   will   decrease   a   lot   because   of   competitors   and   people   coming   in.   They   can   just   produce   it   cheaper   or   sell   it   cheaper.   So   I'd   imagine   we've   got   a   relatively   fixed   period   of   time,   maybe   a   couple   of   years,   three   to   five   years,   um,   perhaps.  
+**Interviewer:** Okay.   And   so   how   would   you   factor   in   the   differences   between   the   on   patent   and   off   patent   times,   mm-hmm?  
+**Candidate:** I   really   liked   what   you   said   about   like   a   net   present   value   in   terms   of   really   focusing   on   here's   all   the   money   we   expect   to   get   while   we   have   the   patent.   Here's   the   remaining   money   that's   going   to   kind   of   trickle   down   once   we've,   uh,   finished   that.   Here's   all   the   investment   that   we've   had   at   time   zero   and   even   before.   Let's   calculate   a   value   right   today   of   what,   what   is   all   the   future   profits   worth?  
+**Interviewer:** Okay.   Awesome.   Uh,   and   one   more   question   here.   When   you're   thinking   about   the   different   options,   uh,   you   know,   if   we   just   cut   our   losses,   right?   Um,   what   do   we   risk   from   cutting   our   losses?   What   do   we   gain   from   cutting   our   losses   now?  
+**Candidate:** Yeah.   So   if   we   cut   our   losses   now,   um...One   thing   we   can,   I   guess,   avoid   is   the   potential   of   taking   this   drug   to   market   and   having   not   enough   people   buy   it.   Um,   but   even   that,   I   think   the   biggest   thing   we   risk   there   is   one,   a   huge,   uh,   impact   and   blow   to   our   PR   and   to   our   brand   as   a   whole.   I'm   not   sure   if   HealthTech   produces   other,   um,   drugs   and   other   things,   but   if   they   do,   then   those,   those   may   not   be   not   looked   upon   favorably   if   we've   gone   through   all   this   testing   process   and   then   we   scrap   at   the   last   minute.   And   also   we're   just   kissing   goodbye   a   huge   investment   that   we've   made   on   this.   I   know   that,   um,   testing   is,   is   probably   not   cheap   and   so   there's   probably   been   a   lot   of   money   that's   been   spent   on   that.  
+**Interviewer:** Makes   sense.   Um,   finally   just   dive   into   the   cost   category.   Sort   of   the   key   costs   here   in   order   of   importance   from   your   perspective.  
+**Candidate:** Yeah.   I   think   the   number   one   cost   is   probably   the   ini-   initial   investment   in   terms   of   testing   and,   um,   the   investment   in   terms   of   the   factories   to   actually   produce   this   as   well   as   labor.   I'm   not   an   expert   in   the,   um,   pharmaceutical   industry,   but   I   would   imagine   that   that's   probably   a   large,   a   large   cost   as   well   as   distribution   probably   wouldn't   be   something   that's   huge,   same   with   SG&A.   This   is   probably   not   something   that   you   need   to   go   and   advertise   to,   you   know,   everyday   people.   It   might   be   something   that   people   are   actually   seeking   out.   Um,   but   yeah,   I   think   probably   the   actual   investment   into   the   machinery   and   production   equipment   as   well   as   the   resources   that   are   going   into   testing   and   to   getting   it   approved   by   the   FDA.  
+**Interviewer:** Okay.   Awesome.   Well,   I   do   have   a   little   bit   of   analysis   for   you   that   we've   done.  
+**Candidate:** All   right.  
+**Interviewer:** Um,   we've   done   some   detailed   financial   analysis   actually,   and   we've   estimated   that   the   present   value   of   all   future   profits,   which   includes   the   impact   of   being   off   patent,   is   three   billion   dollars.   Um,   however,   we   won't   realize   the   full   amount   of   profitability   because   we   have   profitability   weighted   outcomes   from   our   different   trials.  
+**Candidate:** Okay.  
+**Interviewer:** And   so   what   that   means   is   that   basically   the,   you   know,   the   product's   not   gonna   work   for   everybody.  
+**Candidate:** Okay.  
+**Interviewer:** Will   work   for   some   people,   um,   and,   and   so,   uh,   the,   this   probability   weighted   trials   will   kind   of   help   us   understand   and   target   where,   where   it   will   work.   And   so,   um,   the,   the   way   that   we   think   about   it   is   that   we   have   four   phases   and   each   one   there's   kind   of   a   passing   group   out   of   that.   In   phase   one,   80%   find   the   product   effective.   Um,   in   phase   two,   30%.   In   phase   three,   50%.   And   in   phase   four,   75%.   So   my   question   to   you   is   what   is   the   profitability   weighted-  
+**Candidate:** Okay.  
+**Interviewer:** ...   profit,   uh,   sorry,   the   probability   weighted   profits-  
+**Candidate:** Okay,   so   like   an   expected   return?  
+**Interviewer:** ...   for   this   product.   That's   right.   Yeah.  
+**Candidate:** Okay.  
+**Interviewer:** And   knowing   that   the,   the   potential   return,   if   100%   of   people   found   this   successful   would   be   three   billion   dollars.  
+**Candidate:** Okay.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Okay.   Interesting.   So   my   thought   here   would   be   to   essentially   multiply   five   numbers,   so   all   the   probabilities   by   the,   um...   Or   actually   no,   sorry,   yeah,   all   the   probabilities   by   themselves   to   get   the,   uh,   percentage   chance   that   we   get   to   the   end   and   that   we   actually   get   all   this   realized   profit.  
+**Interviewer:** Okay.  
+**Candidate:** And   then   multiply   that   by,   (coughs)   excuse   me,   by   the   maximum   possible   profit   and   then   that   would   be   our   probability   weighted   profit.   How   does   that   sound?  
+**Interviewer:** Sounds   good.   Mm-hmm.  
+**Candidate:** Okay.   So   I'm   just   gonna   start   multiplying   these   now.   80%   multiplied   by   30%.   Uh,   10%   of   80%   is   8,   so   multiply   by   3   is   24%.   Now   24%   multiplied   by   50%   is   12%.   Then   12%   multiplied   by   75%   is   gonna   be   three   quarters   of   12,   which   is   nine.   So   9%   there.   So   9%   of   3   billion,   well,   10%   of   3   billion   is   300   million   and   we   need   to   remove   1%,   which   is   30   million.   So   that'll   leave   us   with   270   million   dollars   of   profit,   which   is   our   to   be   expected   profit,   um,   accounting   for   the   fact   that   we   could   fail   and   that   we   could   realize   it   all.   It's,   it's   about,   um,   270   million   is   what   we   could   hope   to   achieve.  
+**Interviewer:** What   do   you   see   from   these   numbers   here?   Mm-hmm.  
+**Candidate:** I   mean,   270   million   is   a   lot   of   money.   Um,   I'm   not   sure...   And   that,   and   that's   actually   profit,   not   even   revenue,   so   that's   great   and   I,   I'm   wondering   if   maybe   there's   something   else   we   need   to   factor   in,   right?   Maybe   there's   competitors   and   maybe   there's   other   things   that   we   need   to   factor   in   that   this   might   be   the   probability   of   getting   this   profit   if   every   single   person   buys   our   product   because   it's   got   to   the   end   of   trial   four,   but   maybe   not   everyone   will   want   to   buy   it.   Maybe   one,   people   want   substitutes   like   I   mentioned   before.   And   so   I   think   that   number   is   an   awesome   goal,   but   I   don't   think   it's   100%   realistic.   I   think   it   would   probably   be   lower   than   it   would   higher,   if   that   makes   sense.  
+**Interviewer:** Okay.   Well,   the   good   news   is   that   we   actually   don't   have   any   wind   of   any   competitors.  
+**Candidate:** No   competitors.  
+**Interviewer:** But   we   do   have   a   second   product   that   we   have-  
+**Candidate:** Oh.  
+**Interviewer:** ...   in   development.  
+**Candidate:** Okay.  
+**Interviewer:** And   so   we've   realized   that   our   management   is   also   considering   developing   an   alternative   product   to   Hair   Restorer.   Uh,   the   good   news   about   this   is   that   it   would   have   longer   patent   protection.   But   I   want   you   to   evaluate   the   opportunity   here.  
+**Candidate:** Yeah.  
+**Interviewer:** Um,   so   as   part   of   their   assessment,   they've   estimated   the   potential   success   rate   of   the   product   development.   We   don't   know   yet-  
+**Candidate:** Okay.  
+**Interviewer:** ...   the   answers   for   this   one,   but   this   exhibit   will   show   you   some   of   that   information.  
+**Candidate:** Okay.  
+**Interviewer:** And   so   looking   at   this   exhibit,   I'm   wondering   if   you   can   tell   me   what   critical   insights   you   could   gather   and   also,   um,   it...   yeah,   well,   let's   start   there   first   of   all.   Um,   and   then   based   on   your   insights,   I   may   have   a   secondary   question.  
+**Candidate:** Yeah.   Before   we   go   into   this,   I'm   assuming   this   is   the   same   kind   of   product.  
+**Interviewer:** Correct.  
+**Candidate:** It's   the   same   outcomes-  
+**Interviewer:** Same   purpose.  
+**Candidate:** ...   different,   different...   Okay.  
+**Interviewer:** Yeah.   Different,   yeah,   different   process,   would   have   different   marketing,   different   side   effects.   However,   the,   the   actual   goal,   stated   goal   is   to   restore,   um,   hair   for   women   that   have   experienced   hair   loss   or   female   balding.  
+**Candidate:** Okay.   Well-...   looking   at   this   graph,   it   looks   similar   to,   to   the   numbers   you   gave   me   earlier,   so   I'm   wondering   if   maybe   there's   some   sort   of   comparison   we   can   do   of   what's   gonna   be   better,   what's   gonna   be   worse.   Um,   in   addition   to   that,   I'm   just,   like,   looking   through   the   process.   So,   our   current   one   is   80,   30,   50,   75,   in   terms   of   percentage   to   get   to   the   next   stage.  
+**Interviewer:** Yep.  
+**Candidate:** Which   is   a   really   high   percentage   chance   that   it   kind   of   dips   at   phase   two   and   then   it   picks   back   up.   This   is   a   lot   more   similar,   right?   60,   50,   40,   60.   There's   a   lot   more,   um,   steady.   How...   There's   no,   you   know,   30%s   or   90%s.   So   I'm   wondering   if   maybe   this   is   a   slightly   more   reliable?   But   I   think   the   best   way   to   calculate   that   is   going   to   have   to   be   actually   go   through   and   multiply   those   numbers,   like   we   did   before-  
+**Interviewer:** Great.   Go   for   it.  
+**Candidate:** ...   and   then   we   can   go   ahead   and   compare.   Okay,   so   we   have   60%,   um,   and   we   have   50%,   we   have   40%   and   60%.   So   if   we   multiply   the   60%   by   50%,   we   get   30%.   And   then   if   we   multiply   the   30%   and   the   40%,   that's   10%   of   40   is   four,   multiplied   by   three   is   12%.   And   then   if   we   multiply   the   12%   and   the   60%,   um,   10%   of   12   is   1.2,   and   then   if   we   multiply   1.2   by   six,   six   times   one   is   six,   and   six   times   .2   is,   uh,   1.2,   so   we   get   7.2%.   Now,   7.2%'s   lower   than   9%,   and   I   noticed   that   we   do   have   the   same   present   value   of   three   billion.  
+**Interviewer:** How   much   lower   is   it   than   9%?  
+**Candidate:** You   want   me   to   calculate   that   out?  
+**Interviewer:** Well,   I'm   just   asking-  
+**Candidate:** Or...  
+**Interviewer:** ...   can   you,   can   you   do   any   quick   math   to   figure   that   out?  
+**Candidate:** Yeah.   Well,   it's   roughly,   um,   in   terms   of   actual,   like,   raw   percentage   points,   it's   1.8%   lower-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   but   in   terms   of,   like,   an   actual,   um-  
+**Interviewer:** What   percentage   of   that   is   9%?   Of   the...   Is   that   9%?  
+**Candidate:** Um,   7.2%   is   ...   Oh,   it's,   uh,   eight-   80%   of   nine   po-   of   9%.  
+**Interviewer:** Okay.   Great.  
+**Candidate:** Okay.  
+**Interviewer:** Does   that   tell   you   anything?   Hmm.  
+**Candidate:** Um,   yeah.   So   we're-  
+**Interviewer:** What   would   be   the   number?   You   can   do   raw   numbers   if   you   want   to,   but...  
+**Candidate:** Yeah,   in   terms   of   the   actual   money   that   we'd   be   getting   from   this?  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Yeah,   so   we'd   be   getting   80%   of   270   million,   so   it'd   be   270   million   minus   the,   um,   54   million,   which   is   the   20%.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Um,   and   that   would   get   us   around   216   million.  
+**Interviewer:** Okay.  
+**Candidate:** Still   a   great   number.   Still,   you   know,   hundreds   of   millions   of   dollars.   But   I   will   say   that   it's   less   attractive   than   the   first-  
+**Interviewer:** Great.  
+**Candidate:** ...   the   first   opportunity.  
+**Interviewer:** Should   we   just   scrap   it?  
+**Candidate:** Uh,   well,   can   we   do   both?  
+**Interviewer:** Well,   why   would   we   do   something   inferior?  
+**Candidate:** Well,   at   the   end   of   the   day,   we   do   have   to   worry   about   cannibalization.   We   do   have   to   worry   about   a   few   things   if   we   launch   them   at   the   same   time.   But   there's   still   room   for   potentially,   you   know,   an   e-   m-   many   millions   more   profit.  
+**Interviewer:** Okay.  
+**Candidate:** If   we   can   do   both.   Now,   what   I   will   caveat   that   with   is   that   no   matter   what,   we   should   do   the   first   one.  
+**Interviewer:** Okay.  
+**Candidate:** I,   I,   I   will,   I   will   stand   by   that.   Uh,   we   should   never   do   the   second   one   in   lieu   of   the   first   one.  
+**Interviewer:** Okay.  
+**Candidate:** But   I   think   doing   them   in   addition,   if   we   weren't   t-   if   we   did   research   and   we   weren't   too   worried   about   cannibalization   of   our   own   product,   and   we   weren't   too   worried   about   other,   uh,   external   factors,   then   I   think   we   could   go   into   both.  
+**Interviewer:** So-  
+**Candidate:** Just   because   of   the   longevity   of   this,   right?   We,   like   you   said,   we   have   longer   patent   protection,   and   that   might   give   us   a   chance   to   bigger   our   brand   and   get   our   foot   in   that   space   more,   so   that   when   the   patent   protection   goes,   we've   been   around   for   so   long,   we're   the   best   product   and,   and   everyone   wants   to   go   with   us.  
+**Interviewer:** I   like   where   you're   going.   Uh,   here's   my   question.   On   the   w-   uh,   second   one,   can   you   get   me   to   270   million?  
+**Candidate:** Yeah.   Yeah.   Absolutely.  
+**Interviewer:** How?  
+**Candidate:** Um,   well,   that   7.2%   needs   to   go   to   9%,   so   we   would   have   to   change   the   ef-   effectiveness   or   efficacy   of   one   of   the   trials.  
+**Interviewer:** Okay,   so   our   client   is   considering   an   investment   that   will   increase   the   phase   four-  
+**Candidate:** Okay.  
+**Interviewer:** ...   trial   success   rate.   The   question   is,   how   much   will   the   success   rate   have   to   be,   or   how   much   will   it   have   to   increase   for   the   alternative   product   to   be   as   successful   as   Hair   Restore?  
+**Candidate:** Okay.   Do   you   want   me   to   include   the   cost   of   this   investment   or   just   focus   on   getting   up   to   that   270   million?  
+**Interviewer:** So,   just   focus   on   getting   me   to   the   270   million-  
+**Candidate:** Okay.  
+**Interviewer:** ...   recognizing   that   there   could   be   a   cost   in   the   change.  
+**Candidate:** Perfect.   Okay,   so   what   I'm   going   to   do   here   is   I   know   that   the   success   of   getting   through   to   trial   four   is   12%.   And   if   we   know   that   that's   12%   and   we   need   to   get   to   9%,   we   know   that   12%   multiplied   by   some   number   X   percent   is   equal   to   9%.   And   just   from   looking   at   this,   I   know   that,   um,   three   times   three   is   nine   and   three   times   four   is   12,   so   nine   is   75%   of   12.   So,   if   we   do   12%   multiplied   by   75%   success   rate   in   the   trial,   um,   then   we   would   go   ahead   and   we'd   get   nine,   9%.   And   I   just   want   to   really   quickly   verify   my   numbers,   make   sure   I'm   correct   on   that.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** 10%   of   75%   is   7.5%,   and   then   1%   would   be,   um,   0.75%.   Multiply   that   by   two   for   2%,   would   be   1.5.   7.5   plus   1.5   is   9%.  
+**Interviewer:** Okay.  
+**Candidate:** So   that   works   out.   If   we   could   get-  
+**Interviewer:** Is   that   a   feasible   jump?  
+**Candidate:** It's   60%   now,   so   getting   up   to   75%   is   a   15   percentage   point   increase,   or   it's   also   a   25%   increase   on   the   current   effectiveness.   I'm   not   an   expert   in   terms   of,   of   these   trials,   and   I'd   love   to   be   able   to   call   on   something   and   say,   "Oh,   yeah.   This   is   really   attainable   or   not   attainable   at   all."It   seems   like   a,   a,   a   sizable   jump   and,   and   again,   it   would   have   investment   associated   with   it.   There   would   be   some   sort   of   cost,   so   I   would,   if   we   had   more   time,   I'd   love   to,   to   figure   that   out   and,   and   weigh   that   in.   But   for   now,   I   think   that   it's,   it's   possible.   Um,   again,   I'm   still   really   leaning   on   that   first   one.   I   think   we   should   definitely   go   with   that.   I   don't   think   this   is   out   the   picture.   I   think   really   focus   on   getting   that   first   one   to   market,   and   then   this   could   be   a   really   good   opportunity.  
+**Interviewer:** Great.   Our   client's   ready   for   a   final   recommendation.  
+**Candidate:** Great.   So   obviously   today   we've   noticed   that,   um,   after   going   through   a   long   and   tedious   process   with   the   FD&A,   our   drug's   ready   to   release.   And   the   decision   today   was,   was   do   we   go   with   that?   And   I   think   we   do.  
+**Interviewer:** Okay.  
+**Candidate:** Uh,   the   reason   being   is   that   even   with   all   realized   profits   being   three   billion,   with   our   probability   weighted,   we're   still   getting   270   million.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** And   while   that   even   may   go   lower   to   even   whether   it   goes   to   half   of   that,   we're   still   making   a   lot   of   money.   And   as   you   know,   basic   finance   tells   us   when   the   NPV   is   positive,   you   should   go   with   the   investment.   And   I,   and   I   agree   with   that,   and   I   think   we   should   go   with   the   investment.   Just   remembering,   though,   that   some   risks   with   that   are   if   it   is   not   adopted   by   the   market   as   we   predicted,   that   could   dramatically   alter   our   profits.   Um,   some   next   steps   with   this   is   I   think   make   sure   everything's   signed   with   the   FDA   and   it   has   fully   got   that   seal   of   approval,   and   get   ready   to   maybe   put   some   money   into   SG&A   in   terms   of   selling   that   and   getting   it   out   to   market.   Um,   and   don't   forget   to,   to   keep,   keep   in   mind   this   second   option.  
+**Interviewer:** Fantastic.   Thank   you.  
+**Candidate:** Thank   you.  
+**Interviewer:** That   was   a   lot   of   percentages,   huh?  
+**Candidate:** Yeah.  
+**Interviewer:** (laughs)  
+**Candidate:** That   was   good.  
+**Interviewer:** What'd   you   think   about   the   case?   It's   kind   of   a   different   one.  
+**Candidate:** It   is.  
+**Interviewer:** It's,   it's   in   here   on   purpose,   different   firm,   different   case   style,   different   math.   Uh,   but   tell   me   just   a   little   bit   about   what   you're   thinking   about   here.   Mm-hmm.  
+**Candidate:** Yeah,   so   just,   uh-  
+**Interviewer:** Self-assess.  
+**Candidate:** It   starts   off   and   it's,   it's   pretty   like   your   average   case,   just,   um,   I   think   this,   this   one   was   a   little   bit   more   bureaucracy   heavy.   I   had   to   really   keep   an   effort   in   my   mind   to   remember   regulations   and   FDA   and   just   not   remember   to,   or   not   forget   to   remove   that.  
+**Interviewer:** Yes.  
+**Candidate:** A-   and   as   a   consideration.   But   I   have   to   say,   the   math   itself   was   really   interesting.   It's,   I've   not   really   done   percentage   by   percentage   by   percentage   calculations,   so   that   was   really   fun   of   finding   the   common   denominators   there,   um,   and   then   bringing   it   back   to   a   dollar   value.   Um,   it's   really   difficult   when   you're   looking   at   $270   million   and   you   have   to   remember   to   caveat   it,   because   if   you   just   say,   "Yeah,   270   million,   go   ahead,"   y-   there   seems   like   there   has   to   be   something   wrong.   So   just   being   mindful   of,   of   other   risks   that   are   associated   with   that   I   think   was   really   important.  
+**Interviewer:** Yeah.   I   thought   so   too.   So   overall,   really   good   job.   Like,   like,   you   know,   when   we're   thinking   about   entering   a   market,   as   you   mentioned   at   the   end,   positive   NPV   is   what   we're   looking   for,   right?  
+**Candidate:** Yeah.  
+**Interviewer:** And   so   we   could   have   done   this   in   a   way   other   than   NPV.   We   could   have   looked   at   break   even   points.  
+**Candidate:** Yeah.  
+**Interviewer:** We   could   have   looked   at   time   series.   I   think,   you   know,   at   the   beginning,   the   one   thing   that   was   really   missing   was   a   sense   of   timing.   And   with   such   these   regulatory   issues   with   long   investment   costs,   just   understanding   that   we're   gonna   have   to   look   at   NPV   or   some   kind   of   break   even   point,   because   it's   not   gonna   happen   in   a   year   and   we're   not   looking   at   a   one-year   change,   right?  
+**Candidate:** Yes.  
+**Interviewer:** Different   than   a   lot   of   the   other   operational   type   of   cases   that   you   might   have   seen.   Uh,   overall,   your,   your,   um,   case   structure   was   pretty   good.   I   really   wanted   you   to   tie   it   back   to   that   bigger   issue.   And   of   course,   right,   revenues,   costs   are   gonna   be   important   here.   But   I   also   think   that   you   could   have   used   more   of   an   external   type   of   structure.  
+**Candidate:** Okay.  
+**Interviewer:** Or   at   the   beginning   we   knew   that   there   was   a   big   addressable   market,   but   we   didn't   know   how   much   market   demand   there   would   be.  
+**Candidate:** Yes.  
+**Interviewer:** So   maybe   just   beginning   us   with,   how   big   is   this   market   actually?   We   know   that   women   experience   balding,   but   will   they   purchase   it?   And   talking   us   through   that.   And   then   uh,   who   are   the   competitors?   There   don't   turn   out   to   be   any   competitors.   What   are   the   options   for   our   customer   segmentation,   right?  
+**Candidate:** Okay.  
+**Interviewer:** Just   thinking   through   maybe   some   of   that   strategically.   Um,   and   now,   uh,   nothing   wrong   with   yours,   but   in   a,   in   a   case   where   I'm   directing   you   into   this   market-  
+**Candidate:** Yes.  
+**Interviewer:** ...   type   of   situation,   you   could   have   gone   there.   I,   I   thought   you   did   a   really   nice   job   of   explaining,   um,   you   know,   how   you   would   calculate   some   of   the   numbers,   but   it   felt   pretty   disorganized.  
+**Candidate:** Okay.  
+**Interviewer:** It   was,   it   was   just   a   list   of   all   the   things   you'd   like   to   know.   It   was   like   a-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   data   request   list   instead   of   a   calculation.   So   I   would   encourage   you,   especially   if   you're   brainstorming   that   in   an   interviewee   led   case   like   this   one,   right?   This   is   a   case   for   strategy   on.   So   at   the   beginning   I   said,   "Hey,   you're   gonna   walk   me   through   this."   If   you   brainstorm   a   bunch   of   ideas   and   I   don't   happen   to   have   it,   you   don't   necessarily   remember   what   you   brainstormed   and   what   you   didn't.  
+**Candidate:** Yeah.  
+**Interviewer:** So   just-  
+**Candidate:** Okay.  
+**Interviewer:** ...   j-   just   kind   of   keeping   track   of   that.   Uh,   thought   that   you   did   a   really   nice   job   with   the   first   math.   Um,   and   I,   I   was   going   to   let   you   go,   but   for   the   interest   of   time,   I   ch-   just   kind   of   pointed   out   that   one   shortcut   between   the   two.  
+**Candidate:** Yes.  
+**Interviewer:** Um,   looking   for   those   relationships   as   shortcuts   before   you   do   the   math.   Yet   you're   so   good   at   math,   but   just   be   careful   not   to   use   shortcuts   or-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   be   careful   to   use   shortcuts-  
+**Candidate:** Yeah.   Save   some   time.  
+**Interviewer:** ...   more   frequently   when   you   can,   um,   so   that   we   can   spend   our   time   talking   about   what   really   matters.   And   then   yeah,   you   know,   gosh,   what   a   boom   day,   right?  
+**Candidate:** Yeah.  
+**Interviewer:** This   270   million,   the   216   million,   both   are   positive.   One   has   long   patent   protection,   the   other   one   doesn't   but   still   has   great   profitability   potential.   Um,   I   thought   you   did   a   really   nice   job   of   isolating   how   we   would   want   to   change.   I-   it,   you   know,   it's   possible   that   we   could   have   changed   the   price   of   the   second   one.   It's   possible   that   we   could   have-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   improved   the   variable   cost   based   on   something   else.   I   th-   I   feel   like   you   could   have   gone   a   little   bit   broader   on   that.   But   overall,   really   nice   job   tying   everything   together   all   the   way   through   the   end.   So,   good   job.  
+**Candidate:** Thank   you.

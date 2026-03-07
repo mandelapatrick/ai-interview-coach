@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { useHeyGenAvatar } from "@/hooks/useHeyGenAvatar";
 import { useAnamAvatar } from "@/hooks/useAnamAvatar";
+import { useLiveKitSession } from "@/hooks/useLiveKitSession";
 import { useVideoRecorder } from "@/hooks/useVideoRecorder";
 import { setPendingRecording } from "@/lib/recordingTransfer";
 import { Question } from "@/types";
@@ -123,6 +124,43 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
     onError: (err) => console.error("Anam error:", err),
   });
 
+  // LiveKit session hook - Python agent handles STT/LLM/TTS, Anam avatar for lip-sync
+  const livekitSession = useLiveKitSession({
+    systemPrompt,
+    userStream,
+    onAvatarStartTalking: () => {
+      console.log("LiveKit avatar started talking");
+    },
+    onAvatarStopTalking: () => {
+      console.log("LiveKit avatar stopped talking");
+    },
+    onAvatarTranscription: (text) => {
+      console.log("LiveKit agent said:", text);
+      setTranscript((prev) => {
+        const last = prev[prev.length - 1];
+        if (last && last.role === "assistant") {
+          return [...prev.slice(0, -1), { ...last, text: last.text + " " + text }];
+        }
+        return [...prev, { role: "assistant", text, timestamp: new Date() }];
+      });
+    },
+    onUserTranscription: (text) => {
+      console.log("LiveKit user said:", text);
+      setTranscript((prev) => {
+        const last = prev[prev.length - 1];
+        if (last && last.role === "user") {
+          return [...prev.slice(0, -1), { ...last, text: last.text + " " + text }];
+        }
+        return [...prev, { role: "user", text, timestamp: new Date() }];
+      });
+    },
+    onStreamReady: () => {
+      console.log("LiveKit session ready - agent handles pipeline");
+      setIsSessionStarted(true);
+    },
+    onError: (err) => console.error("LiveKit error:", err),
+  });
+
   // Unified avatar interface
   const avatar = avatarProvider === "heygen" ? {
     isInitialized: heygenAvatar.isInitialized,
@@ -134,13 +172,22 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
     endSpeaking: heygenAvatar.endSpeaking,
     interrupt: heygenAvatar.interrupt,
     stopAvatar: heygenAvatar.stopAvatar,
+  } : avatarProvider === "livekit" ? {
+    isInitialized: livekitSession.isInitialized,
+    isConnecting: livekitSession.isConnecting,
+    isTalking: livekitSession.isTalking,
+    error: livekitSession.error,
+    initializeAvatar: livekitSession.initializeSession,
+    sendAudio: null as ((audio: string) => void) | null,
+    endSpeaking: null as (() => void) | null,
+    interrupt: livekitSession.interrupt,
+    stopAvatar: livekitSession.stopSession,
   } : {
     isInitialized: anamAvatar.isInitialized,
     isConnecting: anamAvatar.isConnecting,
     isTalking: anamAvatar.isTalking,
     error: anamAvatar.error,
     initializeAvatar: anamAvatar.initializeAvatar,
-    // HeyGen-specific methods (unused for Anam - Anam handles conversation natively)
     sendAudio: null as ((audio: string) => void) | null,
     endSpeaking: null as (() => void) | null,
     interrupt: anamAvatar.interrupt,
@@ -356,9 +403,9 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
   }, [avatar.initializeAvatar, avatarProvider]);
 
   // Step 2: Connect to X.AI only after avatar is initialized (HeyGen only)
-  // Anam handles conversation natively with its own LLM
+  // Anam and LiveKit handle conversation natively
   useEffect(() => {
-    if (avatarProvider !== "heygen") return; // Anam handles conversation natively
+    if (avatarProvider !== "heygen") return; // Anam/LiveKit handle conversation natively
     if (!avatar.isInitialized || xaiConnectedRef.current) return;
 
     const connectToXAI = async () => {

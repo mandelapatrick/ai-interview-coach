@@ -1,0 +1,5 @@
+livekit-agents[silero]~=1.4
+livekit-plugins-openai
+livekit-plugins-elevenlabs
+livekit-plugins-anam
+python-dotenv

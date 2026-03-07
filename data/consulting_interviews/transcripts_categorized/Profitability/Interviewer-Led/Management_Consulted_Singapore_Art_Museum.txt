@@ -1,0 +1,300 @@
+Case: Singapore Art Museum
+Case Type: Strategic Decision
+Firm: McKinsey
+Channel: Management Consulted
+URL: https://www.youtube.com/watch?v=xgJxzud5Jm4
+============================================================
+
+**Interviewer:** (Instrumental music) .   Brilliant.   Yeah,   so,   uh,   we'll   kick   off   then.   I   think   today   the   idea   is   doing,   uh,   a   round   one   of   a   typical   case,   um,   McKinsey   style.   So,   um,   I'll   be   leading   the   majority   of   it.   Um,   let   me   know   when   you're   ready   and   we   can   kick   it   off.  
+**Candidate:** Yeah,   I'm   ready.  
+**Interviewer:** Brilliant.   So,   uh,   your   client   is   the   Singapore   Art   Museum,   SAM,   a   government-funded   art   institution   with   the   objective   of   welcoming   international   visitors   to   experience   local   Singaporean   art   and   exhibitions.   Due   to   decreasing   funding   from   the   Singaporean   government   over   the   past   few   years,   uh,   SAM   has   set   a   goal   to   grow   profitability   from   commercial   activities.   How   would   you   go   about   advising   SAM   on   tackling   this   problem?  
+**Candidate:** Perfect.   Thank   you   very   much   for   the   prompt.   Um,   just   so   I   have   everything   in   place,   um,   our   client   for   today   is,   um,   Singapore   Art   Museum,   or   SAM-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   which   is   essentially   a   government   entity   that,   uh,   showcases   art,   Singaporean   art   specifically.   Um,   and   they've   had   decreased   funding   in   the   last   year.   Uh,   so...   And   the   problem   for   today   is   to   figure   out   how   to   grow   profitability.   Is   there   any   other   objective   that   I've   missed   or   is   there   any   other   objective?  
+**Interviewer:** Uh,   no,   that's   it.   So   it's   to   grow   profitability   specifically   from   commercial   activity.   So,   um,   you   don't   have   to   look   at,   like,   getting   increased   funding   from   the   government   and   things   like   that.  
+**Candidate:** All   right.   And   do   we   have   a   timeline   for...   such   for   that?   Do   they   have   a   specific   timeline   in   mind   or   a   specific   number   in   mind?  
+**Interviewer:** Uh,   no,   not   specifically.   They   just   wanna   know   what   the   art   of   the   possible   is   here.  
+**Candidate:** Oh,   what   the   possibilities   are.   Perfect.   Um,   just,   just   so   I   know,   um,   when   you   said   decreased   funding,   it's   over   the   last   year   or   over   the   last   few   years?   Do   we   know   when   that   happened   or   what,   what   changed?  
+**Interviewer:** We   don't   know   the   specific   dates,   but   it's   been   a   slow   kind   of   gradual   change.  
+**Candidate:** So,   they've   been   pulling   back   slowly?  
+**Interviewer:** Well,   they   haven't   been   pulling   back.   They   haven't   been   pulling   back.   It's,   it's   just   that   their   income   has   been   declining   and   they,   you   know,   wanna   figure   out   why,   uh,   over   the   past   few   years.  
+**Candidate:** Okay.   Perfect.   Um,   yeah.   And,   uh,   commercial   activity.   Do   you   have   any   information   about   what   that   actually   means?   So,   for   example,   for   an   art   museum,   I   would   guess   that   they   have   events   organized   or   they   lease   out   the   space   or,   um,   they,   um,   yeah,   sponsor   people.   What   would   commercial   activities   actually   entail?  
+**Interviewer:** Uh,   yes.   So   they...   The,   the   bulk   of   their   income   comes   from   government   funding,   but   that's   non-discretionary,   so   they   put   all   of   their   effort   on   kind   of   controllable...   So   not   non-discretionary,   non-controllable.   So   they   put   all   their   effort   on   this   controllable   funding   element   like   most,   um,   most   museums.   Um,   the   commercial   activity,   uh,   is   like   private   events   is   one   of   them.   Um,   exhibitions   is   another.   And   then   kind   of   international,   uh,   outreach,   international,   you   know,   dealing   with   the   Singaporean   diaspora,   trying   to,   um,   gain   donations.   Those   are   the   three   main   activities,   but   they're   open-minded.  
+**Candidate:** Okay.   Perfect.   All   right.   Um,   is   it   o-   okay   if   I   take   a   few   minutes   to   figure   out   how   I   want   to   tackle   the   problem?  
+**Interviewer:** Yeah,   absolutely.  
+**Candidate:** Um,   so   in   order   to   figure   out   how   to   increase   profitability   specifically   through   commercial   activities,   uh,   for   the   Singaporean   Art   Museum,   um,   I'd   like   to   first   concentrate   on   profitability,   um,   and   then   look   at   other   alternatives   that   we   could   have,   um,   which   they   haven't   possibly   taken   into   account.   So   I   have   three   buckets   essentially.   The   first   one   is   the   financial   aspect   of,   uh,   Singaporean   Art   Museum   that   brings   out   to   profit,   um,   increase.   In   this   bucket,   I   would   like   to   look   at   the   revenue   and   costs.   Uh,   when   I   talk   about   revenue,   um,   I'd   also   like   to   segment   that   into   two   ways,   um,   since   I'd   like   to   understand   if   they   calculate   their   revenues   based   on   the   total   number   of   customers   they   get   or   the   number   of   events   that   they   have.   So   essentially   look   at   volume   of   customers   and   volume   of   events,   and   then   respectively,   uh,   the   corresponding   price,   multiply   that   with   the   pri-   price   of,   uh,   say,   each   ticket   sale   for   the   customer   aspect   or   the   price   for   each   event   that   they   organize.   So,   uh,   that's   for   the   revenue   part.   Uh,   in   the   profit,   in   the   first   bucket,   also   I'd   like   to   look   at   costs   because   that   also   should   be   taken   into   account.   If   we   actually   end   up   having   these   commercial   activities,   it's   important   to   know,   um,   what   kind   of   costs   we're   going   to   incur   and   if   that's   going   to,   uh,   cause   trouble.   Then,   uh,   I'd   like   to   look   at   fixed   costs   and   variable   costs.   Uh,   for   fixed   costs,   essentially   that's   the   rent   that   they   have   to   have   for   the   space   that   they   have,   um,   in   Singapore,   and   the   salary   of   the   management,   um,   and   things   like   that.   And   for   variable   costs,   if   we   have   more   events,   it   could   possibly   mean   that   that   could,   um...   That   we'd   have   to   hire   new   marketing   agencies,   hi-   hire   consultants,   or   hire   outreach,   people   who   can   do   outreach   for   us.   Um,   so   that   would   also   be   something   that   we   need   to   take   into   account.   And   that's   for   the,   uh,   financial   aspect   for   the   profit   side.   Um,   in   the   other   alternatives,   um,   I   know   you   mentioned   that   they're   mostly   looking   commercial   activities,   but   just   to   have   a   global   picture   of   what   these   commercial   activities   could   entail,   maybe   we   could   also   look   at   what   other   alternatives   we   have   to   increase   profitability   if   we   don't   find   a   proper   solution   for,   um,   the   first   half.   And   the   third   thing   I'd   like   to   just   understand   if,   um,   SAM   is   actually,   uh,   capable   of,   um,   how   do   you   say,   increasing   their   profit   by   these   specific   activities   that   you   mentioned.   So   can   they   actually   manage   to   host   these   events   and,   um,   hold   exhibitions   and   if   they   have   the-...   uh,   manpower   or   the   financial   power   to   be   able   to   sustain   these   events   for   a   longer   term.   Um,   do   you   think   I've   missed   something   in   the   structure,   or,   uh,   should   we   take   something   else   into   account   that   I   didn't   think   of?  
+**Interviewer:** Yeah,   I   think   that's   a   good   basis.   Uh,   so   if   you   had   to,   um,   figure   out   which   of   those...   Just   give   me   an   indication   of   which   of   those   you   think   is   the   most   important,   and   which   way   you   think   the   meat   of   the   case   is   gonna   be,   what   would   you   say?  
+**Candidate:** Um,   I   guess   the-   the   most   important   would   be   the   first-   first   part,   where   we   look   at   profits   to   understand   where   the   profits   come   from   with   the   revenues   and   the   costs,   uh,   and   see   how   the   division   is,   uh,   done.  
+**Interviewer:** And   do   you   have   any   view   on,   like,   what   might   be   happening   from   the   outside   in?  
+**Candidate:** Uh,   yeah.   Um,   so,   um,   I   would   think   that   considering   the   funding   has   been   going   down,   they've   possibly   had   to   reduce   the   number   of   events   that   they   can   organize,   because   they   don't   have,   uh,   the   money   to   organize   it,   which   would   also   result   in,   uh,   lesser,   um,   lesser   s-   sales   or   lesser   tickets.   And   that's   why   their   profit   would   also   go   down,   because   they   d-   just   don't   have   the   volume   for   it.   It   could   be   on   the   volume   side,   or   it   could   also   be   the   price   side,   because   they   have   such   less   funding   that   they   have   to,   um,   restructure   their   pricing   for   the   tickets,   and   that   could   also   be   a   cause   for,   um,   declining   profits.  
+**Interviewer:** Okay.   So   I'm   just   noting   this   down.   Um,   uh,   yeah.   Okay.   So   I-   I   suppose   that   could   make   sense,   but   then   they're   kind   of...   If-   if   they're   making   money,   why   would   the   events,   not   having   funding   for   the   events,   matter?   So   funding   for   the   events   goes   down.   Surely   if   they're   making   money,   they   can   source   funding   for   them,   right,   if   they're   profitable?  
+**Candidate:** Um,   so   when   you   say   funding,   we   essentially   mean   how   much   money   they   have   lying   around   to   be   able   to   organize   these   events,   or   do   I-  
+**Interviewer:** You   said   fun-   You   said   funding   was   going   down,   not   me,   so   I'm   just-   I'm   just,   uh,   latching   onto   that.   Just   trying   to   understand   what   you   mean.  
+**Candidate:** I'm   sorry?   Sorry,   could   you   repeat   that?  
+**Interviewer:** You   said   fund-   You   said   the   words   "Funding   is   going   down."   So   I'm   just   trying   to   understand   what   you   mean   by   that.  
+**Candidate:** Ah.   Um,   I,   sorry,   then   maybe   I   got   the   question   wrong.   So   I   thought   that   the   funding   has   been   growing   do-   uh,   has   been   going   down,   the   government   funding   has   been   going   down,   and   that's   why   they'd   like   to...   Uh,   they've   noticed   that   they'd   like   to   increase   their   profitability.  
+**Interviewer:** Oh.   No.   Okay.   So,   so   I   think   that   could   make   sense.   Let-   let's,   um,   let's   move   on   to   the   first   question   then.   So,   um,   whilst   entry   to,   um,   SARM   is   free,   tickets   are   sold   for   special   exhibitions.   One   senior   management   member   is   evaluating   the   possibility   of   changing   the   frequency   of   hosting   special   exhibitions   to   three   special   exhibitions   per   year,   each   one   lasting   15   weeks.   At   the   moment,   they   do   four   special   exhibitions   per   year,   each   lasting   for   up   to   11   weeks.   The   reason   is   that   two   weeks   are   required   to   change   display   items   between   exhibitions,   so,   you   know,   move   from   Egyptology   to,   um,   you   know,   uh,   Chinese,   uh,   Chinese   art,   whatever   it   might   be,   then   they   need   to   actually   literally   move   the   exhibitions.  
+**Candidate:** Uh-  
+**Interviewer:** Um,   yeah.   Go   on.   Sorry.  
+**Candidate:** Sorry,   I-   I   actually   didn't   get   all   the   numbers   in.   So   we...   Currently,   they   have,   uh,   three   special   exhibitions   that   they're   holding-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   and   they'd   like   to   change   that   to   four   special   exhibitions.  
+**Interviewer:** Yeah.  
+**Candidate:** Um,   each   lasting,   uh,   11   weeks,   with   a   two-day   gap   between   each   of   them.  
+**Interviewer:** Uh,   so   currently   it's   15   weeks?  
+**Candidate:** Currently   it's   15   weeks.  
+**Interviewer:** And   then-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   and   then   in   future   it's   going   to   be   11   weeks,   and   then   the-   the-   the   two   weeks   is...   You   can't,   you   know,   do   it   all   year   round,   because   you   need   to   actually   change   the   exhibition   space.   So   I'm-   I'm   gonna   give   you   a   bunch   of   data-  
+**Candidate:** Okay.  
+**Interviewer:** ...   um,   just   to   figure   out   if   you   think   that   switch   is   a   good   idea.   Yeah?  
+**Candidate:** Okay.  
+**Interviewer:** Okay.   So   there's   about   half   a   million   visitors   who   are   interested   to   see   each   special   exhibition.   The   first   and   last   week   of   each   special   exhibition   are   the   least   popular   times.   And   in   those   week,   each   of   those   weeks   attracts   5%   of   interested   visitors.  
+**Candidate:** Sorry,   there's   the...   I-   I   didn't   catch   that.  
+**Interviewer:** Go   a-  
+**Candidate:** So   there's   a   half   a   million,   um,   um-  
+**Interviewer:** Visitors.  
+**Candidate:** ...   visitors.  
+**Interviewer:** The   first   and   last   week   of   each   special   exhibition   are   the   least   popular   times.  
+**Candidate:** Okay.  
+**Interviewer:** Each   only   attracting   5%   of   interested   visitors.  
+**Candidate:** Okay.  
+**Interviewer:** The   remaining   visitors'   choice   of   visit   timing   is   split   evenly   across   other   weeks.  
+**Candidate:** Okay.  
+**Interviewer:** The   maximum   capacity   of   the   exhibition   space   per   week   is   40,000.   And   tickets   to   special   exhibitions   sell   for   $10.00.   So   we're   looking   at   the   profitability   of   that.   Is   there...   Do   you   have   what   you   need?  
+**Candidate:** I   have,   uh,   one   half   of   it,   at   least.   Uh-  
+**Interviewer:** Good.  
+**Candidate:** ...   um,   okay.   So   just-  
+**Interviewer:** What   else   do   you   need?  
+**Candidate:** So   I...   Sorry?  
+**Interviewer:** What   else   do   you   need   from   me?  
+**Candidate:** Um,   let   me   just   take   a   look   at   all   the   data   here.   So   that's   40K   per   week   is   the   maximum   capacity.   Do   we   have   anything   on   the   cost   side?  
+**Interviewer:** Yeah.   What   kind   of   costs   would   you   expect   for,   um,   uh,   for-   for   an   exhibition?   What   would   be   the   costs?  
+**Candidate:** Um,   so   I   would-   I   would   think   that   the   cost   that   would   occur   would   be,   um,   hiring   the   artist-That   could   be   something   that   we   have   to   take   into   account,   so   I'm   guessing   these   are   exhibitions   from,   uh,   that   are   outsourced.   Uh,   they   could   be   costs   which,   uh,   which   would   be   in   the   marketing   side   if,   uh,   Sam   is   going   to   also,   um,   be   part   of   the   marketing,   um,   of   the   exhibition,   and   there   could   be   costs   that   it   involves   in   the   sense   of,   um,   uh,   how   do   you   say   that?   Um-  
+**Interviewer:** Uh-  
+**Candidate:** The,   um,   the   organization   of   the   exhibition,   so   the...   You   mentioned   that   there's   gonna   be   two   weeks   of   delay,   uh,   between   the   two   exhibitions,   so   that   could   mean   that   there   ha-   ha-   need   to   be   people   who   are   going   to   change   exhibition   things   from   one   to   the   other.   So   there   could   be   costs   that   are   incur-   in   terms   of   the   labor   and   the,   um,   things.   Wow,   I   have   no   words   right   now,   but   the,   um,   the   material   costs.  
+**Interviewer:** What   do   you   mean   by   material   costs?  
+**Candidate:** Um,   material   costs   in   the   sense   that   if   there's   an   exhibition   that   requires,   say,   a   red   carpet,   versus   an   exhibition   that   requires   a   yellow   carpet,   so   there   could   be,   uh,   materials   that   would   be   needed   for,   uh,   different   exhibitions   that   could   be   also   something   that   we'd   have   to   take   into   account.  
+**Interviewer:** Yeah.   Just   writing   some   notes.   Great.   Okay.   So   let's   say   that   we   just   consider   fixed   costs,   we   ignore   variable   costs,   and   there's   $3   million-  
+**Candidate:** Okay.  
+**Interviewer:** ...   to   stage   each,   uh,   exhibition.  
+**Candidate:** Uh,   three   million   for   each   exhibition.  
+**Interviewer:** Exactly.  
+**Candidate:** And   we're   not   taking   into   account   any   of   the   variable   costs,   right?  
+**Interviewer:** Exactly.  
+**Candidate:** Okay,   perfect.   Um,   all   right.   So,   what   I'd   like   to   do   first,   maybe   I   could   just   talk   to   you   about   it   before   I   start.  
+**Interviewer:** Sure.  
+**Candidate:** Uh,   we   know   the   price   of   the   tickets.   Um,   we   have   maximum   capacity   of   40K   per   week.   Okay.   We   have   half   a   million   visitors,   that's   for   the   entire   duration   of   the   exhibition.   Is   that   correct?  
+**Interviewer:** Half   a   million   is   the   amount   that   are   interested   to   see   the   exhibition.   So,   it's   like   your,   um,   abetting   your   TAM,   your   total   addressable   market,   almost.  
+**Candidate:** Okay.  
+**Interviewer:** If-   if   there   is   space,   you   can   say   that   they   would...   That   that   many   people...   If-   if   the,   if   the   exhib-   exhibition   space   was   infinitely   large,   that   many   visitors   would   attend.  
+**Candidate:** Okay.  
+**Interviewer:** Right.  
+**Candidate:** That's   good   to   know.   Um,   so   what   I'd   like   to   do   is,   uh,   just   compare   the   current   situation   versus-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   the   future   situation,   which   would   be   three,   uh,   special   exhibitions   versus   four   special   exhibitions.   Uh,   they're   both   going   to   last   for   different,   uh,   time   durations,   so   we'll   take   that   into   account   as   well.   Um,   and   I'd   like   to   calculate   the   amou-   the   revenue   that   we   get   from   these   two,   um,   and   then   see   how   they   compare   to,   uh,   the   costs   that   we   would   be   incurring.  
+**Interviewer:** Okay.   Go   for   it.  
+**Candidate:** Okay.   So,   so   let's...   We   first   look   at   the   chart.   Okay,   I'm   just   gonna   take   a   moment   to   write   things   down   and   then   once   I   have   them,   I   could   talk   to   you   about   it   just   to   see   if   I   got   everything   while   I'm   doing   the   calculations.  
+**Interviewer:** Sure,   take   your   time.   Sure,   take   your   time.  
+**Candidate:** So,   what-   what   I   first   want   to   do   is   calculate   the   number   of   people   that   would,   that   are   coming   now,   uh,   uh,   for   these   special   exhibitions.   Uh,   so   we   have...   Each   exhibition   lasts   for   15   weeks   and   there   are   three   of   them,   so   that's   about   45   weeks   of   on   days   of   exhibition.   Um,   and   we   have   a   total   capacity   of   40K   per   week.   Um,   if   it   was   a   case   of   each   week   they   have   the   full,   it's,   uh,   full   at   maximum   capacity,   or   it's   at   maximum   capacity   would   be   40K   to   45.   Uh,   but   we   know   that   the   first   and   the   last   week,   uh,   get   only   5%   of,   uh,   visitors.   Uh,   so   I   would   also   take   that   into   account.   Um-  
+**Interviewer:** So   how-   how   many   weeks   would   get   five   visitors   in,   in   that   future   state?   Uh,   would   get   5%-  
+**Candidate:** Sorry?  
+**Interviewer:** How   many-  
+**Candidate:** Yeah.  
+**Interviewer:** How   many   weeks   then   in   total   would   get   5%   visitors?  
+**Candidate:** Um,   so   that's...   There   will   be   six   weeks   that   would   have   5%,   uh,   visitors   eventually.  
+**Interviewer:** Okay.  
+**Candidate:** Uh,   and   that...   From   that,   it's   39   weeks   that   gets   hopefully   the   100%   visitors.   Um,   so   that   would   mean...   So   for   six   weeks   we   have   5%   of,   um,   40K.  
+**Interviewer:** 5%   of   what,   sorry?  
+**Candidate:** Uh,   5%   of   40K.  
+**Interviewer:** What's   40K?  
+**Candidate:** Uh,   that's   four-   40K   is   the   total   capacity,   uh...   One   second.   No,   maybe   I   shouldn't   take   the   maximum   capacity   and   I   should   take   the   number   of   people   that's   interested.   Um,   yeah,   that   makes   sense.And   so   that's   5%   of   that   is   divided   by...   That's   25K   of,   um,   for   six   weeks   which   is...   Yeah,   I'm...   Yeah.   I   am,   I'm   slightly   confused   by   that.   Um,   and   then   we   have   100%   of   0.5   million   which   is   100.5   mil.   And   then,   uh,   what   I   would   do   is,   uh,   multiply   the   total   number   of,   uh,   interested   visitors   with   the   ticket   price,   um,   to   get   the   total   revenue   that   we   get   for   this   year.  
+**Interviewer:** Okay,   so,   so   let's   take   a   step   back   a   second.   So   we've   got   15   weeks,   y-   you're   close,   but   I   think   you're   stumbling   on   a   couple   of   points   here,   right?   So   let's   start   with   the,   with   the   future   because   that's   where   you   started,   right?   Let's   start   with   one   exhibition.   You've   got   15   weeks,   the   first   and   the   last   week   it's   5%   multiplied   by   how   many   interested   visitors?  
+**Candidate:** 0.5.  
+**Interviewer:** 500,000.   Great,   okay.   So   5%   times   500,000   is   what?  
+**Candidate:** Uh,   zer-   uh,   25K.  
+**Interviewer:** Okay.  
+**Candidate:** 25,000,   yeah.  
+**Interviewer:** And   then   times   two?  
+**Candidate:** That's   50K.   (laughs)  
+**Interviewer:** Right,   okay.   So   you've   got   50K   to   start   off   with   and   for   the   remaining   13   weeks,   yeah?  
+**Candidate:** Mm-hmm.  
+**Interviewer:** You're   spreading   what?  
+**Candidate:** Uh,   that's,   uh,   the   full   capa-   uh,   that's   100%   of   500K.  
+**Interviewer:** What   is   100%?  
+**Candidate:** (laughs)   So   it's   500K.  
+**Interviewer:** Yeah,   but   is   it   100%   of   the   500K?   Don't   you   have   to   take   some   out?  
+**Candidate:** Um...   Uh,   I,   okay,   so   that's,   that's   just   to   keep   the   maximum   capacity   in   place   that   would   be   40K.  
+**Interviewer:** So   we,   so   we   have,   we   have   to   do   that   as   well,   right?   But   we,   but   we've   already   got   50K,   haven't   we?  
+**Candidate:** Yes.  
+**Interviewer:** For   the   first   and   last   week.   So   I...   instead   of   500,000   it's   gonna   be   450,000,   right?  
+**Candidate:** Yes.  
+**Interviewer:** And   then   how   many   days   are   left?  
+**Candidate:** Um-  
+**Interviewer:** Sorry,   weeks,   excuse   me,   are   left.  
+**Candidate:** Uh,   whoa,   I'm   so   confused   right   now.   So   we   have   two   weeks   that   we've   taken   into   account-  
+**Interviewer:** Yeah,   two   weeks   you've   covered,   yeah.  
+**Candidate:** ...   and   then   the,   yeah,   and   then   the   rest   is,   uh,   the   less   number   of   people   is   450K?  
+**Interviewer:** Mm-hmm.  
+**Candidate:** That's   for   the   13   weeks.  
+**Interviewer:** Uh-huh.  
+**Candidate:** Um,   what,   what   am   I   missing   here?  
+**Interviewer:** No,   so   y-   you're   on   the   right   track.   So   then   you   spread   the   450   across   those   13   weeks,   right?  
+**Candidate:** Exactly.  
+**Interviewer:** That,   that   gives   you,   that   gives   you   how   many   would   attend   if,   if   the   capacity   was   infinite,   correct?  
+**Candidate:** That,   yeah,   that   would   be   50K   per   week   then,   but   we,   we   have   a   capacity   of   40K   only.  
+**Interviewer:** Right,   so   450   divided   by   13   is   what?  
+**Candidate:** Is   five...   Um,   whoa,   65.   Uh,   sorry,   my   bad.  
+**Interviewer:** Take   your   time.  
+**Candidate:** No.  
+**Interviewer:** Take   your   time.  
+**Candidate:** No,   my   bad.   Uh,   that's   about   30...   let   me   see   how   much   that   is.   Around   35   I   believe.  
+**Interviewer:** Okay,   that'll   do.   So   does   that   mean   everyone   can   attend   or   does   that   mean   we're   lim-   we're,   we're   restricted   in   capacity   terms?  
+**Candidate:** I   think   everybody   can   at   the...   if   it's   35   then   everybody   can   attend   with   5K   to   spare.   Uh,   5K   seats   per   week   to   spare.  
+**Interviewer:** Okay.   Okay,   cool.   So   what   do   we   need   to   do   then   to   calculate   the   revenue   for   all   three   exhibitions   at   th-   uh,   that   year   for,   for   the   new   model?  
+**Candidate:** Um,   so   this   is   the...   15   weeks   is   the   old   model,   right?  
+**Interviewer:** Uh...  
+**Candidate:** 15   weeks   is   the   o-  
+**Interviewer:** No,   15   weeks   is,   15   weeks   is   the   new   model.   But   it   doesn't   matter.   I   mean,   we'll,   we'll   just   calculate   the   difference.   15   weeks,   it   is   in   the   new   model.   If   I   mispoke,   I   apologize.  
+**Candidate:** Uh,   so   15,   if   15   weeks   is   the   new   model   then   15   multiplied   by   4   is   60   weeks,   which   is   more   than   one   year.  
+**Interviewer:** No,   no,   because   it's   three,   three   exhibitions   per   year   each   lasting   15   weeks   or   four   exhibitions   per   year   each   lasting   11   weeks.  
+**Candidate:** Oh,   okay,   so   you   had   two,   two   options?  
+**Interviewer:** Yeah.  
+**Candidate:** Okay.  
+**Interviewer:** But   we   know   everyone   can   attend,   right,   with   the   15-week   model?  
+**Candidate:** Exactly.  
+**Interviewer:** So   how   do   we   get   to   the   revenue?  
+**Candidate:** Um,   then   we   just   calculate   it   by   the   total   number   of   people   that   can   attend,   uh,   multiplied   by   the   price   of   each...  
+**Interviewer:** Okay,   yeah,   which   is?  
+**Candidate:** That's   $10   per   ticket.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** And...Okay.   Give   me,   give   me...   Sorry.   Take   a   step   back   because   now-  
+**Candidate:** Yeah.  
+**Candidate:** ...   I   think   I'm,   I'm   quite   confused.   Um,   so   we're   looking   at   15   weeks   for   now,   which   has   three   exhibitions,   uh,   and   now   we   saw   that,   uh,   there   will   be   six   weeks   where   there   would   be...   Or,   okay.   Um,   yeah.   (pauses)   No,   that's   not   the   six   weeks.   If   you   take   one   exhibition   into   account,   that's,   that   would   have   50K   plus,   uh,   35...   450K.   That   would   be   all   the   people   that   could   attend,   um,   the   exhibition-  
+**Candidate:** Yeah.  
+**Candidate:** ...   if   we've   got   15-week   possibility,   and   that   would   mean   that   for   the   total   revenue   it   would   be   the   number   of   exhibitions   that   we   have,   which   is   three-  
+**Candidate:** Okay.  
+**Candidate:** ...   multiplied   by   .5   and   that   multiplied   by   the   price.   Uh,   yeah.   Interested   visitors,   so   let's   multiply   by   the   price.   That's   $15   million.  
+**Candidate:** Mm-hmm.  
+**Candidate:** Um,   that   would   be   for   the   three-week   exhibition.   And   I   could   do   the   same   thing   possibly   faster   this   one,   this   time.   Or   the-  
+**Candidate:** Don't   go   for   speed,   don't   go   for   speed.   Just   take   your   time,   okay?  
+**Candidate:** ...   or   the   11   weeks,   um,   or   for   special   exhibitions.  
+**Candidate:** Yeah.   Now   you've   got   to   take   me   through   it.   If   you   don't   take   me   through   it,   I   can't   help   you   out.  
+**Candidate:** Yeah.   So   I'm   just   doing   the   exact   same   calculations,   uh,   which   would   be   50,   uh,   for   starting   with   one   exhibition-  
+**Candidate:** Mm-hmm.  
+**Candidate:** ...   the   first   exhibition,   that   would   last   for   11   weeks,   that   would   mean   out   of   that   two   weeks   is   going   to   be,   uh,   we'll   have   50K   as   it's,   um,   total   people   attending,   which   is   the   same   as   we   calculated   before.   And   then   the   nine   weeks   that   we   have   would   have,   um...  
+**Candidate:** It's   450   divided   by   nine,   right?  
+**Candidate:** I   do   not   have   the   numbers   correctly   here,   I'm   sorry.  
+**Candidate:** No,   no,   wait.   No,   no,   no.  
+**Candidate:** If-  
+**Candidate:** You   do   have   the   numbers.   Look,   just   don't   worry,   okay?  
+**Candidate:** Yeah,   so   that's-  
+**Candidate:** This   is   exactly   the   environment   enviro-   this   is,   this   is   the   environment   where   you   wanna   have   issues,   right?   'Cause   I'm   gonna   help   you   through   it-  
+**Candidate:** Yeah.  
+**Candidate:** ...   and   we're   gonna   fix   it.   And   we're   gonna-  
+**Candidate:** Yeah.  
+**Candidate:** ...   give   you   the   tools,   okay?  
+**Candidate:** So   that's...   Yeah.   So   that's   450   divided   by   nine,   which   is   50K,   but   we   don't   have   50K   space.  
+**Candidate:** Okay.  
+**Candidate:** Yeah.   So   we   have   to   keep   the   10K   aside   for   each   week   and   that's   40K   that   we   can   use   at   maximum   capacity   for   the   nine   weeks.  
+**Candidate:** Okay,   great.   So   nine,   so   the,   so   the   40K.   So   how   many   attendees   would   you   have   then?  
+**Candidate:** That   would   be   360.   Yeah,   360K,   um,   for   the   nine   weeks.  
+**Candidate:** Plus?  
+**Candidate:** Plus   the   15.  
+**Candidate:** Okay   then...   Great.  
+**Candidate:** Which   is,   uh,   410K   for   each   exhibition.  
+**Candidate:** Yep.  
+**Candidate:** And   if   we   look   at   the   total   revenue   for   the   second   option,   that   would   be   410   by   four,   multiplied   by   10,   which   is   the   price.   That's   $16.4   million.  
+**Candidate:** Wow.   Great,   okay.   And   then   the   costs?  
+**Candidate:** Yes.   Um,   as   for   the   costs,   we   have...   So,   uh,   just,   just   to   clarify,   the   three   million   is   for   each   exhibition,   right?  
+**Candidate:** Mm-hmm.  
+**Candidate:** Uh-  
+**Candidate:** Mm-h-  
+**Candidate:** And   there's   no   cost   for   the   two   weeks   that   are   going   to   be   extra?  
+**Candidate:** Uh,   no,   you   can   just   look,   just   look   at   the   per   exhibition   costs.   Don't   worry   about   the   non-  
+**Candidate:** Okay.  
+**Candidate:** ...   uh,   exhibition   costs.  
+**Candidate:** So   for   the,   the   three   special   exhibition   is-  
+**Candidate:** Yeah.  
+**Candidate:** ...   three   multiplied   by   three   million   because   that's   the   price   for   each   exhibition,   $3   million.   And   for   the   four   exhibition   is,   uh,   400,   three,   which   is   $12   million.   Um,   and   since   we   have   the,   the   fixed   cost   for   the   two   options,   we   could   also   then   just   calculate   the   profit,   um-  
+**Candidate:** Mm-hmm.  
+**Candidate:** ...   which   would   be   revenue   minus   cost.   Let's   see.   Y   equals   12,000,000   minus   4,400,000.   So   that's   6,400,000.   Yeah.   So   it   seems   like   the   three   special   exhibitions   that   last   15   weeks,   um,   is   more   profitable   with   $6   million   compared   to   $4.4   million   for   the   four   week,   uh,   four   special   exhibition   option.  
+**Candidate:** Yeah.  
+**Candidate:** Um-
+**Interviewer:** Sorry,   can   you   give   me   those   numbers   again,   just   to   make   sure?  
+**Candidate:** Yeah.   So   that's,   uh,   for   the   three   special   exhibitions   it's,   uh,   $6   million.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** That's   15   minus   9.  
+**Interviewer:** Yeah.  
+**Candidate:** And   for   the   four   special   exhibition,   that's   16.4   minus   12   is   4.4.  
+**Interviewer:** Excellent.   Okay,   great.   Um,   okay.   So   look,   I'm   gonna   show   you   a   graph,   uh,   just   conscious   of   time.   Uh,   this...   I   just   want   you   to   think   about   what   the   conclusions   would   be   on   the   types   of   exhibitions   that   you   would   be   putting   on,   um,   and   anything   else   that   kind   of   might   influence   the   strategy   for,   for   growth   with   the   museum,   uh,   at   a   higher   level.   So,   we   don't   need   any   specific   analysis,   more   like   a,   a...   just   an   indication.   Can   you   see   that   chart?  
+**Candidate:** Yeah.   Okay.   Uh,   I'm   just   gonna   take   a   few   seconds   to   look   at   the   graph.   Okay.   So   we   wanted   to...   We   wanna   look   at   what,   what   are   the   possibilities   for   growth   in   terms   of   the   visitors   that   we   get.   Um,   and   from   this   graph,   we   see   that   it...   ex-Asia,   I   would,   I   would   think   that   those   are   what   you   would   call   internationals.   So   there   are   more   international   visitors   that   have   been   coming   to,   uh,   SAM,   um,   compared   to   the   domestic   visitors   or   people   who   live   in   Singapore   or   Asians   who   are,   um,   there.   Um,   are   these   number   in,   uh,   millions   or-  
+**Interviewer:** I   don't   know.  
+**Candidate:** ...   doesn't   matter?   Okay,   doesn't   matter.   Uh,   yeah.   So   it   seems   like,   uh,   mostly   the   domestic   visitors   and   the   Asian   visitors   is   they   seem   to   be,   um,   the   same   over   the   past   three   years,   whereas   there   are   more   international   visitors   that   SAM   is   getting,   um,   because   we   see   like   an   almost   exponential   rise   to,   uh,   the   total   number   of   visitors   that   we   have.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Um,   so   what   we   can   do   is   use   this   information   to   figure   out   who   actually   our   customers   are,   um,   considering   it   seems   like   international   visitors   are   much   more   likely   to   come   to   SAM   compared   to   the   d-   domestic   one.   So   if   we   actually   organize   events   which   would,   uh,   entice   more   ex-Asians,   um,   that   could   be   something   that   we   could   look   at.  
+**Interviewer:** Mm-hmm.   Is   there   anything   you   can   think   of   in   terms   of   like   how   the   museum   is...   you   know,   amenities   or   how   it's   structured   or   anything   that   would   appeal   to   that?   Any   specific   examples?  
+**Candidate:** Um,   so   the   question   is   what,   what   kind   of   amenities   there   are   in   SAM   that's   causing   more   people   from   outside   to   enter-  
+**Interviewer:** No,   no.   So,   so   if   you   know   more   ex-Asia   visitors   are   coming   next   year,   is   there   anything   that   you   can   think   of   that   you   would   do   to   either   the   exhibitions   or   to   the   amenities   or   anything   else   specifically,   just   one   example,   to   appeal   to   them?  
+**Candidate:** Yeah,   exactly.   So,   um,   cons-   considering   ex-Asians   are   people   who   don't   live   in   Asia,   right?   They're   all   internationals.  
+**Interviewer:** Yeah,   that's   okay.  
+**Candidate:** Um,   yeah,   I   would   think   that   would...   it   would   be   nice   if,   if   we   know   that   they're   going   to   be   international,   maybe   we   could   organize   events   that   are   catered   more   to   internationals.   So   for   example,   have   a   day   of   UK   or   a   day   of   Europe   and   things   like   that   where   they   could   come,   come   by   to   see,   um,   their   things,   uh,   which   could   be   nice.   Or,   um,   depending   on   what   the,   what   the   internationals   are   actually   looking   for,   we   could,   uh,   restructure,   uh,   the   museum   in   a   way   that   could   be   more   enticing   to   them.   And,   yeah,   it,   it   also   really   depends   on,   um...   yeah,   I,   that's   what   I   can   think   of   for   now.  
+**Interviewer:** Okay.   Um,   so   why   don't   you   take   a   second   and,   uh,   synthesize   the   case,   and   then   we   can   have   a   chat.  
+**Candidate:** Yeah.   I'm   just   gonna   take   one   second   to   get   everything   in   place.   Yeah.   So,   uh,   the   question   for   today   was,   uh,   to   figure   out,   um,   how   to   grow   profitability   for   Singaporean   Art   Museum.   And   my   recommendation   to   our   client   would   be   to   organize   more   commercial   activities,   specifically   these   special   exhibitions,   uh,   that   could   be   catered   to   an,   an,   an   international   audience.   Uh,   why...   the   reason   I   say   that   is   because   we've   seen   the,   um,   uh,   with   three   exhibition...   three   special   exhibitions   lasting   15   weeks   would   result   in   a   profit   of   $6   million.   And   we   could   have   also   the   possibility   of   using   the   extra   five   weeks   for   other   purposes,   like   leasing   out   to   increase,   um,   the   revenue   that   we   get   from   the   space   that   we   have.   As   a   next   step,   I'd   like   to,   um,   propose   looking   at   what   the   customers   are   actually   looking   at,   so   essentially   the   visitors,   and   how   to,   um,   structure   the,   the   portfolio   in   a   way   that   we   could   make   it   more   enticing   for   other,   um,   the   domestic   clients   as   well   as   international   clients.   And   that's-  
+**Interviewer:** Great.  
+**Candidate:** ...   about   it.  
+**Interviewer:** How   are   you   feeling?  
+**Candidate:** Not   very   good   (laughs) .  
+**Interviewer:** Okay.   Tell   me   more.  
+**Candidate:** Um,   it   was,   um...   yeah.   I,   I   don't   know   what   happened   with   the   structure.   Um,   I   thought   it,   it   was   a   ra-   very   simple   structure   that   I   presented   and   then   turns   out   that   it   wasn't   even   close   to   what,   uh,   was   needed   for   the   case   as   much,   uh,   because   the,   the   case   had   a   very   specific   goal.   They   wanted   to...   we   wanted   to   calculate   three   versus   four.   So...   but   that   I   didn't   even   think   about.   Like,   there   was   no   information   from   my   side   for   that   part.   There   was   a   lot   of   confusion   in   the   beginning   for,   uh,   calculating   the,   the   revenue.
+**Interviewer:** I,   I,   I   understand   why   but   I   also   don't   understand   why.   (laughs)   Uh,   yeah.   Okay.   Yeah.   Look,   so   no   one   talked   ...   Oh,   let   me   entirely   finish,   sorry.   No,   I'm,   I'm,   I'm   done.   Tell   me.   Please   tell   me.   Okay.   Um,   look,   so,   so,   um,   a,   a   couple   of   things.   Uh,   firstly,   directly   relating   to   your   point,   I   wouldn't   necessarily   focus   on   looking   for   a   connection   particularly   for,   with   an   interviewer-led   case,   between   the   framework   that   you've   done   and   the   eventual   analysis   that   you   do.   Um,   the   case   is   a   tool,   the   case   interview   is   a   tool   for   testing   how   you   think   about   business,   and   for   you   to   demonstrate   how   you   think   about   business.   So,   what   you're   really   doing   with   the   structure   is   demonstrating   that   you   can   be   MECE,   demonstrating,   uh,   that   you   can,   um,   lay   out   a   problem,   and   also,   which   we'll   go   into,   demonstrating   a   hypothesis-driven   approach.   It's   very   reflective   of   what   the   job   is,   right?   So,   on   the   job,   you   know,   I   did   a   lot   of   due   diligences.   My   team   had   to   come   to   me   on   day   one   with   a   list   of,   you   know,   what   they   thought   the   key   drivers   were   and   what   they   thought   the   answer   was,   and   what   the   plan   was   for   testing   it.   And   so,   that's   really   what   you're   simulating.   What   analysis   you   actually   do,   it   kind   of   skips   a   few   steps   deliberately   because   it's   trying   to   test   other   things.   So,   um,   at   a   high   level   though,   taking   a   step   back,   I   think   this   was   a,   a   very   good   beginning,   and   I   mean   that.   And   I,   and   I   don't   say   that   lightly.   And   a,   and   a   strong   synthesis.   Um,   and   I   think   I   would've   passed   you   even   though   the   maths   went   wrong   because   you   gave   the   impression   for   the   first   round,   'cause   you   gave   the   impression   that   the   maths   was   wrong   because   of   nerves   not   because   of   anything   else.   I,   I   didn't   get   the   impression   that   you   couldn't   do   it.   But   had   you   done   it   in   a   partner   interview,   it   kind   of   is   what   it   is.   It's   difficult   to,   um,   difficult   to   solve   them.   Starting   at   the   beginning   chronologically,   I   think   that   you   asked   the   right   amount   of   questions   up   front.   The   ...   Often   people   don't   ask   enough   questions   up   front.   Um,   key   with   the   questions   up   front   is   to   make   sure   you   understand   how   the   business   works,   particularly   in   a   partner   interview.   They   deliberately   pick   something   that's   like,   their   most   interesting   case.   Like,   my   case   used   to   be   a   bottle   capping   company   I   used,   uh,   that   I   worked   with,   that   I   did   diligence   on.   Yeah.   The   safety   of   bottle   capping   in   India,   completely   random.   You   don't   know   how   that   business   works.   You   have   to   ask   a   bunch   of   questions.   And   you   asked   enough   questions   to   know   kind   of   how   the   business   works,   and   that   was   great.   There   were   a   couple   of   points   that   I   always   tell   people,   all   of   which   you   hit,   which   is,   always   ask   about   the   timeline,   always   ask   what   success   looks   like,   um,   and,   um,   clarify   any   kind   of   definitional   points.   So,   commercial   activity   was   the   thing   that   was   gonna   trip   you   up   potentially,   and   you,   and   you   made   sure   you   clarified   that,   which   was   great.   Um,   on   the   framework,   I   think   the   way   I   would   think   about   this,   you,   you   kind   of   did   this   instinctively,   but   the   way   I   think   about   this   profitability   is   you   have   like,   a   diagnostic   phase,   which   is   your   standard   profitability   framework,   and   then   your   execution   phase,   which   is   like,   um,   your,   your,   um,   uh,   uh,   you   know,   can   we   do   it   phase.   I   would   express   it   concretely   as,   we're   gonna   figure   out   what   the   problem   is   and   what   the   potential   solutions   are,   and   then   we're   gonna   figure   out   if   we   can   actually   solve   it.   You   know,   diagnosis   and   execution,   which   again,   is   what   you   did   and   I   think   is,   is   best   practice.   Um,   to   take   it   over   the   edge,   hypothesis,   hypothesis,   hypothesis.   Right?   Now,   you   do   not,   you   should   not   be   afraid   to   give   your   opinion   based   on   limited   data.   Uh,   d-   dealing   with   ambiguity   is   a   key   skill   set   for   an   MBB   consultant.   You   just   need   to   caveat   it   by   saying,   "Look,   I,   I'm   not,   I   don't   know,   but   based   on   what   I   think,"   da,   da,   da,   da,   da.   And   there's   multiple   ways   to   demonstrate   a   hypothesis-driven   approach.   Right?   The   first   and   most   obvious   is   saying,   "Look,   it   sounds   like   this   is   to   do   with   commercial   activity   decombining.   My   hypothesis   is   that   it's   gonna   be   revenue-driven.   And   given   what   I   know   about   the   world   economy   at   the   moment   in   Singapore,   um,   you   know,   it   seems   like   it   could   fail.   We're   bust   in   that   part   of   the   world,   so   it's   probably   something   to   do   with,   um,   how   they're   actually   executing   it,   rather   than   actual   underlying   demand.   But   I,   I'd   have   to   check   that   out."   That's   helpful   just   to   see,   you   know,   just   to   demonstrate   that   you're   comfortable   with   ambiguity,   a-   and   that   you   are   able   to   use   incomplete   data   t-   to,   to   form   an   initial   hypothesis.   The   other   way   to   do   it   is,   any   time   you   get   a   list   of   any   kind,   always   rank   it   according   to   what   you   think   the   most   important   or   the   least   important   is.   So,   when   you   were   going   through   cost   is   a   great   example.   You   know,   you   did,   you   did   the   thing   which   a   lot   of   people   don't   do,   which   is   lo-   like   saying,   "Okay,   this   type   of   business   probably   has   labor   costs,   rent."   Um,   you   know,   making   it   clear   that   you   understand   a   museum   business   is   gonna   have   a   completely   different   cost   base   to   like,   a   chemical   business.   That's   great,   you   did   that.   To   take   it   to   the   next   level,   give   us   a   rank.   So   say,   you   know,   for   a   museum,   I'm   guessing   they   got   a   lot   of   old   stuff,   right?   And   it's   gonna   take   a   lot   of   money   to   actually   look   after   these   things.   Um,   so   I-   I'd   imagine   literally,   you   know,   curating   activity,   storage,   um,   polishing,   whatever   it   might   be,   all   of   that   stuff   is   a   big   cost   for   them,   and   probably   the   key   controllable   cost,   um,   as   well   as   rent,   is   probably   significant   to   them.   Massive   spaces.   I'm   making   it   up   and   I   don't   have   the   data,   but   you   see   how   it   takes   it   to   the   next   level   of   demonstrating   hypotheses?   Yeah.   Again,   you   would've   passed   with   what   you   had,   but   that's   just   taking   it   to   the   next   level.   Um,   hmm.   Okay.   You're,   you   need   to   train   yourself   over   the   next   few   weeks   on   how   you   deal   with   going   outside   of   your   comfort   zone.   Okay?   So   when   you're   in   your   comfort   zone,   you're   very   strong.   As   soon   as   you   put   a   toe   out   of   the   boat,   you   know,   and-   and   dip   the   toe   into   the   water   of   being   uncomfortable,   it's   when   it   s-   when   you   start   to   waver.   Now,   a   nice   interviewer   will   help   you.   Most   interviewers,   they're   looking   for   a   reason   at   that   point   to   reject   you,   to   be   quite   honest.   You   know,   they're   not   going   to,   they're   not,   they're   not-...   like   tangibly   it's   a   competitive   job,   right?   So   they're   kind   of   looking   for   things   which   might   be   difficult   for   you.   And   so,   like   I   did,   I   saw   you   were   out   of   your   comfort   zone.   I   a-   uh,   when   we   were   talking   about   that   funding   thing   at   the   beginning,   I   asked   you   a   couple   of   follow-up   questions   just   to   see   how   you'd   react,   right?   That's   the   kind   of   thing   I   would   practice   with   your   case   mates,   is   say   to   them,   "Look,   if   I   make   any   kind   of,   saying,   if   I   misspeak   at   all,   or   if   I   make   any   sort   of   mistake,   you   know,   s-   jump   on   it,   right?   And   really   test   me   on   it."  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Because   you   need   to   practice   those   scenarios.   That   leads   me   to   the   maths.   Now   with   the   maths,   I   think   that   what   you've   got   to   understand   is   your   brain   is   not   gonna   be   working   at   100%   effectiveness   in   a,   in   a   case   interview,   okay?  
+**Candidate:** Mm-hmm.  
+**Interviewer:** In   a   best   case,   you've   got   80%   effectiveness.   Okay?   So   you've   gotta   create   stru-   you've   gotta   create   structures   and   create   processes   during   the   case   which   allow   you   to   give   yourself   a   break.   Okay?   So,   for   example,   um,   when   you're   talking   about,   uh,   um,   uh,   what's   a   good   example?   So   the,   the   maths   is   hard,   right?   So   when   you're   doing   the   maths,   you   need   to   lay   out   what   you're   doing   as   an   equation   almost,   with   a   bunch   of   variables   to   plug   in.   So   I'm   gonna   multiply   the   number   of,   uh,   uh-   so   I'm   g-   I'm   gonna   multiply   the,   uh,   the,   the   two   weeks   per   exhibition   multiplied   by   the,   the   500,000,   the   maximum   number.   You   don't   even   have   to   put   numbers   in.   You   can   just   say   multiply   by   the   mi-   the   maximum   number,   multiplied   by   number   X,   multiplied   by   number   Y.   Lay   it   down   on   one   half   of   the   page,   check   in   with   the   interviewer,   make   sure   that   you've   got   it   right.   Then,   as   soon   as   the   interviewer   and   you   are   happy   having   that   discussion,   you   can   then   execute   that   like   you   would   be   executing   a   model.   Right?   Split-  
+**Candidate:** Yep.  
+**Interviewer:** ...   what   you've   gotta   do   is   split   up   the   calculation   from,   um,   the   modeling   almost,   the,   the   kind   of   laying   out   the   equation   activity.   All   right?   Because   you're,   no   one   is   smart   enough   in   a   pressure   situation   to   do   both.   Yeah?  
+**Candidate:** Yeah.  
+**Interviewer:** And   I   would   give   that   80%   of   the   issues   you   were   having   were   down   to   that,   were   that   you   were   kind   of   cross-calculating   as   you   were   working   it   out   and   you   weren't   communicating   effectively.   Right?   Second   thing   I   think   you   should   do   is   make   sure   you   have   a   gut   check.   Okay?   So   at   a   high   level,   you   wanna   think   to   yourself,   what   is   this   gonna   be   approximately?   You   know?  
+**Candidate:** Yeah.  
+**Interviewer:** And,   and   always   use   easy   numbers.   The   third   thing   is   when   you're   laying   out   the   numbers   that   you're   gonna   multiply,   always   ask   to   round.  
+**Candidate:** S-   uh,   always?   Sorry,   I   missed   that.  
+**Interviewer:** Ask,   always   ask   to   round.  
+**Candidate:** Okay.   Yeah.  
+**Interviewer:** Yeah?  
+**Candidate:** Oh,   I   guess   in   this   one-  
+**Interviewer:** Even   if   they   might   say   no.  
+**Candidate:** ...   that   was,   that   was,   this,   th-   this   one   didn't   need   a   lot   of   rounding   off,   right?  
+**Interviewer:** No,   I'm   just   giving   you,   I,   I'm-  
+**Candidate:** Uh,   but,   yeah.  
+**Interviewer:** ...   I'm   assuming   we   have   one   session,   this   one   was   fine.   But   I'm   just   saying   always   best   practice,   always   ask   to   round,   even   if   they   say   no.   Okay?  
+**Candidate:** Okay.   Yeah.  
+**Interviewer:** Because   it's   not,   you're   not,   you're   not   demonstrating   anything   negative,   you're   demonstrating   that   you're   trying   to   make   it   more   practical.   All   right?  
+**Candidate:** Yeah.  
+**Interviewer:** Yeah?   I   like   to   hear   people   say   that,   because   that   means,   oh,   okay,   they're   thinking   about   this   practically.  
+**Candidate:** Yep.  
+**Interviewer:** Yeah?  
+**Candidate:** Makes   sense.  
+**Interviewer:** Um,   uh,   and   then   the   last   thing   is,   look   for   easy   numbers.   Okay?   So   if   you'd   started   with   the,   um,   11,   for   example.  
+**Candidate:** To   help?  
+**Interviewer:** The   11   weeks,   minus   2   is   9.   9   and   450   go   really   well   together.   Right?   Now,   if   you'd   laid   out   the   equation   first,   you'd   have   seen   that.  
+**Candidate:** Yeah.   True.  
+**Interviewer:** Whereas   what   you   did   is   just   multiplied   it   by   three   at   the   beginning,   right?   Which   makes   it   much   more-  
+**Candidate:** I   mean,   it   was   complicated.  
+**Interviewer:** ...   complicated   of   a...   Yeah.  
+**Candidate:** Yeah.  
+**Interviewer:** Becau-   because   you're   trying   to   do   both   at   the   same   time.  
+**Candidate:** Yeah.  
+**Interviewer:** Okay?   Um,   now,   on   the   chart...   Oh,   sorry.   And,   sorry,   uh,   and   when   you   get   to   the   end   of   calculation,   always   give   your   opinion.   Say,   "Okay,"   like,   like   I   said   at   the   beginning,   it's   always   about   the   ranking   and   what   you   think,   right?   What   your   perspective   is.   So   always   give   an   opinion   when   you   get   to   a   number   at   the   end.   So,   "Oh,   the   capacity   threshold   actually   didn't   make   that   much   of   a   difference.   The   higher   frequency   offsets   that."   That's   best   practice.   Final   point   I'll   make   is   talk   about   there's   no   back,   um,   which   means   I'm   running   out   of   time.   (laughs)   Um,   the,   um,   uh,   when,   with   the   chart,   you   missed   something   o-   so   with   the   chart,   focus   at   first   on   what   the   trend   is.  
+**Candidate:** Yeah.  
+**Interviewer:** You   started   with   what   the   visitors   were   flat.   Don't   worry   about   that.   Just   say,   "Look,   okay,   so   it's   all   I   needed   was   ex-Singapore,   ex-Asia   visitors   are   growing."   Second   thing   is,   look   for   text   below.  
+**Candidate:** Oh,   yeah.  
+**Interviewer:** The   text   below   said   includes   business   and   tourist   visitors.   Right?   You   might've   seen   that,   but   you   didn't   say   it.   If   you   say   that   out   loud,   that   gives   you   a   clue   to   the   next   question,   which   is,   "Oh,   okay,   maybe   we   can   do   conferences.   Maybe   we   can   do   stuff   with   these   business   visitors   that   are   growing."  
+**Candidate:** Yeah.  
+**Interviewer:** "That's   interesting.   Let's   look   into   that   a   little   bit."   Uh,   your   synthesis   was   great.   So   as   I   said,   I...   Sorry,   uh,   so   one   more   thing.   Don't   be   afraid   to   be   creative.   So   when   you,   when   someone   asks   you,   "Oh,   what   do   you   think?"   Give   ideas.   Don't   worry   about   it.   You   know,   this,   that's   your   time   to   kind   of   come   up   with   random   ideas   and   not   be,   don't   be   af-   in   case   well   at   that   point,   just   be   you   and   a   person   talking.   And   the   more   the   interview   can   be   you   and   a   person   talking   in   a   room,   the   better   it'll   be.   The   case   is   like   the   structure   around   that   that   helps   you,   right?   But   the   whole   thing   should   feel   like   a   conversation.   As   I've   said,   I   thought   that   the   beginning   was   great,   the   end   was   great.   I   would've   passed   you   for   a   first   round,   because   I   would've   taken   a   chance   on   you   that   you   would   improve   in   the   maths.   But   the   math   is   gonna   be   a   problem   if   you   don't,   you   know,   uh,   get   on   top   of   it,   um,   for   a   partner   interview.   So   you've   just   got   to   practice,   um,   that   and   in   particular,   but,   but   less   the   maths,   more   getting   outside   of   your   comfort   zone.  
+**Candidate:** Yeah.  
+**Interviewer:** That's   your   kind   of   what   you've   gotta   get   exposure   to-  
+**Candidate:** Okay.  
+**Interviewer:** ...   and   you've   gotta   find   case   partners   that   are   smarter   than   you   in   particular   areas.   So   if   you're   an   artsy,   you're,   you're   a   physicist,   find   someone   who   does   modern   languages   or   does   history   of   art   who's   super   bright.   You   know,   find,   find   people   that   are   complementary   to   your   skillset   as   case   partners,   um,   because   that'll   really   drive   it   in.  
+**Candidate:** Yeah.   Perfect.   Thank   you   very   much   for   your   feedback.   That's   very   useful.  
+**Interviewer:** No   worries.   Best   of   luck.   (instrumental music)

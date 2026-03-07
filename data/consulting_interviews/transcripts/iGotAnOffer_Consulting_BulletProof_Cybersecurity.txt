@@ -1,0 +1,292 @@
+Case: BulletProof Cybersecurity
+Case Type: Profitability
+Firm: McKinsey
+Channel: iGotAnOffer: Consulting
+URL: https://www.youtube.com/watch?v=XByqDlkpjoM
+============================================================
+
+**Interviewer:** Welcome   to   this   mock   consulting   case   with   Paul.   I'm   Jon.   I'm   an   ex-Bain   consultant   and   a   coach   on   I   Got   An   Offer.   Paul,   would   you   mind   introducing   yourself?  
+**Candidate:** Not   at   all,   Jon.   I'm   Paul.   I'm   ex-McKinsey,   I'm   ex-Accenture,   I'm   ex-Ashridge   Consulting,   part   of   Ashridge   Business   School,   and   I   now   work   for   Tallick   &   Company,   doing   on   the   whole   sustainability   based   consulting.  
+**Interviewer:** Great.   Thanks,   Paul.   Great.   So   let's,   let's   start   with   our,   our   case   today.   So   BulletProof   Co.   is   a   software   company   involved   in   security,   cybersecurity   products   located   in   the   US.   BulletProof's   revenues   grew   by   10%   from   2005   to   2006.   However,   their   profits   were   flat   from   2005   to   2006.   So   the   two   questions   that   our   client   has   for   us   are,   why   have   BulletProof's   profits   been   flat   and   how   can   they   increase   their   profits?  
+**Candidate:** Okay.   Um,   just   to   make   sure   I   fully   understand   our   client's   need,   how   about   I   play   back   to   you   what   I   heard   you   say,   um,   we   can   check   we're   on   the   same   page.   Yeah?  
+**Interviewer:** Perfect.  
+**Candidate:** So   our   client   is   BulletProof   Company.   It's   a   software   company,   um,   in   the   security   field   based   in   the   US.   Their   revenues   have   grown   10%   from   last   year   to   this   year.   However,   their   profits   have   been   flat   across   those   two   years.   And   the   questions   in   the   mind   of   our   client   right   now   are,   why   have   those   profits   been   flat   and   how   can   they   increase   them?   Does   that   sound   about   right?  
+**Interviewer:** Yeah.   That's   all   exactly   right.   My   only   thing   is   that   w-   let's   imagine,   I   think   this   case   is   set   in   2005,   so   let's   think   of   it   not   in   2024,   um,   as   in,   as   if   we   were   living   in   2005.  
+**Candidate:** Yes,   indeed.   I   just   avoided   using   those   words   (laughs) -  
+**Interviewer:** Yeah.  
+**Candidate:** ...   in   case   they   create   the   pitch.  
+**Interviewer:** Sure.  
+**Candidate:** So,   um,   so   given   that   understanding,   I've   got   a   few   questions   about   the   client's   objective.  
+**Interviewer:** Sure.  
+**Candidate:** And   a   few   clarifying   questions   about   the   business.   Is   now   the   right   time   to   ask   those   questions?  
+**Interviewer:** Yes,   please.  
+**Candidate:** Excellent.   Okay.   So   in   terms   of   the   objective,   what's   their   main   objective   here   and   when   do   they   want   it   delivered   by?  
+**Interviewer:** Yeah,   good   question.   Um,   it's   really   to   understand   what's   been   going   on   with   profit.   And   so   specifically   they'd   like   to   know,   like,   what   would   be   the   quantitative   impact.   How   much   could   they   increase   their   profit   by   if   they   pursued,   pursued-  
+**Candidate:** Understood.  
+**Interviewer:** ...   the   actions.   Um,   and   their   timeline   is   basically   as   soon   as   possible.   That's   why   they've   brought   in   the   likes   of   McKinsey.  
+**Candidate:** Got   it.   Um,   anything   else?   Anything   that   they   don't   want   to   happen?  
+**Interviewer:** Um,   no.   I,   I   don't   think   we,   we   have   much   further   information   on   that.  
+**Candidate:** Okay.   So   just   to   clarify,   um,   I'm   not   an   expert   in   security   software.   Can   you   say   a   thing   or   two   about   how   BulletProof   makes   money?  
+**Interviewer:** Yeah.   Yeah.   Good,   great   question.   Um,   so   let's   put   our   2005   hat   on.   So   back   in   the   old   days,   uh,   people   used   to   actually   pay   for   antivirus   software.   Um,   so   let's   imagine   that   the,   our   consumers   are   both,   or   our   customers   are   both   consumers   and   businesses.   So   we're   both   B2B   and   B2C,   and   we   sell   a   CD-ROM   antivirus   security   product.   Just   to   simplify   it.  
+**Candidate:** So   it's   a   product   rather   than   a   service.  
+**Interviewer:** Yes.   Correct.   Correct.  
+**Candidate:** Okay.   Understood.   Um,   and   who   do   they   sell   to   and   where?  
+**Interviewer:** Yeah.   So   let's   imagine   that   they   sell   in   electronic   shops   to   consumers.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um,   and   then   they   also   have,   let's   imagine   they   have   sales   reps   for,   for   the   B2B   side   who   are   kind   of   s-   selling   the   product   to,   to   businesses.  
+**Candidate:** And   has   anything   notably   changed   in   the   industry   in   the   last   year   that   might   be   part   of   this   problem?  
+**Interviewer:** Not   that   we,   not   that   we   know   at   this   point.  
+**Candidate:** Okay.   Um,   moving   on   to   the   problem.   Have   they   looked   at   anything   in   particular   yet   to   address   this   or   are   they,   are   they   start   of   their   journey?  
+**Interviewer:** Start   of   the   journey.  
+**Candidate:** Okay.  
+**Interviewer:** On   the   clarifying   questions   and   framework.   First   thing   that   Paul   does   well   here   is   he   asks   good   clarifying   questions   to   ensure   that   he   really   understands   the   business   model.   Notice   that   he   asks   who   they   sell   to,   has   anything   recently   changed   in,   for   the   business   or   in   the   market.   These   are   good   clarifying   questions   that   he   asks.  
+**Candidate:** I   think   that's   probably   enough   to   be   going   on   with.   How   about   I   take   a   moment   to   structure   an   approach   to   think   about   this,   then   we   can   talk   about   it   afterwards.  
+**Interviewer:** That   sounds   great.   Yeah.   Take   your   time.  
+**Candidate:** Okay.   Okay.   Okay.  
+**Interviewer:** Yeah.  
+**Candidate:** So   I   understand   that   our   client's   concern   is,   uh,   profitability.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** So   a   way   to   help   them   would   be   to   look   at   how   they   can   either   reduce   costs   or   increase   their   revenues.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** In   terms   of   costs,   we   can   look   at   the   fixed   and   variable   costs,   particularly...   Oh,   one   thing   I   didn't   ask.   Products.   Do   they   have   multiple   products?  
+**Interviewer:** Yeah.  
+**Candidate:** Or   just   one   product?  
+**Interviewer:** Yeah,   good   question.   They   do   have   two   products.   Um,   we   don't   need   to   worry   too   much   about   differences   in   what   the   products   do,   but   product   one   is   called   MZA   and   product   two   is   called   SWA.   And   we   can   think   of   them   as   similar,   similar,   j-   antivirus   security   products.  
+**Candidate:** Okay.   That   really   helps.   So,   um,   the   easiest   way   to,   uh,   address   profit   is   gonna   be   to   reduce   their   costs.   They   seem   to   be   staling   along   with-  
+**Interviewer:** Okay.  
+**Candidate:** ...   the,   uh,   revenues.   So   we   want   to   look   at   the,   uh,   cost   base,   perhaps   by   product,   given   they've   got   two   different   products-  
+**Interviewer:** Okay.  
+**Candidate:** ...   and   over   time.   And   having   done   that   internal   examination,   it   may   be   worthwhile   looking   externally   at   what   their   competitors'   costs   look   like.  
+**Interviewer:** Okay.   Okay.  
+**Candidate:** So   that   would   be   the   cost   side   of   things.  
+**Interviewer:** Sure.  
+**Candidate:** Can   we   also   work,   like,   at   the   revenue   side   of   things?   Uh,   again,   over   time   and   against   those   two   different   product   lines.Yeah.   Probably   focusing   in   the   first   instance   on   price   because   a   price-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   increase   would   go   right   to   the   bottom   line.   We   could   look   at   volume   too,   but   of   course   volume,   um,   the   profitability   change   and   that   depends   on   the   cost   base.   So,   that's   why   I   want   to   look   at   costs   first.   And   having   looked   internally   at   their   revenues,   I'd   like   to   look   externally,   um,   what   are   the   competitor's   prices   looking   like?   And,   what   are   the   competitor's   quality   looking   like?   So,   is   there   an   opportunity   to   charge   more?   So,   those   are   the   two   broad   areas.   Um-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   so   without   giving   you   the   numbers   yet,   does   that   sound   okay?  
+**Interviewer:** Yeah.   That's,   uh,   that   sounds   great.   On   the   framework-  
+**Candidate:** whoosh  
+**Interviewer:** ...   Paul   takes   a   hypothesis   driven   approach   here.   Specifically,   he   mentions   that   the   problem   may   be   driven   by   price,   and   you   can   notice   he   really   drives   into   that   in   this   framework.   Lastly-  
+**Candidate:** whoosh  
+**Interviewer:** ...   Paul   proactively   suggests   benchmark   our   client's   performance   against   competitors.   This   is   often   a   good   way   to   diagnose   whether   there's   been   a   market   wide   problem   or   if,   if   this   is   a   specific   issue   to   our   client.   Why   don't   we   actually   start?   We,   we   do   have   some   information,   I   think   you   mentioned   historicals.   So,   we   do   have   some   information   on   our   revenue   and   profit   over   the   last   two   years.  
+**Candidate:** Okay.  
+**Interviewer:** Um,   so   if   you   give   me   one   moment,   I'll   just   share   my   screen.   Okay.   So   feel   free-  
+**Candidate:** Okay.  
+**Interviewer:** ...   to   take   a   few   seconds   to   di-   uh,   you   take   your   time   to   digest   it   and   then   you   can,   you   can   kind   of   talk   me   through   any   takeaways   that   you   have.  
+**Candidate:** (Upbeat music)   whoosh  
+**Candidate:** Well,   let   me   talk   you   through   how   I'm   digesting   it.   So,   this   is-  
+**Interviewer:** Sure.  
+**Candidate:** ...   showing   revenue   and   profit   for   2005   and   2006.  
+**Interviewer:** Okay.  
+**Candidate:** And   we've   got   a   couple   of   bars   for   each   of   those-  
+**Interviewer:** (clears throat)  
+**Candidate:** Pardon   me.   For   each   of   those   years   showing,   uh,   one   billion   revenue   in   2005   and   1.1   billion   in   2006.   However,   despite   that   10%   increase   in   revenue,   we   see   that   profits   are   flat   at-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   1.68   which-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   makes   me   even   more   keen   to   look   into   the   cost   base.  
+**Interviewer:** Yeah.  
+**Candidate:** Um-  
+**Interviewer:** Yeah.  
+**Candidate:** So,   have   you   anything   that   can   tell   me   something   around,   uh,   how   the   costs   and   revenues   break   down   for   each   of   these-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   two   products?   And   if   possible,   over   time?  
+**Interviewer:** Yeah.   So,   why   don't   I   go   to   our   next   chart?   So,   I   think   this   should   be   l-   what   you're   looking   for.   So,   we've   got   a   bit   more   of   a   breakdown   and   the   two   products   that,   that   I   mentioned.  
+**Candidate:** Got   it.   Yes.   So,   this   is   looking   at   the   product   level   breakdown   of   revenue   and   profit.  
+**Interviewer:** Yeah.  
+**Candidate:** I've   got   a   revenue   chart   which   breaks   down   those,   uh,   one   million,   sorry,   one   billion   and   1.1   billion   revenues   for   2005   and   2006,   broken   down   by   these   two   different   products,   MZA   and   SWA.   And   we   notice   just   under   that   bar   chart   on   revenue   that   the   revenues   from   MZA   have   dropped   slightly   from   .7-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   to   .5   billion.   And   the   SWA   revenue   has   increased   from   .4   to   .6.   So,   that's   a   50%   hike   in   one   year.  
+**Interviewer:** Yeah.   Yeah.  
+**Candidate:** Let   me   just   go   into   the   notes,   just   to   note   differences   in   SWA   software   cost   driven   by...   Okay.   So,   it   seems   to   be   taking   more   people   to   deliver   SWA   than   it   takes   to   deliver   MZA.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Which   when   I   look   at   the   right-hand   side   of   this   chart,   seems   to   be   borne   out.   In   terms   of   that   product   line   profitability,   we   can   see   that,   um,   COGS...   Uh,   what   does   COGS   stand   for?  
+**Interviewer:** Sure.   So,   COGS   is   cost   of   goods   sold.   Um,   so-  
+**Candidate:** Okay.   So-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   so   that's   how   much   it   costs   to   kind   of   produce   this-  
+**Interviewer:** Produce   the   product,   correct.  
+**Candidate:** ...   these   products.   So-  
+**Interviewer:** Buy,   buy   the   floppy   disks-  
+**Candidate:** ...   because   it   was   logged,   th-  
+**Interviewer:** Exactly.  
+**Candidate:** Floppy   disk.   That's   lovely   going   back   that   far.  
+**Interviewer:** (laughs)  
+**Candidate:** Are   there   SGLA...   What's   SGLA?  
+**Interviewer:** That's   sales   general   and   administrative.   Um,   so   we   can   think   of   that   as-  
+**Candidate:** Overhead.  
+**Interviewer:** Here   we've...   Yeah,   overhead.   Here   we   have   compensation   split   out,   so   that,   that's   kind   of   another,   um,   let's   think   of   it   as   another   cost   bucket.  
+**Candidate:** Well,   and   you   mentioned   the   software   employees'   compensation   broken   out   and-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   just,   we   learned   from   the   note,   it's   taking   more   people   to   deliver,   uh,   the   SWA   product   than   it   is   the-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   MZA   product.   So-  
+**Interviewer:** And   can   I-  
+**Candidate:** Yes.  
+**Interviewer:** Can   I   just   ask?   I   guess,   i-   intuitively,   does   that   make   sense?   Like,   from   your   experience   at   McKinsey,   like   w-  
+**Candidate:** I,   I   don't   know.   I   mean,   like,   I   don't   know   how   much   more   of   a   complicated   product   it   might   be.  
+**Interviewer:** Sure.  
+**Candidate:** My   instinct   would   be,   well,   can   there   be   a   way   of   delivering   SWA   with   the   same   number   of   employees,   uh,   working   on   it   as   MZA?  
+**Interviewer:** Yeah.  
+**Candidate:** Um,   but,   uh,   at   the   moment,   that's   unclear.   It   does-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   seem   to   be   a   case   to   look   at   early   on.  
+**Interviewer:** Yeah.  
+**Candidate:** So-  
+**Interviewer:** I,   I   agree.  
+**Candidate:** ...   I   would   probably   get   some   tech   experts   in   to   say,   "Is   this   the   right   thing?"   It   could   be,   it   could   be   simply   teething   troubles.   What's   happened-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   with,   um,   going   from   .4   to   .6   billion   in   SWA   revenue,   um,   there   hasn't   been   a   change   in   product   breakdown.   So,   it's   possible   as   more   of   that   work   is   done,   there'll   be-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   greater   efficiencies.   So-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   I   mean,   let's   just   fantasize   for   a   moment-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   and   say   if,   if   the   SWA   product   cost,   uh,   software   employee   compensation   cost   could   be   brought   down   to   the   same   level   as   MZA,   that   would   be-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   uh,   10%.   A   10%,   uh,   of   the,   uh,   revenue,   um,   returned.   So,   that   would   be   10%   of   .6   billion.   So,   that   would   be   $60   million   in   additional   profit,   if-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   SWA   can   be   delivered   with   the   same   amount   of   labor   as   MZA.  
+**Interviewer:** Yeah.  
+**Candidate:** So-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   let's,   let's   put   a   pin   in   that   perhaps   and   say-  
+**Interviewer:** Yeah.  
+**Candidate:** Right,   that   might   be   available.   But   I   would   be   probably   overstating   things   if   I   said-  
+**Interviewer:** Sure.  
+**Candidate:** ...   that   was   a   guaranteed   thing   to   happen   right   now.  
+**Interviewer:** Sure,   sure.   Agreed.   So,   n-   not   guaranteed,   but   let's   say   that   we've   kind   of   directionally   floated   that   with   the   CFO   and   the   CEO,   and   their   view   is   very   much-...   I,   I   know,   I'm   hearing   our   head   of   engineering   who's   saying   that   it   requires,   SWA   requires   this   many   more   people.   Their   view   as   the,   if   finance   and,   and   team   and   CEO   is   that   they   don't   buy   it,   and   they   think   that   the   SWA   team   needs   to   be   more   efficient.   So   they   like   that   emerging   view   that   you've,   you've   just   proposed,   and   they   say,   "Yes,   I   think   this,   this   $60   million   is   a,   a   saving   that   we   should   indeed   kind   of   go   after."   Um,   sorry,   go   ahead.  
+**Candidate:** Well,   how,   how   about   we   look   at   the   flip   side   of   that?  
+**Interviewer:** Yeah.  
+**Candidate:** Um,   so   we've   looked   at   kind   of   labor   and   to   the   number   of   people.  
+**Interviewer:** Yes.  
+**Candidate:** We   haven't   said   much   about   does   that   compensation   sound   about   right.  
+**Interviewer:** Yeah.  
+**Candidate:** So   having   done   that   kind   of   internal   comparison   of   product   lines,   I   wonder   if   there   are   any   data,   um,   into   the   external   comparison.   What   kind   of,   uh,   compensation   are   competitors   to   Bulletproof's-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   scheme   they   have   to   pay   to   their   employees   doing   similar   kind   of   work?  
+**Interviewer:** Yeah.   Yeah,   it's   a   good   question.   So   we,   we   do   have   some   data   on   kind   of   our   com-   competitor   compensation   and   also   for   our   competitors'   software   employees,   how   they   actually   choose   to   allocate   their   workforces   w-   in   terms   of   in   the   US   or,   or   elsewhere.   So   same   thing,   feel   free   to   take   some   time,   and   you   can   kind   of   talk   me   through.  
+**Candidate:** Okay,   so   this   is   called   offshoring   benchmarks   and   compensation   differences,   and   we   have   two   charts   here.   The   left-hand   one,   offshoring   benchmark,   uh,   so   percent   of   software   employees   offshore   for   comparable   companies.   So,   um,   I'm   probably   guessing   incorrectly   here,   what   that   means   is,   uh-  
+**Interviewer:** Probably.  
+**Candidate:** ...   moving   the   software   engineering   out   of   the   US   to   somewhere   cheaper,   be   it-  
+**Interviewer:** Correct.  
+**Candidate:** ...   Eastern   Europe,   be   it   Southeast   Asia,   but   somewhere   that   isn't,   isn't   American   prices.   And   we   see   that   there   are   three   competitive   companies   all   doing   quite   a   similar   amount   of   this   offshoring.   So   about   30%   of   their   employees   are   now   non-US.   And   if   we   look   at   us,   because   I   think   we're   zero   at   the   end   of   that,   or   our   client,   there's   no   offshoring.  
+**Interviewer:** That's,   that's   our   client,   correct.   So   we're-  
+**Candidate:** Understood.  
+**Interviewer:** ...   currently   our   engineering   headcount   is   en-   entirely   based   in   the   US.  
+**Candidate:** Okay.   Now,   if   we   look   at   the   right-hand   side   of   this   chart   in   the   compensation,   we   see   the   side   of   the   prize,   which   is   that   the   pay   for   software   employees   in   the   US   is   $100,000,   and   it's   half   that   to   the   offshoring.  
+**Interviewer:** Exactly.  
+**Candidate:** So   there   is   an   opportunity   there   to-  
+**Interviewer:** Right.  
+**Candidate:** ...   offshore   some   of   the   labor.  
+**Interviewer:** There   are   four   things   that   Paul   really   does   well   on   chart   clearing.   The   first   is   that   he   talks   the   interviewer   through   the   key   axes,   the   insights,   and   the   actionable   recommendations   and   next   steps   based   on   the   charts.   So   he's   clearly   framing   what   he's   looking   at   and   then   explaining   what   matters   and   why.   He   has   a   really   strong   attention   to   detail.   So   notice   that   he   pays   attention   to   the   footnotes,   reads   them   out   loud   to   me,   and   then   also   sort   of   puts   into   context   why   they   matter   and   ties   them   into   the   charts.   He   has   a   really   logical   approach   to   explaining   his   takeaways   and   why   the   key   insights   matter   to   the   client.   This   really   strengthens   his,   his   overall   case   performance.   Lastly,   he   has   a   great   sense   of   the   additional   data   that   he   needs.   So   notice   that   he's   calibrating   what   he   has   with   what   he   would   like   and   what   would   help   him   further   crack   the   case.  
+**Candidate:** And   I   suppose-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   if   that   was   to   be   done,   we'd   probably   advise   our   client   to   do   it   across   their   product   lines,   so-  
+**Interviewer:** Correct.  
+**Candidate:** ...   for   MZA   and,   uh,   SWA.  
+**Interviewer:** Yeah.  
+**Candidate:** And   that's   gonna   need   some   calculation.   So   give   me   one   second-  
+**Interviewer:** Yes.  
+**Candidate:** ...   to   think   about-  
+**Interviewer:** Yes.  
+**Candidate:** ...   what   that   calculation   looks   like.  
+**Interviewer:** For   sure,   and   then   feel   free   to   talk   me   through   kind   of   how   you,   how   you'd   structure   the   math.  
+**Candidate:** Ah,   okay.   And   I'm   going   to   assume   in   this   calculation   that   we   haven't   yet   done   that   piece   of   work   to   bring   the   number   of   engineers   down   in   SWA   to   deliver   at   the   same   rate   as   MZA.   So-  
+**Interviewer:** I,   um,   I   think   that   we   could-  
+**Candidate:** Could   you   go   back   to   the   previous   chart?  
+**Interviewer:** Yeah,   so   I   think   we   could   assume   that.   Um,   so   let's   assume   that   the   two   gray   segments   are   now   the   same,   um,   if,   if   that   works,   so   that   we're,   we're   effectively   spending   kind   of,   um,   20%   of   our   overall   revenue   is,   is   on   software   employee   compensation.  
+**Candidate:** Okay.   Well,   in   that   case,   the   calculation   would   be   to   take   the   total   revenue   number   but   multiply   that   by   the   fraction   of   the   revenue   that   is   on   software   employees'   compensation,   um-  
+**Interviewer:** Yeah,   the   20,   the   tw-   we,   so   let,   let's   assume   that's   20%.  
+**Candidate:** It   will   now   be   20   across   the   board.  
+**Interviewer:** Yes.  
+**Candidate:** Absolutely   right.   Um,   we   then   want   to,   um,   multiply   that   by   the   percentage   of   these   people   who   are   offshore   and-  
+**Interviewer:** Correct.  
+**Candidate:** ...   to   multiply   that   by   the   fraction   of,   uh,   compensation   that   one   gives   to   offshore   people   versus   people   in   the   USA.   So-  
+**Interviewer:** Exactly   right.  
+**Candidate:** ...   step   by   step-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   the   total   revenue   is   1.1   billion.  
+**Interviewer:** Yeah.  
+**Candidate:** The,   uh,   employee   compensation   fraction   of   that   is   20%   or   .2.  
+**Interviewer:** Yeah,   yeah,   yeah.  
+**Candidate:** The   offshoring   percentage   is   30%   or   .3.  
+**Interviewer:** Yeah.  
+**Candidate:** And   then   the   compensation   difference   is,   uh,   well,   it's   neatly   done   for   us   there,   so   that's   50   over   100,   which   is   .5.  
+**Interviewer:** Yeah.  
+**Candidate:** So   that   leaves   me   with   1.1   times   .2   times   .3   times   .5,   and   that   adds   up   to   what's-  
+**Interviewer:** Bit   of   a,   bit   of   a   chunky   calculation.  
+**Candidate:** I   mean,   that's   coming   out   to   me   at   about   33   million.  
+**Interviewer:** Yeah.   Yeah,   that's   correct.   And   would   you   mind   just   kind   of   voicing   o-   voicing   in,   almost   in   words   what   that   33   million,   like   what   is   that?   In   terms,   I   guess,   in,   in   words.   So   that's,   that's   the   savings   from-  
+**Candidate:** So   the   30   mi-   so   the   33   million   is   the   saving   available   from   offshoring   our   software   employees   at   the   same   percentage   as   the   client's   competitors.
+**Interviewer:** ...   exactly.  
+**Candidate:** ...   and   paying   them   half   as   much   as   we   currently   do.   I'm   probably   using   we   a   little,   uh,   a   little   loosely   there-  
+**Interviewer:** Sure.  
+**Candidate:** ...   as   being   our   client   rather   than   us.   But   yeah,   that,   that's   the   calculation.   Does   that   sound   about   right?  
+**Interviewer:** Okay.   That   sounds   exactly   right.   On   the   math,   firstly,   Paul   does   a   nice   job   of   clearly   explaining   the   approach   he's   going   to   take   to   the   math   before   he   jumps   into   the   calculations.   This   really   helps   for   the   interviewer   so   that   I   can   follow   along   how   he's   planning   to   approach   it   and   also   guide   him   if   anything   he's   planning   to   do   might   be   slightly   off   track.   He   intuitively   explains   the   units   of   his   calculations   in   applied   terms.   This   is   really   important.   Obviously,   getting   the   number   and   the   calculation   correct   is   one   piece,   but   then   he   also   goes   the   extra   step   in   explaining   to   me   what   this   actually   means   in   words   so   that   we   can   both   understand   what   that   number   is   actually   referring   to.   Lastly,   he   applies   his   real-world   business   intuition   here.   For   example,   he   points   out   that   he   has   more   confidence   in   the   offshoring   recommendation   than   in   the   right-sizing,   the   recommendation   to   right-size   employee   compensation,   which   makes   sense.   Just   to   kind   of   recap   where   we're   at   so   far,   so   we   think   that   kind   of   first   potential   cost-saving,   um,   was,   I   think,   the   $60   million   figure   that   you   gave.   Um-  
+**Candidate:** Yes.  
+**Interviewer:** And   so   that   was   from   basically   sort   of   benchmarking   or   rationalizing   the,   our   total   employee,   software   employee   cost   for   one   product   to   be   in   line   with   the   other.   So   we   think   that's   a   potential-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   we   put   a   pin   in   that   as   a   potential   $60   million   saving.   And   now   we've   realized   that   c-   versus   our   competitors,   there's   probably   scope   for,   for   offshoring   some   of   our   software   employees,   and   we've   quantified   that   at   a   $33   million   saving.   Is   that   right?  
+**Candidate:** Yes,   and   there's   a   bit,   and   there's   a   bit   of   interplay   between   the   two.  
+**Interviewer:** Sure.  
+**Candidate:** Um,   you   know,   if,   if   our   client   was   not   able   to   make   that   initial   $60   million   saving   on   labor,   then   the   proportion   of   saving   they   would   get   for   offshoring   would   increase   a   little   bit.  
+**Interviewer:** Yeah.  
+**Candidate:** So   there's   a   bit   of   give   and   take   there.   And-  
+**Interviewer:** Okay.  
+**Candidate:** ...   just   looking   at   the   numbers,   I   mean,   I   would   say   that   there's   probably   more   confidence   in   the   offshoring   number-  
+**Interviewer:** Sure.  
+**Candidate:** ...   right   now   than   in   the-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   uh,   labor   number,   'cause   I,   we   just   don't   know   enough   about   it.  
+**Interviewer:** Agreed,   and   we,   and   we   have   a   lot   of   data   points   here.   Okay.   So   we've   looked   on   the-  
+**Candidate:** Well,   indeed.  
+**Interviewer:** Sorry,   go   ahead.  
+**Candidate:** So   that's   the   cost   side   pretty   much   done.  
+**Interviewer:** Yeah.   So...  
+**Candidate:** So   I   think   the   revenue   side   is-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   worth   a   look.   Um,   and   I   think   it   was   said   at   the   outset,   um,   you   know,   uh,   revenue   is   volume   times   price.   Um-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Now,   volume   will   kind   of   scale   depending   on   the   cost   structure   of   the   business,   and   we   found   out   that   kind   of   there's   cogs   here   and   SG&A   there.   But   pricing,   pricing   would   be   immediate   bottom   line   improvement.  
+**Interviewer:** Yeah.   Sure.  
+**Candidate:** So   is   there   data   about,   um,   Bulletproof's   pricing   in   comparison   with   competitors?   And,   and   to   put   that   in   context,   anything   about   the,   the   quality   of   Bulletproof's   products   'cause,   you   know,   it   may   not   be   exactly   the   same   as   their   competitors.  
+**Interviewer:** Sure,   sure.   Yeah,   so,   so   we   do   have   one   last   chart.   Um,   so   hopefully   that,   that   should   give   you   some   of   the   things   that   you're   looking   for.  
+**Candidate:** Okay,   so   this   is   the   pricing   study.   Uh,   this   is,   oh,   this   is   specifically   for   SWA.   This   doesn't   include   MZA.  
+**Interviewer:** Yeah,   but   let,   let's,   yeah,   that's,   that's   correct.   That's   correct.  
+**Candidate:** Yep.   So   let's   look   at   the   pricing   study.   So   we've   got   SWA,   which   is   Bulletproof's   product.   Uh,   that's   the   100   index.   And   everybody   else   seems   to   be   10%   more   expensive.  
+**Interviewer:** Yeah.  
+**Candidate:** More   or   less.   Now,   um,   to   just   check   whether   there   is   some   level   of   realism   in   whether   the   SWA   price   can   be   brought   up   to   competitors,   look   at   the...   Oh,   so   customer   satisfaction   is   the   kind   of   quality   measure   that   we   have   to   play   with   here.  
+**Interviewer:** Yes.  
+**Candidate:** And   wow,   gotta   be   said   that,   um,   SWA   (laughs)   is   absolutely   rocking   it   in   terms-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   of   satisfaction,   much   more   than   its   competitors.   So   I   mean,   not   wishing   to   go   too   crazy   on   this,   um,   one   might   imagine   that   if   one   could   bring   up   the   price   of   SWA   to   competitors,   customers   might   still   be   happy   to   pay   that-  
+**Interviewer:** Yes.  
+**Candidate:** ...   'cause   they're   still   getting   a   better   product.  
+**Interviewer:** Yes.  
+**Candidate:** So   perhaps,   um,   a   recommendation   for   our   client   would   be   to   up   the   price   to   be   commensurate   with   the   competitor   products   that   clearly   cost   them   a   lot   less.  
+**Interviewer:** Yeah.   I-  
+**Candidate:** So-  
+**Interviewer:** I   think,   I   think   that   makes   sense.   And,   and   how,   so   how   would   you   sort   of   structure   that   math?   And   let   me   know   if   you   need   me   to   skip   back   to,   to   the   first   chart.  
+**Candidate:** Well,   I   can   just   about   remember.   I   can   remember-  
+**Interviewer:** Okay.  
+**Candidate:** ...   that,   um,   0.6   billion   was-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   the   SWA   revenues,   up   from-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   0.4   in   the   year   before.   So   that's   simply   10%.   Um-  
+**Interviewer:** Okay.  
+**Candidate:** So   10%   of   600   million   is   60   million.   So   there's-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   another   60   to   go   out   there.  
+**Interviewer:** Okay.   So,   so   why   don't   we   ...   I   think   that   the   CEO   and   the   CFO   are   kind   of   banging   at   the   door,   keen   for   our,   our   recommendation.  
+**Candidate:** (laughs)  
+**Interviewer:** So   why   don't   you   maybe   take,   take   your   time   and,   and   put   a   recommendation   together,   and   then   you   can   talk   me   through   it.  
+**Candidate:** Yes.   Give   me   a   moment   for   that.  
+**Interviewer:** Yeah.   Take   your   time.  
+**Candidate:** Okay.   So   to   recap   for   our   client,   the   problem   they   were   facing   and   are   facing   is   a   growth   in   revenue   over   the   last   year,   but   has   not   led   to   a   growth   in   profit.   So   they   are   trying   to   work   out   why,   and   want   to   know   how   they   can   bring   profits,   uh,   back   into   line   with   the   revenue   growth.   The   recommendation,   and   I'll   come   to   why   after   the   recommendations.   So   the   recommendation,   I   think,   in   the   first   instance   is   to   look   at   whether   it's   possible   to   deliver   the   SWA   product   with   the   same   number   of   employees   as   deliver   the   MZA   product.   If   that   could   be   done,   that   could   deliver   60   million   in   savings,   and   that   would   go   to   the   bottom   line   immediately.   The   why   question   may   come   up   here.   So   it   looks   to   me   that   the   why   has   re-   growth,   uh,   pro-   pardon   me.   One   is   profit   growth,   not   ma-   revenue   growth....   (instrumental music plays)   is   a   change   in   the   product   mix.   So   they   are   selling   more   of   the   product,   it   takes   more   people   to   deliver   it.   So,   they   could   change   the   mix   or   they   could   change   the   way   that   they   deliver   the   SWA   products.   And,   frankly,   if   they   have   the   customers,   try   and   sell   it   to   them.   So,   there's   maybe   something   up   to   60   million   savings   available   there.   Second   thing   to   do   if   that   has   been   processed,   rationalized   as   best   it   can,   is   look   at   offshoring.   And   offshoring   is   done   by   many   of   Will   IT   Pro's   competitors.   Around   30%   offshoring.   If   they   did   that,   that   would   deliver   33   million   to   the   bottom   line.   Finally,   they   could   look   at   pricing,   and   there   looks   to   be   opportunity   to   increase   pricing   by   10%,   which   would   be   commensurate   with   the   price   of   competitor   products,   which   by   all   accounts,   are   worse.   So   that   seems   like   the   right   ordering.   Um,   I   think   it   would   be   slightly,   um,   ambitious   to   start   raising   the   prices   whilst   going   through   this   process-  
+**Interviewer:** Agreed.  
+**Candidate:** ...   of   process   rationalization   and   offshoring.   So,   maybe   do   another   customer   satisfaction   survey   when   that   has   been   done   and   revisit   the   price   issue.   (instrumental music plays)   So   I   think   those   are   the   kind   of   risks.   There's   a   risk   of   oversimplifying   SWA   and   not   delivering   it.   There   is   always   a   risk   on   offshoring   that   might   go   horribly   wrong,   but   starting   early   might   really   help.   And   then   there's   a   risk   around   increasing   price   if   quality   has   dropped,   or   for   that   matter,   competitor's   quality   has   increased.   So   look   again   after   process   rationalization   and   offshoring,   again,   at   pricing.   Is   there   scope   for   doing   that?   And   I   would   suggest   that   the   CFO   and   CEO   might   want   to   meet   with   one   of   our   partners   and   a   tech   specialist,   who   could   probably   give   some   information   and   judgment   around   SWA   labor   costs.  
+**Interviewer:** Fantastic.   Thanks,   Paul.   I   appreciate   the,   the   strategic   recommendation.   (instrumental music plays)   On   the   recommendation,   firstly,   he   clearly   recaps   the   tangible   problem   that   the   client   is   facing.   That   helps   refresh   for   both   of   us   exactly   what   we   are   here   to   solve.   (screen swooshes)   Secondly,   he   supports   his   recommendation   with   quantifiable   impact.   Notice   that   he   uses   the   key   numbers   from   throughout   the   case   that   he,   he   calculated.   (screen swooshes)   He   provides   structured   numerical   recommendations,   and   he's   also   included   the   order   of   priority,   so   he   makes   it   clear   that   the   first   lever   would   be   a   higher   priority   than   the   third   one,   for   example.   (screen swooshes)   Lastly,   he's   done   a   nice   job   of   laying   out   and   explaining   some   of   the   risks   to   our   client   that   they   should   be   mindful   of   when   they   follow   the   recommendation.   (instrumental music plays)  
+**Candidate:** Hello.   I   really   hope   you   found   that   useful.   If   you   did,   you   can   like   and   subscribe.   And   why   not   come   on   igoandoffa.com   to   see   more   videos   like   this,   study   case   interview   frameworks,   and   read   company   guides?   There,   you   can   also   practice   for   your   upcoming   case   interviews   with   coaches   from   McKinsey,   BCG,   Bain,   and   other   consulting   firms.   Thank   you   and   good   luck   with   your   upcoming   interviews.   (instrumental music plays)

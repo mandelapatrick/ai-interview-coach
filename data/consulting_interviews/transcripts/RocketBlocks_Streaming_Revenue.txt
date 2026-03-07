@@ -1,0 +1,181 @@
+Case: Streaming Revenue
+Case Type: Profitability
+Firm: BCG
+Channel: RocketBlocks
+URL: https://www.youtube.com/watch?v=0vTrrJV-a4o
+============================================================
+
+**Interviewer:** Hello,   everyone.   My   name   is   Kenton   Kovestu.   I'm   an   ex-BCG   consultant,   an   ex-Googler,   and   the   founder   of   RocketBlocks,   an   online   platform   that   helps   candidates   prepare   for   interviews.   In   today's   RocketBlocks   video,   we've   got   an   awesome   mock   interview   featuring   two   of   our   RocketBlocks   experts,   Christopher   McRayham,   who   is   a   ex-BCG   projects   leader   and   a   graduate   of   the   London   School   of   Business,   and   Matthew   Calvert,   who   is   an   ex-BCG   consultant   and   a   graduate   of   the   Duke   Fuqua   School   of   Business.   In   the   case   that   they're   walking   through,   it   features   a   streaming   media   provider,   you   can   think   of   someone   like   Netflix,   that's   facing   a   declining   profitability   challenge.   A   very   relevant,   timely   topic   for   that   industry,   so   let's   go   ahead   and   jump   in.  
+**Candidate:** Hi,   everyone.   This   is   a   video   run-through   for   the   Netfilm   profitability   puzzle   case.   This   is   a   classic   profitability   case   that   covers   some   great   brainstorming   and   qualitative   reasoning   activities.   But   also   there's   some   quant   thrown   in   the   mix,   so   it   really   covers   all   the   major   exercises   that   you   can   expect   in   a   case   interview.   My   name   is   Christopher   McRayham,   and   I'm   gonna   be   leading   the   interview.   Also   with   me   is   Matty   Calvert,   who'll   be   playing   the   interview   candidate.   So   yeah,   before   we   dive   into   this   case,   let's   do   some   quick   intros.   Uh,   as   I   mentioned,   my   name   is   Chris,   and   I'm   a   manager   working   in   renewable   energy   in   New   York.   I   do   offshore   wind   with   a   company   called   Energy   Re.   Before   that,   I   worked   in   management   consulting.   I   was   with   BCG   in   the   New   York   office   for   three   years,   uh,   with   the   last   year   of   that   time   as   a   project   leader   in   the   climate   and   sustainability   practice.   Uh,   before   that,   I   was   at   Accenture   Strategy   in   London,   working   in   their   energy   department   for   a   year.   So   overall,   I   spent   about   four   years   in   management   consulting   after   finishing   my   MBA   at   London   Business   School.   Before   business   school,   I   was   an   engineer   in   the   oil   and   gas   industry.   Matty,   you   wanna   give   an   intro?  
+**Candidate:** Absolutely.   Thanks,   Chris.   Uh,   my   name   is   Matty   Calvert.   I   am   currently   a   director   of   methane   results,   uh,   at   Kairos   Aerospace.   We   are   a   climate   tech   company   looking   to   reduce   methane   emissions   from   the   oil   and   gas   sector.   Prior   to   that,   I   spent   two   years   as   a   consultant   in   the   BCG   Chicago   office,   um,   fa-   focused   mostly   on,   uh,   sustainability   projects   as   well.  
+**Candidate:** Awesome.   Okay,   so   ready   to   dive   into   the   case?  
+**Candidate:** Let's   do   it.  
+**Candidate:** Okay,   great.   Here's   the   case   question.   So   the   client   is   Netfilm.   Netfilm   is   an   online   video   subscription   service   that   offers   a   variety   of   TV   shows   and   movies.   They've   been   in   the   market   for   the   past   10   years   and   have   gained   a   considerable   market   share.   However,   the   company's   been   facing   profitability   issues   in   the   past   year,   which   has   been   threatening   their   financial   sustainability.   So   the   question   to   you   is,   uh,   with   that   info,   how   would   you   approach   analyzing   the   company's   declining   profitability?  
+**Candidate:** Great.   Um,   it's   a   really   interesting   case   question,   Chris.   I   just   wanna   make   sure   I've   got   all   the   details   here.   So   to   confirm,   our   client   is   Netfilm.  
+**Candidate:** Mm-hmm.  
+**Candidate:** Um,   they've   been   a   strong   market,   uh,   competitor   for   the   last   number   of   years,   and   they're   facing   a,   um,   sis-   pro-   profitability,   um,   problem   over   the   last   couple   years.   Is   there   anything   I   missed   there?  
+**Candidate:** No,   that's   right.   All   the   key-  
+**Candidate:** Great.  
+**Candidate:** ...   details   there.   Yep.  
+**Candidate:** Okay.   Um,   so   when   I   think   about   how   I   would   approach   this,   I   think,   you   know,   when   we're   thinking   about   profitability,   there's,   there's   two   components.   We'd   wanna   look   at   the   revenue   and   the   costs.  
+**Candidate:** Right.  
+**Candidate:** Um,   before   I   jump   into,   to   building   out   a   framework,   is   there,   uh,   a   specific   profitability   target   that   they're   looking   to,   to   meet?  
+**Candidate:** Um,   at   this   point,   I   wouldn't   say   so.   I   think   we   should   just-  
+**Candidate:** Okay.  
+**Candidate:** ...   do   a   diagnostic   first.  
+**Candidate:** Great.   So   I'll   be   looking   for   the,   what   the,   sort   of   the   driver   of   that   profitability   issue   is.  
+**Candidate:** That's   right,   yeah.  
+**Candidate:** Okay.   Um,   do   you   have   any   information   about   how   their   revenue   has   been   growing   over   the   last   number   of   years?  
+**Candidate:** Uh,   yeah,   I   would   say,   um,   their,   their   growth   has   been   slowing.   Um,   it's   only   had   a   5%   increase   compared   to   the   previous   year,   but,   uh-  
+**Candidate:** Okay.  
+**Candidate:** ...   historically,   they've   been   growing   at   about   20%   year   on   year.  
+**Candidate:** Okay.   Very   interesting.   Um,   and,   and   what   about   the   cost   drivers?   Do   you   have   any   information   about   what   their,   their   main   costs   are?   I   would   assume   it's   gonna   be,   one   is   gonna   be   content   creation.   Um,   another   one   would   probably   be   marketing   and   advertising,   um-  
+**Candidate:** Mm-hmm.  
+**Candidate:** ...   and   then   general   operations.   Would,   would   you   say   those   are   sort   of   the   three   drivers?  
+**Candidate:** Yeah,   that's,   that's   a   fair   assumption.   I   would   go   with   those   three.  
+**Candidate:** Okay.   Okay,   great.   Um,   well,   I   think   I'm   all   set,   Chris.   I'm   gonna   just   spend   a   couple   seconds   here   organizing   my   framework,   and   then,   um,   I   would   love   to   jump   in.  
+**Candidate:** That's   great.   Let's   do   it.  
+**Candidate:** Okay,   awesome.   So   Chris,   I   think   the   way   I   wanna   approach   this   problem   is   first   to   look   at   the   cost   drivers.   So   we   identified   that   it's   marketing,   that   it's   operations,   and   it's   content   creation.   And   I   wanna   see   if   any   of   those   have   changed   historically   and   where   we   might   be   able   to   optimize   costs.   I   always   think   it's   easier   to   control   your   costs   than   to   control   market   growth,   um,   where   your   revenue   growth,   where   that's   kind   of   up   to   the   market.   Um,   then   next,   you   told   me   that   they   have   been   slowing   their   revenue   growth,   and   so   I   would   be   interested   in   s-   figuring   out   what's   causing   that.   Is   it,   um,   new   competitors?   I   know,   uh,   every   legacy   TV   channel   has   launched   their   own   streaming   service   recently,   so   there's-  
+**Candidate:** Mm-hmm.  
+**Candidate:** ...   a   lot   more   competition.   Um,   so   I'm   curious   about   that.   Curious   about   maybe   some   foreign   markets   that   they're,   they're   not   quite   in   or   they're   getting   out-competed   in.   Um,   so   I   would   wanna   first   start   with   cost,   then   look   at   revenue.   And   I   think   once   we've   identified   what   the   main   issue   is,   either   on   the   cost   side   or   the   revenue   side,   um,   I   wanna   dr-   create   a   plan   to   address   that   issue.  
+**Candidate:** That's   awesome.  
+**Candidate:** So,   um,   to   start   with,   yeah,   I   think   I'd   like   to   look   at   their   costs   and   see   if   there's   any,   um,   cost   history   to   see   if   any   of   those   have   changed   dramatically   over   the   last   couple   years.  
+**Candidate:** That's   great.   That's   great.   I   really   like   the   structure.   Uh,   it's   MECE.   It   makes   sense   to   me.   Uh,   and   yeah,   let's   dive   into   some,   some   cost   info.   I   actually   have   some,   some   info   here   I   wanna   show   you.
+**Candidate:** Okay.  
+**Candidate:** Uh,   I'm   gonna   share   my   screen   here   in   a   second.   Uh,   are   you   able   to   see   this?   Here   we   go.  
+**Candidate:** Uh,   there   we   go.   Yep.  
+**Candidate:** Okay.  
+**Candidate:** Super   helpful.  
+**Candidate:** Great.   So,   I'm   glad   that's   coming   through.   Okay.  
+**Candidate:** So-  
+**Candidate:** So,   one   thing   here,   um,   now   that,   now   that   this   is   up,   I   guess,   I,   I   want   you   to   have   a   look   at   the   difference   in   profitability   between   years   one   and   year   five.  
+**Candidate:** Mm.   Yeah.   Okay.   So,   looking   here,   we   have   information   on   subscribers,   um,   in   two   segments,   basic   and   premium.   We   have   the   revenue,   uh,   annualized,   and   then   we   have   the   costs.   Um,   I   see   here   that,   uh,   the   content   creation   and   operations,   um,   we're   not   looking   at   marketing,   so   I'm   just   gonna   assume   that   marketing   is   built   into,   to   both   of   those.   So,   thinking   about   the   profitability-  
+**Candidate:** Yeah.  
+**Candidate:** ...   from   year   one   to   year   five,   um,   I   see   that   our   revenue   in   year   one   was   144   million.   Uh,   our   costs   were   79   million.   So,   that's   gonna   give   me   a   profit   of   65   million.   And   so-  
+**Candidate:** Mm-hmm.  
+**Candidate:** ...   65   over   that   144,   that's   about   45%   profit   margin,   um-  
+**Candidate:** Love   it.  
+**Candidate:** ...   in   year   five.   So,   we   had,   uh,   revenue   increased   to   242.   Um,   and   our   costs,   wow,   have   almost   doubled,   so,   uh,   are   up   to   64   million   or   164   million.   So,   that   is   $78   million   in   profits.   Um,   and   78   over   that   242,   it's   gonna   be   about   a   30%   margin.   So,   I   see   that   our   margins   are,   are   down,   uh,   about   15%   over   the   course   of   the   last   five   years.   Which   is   a   pretty   significant-  
+**Candidate:** Got   it.  
+**Candidate:** ...   drop.  
+**Candidate:** Yeah.   You're   right.   It   is.   That's   a,   that's   a   big   drop.   And,   um,   I   guess,   what,   what   trends   do   you   see   that   could   be   dr-   uh,   driving   that   decline   in   profitability?  
+**Candidate:** Y-   yeah.   I   mean,   I   think   that's   a,   a   really   good   question.   Um,   I'm   seeing   here   one   thing,   so   this   isn't   gonna   answer   that   profitability   thing,   but   what's   really   interesting   is   our   basic,   um,   really   increased.   It   increased   $80   million,   uh,   when   our   premium,   you   know,   it's   increased   on   a   percentage   basis   more,   but,   uh,   that's   not   really   getting   it   for   me.   So,   I'd   like   to   look   more   at,   um,   maybe   our,   maybe   our   costs   here.   Um,   it   seems   like,   you   know,   the   top   line   is   growing   and   our,   and   our   costs-  
+**Candidate:** Yeah.  
+**Candidate:** ...   are   really,   really   increasing.   Um-  
+**Candidate:** Got   it.  
+**Candidate:** ...   do   we   have   any   more   information,   um,   that,   what   might   be   leading   into   that,   that   profitability   drop   where   the   top   line   revenue   growth   is,   is   slowing   so   much?  
+**Candidate:** Yeah.   Yeah.   I'm   gonna   pull   up   another   piece   of   data   here   for   you   that   I   think   can   help-  
+**Candidate:** Hmm.  
+**Candidate:** ...   answer   some   of   those   questions.  
+**Candidate:** Okay.  
+**Candidate:** So-  
+**Candidate:** Oh.   Wow.  
+**Candidate:** ...   they've,   they've   shared   with   us   the   following   survey   results.   Um,   I'm   hoping   you   can   talk   me   through   what   these   survey   results   are   telling   us.  
+**Candidate:** Yeah.   So,   here,   I   see   percentage   of   respondents   that   say,   "I   share   my   password   with   a   family   member   or   friend."   Um,   I   know   myself,   uh,   I,   I   share   my,   uh,   Netflix   account,   um,   with-  
+**Candidate:** Sure.  
+**Candidate:** ...   you   know,   my,   my   parents   and   family   and,   and   my   brother.   So,   um,   I   am   guilty   of   this   as   well.   And   I   see   that   in   year   one,   um,   2%   of   basic   subscribers   and   6%   of   premium   subscribers   were   sharing   it.  
+**Candidate:** Mm-hmm.  
+**Candidate:** But   now   those   numbers   are   all   the   way   up   to   25   and   40.   So,   um,   that   is   a   massive   increase.   Uh,   you   know,   12X   on,   on   basic   and,   and,   um,   you   know,   6.5X   at   the   40.   So,   that's   a   significant   increase   in   all   of   those-  
+**Candidate:** Yeah.  
+**Candidate:** ...   users   who   are   now   sharing   an   account,   that's   lost   revenue.   Um-  
+**Candidate:** Exactly.   Exactly.  
+**Candidate:** So,   I   think   that's   gonna   be   what's   driving   our   issue   here.   So,   um,   I'd   like   to   go   ahead   and   calculate   how   much   revenue   loss,   um,   and   think   about   how   that   might   be   changing.   So,   does   that   sound   like   the   right   approach?  
+**Candidate:** Yeah,   it   does.   It   does.   I   actually   have   some   data   for   you   on   that   point   to   help   out.  
+**Candidate:** Okay.  
+**Candidate:** I   think   that's   a   great   next   step.   Um,   so   on   the   basic   plan,   we're   looking   at   about   $10   a   month   in   revenue   from   that   film.  
+**Candidate:** Okay.  
+**Candidate:** And   then   in   the   premium   segment,   it's   $20   a   month.  
+**Candidate:** That's   really   helpful.   Um-  
+**Candidate:** Right.   So,   if   you   look   at   year   five,   can   we,   uh,   have   a   sense   of   how   much   their   profitability   is   being   impacted?  
+**Candidate:** Yep.   So,   um,   I   just   wanna   walk   you   through   my   approach   before   we   get   started.  
+**Candidate:** Sure.  
+**Candidate:** Um,   I'm   gonna   take   the   percentage   of,   um,   respondents   who   are   sharing   their   account.   I'm   gonna   multiply   that   by   the   number   of,   um,   respondents   there   are   in   that   category.   So   how,   how   many   basic   subscribers,   how   many   premium   subscribers   to   get-  
+**Candidate:** Right.  
+**Candidate:** ...   a   number.   And   then   I'm   gonna   multiply   that   by   the   monthly.  
+**Candidate:** Mm-hmm.  
+**Candidate:** Uh,   and   then   I'll   do   that   two   times   twelve   months   to   figure   out   what   our   revenue   loss   is.   Does   that-  
+**Candidate:** Lovely.  
+**Candidate:** ...   sound   like   the   right   approach?  
+**Candidate:** That   makes   sense   to   me.   Yeah.  
+**Candidate:** Great.   So,   for   the   basic   segment,   I   have   25%   times   our,   um,   1.2   million,   uh,   1.7   million   users.   Excuse   me.   And   that's   gonna   give   us,   um,   425,000   users   who   are   sharing   their   password.  
+**Candidate:** Mm-hmm.  
+**Candidate:** And   425   times   $10   per   month   is   gonna   give   us   4.25   million   a   month.   And   then   times   the   12-month,   that's   about   $50   million   a   year.  
+**Candidate:** Yep.   That's   the   right   ballpark   number.  
+**Candidate:** In   terms   of   basic.   And   then   if   we   look   at   the   premium,   40%   of   those   subscribers,   of   the   200,000   users   in   that   segment,   gives   us   80,000   users.   Um,   80,000   times   20   a   month   gives   us   1.6   million   a   month.   Times   12   months,   I'm   gonna   say   it's   about   $20   million   a   year.   So,   in   total,   that's   $70   million   in   lost   revenue   per   year,   and   that's   about   30%   of   years   five's,   um,   uh......   um,   $242   million,   uh,   in   revenue.  
+**Candidate:** Right.  
+**Candidate:** So,   that's   a   significant   amount   of   money.   Um...  
+**Candidate:** That   is,   yeah.  
+**Candidate:** And   while   we   can't   assume   all   of   those   people   would   buy   a   subscription,   we   can   assume   that   quite   a   few   of   them   would.  
+**Candidate:** Right,   exactly.   It   feels   like,   um,   you   know,   a-   a-   almost   a   lost   opportunity,   a   big   lost   opportunity   if   they   don't   find   some   way-  
+**Candidate:** Yeah.  
+**Candidate:** ...   to   address   it.  
+**Candidate:** Definitely.  
+**Candidate:** That's   a   great   point.   Okay.   Well,   now   that   we've   looked   at   the   math,   I   want   to   move   into   some-   some   brainstorming   activities   here.   Uh-  
+**Candidate:** Okay.  
+**Candidate:** ...   the   first   question   is,   with   everything   that   we   just   looked   at,   what   do   you   think   are   some   potential   solutions   to   the   account   sharing   issue?  
+**Candidate:** Hmm.   Chris,   do   you   mind   if   I   take   one   second   just   to   think   about   this?  
+**Candidate:** Absolutely,   yep.  
+**Candidate:** All   right.   So,   I'm   thinking   there's   three   bu-   um,   three   buckets   here.   The   first   one   is   gonna   be   to   charge   for   password   sharing.  
+**Candidate:** Mm-hmm.  
+**Candidate:** I   think   another   one   is   gonna   be,   um,   creating   ways   to   limit   users'   abilities   to   share   their   passwords.   And   then   finally,   I   think   there's   ways   to   build,   um,   our   product   so   that,   um,   people   don't   want   to   share   their   passwords.  
+**Candidate:** Great.  
+**Candidate:** Uh,   and   so,   and   I   think   about   the   first   bucket,   um,   charging   for   password   sharing.   I   think   we   could   sell   a   type   of   account   that   limits,   um,   users'   ability,   or   sorry,   that   allows   people   to   share   with   three   devices,   three   households,   something   like   that.   Um...  
+**Candidate:** Okay.  
+**Candidate:** I   think   there's,   in   terms   of   limiting   users'   ability   to   share   passwords,   this   one   seems   to   be,   have   a   few   more,   uh,   opportunities.   You   could   force   passwords   to   be   reset,   um,   every   few   months,   and   I   think   the   more-  
+**Candidate:** Mm-hmm.  
+**Candidate:** ...   complicated   you   make   that   password,   the   harder   it   is   for   grandma   or   grandpa   to   type   it   in,   especially   on   a   TV   remote.  
+**Candidate:** Right.  
+**Candidate:** Um,   you   can   do   IP   tracking,   um,   which   I've   seen   some   streaming   services   do.   Um,   so   how   many   unique-  
+**Candidate:** Yeah.  
+**Candidate:** ...   uh,   IP   addresses.   Um,   you   could   also   do   a   device   limit,   so   um,   the   number   of   devices   could   be   restricted   to   three   or   five.   So,   you   could   have   your   phone,   your   iPad,   your   computer,   um,   but   you're   not   gonna   have,   you   know,   15,   20   devices.   Um,   and   then,   I   think   if   we   think   about   the   product   one,   um,   part   of   the   benefit   of   streaming   services,   especially   the-   the   better   ones,   are   they   offer   you...   they   know   you   better   than   you   know   yourself.   So,   when   I   log   in   on   a   Friday   night,   and   it   has   a   movie   that   I   don't   know   about   but   I   know   I'm   gonna   like,   um,   if   that's   different   for   my   parents   or,   um,   you   know,   grandparents,   somebody   else,   um,   they're   not   gonna   want   to   use   that.   And   so,   I   think   the   better   the   personalization   can   be   with   the-   the   fewer   accounts   that   you   have,   um,   on   one-   on   one   account,   uh,   or-   or,   sort   of,   personas,   um,   the   less   you're   gonna   want-  
+**Candidate:** Right.  
+**Candidate:** ...   to   share   it.   So,   those   are   some   ways   that   I   think   we   could   really,   um,   prevent   people   from   sharing   their   passwords.  
+**Candidate:** Yeah,   that   makes   sense.   I   think   those   are   some   really   great   and   specific   ideas.   Um,   yeah,   and   I-   I   think-   I   think   if   we   were   to   implement   those,   it   could   go   a   long   way   towards   reducing   password   sharing,   but   I   think   there's   also   some   issues   we   need   to   take   into   account,   or   potential   risks.  
+**Candidate:** Definitely.  
+**Candidate:** Um,   if   we   were   to-   if   we   were   to   think   about   these   ideas   you   just   mentioned   here,   what   are   some   of   the   potential   risks   to   the   solutions?  
+**Candidate:** Yeah.   Um,   so   I   think   if   the   first   one   is   our   customer   dissatisfaction,   uh,   I-   I   think   with   the   number   of   streaming   services-  
+**Candidate:** Mm-hmm.  
+**Candidate:** ...   um,   it's   a-   it's   a   very,   um,   fractured   market   right   now,   um,   and   a   lot   of   the   streaming   services   are   offering,   uh,   a   month   free,   three   months   free,   things   like   that.   So,   we   could   potentially,   um,   make   our   customers   unhappy,   and   that   could   lead   into   the   next   one,   which   is   an   increased   churn   rate.  
+**Candidate:** (laughs)   Yeah.  
+**Candidate:** Um,   you   know,   ch-   our   customers   churning   would   eat   into   our   top   line   revenue,   um,   and   not   really   impact   our   costs.   And   so,   that   would   really   hurt   our   profitability.   And   then,   I   think   this   next   one   is   just   bad   publicity.   Um,   again,   with...   this   is   kind   of   a   growth   game   early   on   to   get   people   to   sign   up,   and   so   it   was   very   laissez-faire   allowing   people   to   share   it.   And   if   we're   the   only   streaming   service   that   starts   to   do   this,   um,   it's...   could   lead   to   some   bad   press,   which   would-   would,   you   know,   increase   the   customer   disatis-   satisfaction   and   the-   the   churn   rate,   potentially.  
+**Candidate:** Great.   Yeah.   Love   it.   I   think   that   all   makes   a   lot   of   sense.   Um-  
+**Candidate:** Yeah.  
+**Candidate:** ...   I   guess,   last   point   then   is   around   how   we-   how   we   can   mitigate   some   of   these-   these   risks   that   we   talked   about.   I-   I   want   to-   to   move   into,   like,   an   implementation   plan,   or-   or   how-  
+**Candidate:** Yeah.  
+**Candidate:** ...   how   you   would   recommend   implementing   these.   Um-  
+**Candidate:** I   just-  
+**Candidate:** ...   do   you   have   a-   a   sense   of   how   you   would   do   that?  
+**Candidate:** Yeah.   So,   I   think   the   first   part,   um...   I'm   thinking   about   this   in-   in   four   parts.   I   think   the   first   part   is   I   would   want   to   do   some   market   testing   to   understand,   um,   how   customers   would   feel   about   some   of   these   ideas-  
+**Candidate:** Mm-hmm.  
+**Candidate:** ...   as   well   as   which   ones   would   lead   them   to   limit   their   password   sharing.   So,   some   of   this   would   be,   I   think,   some   beta   testing,   but   some   of   it   would   really   be,   um,   just   trying   to   figure   out   what's   gonna   be   effective   without,   um,   leading   to   that   churn.   Uh,   the   next   is   gonna   be,   uh,   a   tech-   a   technical   solution   development.   Um,   so   that's   where   we're   actually,   you   know,   building   in,   uh,   the   ability   to   limit   IP   addresses,   say.  
+**Candidate:** Mm-hmm.  
+**Candidate:** Um,   and   then   the   next   one   is   we're   gonna   have   to   communicate   this,   uh,   and   plan   the   PR.  
+**Candidate:** Okay.  
+**Candidate:** And   so,   we   really   want   to   start   testing   the   messaging   that   we're   putting   out   well   in   advance,   um,   to   figure   out   how   our   users   are   gonna   react,   and   maybe,   um,   start   building   up,   uh,   some-   some   good   stories   in   our   pipelines,   maybe   some   new   shows,   some   new   movies   that   will   drop,   um,   to   sort   of   take   away   from   that   bad   press.  
+**Candidate:** Mm-hmm.  
+**Candidate:** And   then,   the   next   one   is   gonna   be   that   implementation   and   measurement.   We   wanna   see,   um,   in   the   first......   100   days,   50   days   after   the   rollout.   Um,   how   many   people   are   still   password   sharing?   Um,   are   we   seeing   an   increase   in   churn?   Um,   are   we   seeing   actually   a   growth,   um,   and   what   can   we   do   to   mitigate   that   so   that   we're   not   compounding,   um,   the,   the   current   problems   that   we're   facing?  
+**Candidate:** Got   it.   That   makes   sense.   I   really   like   those   four   points   for,   for   an   implementation   plan.  
+**Candidate:** Mm-hmm.  
+**Candidate:** Do   you   have   a   sense   of   how   long   each   of   those   would   take,   or   what   the   total   kind   of   roadmap   timeline   would   look   like?  
+**Candidate:** Yeah,   um,   you   know,   I   think   that's   a   good,   good   question.   Um,   I   think   from   a   technical   solution   development,   uh,   or   so   for   the   first   part,   market   testing,   I   think   that   would   be-  
+**Candidate:** Mm-hmm.  
+**Candidate:** ...   I   would   allocate   about   a   month.   Um,   and   I   think   the,   uh,   the   technical   solution   development,   um,   we've   got   a   really   strong   team   of   software   engineers   here,   so   I'm   gonna   say,   um,   let's   say   three   months   is,   is   enough   time.   Um,   and   while   that's   going   on,   we   can   already   start   developing   the   communication.   I   think   those   can   kind   of   be   going   on,   um,   at   about   the   same   time.   So   I   would   say   for   about   a   month   of   pre-planning,   three   months   for   the,   the,   uh,   development   and   the   communications,   and   then   that   implementation   is   gonna   be,   um,   two   months   where   we're,   we're   implementing   and   we're   measuring   at   the   same   time.   So   all   in   all,   about   six   months.  
+**Candidate:** Got   it.   That   makes   sense.   That   makes   sense.  
+**Candidate:** Yeah.  
+**Candidate:** That,   that   feels   like   a   realistic   timeline.  
+**Candidate:** Yeah.  
+**Candidate:** Okay.   Awesome.   Well,   we've   covered   a   lot   here,   actually.   Um,   so   yeah,   we,   we've   thrown   out   some   great   ideas.   Um,   I'm   hoping   you   can   give   me   a   final   synthesis   and   recommendation   on   how   Netfilm   should   approach   their   declining   profitability.  
+**Candidate:** Uh,   absolutely.   Do   you   mind   giving   me   just   one   minute   to   organize   my   thoughts?  
+**Candidate:** Yeah,   of   course.   Yeah.  
+**Candidate:** Okay,   great.   So   Nutfilm   is   facing   a   declining,   uh,   profitability.   Um,   we,   I   looked   both   at   the   revenue   and   the   cost   trends,   um,   and   dov-   dove   into   their,   some   of   their   data.   And   it   looks   to   me   that   the   issue   is   a   top   line   revenue   growth,   and   this   seems   to   be   driven,   um,   by   password   sharing.   And   so   ultimately,   I   think   Netfilm   needs   to   come   up   with   a   way   to   limit   users'   ability   to   password   share.   I   think   with   devices,   it   would   be   the   most,   um,   limiting   the   number   of   devices   within   a   certain   time   period   would   be   the   most   effective   strategy.   Um,   and   ultimately,   this   is   gonna   potentially   lead   to   higher   churn   rate,   um,   but   I   think   if   we   are   able   to,   uh,   increase   good   content   and   good   stories   about   the   company,   um,   while   we're   planning   this   rollout   over   the   next   six   months,   that   we   can   mitigate   this   risk.  
+**Candidate:** Great.   I   love   it.   Okay,   that's   the   end   of   the   case.   How   did   you   feel   about   that?  
+**Candidate:** Good.   I   thought   it   was   a,   a   pretty   straightforward   case.   I   liked   that   it   had,   um,   some   quant   analysis,   it   had   some   data   that   led   from,   you   know,   figuring   out   one   part   to   the   next,   um,   and   some   really   interesting   brainstorms.  
+**Candidate:** Yeah,   no,   I   agree,   and   I   think   you   did   a   great   job   on   the   case.   Um,   when   I   think   about   the   different   sections   of   it,   like   upfront,   your   structure,   I   thought   was   really   good.   You   asked   some   really   insightful   questions   as   well   before   you   dove   into   that.   Um,   and   then   when   we   got   to   the   quant   section,   I   really   liked   how   you   did,   uh,   what's   called   clearing   the   chart,   right?   So   you   get...   there   was   three   tables   that   you   were   presented   with.   There's   a   lot   of   numbers,   a   lot   of   data   in   there,   and   it   can   feel   kind   of   overwhelming,   but   you   did   a   really   good   job   of   taking   it   step   by   step,   talking   me   through   what   you   were   seeing,   uh,   in   a   very   logical   way.   So   I   knew   what   you   were   thinking,   I   knew   the   numbers   you   were   looking   at,   and   when   you,   you   pulled   the   insights   together   from   those   charts,   I   knew   exactly   where   that   came   from.   So   that   was   really   good.   And   then   when   you   were   doing   the   calculations   as   well,   you,   you   talked   me   through   the   math   really   well.   Um,   I   think   this   is   a   really   important   skill   for   everyone   to   have   and   to,   to   develop,   especially   if   you're   interviewing,   um,   over   Zoom   and   not   in   person.   Um,   just   being,   being   really   good   about   verbal   communication   of   the   math   and   the   steps   that   you're   doing.   Um,   and   then   moving   into   the   brainstorming,   I,   I   think   you   had   really   good   structure   in   that   first   question   three.   Um,   it   had   some,   some   really   great   ideas   that   you   pulled   out   because   of   that   structure   as   well.   Um,   and   then,   yeah,   your,   your   final   synthesis   I   think   wrapped   it   up   all   really   nicely.   Um,   I,   I   didn't   see   very   much   that   I   think   you   could   improve   on.   I   think   the   only   thing   is   question   number   four,   it   was   that   second   brainstorming   piece,   um,   around   the   risks   of   your   ideas   to   limit   account   sharing.   Um,   I,   I   think   it,   it   felt   a   little   bit   unstructured,   like   you   just   kind   of   pulled   out   some,   some   ideas   that   didn't   have   much   of   a   structure   to   it.   But,   um,   the   ideas   you   pulled   out   I   think   were   still   great,   and   the   initial   framework   you   had   in   question   three   before   it   was   solid,   so   it   didn't   feel   like   a   big   deal   to   me   that   there   was   less   structure   in   question   four.   But   I,   I   think   that's   one   area   you   could   improve   on,   but,   uh,   that,   you   know,   that's   something   you   might   expect   from,   from   the   most   advanced   candidates.  
+**Candidate:** Okay.  
+**Candidate:** But,   uh-  
+**Candidate:** That's,   that's   some   really   good   advice.  
+**Candidate:** Yeah,   overall,   I   think   you   did   fantastic   on   the   case.  
+**Candidate:** Great.  
+**Candidate:** A-   anything   else   to   add   on   your   end,   Matty?  
+**Candidate:** No,   I   think,   um,   that   that's   great   feedback,   and,   uh,   I   think   I'll   work   on,   on   how   I   can   sort   of   use,   uh,   maybe   a   common   framework   for   both   brainstorms   or,   or   match   one   up,   um,   as   I   continue   to   work   on   this.  
+**Interviewer:** Hey,   everyone.   It's   Kenton   Kivestry   here,   the   founder   of   RocketBlocks.   Thank   you   so   much   for   watching   this   mock   interview   video.   I   hope   you   found   it   informative   and   helpful   as   you   are   getting   ready   to   prepare   for   your   own   interviews   and   hopefully   landing   that   job   offer   you   are   excited   about.   We   have   a   ton   of   great   content   on   the   RocketBlocks   channel   coming   out   on   a   weekly   basis,   mock   interviews,   mini   lessons,   and   chats   with   our   RocketBlocks   experts.   So   if   you   haven't   subscribed   yet   already,   please   do   so.   There   is   a   big   red   button   below,   and   if   you   hit   that,   you'll   get   all   of   our   content   as   soon   as   it   comes   out.   Thanks   for   watching   and   have   a   great   day.

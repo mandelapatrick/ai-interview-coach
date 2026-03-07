@@ -1,0 +1,117 @@
+Case: snack foods acquisition (w/ BCG Consultant & Darden MBA)
+Case Type: M&A
+Firm: BCG
+Channel: RocketBlocks
+URL: https://www.youtube.com/watch?v=8ccjXLYTcSM
+============================================================
+
+**Interviewer:** Hello,   everyone.   My   name   is   Kenton   Covestu.   I'm   an   ex-BCG   consultant,   ex-Googler,   and   the   founder   of   RocketBlocks,   an   online   platform   that   helps   candidates   prepare   for   interviews.   In   today's   RocketBlocks   video,   we've   got   an   awesome   mock   case   interview   featuring   two   of   our   RocketBlocks   experts.   Yatharth   Sharma   is   a   graduate   of   the   Booth   School   of   Business   and   a   BCG   consultant.   And   Daniela   Fernandez   is   a   graduate   of   the   Darden   School   of   Business   and   an   incoming   BCG   consultant.   The   case   that   they're   working   through   is   a   fun   case   as   well.   It's   about   one   snack   food   company,   a   peanut   company,   thinking   about   acquiring   another   snack   food   company   focused   on   the   almond   space.   There's   a   lot   of   fun   market   sizing,   profitability   aspects   to   this   case,   so   let's   go   ahead   and   jump   in.  
+**Candidate:** Hey,   Daniela.   Uh,   thanks   for   taking   out   the   time.   And,   uh,   for   the   folks,   uh,   listening   in,   uh,   my   name's   Yatharth,   and,   uh,   I   am   a   consultant   at   BCG   Chicago.  
+**Candidate:** Hi,   everyone.   I   am   Daniela.   I   am   a   Darden   MBA,   and   I'm   an   incoming   consultant   at   BCG.  
+**Candidate:** Awesome.   Thanks   for   taking   out   the   time,   Daniela.   Uh,   super   excited   to,   uh,   run   this   case   with   you.   So   if   you're   ready,   here's   your   prompt.  
+**Candidate:** Yes,   let's   do   it.   Thank   you.  
+**Candidate:** Awesome.   Uh,   so   our   client   is   Peanut   Co.,   a   US   snack   foods   company   specializing   in   snacking   peanuts.   They're   planning   to   acquire   another   company   specializing   in   snacking   almonds,   and   that   t-   target   company's   na-   uh,   is   called,   uh,   Almond   Co.   Peanut   Co.   is   currently   the   market   leader   in   snacking   peanuts,   but   the   overall   segment   is   gro-   growing   slowly   compared   to   the   market,   and   they   want   to   diversify.   And   so   they've   hired   us   to   tell   them   whether   this   is   a   good   idea.  
+**Candidate:** All   right.   This   is,   like,   a   very   interesting   case.   I'm   a   big   snacker,   so   I'm   excited   to   jump   into   this.  
+**Candidate:** Nice.  
+**Candidate:** Um,   just   to   make   sure   I   got   it   correctly,   we're   ...   Our   client   is   Peanut   Co.,   they're   a   leader   in   peanuts,   but   they   see   slow   growth,   so   they   came   to   us   to   see   if   they   should   purchase   Almond   Co.   to   diversify.   Is   that   correct?  
+**Candidate:** Mm-hmm.   Yep.  
+**Candidate:** Awesome.   So   I   would   just   love   to   ask   you   a   few   questions,   if   that's   okay.  
+**Candidate:** Mm-hmm.  
+**Candidate:** Um,   the   first   one   is,   what's   their   business   model?   Are   they   vertically   integrated,   are   they   playing   in   other   segments   other   than   peanuts?  
+**Candidate:** Uh,   that's   a   great   question.   So   they   are   focused   only   on   peanuts,   and   they   manage,   uh,   the   retail   and   distribution   and   manufacturing   side.   So   the   supply   side   is   mostly   commoditized,   so   that's   pretty   standard.   Uh,   but   for   the   purposes   of   this   case,   uh,   our   client   is,   uh,   heavy   on   manufacturing,   distribution,   and   retail.  
+**Candidate:** All   right.   That   makes   sense.   Um,   the   second   question   is,   this   slow   growth   trend   that   you   talked   about,   is   it   affecting   the   entire   snacking   industry   or   is   it   just   peanuts?  
+**Candidate:** Uh,   we   are   actually   just   seeing   this   on,   on   peanuts,   so   that's   why   Peanut   Co.   would   like   to   try   out   a   different   area   of   the   snacking   industry.  
+**Candidate:** Interesting.   Well,   I   guess   it   makes   sense   because   almonds   are,   like,   super   foods   and-  
+**Candidate:** Yeah.  
+**Candidate:** ...   they   must   be   growing.   Um,   the   next   one   is   about   the   objective.   So   what   are   s-   what   are   exactly   are   they   looking   at?   Do   they   want   profit,   sales,   or   just   keep   growing?  
+**Candidate:** Uh,   yeah.   Good   question.   So   they   primarily   want   to   diversify   simply   because   they   are   very   concentrated   in   peanuts.   Uh,   but   any   other   reasons   why   this   may   or   may   not   be   a   good   idea,   they   trust   our   advice,   so   please   feel   free   to   suggest   any   other   metrics,   uh,   that   might   be   fitting   in   this   analysis.  
+**Candidate:** Okay.   That's   good.   And   the   last   one,   just   to   clarify,   we're   talking   about   US   only,   right?  
+**Candidate:** Yep.   We   are   talking   about   the   US   markets   only.  
+**Candidate:** Okay,   perfect.   Um,   I   would   love   to   take   a   couple   minutes   just   to   put   my   ideas   in   order   and   then   come   back   to   you,   if   that's   okay.  
+**Candidate:** Yeah.   Sure.   Go   ahead.  
+**Candidate:** All   right.   So   in   order   to   recommend   if   they   should   acquire   Almond   Co.   or   not,   I   think   I   would   look   into   four   different   things.   The   first   one   is   the   almond   market,   the   secon-   the   second   one   would   be   Almond   Co.'s   profitability,   the   third   one   synergies,   and   lastly   what's   the   acquisition   terms.   So   in   terms   of   the   market,   first   I   would   like   to   look   at   the   size   and   trends   of   the   almond   market,   who   are   the   competitors   and   what   are   their   share   of   market   and   also   what's   Almond   Co.'s   share   of   market.   Um,   what   are   the   supplier   dynamics?   You   said   it's   commoditized,   but   I   would   like   to   know   if   ...   what's   their   power,   and   just   what   are   the,   the   power   of   all   the   suppliers.   And   finally,   what's   regulations?
+**Candidate:** Uh,   yeah.   That's   a,   that's   a   great   question.   So   I   think   there   is,   uh,   some   analysis   we   probably   need   to   do   to   understand,   uh,   what   is   the   market   size   of   the   almond   market.   So,   uh,   h-   where   would   you   like   to   get   started?  
+**Candidate:** Okay.   So   to   size   up   the   m-   the   almond   market,   I   think   first   I   would   start   thinking   of   the   US   consumers   of   almonds.   Then   I   would   multiply   that   times   the   packets   or   boxes   that   they   consume   per   week   and   then   per   year.   And   finally,   uh,   what's   the   packet   price,   the   average   packet   price?   When   I'm   thinking   of,   uh,   the   consumers   of   almonds,   I   imagine   that   there   will   be   very   heavy   users   and   very   light   users,   so   I   guess   there   will   be,   like,   different,   um,   amounts   of   packets   that   each   of   these   tiers   consume.  
+**Candidate:** Mm-hmm.  
+**Candidate:** Um,   so   if   that   sounds   right,   I   can   start   putting   numbers   into   that.  
+**Candidate:** Yeah.  
+**Candidate:** Um,   so-  
+**Candidate:** Uh,   that's,   that's   a   good   approach.   Yeah.  
+**Candidate:** Perfect.   So   the   US   population,   I   know   we   are   a   little   bit   over   300   million,   so   I   will   round   it   to   300   million.  
+**Candidate:** That's   all   right.  
+**Candidate:** And   then   for   the   packets,   I   don't   think   I   know   what's   the   average   size   of   an   almond   packet.   So   do   you   have   any   information   about   the   size   and   maybe   the   price?  
+**Candidate:** Yeah.   Absolutely.   So   we   know   that,   uh,   Almond   Co's,   uh,   packet   size   is   16   ounces   per   packet.  
+**Candidate:** Okay.  
+**Candidate:** Um,   they   sell   it   at   a   selling   price   of   $2   per   packet.  
+**Candidate:** Awesome.   Okay.   That's   super   helpful.   Okay.   So,   um,   if   I   had   to   put   numbers   into   the   percentage   of   the   US   population   that   consu-   that   doesn't   consume   a   snack,   just   in   general,   almonds,   I   think   75%   don't   consume   almonds.  
+**Candidate:** Yeah.  
+**Candidate:** But   I   think-  
+**Candidate:** About   three-fourths   of   the   population   just   does   not   consume   almonds.   Yeah.  
+**Candidate:** Awesome.   Okay.  
+**Candidate:** That's,   that's   reasonable.   Yeah.  
+**Candidate:** And   that   would   make,   um,   one-fourth   of   the   population   consuming   almonds.   And   from   this,   20,   25%,   I   would   say   maybe   10%   are   light   consumers,   maybe   another   10%   are   moderate,   um,   and   I   know   there's   people   who   really   consume   a   lot   of   almonds.   My   boyfriend   is   one   of   them.  
+**Candidate:** (laughs)  
+**Candidate:** So   I   think   that   it's   5%   of   the   population   who   are   very   heavy   into   that.  
+**Candidate:** Yeah.   I   think,   I   think   that's   a,   that's   a   reasonable,   that's   a   very   reasonable   way   of,   uh,   essentially   segmenting   the   market.   Uh,   so   yeah,   uh,   for,   for   more   clarity,   uh,   what   sort   of,   uh,   what   sort   of   consumption   are   you   thinking   in   each   of   these   categories?  
+**Candidate:** Yeah.   I   would   like   to   define   that   too.   So,   um,   I   think   casual   consumers   could   maybe   consume   two   packets   per   month.   So   if   it's   16   ounces-  
+**Candidate:** Yeah.  
+**Candidate:** ...   I   am   thinking   that   maybe,   yeah,   in   a   week   they   would   eat   half   of   it.  
+**Candidate:** Yeah.   Yeah.  
+**Candidate:** Very,   very   lightly.  
+**Candidate:** Yeah.  
+**Candidate:** So   I   think   that,   um-  
+**Candidate:** Makes   sense.  
+**Candidate:** ...   conservative.  
+**Candidate:** Mm-hmm.  
+**Candidate:** Then   moderate.   Moderate   consumers,   maybe   one   packet   per   week,   so   that   would   be   like   60   packets   per   year.   Um...  
+**Candidate:** Yeah.  
+**Candidate:** And   then   for   the   very   frequent   consumers,   so   I,   I   think   I'm   even   thinking   10   packets   per   month.  
+**Candidate:** Mm-hmm.  
+**Candidate:** Just   taking   the   benchmark   that   I   know,   um,   I   think   he   eats,   yeah,   probably,   probably   like   two   packets   per   week.   (laughs)  
+**Candidate:** Yeah.   Yeah.   That   makes   sense.   That   makes   sense.  
+**Candidate:** All   right.   So   that'd   be   120   packets   per   year   for   frequent   consumers.   So   just   to,   to,   um,   summarize,   10%   casual   consumers,   10%   moderate,   10%   frequent.   The   casual   consume   25   packets   per   year,   moderate   60   packets   per   year,   and   frequent   120   packets   per   year.  
+**Candidate:** Mm-hmm.  
+**Candidate:** Okay.   So,   um,   now   I   will   take   what   percentage   of   the   population   would   be   the   total   number   of   people   who   actually,   uh,   purchase   these   packets.  
+**Candidate:** Mm-hmm.  
+**Candidate:** So   10%   of   the   300   million   would   be   30   million.  
+**Candidate:** Mm-hmm.  
+**Candidate:** And   5%   would   be   15   million.  
+**Candidate:** All   right.  
+**Candidate:** So   if   I   multiply   this   times   the   packets   that   I   said   that   they   consume   per   year,   it   would   be   for   the   casual   consumers   30   million   times   25,   that   would   be   750   million   packets   per   year.  
+**Candidate:** All   right.  
+**Candidate:** Okay.   For   the   moderate   consumers,   um,   30   million   people   consuming   60   packets   per   year,   that   would   give   me   1800   million   packets   per   year.  
+**Candidate:** All   right.  
+**Candidate:** And   finally,   for   the   very   frequent   consumers,   I   would   multiply   the   15   million   people   consuming   120   packets   per   year.   That   would   give   me   again   1800   packets   per   year.   Okay.   So   if   I   add   up   all   these   packets,   it   is   4.5   billion   packets.   Um,   can   I   round   that   up   to   five   billion   packets   just   to   simplify?  
+**Candidate:** Uh,   yeah.   Yeah.   Let's   consider   there   might   be   certain   outliers,   certain   outliers   from   the   th-   three-fourths   of   the   population   that   does   not   consume.   So   yeah.   Uh,   makes   sense.  
+**Candidate:** Yeah.  
+**Candidate:** Let's   round   it   up   to   five   billion.  
+**Candidate:** Okay.   Sounds   good.   Um,   so   if   I   multiply   that   times   the   $2   per   packet   that   you   mentioned,   the   total   market   size   will   be   up   to   $10   billion   per   year.  
+**Candidate:** Mm-hmm.  
+**Candidate:** So   I   think   this,   this   can   sound   attractive.   Obviously,   I   would   love   to   test,   um,   some   of   these   numbers   further.   Um,   but   the   potential   Almond   Co   won't   have   100%   of   this   market   share.   So   I   would   like   to   know   what's   their   market   share,   if   you   have   any   information   about   that.  
+**Candidate:** Yeah.   We   know   that   Almond   Go's   market   share   is   10%   as   of   today.
+**Candidate:** Okay.   So   10%   of   the   10   billion,   that   means   that   their   annual   revenues   is   one   billion.   Um,   so   this   sounds   good.   And   in   order   to   get   a   metric   like   a   payback   period,   I   would   love   to   know   what's   their   margin.   So   do,   do   we   have   any   information   about   their   profitability?  
+**Candidate:** Yeah,   yeah.   They   are,   uh,   at   an,   uh,   at   a   profit   margin   of   50%.   Five   zero   percent.  
+**Candidate:** 50,   okay.   So   50%   of   the   one   billion   is   500   million   and   that's   their   annual   profits.   Um,   so   are   we   considering   any   annual   growth   rate   of   this   share   of   market?  
+**Candidate:** That's   a   great   question.   Uh,   for   this   analysis,   let's   assume   constant   growth,   uh,   instead-  
+**Candidate:** Con-  
+**Candidate:** ...   of   like   any...   Uh,   sorry,   uh,   let   me   rephrase.   Let's   assume   constant   market   size   instead   of   any   growth   rate.  
+**Candidate:** Okay,   so   they   keep   their   10%   year   after   year,   right?  
+**Candidate:** Yes,   yes.  
+**Candidate:** Okay,   that   makes   sense.   All   right,   so   I   think   the   only   thing   that   I   miss   right   now   to   get   the   payback   period   is   what's   the   purchase   price.   Do   we   have   any   information   about   that?  
+**Candidate:** Yeah.   So   the   purchase   price,   uh,   that   is   being   asked   is   $1.5   billion.  
+**Candidate:** Perfect.   Okay,   so   now   I   have   everything   that   I   need.   So   to   get   the   payback   period,   I   will   divide   1.5   billion   over   the   500   million   that   we   got   from   margin.   Um,   so   if   I   do   that   division,   it   gives   me   three.   So   the   payback   period   is   three   years.   I   think   this   seems   like   a   very   reasonable   time   to   get   the   investment   bang,   payback.   I   just   think   that   there's   many   risks   and   opportunities   that   we   still   have   to   consider.  
+**Candidate:** Okay,   that,   that   makes   sense.   Uh,   before   we,   uh,   talk   about   further   opportunities   or   risks,   uh,   I   think   along   the   same   lines,   you   mentioned,   uh,   certain,   uh,   assumptions   that   you   wanted   to   understand   a   little   bit   further   a,   a   moment   ago.   So   what   are   the   assumptions   that   you   are   most   uncomfortable   with   and   which   ones   would   you   like   to   test   further?  
+**Candidate:** Yeah.   I   think   first,   the   purchase   price.   I   just   would   like   to   check   how   they   got   to   the   1.5   billion,   what's   their   valuation,   what   methods   did   they   use.   Uh,   and   also   having...   I   know   we   did   it   for   simplifying   it,   but   having   a   constant   share   of   market   year   after   year   seems   a   little   bit   unrealistic   and   more   knowing   that   the   snacking   market   is   growing   so   fast.   So   I   would,   I   would   like   to   test   that.  
+**Candidate:** Awesome.   And   that   actually   helps   us,   uh,   go   into   the   next   part,   uh,   of   this,   uh,   interview,   uh,   which   we   wanna   understand,   uh,   in   which   we   wanna   understand,   uh,   what   else   would   you   want   to   consider   given   Peanut   Co.'s   existing   snack   nuts   business?  
+**Candidate:** Okay.   So   I   think   I   would   like   to   consider   two   things,   and   I   am   thinking   of   the   positives   and   the   negatives,   so   benefits   and   maybe   risks.  
+**Candidate:** Mm-hmm.  
+**Candidate:** For   the   benefits,   I   think   that,   um,   we   can   really   take   advantage   of   this   from   a   client   perspective   and   sales   perspective.   We   have   our   current   clients   and   also   we   will   get   AlmondCo.'s.   Also,   I   think   they   could   explore   new   businesses   like   restaurants   or   more   industrial   clients.   Um,   also,   I'm   thinking   of   distribution   and   packaging.   So   there's   a   lot   of   cost   reduction   opportunities   which   can   be   attractive.  
+**Candidate:** Mm-hmm.  
+**Candidate:** And   finally,   innovation.   Now   that   we   have   both,   what   if   we   explore   new   flavors?   What   if   we   do,   we   do   a   trail   mix?   We   can   also   do   bigger   formats,   smaller   formats,   even   start   doing   flour   and   peanut   butter   and   almond   butter,   et   cetera.  
+**Candidate:** Yeah.  
+**Candidate:** Um,   so   that's   for   the   benefits.   And   for   the   risk   part,   I   think,   um...   So   you   mentioned   that   we   are   market   leaders   in   peanuts.   And   it   seems   like   Almond,   uh,   AlmondCo.   only   has   10%.   So   is   this   going   to   affect   our   brand   perception?   And   also,   is   there   any   kind   of   alienation?   At   the   end   of   the   day,   it's   the   same   consuming   opportunity,   right?   To   have   one   snack   or   the   other.   So   will   consumers   start   choosing   one   over   the   other?   Uh,   yeah,   I   think   those   are   the   main   benefits   and   risks   that   I   can   think   of.  
+**Candidate:** Awesome,   awesome.   So   with   all   of   that,   uh,   now   we,   we'll   be   walking   into   the   room   with   the   CEO.   So   what   would   be   your   recommendation   to   the   CEO   of   Peanut   Co.?  
+**Candidate:** All   right.   So   my   recommendation   is   let's   go   for   it   and   acquire   AlmondCo.,   um,   because   the   payback   period   is   three   years,   which   i-   which   seems   very   reasonable.   Also,   we   have   the   right   to   win   in   this   segment   because   we're   already   playing   in   snacks,   and   peanuts   is   very   adjacent,   uh,   segment.   And   there's   a   lot   of   potential   synergies   in   operation,   sales,   cost   reductions.   Um,   the   risk   that   I   am   thinking   of   is   kind   of   cannibalization,   our   current   sales.   And   also,   they,   there   may   be   a   potential   brand   dilution.   But   to   mitigate   this,   my   next   steps   recommendation   would   be   to   design   a   very   robust   marketing   strategy   to   evaluate   other   snacking   segments.   Maybe   it's   not   almonds   and   maybe   it's   something   else.   And   finally,   just   check   the   purchase   price   that   they're   proposing,   because   we   may   get   a   better   deal.  
+**Candidate:** Right,   yeah,   that,   that   makes   a   ton   of   sense.   So   thank   you   so   much   for   this,   uh,   analysis,   Daniela.   It   was   a   pleasure   working   with   you.   Cheers.  
+**Candidate:** Thank   you,   Yatharth.  
+**Interviewer:** Hey,   everyone.   It's   Kenton   Covesti   here,   the   founder   of   RocketBlocks.   Thank   you   so   much   for   watching   this   mock   interview   video.   I   hope   you   found   it   informative   and   helpful   as   you   are   getting   ready   to   prepare   for   your   own   interviews   and   hopefully   landing   that   job   offer   you   are   excited   about.   We   have   a   ton   of   great   content   on   the   RocketBlocks   channel   coming   out   on   a   weekly   basis,   mock   interviews,   mini   lessons,   and   chats   with   our   RocketBlocks   experts.   So   if   you   haven't   subscribed   yet   already,   please   do   so.   There   is   a   big   red   button   below.   And   if   you   hit   that,   you'll   get   all   of   our   content   as   soon   as   it   comes   out.   Thanks   for   watching   and   have   a   great   day.

@@ -1,0 +1,137 @@
+Case: Chewing Gum
+Case Type: Strategic Decision
+Firm: Accenture
+Channel: Management Consulted
+URL: https://www.youtube.com/watch?v=CAo26IRZXj0
+============================================================
+
+**Interviewer:** I   have   got   a   great   case   for   you.  
+**Candidate:** All   right.  
+**Interviewer:** We're   gonna   do   a   market   sizing   case.  
+**Candidate:** Okay,   sounds   good.  
+**Interviewer:** All   right?   M-   so,   uh,   let's   dive   in.  
+**Candidate:** Okay.  
+**Interviewer:** I   would   like   for   you   to   size   the   market   for   chewing   gum   in   the   United   States.  
+**Candidate:** Chewing   gum   in   the   United   States?  
+**Interviewer:** Yes.  
+**Candidate:** In   dollars?  
+**Interviewer:** Absolutely.   (instrumental music)  
+**Candidate:** Okay.   So,   I   wanna   take   a   multiple   step   approach   to   this.  
+**Interviewer:** Awesome.  
+**Candidate:** So,   first   of   all,   I   wanna   look   at   the   population   of   the   United   States.  
+**Interviewer:** Okay.  
+**Candidate:** You   could   do   households,   but   I   think   population's   gonna   be   a   little   bit   easier   here   and   a   little   bit   more   accurate.  
+**Interviewer:** Do   you   share   gum   with   people   in   your   household?  
+**Candidate:** Not   really,   no.   It's   my   gum.   They   can   get   their   own.  
+**Interviewer:** (laughs)  
+**Candidate:** (laughs)  
+**Interviewer:** That's   probably   good   to   know.   Awesome.  
+**Candidate:** Yeah.   Um,   once   I   know   the   population   of   the   United   States,   then   I   wanna   segment   it   into...   I'm,   I   think   I'm   gonna   go   with   age   group   today.  
+**Interviewer:** Okay.  
+**Candidate:** Um,   and   so   I   will-  
+**Interviewer:** Why?  
+**Candidate:** Uh,   I   think   that's   gonna   be   the   most   meaty   way   to   do   it,   instead   of,   oh,   I'm   your   frequent   gum   chewer,   I'm   your   infrequent   gum   chewer.   Um,   it's   probably   too   hard   to   ma-   it's...   I'll   be   too   general   if   I   make   an   estimation   based   on   wage   and   I   think   age   group   is   the   easiest   way   for   me   to   make   an   accurate   prediction.  
+**Interviewer:** Okay,   makes   sense.  
+**Candidate:** From   there,   I   then   want   to   estimate   the   proportions   in   terms   of,   okay,   uh,   this   age   group   ch-   chews   gum,   uh,   this   amount   of   times   per   year.   And   then   after   that,   I   wanna   find   the   average...   estimate   the   average   price   of   a   s-   of   a   packet   of   gum   and   then   we'll   go   from   there.  
+**Interviewer:** Okay.  
+**Candidate:** Perfect.   Okay,   so   to   start   off,   I'm   gonna   estimate   that   the   US   population   is   330   million,   if   you're   okay   with   that.  
+**Interviewer:** Okay.  
+**Candidate:** And   then   I'm   gonna   segment   it   into   four   age   groups.  
+**Interviewer:** Okay.  
+**Candidate:** So,   I'm   gonna   do   0   to   20,   and   then   do   21   to   40.   I'm   gonna   do   41   to   60,   I'm   gonna   do   60,   um,   plus.  
+**Interviewer:** 60   plus?  
+**Candidate:** Oh,   61   plus.   Good   catch.   Okay,   so   now   that   I've   got   the   age   groups,   I'm   gonna   talk   about   how,   what   percentage   of   the   population   falls   into   each   of   them.   I'm   actually   just   gonna   assume   it's   pretty   much   25   across   the   board.  
+**Interviewer:** Okay.  
+**Candidate:** Okay.   Now,   once   we've   done   this,   I   want   to   estimate   how   often   they   are   actually   going   to   be   eating   gum.  
+**Interviewer:** Okay.  
+**Candidate:** I'm   gonna   say   0   to   20   is   gonna   be   on   the   lower   end.  
+**Interviewer:** Eating   gum?  
+**Candidate:** Or,   uh,   exactly-  
+**Interviewer:** (laughs)  
+**Candidate:** ...   chewing   gum.   And   that's   precisely   why   0   to   20   is   gonna   be   lower,   because   you're   not   gonna   give   gum   to   a   five-year-old,   because   they're   gonna   swallow   it.  
+**Interviewer:** Okay.  
+**Candidate:** You   cannot   trust   them.   So,   I'm   gonna   assume   that,   um...   And   the   way   I'm,   the   way   I'm   actually   gonna   do   this   is   I'm   gonna   do,   um,   like,   15,   10   to,   10   to   20   range.  
+**Interviewer:** Okay.  
+**Candidate:** And   then   just   kind   of   halve   that   as   we,   as   we   average   it   out.  
+**Interviewer:** Okay.  
+**Candidate:** And   so   from   the   age   of   10   to   20,   I   think   these   are   gonna   be...   These   first   two   categories   are   gonna   be   the   most   prominent   gum   chewers.  
+**Interviewer:** Okay.  
+**Candidate:** I   think   as   you   get   older,   that's   maybe   something   you   do   a   little   bit   less.  
+**Interviewer:** Okay.  
+**Candidate:** Um,   it's   a   lot   more   popular   when   you're,   when   you're   younger.   And   so,   especially   in   the...   in,   from   the   ages   of   10   to   20,   I'm   gonna   say   these   people   are   having   a   pack   of   gum   every   week.  
+**Interviewer:** Okay.  
+**Candidate:** I   think   that's,   that's   about,   about   right.   And   so   what   that   means   is-  
+**Interviewer:** Everyone   is?  
+**Candidate:** Ev-   Well,   from   10   to   20,   so   I'm   gonna   average   it   down   to-  
+**Interviewer:** Everyone   who's   10   to   20?  
+**Candidate:** I'm   gonna   say   everyone   who's   10   to   20   on   average.   I   think   there's   a   lot   of   people   that   don't   have   gum,   but   there's   a   lot   of   people   that   have   it   way   more   than...   They'll   go   through   a   pack   of   gum   in,   in   two   or   three   days.  
+**Interviewer:** Okay.  
+**Candidate:** And   so   what   I'm   gonna   do   there   is   I'm   gonna   average   that   out   over   0   to   20   and   have   0.5   packs   per   week.   And   one   thing   we   can   do   here   is   I   could   either   multiply   this   by   52   right   now   and   do   it   per   year,   or   we   can   do   that   at   the   end.   And   I   think   I'm   gonna   do   it   at   the   end.   In   terms   of   our   21   to   40,   I   think   this   is   gonna   be   probably   closer   to   that   one   pack   of   gum   a   week.   Um,   I   think   there's   a   lot   of   people   who,   again,   chew,   chew   more   frequently,   there's   a   lot   of   people   who   chew   a   little   bit   less.   Um,   but   I   think   the   conservative   estimate   is   about   one   pack   of   gum   a   week.   Um,   I   have   a   lot   of   friends   in   this   age   group   who   ha-   who   eat   gum   whenever   I   see   them,   and   so...   but   I   also   know   people   who   don't   have   it   as   frequently.   So,   I'm   gonna   say   that's   one   per   week.   In   terms   of   41   to   60,   I   think   this   is   where   it   gets   a   lot   lower.   I...   My   parents   I   think   will,   will   chew   gum,   but   pretty   rarely.   So,   I'm   actually   gonna   put   this   as,   like,   0.1   packs   a   week.  
+**Interviewer:** Okay.  
+**Candidate:** I   think   this   is   way   less   frequent.   And   61   plus,   I,   I've   actually   never   met   anyone,   61   plus,   who's   chewed   gum.   I'm   not   gonna   go   with   zero,   because   I   think   that's   a   little   bit,   uh,   brash,   especially   when   we've   got   25%   of   the   population   here.   But   I'm   gonna   go,   I'm   gonna   go   also   0.1.  
+**Interviewer:** Okay.  
+**Candidate:** I'm   gonna   account   for   some   people   who   maybe   have   kept   it   up   since   childhood,   but   that's   it.  
+**Interviewer:** Okay.  
+**Candidate:** So   now,   I   wanna   calculate   the   actual   numbers   associated   with   all   of   these.   So   let's   start   with   0   to   20.   These   are   all   25%   of   the   population.   And   so   to   calculate   25   of   330   million,   we'll   just   do   half   and   half.   So,   half   is   gonna   be   165   million,   and   then   half   of   165   million,   um-  
+**Interviewer:** Why   don't   we   start   with   320?   I   think   it'll   make   the   math   a   lot   easier.  
+**Candidate:** Should   we   do   320?  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Okay,   that   sounds   good.  
+**Interviewer:** And   I   think   that's   actually   close   to   the   last   census   as   well.  
+**Candidate:** Yes.   Oh,   great.   So,   half   of   320   million   is   160   million.   Half   of   160   million   is   80   million.   So,   we   know   in   all   of   these,   there   is   80   million.   And   then,   in   terms   of   the   actual   calculations,   we   can   know   that,   um,   0.5   packs   a   week   by   80   million   is   40   million   packs   a   week.   Now,   this   is   already   sounding   like   a   lot   of   packets   of   gum   inside,   so   it's   gonna   be   interesting   what   our   number   is   at   the   end.  
+**Interviewer:** Okay.  
+**Candidate:** I   just   want   to   call   that   out.   Um,   40   million   packs   of   gum   a   week   and   we...   I'm   gonna   multiply   by   50   instead   of   52,   just   to   make   it-  
+**Interviewer:** Okay.  
+**Candidate:** ...   a   little   bit   easier.  
+**Interviewer:** Makes   sense.  
+**Candidate:** Um,   40   million   multiplied   by   5   is   200   million,   so   multiplied   by   50   is   2   billion.In   terms   of   our,   um,   21   to   40,   we've   also   got   80   million   and   that's   80   million   packs   a   week,   because   it's   just   multiplied   by   one.   So   that's   actually   just   going   to   be   double   this,   and   that's   going   to   be   4   billion.   We   also   know   that   the   next   two,   and   this   actually   has   worked   out   really   conveniently,   um,   are   just   10%   of   this,   so   these   are   both   .4   billion.  
+**Interviewer:** 400   million.   Mm-hmm.  
+**Candidate:** Correct.   And   so   if   we   add   all   of   these   up,   we   get   6.8   billion,   and   then   the   last   step   would   be   to   calculate   how   much   a   packet   of   gum   is   and   then   multiply   it   out   for   the   total   market   size.  
+**Interviewer:** Okay.   Mm-hmm.  
+**Candidate:** I'm   going   to   say,   unfortunately,   in   America   it's   the   most   cheap   in   England.   In   England,   it's   about   60p   for   a,   for   a   packet   of   gum.   I   think   over   here   it's   a   little   bit   closer   to   like   a   $1.50,   $2.00.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Um,   I-   I   think   it   might...   I'm,   I   might   have   even   seen   it   higher.   I'm   happy   to   go   with   two,   um,   or   1.5.   I   think   I'm   gonna   go   with   1.5   just   because   that   feels   more   accurate,   even   though   it's   a   bit   more   of   a   calculation.  
+**Interviewer:** Okay.   Mm-hmm.  
+**Candidate:** So   1.5   multiplied   by   6.8   is   just   6.8   plus   half   of   that,   which   is   3.4,   and   if   we   add   those   up,   we'll   get   $10.2   billion   for   our   total   market   size   for   chewing   gum,   which   as   a   reality   check   is,   is   a   lot   of   money,   um,   but   to   be   fair,   I'm,   I'm...   it   makes   sense.   I'm   not   super   shocked   by   it,   but   I   also...   I   wouldn't   have   been   surprised   if   it   was   lower.  
+**Interviewer:** Okay,   awesome.   If   it   was   lower,   if   we've   overestimated,   how   have   you   done   that?  
+**Candidate:** Um,   I   think   probably   in   terms   of   overestimating   how   many   packets   of   gum   a   week.   I   don't   think   it   would   necessarily   be   on   the   price   too   much.   I   don't   think   it's   the,   the   breakdown   of   the   demographics.   I   think   it   would   have   to   be   in   terms   of   how   many   packets   of   gum   a   week   we're   saying,   and   I   think   that   that's   probably   coming   from...   probably   coming   from   these   first   two.   I   think   having,   having   it   in,   having   it   in   weeks   instead   of   months   was   maybe   an   issue   there.   I   think   going   back   in   months,   I   think   probably   0   to   20   might   be   closer   to,   to   that   one   or   two   a   month   instead   of   0.5   a   week.  
+**Interviewer:** Right,   I   think   that   makes   sense.   I   also   think,   uh,   that   there   could   have   been   an   opportunity   here.   By   the   way,   um,   good   job.  
+**Candidate:** Yeah.  
+**Interviewer:** I'm   gonna,   I'm   gonna   push   back   on   a   couple   of   your   numbers   one   more   time.  
+**Candidate:** Yeah.  
+**Interviewer:** Um,   uh,   I   think   there   could   have   been   an   opportunity   here   for   you   to   isolate   out   in   each   of   the   segments   what   percentage   of   people   chew   gum.  
+**Candidate:** Okay.  
+**Interviewer:** Because   the-   these   numbers,   it's   hard   to   get   a   feel   of   whether   they're   right   or   not,   because   we   probably...   and   probably   in   reality   if   we   were   spreadsheeting   this-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   or   doing   it   in   consulting,   we   would   have   thought   about   it   by   saying,   "Look,   out   of   the   25%,   out   of   the   80   million   in   each   segment,   what   percentage   of   0   to   20   year   olds   chew   gum?"   Okay.  
+**Candidate:** Yeah,   that's   a   really   good   point.  
+**Interviewer:** So   very   small   percentage   of   0   to   10,   but   also   11   to   20,   it's   not   100%   of   those,   right?  
+**Candidate:** Yeah.  
+**Interviewer:** And   so   then   it   would   have   given   us   a   different   granular   number   for   the   frequency.   We,   we   got   to   the   same   weighted   number,   but   it   probably   would   have   been   easier   to   tackle   that   number.  
+**Candidate:** Yes.  
+**Interviewer:** You   also   could   have   just   chosen   an   annual   number   instead   of   the-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   weekly   number   and,   and   grossing   it   up.   Um,   so   you   kind   of   added   some   extra   math   for   yourself   in   there.   Um,   but,   but   overall,   if   you   were   going   to   enter   this   market,   what   would   you   do?   What's   the   insight   that's   layered   on   top   of   this?  
+**Candidate:** I   think   I'd   market   to,   to   much...   to   a   much   younger   audience.   So   having   packaging   that's   marketing   to   this,   um,   younger   demographic   of   under   40,   and,   and   probably   18   to   25   is   where   I   would   estimate   the,   the   key   amount   of   people   that   chew   gum   are.   Um,   it's   a   pretty   big   market.   I   know   it's   hugely   dominated   by   a   lot   of   players.   There's   Extra,   there's   Orbit,   there's   5,   there's   Mentos.   Everyone's   got   gum   nowadays.   And   so-  
+**Interviewer:** You   can   understand   why,   right?  
+**Candidate:** Yeah,   you   can   understand   why.  
+**Interviewer:** We   don't   know   if   this   is   the   right   market,   but   it-   it's   certainly   a   bigger   market   than   you   might   have-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   just   thought   about   walking   down   the   street.  
+**Candidate:** Yeah.  
+**Interviewer:** Chewing   gum   at   the   same   time,   of   course.  
+**Candidate:** Exactly.  
+**Interviewer:** So,   uh,   great.   Well,   let   me,   let   me   just   give   you   a   couple   points   of   feedback.   We   can   just   call   it   on   the   case.   Uh,   overall,   nice   job.   This   is   just   what   I'd   want   to   see.   I'd   want   to   see   a   structure   that   included   your   four   pieces   written   out   into   a   table.   I   liked   the   fact   that   you   told   me   at   the   beginning,   you   maybe   could   have   asked   in   a   different   way,   you   said   "in   dollars,"   right?   Just   make   sure   that...   because   some   people   don't   know-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   whether   you   mean   dollars   per   year   or   total   dollars.  
+**Candidate:** Yes.  
+**Interviewer:** Right?   So   we   were   looking   at   annual   dollars,   which   was   the   right   way,   but   I   actually   didn't   know   when   you   first   started   if   that's   what   you   were   looking   at.   Um,   you   also,   when   you   broke   it   down,   you   told   me   the   four   pieces,   and   I   feel   like   usually   just   a   good   rule   of   thumb   is   five   steps.  
+**Candidate:** Okay.  
+**Interviewer:** So   you   had,   you   had   the,   right,   population   breakdown   into   age,   percentage   in   each   age   group,   and   then   the,   um,   frequency   of   purchase,   and   then   the   price.   Um,   but,   but   the   percentage   of   each   age   group   is   kind   of   redundant   with   this   one.  
+**Candidate:** Yeah.  
+**Interviewer:** But   what   was   missing   was   that   extra   step   in   there.   So   just   pay   attention,   maybe   five   layers.   Your   math   was   solid,   your   insights   were   fine.   But   again,   I   think   at   the   end...   the,   the   feeling   in   a   market   sizing   case   is   when   you   get   a   number,   you   just   shout   hooray.  
+**Candidate:** Yeah.  
+**Interviewer:** But   don't   forget   that   what   I'm   looking   for   is,   look,   a   huge   portion   of   this,   almost   the   whole   market,   is   under   40.   And   so   we're   gonna   need   to   make   sure   that   we   have   influencers,   marketing,   placement-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   and   everything   lined   up   for   addressing   these   markets.   So   yeah,   just,   just   focusing   on,   I   think   some   of   those   key   issues.   Mm-hmm.  
+**Candidate:** Wonderful.   Thank   you   for   the   feedback.   (instrumental music)

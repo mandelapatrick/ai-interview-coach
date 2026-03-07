@@ -1,0 +1,221 @@
+Case: Helicopter Service
+Case Type: Market Sizing
+Firm: McKinsey, L.E.K.
+Channel: RocketBlocks
+URL: https://www.youtube.com/watch?v=R5rNTVZ3Qqw
+============================================================
+
+**Interviewer:** Hello,   everyone.   My   name   is   Kenton   Covestew.   I'm   an   ex-BCG   consultant,   an   ex-Googler,   and   the   founder   of   RocketBlocks,   an   online   platform   that   helps   candidates   prepare   for   interviews.   In   today's   RocketBlocks   mock   interview,   we've   got   two   of   our   experts   sitting   down   and   walking   through   a   very   cool   case   about   evaluating   an   investment   opportunity   in   the   transportation   space.   The   interviewer   is   played   by   Misha   Arora,   who   is   an   ex-LEK   consultant   and   a   graduate   of   the   London   Business   School.   And   the   candidate   is   played   by   Daniella,   who   is   a   graduate   of   Columbia   Business   School,   a   former   McKinsey   intern,   and   currently   works   at   Google   in   their   strategy   and   biz   ops   group.   So   let's   go   ahead   and   dive   in.  
+**Candidate:** Hi,   Dani.   How   are   you   doing?  
+**Candidate:** Hello,   Misha.   How   are   you?   Pleasure   to   meet   you.  
+**Candidate:** Are   you   ready   for   your   first   round   interview   with   RocketBlocks?  
+**Candidate:** Yes,   super   excited.   Let's   start   it.  
+**Candidate:** Okay,   perfect.   Okay,   so   here   we   go.   So,   uh,   your   client   is   a   diversified   investment   management   firm.  
+**Candidate:** Okay.  
+**Candidate:** Um,   you've   been   engaged   by   a   small   group   within   the   firm   that   pursues,   like,   early   stage   and   high   beta   investments.   Uh,   the   firm   is   currently   considering   a   30   million   investment   in   a   crowdsourced   helicopter   service   in   the   New   York   City   metro.   Um,   this   service   would   allow   members   to   use   an   app   or   a   web   portal   to   propose   trips   from   specific   destinations   at   specific   times   and   find   other   unrelated   passengers   interested   in   sharing   the   trip.   Uh,   by   splitting   the   helicopter   amongst   as   many   as   four   to   six   passengers,   depending   on   the   model,   users   are   able   to   dramatically   reduce   the   cost   of   a   private   helicopter   charter.   So   you   have   basically   been   brought   in   to,   like,   make   sure   that   this   30   million   investment   has   a   good   return   on   investment.  
+**Candidate:** Perfect.   Thank   you   for   sharing   the   prompt.   So   just   to   summarize   h-here,   our   client   is   a   diversified   investment   management   firm,   and   they   want   to   invest   $30   million   in   a   crowdsourced   helicopter   business   in   the   Nor-   New   York   City   metro   area.   And   they   hired   us   to   see   if   this   is   a   good   return   on   investments   for   them.  
+**Candidate:** Correct.   That's   correct.  
+**Candidate:** Perfect.   Um,   just   to   understand   more   how   the   client   operates,   I   have   a   couple   of   questions.  
+**Candidate:** Yeah.  
+**Candidate:** You've   mentioned   that   the   business   model,   it's   either   web   or   an   app.  
+**Candidate:** Yeah.  
+**Candidate:** Um,   their   main   geographic   focus   is   New   York   City   metro   area,   or   they're   planning   to   broader   their   focus?  
+**Candidate:** So   right   now,   it's   only   New   York.   Uh,   they've   got...   They've   actually   got   a   couple   of   service   segments.   But,   uh,   maybe   that   can   end   up   as,   as   one   of   the   solutions.   It,   it   could   be   one   of   the   options   that,   uh,   you   know,   they   might   want   to   expand.   But   right   now,   they're   only   focused   on   New   York.  
+**Candidate:** Perfect.   And   you   also   mentioned   that   they   are   in   a   couple   of   service   segments.  
+**Candidate:** Yeah.  
+**Candidate:** Which   would   be,   uh,   those   service   segments   and   how   much   they   would   represent   each   of   them?  
+**Candidate:** All   right.   Good,   good   question.   So,   so   the-   they've   got   the   two   service   segments.   So   the   first   one   is   the   Manhattan   to   airport   service,   uh,   and   the   second   one   is   the   vacation   market   service.   Uh,   the   Manhattan   to   airport   service,   they   basically   pick   up   passengers   from   one   of,   like,   three   heliports,   uh,   you   know,   on   the   Hudson   River,   and   they   fly   to   all   the   New   York   airports.   Um,   and   this   segment   represents   40%,   as   you   asked.   And   the   other,   uh,   segment   which   re-   which   represents   60%   is   basically   like   a   tourism-focused   service,   uh,   you   know,   in   which   you   would   travel   between   New   York,   uh,   and   like   a   beach   vacation,   like   a   hamster   or   something.   Um,   like   these   are   more   seasonal.   But   because   the   trips   are   longer,   it's,   uh,   60%   of   the   revenue.  
+**Candidate:** Okay,   perfect.   Um,   it's   interesting   that   actually   the   airport   service   represents   40%   of   their   business   and   vacation   60%,   um,   because   when   you   think   about   Uber   or   those   type   of   service,   uh,   airport   is   usually   higher.  
+**Candidate:** Yeah.  
+**Candidate:** But   I   think   in   terms   of   my   questions,   those   were   the   things   are   very   clear,   uh,   here   to   me.  
+**Candidate:** Okay.  
+**Candidate:** Let   me   get   just   one   slide   for   me   to   understand   what   we   needed   to   look   in   order   to   see   if   this   is   a   good   return   on   investment.  
+**Candidate:** Yeah.  
+**Candidate:** Okay,   so   in   order   for   us   to   understand   what   would   be   the   return   on   investments   for   this   business   for   our   client,   I   would   look   to   three   things.  
+**Candidate:** Okay.  
+**Candidate:** I   would   start   first   with   the   market,   second   with   the   u-   unit   economics   of   this   business,   and   third,   potential   risks   that   might   have.  
+**Candidate:** Okay.  
+**Candidate:** In   terms   of   the   market,   I   would   look   to   three   things   inside   the   market.   First,   how   large   is,   uh,   the   airport   and   the   vacation   market   in   New   York   City?  
+**Candidate:** Okay.  
+**Candidate:** What   is   the   growth   rate   for   us   to   understand   the   size   of   this   opportunity?   Second,   I   would   look   to   understand   what   is   the   expansion   opportunities   that   we   have,   uh,   like   geographically.   So   if   we   want   to   expand   to   other   regions,   uh,   what   would   be   the   size   of   those   opportunities?   And   third,   I   would   look   to   customers'   preference   to   understand   how   much   conversion   rate   we   would   have,   uh,   in   each   of   those   areas   that   we   wanted   to   expand.  
+**Candidate:** Okay,   understood.  
+**Candidate:** In   terms   of   the   economics,   I   would   also   look   to   three   things   here.   I   think   first,   the   unit   economics   of   this   business.   And   by   unit   economics,   I   refer   to   revenue,   the   variable   cost,   and   the   fixed   cost.   Probably   our   fixed   cost   would   be   the   most   significant   ones   to   understand   if   we   can   actually   pay   for   this   operation,   if   the   business   would   be   profitable.   Second,   I   would   look   to   the   CapEx   required.   So   we   had   two   options   here   probably.   Either   we   buy   the   helicopters   or   we   use   a   leasing   with,   um,   helicopter   companies.   Um,   so   we   would   need   to   understand   what   would   be   our   initial   CapEx,   um,   to   invest   in   this   business   and   also   the   company's   capital   position   to   see   if   we   actually   have   the   investment.   And   the   third   thing   that   I   would   look   at   in   terms   of   the   economics   is   the   return   on   investment.   So   what   is   the   return   on   investments   on   this   business   right   now?   And   I've   also-   would   look   to   the   return   on   the   new   investments   to   see   if   looking   forward,   this   is   a   business   that   would   make   sense,   because   probably   each   geography,   it's   a   bit   different   and   in   terms   of   return   on   investment....   the   third   thing   that   I   would   look   in   terms   of   risks   is,   first,   safety.   So   we   would   need   to   account   for   potential   liabilities.   Um,   so   if   the   helicopter   f-   falls,   people   die,   so   we   would   need   to   take   in   account   this.   And   second,   I   would   look   to   regulation.   Probably   there   is   a   lot   of   regulation   in   this   space,   and   governments   probably   control   the   amount   of   helicopters   that   can   fly.   So   this   might   be   something   that   limits   our   demand.   So   I   would   take   a   look   on   that   to   understand   if   there   is   any   impact   on   our   opportunity   sizing.  
+**Candidate:** Okay.   That,   that   sounds   very   good.   I   think   you've   covered   a,   a   pretty   big   sort   of   section   of   the,   you   know,   of   the   key   points   that,   that   we   were   going   to   discuss.   So   maybe   let's,   let's   go   over   the   first   part   of   your   structure,   which   was   the   market.   And   I   think   that   to   begin   with,   it   might   be   useful   for   us   to,   like,   determine,   like,   as   you   said-  
+**Candidate:** Yeah.  
+**Candidate:** ...   that   there   must   be   a   couple   of   things.   You   can   look   at   the   market   that   they're   in   right   now   and   the   market   that   they   want   to,   you   know,   potentially   get   in.   But   the   market   that   they're   in   right   now,   let's   try   and   size,   uh,   what   that   market   looks   like.   Um,   and   then   I   have   some   information.   I've   got   some,   you   know,   um...   I-   I'm   happy   to,   like,   provide   you   any   sort   of,   like,   you   know,   help   with   assumptions   and   stuff.   But   let's   size   the,   the   market   that   they're   currently   in   right   now.  
+**Candidate:** Perfect.   So   market   sizing   right   now,   just   to   summarize,   would   be   mainly   focused   on   the   Manhattan   airport   and   also   the   vacations   in   New   York   City   metro   area.  
+**Candidate:** Yes,   both   of   them.   Yes.  
+**Candidate:** Let   me   take   a   minute   just   for   me   to   structure   what   I   would   look,   and   then   I   share   with   you.  
+**Candidate:** Sure.  
+**Candidate:** So   for   understanding   the   market   sizing,   I   would   look   to   each   of   the   segments   differently.  
+**Candidate:** Okay.  
+**Candidate:** So   starting   from   the   airpo-   the   Manhattan   airport   service.  
+**Candidate:** Yeah.  
+**Candidate:** Um,   basically,   the   revenue   or   the   revenue   of   this   market   would   be   number   of   pass-   passengers   that   will   be   flying   times   the   average   per,   ticket   per-   for   those   passengers.  
+**Candidate:** Yeah.  
+**Candidate:** Um,   for   defining   how   many   passengers,   I   would   look   to   a   couple   of   things.   I   would   look   to   probably,   because   we   are   talking   about   the   airport,   I   would   segment   this   into   type   of   customers.   One   would   be   leisure,   people   that   are   traveling   for   visiting   New   York.  
+**Candidate:** Yeah.  
+**Candidate:** And   the   other   one   would   be   business.   So   on   the   leisure   piece,   I   would   try   to   understand   from   the   total   of   people   that   goes   through   the   Manhattan   Airport,   um,   to   the   JFK   Airport   or   the   four   airports   that   have   in   New   York,   how   many   of   them   are   here   actually   for   visiting   and   how   many   of   those   people,   um,   actually,   um,   have   the   income   to,   to   come   and   visit,   to   do   this   type   of   service,   so   probably   just   class   A   or   class   B,   um,   and   how   many   of   them   actually   would   like   to   want   this   service,   um,   in   order   for   us   to   estimate.  
+**Candidate:** Okay.  
+**Candidate:** On   the   business   side,   I   would   look   to   how   many   people,   um,   goes   to   Manhattan   in   terms   of,   like,   transportation.   What   would   be   the   percentage   of   those   people   that   would   actually   be,   like,   business,   that   would   be   traveling   for   business?   What   would   be   the   percentage   of   those   business   people   that   actually   can   afford,   so   probably   C   levels,   high,   high   executives.   And   how   many   of   them   actually   want   to   do   this   service,   because   probably   only   the   ones   that   have   a   busy   schedule   or   a   busy   agenda.  
+**Candidate:** Yeah.   Okay.  
+**Candidate:** So   in   order   for   us   to   start   here,   I   can   estimate,   or   if   you   have   any   information   about   the   amount   of   passengers   or   what   would   be   the   price   for   a   ticket,   um,   it   would   be   great   to   start.  
+**Candidate:** Yeah.   So   for,   like,   the   airport   visits,   the   price   each   way,   uh,   is   $200.  
+**Candidate:** Okay.   Perfect.  
+**Candidate:** And   in   terms   of,   like,   I   think   to,   to   give   you,   like,   a   start   on   basically   the,   the   number   of   passengers,   I   c-   I   can   give   you   some   information,   which   is   that   the   New   York,   uh,   a-   the   area   airports   experience   130   million   visits   per   year.  
+**Candidate:** Perfect.   So   I'm   gonna   leave   aside   the   price   for   tickets   just   to   use   the   130   million   visits-  
+**Candidate:** Yeah.  
+**Candidate:** ...   to   find   the   amount   of   passengers   that   would   be.  
+**Candidate:** Sure.  
+**Candidate:** So   if   we   know   that   there   is   130   million   visits,   um,   from   this,   we   can   divide   how   many   people   would   be   for   business   and   how   many   people   would   be   for   leisure.  
+**Candidate:** Yep.  
+**Candidate:** Um,   I   know   that   probably   in   terms   of   the   amount   of   people   that   want   to   go   for   business   and   leisure   would   be   around   50/50.   So   50%   for   business,   50%   for   leisure.   So   probably   65   million,   um,   people-  
+**Candidate:** Okay.  
+**Candidate:** ...   on   each   of   those.   For   the   leisure   segment,   I   would   assume   that   probably   70%   of   people   that   goes   to   Manhattan   comes   for   leisure.   Um,   not   a   lot   of   people   comes   for   business.   So   75%   from   65   mi-   mil-   million   would   be   around   46   million   passengers   that   would   be...   of   those   visits,   sorry.   40   million,   uh,   visits   would,   would   be   for   leisure.  
+**Candidate:** Okay.  
+**Candidate:** I   would   assume   that   around   20%   of   those   46   million   actually   has   the   condition,   it's   class   A   or   high   income   people.  
+**Candidate:** Okay.  
+**Candidate:** So   then   we're   gonna   have   nine   million.   And   from   those   nine   million,   I   would   assume   that   a   very   low   percentage   of   them   actually   want   this   service,   uh,   because   it's   a   very   expensive   service.   So   around   5%   I   would   assume.   So   we   are   talking   about-...   450,000   people   that   would   actually   like   to   come   to   use   this   service   and   from   the   leisure   segment.  
+**Candidate:** So,   sorry,   this   is...   This   is...   You're   saying,   5%   of,   like,   9   million   are   the   ones   that   will   actually   want   to   use   this   service?  
+**Candidate:** Yes.   Yes.  
+**Candidate:** Okay.  
+**Candidate:** Yes.  
+**Candidate:** Okay.  
+**Candidate:** So   going   for   the   business   segment,   I   know   that   I   have   65   million,   um,   people   that   actually,   um,   come   to,   to   the,   um,   to   the   business   or   to   Manhattan.  
+**Candidate:** Yep.  
+**Candidate:** From   those   65,   I   know   that   I   put   it   70   for   leisure,   so   probably   30   would   be   the   rest,   the   remaining.   Um,   so   we   are   talking   about   19   million,   uh,   people   on   the   business   segment,   passengers   in   the   business   segment.  
+**Candidate:** Okay.  
+**Candidate:** And   we're   gonna   use   the   same   20%   that   I   used   for   the   high   income,   for   the   high   C-level   executives   that   actually   could   afford   this   service.  
+**Candidate:** Okay.  
+**Candidate:** Um-  
+**Candidate:** Do   you...   Do   you   think   that   in,   in   this...   in   the   case   of   business,   maybe,   like,   uh,   in   terms   of   affordability,   this   could   be   higher?  
+**Candidate:** It   could   actually   be   higher.   Um,   we   could   say,   like,   30   or   something   like   that.  
+**Candidate:** Yeah,   for   the   fact   that   maybe   because,   you   know,   these   trips   are   being   expensed   by   the   company.   So   potentially,   it   could   be   higher.   But   I   think   for   the   sake   of...   for   the   sake   of   argument,   let-   let's   take   20%.   Let's   continue   with   that.   I   think   that's   a   decent-  
+**Candidate:** Yeah,   but   I   agree   with   your   point.   That   would   increase   their   willingness   to   pay   and   probably   would   increase   the,   the   price,   or   the   demand   for   it.   Uh,   so   20...   If   going   with   the   20%,   um,   I'm   talking   about   20%   of   19   million.  
+**Candidate:** Okay.  
+**Candidate:** It's   around   4   million,   and   people   that   would   actually   want   to   use   this   service,   I   know   that   I   used   five   for   the   leisure,   but   I   think   that   for   executives,   I   would   use   a   higher   number-  
+**Candidate:** Fair   enough.  
+**Candidate:** ...   because   probably   they   want   to   save   time.   When   you   are   on   vacation,   you   don't   want   to   save   time   that   much,   so   I   would   use   10%.  
+**Candidate:** Okay,   fair   enough.  
+**Candidate:** So,   10%   of   4   million   would   be   around   400K.  
+**Candidate:** All   right.  
+**Candidate:** 400,000   passengers.   So,   I   know   that   I   had   450,000   for   leisure,   400   for   business.  
+**Candidate:** Yep.  
+**Candidate:** So   we   are   talking   about   850,   uh,   thousand   passengers   that   would...   passengers/trips,   um-  
+**Candidate:** Yep.  
+**Candidate:** ...   we   would   have.   You   told   me   that   the   price   would   be   around   $200,   um,   dollars,   the   average   price.  
+**Candidate:** Correct.  
+**Candidate:** So   multiplying   those   to   get   the   market   size,   we   would   be   talking   about,   uh,   170   million   only   for   the   airport,   which   seems   sizable,   but   for   a   $30   million   investment,   I   don't   know   if   it's...   would   be   still   an   opportunity.   So   let's   go   for   the   biggest   market,   that   is   the   vacation   market-  
+**Candidate:** Yeah.  
+**Candidate:** ...   that   you   told   me   that   is   60%   of   the   revenue.  
+**Candidate:** Correct.   Yes.  
+**Candidate:** Amazing.   So   for...   I   think   for...   looking   for   the   vacation   market,   uh,   I   would   look   to   the   amount   of   trips   times   the   price   of   those   trips.  
+**Candidate:** Yep.  
+**Candidate:** And   for   looking   for   the   amount   of   trips,   I   would   try   to   calculate   this   by   understanding   how   many   people   we   have,   um,   in   New   York,   what   are   the   best   percentage   of   people   that   actually   can   afford   this   service.  
+**Candidate:** Okay.  
+**Candidate:** What   is   the   percentage   of   people   that   would   be   like   going   for   vacation?  
+**Candidate:** Okay.  
+**Candidate:** Um,   and   what   would   be   the   percentage   of   like   the   top   markets   around   New   York   City,   um,   so   across   the...   all   the   airports.  
+**Candidate:** Okay.  
+**Candidate:** And   what   would   be   the   percentage   of   people   that   actually   want,   uh,   this   service?  
+**Candidate:** Yeah.  
+**Candidate:** I   don't   know   if   you   have   any   information   about   the   amount   of   people   in   New   York   and   the   average   price   of   those   trips.  
+**Candidate:** Yes,   I've   got...   These   are   the...   Uh,   the   typical   New   York   population,   I   think,   in   the   last   couple   of   years   has   been   about   eight   million   people.   Um,   and,   uh,   you...   The,   the   price   of   this   trip,   uh,   to   a   vacation   market,   because   it's   a   much   longer   trip   than   the   airport   service,   it's   between   50...   uh,   between   $500   and   $1,200.   So   it's   significantly   higher   than   your   airport   trip.   Um,   and   then   also,   like   the   company   right   now   serves   the   top   five   vacation   markets   out   of   New   York.  
+**Candidate:** Amazing.   So   with   that,   I'm   gonna   start   to   estimate   here.   First,   the   amount   of   trips,   and   then   I   multiply   it   by   the   average   price   of   those   trips   to   understand   what   would   be   our   revenue   in   this   market.  
+**Candidate:** Okay.   Sounds   good.  
+**Candidate:** So   eight   million   New   Yorks.   People   that   can   afford,   I'm   gonna   continue   with   the   20%   of   class   A   and   B.   Uh,   so   we   are   talking   about   1.6   million   people.   Uh,   people   that   usually...   the   percentage   of   those   people   that   actually   go   for   vacations,   I   would   say   that   it's   higher   because   they   are   high   income   people.   So   around   90%   of   those   people   usually   go   for   vacation.   So   from   90%   of   1.6,   it's   1.4   million.  
+**Candidate:** Okay.  
+**Candidate:** And   how   much   of   those   top   five   markets   would   represent,   uh,   from   this   total   amount   of   people?   I   would   say   that   probably   around   50%   because   probably   the   top   five   markets   are   very   concentrated   on   that   demand.  
+**Candidate:** Yep.  
+**Candidate:** So   50%   of   1.4,   it   will   be   around   1.7   million,   uh,   people.   And   for   those   that   would   actually,   um,   would   like   to,   to   use   the   service,   I   would   say   that   probably   a   high   percentage   here,   like   around   25%   of   the   ze-   0.7   million,   uh,   which   would   give   us   180-...   thousand   people   around,   approx.  
+**Candidate:** Just,   just   to   recap.   So   you   had,   you   had   1.4   million   people   and   then   the   top   five   vacation   markets   was   50%,   so   that's   point   seven.  
+**Candidate:** Yeah.  
+**Candidate:** And   then   you've   taken   25%   of   that   who   are   the   ones   that   can   actually...   who,   who   want   to   use   this   service.  
+**Candidate:** Yeah,   yeah.   That   would   be   actually   our   conversion   rate.   So   from   the   0.72-  
+**Candidate:** Yeah.  
+**Candidate:** ...   how   many   of   those   people   we   actually   bring,   um,   because   they   are   willing   to   pay   and   they   want   that.   So-  
+**Candidate:** I   don't...   Why   have   we   picked,   like,   20,   25%   seems   a   pretty,   pretty   optimistic   sort   of,   uh,   number.   Why...   What's   your   reasoning   for   picking   a   high   number   like   that?  
+**Candidate:** Yeah.   I   think   that   probably   because   on   vacations,   uh,   like   I   think   that   when   I   think   for   the   vacations,   I'm   thinking   about   people   that   are   going   to   the   Hamptons   or   to   the   areas   around.  
+**Candidate:** Uh-huh.  
+**Candidate:** And   because   New   York   has   a   lot   of   traffic-  
+**Candidate:** Yeah.  
+**Candidate:** ...   probably   the   demand   for   this   service,   the   conversion   would   be,   like,   better   because   instead   of   getting   a   four   hours   ride   to   the   Hamptons,   you   can   get   a   10   minutes.  
+**Candidate:** Yeah.  
+**Candidate:** So   we   are   actually   saving   more   time,   I   would   say.  
+**Candidate:** Yeah.   And   then   as   I   think   we   discussed   that   this   was   the   top   five   vacation   markets,   so,   like   these   are   probably,   ne-   probably,   you   know,   wealthy   people   who   are   basically   traveling,   so   you're   right,   like,   you   know,   they   would   probably   wanna   use   this   service,   so   that's   correct.   Okay.   That,   that's   right.  
+**Candidate:** Yeah.   You're   saving   more   time,   so   that   would   make   more   sense   because   a   airport   trip,   it's   40   minutes,   so...  
+**Candidate:** Yeah.   Correct.  
+**Candidate:** Perfect.   Um,   so   with   that   we   have   180,000   people.  
+**Candidate:** Mm-hmm.  
+**Candidate:** Um,   for   us   to   multiply   for   the   price   per,   for,   for   each   of   the   trips,   I   would   imagine   this   price   is   for   one   way   and   we   would   need   to   account   for   the   way   back-  
+**Candidate:** Yeah.  
+**Candidate:** ...   probably.  
+**Candidate:** Yeah.  
+**Candidate:** Um,   so   I   would   multiply   that   by   two   trips   to   make   sure   that   I'm   accounting   for   the   way   back   also.  
+**Candidate:** Yep.  
+**Candidate:** Um,   so   two   times   180,   360,000   trips,   um,   we   would   have   as   a   potential   opportunity.   Multiplying   by   the   average   price   of   the   trips,   you   told   me   that   it's   around   $500   to   100   and...   to   $1,200.  
+**Candidate:** Yeah.  
+**Candidate:** So   we   are   talking   about   an   average   price   of,   of   the   trip   of   $850   per   trip.  
+**Candidate:** Okay.  
+**Candidate:** Times   the   360,000   trips,   we   are   having   a   market   around   300   million.   So   our   total   market   would   be   300   million   plus   the   one-   170   million   for   the-  
+**Candidate:** Three   hundred   and...   300   million   because   you   multiplied   360,000   into   850?  
+**Candidate:** Yes,   yes,   yes.  
+**Candidate:** Okay.  
+**Candidate:** It   will   be   around   300,   306   million   ba-   basically.  
+**Candidate:** You,   you're   very   fast   at   maths.   Well   done.  
+**Candidate:** Yeah.   And,   um,   adding   all   those   things   up,   uh,   170   plus   306,   we   are   talking   about   476   million   as   a   total   addressable   market.   It   seems   to   be   a   good   opportunity   in   my...   in,   in   m-   in   my   perspective.   Of   course,   for   me   to   be   very   certain   on   that,   I   would   need   to   compare   that   with   other   opportunities   that   the   firm   has-  
+**Candidate:** Yeah.  
+**Candidate:** ...   and   also   other   geographies   to   understand   if   there   is   something   that   is   more   attractive.   Um-  
+**Candidate:** Yeah.  
+**Candidate:** ...   and   also   we   are   talking   about   the   firm   you   would   need   to   invest,   uh,   a   minimum   of   like   10%   of   this   addressable   market.   That   would   be   30   million.  
+**Candidate:** Yeah.  
+**Candidate:** Um,   so   if   I   was   this,   uh,   client,   I   would   try   to   look   to   expansions   opportunity   here.  
+**Candidate:** Yeah,   exactly.   So   I   think   that's   a,   that's   a   very   good   segue   into   the   next   section.   So   like   as,   as   you   mentioned   that   it's   a   pretty   decent   market   size,   but   given   our   current   penetration,   like,   you   know,   how   much   we've   already,   like   sort   of   taken   up   this   market   because,   you   know,   we   are   one   of   the   only   players   doing   this.   There   might   not   be   enough   headway   if   it's   just   this   market,   right?   So   like   if,   if   we   were   to   consider   like   some   other   opportunities   within   the   New   York   area,   um,   how   would   you   sort   of...   how   would   you   assess   them?   Like,   you   know,   just   can   you,   can   you   think   of   a   few   opportunities   that   might   be   quite   relevant   given   our   current   asset   base   and   how   we   can   use   that   better?  
+**Candidate:** Yeah.   Um,   in   terms   of   thinking   about   new   opportunities,   um,   I   would   think   about   maybe   expanding-  
+**Candidate:** Okay.  
+**Candidate:** ...   the   current   portfolio.   And   second,   I   would   think   about   expanding,   uh,   the   customer   segments.  
+**Candidate:** Okay.  
+**Candidate:** Uh,   these   two   things   that   I   would   think   about.   So   in   terms   of   current   service,   I   would   think   about   maybe   we   could   do   launch   private   rides,   maybe   we   could   offer   like   food   or   experience   with   like   VIP   rooms,   these   type   of   stuff   that   we   could   charge   more,   to   have   a   other   different   revenue   streamline.   Um,   we   also   could   do   partnership   with   credit   card   companies   like   AmEx   or,   uh,   Mastercard   to   have   a   better   experience   for   the   customers,   um,   and   charge   them,   uh,   for   providing   this   benefit   for,   for,   for   their   customers.   And   we   also   could   think   about   the   opportunities   to   work   with   dynamic   price.   So   like   an   Uber.   So   if   we   have   high   demand,   we   are   charging   more.   If   we   have   low   demand,   we   are   charging   less.  
+**Candidate:** Mm-hmm.  
+**Candidate:** Um,   the   second   option   of   expanding,   um,   customer   segments,   we   could   think   about   going   to   the   business   segments.   So   instead   of   charging   C   levels,   maybe   try   to   do   package   with   big   corporations,   um,   so   we   can   actually   lock   the,   your   revenue-  
+**Candidate:** Okay.  
+**Candidate:** ...   um,   with   them.   Another   thing   that   we   could   do   is   tourism   service.   A   lot   of   people   wants   to   have   like   helicopters   to   see   around   New   York   City   area,   Manhattan.   So   we   could   also   try   to   go   for   these   customer   segments.   Um,   those   are   a   couple   of   the   things   that   I   would   think   about   inside   of   the   New   York   area.
+**Candidate:** Okay,   that,   that's   in-   I   mean,   I   do,   I   do   really   like   the   last   two,   like,   you   know,   where   you   lock   in   the   revenue   for   the   entire   year   and   then   also,   like,   you   know,   how   you   could   basically   use   them   for,   like,   tourism   and   stuff   because   there's   a   lot   of   people   interested   in,   like,   helicopter   trips,   right?   So   I   think   that's,   that's   very,   um,   very   interesting.   Okay.   Um,   I   think   ...   So   as,   as   good   as   these   opportunities   sound   within   the   New   York   area,   um,   I   think   that   it   could   be   the   right   time   for   us   to   also   look   at   potential   other   cities   as   well   where   we   could   expand.   So,   um,   you   know,   like,   because   we've   got,   like,   lower   capex   sort   of   in,   in,   in   New   York,   maybe   we   can   invest   in   more   capex   and   expand   into   other   places.   So   I've   actually   got   some   information   for   you   in   terms   of,   like,   demographics,   uh,   and   geographical   data   of   other,   you   know,   key   states.   And   it'll   be   good   to   get   your   view   on,   like,   sort   of   what   you   think   about,   um,   you   know,   potential   expansion   opportunities   outside   New   York,   right?   So   let   me   share   this   with   you.   I'm   gonna   try   and   share   my   screen,   um,   and   let   me   know   if,   if   this   works.  
+**Candidate:** Perfect.  
+**Candidate:** Are   you   able   to   see   my   screen?  
+**Candidate:** Yes.   I'm   ...   It's   loading   here.   Perfect.  
+**Candidate:** Okay.  
+**Candidate:** Now   I   can   see   your   screen.   So   this   is   a   sh-   uh,   chart   about   potential   new   market   demographic-  
+**Candidate:** Yeah.  
+**Candidate:** ...   and   geographic,   uh,   data.   On   the   circles   we   have   the   total   population,   and   we   are   comparing   here   the   percentage   of   householders   with   more   than   $100K   in   income-  
+**Candidate:** Yeah.  
+**Candidate:** ...   versus   the   number   of   public   airports.  
+**Candidate:** Correct.  
+**Candidate:** Uh,   so   the   first   thing   that   I   see   here   is   that   definitely   New   York   is   the   best   opportunity   because   we   have   the   most   amount   of   airports   and   we   also   have   a   relevant   number   of   the   population   that   has   more   than   $100K.   That   is   35%.   And   we   also   have   a   significant   demographic.   So   probably   after   New   York,   the   other   markets,   I   would   assume,   would   be   smaller   for   us.   Um,   in   terms   of   like   fli-  
+**Candidate:** Definitely   New   York   is   the   best   market,   uh,   but   if   you   had   to,   like,   pick   another   couple   of   options   in   terms   of,   like,   you   know,   the   expansion   opportunities,   like,   which   ones   would   you   pick   based   on   the   information   you   see?  
+**Candidate:** Yeah.   I   would   try   to   prioritize   based   on   the   number   of   public   airports   and   also   the   cities   th-   the   states   that   actually,   uh,   have   the   highest   income   people.  
+**Candidate:** Okay.  
+**Candidate:** So   my   obvious   choice   would   be   either   to   go   to   Los   Angeles   or   Washington   here   probably.   Those   would   be   the   next   markets   that   I   will   look.  
+**Candidate:** Okay.  
+**Candidate:** Los   Angeles   because   you   have   a   significant   amount   of   airports   and   you   have   a   significant   demographic.  
+**Candidate:** Okay.  
+**Candidate:** Washington   because   you   have   a   lot   of   high   income,   uh,   householders,   so   that   would   mean   that   our   segment,   that   is   the   vacation   segment   probably,   that   is   60%   of   our   current   revenue-  
+**Candidate:** Yeah.  
+**Candidate:** ...   could   be   higher   in,   in   Washington.   So   that   would   be   the   next   markets   that   I   would   look   for.  
+**Candidate:** Okay.   And   apart   from,   like,   this   information,   is   there   anything   else   that   might   influence   your   decision,   like   one   way   or   the   other,   in   terms   of,   like,   which   city   you   wanna   pick   apart   from,   like,   just   number   of   airports   and   the   income   of   the   households?   Because   you   did   mention,   like,   you   know,   that   point   about   New   York.  
+**Candidate:** Yes.   I   would   try   to   understand   more   the   amount   of   trips   and   the   amount   of   people   that   would   be   willing   to   actually   do   that.  
+**Candidate:** Yeah.  
+**Candidate:** Um,   because   when   I   see   Washington,   Washington's   kind   of   a   small   city.  
+**Candidate:** Yeah.  
+**Candidate:** So   when   we   look   to   people   that   want   to   go   to   the   airport,   probably   not   a   lot   of   people.  
+**Candidate:** Mm-hmm.  
+**Candidate:** But   Los   Angeles,   it's   very   similar   to   New   York,   so   you   have   a   lot   of   airports,   a   lot   of   traffic,   so   the   amount   of   trips   might   be   higher.   So   I   would   try   to   estimate   the   amount   of   trips   on   each   of   those,   those   places.  
+**Candidate:** Yeah.   I,   I   think   you   mentioned   the,   the   point   that   I   was   looking   for,   which   is   traffic.   Like,   you   know,   sometimes,   like,   the   congestion   on   the   roads   between   cities   is   so   much   that   people   actually   might   prefer   to,   like,   just   take   a   helicopter   trip,   you   know,   if   they're   getting   late   or   something.   So   I   think   you're   right.   Like,   you   know,   I   think   both   Washington   and   Los   Angeles   do   face,   like,   pretty   severe   congestion   problems.   So   I   think   they   both   potentially   could   be   good   opportunities,   uh,   to,   um,   to   expand   into.   Uh,   fair,   fair   enough.   Uh,   I   think,   I   think,   Dani,   let's,   let's   move   on   to,   um   ...   I'm   gonna   stop   sharing.   But   I   think   that   we've,   we've   looked   at   a   lot   of   information.   We've   seen   market   sizing,   we've,   you   know,   go-   got   like,   some   idea   of   like,   the   expansion   opportunities.   So   I   think   it's   probably   now   time   to   like,   sort   of   synthesize   your   findings   and,   and   let   me,   let   me   know   what   you,   what   you   feel   overall   about   the   opportunity.  
+**Candidate:** Yes.   Just   give   me   one   second   for   me   to   s-   structure   here,   and   then   I   share   with   you.  
+**Candidate:** Sure.  
+**Candidate:** Perfect.   So   in   terms   of   my   recommendation   for   our   client,   I   think   that   seems   to   be   a   very   good   opportunity   so   the   client   should   invest   on   this   crowdsourcing   helicopter   business.   Um,   because   when   we   ...   First   we   looked   at   the   market   size   in   the   New   York   City   metropolitan   area,   seems   to   be   a   very   significant   opportunity   which   is   for   around   $476   million   market   that   we   could   actually   leverage.   Second,   we   looked   to   expansions   and   geographic   possibilities   and   we   saw   that   LA   and   Boston   might   be   good   geographics   for   us   to   expand   so   we   would   actually,   um,   grow   this   market   size.   As   next   steps   here,   I   would   advise   the   client   to   first   assess   some   of   the   potential   risks   that   we   looked.   So   mainly   regulation   and   also   safety   liabilities.  
+**Candidate:** Yeah.  
+**Candidate:** And   second,   I   would   also   assess   our   assumptions,   uh,   especially   in   the   new   geographics,   trying   to   understand   what   will   be   the   amount   of   trips   and   also   the   traffic,   uh,   on   those   places,   if   it's   high   or   not,   to   see   if   it's   a   sizable   opportunity.  
+**Candidate:** Okay.   Well   done,   Dani.   I   think   you   did   a   great   job.   Um,   I'm   very   pleased   with   the   interview.   Well   done.  
+**Candidate:** Thank   you   so   much.   Pleasure   to   meet   you.  
+**Interviewer:** Hey   everyone,   it's   Kent   and   Kevesey   here,   the   founder   of   RocketBlocks.   Thank   you   so   much   for   watching   this   mock   interview   video.   I   hope   you   found   it   informative   and   helpful   as   you   are   getting   ready   to   prepare   for   your   own   interviews   and   hopefully   landing   that   job   offer   you   are   excited   about.   We   have   a   ton   of   great   content   on   the   RocketBlocks   channel   coming   out   on   a   weekly   basis,   mock   interviews,   mini   lessons   and   chats   with   our   RocketBlocks   experts.   So   if   you   haven't   subscribed   yet   already,   please   do   so.   There   is   a   big   red   button   below   and   if   you   hit   that,   you'll   get   all   of   our   content   as   soon   as   it   comes   out.   Thanks   for   watching   and   have   a   great   day.

@@ -1,0 +1,293 @@
+Case: Black Cats FC
+Case Type: Strategic Decision
+Firm: Deloitte
+Channel: Management Consulted
+URL: https://www.youtube.com/watch?v=JMij_2hx3PQ
+============================================================
+
+**Interviewer:** And   I've   got   a   really   fun   case   for   you.   Are   you   ready   for   this   one?  
+**Candidate:** I'm   ready.  
+**Interviewer:** Awesome.   So   our   case   today   is   a   Deloitte   case-  
+**Candidate:** Okay.  
+**Interviewer:** ...   and   it's   specifically   for   Deloitte's   human   capital   practice.   So,   you   know,   usually   we're   going   to   use   a   traditional   structure   for   a   lot   of   other   cases,   but   this   one   might   not   fit   into   that,   so   just   FYI.  
+**Candidate:** Okay.  
+**Interviewer:** And   also,   because   it's   a   Deloitte   case,   just   very   conversational,   all   right?  
+**Candidate:** Yeah.  
+**Interviewer:** So   show   me,   show   me   the   way   that   you're   thinking   as   well   as   what   you're   thinking   about.  
+**Candidate:** Sounds   good.  
+**Interviewer:** So   if   you're   ready,   we'll   dive   in.  
+**Candidate:** Let's   do   it.  
+**Interviewer:** Okay,   awesome.   (instrumental music)   Um,   our   client   today   is   Black   Cats   FC,   a   professional   soccer   club   from   Northeast   England.   The   club,   whose   history   dates   to   the   late   1880s,   has   a   rich   history   of   achievements   in   the   English   and   European   tournaments.   However,   the   club   is   currently   playing   in   the   English   League   Three,   the   third-highest   division,   after   two   consecutive   relegations   from   English   Premier   League   and   English   Championship,   which   are   the   highest   and   the   second-highest   English   leagues,   respectively.   Did   you   catch   all   that?  
+**Candidate:** Yes.  
+**Interviewer:** At   the   beginning   of   June   2020,   the   company   was   sold   to   an   American   owner   based   in   Miami.   The   owner   seeks   to   restore   the   club's   status   as   an   English   Premier   League   club.   After   one-third   of   a   season,   beginning   in   December,   the   club   is   in   second   place   and   in   line   to   be   promoted   back   to   the   Championship   next   year.   Nonetheless,   in   a   recent   anonymous   survey   about   work   re-   satisfaction   among   r-   back-office   employees,   over   80%   of   employees   claimed   that   they   were   unmotivated,   with   50%   of   them   claiming   that   if   not   for   COVID-19,   they   would   have   been   looking   for   a   new   job.   The   CEO   of   the   club   has   approached   our   company   for   help   in   approaching   this   problem.   Where   would   you   start?  
+**Candidate:** Great.   So   just   to   make   sure   I   heard   all   that   correctly,   and   that   was   a,   a   pretty   long   prompt,   so   Black   Cats   FC,   uh,   a   football   team   in   the   Northeast   of   England   is   our   client   today.   And   though   they   have   a   rich   history   and   they've   done   very   well   in   the   past,   they   actually   just   got   relegated   twice,   which   is   really   unfortunate.   Um,   and   about   a   few   years   ago,   in   June   2020,   they   were   sold   to   an   American,   um,   who,   who   said   in   Miami,   I   think   it   was?  
+**Interviewer:** Mm-hmm,   that's   right.  
+**Candidate:** Okay.   And   he   has   ...   Does   he   have   prior   experience   in,   in   football   or?  
+**Interviewer:** He   or   she.  
+**Candidate:** He   or   she,   yeah.  
+**Interviewer:** (laughs)  
+**Candidate:** Do   they   have   prior   experience   in,   in   football?  
+**Interviewer:** I,   I   actually,   um,   you   know,   don't   know   that   it's   gonna   end   up   being   relevant-  
+**Candidate:** Okay.  
+**Interviewer:** ...   but   they   t-,   um,   they,   they   do   in   football,   but   not   in   football.  
+**Candidate:** Okay.   This   sounds   like   a-  
+**Interviewer:** So   American   football.  
+**Candidate:** ...   sounds   like   an   excellent,   excellent   idea   for   a   TV   show.  
+**Interviewer:** (laughs)   Yes,   it   does.  
+**Candidate:** Uh-  
+**Interviewer:** Yeah,   so   they   have,   they   have   experience   in   American   football,   but   not-  
+**Candidate:** Okay,   gotcha.  
+**Interviewer:** ...   and,   uh,   not   in,   uh,   Premier   League   or   any   kind   of-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   uh,   European   football.  
+**Candidate:** But   it   seems   like   they're   doing   well.   They're   in   second   place.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** They're   ready   for   a   promotion,   um,   hopefully,   fingers   crossed.   Uh,   but   a   recent,   a   recent   study   you   said,   said   that   80%   of   employees   were   unmotivated,   and   of   that   80%,   50%   would,   would   actually   have   gone   out   looking   for   a   new   job   had   it   not   been   for   COVID.  
+**Interviewer:** Exactly.  
+**Candidate:** Okay.   So   yeah,   really   interesting   case   here.   I'm   excited   to   jump   into   this.   I   feel   like   I'm   getting   a   little   bit   back,   uh,   to   England   here.   Um,   a   quick,   quick   question   with   that.   In   terms   of,   um,   the,   these   surveys,   is   that   across   the   board?   That's   every   single   employee?  
+**Interviewer:** Yeah.   So   it's   just   the   back-office   employees.  
+**Candidate:** Okay.  
+**Interviewer:** So   if   they're   working-  
+**Candidate:** So   not   the   football   players.  
+**Interviewer:** Correct,   not   football   players   and   not,   for   example,   like   ground   staff   or   people   that   are   kind   of-  
+**Candidate:** People   who   are   in   the   office,   who   are-  
+**Interviewer:** Yeah.  
+**Candidate:** Okay.  
+**Interviewer:** Those   that   are   working   in   the   stadium,   those   are   not   included.  
+**Candidate:** Okay.  
+**Interviewer:** Just   back   office.  
+**Candidate:** Yeah.   And   do   you   know,   um,   in   terms   of   the   actual   league   itself?   I   don't   think   this   will   be   too   relevant,   but   I'm   just   curious.   Are   they,   are   they   very   close   to   the   end   of   the   league?   Um,   I'm   wondering   if,   if   they're   all   unmotivated,   but   they're   almost   at   a   promotion,   maybe   it's   early   in   the   season,   or   it   would   be   interesting   to   see   if   there's,   if   there's   other   areas   as   well.  
+**Interviewer:** Yeah,   great.   So   let's,   let's   put   the   timing   of   this   whe-   where   they're   fairly   confident   that   they're   going   to   make   it,   um,   so   close   to   the   end   of   the   league   season.  
+**Candidate:** Interesting.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Okay.   Well,   do   you   mind   if   I-  
+**Interviewer:** Um,   actually,   uh,   let   me,   let   me   just   go   back   to   this.   Oh,   no,   after   a   third   of   the   season.  
+**Candidate:** A   third   of   s-   Okay,   so   they're-  
+**Interviewer:** The   club   is,   is   in   second   place.   So   there   is   still   actually   time   for   them   to   mess   it   up.  
+**Candidate:** Still   room,   yeah.   Okay.  
+**Interviewer:** (laughs)  
+**Candidate:** Well,   fingers   crossed   they   don't-  
+**Interviewer:** (laughs)   Agreed.  
+**Candidate:** ...   but   I'm   excited   to   jump   in   and,   and   figure   out   maybe   ways   to   at   least   motivate   the   staff.  
+**Interviewer:** Good.   Thank   you.   Mm-hmm.  
+**Candidate:** Okay.   Do   you   mind   if   I   just   take   a   minute   or   two   to   organize   my   thoughts?  
+**Interviewer:** Take   your   time.  
+**Candidate:** Great.   Okay,   so   let   me   just   walk   you   through   what   I'm   thinking   here.  
+**Interviewer:** Great.  
+**Candidate:** The   main   issue   at   hand   is   the   lack   of   motivation.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Uh,   and   I   think   there's   a   few   reasons   that   that   can,   that   that   can   be   caused.   Um,   the   number   one   reason,   unfortunately,   I   think,   is,   is   often   fiscal.   I   think   there's   probably,   probably   some   information   there,   um,   in   terms   of   people's   salaries,   bonuses,   benefits,   any   of   the,   uh,   compensation   for   the   work   that's   being   done   by   back   office.   Obviously,   they're   not   out   playing   on   the   field,   and   so   they   do   feel   the   need   still   to   be   rewarded,   and   that   actually   ties   me   into   my   second   point,   which   is   the   job   nature.   So   a   big   thing   is   that   it   might   just   not   be   fulfilling   enough,   and   the   work   that   they   do,   they   might   feel   like   they're   either   not   making   a   difference   or   that   it's   not   important.   Uh,   the   work   could   also   be   too   hard   or   too   stressful.   So   all   three   of   those   would   be   really   interesting   to   see.   Maybe   some   other   employee   surveys,   if   we   have   them,   getting   a   little   bit   more   detailed,   uh,   whether   it'd   be   focus   groups   or   employee   interviews.  
+**Interviewer:** Okay.  
+**Candidate:** And   lastly,   I'd   like   to   look   at   the   actual   environment   of   the,   of   the   office.   Maybe   the   culture   is,   is   interesting.   I   know   if   some   Americans   come   in   and,   and   bought   the   club,   there   might   be   a   lot   of   dissonance   between   people   who   support   that   idea,   um,   and   people   who   don't,   and,   and   there   could   be   a   bit   of   conflict   there,   and,   um,   maybe,   maybe   a   bad   culture   resulting   from   that.   And   also,   it   would   be   interesting   to   look   at   the   hierarchy   of   the   organization.   Is   it   just   this   American   comes   in   and   just   calls   all   the   shots   and   tells   everyone   what   to   do,   or   is   it   a   much   more   democratic   kind   of,   uh,   layout   of   the   company?  
+**Interviewer:** Fantastic.   Okay.   Where   do   you   want   to   start?  
+**Candidate:** Let's   start   with   financial.  
+**Interviewer:** Okay,   awesome.   Um,   what   do   you   think   could   be   some   of   the   issues   with,   uh,   financial   dissonance   in   the   organization?  
+**Candidate:** Yeah,   so-Obviously,   everyone,   everyone   wants   to   make   as   much   money   as   possible,   you   know.   No   one,   no   one   wants   to   take   a   pay   cut   or   no   one   wants   to,   to   get   paid   under,   you   know,   a   certain   wage.   But   I   think   that   there   could   be   a   connection   made   between   what   people   think   they   deserve   to   be   paid   versus   what   they're   actually   being   paid,   whether   they're   comparing   that   to   other   football   clubs   or   whether   they're   comparing   that   to   just   the   rest   of   the   population.  
+**Interviewer:** Okay.  
+**Candidate:** I   think   in   addition,   looking   at   bonuses,   maybe   if   bonuses   are   going   straight   to   the   management   and   none,   none   to   the   back   office   or   all   to   the   players   and   none   to   the   back   office,   there   could   be   some,   some   anger   or   resentment   there.   And   lastly,   just   in   terms   of   benefits,   so   are   people   getting   the   benefits   they   want?   Do   they   get   their   healthcare?   Do   they   get   all   these   other   little   things   that   kind   of   tie   in   and   maybe   put   the   bow   on,   on   the   box?  
+**Interviewer:** Okay.   Um,   uh,   can   you   think   of   any   other   things   on   the   fiscal   side   that   could   be   tied   to,   like   for   example,   y-   you   know,   um,   we,   we've   just   gone   through   a   kind   of   a   crazy   season   for-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   football   with   COVID-19,   um,   and   I   know   that   there   is   an   employee   survey   that   we'll   look   at   in   just   a   minute   that   includes   some   of   the   factors   from   that,   but   is   there   any   tie   between   fiscal   and   COVID-19   or   do   you   see   those   as   separate   issues?  
+**Candidate:** Um,   they   may   have,   they   may   have   either   had   some   recent   layoffs   and   that   could   be   something,   or   to   save   everyone's   salary,   or   maybe   they,   everyone   took   pay   cuts,   or   maybe   actually   some   people   took   pay   cuts   and   some   people   got   pay   rises   and   that   could   be   really   harmful   to   the   culture   of   the   office.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Um,   and   that   actually   is   a   really   good   point.   I,   I   forgot   to   include   that   in   here,   but   in   terms   of   COVID-19   itself,   that   could   have   been   really   interesting   towards   the   motivation   in   that   maybe   they   were   way   too   hard   on   COVID   and   no   one   was   allowed   to   come   to   work,   or   only   one   person   in   each   room,   or   maybe   they   were   way   too   lax   and   no   one   was   wearing   masks   and   people   were   upset   with   that.   But   either   way,   it's   a   very   difficult   line   to   walk   and   I   know   that   the   pandemic   was   stressful   for   everyone,   but   that   could   have   been   something   that   maybe   impacted   employees'   sentiment   of   the,   of   the   office.  
+**Interviewer:** Um,   uh,   you   know,   one   of   the   things   that   I   thought   was   interesting   in   our   background   when   I   was   presenting   it   is   that,   uh,   it   said   that   if   not   for   COVID-19,   many   of   them   would   have   left.  
+**Candidate:** Yeah.  
+**Interviewer:** What   do   you   think   that   means?  
+**Candidate:** Well,   I,   initially   I   would   have   thought   that   during   COVID-19,   not   many   people   are   hiring,   because   obviously   every,   every   business   is   struggling,   especially   in,   in   industries   like   food   and   leisure.   And   so   maybe   the,   the   job   market   is   just   really   difficult   and   so   people   can't   really   go   out   and   do   that.   And   also,   maybe,   maybe   COVID   made   it   a   little   bit   easier.   Maybe   they   were   working   from   home.   We've   all,   we've   all   done   remote   work   at   this   point   and   it   is   a   little   bit   easier   than   going   into   the   office.   And   so   maybe   there's   some   connection   there,   but   I,   I   did   think   that   was   interesting   that   if   it   was   not   for   COVID   that   50%   of   those   80%   of   employees   who   were   not   happy   would   have   just   gone   and,   gone   and   left.  
+**Interviewer:** After   doing   some   further   analysis   on   the   survey,   we've   realized   that   employees   are   generally   highly   satisfied   with   the   COVID-19   measures   that   have   been   implemented,   including   the   option   for   100%   remote   work.   So,   I   think   you're   right   on   the   head   for   that   one.   However,   most   junior   level   employees   on   average   ranked   the   following   aspects   lowly.  
+**Candidate:** Okay.  
+**Interviewer:** Number   one,   uh,   the   team's   general   manager,   so   the   person   who's   in   charge   of   the   football   team's   operations,   sends   direct   requests   to   some   employees   which   sometimes   overlap   and   contradict   requests   they   receive   from   their   direct   managers.   Uh,   the   second   is   resentment   toward   the   latest   across-the-board   budget   cuts.  
+**Candidate:** Okay.  
+**Interviewer:** And   the   third   is   the   lack   of   professional   good   faith   that's   reflected   by   longer   de   facto   working   days   since   the   remote   working   policy   was   introduced.   The   question   is,   just   how   should   they   address   these   problems?  
+**Candidate:** I   just   want   to   make   sure,   um,   by   longer   de   facto   working   days,   is   that   basically   saying,   "Oh,   you're   only   going   to   work   9:00   to   5:00,   but   you're   expected   to   work   till   8:00   PM"   or,   or   the,   the   days   are   getting   stretched   out?   Is   that   what,   is   that   what   that   means?  
+**Interviewer:** Yes,   it,   it   basically   it   means   that,   "Oh,   instead   of   commuting,   you   can   now   work   those   hours."  
+**Candidate:** Gotcha.   Okay.  
+**Interviewer:** And   so   the,   so   between   the   commute   and   just   the   boundaries   of   work   being   blended   because   it's   no   longer   when   I'm   not   at   work   I'm   not   working-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   um,   just   some   of   the   challenges  
+**Candidate:** around   that.   Yeah,   I,   I   think   we've   all   experienced   that   and   that's,   that's   not   fun   at   all.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Um,   just   one   more   clarification.   The   team   GM   is   not   the   American.   He's   the   owner.   The   GM   is   an   individual?  
+**Interviewer:** Exactly.  
+**Candidate:** Okay.   Good   to   know.  
+**Interviewer:** So   the   GM   is   on   site   managing   the,   uh,   the   organization.  
+**Candidate:** Okay.  
+**Interviewer:** Different   than   the   coach   who's   managing   the   players.  
+**Candidate:** Yes.  
+**Interviewer:** The   GM   is   kind   of   in   charge   of   the   full   operation.  
+**Candidate:** Okay.   Yeah,   well,   I'll   address   these   one   by   one.  
+**Interviewer:** Yeah.  
+**Candidate:** Um,   and   I'll,   I'll   try   and   keep   it   pretty   conversational   here.  
+**Interviewer:** Yeah.  
+**Candidate:** Um,   the   team   GM   sending   direct   requests   which   contradict   with   maybe   other   things   that   have   been   said,   I   think   that   that's   sadly   all   too   common   in   a   lot   of   workplaces   and   I   think   that   that   can   really   lead   to   a   bad,   bad   culture.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Honestly,   more   so   potentially   than   even   budget   cuts   and   other   things   because   doing...   I,   I   can   only   imagine   doing   some...   doing   your   work   and   what   you   think   you   need   to   be   doing   and   then   being   told   to   do   the   opposite   has   to   put   both   the   employee   in   a   really   bad   situation   as   well   as   potentially   lead   to   consequences   from   the   person   who   originally   gave   their,   their   orders.   And   so   I   think   having   some   sort   of,   uh,   if   we're   talking   about   how   to   solve   this,   I   think   having   some   sort   of,   uh,   communication   channel   and   expectations   of,   "Okay,   just   so   you   know,   here's   exactly   what,   what   they've   been   told   and   here's   what   you   can   say,"   and   just   making   sure   that   there's,   they're   almost   meesy   in   terms   of   how   they   can   actually   give   requests   and   orders.   Um,   that   when   done   properly   I   think   would   be   really   helpful,   but   you'd   also   have   some   risks   there   in   terms   of   making   sure   that   you're   not   making   everything   too   convoluted   and   bure-   bureaucratic.  
+**Interviewer:** Yes,   absolutely.   Anything   else?  
+**Candidate:** Yeah,   in   terms   of   the   budget   cuts,   I   think   that's   just...   It   seems,   it   seems   simple   right   now   and   I'm...   Hopefully   we   have   some   information   on   that,   but   I'm   imagining   budget   cuts   means   pay   cuts   or   bonus   cuts   and   I   would   imagine   it's   probably   not   fairly   distributed,   or   at   least   it's   not   viewed   that   way   by   whoever's   getting   higher   or   more   frequent   budget   cuts.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** And   then   lastly,   in   terms   of   the   working   days,   that's   really   tough   because   that,   that   could   actually   come   from   issue   number   one   of   the   team's   GM   sending   those   direct   requests.   And   so   just   making   sure   that   if   those   two   are   linked,   we   can   hopefully   avoid   that   by,   by   just   having   HR   maybe   pa-   partner   with   HR   and   just   making   these   actually,   um,   something   that   people   are   following   of   you   don't   have   to   work   before   8:00   AM   and   you   don't   have   to   work   on   this.   And   like......   please   turn   off   your   laptops   at   6:00.   I   know,   um,   some   countries   like   France   as   well   where   it's,   it's   if   you   work   after   a   certain   period   of   time,   the   actual   company   will   get   fined   or   if   you   work   over   a   certain   amount   of   hours.   And   so,   and   that'd   be   really   interesting   just   to   really   make   it   turn   your   laptop   off   at   6:00,   spend   time   with   your   kids,   uh,   being   understanding   in   this   time   of   tension,   right,   during   COVID   and   all   that.  
+**Interviewer:** Awesome.   Um,   which   one   do   you   think   is   the   one   that   we   should   explore   first?  
+**Candidate:** Um,   I   think   budget   'cause   it's   probably   the   easiest   to   get   a,   a   number   on   and   easiest   to   quantify.   Um,   and   then   after   that,   I'd   want   to   go   into   the   team's,   uh,   general   manager   issue   if   we   had   time.  
+**Interviewer:** Okay,   awesome.   So   I   actually   have   some   data   on   budget   cuts.  
+**Candidate:** Great.  
+**Interviewer:** Um,   and   I'm   gonna   give   you,   um,   a,   um,   y-   some   detail   here.   It's   an   exhibit.  
+**Candidate:** Okay.  
+**Interviewer:** Um,   the   median   salary   in   the   UK   is   38,000,   um,   pounds.  
+**Candidate:** Okay.  
+**Interviewer:** And   then   the   details   of   our   specific   employee   categories,   obviously   these   are   kind   of   averages.   There   will   be   a   range   around   this,   but   these   are   the   averages.   Um,   and   each   one   of   these   areas,   um,   is   included   here.   And,   um,   so,   uh,   a-   as   we've   already   talked   about   these   budget   cuts   we're   proposed,   so   this   percentage   cut   is   including   the   actual   proposed   percentage.   Um,   but,   but   of   course,   you   know,   interested   i-   if   you   got   some   insights   there.   And   so   what   I   want   to   do   specifically   with   this   is   calculate   our   expected   savings   for   two   years   with   these   planned   budget   cuts,   um,   and   provide   some   insights   about   the   numbers.   And,   and   just   some   context,   right?   The   salary   cuts   were   a   part   of   a   three-stage   plan   to   alleviate   the   final,   um,   burden   of-  
+**Candidate:** Okay.  
+**Interviewer:** ...   uh,   the   financial   pressure   that   was   instituted   during   COVID-19   because   no   fans   were   allowed   in   the   stadium-  
+**Candidate:** Yeah,   absolutely.  
+**Interviewer:** ...   for   over   a   year.   Um,   so   gate   revenue   and   merchandise   revenue   were   nonexistent   during   that   period,   but   also   have   fallen   significantly   since   then   and   have   required   cost   reduction   protocols.   Um,   and,   and   so   of   course,   we've   been   able   to   handle   some   of   that   with   some   of   our   issues   that   for   those   direct   client-facing   folks,   but   this   back   office   is   an   issue.   Um,   the   goal   is   to   recoup   at   least   2   million   pounds   from   the   back   office.  
+**Candidate:** Two   million?  
+**Interviewer:** Yep.   Mm-hmm.   Including   administrative,   media,   and   commercial   divisions.   So   all   of   these   are   reflected   in   those   three   divisions.  
+**Candidate:** So   just   from   this   table,   uh,   we   wanna   save   $2   million.  
+**Interviewer:** That's   correct.  
+**Candidate:** Just   from   these   budget   cuts?  
+**Interviewer:** Yep.   Mm-hmm.  
+**Candidate:** Okay.   Great.  
+**Interviewer:** Um,   and   so,   um,   the   salary   cuts   were   carried   out   specifically,   right,   a   cut   of   15%   for   junior   and   senior   employees-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   a   20%   cut   for   senior   managers   and   executives,   and   a   33%   cut   for   the   CEO.  
+**Candidate:** Yeah.  
+**Interviewer:** And   then   after   two   years,   everyone's   salary   would   return   to   the   pre-COVID   rate.  
+**Candidate:** So   as,   as   it   is   right   here   in   this   column?  
+**Interviewer:** That's   correct.   Um,   however,   the   condition   would   be   that   they   would   have   to   return   to   the   office.  
+**Candidate:** Yes.  
+**Interviewer:** Okay.  
+**Candidate:** Okay.   Wonderful.  
+**Interviewer:** Yeah.   So   just   walk   me   through   kind   of   how   you   would   think   about   this   exhibit,   these   numbers,   and   some   other   options   potentially   that   they   may   have   if   you   wanted   to   revisit   this.  
+**Candidate:** Yeah.   So,   um,   I   mean,   even   just   before   you   go   into   math,   one   thing   that's   quite   nice   now   is   everyone's   making   over   the   median   salary.   So   that's,   they're   treating   the   employees   well.   And   40,000   is   pretty   close,   so   maybe   that'll,   maybe   that'll   drop   them   under,   we'll   see.   Um,   but   I'm   also   noticing   that   the,   the   budget   cuts   are   actually   more   severe   for   salaries   as   you   get   higher   up,   which   makes,   makes,   um,   makes   me   a   little   confused   that   I   would   assume   most   of   the   pushback   is   not   coming   from   the   CEO   or   the   managers.   It's   probably   from   senior   or   maybe   junior   employees.  
+**Interviewer:** That's   right.   A-   Actually   all   of   the   surveys   were   for,   from   the   more   junior   employees.  
+**Candidate:** Okay.  
+**Interviewer:** Yeah.  
+**Candidate:** Which   was   interesting   'cause   I   don't   know   if   they   know   the   full   picture,   but   they're   actually   almost   getting   off   better   than   everyone   else,   but   there's   obviously   more   of   them.   Um...  
+**Interviewer:** Correct.   So   yeah,   senior   and   junior   employees   were   part   of   the   survey.   Managers   and   CEOs   were   not.  
+**Candidate:** Okay.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** So   in   terms   of   the   method   we   want   to   do   to   figure   out   how   much   we're   saving,   it's   relatively   simple   here.   You   s-   hang   on,   I   just   wanted   to   make   sure,   this   is   over   one   year   or   two   years?  
+**Interviewer:** Two   years   is-  
+**Candidate:** Over   two   years.   Okay.  
+**Interviewer:** ...   the,   they're   gonna   cut,   they're,   they're   expecting   that   a   full   return   to   office   will   be   possible   after   two-  
+**Candidate:** Okay.  
+**Interviewer:** ...   um,   after   two   years   of   the   budget   cuts.   So   the   budget   cuts   are,   um,   planning   to   be   instituted   kind   of,   you   know,   um,   before   COVID   is   completed,   but   let's   assume-  
+**Candidate:** Yes.  
+**Interviewer:** ...   that   they're,   they're   kind   of   projecting   out   about   two   years.   Yeah.  
+**Candidate:** Okay.   So   yeah,   I   would   just   multiply   the   annual   salary   by   the   number   of   employees   to   find   out   how   much   money   we're   spending   in   that   role.   So   CEO   would   just   be   one   and,   and   vice   versa.   Or   and,   and   as   we   continue.   And   then   multiply   that   by   the   percentage   cut   to   find   out   the   amount   of   money   that   we   are   cutting,   add   up   those   four,   and   then   that's   our   money   saved.  
+**Interviewer:** Great.   Let's   go   for   it.  
+**Candidate:** Okay.   Let's   start   off   at   the   top   with   CEO.   So   700,000   multiplied   by   one,   multiplied   by   two   years   is   actually   $1.4   million,   and   we   know   that   we're   gonna   save   33%   of   that.   So   10-  
+**Interviewer:** Yep.   And   these   are   in   pounds.   You   can   do   this   in   pounds.  
+**Candidate:** Oh   yeah,   sorry.   And   these   are   in   pounds.   Um,   and   so   we   know   we're   gonna   spend,   save   33%   of   that,   so   that's   140,000   would   be   10%   multiplied   by   three   is,   um,   320,000   pounds,   and   then   add   on   10%   of   that   for   the   3%,   which   would   be   32,   so   352,000   pounds.  
+**Interviewer:** Okay.  
+**Candidate:** In   terms   of   our   managers,   we   have   $90,000   or   90,000   pounds   for,   uh,   salary   multiplied   by   10   is   900,000,   and   we   know   that   we're   saving...   Oh,   and,   and   we're   doing   that   over   two   years.   I   gotta   keep   remembering   (laughs)   to   do   that.   Um,   that's   1.8   million.   And   we're   gonna   save   20%   on   this.   So   that's   pretty   easy.   Um,   180,000   is   10%,   so   360,000   is   our   20%   savings.   And   I'm   just   gonna   box   these,   so   I   can   remember   to   add   them   up   at   the   end.   In   terms   of   our   senior   employees,   we   have   70,000   pounds   a   year   multiplied   by   our   30   employees,   which   is   2.1   million,   and   we're   gonna   multiply   that   by   two   for   the   two   years.   So   that's   4.2   million....   and   we   know   that   we're   saving   15%.   So   10%   would   be   $420,000.   5%   would   be   $210,000.   Add   those   up   together   for   $630,000.   And   lastly,   we've   got   our   junior   employees   making   £40,000   a   year,   multiplied   by   the   90   is   £3.6   million.   Multiplied   by   2   is   £7.2   million,   and   then   we're   saving   15%   there.   So   10%   being   $720,000,   and   then   5%   being,   um,   5%   of   700   would   be   350,   and   5%   of   the   20,000   would   be,   um...   oh   sorry,   let   me   just   make   sure   I'm   doing   the   right   number   there.   Um,   720,   so   $720,000   is   10%,   so   5%   is,   um,   is,   yeah,   350   plus   5%.   Sorry,   I've   just   had   a   complete,   complete   brain,   um,   brain   fog   there.   10%   of   $7.2   million   is   $720,000.  
+**Interviewer:** Okay.  
+**Candidate:** And   then   5%   is   half   that   number.   Half   of   $720,000   is   the   $350,000   plus   the   $10,000,   $360,000.   And   that   is   the   5%,   so   plus   that   onto   the   10%   for   a   total   of   one   point,   um,   1.08   million,   or   no?  
+**Interviewer:** There   you   go.  
+**Candidate:** Yeah,   1.08   million.   And   then   add   those   all   up   together,   we   have-  
+**Interviewer:** Before   you   do   that-  
+**Candidate:** Yeah.  
+**Interviewer:** Um,   check   your   first   number.  
+**Candidate:** Okay.  
+**Interviewer:** I   just   want   to   make   sure   that   you've   got   all   the   right   numbers   here.  
+**Candidate:** Yeah.   So   $700,000   multiplied   by   33%.   All   right   then,   it's   also   over   two   years,   so   1.4   million,   the   10%   of   that   would   be   $140,000,   multiplied   by   3.   10   times   3   is   30,   4   t-   40   ti-   or   4   times   3   is   12.   Oh,   I've   added   a,   I've   added   a-  
+**Interviewer:** There   you   go.  
+**Candidate:** ...   dropped   a   number   there.   So   that   would   be   400   and,   um,   52.   All   right,   it   w-   wouldn't,   sorry.   Let   me   just   recalculate   that.   We   have   our   $420,000   and   then   we   know   that   we're   adding   in   10%   of   that   for   the   3%,   which   is   $42,000,   so   it's   going   to   be   462-  
+**Interviewer:** There   we   go.  
+**Candidate:** ...   thousand.   Thank   you   for,   uh,   for   calling   that   out   there.   462,000.   Okay.   And   so   if   we   add   these   all   up,   um,   we   have   360,000   plus   462,000,   plus   630,000,   plus   1.08   million,   and   that's   gonna   give   us...   That's   gonna   save   about   2.43   million,   um,   which   is   actually   more   than   our   goal   needs-  
+**Interviewer:** Okay.  
+**Candidate:** ...   by   approximately   25%   almost,   just   under   25%.   So   we're   actually,   if   we   only   wanted   to   save   two   million-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   we   could   go   ahead   and   give   a   little   bit   of   money   back.  
+**Interviewer:** Where   would   you   change   it?   (laughs)  
+**Candidate:** (sighs)   That's   a   tough   question.   Um,   junior   and   senior   employees   are   the   ones   who   are   really   upset   at   home.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Now,   not   to   say   that   managers   and   the   CEO   are   not   upset.   However,   that's   11   people   compared   to   120   people.   That's   less   than   10%   of,   of   what   junior   and   senior   employees   represent.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** So   I   think   putting   it   back   to   junior   and   senior   employees,   I'm   happy   to   calculate   how   much   we   could   actually   give   them   back,   if   you're   okay   with   that?  
+**Interviewer:** Yeah,   but   let's   start   with   junior   employees.   What   would   you   actually,   wha-   what   would   be,   you   know,   where   would   you   start   there?  
+**Candidate:** Um,   so   right   now,   if   they're   taking   a   15%   pay   cut,   um,   15%   of   40,000,   10%   being   4,000,   5,000,   2,000,   they're   actually   losing   $6,000   which   takes   them   down   to   $34,000,   or   pounds,   sorry.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Um,   per   year.   The   issue   with   that   is   it's,   actually   they're   now   under   the   median   salary.   So   bringing   them   back,   if   we   could   bring   them   back   up   to   at   least   the   median   salary,   that   would   be   nice.  
+**Interviewer:** Okay,   yeah.  
+**Candidate:** Um-  
+**Interviewer:** But   where,   where   does   that   bring   us   in   terms   of   the   2.5?   Hmm.  
+**Candidate:** Yeah,   so   if   we   were   to,   we   would   have   to   give   all   90   employees   an   additional   $4,000.   So   4,000   multiplied   by   90,   um,   and   again   that's   also   over   two   years,   um,   so   we   can   just   do   the,   um,   4,000   by   90   is...   4,000   by   9   would   be   36,000,   so   360,000.   And   multiply   that   by   2   is,   uh,   720,000.   And   so   that's   actually   gonna   go   ahead   and   put   us   back   under   our,   in   terms   of   the   amount-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   money   we   want   to   save.  
+**Interviewer:** Does   that   sound   right,   though?   Hmm.  
+**Candidate:** It   doesn't   because   I   was,   I'm   looking   at   the,   um,   calculation   we   did   before.   And   so   I   just   want   to   make   sure   that   maybe   I've,   maybe   I've   done   something   wrong   there.   Um,   so   let's   look.   We've   got   the   15%   is   what   we   were   previously   saving.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** But   let's   get,   let's   go   back   to   15%   of...   I   just   want   to   run   through   all   my   calculations-  
+**Interviewer:** Okay.  
+**Candidate:** ...   to   see   where   I   kind   of   messed   up   there.   Um,   10%   of   4,000   is   4,000,   5%   is   2,000,   that's   6,000.   They   are,   they   would   be   getting   34,000   so   we   need   to   add   4,000.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** So   the   4,000   multiplied   by,   um-  
+**Interviewer:** What   was   the   total   amount   that   we   saved   in   that   segment   before?   Hmm?  
+**Candidate:** 1.08   million.  
+**Interviewer:** Okay.   So   just   check   that   number.  
+**Candidate:** Uh,   the   1.08   or   the   ...  
+**Interviewer:** The   1.08   and   the   720,   do   those,   do   those   seem   reasonable   in   light   of   the   changes   that   we're   making   here?   Hmm.  
+**Candidate:** Um,   I   mean   instead   of,   I   guess   instead   of   cutting   them   15%,   we're   cutting   them   by,   um,   by   5%.   So   is   that   about   three   quarters   of   that?   Yeah,   tha-   that,   that's   about   right   to   me.  
+**Interviewer:** Yep.  
+**Candidate:** It   looks   about   right.
+**Interviewer:** It   is,   but   now   we're   under.   What   do   we   do?   Mm-hmm.  
+**Candidate:** So,   there's   a   few,   there's   a   few   ways   we   can   look   at   that.   We   can   either   try   and   recoup   that   money   elsewhere-  
+**Interviewer:** Where?  
+**Candidate:** ...   make,make   cuts.   Um,   would   you   mind...   I   know   you   mentioned   before,   um,   I   didn't   get   a   chance   to   write   it   down,   the,   it   was   part   of   a   three-stage   process.   This   is   one   of   them.   What   were   the   other   two?  
+**Interviewer:** Yep.   Mm-hmm.   Let   me   go   back   to   my   notes   there.  
+**Candidate:** 'Cause   I'm   wondering   if   we,   if   there's   areas   in   there   that   we   can   go   ahead   and,   and   save   some   money.  
+**Interviewer:** Absolutely.   Um,   so,   um,   uh,   right,   there   were   three   issues   that   they   faced   and   we   kind   of   looked,   um,   through   these.   So,   um,   the,   the   three   stages   was,   um,   to   recoup   the   two   million   from   the   back   office   and   the   administrative   media   and   commercial   divisions.  
+**Candidate:** Administrative,   media   and   commercial.   Okay.  
+**Interviewer:** That's   correct.   Yep.   And   so,   this   is,   this   though   includes   all   three   of   those   divisions.  
+**Candidate:** Okay.   So   this   is   it   pretty   much   in   its   entirety.  
+**Interviewer:** So,   the   salary   cuts   were   just   a   part   of   the   three-stage   plan.   It   was-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   one   of   the,   one   of   the   ways   that   they   were   trying   to   save   money.   They   did   it   in   other   ways   as   well.   Mm-hmm.  
+**Candidate:** I'm   not   extremely   experienced   in   the   football   industry,   so   this   might   be   crazy   to   say,   but   those   football   players   who   are   earning   hundreds   of   thousands   of   pounds   a   week   could   perhaps   take   a   tiny   cut   and   it   would   fund   most   of   this,   so   that's   probably   one   way   we   could   look.  
+**Interviewer:** Great.   Mm-hmm.  
+**Candidate:** That   might   then   cause   issue   with   the   actual   team   and   then   all   of   a   sudden   we   might   not   be   able   to   win   because   their   motivation's   low.   So,   it   is   something   we   have   to   be   careful   with.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** There's   a   lot   of   risks   associated   with   that.   There   are   also   other   ways   in   terms   of   if   we   could   maybe,   um,   almost...   I   know   this   is,   this   is   looking   at   cost   here,   but   if   we   wanted   to   actually   look   at   the   profitability,   we   could   almost   have   some   sort   of   new   revenue   initiative,   whether   it's   trying   to   really   sell   merch   over   COVID   or   offering   some   sort   of   like   Zoom   way   to   get   involved,   uh,   and   be   a   pa-   be   part   of   the   team.   That's   a,   that's   a   way   that   they   could   generate   revenue   but   I   know   we   wanna   focus   on   cost   here   and   so,   um,   I   would,   I   would   look   into,   into   the   football   players'   salary   but   I   know   it's,   I   know   it's   probably   a   little   bit   risky.  
+**Interviewer:** Give   me   one   other   idea.   Mm-hmm.  
+**Candidate:** Um,   another   idea   is   maybe   re-   redistributing   the   pay   cuts.   So,   the   CEO   could   take   a,   a   higher   cut   or   some   of   the   senior   employees   could   may-   because   we,   right   now   we're   just   looking   at   the   junior   employees   and   that   saves   them   there.   I   don't   know   if   we   could   justify   cutting   the   senior   employees,   m-   the   senior   employees   more.   But   the   managers   and   CEO,   there   is,   um,   there's   a   little   bit   of   money   there   that   we   can,   that   we   can   save.   I   don't   know   if   it   would   be   enough   though.   I'm   happy   to,   to   calculate   it   out   if   you   want.  
+**Interviewer:** Okay.   That's   all   right.   Uh,   I   think   that   at   this   point   we've   taken   enough   time   to   talk   through   everything.  
+**Candidate:** Yeah.  
+**Interviewer:** Why   don't   you   walk   me   through   your   final   recommendation?  
+**Candidate:** Yeah.   Well,   I   recommend   that   we   do   go   ahead   and,   um,   go   through   with,   with   the,   with   these   employee   salary   cuts.   However,   I   wanna   caveat   that   and   say   I'm   not,   I'm   not   set   on   this.   I   would   want   to   change   it   around   a   little   bit,   explore   these   other   avenues   if   we   have   more   time,   to   go   ahead   and   make   it   a   little   bit   more   tailored   to   help   the   junior   employees   and   senior   employees   be   more   involved   and   be   happier   because   they   are   the   future   of   the   company,   and   turnover   is   a   very   expensive   thing   to   deal   with,   and   especially   in   this   point   in   time   we   don't   wanna,   we   don't   wanna   be   facing   turnover   and,   and   having   employees   quit.   Uh,   in   terms   of   next   steps   for   that,   I   think   just   like   a   meeting   with,   um,   maybe   the   CFO   or   someone   in   the   accounting   department   just   to   really   go   through   all   these   numbers,   look   for   any   other   places   that   we   could   perhaps   shift   some   numbers   and,   and   make   it   a   little   bit   easier   to   find   this,   this   budget   of   saving   two   million.   Um,   again,   risk,   risks   with   that   is   we,   we   wanna,   we   wanna   keep   motivation   high,   but   at   the   end   of   the   day,   this   is   a   financial   operation   and   we,   we   need   to   make   sure   that   we're   not   gonna   go   under.  
+**Interviewer:** Awesome.   So,   let   me   talk   through   some   quick   feedback.   Overall,   really   good   job.   I   mean,   this   case   is,   has   a   lot   of   numbers   for   a   human   capital   case.  
+**Candidate:** Yeah.  
+**Interviewer:** But,   um,   but   some   of   the   creativity   aspects   and   the   fact   that   neither   you   or   I   are   experts   in   professional,   uh,   sports   or   football   was   kind   of   a   fun   part   of   it-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   wouldn't   you   say?   Um,   look,   uh,   at   the   beginning,   I,   I,   I   really   thought   your   structure   was   exceptional.   Um,   and   I,   I   gave   you   a   four   for   both   your   recap   and   your   clarifying   questions.   I   thought   that   you   did   a   good   job   of   tying   me   back   to   the   issue.   It   felt   very   conversational.   I   felt   like   you,   uh...   But,   you   know,   overall   I'm,   I'm   kind   of   making   a   gut   judgment   call   here.   Do   you   have   a   good   grasp   of   the   problem?  
+**Candidate:** No.  
+**Interviewer:** I   felt   like   in   this   case   you   really   did.   Um,   I   thought   that   your   structure   was,   um,   I,   I,   I   gave   it   a   four   for   content   and   a   three   for   delivery.  
+**Candidate:** Okay.  
+**Interviewer:** Um,   and   I,   I...   One   of   the   things   that   I   really   liked   about   it   was   that   I   thought   that   it   was   very   tailored   to   the   case.   Like,   this   was   not   a,   you   know,   off   the   shelf-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   framework   at   all.   You   did   an   awesome   job   of   really   highlighting   it.   Um,   I,   I   actually   noticed   as   you   were   presenting   it   that   you   presented   it   in   a   different   order   than   you   wrote   it   down.  
+**Candidate:** I   did.  
+**Interviewer:** I,   I,   I   actually   gave   you   a   bump   for   that   'cause   I   thought   that   was   really   awesome.   But   I   still...   your,   um,   verbal   delivery,   I   still   was   looking   for   you   to,   on   top   of   everything   else,   just   to   say,   "I   have   three   categories   there.   Boom,   boom,   and   boom."  
+**Candidate:** So   really   be   clear.  
+**Interviewer:** And   in   the   first   category,   just   very   clear.   And   I,   I   was   imagining   us   not   sitting   across   the   table   where   I   can   see   how   many   bullet   points   you   have,   but   maybe   being   on   Zoom   where   somebody   couldn't   see   it   and   just   wanting   to   really   make   sure   that   you're-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   integrating   that   into   your   process.   Um,   for   the   case   creative   question,   um,   I   felt   like   you   did   a   good   job   of   kind   of,   you   know,   writing   down   some   of   your   ideas   there.   Um,   you   asked   me   for   the   feedback,   um,   but   then,   then   you   didn't,   as   you   were   brainstorming,   you   didn't   write   them   down.  
+**Candidate:** Yeah.  
+**Interviewer:** So,   so   maybe   just   really,   you   know,   pushing   yourself   to   keep   the   structure   going   there,   'cause   I,   I,   I   think   it   was   appropriate   for   this   case,   but   again,   I   don't   want   you   to   get   into   bad   habits.  
+**Candidate:** Yeah.  
+**Interviewer:** Um,   look,   I   think   that,   uh,   you   could   have   gone   maybe   even   a   little   further   outside   the   box   on   some   of   the   solutions   here.   I   really   liked   the   reduction   in   cuts   for   the   junior,   um,   employees,   but,   but,   you   know,   for   example,   what   if   we   had   a,   um,   steep   reduction   in   cuts   like   this   one   for   employees   who   want   to   remain   remote?  
+**Candidate:** Mm.  
+**Interviewer:** And   then   we   have   a   lower   reduction   for   employees   who   are   willing-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   to   come   back   into   the   office.   We   already   know   that   their   remote   is   something   that   they   value   and   that   they   prize.   Is   there   a   way   that   we   could   actually   tie   a   financial   incentive   to   it?   So,   you   know,   I,   there   were   some   things   that   weren't   even   in   the   case   guidance   that   I   had,   but   as   we   were   talking,   I   was   thinking,   I   felt   like   we   could   have   been   a   little   bit   more   robust   on   some   of   the   creativity   around   the   insights   for   the   math.  
+**Candidate:** Yeah.  
+**Interviewer:** So,   um,   I   still   though,   I   gave   you   a   three   for   the   math.   Um,   uh,   I   was   really   working   to   try   to   find   that   math   mistake.   It   was   easy   to   make,   um,   and   s-   so   I,   I,   I   knew   based   on   the   answer   key   that   it   was   wrong,   but   I   had-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   to   go   back   and...   I,   uh,   I   even   put   the   calculations   on   my   paper   myself   'cause   I   was   like,   how-  
+**Candidate:** (laughs)  
+**Interviewer:** Is   he...   Maybe   he's   right.   Maybe   the   answer   is   wrong.   But   it   turned   out,   um,   that   that   was   an   issue   in   a   question.   So   yeah,   just   really   making   sure,   um,   that   as   you're   walking   through   it   and   you're   doing   the   verbal   piece   that   you're   just   kind   of   double   checking   those.   Um,   and,   and,   but   the   main   reason   wasn't   the,   the   calculation   flaw   because   you   did   so   many   other   calculations   well.   I   wasn't   concerned   about   your   ability   to   calculate.  
+**Candidate:** Yeah.  
+**Interviewer:** It   was   just   the   insight   piece   that   I   would've   liked   to   have   seen   there.   Um,   your   final   re-   recommendation   was   really   good.   Tied   back   to   the   issue,   talked   about   some   of   the   things   that   we   saw,   and   then   talked   about,   um,   next   steps.   So,   overall   I   thought   that   was   a   really   good,   strong   finish.  
+**Candidate:** Okay.  
+**Interviewer:** Well   done.  
+**Candidate:** Thank   you.

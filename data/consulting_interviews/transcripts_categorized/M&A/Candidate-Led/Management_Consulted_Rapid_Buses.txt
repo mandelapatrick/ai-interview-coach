@@ -1,0 +1,199 @@
+Case: Rapid Buses
+Case Type: M&A
+Firm: EY
+Channel: Management Consulted
+URL: https://www.youtube.com/watch?v=c1vbyuwD5yY
+============================================================
+
+**Interviewer:** Okay.   I   hope   you're   ready   for   this.   We've   got   a   great   case   that   is   in   the   EY-Parthenon   style.  
+**Candidate:** Okay.  
+**Interviewer:** And   so   you're   going   to   find   similarities   to   this   for,   for   example,   Baines'   style   of   casing,   uh,   and   it's   an   M&A   financial   buyer,   a   PE   case.   Uh,   you're   going   to   find   that   there's   a   lot   of   interest   in   this   case   and   maybe   some   numbers   that   you   don't   know,   so   just   really   emphasize   your   structure-  
+**Candidate:** Okay.  
+**Interviewer:** ...   as   we're   going   into   it.  
+**Candidate:** Got   it.  
+**Interviewer:** All   right.   Case   is   called   Rapid   Buses.  
+**Candidate:** Rapid   Buses.  
+**Interviewer:** Our   client   is   a   Pan-Asian   private   equity   firm   that's   evaluating   an   investment   into   Rapid   Buses,   a   manufacturer   of   buses   in   Malaysia.   The   PE   firm   has   approached   you   to   help   do   an   initial   market   sizing   of   the   Malaysian   bus   market.   If   the   market   is   attractive,   the   client   will   hire   you   to   do   a   full-blown   commercial   due   diligence,   a   CDD,   on   the   transaction.   A   CDD   basically   entails   understanding   the   opportunity   of   the   investment   across   multiple   dimensions   to   ascertain   whether   it   will   be   a   good   investment   for   the   PE   firm.   Any   questions   about   the   background?  
+**Candidate:** Yeah.   So   just   to   clarify,   our   client   today   is   Rapid   Buses,   um,   which   is   a   company   that   a   PE   firm   wants   to   acquire   and   they   are   a   Pan   Am   bus   manufacturer-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   uh,   in   Malaysia.   And   we   basically   just   want   to   see,   is   this   market   attractive,   before   you   go   ahead   and   do   a   full...   Did   you   say   it   was   a   C-   what,   what   is   it   called?   A-  
+**Interviewer:** A   CDD.  
+**Candidate:** A   CDD.  
+**Interviewer:** Yep.  
+**Candidate:** Okay,   great.  
+**Interviewer:** So   a,   um,   a,   uh,   commercial   due   diligence.  
+**Candidate:** Okay.  
+**Interviewer:** And,   um,   not   Pan   Am,   they're...   It's   a   Pan-Asian   PE   firm.  
+**Candidate:** Pan-Asian.  
+**Interviewer:** Yep.  
+**Candidate:** Okay,   sorry.  
+**Interviewer:** Pan-Asian   PE   firm.  
+**Candidate:** Okay.  
+**Interviewer:** So   they   have   a   lot   of   experience   and   exposure   in   other   PE   markets.  
+**Candidate:** Yes.   And   do   we   know   if   this,   um,   if   Rapid   Buses   has   been   around   for   long   in   Malaysia   or   are   they,   are   they   a   pretty   new   company?  
+**Interviewer:** So   they're   not   new.   They   operate   and   sell   to   customers   within   Malaysia.  
+**Candidate:** Okay.  
+**Interviewer:** But   only   Malaysia   right   now.  
+**Candidate:** Perfect.   Do   you   mind   if   I   just   take   a   minute   or   two   to   organize   my   thoughts?  
+**Interviewer:** Sure,   give   your   time.  
+**Candidate:** Okay.   So   I've   tried   structuring   my   thoughts   into   three   buckets   here.   Um,   first   and   foremost,   I   think   the   market   is   most   important.   Obviously   we   want   to   establish   that   this   is   a,   a   good   and   attractive   market   before   we   do   anything   else.   And   so   a   few   things   I'd   want   to   look   at   there   is,   number   one,   above   all   else,   the   size.   Number   two   and   three   and   four   would   be   competitors,   the   actual   regulatory   restraints,   as   well   as   private   versus   public.   So   making   buses   for,   um,   private   institutions,   whether   it's   like   a   party   bus   or   something   like   that,   as   well   as   school   buses   and   public   transport.   The   financials   I   think   are   also   important.   So   just   looking   at   the,   the   profitability   for   this   in   terms   of   where   they're   getting   the   revenue.   Is   this   a   contract   from   a   government   or   a   school   or   is   this...   are   they   charging   people   every   time   they   come   up?   Uh,   in   addition   to   that,   the   capacity.   So   making   sure   that,   one,   they   have   enough   buses   to,   to   tailor   it   to   everyone,   but   also   that   there's   not   too   many   buses   and   not   enough   people   are   there.   So   I   think   there's   a   fine   line   there.   And   lastly,   really   just   drilling   down   on   the   customer   themselves,   right?   So   who,   who   is   our   customer?   Whether   it's,   uh,   again,   private   versus   public.   We   could   look   at   school   kids.   Obviously   they   are   in   those,   you   know,   classic   buses.   Um,   but   it   might   be   different   in,   in   Malaysia.   There's   residents   themselves   and   those   two   fall   under   the   kind   of   the,   the   domestic,   um,   population.   And   then   also,   um,   commuters   and   business   people   maybe   from,   from   afar,   whether   it's   from   a   different   country   or   they   just   don't   have   a   car   and   they're   using   public   transport.  
+**Interviewer:** Fantastic.   What   do   you   think   is   going   to   be   the   key   to   whether   or   not   this   is   an   attractive   deal   and   what   do   you   think,   is   it   going   to   be   a   yes   or   no,   without   obviously   knowing   any   of   the   numbers?  
+**Candidate:** I   think   just   the...   Obviously   I   don't   know   the   numbers,   but   I   think   the   actual   size   of   the   market   itself   and   in   terms   of   how   many   buses   there   is   a   need   for   and   maybe   how   many   buses   there   are.   Um,   a,   a   bus   I   don't   think   is   an   extremely,   "Oh,   I'm   going   to   pick   that   bus   over   this   bus."   It's   normally   if   there's   a   bus   there,   you   take   it.   And   so   being   able   to   jump   into   this   market   if   there's   a   need   for   buses,   um,   above   like   a   certain   threshold   would   be,   I   think   the   best   way   to   establish   this.  
+**Interviewer:** Okay.   Well,   let's   go   into   the   case.   Talk   to   me   a   little   bit   about   the   market   sizing.   How   would   you   actually   assess   the   market   for   this?  
+**Candidate:** Yeah.   So   to   just   walk   you   through   how   I   think   I'd   do   it,   um,   in   terms   of   the   market   itself,   you   need   to   look   at   all   people   who   are   using   buses.   So   I   think   you   would   segment   it,   um,   by   people   who   are   using   the   bus.   So   a   few   I   mentioned   before   were   commuters,   um,   people   in   school,   and   then   also   people   on   business   or   tourists.   And   then   from   there,   with   those   three   categories,   I   would   love   to   figure   out   in   terms   of   how   many   people   are   actually   in   this   category   and   then   how   frequently   they   are   using   the   bus,   whether   it's   on   a   per   year   basis,   per   month,   or   per   day.   And   then   that   would...   We   could   also   find   maybe   the   capacity   that   a   bus   has,   whether   it's   10   seats   or   100   seats.   And   from   there,   figure   out   how   many   buses   are   actually   needed   on   a   day-to-day   basis.   And   I   don't   know   if   the   client   has   a   goal   in   mind   of,   of   what,   what   is   an   attractive   market.   And   then   if   not,   we   can   convert   that   to   dollars.   But   it   might   be   easier   just   to   go   in   terms   of   how   many   buses   are   there.  
+**Interviewer:** Great.   Okay.   And,   um,   so   which   of   the   segments   would   you   think   would   be   the   largest   out   of   all   these?  
+**Candidate:** So   initial   thought   would   be,   oh,   commuters   and,   and   business   people,   but   I   think   that   that   is......   a   more   narrow-sighted   view,   and   I   think   that's   thinking   of   just   commercial   buses   that   you   would   see   downtown   in   a   city.   But   obviously,   there's   way   more   than   that.   There's,   um,   private   buses   and,   and   I   think   bigger   than   all   else,   at   least   in   America   from   what   I've   noticed,   is   those   big   yellow   school   buses.   And   so   I   would   imagine   the   student   population   would   be   the,   the   highest.  
+**Interviewer:** Okay.   So   we're   going   to   look   at   the   potential   size   of   the   target   market   and   specifically   what   the   full   potential   of   the   market   is.  
+**Candidate:** Okay.  
+**Interviewer:** Uh,   and,   uh,   so   what   I   want   to   do   is   estimate   the   potential   market   size   of   the   number   of   buses   in   Malaysia.   So-  
+**Candidate:** Number   of   buses.  
+**Interviewer:** ...   traditional   market   sizing   would,   of   course,   include   revenue,   but   we   are   not   interested   in   that   right   now,   just   the   number   of   buses.   And   to   be   clear,   for   the   client,   an   attractive   number   would   be   over   30,000   buses   in   the   Malaysian   market.  
+**Candidate:** Okay.   Do   you...   Can   I   ask   you   for   some   information?  
+**Interviewer:** Uh,   you   can   tell   me   what   information   you   would   like,   and   if   I   get,   have   it,   then   I   would   give   it   to   you.  
+**Candidate:** That   sounds   good   to   me.  
+**Interviewer:** Okay.   Mm-hmm.  
+**Candidate:** I   would   love   to   get   some   information   in   order   to   find   the   amount   of   people   in   each   of   these   sections-  
+**Interviewer:** Okay.  
+**Candidate:** ...   who   are   taking   buses.   So   whether   that   be   the   number   of   commuters   or   whether   we   need   to   go   a   little   bit   higher   up.   Um,   I'm   not   sure   if   you   have   any   information   that   vaguely   relates   to   that.  
+**Interviewer:** Sure,   but   I'm   not   going   to   tell   you   until   you   tell   me   what   specifically   you   want.   Um-  
+**Candidate:** I   would   love   to   know   the   number   of   students   in   Malaysia.  
+**Interviewer:** Okay.   Keep   going.  
+**Candidate:** Oh,   yeah.  
+**Interviewer:** I'll   tell   you   the   numbers   at   the   end.  
+**Candidate:** I'll,   I'll   just...   Yeah,   I'll   list   them   out.   I'd   love   to   know   the   number   of   students-  
+**Interviewer:** Okay.  
+**Candidate:** ...   the   number   of,   uh,   domestic   commuters,   and   then   the   number   of   business   or   tourists   or   foreign   people   who   are   using   the   transport.  
+**Interviewer:** Okay.  
+**Candidate:** In   addition,   I'd   like   to   know   how   frequently   they   take   the   bus,   whether   that's   every   day,   every   other   day,   once   a   week.  
+**Interviewer:** Okay.  
+**Candidate:** Um,   I'd   also   like   to   know   the   number   of   people   that   can   be   seated   on   a   bus.  
+**Interviewer:** Okay.   (paper rustles)  
+**Candidate:** And   that   is,   that's   all   I   want   for   now.  
+**Interviewer:** Okay.  
+**Candidate:** I   might   be   going,   I   might   need   more   also.  
+**Interviewer:** That's   great.   Um,   so   let   me   actually   give   you   some   of   this   information.   I   was   checking   it   off-  
+**Candidate:** Oh,   perfect.  
+**Interviewer:** ...   just   to   make   sure   that   you   had   it.   (laughs)   Um,   these   are   some   key   facts   about   Malaysia's   bus   market.  
+**Candidate:** Okay.  
+**Interviewer:** Um,   the   one   that   you   asked   for   that   I   do   not   have   is   the   frequency.   So   what   you   can   assume   is   that   the,   um,   the   frequency   is   going   to   be   daily.  
+**Candidate:** Daily,   okay.  
+**Interviewer:** Um,   except   for   the   visitors,   which   is   going   to   be   the   total   number   of   visitors   in   a   year.   So   you'll   have   to   get   to   the   daily   numbers  
+**Candidate:** After   we   do   that.  
+**Candidate:** To   my   mind.  
+**Interviewer:** Yeah.  
+**Candidate:** Okay,   perfect.   Um,   all   right,   let's   do   some   calculations.   So   Malaysia's   population   is   30   million   and   at   the   same   time,   there's   also   30   million,   um,   visitors,   let's   say.   And   before   we   go   forward   here,   I   see   that   we   have   the   average   life   expectancy.   Did   you   want   me   to   break   that   down   to   the   percentage   of   students   and   then   also   the   percentage   of   other   travelers   and   work   it   out   for   both   of   them?  
+**Interviewer:** Well,   uh,   you   know   what?   There's   not...   Uh,   I   don't   have   information   that's   as   robust   about   the   percentage   of   commuters.  
+**Candidate:** Okay.  
+**Interviewer:** So   let's   leave   that   to   the   side   for   now,   and   then   we'll   come   back   to   that   at   the   end   because   I   think   maybe   you   will   have   to   make   some   estimates   about   its   relative   size.   Mm-hmm.  
+**Candidate:** So   just   business   and   leisure   and   school   just   for   now?  
+**Interviewer:** Correct.   Mm-hmm.  
+**Candidate:** Okay,   perfect.   So   let's   do,   um,   school   first,   and   then   we   can   do   business   and   leisure.   So   for   school,   we   know   the   average   life   expectancy   of   a   Malaysian   is,   uh,   to   80   years   old.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** So,   um,   I'm   not   sure   if   you   have   a   specific   number   in   Malaysia   of   what   warrants   a   student.   Um,   if   not,   I'm   happy   to   go   ahead   and,   and   take   an   estimate.  
+**Interviewer:** Okay.   Um,   you,   you   can   just   estimate.   Mm-hmm.  
+**Candidate:** Okay.   So   I'm   going   to   assume   from   about   7:00   to,   um,   let's   say,   let's   say,   maybe,   maybe   it   might...   I   might   be   young,   but   I   don't   know   if   they   would   take   the   bus   so   I'm   going   to   actually   go   up   a   little   bit   to   when   they   might   take   the   bus   and   I'm   going   to   say   8:00   to   roughly,   um,   let's   even   go   all   the   way   up   to,   to   26.   So   people   who   are   in   college   and,   and   still   taking   the   bus.  
+**Interviewer:** Okay.  
+**Candidate:** Um,   or   that   might   be   a   little   bit,   that   might   be   a   little   bit   high   actually.   Let's   take   it   down   to   24.  
+**Interviewer:** Okay.  
+**Candidate:** And   that   also   makes   the   calculation   a   little   bit   easier.  
+**Interviewer:** Okay.  
+**Candidate:** So   from   8:00   to   24:00,   that   captures   16   years   out   of   the   80   years.   So   16   out   of   the   80   years   is   8   out   of   40,   which   is   4   out   of   20,   which   is   1   out   of   5,   which   is   20%   of   the   population   is   students.   So   20%   of   that   30   million   is   6   million.   So   of   those   6   million   people,   um,   percentage   of   all   Malaysian   students   who   take   the   bus   and   they   take   that   daily,   okay?   And   that's   50%.   So   it   looks   like   we   have   about   3   million,   uh,   Malaysian   students   who   are   taking   the   bus   every   day.  
+**Interviewer:** Okay.  
+**Candidate:** So   what   I   want   to   do   now   is   I   want   to   calculate   the   number   of   business   and   leisure   visitors   who   take   the   bus   on   a   day-to-day   basis-  
+**Interviewer:** Okay.  
+**Candidate:** ...   and   add   those   two   up   and   that's   our...   and   then   we'll   divide   it   by   the   number   of,   um,   seats   on   a   bus.  
+**Interviewer:** Okay.  
+**Candidate:** Uh,   if   we   can   find   that.   So   the   number   of   business   and   leisure   visitors   is   30   million.   Oh,   we   do   have   the   capacity   of   a   bus.   That's   50   people.   I'm   just   gonna   write   that   here.   Um,   so   percentage   of   all   visitors   that   take   the   bus   is   also   20%,   so   that's   6   million.   And   do   you   have   any   information   in   terms   of   how   often   these   visitors   stay   for,   how   often   they   take   the   bus,   or   would   you   prefer   an   estimate?  
+**Interviewer:** I   think   that   you   can   just   estimate   that   out   of   those,   that's   the   total   number   of   days   that   somebody   would   be   on   a   bus.   So   there   will   be   some   that   will   be   repeated   and   some   that   obviously   won't   take   the   bus.  
+**Candidate:** Okay.  
+**Interviewer:** But   I   think   you   can-  
+**Candidate:** So   6   million   bus   trips-  
+**Interviewer:** Correct.  
+**Candidate:** ...   we'll   call   it.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Okay.   Over   a   year   though.  
+**Interviewer:** That's   right.   Mm-hmm.  
+**Candidate:** Okay.   So   6,   um,   million,   and   what   I   want   to   do   now   is   I   want   to   divide   that   by...   Do   you   mind   if   I   do   360   instead   of   365?  
+**Interviewer:** That's   fair.   I   can   definitely   use   an   extra   card.   (laughs)   Mm-hmm.  
+**Candidate:** Okay.   Well,   I   see   that   there's   a   common   factor   of   six   here.So,   that's   one   million   over   60,   which   is   100,000   over   six,   which   is   about   16   points,   16,666.67.  
+**Interviewer:** Okay.  
+**Candidate:** Um,   I'm   just   gonna   round   it   up   to,   I   don't   know,   let's   just   say   16,600   or   700   if   you're   okay   with   that.  
+**Interviewer:** Sure,   that's   fine.  
+**Candidate:** Okay.   So,   we're   gonna   add   those   together.   Uh,   this   number   almost   seems   redundant   at   this   point   because   it's   so   much   s-   so   overshadowed   by   the   three   million   students   that,   um,   that   do   take   the   bus.  
+**Interviewer:** You   were   right,   the   school   is   the   largest.   Mm-hmm.  
+**Candidate:** Yes.   And   so,   3.0167   million   is   how   many   people   take   the   bus   on   o-   in   one   day.  
+**Interviewer:** Okay.  
+**Candidate:** So,   now   we   know.   I'm   just   gonna   move   over   to   a   new   piece   of   paper   here.  
+**Interviewer:** Great.  
+**Candidate:** Now   we   know   that   the   capacity   is   50,   so   we   just   need   to   divide,   um,   three   point...   Do   you   mind   if   I   just   round   down   to   three   million   or   do   you   want   me   to   keep   it?  
+**Interviewer:** That's   fine.  
+**Candidate:** Okay.  
+**Interviewer:** You   can   do   that.  
+**Candidate:** If   we   just   do   three   million   divided   by   the   50   seats   on   a   bus,   that's   the   same   as   300,000   divided   by   five,   which   is   60,000   buses,   are   how   many   we   would   need   to   be   the   minimum   amount   to   occupy   everyone   if   everyone   took   the   bus.   Now,   yes,   some   people   don't   take   the   bus   every   single   day   and   some   people   do   take   it   a   lot.   I'd   actually   recommend   there   being   more   buses   than   that   just   to   accommodate   for   really   busy   days,   right?   For   example,   if,   uh,   if   there's   a   festival   going   on   and   every   single   person's   going   to   the   city,   there   might   be   more.   So,   just   accounting   for   that   demand.   Um,   and   with   that   being   said,   it's   more   than-  
+**Interviewer:** So,   if   you   were   gonna   factor   up   that   number   to   account   for   not   just   additional   demand   but   also   like   peak   and   non-peak   times,   right?  
+**Candidate:** Yeah.  
+**Interviewer:** Because   we   won't   be   able   to   have-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   one   seat   per   person   on   every   given   bus.   There-  
+**Candidate:** Yeah.  
+**Interviewer:** Every   bus   has   an   empty   seat,   right?  
+**Candidate:** Yeah.  
+**Interviewer:** And   so,   um,   so   what-   what   factor   would   you   increase   that   by   in   order   to   account   for   that   additional   needed   capacity?  
+**Candidate:** I   don't   have   the   dates   to   make   a   really   informed   decision,   but   a   gut   feeling   would   be   somewhere   between   15%   and   25%.  
+**Interviewer:** Okay.  
+**Candidate:** So,   maybe   20%   if   we're   okay   with   that   number.  
+**Interviewer:** Sure.   Mm-hmm.  
+**Candidate:** So   that   would   be   an   extra   12,000-  
+**Interviewer:** Okay.  
+**Candidate:** ...   and   that'd   be   72,000   buses.  
+**Interviewer:** Great.   Mm-hmm.  
+**Candidate:** And   before   we   move   a-   ahead,   they   wanted   more   than   30,000   bus-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   buses.   Well,   we've   got   more   than   double   that.   So,   this   is   a   very   attractive   market.   Maybe   let's   dive   into   another   area-  
+**Interviewer:** Great.  
+**Candidate:** ...   of   rep-   rep-  
+**Interviewer:** Before   we   go   in   though,   are   the   buyers   for   each   one   of   these   markets   the   same?  
+**Candidate:** No.   That's   a   good   point.   They're   not.   Um,   you   have   most   likely   governmental   and   also   private   schools   buying   a   lot   of   school   buses,   and   then   municipal   and   also   governmental   buying   the   actual   public   transport,   as   well   as   some   private   buyers   to   buy,   uh,   more   like   custom   private   buses.   Um,   so   with   that   being   said,   you'd   really   be   targeting   a   lot   of,   uh,   bureaucratic   institutions   like   the   government   and   school   districts   because   they're   gonna   be   the   supplier   of   probably   80%,   90%   of   those   buses.  
+**Interviewer:** Fantastic.   Okay.   So,   after   doing   some   desktop   research   on   the   company,   we   found   out   that   Rapid   Buses   actually   has   international   expan-   expansion   plans   beyond   Malaysia.  
+**Candidate:** Okay.  
+**Interviewer:** So,   imagine   that   you   are   the   chief   strategy   officer.   In   fact,   we   are   working   with   the   s-   chief   strategy   officer   for   Rapid   Buses,   and   we   need   to   define   the   go-to-market   strategy   for   a   new   market.   Remember,   we've   currently   been   operating   in   Malaysia,   but   that   wouldn't   be   the   case   in   this   new   market.   What   questions   would   we   need   to   answer   in   order   to   define   that   strategy?  
+**Candidate:** Yeah.   Do   you   mind   if   I   take   a   second   to   come   up   with   some   ideas   or-  
+**Interviewer:** Sure.  
+**Candidate:** Perfect.   Okay.   So,   I've   actually   narrowed   it   down   into   two   main   buckets   that   I   wanted   to   put   my   thoughts   into.   And   there's,   there's   a   little   overlap   but   I've   made   sure   to   account   to   separate   them   to   make   sure   that   it   is   still   me,   see.   Um,   I   think   most   importantly   is   just   like   this,   is   looking   at   the   market   and   really   saying,   "Is   it   as   good   as   this   Malaysian   market?"   And   on   top   of   that,   will   there   be   competitors   that   are   at   our   throats?   Is   it   already   well   established?   Is   it   not   established?   Would   we   be   having   to   be,   uh,   innovating   in   this   new   area?   Or   is   this   a   place   where   there's,   there's   already   70,000   buses?   On   top   of   that,   I   really   want   to   look   at   the   financial   considerations   as   well.   So,   I'd   be   asking   questions   like   what   is   the   cost   associated   with   this   in   terms   of   one,   either   shipping   our   buses   there   on,   on   boats   or   building   them   and,   and   making   a   factory   in   this   new   country?   As   well   as   what   is   the   profit   like?   What   are   the   revenues   associated   with   that,   uh,   with   that   move?  
+**Interviewer:** Awesome.   How   would   you   think   about   the   customer   piece   specifically?  
+**Candidate:** Yeah.   I   mean,   the   customer   demand   could   be   completely   different   in   a   different   market.   I   know,   um,   for   example,   in   England   where   I   grew   up,   I   never   took   the   bus   to   school   ever   'cause   everything's   in   walking   distance.   Whereas   in   America,   it's   much   more   common   because   there's   a   bigger   distance   between,   uh,   school   and   home.   So,   actually   doing   some   even   just   some   geographical   surveys   and   seeing   how   close   things   are.   If   everything's   walkable,   then   people   aren't   gonna   be,   there's   not   gonna   be   as   a   high   demand   for   the   bus.   And   on   top   of   that,   is   the   tourism   with,   um,   business   and   leisure,   is   that   the   same?   Are   there   more   people   coming   there   to   work   or   are   there   no   people   coming   there   to   work?   So,   I   think   that's   another   consideration   you   want   to   look   at.  
+**Interviewer:** Fantastic.   Okay.   Our   client's   interested   in   a   recommendation.   What   would   you   say?  
+**Candidate:** Yeah.   I   think   we   should   really   go   ahead   and,   and   look   at   this,   um,   company   for,   for   an   acquisition.   Um,   because   number   one,   they're   in   an   attractive   market.   And   number   two,   they   clearly   are   doing   well   because   they   already   have   plans   for   expansion,   which   is   something   that   we're   looking   at   them   to   do   ourselves.   So,   you   could   perhaps   kill   two   birds   with   one   stone   there   and   get   almost   two   markets   in   one.   Um,   in   terms   of   some   next   steps   with   this,   I   think   going   ahead   and   getting   a   little   bit   more   information   in   terms   of   their   plans   to   go   to   this,   uh,   new   market.   Will   that   be   an   expansion?   Is   that,   I   mean,   they're   leaving   the   Malaysian   market   perhaps.   So,   just   making   sure   everything   works   out   there.As   well   as   doing   a   little   bit   more   research   into   the   actual   environment   in   Malaysia   in   terms   of   these,   this   need   for   around   72,000   buses.   Is   that,   is   that   being   fulfilled   right   now   or   is   there,   is   there   a   need   for   buses   that   we   can   expand   in   Malaysia   already?   Um,   and   I   think   just   keeping,   keep   in   mind   of   the   risk   that,   uh,   you   know,   we've   just   gone   through,   we've   just   gone   through   a   pandemic   and   so   if   that   were   to   happen   again,   this   would   be   not   very   profitable   at   all   because   no   one's   going   to   be   taking   public   transport.  
+**Interviewer:** Yeah.  
+**Candidate:** So   just   keeping   in   mind,   um,   the   risks   of   that.  
+**Interviewer:** Fantastic.   Well,   that   was   a   hard   one,   huh?  
+**Candidate:** Yeah.  
+**Interviewer:** Lots   of   numbers   and,   uh,   missing   segments,   kind   of   a,   you   know,   an   interesting   way   to   think   about   it.   I   really   appreciated   the   structure   that   you   used   pre-math,   before   the   math.   Um,   you   know,   I,   and,   and   I'll   kind   of   go   through   the,   some   of   the   specifics,   but,   um,   this   case   is   really   a   pretty   traditional   M&A   case   and   while   I   think   that   M&A   cases   are   hard,   they're   predictable.  
+**Candidate:** Yeah.  
+**Interviewer:** And   sometimes   predictable   cases   actually   become   easier   if   you   just   know   what   to   predict,   right?  
+**Candidate:** Yeah.  
+**Interviewer:** So   you   did   a   really   good   job   of   identifying   that   this   is   going   to   be   a   market-based   case.   Um,   you   know,   I   think,   I   felt   like   there   was   a   little   bit   of   a   blend   in   your   at   least   articulation,   I   don't   know   if   it   was   a   blend   in   there   understanding   about   whether   we   were   looking   at   bus   rides   or   bus   sales   or   a   bus   manufacturer.  
+**Candidate:** Yeah.  
+**Interviewer:** So   just,   you   know,   not   a   bus   operator,   right?   We're,   we're   somebody   who   is   not   trying   to   get   a   contract   with   a-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   with   a   company.   We're,   we're   trying   to   sell   buses.   Um,   and   so   just   making   sure   that   that   was   super   clear   because   I   felt   like   there   was   maybe   a   little   bit   of   a   blend   in   the   mixture   of   understanding   at   the   beginning.   I   thought   that   your,   um,   initial   structure   was,   uh,   was   good,   I   just,   uh,   there   was   a   lack   of   clarity   for   when   you   went   through   certain   things.  
+**Candidate:** Okay.  
+**Interviewer:** So,   um,   they're,   they   were   kind   of   lumpy   in   the   buckets   underneath   them,   so   just   pay   attention   to   isolating   each   one   of   those   issues.   And,   uh,   then   when   we   went   into   the   case   math,   right,   you   wanted   the   numbers   from   me.   Um,   at   EY-Parthenon   or   at   Bain,   sometimes   we   give   you   the   numbers,   but   we   really   do   want   to   make   sure   that   you   know   what   you're   looking   for.  
+**Candidate:** Yeah.  
+**Interviewer:** One   of   the   features   of   those   firms   you're   looking   at   is   that   they're,   they're   wanting   to   give   you   a   lot   of   responsibility   and   so   the   more   that   you   ask   them   for   that   they   give   you,   the   less   they   can   test   that   responsibility   inside   the   case.   Um,   as   you   saw,   right,   the,   the   student   population   is   everything   here.  
+**Candidate:** Yeah.  
+**Interviewer:** And,   and   it   makes   sense.   Although   you   don't   think   about   it   if   you   don't   have   kids   that   are   riding   a   bus.   You   probably-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   don't   have   kids   that   ride   a   bus.   I   have   kids   but   they   don't   ride   a   bus.   So   it,   thinking   about   just   this   large   number   of   students   that   are   repetitively   taking   the   bus,   this   is   a   huge   amount,   um,   for   public   transportation.   And   I,   I,   until   you   mentioned   at   the   end,   actually   no   one   in   the   cases   had   ever   mentioned   the   impact   of   COVID.  
+**Candidate:** Yeah.  
+**Interviewer:** Uh,   what   it   did,   it   wasn't,   it   didn't,   you   know,   change   the,   um,   purchase   of   buses,   right?   Buses   that   were   already   purchased   were   still   purchased,   buses   that   were   in   the   pipeline   got   purchased,   but   it   expe-   it   extended   because   we   didn't   use   buses.  
+**Candidate:** Yeah.  
+**Interviewer:** It   extended   the   timeline   for   the   useful   life   of   a   bus   and   so,   um,   you   know,   we   didn't   go   into   replacement   rate   at   all   in   the   market   sizing.   That's   one   thing   that   even   for   volume-  
+**Candidate:** Yes.  
+**Interviewer:** ...   we   probably   should   have   factored   in.  
+**Candidate:** The   lifespan   of   a   bus,   yeah.  
+**Interviewer:** The   lifespan   of   a   bus   and,   um,   so   even   though   I   told   you   not   to   factor   in   revenue,   that   piece   of   it   was   not   included.   So   it   might   just   be   helpful   for   you   to   think   about   going   forward.  
+**Candidate:** Yeah.  
+**Interviewer:** Um,   but   overall,   right,   we   did   hit   more   than   the   target   of   what   they   were   looking   for   for   the   market   size.   Um,   expanding   into   other   markets   should   be   feasible.   So   overall,   very   good   job.  
+**Candidate:** Great.   Thank   you   very   much.  
+**Interviewer:** Thanks.   (instrumental music)

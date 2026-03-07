@@ -1,0 +1,682 @@
+Case: Market Sizing Framework
+Case Type: Market Sizing
+Firm: Deloitte
+Channel: Management Consulted
+URL: https://www.youtube.com/watch?v=lmQt9ak2jjA
+============================================================
+
+**Interviewer:** (music plays)   I   wanna   introduce   our   guest.   So   Megan,   would   you   like   to   say   hello   to   everyone?  
+**Candidate:** Sure.   Hi,   everybody.   Um,   a   little   bit   about   me.   So   I'm   a   fifth   year   at   Ohio   State.   I'm   actually   a   chemistry   major,   so   sort   of   switching   from   a   research   background   to   a   career   in   consulting.   So   I'm   really   excited   for   this   opportunity,   uh,   and   to   get   some   really   good   constructive   feedback,   uh,   moving   forward   in   my   interviews.  
+**Interviewer:** Yeah,   dog.   (laughs)   Awesome.   Um,   I   wanna   ask   you   just   before   we   get   started,   um,   with   the   case,   a   little   bit   more   about   your   casing   history   so   that   we   can   make   sure   that   this   is   gonna   be,   uh,   the   perfect   view   of   what   we   need   from   you,   um,   at   the,   at   the   beginning   and   what   we   can   do   for   you   inside   the   session   to   make   sure   that   it   goes   the   furthest,   the   fastest.   Uh-  
+**Candidate:** Perfect,   thank   you.  
+**Interviewer:** ...   but   before   we   do   that...   Um,   you   betcha.   Um,   I   want   to   just,   uh,   dive   in   with   a   little   bit   of   a   teaching   on   the   structure   that   I'm   looking   for.   So   the   podcast   that   we   put   out   on   Friday   called   Issue   Trees   are   Dead,   uh,   in   parenthesis   behind   that   is   For   Virtual   Interviews.   And   one   of   the   challenges   with   issue   trees   is   that   while   they   can   be   incredibly   comprehensive,   they   are   difficult   to   explain   in   a   way   that   is   clear   and   crisp   in   a   virtual   environment.   So   usually   you   would   be   used   to   in,   when   you're   sitting   down   with   somebody   to   hold   up   your   paper   and   show   them   what   you're   looking   at.   And   there   is   no   elegant   or   good   way   to   do   that   while   you   are   virtual.   You   shouldn't   use   a   whiteboard   function.   You   shouldn't   hold   up   your   paper.   They   will   be   like,   "Congratulations,   you   wrote   something   down.   Now   we're   in   kindergarten."   Right?   (laughs)   But   it   doesn't-  
+**Candidate:** (laughs)  
+**Interviewer:** ...   actually   help   with   the   focus   of   what   you   need   to   be   teaching   on,   what   you   need   to   be   explaining,   what   you   need   to   be   convincing   them   of   inside   the   case.   And   so,   um,   an   issue   tree...   Megan,   are   you   familiar   with   issue   trees?   Just   before   I   begin.  
+**Candidate:** Yes,   I   am.   Mm-hmm.  
+**Interviewer:** Yeah.   So   they're,   they're   incredible   problem-solving   p-   you   know,   strategies,   right?   You   kind   of   start   with   what   the   core   concepts   are.   You   break   them   into   sometimes   maybe   two   or   three   categories.   Then   you   break   those   categories   into   smaller   categories   until   you   really   get   granular.   But   everything   is   tied   in   through   its   branch   up   to   the   core   concept.   So   you   ensure   that   when   you're   looking   for   the   key   issue,   you're   gonna   get   there   eventually,   right?   (laughs)   So   no   matter   where   you're   starting,   there's   not   this   random,   um,   k-   again   of   aimless   wandering   toward   the   end.   That's   the   thing   I   love   about   issue   trees,   so   we   don't   wanna   lose   that.   What   we   need   to   do   is   develop   a   different   kind   of   presentation   or   utilize   a   different   kind   of   presentation   that's   actually   been   in   practice   for   a   longer   time   that   works   better   for   this   kind   of   environment.   So   I'm   gonna   recommend   that   you   have   four   categories.   Like   three   is   okay,   five   is   okay,   but   four   is   really   my   recommended   ideal.   Feels   pretty   comprehensive.   It's   about   the   right   length.   Um,   I   recommend   that   you   write   them   across   your   paper.   So   if   you've   been   used   to   writing   issue   trees   either,   um,   you   know,   one   box   split   into   two   boxes,   um,   kind   of,   you   know,   angularly   down   your   paper,   I   recommend   that   you   just   start   with   four   categories.   And   honestly,   I   think   that   usually   best   practice   when   we're   training   people   for   this   is   that   you   start   with   the   first   four   that   come   to   mind,   right?   You   have   some   time   to   change   them   if   nothing   comes   from   it,   but   that's   the   most   efficient   way   to   build   a   really   comprehensive   structure.   So   first   four   things   that   come   to   mind,   you   write   'em   across   your   paper.   Then   underneath,   you   go   back   and   you   populate   inside   there   two   to   four   data   points.   Whereas   in   an   issue   tree   one   data   point   might   lead   to   a   sub-data   point,   here,   you   use   them   at   the   same   level   and   you   communicate   them   at   the   same   level.   So   in   category   one,   you   have   data   point   one   and   data   point   two,   even   if   data   point   two   is   like   a   nested   version   of   data   point   one   or   dependent   on   what   you   find   inside   data   point   one.   Same   thing   with   moving   on   to   each   one   of   the   categories.   Um,   and   then   the   final   thing   is   that   when   you   deliver   it,   make...   you   have   to   make   it   incredibly   distinct   what   your   three   levels   of   delivery   are.   So   level   one   is   the   concepts,   the   four   categories,   right?   Underneath   that   is   level   two.   Those   are   your   bullet   points.   So   data   point   one   and   data   point   two.   However,   when...   The,   part   of   the   complexity   of   issue   trees   comes,   uh,   when   you're   delivering   this   verbally,   most   people   find   that   it's   helpful   not   just   to   read   out   the   data   points   in   a   list,   but   to   actually   explain   why   it   matters.   Why   does   it   matter   that   we   look   at   that   data   point   for   that   concept?   Why   does   it   matter   that   we   look   at   that   concept   to   answer   the   case?   That's   how   you   tie   together   what   you   would   be   doing   inside   the   issue   tree   verbally   on   top   of   it   inside   the,   this.   And   so   you   have   to   really   distinctly   walk   through,   okay,   now   we're   moving   on   to   data   point   two,   because   otherwise   I   add   the   texture   (laughs)   of   what   you   put   for   data   point   one,   and   I   may   add   it   as   a,   as   bullet   point   two,   and   I   may   end   up   with   four   bullet   points   when   you're   only   needing   to   communicate   two.   So   you   have   to   be   really   clear   about   exactly   what   you've   got   in   your   paper   so   that   I   can   mirror   it   myself.   And   we're   gonna   test   you   on   this   as   we   go   through   the   session   today   to   see   how   well   we   do,   um,   how   well   we   match   up   with   what   you're   actually   walking   through.   So   do   you   have   any   questions?   This   case   is   for   your   benefit,   so   do   you   have   any   questions   about   how   to   do   that   effectively   without   using   an   issue   tree   in   this   kind   of   virtual   environment?  
+**Candidate:** As   of   right   now,   I   do   not   have   any   questions.  
+**Interviewer:** Okay.   (laughs)   Are   you   gonna   regret   that,   you   think,   later?  
+**Candidate:** Probably.  
+**Interviewer:** (laughs)  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Okay.   Awesome.   (laughs)   Great.   Well,   um,   let   me,   uh,   now   just   get   a   little   bit   of   background   on   you.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Just   tell   us   a   little   bit   about   your   casing   process.   When   did   you   decide   that   you   wanted   to   do   cases?   How   have   you   learned   about   cases?   You   know,   what   are   some   of   the   things   that   you   have   drawn   on   in   your   resourcing   for   cases?   And   then   we're   gonna   dive   into   the   case   today.  
+**Candidate:** Sure.   So   I   actually   didn't   realize   that   I   wanted   to   transition   into   consulting   probably   until   last   spring   semester,   so   this   has   been   a   fairly   new   thing   and   I   didn't   really   start   heavily   casing   until   May.   Um,   I've   now...   I   think   this   will   be   about   my   30th   case.   And   I've   mainly   been   casing   with   other   students   my   age   as   well   as   full-time   consultants   with   different   firms.   So   kind   of   a   breadth   of   practice   and   feedback   from   a   lot   of   different   people.   Um,   so   I've   gradually   tailored   sort   of   what   firms   that   I   wanna   target,   uh,   and   s-   sort   of   my   style   of   casing,   I   guess.   So   I   think   that   this   will   be   a   really   good   time   to   definitely   sort   of-...   cut   out   the   little   wrinkled   edges   of   my   process   and   really   tailor   it   to   getting   those   final   interviews   and   offers.  
+**Interviewer:** Come   on,   that's   what   it's   all   about.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Okay,   awesome.   Uh,   Megan,   I   think   we're   gonna   have   a   lot   of   fun   in   the   case   today.   This   is   a   Deloitte   style   case,   so   I   know   that   you're   applying   to   MBB   firms,   the   big   four,   as   well   as   a   lot   of   boutique   firms.   I   know   that   your   focus   is   on   healthcare   and   life   sciences,   and   as   I   told   you   in   our   pre-call   beforehand,   there   will   be   none   of   that   in   this   case   today.   (laughs)  
+**Candidate:** (laughs)   Totally   fine.  
+**Interviewer:** So,   well,   may-   maybe   there's   like   a   little   corner   of   it   that   somehow   applies.  
+**Candidate:** (laughs)  
+**Interviewer:** But   really,   this   is   gonna   be   something   totally   different   in   the   way   that   you   would   get   a   completely   different   case.   You're   not   interviewing   at   a   senior   enough   level   that   I   would   only   give   you   cases   in   your   field   of   choice   or   in   your   field   of   background.   And   so   you   could   get   hamburgers   and   you   could   get   healthcare.   So-  
+**Candidate:** (laughs)   Of   course.  
+**Interviewer:** Um,   so   we're   gonna   find   some   mix   in   between   today.   Um,   I,   the   one   thing   that   I   just   really   want   to   point   out   more   than   anything   about   Deloitte   is   that   while   they   care   about   structure,   while   they   care   about   your   clarity   of   the   way   that   you   walk   through   things,   the   actual   number   one   core   value   of   a   Deloitte   interview   is   that   you've   got   to   be   nice   and   you   need   to   be   having   fun.   And   so   I   really   hope   that   as   we   walk   through   the   case   today,   you   can   remember   that   if   I'm   pushing   you   or,   or   diving   back   in.   Just   keep   the   relatability   going,   keep   the   conversation   going.   Um,   make   sure   that   the   ultimate   impression   that   we   get   from   you   is   one   that   is   like,   "Yes,   we   would   want   to   work   from   you,   work   with   you."  
+**Candidate:** Okay.  
+**Interviewer:** Uh,   and   if   we   can   do   that,   then   I   think   we're   gonna   have   a   win   across   the   session   today.  
+**Candidate:** Okay,   great.  
+**Interviewer:** So   any   final   questions   from   you   before   we   dive   into   the   case?  
+**Candidate:** Um,   I   don't   think   so.   Think   I'm-  
+**Interviewer:** Okay.  
+**Candidate:** ...   good   to   go.  
+**Interviewer:** Great.   So   today's   case   is   called   Chainsaw   Pants.   Chainsaw   Pants   is   a   case   that   is   focused   on   an   industry   that   I   had   not   thought   of-  
+**Candidate:** (laughs)  
+**Interviewer:** ...   before   creating   this   case.   And   so   I   am   really   interested   to   see   what   you   come   up   with.  
+**Candidate:** (laughs)  
+**Interviewer:** Our   client   today   is   a   company   called   HiLow.   They're   a   uniform   producer   in   Australia   that   focuses   on   four   key   product   lines.   Medical   uniforms,   hotel   uniforms,   restaurant   uniforms   and   manufacturing.   There   are   other   segments   of   the   market   that   our   client   is   currently   considering.   The   options   include   uniforms   for   the   mining   industry,   the   agriculture   and   forestry   industry,   and   the   transportation   industry.   The   CEO   has   done   some   preliminary   research   and   believes   that   the   agriculture   and   forestry   industry   presents   a   big   opportunity   for   the   business.   Specifically,   he   has   an   in-house   designer   who   has   created   the   design   for   a   new   pair   of   chainsaw   pants.   Heavy   duty   pants   meant   to   protect   major   arteries   from   potential   chainsaw   accidents.  
+**Candidate:** Interesting.  
+**Interviewer:** The   CEO   wants   us   to   take   a   look   at   the   market   for   chainsaw   pants   to   see   if   it's   a   good   market   for   growth   for   HiLow.   And   specifically,   we're   focusing   on   the   introduction   of   this   pant   type   to   the   agriculture   and   forestry   industry.   Do   you   have   any   questions   about   the   background?  
+**Candidate:** Um,   I'm   just   gonna   go   through   sort   of   what   I   took   notes   on   and   make   sure   that   I   have   the   information   correctly.  
+**Interviewer:** Great.  
+**Candidate:** So   our   client   today   is   HiLow,   which   is   a   sort   of   uniform   manufacturer   within   the   Australian   market.   They   have   a   few   different   types   of,   uh,   uniforms,   except   now   they're   looking   to   sort   of   expand   the   breadth   of   their   products   and   want   to   pursue   potentially   the   mining,   transportation,   agriculture,   or   forestry   uniforms.   So   they   currently   have   an   in-house   designer,   and   they're   working   on   chainsaw   pants.   Interesting.   Something   I've   definitely   never   heard   of   or   considered,   but   it   seems   like   this   is   sort   of   a,   uh,   way   to   reduce   the   health   hazard   of   potentially   cutting   your   legs   and   getting   into   major   arteries.   There's   that   Health   Spot   that   I   like.   But,   um,   so,   we   are   really   trying   to   understand   if   the   market   has   the   potential   where   HiLow   could   enter   this   space,   and   if   we   should   pursue   the   agricultural   and   forestry   side   of   the   industry   specifically.   Uh,   do   I   have   that   correct?  
+**Interviewer:** Absolutely.   One   thing   that   I   just   want   to   make   clear   because   of   the   virtual   environment   that   we're   in-  
+**Candidate:** Sure.  
+**Interviewer:** ...   is   that   there   are   three   industries.   Agriculture   and   forestry   is   one   industry.  
+**Candidate:** Oh,   it's   one   together.  
+**Interviewer:** It's   just   named,   it's   two   names.   That's   right.   Mm-hmm.  
+**Candidate:** Okay.   Okay.   So   this   is   just   one   of   the   three   potential   industries   that   they're   looking   into.  
+**Interviewer:** Correct.   Correct.  
+**Candidate:** Okay,   that's   combined.   Okay,   perfect.   One,   two,   and   three.   All   right,   and   so   the   major   question   that   we're   asking   right   now   is   what   does   this   market   for   these   chainsaw   pants   look   like,   correct?  
+**Interviewer:** That's   right.  
+**Candidate:** Okay,   great.   Um,   I   think   that   those   are   my   only   questions   as   of   right   now   then.  
+**Interviewer:** Great.  
+**Candidate:** All   right,   so   when   I'm   going   into   this,   I   just   want   to   take   a   few   minutes   to   kind   of,   uh,   set   up   a   format   for   how   I'm   going   to,   uh,   communicate   with   you   about,   uh,   my   decision   and   how   to   move   forward.   Is   it   okay   if   I   take   a   few   minutes   to   structure   my   thoughts?  
+**Interviewer:** Sounds   good.   Go   for   it.  
+**Candidate:** Perfect.   Thanks.All   right.   So,   when   looking   into   determining   whether   or   not   we   should   enter   this   market,   I   wanna   look   into   a   few   major   areas.   First   would   be   the   in-   the   agriculture   and   forestry   industry,   specifically.   Uh,   second,   our   customers   or   at   least   target   basis.   Um,   three   would   be   the   product,   our   chainsaw   pants.   And   then   finally   would   be   the   financials   of   our   company.   So   first,   when   looking   into   the   industry   specifically,   um,   I'm   gonna   assume   that   we're   looking   into   the   S-   just   the   Australia   market,   but   really   quick,   um,   is   that   where   we   will   be,   uh,   producing   or   at   least   marketing   our   pants,   or   are   we   exploring   a   different   market?  
+**Interviewer:** We'll   ex-   we'll   be   exclusive   in   Australia.  
+**Candidate:** Australia?   Okay,   perfect.   All   right,   so   we're   staying   within,   um,   the   area   that   we   sell,   I   would   assume   our   uniforms   now.   So   within   this   industry,   I   wanna   understand   what   the   agricultural   forestry   industry   looks   like.   Uh,   is   there   a   growth   in   maybe   the   number   of   workers   within   this   industry?   Uh,   maybe   a   decrease?   'Cause   this'll   really   give   me   an   idea   of   if   our   potential   customer   basis   would   be   growing   or   declining.   And   then   I   would   assume   that   there   are   no   similar   products   right   now   in   terms   of   chainsaw   pants,   but   I   would   assume   when   working   with   equipment   like   that,   there   are   other   safety   methods,   um,   or   precautions   that   are   taken.   So,   what   are   those   methods   currently?   Is   there   clothing   involved?   Um,   are   there   other   products   that   our   customers   are   using   that   this   would   maybe   replace?   Um,   and   how   do   kind   of,   um,   these   pants,   like,   fit   into   that   space?   So   then   we're   looking   at   our   customers.   When   I'm   thinking   chainsaw   pants   in   the   agriculture   and   forestry   industry,   I'm   thinking   of   lumberjacks   or,   uh,   people   working   on   farms   with   different   crops,   um,   and   really   needing   these   sort   of   heavy   s-   sort   of   tools.   And   so   who   are   they?   Um,   how   big   is   that   population   within   Australia   specifically,   since   that's   where   we'll   be   marketing   our   product?   And   then   also,   how   will   we   be   reaching   our   customers?   So   what   do   our   channels   look   like   in   terms   of   distribution   as   well   as   marketing?   Um,   so   how   will   we   be   reaching   our   customers?   Um,   and   then   also   again,   like   I   mentioned,   looking   at   how   big   that   customer   basis   is.   Then   three,   um,   looking   into   the   product   specifically.   So   when   I'm   thinking   of   the   product,   I   also   wanna   consider   what   our   pricing   strategy   would   be,   which   might   be   a   little   bit   further   down   the   line.   Um,   but   understanding   what   benefit   we   bring   to   our   customers   and   why   they   should   buy   it.   Um,   so   this   could   go   into   maybe   value-based   pricing   strategy,   um,   or   cost-based,   considering   I   wouldn't...   I   would   assume   that   we   don't   have   much   competition   in   the   chainsaw   pants   area.   And   then   finally,   I   wanna   look   at   the   financials.   So   when   introducing,   um,   a   product   to   the   market,   there's   going   to   be,   of   course,   this   first   sort   of   investment   phase.   And   so   what   is   that   R&D   cost   gonna   look   like?   Uh,   have   we   already   developed   the   pants?   Um,   which   it   looks   like   since   we   have   this   in-house   design,   it   might   be   a   little   bit   easier,   sort   of,   um,   um,   I   guess   pushed   a   little   bit   quicker   than   it   would   be   if   we   were   going   from   the   ground   up.   So   sort   of   what   kind   of   manufacturing   practices   are   we   gonna   have   to   incorporate?   Will   we   have   to   hire   new   employees?   So   all   these   things   are   going   to   add   to   sort   of   this   upfront   cost   when   moving   into   this   market.   So   we   wanna   make   sure   that   it's   feasible   for   us,   um,   and   that   the   profit   that   we   would   be   gaining   would   be   substantial   enough   to   kind   of   counter   out   this,   um,   investment   cost.   So   as   I   mentioned,   the   industry   area   is   sort   of   specifically   what   I   wanna   look   into,   especially   since   we're   wondering   if   we   should,   um,   be   introduced   into   this   market.   So   first,   I'd   really   like   to   size   our   market   for   the   chainsaw   pants.   Um,   and   so   when   looking   into   this,   uh,   I   kind   of   wanna   take   a   top-down   approach,   looking   at   the   population   of   Australia,   and   then   kind   of   getting   a   little   bit   deeper   into   what   the   people   within   the   agriculture   and   forestry   industry   would   look   like.   Um,   so   off   the   top   of   my   head,   I   don't   know   the   population   of   Australia.   Do   you   have   that   number?  
+**Interviewer:** I   do,   and   I,   I   actually   think   that   this   would   be   good.   I'm   not   gonna   have   you   go   through   the   exercise,   but   I   do   want   you-  
+**Candidate:** Okay.  
+**Interviewer:** ...   to   tell   me   what   you   think   you   would   find   from   it.  
+**Candidate:** Mm-hmm.   Um,   sure.   So   I,   in   terms   of   Australia,   I   know   that   they   have   more   of   a   very   dry   climate.   I   kind   of   think,   I   guess   I   think   of   the   Outback   when   I   think   Australia.   Um,   and   so   I'm   not   sure   how   big   their,   uh,   farming   or   forestry   sort   of   industry   looks   like.   So   to   me,   I   guess   I   automatically   think   this   would   be   a   very   small   percentage,   um-  
+**Interviewer:** Okay.  
+**Candidate:** ...   of   the   population.   So   I'm   thinking   we're   looking   at   a   very   niche   customer   basis.  
+**Interviewer:** And   so   um,   I   have   data   that   might   be   somewhat   similar,   but   not   exactly   the   same.  
+**Candidate:** Okay.  
+**Interviewer:** Why   don't   you   walk   me   through   what   your   structure   would   be   to   size   this   market,   and   then   I,   I   might   have   related   data   that   would   kind   of   tell   us   a   similar...  
+**Candidate:** Okay.  
+**Interviewer:** But   we   have   a   related   story,   related   data   that   would   tell   us   a   related   story.   (laughs)  
+**Candidate:** Sure.   Uh-huh.   Okay,   so   when   I'm   thinking   about   this,   um,   sort   of   doing   this   top-down   approach,   I'm   gonna   look   at   the   population.   Um...  
+**Interviewer:** Okay.  
+**Candidate:** I'm   going   to   want   to,   I   think,   take   a   more,   um,   maybe   role   or   like   career   perspective   on   this.   Um,   so   kind   of   taking   it   from   the   population   to   maybe   specific   size   of   like   what   kind   of   jobs   are   within   the   agriculture   or   forestry   industry,   and   try   to   make   maybe   an   approximation   of   what   percentage   of   the   population   is   going   to   be   within   those   groups.  
+**Interviewer:** Okay.  
+**Candidate:** Um,   and   then   from   there,   since   we   are   looking   at   chainsaw   pants   specifically,   um,   I   would   wanna   understand   what   basis   of   that   industry   would   actually   be   interested   in   using   it.   So   maybe   how   many   people   are   using   heavy   equipment,   um,   or   even   just   like......   working   with   other   instrumentation   or   tools   that   might   need   that   protective   aspect,   um,   of   a   uniform.   So   then   going   into   that,   I   would   again   sort   of   take   a   percentage   of   that   population   and   maybe   add   in   some   people   that   are   outside   of   that   industry   that   might   use   chainsaws   to,   to   get   rid   of   trees   in   their   yard.   I'm   not   sure.   Um,   so   kind   of   this   added   percentage,   uh,   from   without   side   the   agricultural   and   forestry   industry   that   might   add   to   our   customer   bases.  
+**Interviewer:** Okay.   Awesome.   So   let   me   just   recap   that   to   you,   make   sure   I   got   the   same   thing   that   you   have.   Um,   the   population   of   Australia,   then   the   popula-   the   percentage   of   the   population   that's   working   in   the   agriculture   and   forestry   segment.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um,   recognizing   that   not   all   of   those   would   need   chainsaw   pants-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   the   percentage   of   those   that   would   use   chainsaw   pants.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um,   and   then   some   others   that   might   use   chainsaw   pants   that   are   not   necessarily   working   in   the   industry.  
+**Candidate:** Yes.  
+**Interviewer:** Um,   is,   was   that   the   end   point   or   what,   did   I   miss   something   after   that?   I   just   wanted   to   double   check.  
+**Candidate:** That   would   probably   be   the   end   point   right   there-  
+**Interviewer:** Okay.  
+**Candidate:** ...   was   looking   at   -  
+**Interviewer:** So   that   would   be   a   potential   buyers,   right?  
+**Candidate:** Yes.  
+**Interviewer:** The,   the   market   for   potential   buyers.   Is   there   anything   else   that   we   would   need   to   assess   this   market   maybe   more   comprehensively?  
+**Candidate:** Mm-hmm.  
+**Interviewer:** So,   um,   before   deciding   to   go   into   it   'cause   buyers   might   be   one   element   but   not   the   whole   thing.  
+**Candidate:** Sure.   So   when   looking   at   the   c-   more   quantitative   aspect   of   this,   um,   I   would   wanna   understand   what   either   p-   the   potential   price   point   of   the   chainsaw   pants   is,   or   even   looking   at   more   protective   gear   specifically.   Um,   sort   of   taking   kind   of   a   leeway   from   the   pants,   whereas   instead   we   could   look   at   what   the   price   in   a   typical   protective   gear   is.   Um,   and   use   that   to   sort   of   make   more   of   this   broader,   uh,   basis   of   like   what   does   this   protective   gear   space   potentially   hold   in   terms   of   market   share,   because   that's   where   we   would   be   entering,   um,   with   the   chainsaw   pants.  
+**Interviewer:** Okay.   Awesome.   So   I   have   some   of   the   data   that   you've   asked   me   for.  
+**Candidate:** Okay.  
+**Interviewer:** It   may   or   may   not   be,   um,   enough   to   do   what   you've,   um,   asked   but   it,   uh,   I,   what   I   wanna   make   clear   about   this   data   is   that   it's,   um,   it's   data   that   is   widely   available.  
+**Candidate:** Okay.  
+**Interviewer:** However,   it's   not   the   exact   data   that   you   wanted.   (laughs)   And   so-  
+**Candidate:** That's   okay.   (laughs)  
+**Interviewer:** ...   you're   gonna   have   to   make   whatever   interpretive-  
+**Candidate:** I'll   work   with   it.  
+**Interviewer:** Yeah,   take   the   interpretive   lens   that   you   need.  
+**Candidate:** Okay.  
+**Interviewer:** Um,   through   this   data,   um,   to   talk   about   it.   In   addition,   this   data   is   actually   for   all   three   of   the   segments-  
+**Candidate:** Okay.  
+**Interviewer:** ...   that   are   potential   segments   for   us   to   go   into.   So,   um,   the   first   segment   is   mining.   Um,   the   number   of   workers   in   the   mining   space,   there   are   200,000   employees   a-   in   mining   in   Australia.  
+**Candidate:** All   right.   Perfect.  
+**Interviewer:** About   75%   of   them   buy   uniforms.   And   so   that's   the   proxy   that   I   have.   I   don't   have   chainsaw   pants   or   pants   -  
+**Candidate:** That's   all   right.   (laughs)  
+**Interviewer:** ...   but   I   do   have   uniforms,   um,   and   the   price   per   uniform,   um,   for   the,   um,   mining   industry   is   $150   Australian.  
+**Candidate:** Perfect.  
+**Interviewer:** The,   um,   agriculture   and   forestry   industry,   250,000   workers,   60%   buy   uniforms,   and   $120-  
+**Candidate:** Okay.  
+**Interviewer:** ...   per   uniform.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** And   then   finally,   transportation,   the   transportation   industry   there   are   100,000   workers,   80%   of   them   buy   uniforms,   and   they're   $60   per   uniform   on   average.  
+**Candidate:** Okay.   Great.   So   when   looking   at   this,   uh,   I   not   only   want   to   understand   if   it   would   be   good   to   enter   the   agriculture   and   forestry   industry,   but   kind   of   which   of   our   three   options   would   be   the   best   to   look   into   since   we   kinda,   since   we   have   more   of   this   collective   data.   So   when   looking   at   this,   um,   I'm   going   to   get   the   market   size   for   all   three   different   areas.   Um,   in   order   to   do   that,   since   we   understand   what   percentage   of   the   workers   are   buying   uniforms,   um,   I'm   going   to   take   that   percentage,   multiply   it   by   the   number   of   workers   within   that   space,   uh,   and   then   multiply   it   by   the   price   per   uniform   in   order   to   get   this,   um,   sort   of   overall,   um,   potential   revenue   that   we   could   gain.   Do   we   have   any   idea   of   the   average   number   of   uniforms   that   the   workers   have?   Or   are   we   gonna   -  
+**Interviewer:** Um,   we   don't-  
+**Candidate:** ...   can   we   assume   that   we   just   have   one?  
+**Interviewer:** No.   I   think   that's   a   really   good   question.   Um,   wha-   tell,   tell   me   what,   what   that   gets   us   to   if   we   have   that   and   which   is   different   than   what   we   have   right   now.  
+**Candidate:** Sure.   So   in   terms   of,   um,   the   price   per   uniform   and   the   number   of   workers,   if   we   have   workers   that   are   buying   more   than   one   uniform,   uh-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   especially   depending   on   which   space   they   work   in,   whether   it's   mining,   transportation,   agriculture   or   forestry,   that   adds   to   the   potential   revenue   since   we   would   be   increasing   the   volume   of   uniforms   that   are   being   sold.   Uh,   so   this   would   kind   of   help   give   me   an   idea   of,   you   know,   w-   again,   where   would   be   the   right   space   to   look   into   because   maybe   if   one   job,   um,   requires   more   uniforms   than   another   one,   it   might   be   a   better   space   to   pursue   rather   than   chainsba-   chainsaw   pants   specifically   for   the   agriculture   and   forestry   industry.  
+**Interviewer:** Seems   reasonable.   So   we   actually   don't   have   the   number   that   they   own.  
+**Candidate:** Okay.  
+**Interviewer:** But   I   have   the   number   that   it   might   be   more   valuable   to   you.  
+**Candidate:** Sure.   (laughs)  
+**Interviewer:** I,   we   have   the   number   that   they   buy   per   year-  
+**Candidate:** Okay.  
+**Interviewer:** ...   on   average.   Yep.   And   so   mining   buys   eight,   agriculture   and   forestry   buys   six,   transportation   buys   four.  
+**Candidate:** Okay.   Perfect.   So   then   that   final   number   will   also   be   multiplied   by   the   number   of   uniforms.   So   it'll   be   workers   times   the   number   of   uniforms,   um,   times   what   percentage   buys   uniforms   times   that   price   should   get   me   this,   um,   overall   potential   revenue   for   that   market   specifically.  
+**Interviewer:** Sounds   good.  
+**Candidate:** Sound   like   a   good   plan?  
+**Interviewer:** Yeah.   Mm-hmm.  
+**Candidate:** Okay.   I'm   just   going   to   take   a   couple   seconds   to,   um,   go   through   these   calculations   and   get   back   to   you   with   the   numbers   that   I   get.   Is   that   okay?  
+**Interviewer:** Just   walk   me   through   it   live.  
+**Candidate:** Oh,   sure.   I   can   do   that.Okay.   So,   um,   I've   made   a   table   sort   of   for   myself   that   maps   out   all   these   different   numbers   that   you've   given   me.   So,   I'm   gonna   start   with   the   mining   industry   and   get   this,   uh,   total   market,   market   potential.   (person coughs)   So,   when   looking   at   the,   um,   mining...   So,   first   thing   I   wanna   get   what   population   is   buying   uniforms.   So,   we   know   that   that's   75%   of   200,   um,   or   three...   or   three-quarters   of   200.   So,   I   know   that   a   quarter   of   200,   um,   would   be   50,   and   so   three   times   that   would   be   150,000   workers.   (sniffs)   So,   now   we   know   that   they're   buying   eight   uniforms,   um,   a   year,   so   we   can   do   150   times   8,   which   would   be...   Hmm.   (sniffs)   Would   be   1.2   million   uniforms.   So,   I'm   just   writing   all   these   numbers   out   on   my   paper.   Um,   and   now   I'll   be   multiplying   that   by   $150   which   is   the   price   per   unit.   (sniffs)   So,   let   me   do   that   really   quick.   (sniffs)   (paper rustles)   Sorry,   I'm   just   doing   that   on   my   paper   right   now.   (paper rustles)   All   right,   so   that   gets   me   to   $1.8   billion   for   the   mining   industry.   Does   that   sound   right?  
+**Interviewer:** Check   your   number   one   more   time.   Let's   just   make   sure.  
+**Candidate:** Okay.  
+**Interviewer:** Actually-  
+**Candidate:** Sure.  
+**Interviewer:** ...   why   don't   you   just   show   me   how   you   did   it   on   your   paper?   Mm-hmm.  
+**Candidate:** Okay.  
+**Interviewer:** So,   I   can   see   that.  
+**Candidate:** So,   I   did,   um,   my...   So,   I   have...   My   75%   of   200,000   is   150,000,   um,   so   that's   my   population   of   workers   buying   uniforms.   And   I   know-  
+**Interviewer:** Okay.  
+**Candidate:** ...   that   they're   buying   eight   uniforms   per   person.   Um,   so   I   did,   uh,   the   150,000   times   8,   which   I   got-  
+**Interviewer:** Yep.  
+**Candidate:** ...   1.2   million.  
+**Interviewer:** Yep.  
+**Candidate:** So,   it's   the   number   of   uniforms,   um,   and   then   I   did   the   1.2   million   times   the   $150   per   uniform   and   got   1.8   billion.   But   here,   let   me   check   my   math   really   quick.  
+**Interviewer:** Just   do   that   last   step   again.   I   just   wanna   double   check   that.  
+**Candidate:** Sure.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Let   me   do   that.   So,   1.2   million   (sniffs)   times   150...   (sniffs)   (paper rustles)   Sorry,   it's   $12.6   billion.  
+**Interviewer:** Tell   me   how   you   did   that,   uh,   without   doing   it   on   your   paper.  
+**Candidate:** Okay.  
+**Interviewer:** Just   'cause   I   can't   see   what's   happening   on   your   paper.  
+**Candidate:** No,   that's   okay.  
+**Interviewer:** Can   you   just   walk   me   through   what   your   actual   steps   are   there,   doing   that   last   calculation,   the   1200   times   150?  
+**Candidate:** Yeah.   So   I'm   doing,   um...   I   have   it   just   written   out,   like,   in   terms   of   multiplications   of   my   1.2   and   then   I   just   put   an   M   for   million,   um,   and   I'm   doing   times   150.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** And   so   then   I'm   just   going   through   the   multiplication,   uh,   but   I   might   have   messed   up   a   zero   there.   So,   let   me   just   triple   check   my   math   really   quick.  
+**Interviewer:** Okay.   Um,   I   also...   I   have   a   tip   for   you.  
+**Candidate:** Yeah.  
+**Interviewer:** What   if   you   did   it   times   100   and   then,   um,   added   times   50?   So,   what's   1200   times   100?  
+**Candidate:** Sorry,   say   it   again.  
+**Interviewer:** What   if   you   did-  
+**Candidate:** Oh.  
+**Interviewer:** ...   1200   times   100?   Uh...  
+**Candidate:** Okay.   So,   if   I   just   did   the   1.2   million   times   100,   um,   I   get   120   million.  
+**Interviewer:** Yep.   And   then   what   are...  
+**Candidate:** And   then   now   you're   saying   do   50   times   the   1.2   million?  
+**Interviewer:** Yep.   Mm-hmm.  
+**Candidate:** Okay.   Okay,   let   me   do   that.   (pen clicks)   So,   doing   50   times   1.2...   would   be   60   million.  
+**Interviewer:** Okay.  
+**Candidate:** So,   we   get   $180   million.  
+**Interviewer:** I   like   that   number   better.   (laughs)  
+**Candidate:** (laughs)   Okay.   Sorry   about   that.  
+**Interviewer:** That's   all   right.   Mm-hmm.  
+**Candidate:** Okay.   Perfect.   All   right,   so   this   is   my   potential   revenue   for...   or   my   market   size   for   the   mining   industry.  
+**Interviewer:** Yep.   Mm-hmm.  
+**Candidate:** Okay.   So,   now   I'm   gonna   do   the   same   process   (microphone thumps)   for   the   agriculture   and   forestry.  
+**Interviewer:** Yup.  
+**Candidate:** Ag   and   4.   So,   we're   getting   60%   of   250,000.   Um,   so   this   would   be...   Let   me   see.   I'm   trying   to   get   more   of   a   fraction   value   for   this   to   make   this   calculation   a   little   bit   easier.  
+**Interviewer:** Sure.  
+**Candidate:** Um,   so   this   would   be   about   two-thirds   of   250,000.   So,   we   get   that   number,   250,000,   times   two-thirds.   (sniffs)   Um,   and   divide   it   by   3...   (pen clicks) .  
+**Interviewer:** Mm-hmm.  
+**Candidate:** That'd   be   about   166,000   and   that's   our   number   of   uniforms.   Or   sorry,   that's   our   number   of   workers,   and   we   know   that   they   are   buying   six   uniforms   per   person.   So,   I'm   going   to   do   that   really   quick.   (sniffs)   (paper rustles) So   that   would   be   996   thou-  
+**Interviewer:** Keep   ta-   keep   talking   me   through   it.   Mm-hmm.  
+**Candidate:** Sorry,   sorry.   I'm   just-  
+**Interviewer:** It's   okay.   (laughs)  
+**Candidate:** ...   sorry.   (laughs)   I'm   like   writing   my   numbers   on   my   paper.   But   I'm   doing   the   166,000   times   six   uniforms-  
+**Interviewer:** Okay.  
+**Candidate:** ...   and   I   get   996,000.   Um,   so   is   it   okay   if   I   round   that   up   to   one   million?  
+**Interviewer:** Yeah.   That's   o-   that   makes   sense.   Mm-hmm.  
+**Candidate:** Okay,   cool.   (laughs)   So   I'm   gonna   say   that   there's   about   one   million   uniforms,   uh,   and   we're   doing   that   price   per   uniform   is   $120.   So   I'm   doing   times   $120,   which   means   we'll   have   $120   million   for   our   market   size   for   the   agriculture   and   forestry.  
+**Interviewer:** Okay.  
+**Candidate:** Now   I'm   going   to   the   s-   same   thing,   uh,   for   our   final   category,   transportation.  
+**Interviewer:** Okay.  
+**Candidate:** So   I'm   doing   80%   of   100,000,   which   would   be   80,000   workers.   Uh,   we're   doing   four   uniforms,   uh,   per   person,   so   I'll   do   the   80,000   times   4,   which   is   gonna   give   us   320,000   uniforms.   And   now   I   can   do   the   price   per   uniform   of   $60   times   my   320,000,   um,   uniforms.   And   so   let   me   just   get   that   number   really   quick.   And   so   that   will   be   $192   million   for   the   transportation   market   size.   Does   that   su-   number   sound   correct?  
+**Interviewer:** That   seems   a   little   high   to   me.   What   do   you   think?   Mm-hmm.  
+**Candidate:** A   little   high?   Okay,   sure.   So   let   me   take   one   look   at   this   again.   So   I'm   doing   that   320,000,   which   is   my   number   of   uniforms,   times   the   $60   per   uniform.  
+**Interviewer:** Um,   uh-huh.  
+**Candidate:** Perfect.   Okay.   Just   wanna   make   sure   that   I'm   doing   that   part   right.   Okay,   let   me   do   that.   And   you   said   my   192   million   seems   a   little   high?  
+**Interviewer:** I   guess   I   just   look   at   the   numbers   and   it   seems   like,   you   know,   there's   fewer   uniforms,   it's   a   lower   price   point,   it's   a   smaller   market.  
+**Candidate:** Sure.   Sure.  
+**Interviewer:** It   just   seems   high   to   me.  
+**Candidate:** That   does   make   sense.   Um...   Okay.   I   see   what   you're   saying.   So   hold   on.   Let   me   check   my   zeros   one   more   time.   So   then   it   would   be   $19.2   million.  
+**Interviewer:** That   makes   more   sense.   Mm-hmm.  
+**Candidate:** Sorry,   just   up   by   one.   (laughs)  
+**Interviewer:** (laughs)  
+**Candidate:** One   zero,   I   mean.   Okay.   Um,   perfect.   So   when   we're   looking   at   the   market   size   for   these   different   areas,   uh,   we   have,   it   looks   like   our   largest   would   be   about   $180   million   for   the   mining   industry,   uh-  
+**Interviewer:** Okay.  
+**Candidate:** ...   which   currently   is   not   actually   where   we're   targeting   with   our   chainsaw   pants.   Um,   but   the   second-largest   would   be   that   120   million   in   agriculture   and   forestry,   which   is   where   we   are   pursuing.   So   if   anything,   I   would   say   there   could   be   a   potential   of   transitioning   into   maybe,   um,   a   uniform   for   mining   instead.   Um,   or   if   we   wanted   to   continue   pursuing   agriculture   and   forestry,   uh,   then   maybe   just   looking   at   how   we   could   capture   a   lot   of   that   market.  
+**Interviewer:** Which   one   do   you   think   would   make   the   most   sense   based   on   these   choices   that   we've   got   here?  
+**Candidate:** Sure,   so-  
+**Interviewer:** And   what   data   would   you   want   to   validate   it,   hmm?  
+**Candidate:** Of   course.   So,   um,   I   think   that   since   we   see   that   the   market   for   the   mining   is   greater,   I   would   want   to   transition   into   that   area.   Uh,   the   thing   is   that   we   do   have   this   in-house   design   that   could,   might   potentially   already   be   designed   for   the   chainsaw   pants.   So,   there   could   be   an   added   cost   onto   that   if   now   we   have   to   develop   this   new   one   for   mining.   Do   we   have   any   potential,   um,   numbers   on   either   how   much   it   costs   to   develop   the   current   design   so   that   we   could   sort   of   have   an   idea   of   what   it   might   cost   to   develop   a   new   one   for   the   mining   industry?  
+**Interviewer:** We   don't   have   that,   mm-mm.  
+**Candidate:** Okay.   Um,   all   right,   so   then   another   thing   that   I   would   want   to   look   at   then   would   be,   um,   ch-   t-   what,   uh,   our   potential   market   share   could   be   if   we   stayed   within   the   agriculture   and   forestry   industry.   Do   we   have   any   projection?  
+**Interviewer:** I   do   have   a   little   bit   of   data   on   that.  
+**Candidate:** Okay.  
+**Interviewer:** Um,   we've   got   some   data   for   the   three   segments   about-  
+**Candidate:** Okay.  
+**Interviewer:** ...   what   the   fragmentation   of   the   market   is.  
+**Candidate:** Perfect.  
+**Interviewer:** So   I   have   the   percentage   that   the   top-  
+**Candidate:** Okay.  
+**Interviewer:** ...   three   competitors   own   of   the   market-  
+**Candidate:** Okay.  
+**Interviewer:** ...   the   percentage   that   the   top   10   competitors   own,   and   then   the   percentage   that   the   top   100   competitors   own.   And   so   for   mining,   it's   62%,   88%,   and   100%.   So   again,   62%   top   three,   down   to   100%   by   the   top   100.   For   ag   and   forestry,   it's   21%,   43%,   and   56%.   And   then   for   transportation,   it's   32%,   41%,   and   62%.  
+**Candidate:** Perfect.   And   you   said   that   these   numbers   were   for   our   top   three   competitors,   top   10,   and   then   top   100.   Correct?  
+**Interviewer:** That's   right.   Yep.   Mm-hmm.  
+**Candidate:** Okay,   perfect.   Um,   so   the   first   thing   that   kind   of,   uh,   pops   out   to   me   right   now   is   that   within   the   agriculture   and   forestry   market,   which   we   are   pursuing,   um,   in   terms   of   our   top   100   competitors,   that   has   the   lowest,   uh,   market   share   that's   sort   of   been   captured   already,   which   means   that   there's   some   space   for   us   to   take   over,   um,   if   that   would   be   viable.So,   when   I   wanna   look   into   this,   I   wanna   understand   what   percentage   has   not   been   taken   yet,   and   so   what   the,   sort   of   the   value   of   that   market   could   potentially   be   for   us,   uh,   when   we,   if   we   were   to   capture   100%   of   that   market   that   hasn't   already   been   taken   over.   So,   when   I   wanna   look   at   this,   we   know   that   56%   of   the   market   has   been   taken   over   by   our   top   100   customers,   so   I   know   that   44%,   um,   st-   still   sorta   has   some   of   this   leeway   where   we   could   sort   of   enter.   Does   it   sound   like   a   good   idea   to,   um,   sort   of   get   this   estimate   on   what   our   potential   share   of   the   market   could   be   worth?  
+**Interviewer:** Yeah.   Megan,   just   walk   me   through   your   line   of   reasoning   there.   So-  
+**Candidate:** Sure.  
+**Interviewer:** ...   um,   so   I   just   wanna   make   sure   that   we're   understanding   what   we're   talking   about.   So,   uh,   um,   the-   these   numbers   represent   the   percentage   of   the   market   that   are   captured-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   by   the   top   100   competitors,   but   I   think   we   can-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   basically   assume   that   the   market   is   100%   captured   in   total.   I   don't   think   that-  
+**Candidate:** Okay,   I   see   what   you-  
+**Interviewer:** ...   these   numbers   represent   the   open   part   of   the   market.  
+**Candidate:** Sure.   Okay.   I   see   what   you're   saying.   You're   just   saying   that   of   the   top   100,   they   make   up   56%.   So   anyone   that's   lower-  
+**Interviewer:** Correct.  
+**Candidate:** ...   is   taking   up   these   other   44%.  
+**Interviewer:** So   there's-   there's-   there   could   be,   like,   you   know,   another   thousand   that   are   smaller   that   make   up   the   rest   of   the   market,   for   example.  
+**Candidate:** Okay,   great.   So   then,   it   looks   like   that   means   that   there's   a   lot   of   sort   of   other   variables   that   play   into   this.   Um,   so   of   the   top   three   competitors   within   this   industry,   we   only   have   about   20%   captured,   which   means   that   we're   very   fragmented   in   terms   of   the   other   players   within   this   market.   Um,   so   that   means   for   us,   at   least,   that   if   we   have   these   major   competitors   only   taking   20%,   we   could   either   buy   out   some   of   these   sort   of   lower   players   within   the   market,   um,   or   partner   with   them   to   begin   to   sort   of   take   that   share,   uh,   and   sort   of   work   our   way   up   since   there   is   so   much   space,   um,   in   terms   of   the   size   of   the   competitors   and   what   they   hold   within   the   market.   So,   do   we   have   any   numbers   on,   um,   maybe   some   of   these   lower-end,   uh,   companies   that   are   our   competitors   in   terms   of   maybe   what   products   they   have   in   development,   uh,   or   even   what   percentage   of   the   market   that   they   have   and   how   their   revenues   have   been?  
+**Interviewer:** I   wish   that   I   had   that,   but   I   don't.  
+**Candidate:** Okay.  
+**Interviewer:** I   do   have   a   little   bit   more   data   about   the   markets,   but   that   isn't   the   data   that   I   have.   Mm-hmm.  
+**Candidate:** Okay.   All   right.   So   then,   um,   other   data   that   I   would   want   about   the   market,   uh,   do   we   know   how   many   competitors   total   there   are   within   this   agricultural   and   forestry   space?  
+**Interviewer:** We   just   know   that   there   are   probably   at   least   500.   Mm-hmm.  
+**Candidate:** At   least   500.   Okay.   Wow.   So   that's   a   lot.   And   do   we   have,   um,   by   any   chance,   an   average   market   share   of   these   competitors   that   are   sort   of   the   below   our   top   100?  
+**Interviewer:** I   don't.   Uh-  
+**Candidate:** Okay.  
+**Interviewer:** Sorry   about   that.   Mm-hmm.  
+**Candidate:** That's   okay.   No   worries.   Uh,   just   trying   to   get   an   idea   of   if   we   were   to   either   merge   with   or   acquire   another   company,   realistically,   how   much   more   mar-   how   much   market-   how   much   market   share   we   could   gain.  
+**Interviewer:** Totally.  
+**Candidate:** Um...  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Okay.   So   then,   since   we   have   at   least   500,   um,   I   guess   I   could   get   sort   of   an   average   market   share   of   the   other   ones   by   taking   this   44%,   um,   and   understanding   that   there's   500   companies   across   there   that   are   taking   this,   uh,   other   percentage.   But,   so   do   we   have   any   information   on   maybe   strategy   for   acquiring   other   companies?   Is   that   something   that   High   and   Low   has   looked   into?   Uh,   or   are   we   kind   of   just   looking   on   into   this   development   stage   of   these   chainsaw   pants?  
+**Interviewer:** That's   a   good   question.   So   you're   thinking   that   maybe   acquisition   would   be   a   good-   good   way   to   go?   Mm-hmm.  
+**Candidate:** Uh,   it   could   definitely   be   a   potential,   uh,   to   sort   of   capture   market   share   quick.   Um,   although   I   think   that   there's   sort   of   some   other   things   that   I   wanna   think   about,   um,   in   terms   of   specifically   how   viable   that   option   would   be   before   making   that   recommendation   to   use   that   as   a   way   to   gain   market   share   in   that   area.  
+**Interviewer:** What   are   some   of   those   other   things   you'd   wanna   look   at?   Mm-hmm.  
+**Candidate:** So,   some   other   things,   um,   I   would   definitely   wanna   understand   maybe   what   our   projected,   uh,   numbers   are   for   our,   both   number   of   pants   sold   as   well   of   what   our   potential   pricing   strategy   is   for   that.   Um,   so   that   kind   of   gives   me   an   idea   of   what   sort   of   revenue   we   can   generate   on   our   own.   Uh,   but   then   also   really   understanding   what   costs   are   associated   as   well   in   development   with   these   pants.   'Cause   I   really   wanna   know,   you   know,   are   we   going   to   be   profitable   if   we   pursue   this   space?   So,   do   we   have   a   potential   pricing   strategy   for   these   pants?   Any   idea   of   kind   of   where   our   basis   is   for,   uh,   if   we   were   to   launch   this   product?  
+**Interviewer:** Again,   you're   asking   good   questions.  
+**Candidate:** (laughs)   Okay.  
+**Interviewer:** I'm   not   saying   that   your   questions   aren't   good.  
+**Candidate:** That's   okay.  
+**Interviewer:** But   I   do   have   data   that's   not   your   questions.  
+**Candidate:** Okay.  
+**Interviewer:** Um,   however,   it   is   related.   So   I,   um,   we-   we   don't   know   yet.   We   don't-  
+**Candidate:** Sure.  
+**Interviewer:** We're   not   that   far   along.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Here's   what   we   do   have.   We   have   margins,   the   average   margins   of   the   three   industries-  
+**Candidate:** Okay.  
+**Interviewer:** And   we   have   growth   rates-  
+**Candidate:** Okay.  
+**Interviewer:** ...   of   the   industries.  
+**Candidate:** That'd   be   great.  
+**Interviewer:** And   so,   um,   the   margin   on   the   mining,   um,   industry   is   about   22%   to   us.   Um,   so   there   is   a...   We-   we   often   sell   these   at   retailers,   so   I'm   ignoring   the   retailer   margins.   I'm   just   saying-  
+**Candidate:** Okay.  
+**Interviewer:** What   our   margin-   what   our   margin   or   what   the-   what   the,   um,   manufacturer's   margins   would   be.  
+**Candidate:** Okay.  
+**Interviewer:** Um,   in   ag   and   forestry,   it's   about   16%   and   for   transportation,   it's   about   14%.  
+**Candidate:** Okay,   great.  
+**Interviewer:** Um,   the   growth   rate   for   mining,   3%.   For   ag   and   forestry,   8%.   For   transportation,   11%.  
+**Candidate:** Sorry,   that   3%   was   for   the   mining,   not   the   agriculture-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   and   forestry?   Okay,   sorry.  
+**Interviewer:** That's   right.   Yeah.  
+**Candidate:** Just   checked   and   done.  
+**Interviewer:** 3%   was   for   mining.   Mm-hmm.   Mm-hmm.  
+**Candidate:** Okay.   And   then   it   was   8%   for   agriculture,   and   then   you   said   11%   for   transportation?  
+**Interviewer:** That's   right.   That's   right.   Mm-hmm.  
+**Candidate:** Okay,   perfect.   Um,   quick   question   coming   from   my   chemistry   background.   Margin's   definitely   somewhere   I   still   kind   of   struggle   with   in   understanding.   Could   you   kind   of   give   me   a   little   bit   more   background   as   to   how   this   plays   into   which   market   we   should   pursue?
+**Interviewer:** Sure,   totally.   So   mar-   um,   margin   is   basically   just   the   percentage   of   profit   that,   that   the   manufacturer   gets   to   take   home.  
+**Candidate:** Okay.   Okay,   perfect.   All   right,   um,   so   then   when   looking   at   this,   I   wanna   understand   where   our   greatest   potential   is   in   terms   of   returning   a   profit.  
+**Interviewer:** Okay.  
+**Candidate:** Um,   so   when   looking   at   the   margin   and   the   growth,   I   want   to   see   within   a   certain   period   of   time,   um,   which   would   have   the   greatest   margin.   Because   I   would   assume   if   they   have   the   greatest   margin,   that   would   be   the   best   place   to   pursue.   So   do   we   have   any   idea   of   how   many   target   years   we're   looking   at   in   terms   of,   um,   releasing   this   product?  
+**Interviewer:** Yeah.   So   we   wanna   know   today,   'cause   we   could   actually   get   it   out   within   a   year.  
+**Candidate:** Okay.  
+**Interviewer:** Or   we   can   get   a,   a   product   into   any   one   of   these   markets   actually   within   a   year.  
+**Candidate:** Okay.  
+**Interviewer:** Um,   or,   um,   the   profit   in   two   years   is   also   interesting   to   us.   So   could   you   do   both?  
+**Candidate:** Sure,   I   can   definitely   do   that.   So   then   when   looking   at   this,   I'm   gonna   do   a   projection   of   what   our   margin   looks   like   at   one   year,   two   years.   I'm   just   setting   up   my   table   right   now.   So   we   know   that   in   the   mining   industry,   there's   currently   a   margin   of   22%.   You'd   be   going   three,   growing   3%.   Um,   and   so   when   looking   at   this,   uh,   3%   of   22   is   going   to   be,   uh,   6.6,   which   means   that   in   year   one,   our   new   margin   would   be   28.6%.   And   then   is   this   growth,   um,   3%   of   sort   of   like   this   original   margin   number?   Or   when   I   get   the   count,   the...   Sorry,   when   I   get   the   value   for   our   margin   for   year   one,   would   it   be   an   added   3%   on   top   of   that   for   year   two?  
+**Interviewer:** Yeah,   it's,   um,   it's   3%.   And   actually   the,   um,   you   can   go   ahead   and   calculate   the   total   profit   number   using   the   market   sizes   that   we   found   earlier   as   well.   Mm-hmm.  
+**Candidate:** Oh,   sure,   sure.   Um,   is   it   okay   if   I   get   my   percentages   first   and   then   move   from   there?  
+**Interviewer:** Sure.  
+**Candidate:** Or   would   you   like   me   to   do   that   step   now?  
+**Interviewer:** Uh,   yeah,   either   way   that   you   wanna   do   it,   mm-hmm.  
+**Candidate:** Okay.   I'm   gonna   work   through   my   percentages   right   now   and   then   I'll   get   sort   of   what   that   total   value   looks   like   after.  
+**Interviewer:** Sounds   good.  
+**Candidate:** Okay,   perfect.   Um,   so   then   back   to   the   3%.   Sorry,   did   you   say   that   was   added   on   to   year   one   for   year   two?   Or   is   it   sort   of   just...  
+**Interviewer:** Um,   the,   the,   um,   3%   is,   um,   yes,   it's   added   on   to...   So   it's   another   3%   after   year   one.  
+**Candidate:** Okay,   great.   Um,   so   I'm   going   to   round   this   28.6%   then   to   about   30%,   and   say   that,   um,   3%   of   that   would   then   be   nine,   so   we'll   get   about   39%   profit   margin   in   year   two.   Uh,   so   now   I'm   gonna   move   on   to   the   agriculture   and   forestry   industry.   Um,   so   we're   looking   at   a   16%   margin   growth   of   8%.   Um,   so   if   I'm   looking   at   this,   we're   going   to   get   8%   of   16,   which   would   be,   um,   let   me   do   that   quick.   Let   me...   Mm...   So   I   know   that   10%   of   16   is   gonna   be   1.6,   and   I   know   that   it's   gonna   be   slightly   under   that.   Um,   so   it's   okay   if   I   say   that's   1.5?  
+**Interviewer:** Sure,   sounds   good.  
+**Candidate:** Okay,   great.   So   we're   gonna   do   16   plus   1.5   is   gonna   be   about   17.5%.   And   so   I'm   gonna   do   sort   of   a   similar   estimation   for   year   two,   say   that   8%   of   17.5   is   gonna   be   slightly   under   1.75.   Um,   so   I'm   gonna   do,   let's   say,   uh,   1.5   added   onto   that.   Sound   good?  
+**Interviewer:** Okay.   Yep,   sounds   good.  
+**Candidate:** Okay,   great.   Um,   so   that   would   be   19%   or   about   20%   margin   in   year   two.   Okay,   so   now   I'm   doing   the   same   thing   for   the   transportation   industry.   We're   doing   11%,   uh,   which   I'm   gonna   say   is   around   10%.   So   we're   doing   about   10%   of   14,   which   is   1.4.   So   now   we'll   get   15.4%   in   year   one   for   our   margin   transportation.   And   then   moving   on   to   year   two,   10%   of   that   would   be   another   1.54.   Uh,   so   then   we'll   get...   It'll   be   really   close   to   17%   margin.   Okay.  
+**Interviewer:** Cool.  
+**Candidate:** So   n-   now   I   have   my,   um,   total   revenue   for   each   industry.   So   I'm   just   gonna   make   a   new   table   really   quick   so   that   I   can   sort   of   organize   my   numbers.  
+**Interviewer:** Before   you   do   any   calculations-  
+**Candidate:** Sure.  
+**Interviewer:** ...   what,   what's   the,   what   do   you   think   the   highest   number   is   here?  
+**Candidate:** Hmm.   So   when   I'm   looking   at   this,   uh,   I   know   that   our   greatest,   uh,   potential   revenue   was   within   mining   of   $180   million,   and   that   also   has   the   greatest   profit   margin   within   two   years,   as   well   as   one   year.   Uh,   so   this   is   still   gonna   be   the   kind   of,   have   the   greatest   potential   for   us   to   move   into.   Um,   but   then   it   would   be   followed   behind   by   the   agriculture   and   forestry.   Uh,   so   still   mining   looks   like   it   would   be   the   best   means   to   kind   of   move   into   if   we   were   to   release   a   new   product.  
+**Interviewer:** Okay.   So   you   don't   have   to   do   the   calculation.  
+**Candidate:** Okay.   (laughs)  
+**Interviewer:** But   thank   you   for   setting   it   up.  
+**Candidate:** Thanks.  
+**Interviewer:** Um,   however,   I   do   need   to   wrap   up   the   case-  
+**Candidate:** Okay.  
+**Interviewer:** ...   because   the   CEO   has   asked   us   for-  
+**Candidate:** Sure.  
+**Interviewer:** ...   a   update.   So   can   you   give   me   an   update   on   what   you   think   about   this   initiative   to   release   the   chainsaw   pants?   Whether   you   think   there   are   any   interesting   alternatives,   or   whether   you   think   that   we   should   move   ahead   with   that   initiative?
+**Candidate:** Sure.   So   when   I'm   thinking   about   this,   I   guess   my   first   mar-   recommendation   would   be   not   to   release   the   chainsaw   pants,   uh,   and   to   move   into   a   different   market   that   we   sort   of   identita-   identify   as   potentially   moving   into.   Um,   so   my   recommendation   would   to   actually   be   look   in-   look   into   designing   a   uniform   for   the   mining   industry.   And   this   would   b-   because   the   total   market   potential   is   about   $180   million.   And   within   year   two,   um,   there's   potentially   a   39%   profit   margin,   which   is   the   largest   of   all   three   markets   that   we   were   looking   into   across   mining,   agriculture   and   forestry,   and   then   transportation.   Um,   so   I   definitely   think   that   maybe   designing   a   uniform   there   would   be   best,   but   that   also   means   that   there's   another   investment   cost   since   we'd   be   changing   the   design.   So   I'd   really   wanna   understand   sort   of   what   added   cost   this   adds   onto   us,   um,   since   we   would   be   switching   from   our   current   design.   Uh,   and   then   if   we   were   to,   I   guess,   continue   with   the   chainsaw   pants,   um,   really   understanding,   you   know,   how   we   could   price,   uh,   our   pants   to   basically   make   the   most   profit   off   of   it.   But   really   right   now,   I   would   want   to   look   into   transitioning   to   the   mining   industry,   um,   and   understanding   how   much   of   a   cost   burden   that's   gonna   put   on   us   to   make   that   switch   now   at   this   point.  
+**Interviewer:** Amazing.   Okay,   great.   You   can   relax.   (laughs)  
+**Candidate:** I-   Sorry.   That   math   was   rough.   I   was...   (laughs)   Yeah.  
+**Interviewer:** You   said   you   wanted   math,   right?   (laughs)  
+**Candidate:** No,   I   know.   I   did   and   I   needed   it,   and   this   is   why   I   really   need   to   practice.   (laughs)  
+**Interviewer:** All   right,   Megan,   I'm   gonna   give   you   some,   um,   some   recap.  
+**Candidate:** (laughs)   Okay.  
+**Interviewer:** So   we   did   that   in   exactly   40   minutes,   which   is   the,   the   length   of   time...   You   know,   just   depending   on   your   interview,   you'll   have,   you'll   have   25   to   40   to   kind   of   do   the   case   in   the   first   round.  
+**Candidate:** Okay.  
+**Interviewer:** One   of   my   main,   um,   focus   areas   is   just   gonna   be   on   speed   for   a   few   of   the   things.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Uh,   because   there   are   ways   that   I   think   you   can   speed   up   what   you're   doing-  
+**Candidate:** Okay,   perfect.  
+**Interviewer:** ...   with   drills   or   repetition.   Um,   and   I,   I'll   j-   I'm   just   gonna   highlight   a   couple   of   them.   First   of   all,   I   found   you   very   nice.  
+**Candidate:** Oh.   (laughs)  
+**Interviewer:** I   thought   you   hit   the   nice   factor-  
+**Candidate:** Thank   you.  
+**Interviewer:** ...   um,   for   Deloitte.   And,   um,   and   I   know   that   they   would   have   seen   that   too.   I   just   wanna   make   sure   that   we   don't   have   any   kind   of   like   glaring   issues   in   terms   of   the,   um,   the,   you   know,   also,   "Hey,   this   woman   knows   business   too."  
+**Candidate:** Yes.  
+**Interviewer:** So   that's   what   we're   gonna   focus   on.  
+**Candidate:** Yeah.  
+**Interviewer:** Um,   in   the   beginning,   you   took   a   minute   and   a   half   to   build   a   structure.   I   actually   have   no   idea   what   you   wrote   down   on   your   page,   so   I'm   gonna   tell   you   what   I   wrote   down.  
+**Candidate:** (laughs)  
+**Interviewer:** In   your   first   category,   um,   I   have   four   categories,   um,   ag   and   forestry,   customer,   product,   and   financials.   In   the   first   category,   I   wrote   down   five   bullet   points.   In   the   second   one,   I   wrote   down   six.   In   the   third   one,   I   wrote   down   three.   And   in   the   fourth   one,   I   wrote   down   five.   I   think   I'm   wrong   on   all   of   them-  
+**Candidate:** (laughs)   Yeah.  
+**Interviewer:** ...   because   you   didn't   actually   number   any   of   them   out   loud.   Am   I   wrong   on   all   of   them?   I   just,   I   just   wanted   to   double   check.  
+**Candidate:** Yeah.   I,   I,   I...  
+**Interviewer:** Okay.  
+**Candidate:** So   I   numbered   them   in   the   beginning.   One   was   industry,   two   is   customers,   three   was   product,   and   four   was   financials.  
+**Interviewer:** Yeah,   totally.   But   then   under   them.  
+**Candidate:** Yeah.   Oh,   under   them.  
+**Interviewer:** Under   them,   did   you   write   anything   down?  
+**Candidate:** Oh,   yes,   I   did.   I   had,   um...   So   do   you   want   me   to   go   through   what   I   had   for   them?  
+**Interviewer:** Just   the   numbers.   Just   the   numbers   of   them.   So   I   have,   I   had   five   things   for   ag   and   forestry   industry,   for   example.   How   many   did   you   have?  
+**Candidate:** So   for   the   industry,   um,   I   just   wrote   trends   in   similar   products.   I   know   I   kind   of   like   continued   talking-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   which   added,   I   think-  
+**Interviewer:** So   that's,   so   that's   one   of   the   things   that   I'm   gonna,   we're,   we're   gonna   push   on.  
+**Candidate:** Okay.  
+**Interviewer:** For   anybody   who   stays,   um,   after   the   feedback,   we're   gonna   just   talk   about   that.  
+**Candidate:** Okay.  
+**Interviewer:** Um,   and   so   we're...   I'm   actually   gonna   walk   you   through   like   what,   what   we   should   do   instead.   And   we're   gonna   do   it   once   or   twice   more   so   that,   um,   we   can   talk   about   that   a   little   bit   more   clearly.   I'll   t-   I'll   tell   you-  
+**Candidate:** Okay.  
+**Interviewer:** ...   what   I   wrote   down,   um,   and   maybe   how   we   could   make   that   into   a   better   structure.   And-  
+**Candidate:** Okay.  
+**Interviewer:** So   my,   my   key   takeaway   was   it   took   you   a   minute   and   a   half   to   walk   through   it   on   paper,   and   three   and   a   half   to   walk   through   it   verbally.   Too   imbalanced.   It   needs   to   be   two   and   two.  
+**Candidate:** Okay.  
+**Interviewer:** Um,   it   needs   to   be   much   crisper   in   the   verbal   delivery,   which   means   you   need   more   on   your   paper   so   that   you   can   anchor   to   a   better,   um,   structure   in   the   beginning.  
+**Candidate:** Okay.  
+**Interviewer:** It   wasn't   that   the   concepts   of   the   structure   were   wrong.   It   was   just   impossible   to   follow.   And   it   wasn't   anything   that   you   therefore   then   did   inside   the   case.  
+**Candidate:** Okay.  
+**Interviewer:** So   it   wasn't   like   well-thought-out   enough   that   we   could   actually   follow   it   into   the   case.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** So   we'll   come   back   to   that   in   just   a   minute.  
+**Candidate:** All   right.  
+**Interviewer:** Um,   the   second   thing,   um,   that   I   actually   think   would   help   a   lot   is   that   when   you're   doing   math,   you   do   the   math   waiting   for   the   conclusions   to   come   to   you   rather   than   telling   me   at   the   beginning   what   you   think   the   conclusion   is   gonna   be.   'Cause   I   prompted   you   to   do   that   in   the   third   math   piece.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** What,   what   are   we   gonna   find?   Oh,   we're   gonna   find   that   mining   is   the   biggest   profit.   Great.   That's   what   we   were   trying   to   do   in   the   first   place.  
+**Candidate:** Okay.  
+**Interviewer:** So   getting   the   number   only   confirms   that   for   us.   But   the   insight,   you   can   actually   tell   me   beforehand.   And   so   I   think   you   could   have   told   me   that   in   the   beginning   as   well,   right?   That   the   numbers   for   mining   were   gonna   be   the   largest   market   as   well   as   the   largest   profit.   Um,   and   so   it...   kind   of   keeping   the   insight   at   the   forefront   before   you   do   your   math   is   gonna   be   helpful.  
+**Candidate:** Okay.  
+**Interviewer:** Then   from   a   math   mechanic   standpoint...   Now,   for   a   lot   of   people,   I   don't   tell   them   that   this   is   what   they   need   to   work   on,   but   it   is   for   you.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** You   need   to   work   on   shortcuts.   Um,   and   you   need   to   talk   through   100%   of   what   you're   doing   and   only   write   down   the   answers   of   each   step.   Which   means   that   you   have   to-  
+**Candidate:** Okay.  
+**Interviewer:** ...   there,   there's   no   multiplication   allowed   on   your   paper.   That   is   a   crutch   for   you   and   you're   doing   it   wrong.  
+**Candidate:** (laughs)  
+**Interviewer:** So   you   actually   got   it   wrong   three   times.   Three   different   times,   you   did   the   wrong   math-  
+**Candidate:** (laughs)  
+**Interviewer:** ...   on   your   paper   trying   to   get   it   right.  
+**Candidate:** Okay.  
+**Interviewer:** And   so   when   you   talked   through   it,   you   got   it   right.   So   I   just   want   you   to   take   that   as   a   major   takeaway   from   today,   that   you   need   to   talk   through   every   step   along   the   way.   And   then   after   the   case,   you   need   to   go   back   through   and   figure   out   what   the   shortcuts   are.  
+**Candidate:** Okay.  
+**Interviewer:** So   for   example,   um,   the   tw-   when   you   were   doing   the   first   one,   um,   the   200   times   the   75   times   the   8,   right?   Like,   um,   the,   the   1,200   that   you   got   from,   from   the   beginning-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   um,   the   150   times   the   8,   um,   you   did   that   one   really   easily   and   you   did   that   one   out   loud.   And   then,   but   then   the   next   one,   the   1,200   times   the   150,   where   you   were   doing   like,   um,   you   know...   or   the   1.2   million   times   the   150,   uh,   it's   always   like   times   100   plus   times   50.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um,   or   times   100   times   1.5.  
+**Candidate:** Okay.  
+**Interviewer:** So   those   kind   of   shortcuts   to   make   those   numbers   easier,   anytime   we   can   kind   of   get   it   back   to   100   is   awesome.   Um,   when   you   were   taking   a   60%   haircut   of   the,   um......   of   the   next   section.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** You   made   an   error   on   that   number   and   you   were   like,   you   tried   to   like   round   it   and   you   got   the   wrong   number.   But,   um,   you   know,   60%   is   50%   plus   10%,   so   125   plus   25-  
+**Candidate:** Okay.  
+**Interviewer:** ...   is   150.   All   right,   so   those   are   the   kinds   of   drills   that   you   need   to   do.  
+**Candidate:** Okay,   sure.   Okay.  
+**Interviewer:** Recognize   like   kind   of   go   back   through.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um,   and   it's   basically   just   like   how   do   you   pull   things   apart   without   breaking   the   rules   of   math,   okay?   (laughs)  
+**Candidate:** Okay.  
+**Interviewer:** So,   uh,   right,   so   w-   we   can't,   we   can't   like   multiply   17   things   together-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   that   aren't   supposed   to   go   together.   You   have   to   multiply   and   add   them   in   the   right   orders.   But,   um,   if   you   can,   if   you   can   do   that   and   go   back   and   drill   it,   it   took   you   12   minutes   to   do   the   first   math   problem,   should've   taken   5.   So   that   will   help   you,   um,   and   that,   that   was   for   two   reasons.   One,   you   didn't   get   it   right,   so   I   had   to   do   it   again.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um,   which   I   wouldn't   have   had   to   inside   the   interview,   but   I   wanted   to   in   this   case.   Second   of   all   though,   um,   is   that,   um,   when   you   were   doing   it,   you   were   doing   it   the   longhand   way.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** And   so   the   actual   mechanics   could've   been   faster.  
+**Candidate:** Okay.  
+**Interviewer:** Um,   so   then   once   we   got   that   insight,   you   know,   I   felt   like   you   were   doing   a   really   good   job   of   like,   "Hey,   I   think   mining   is   more   interesting   than   ag   in,   um,   than,   than   ag."   I   thought   you   did   a   good   job   with   the   recommendations.   I   thought   the   ending   recommendation   was   really   solid.   Your   total   end   recommendation   was,   um,   was   a   total   of,   um,   like   1   minute   and   40   seconds.   Textbook   perfect,   right?  
+**Candidate:** Okay.  
+**Interviewer:** And   you   pulled   it   together   in   a   great   way.   And   I   gave   you   nothing   that   you   wanted,   and   so   that   was-  
+**Candidate:** (laughs)  
+**Interviewer:** ...   part   of   the   case   was   where   you   were   just   kinda   flowing   with   it.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** So   a   lot   of   those   things   were   there.   Um,   but   I   think   if   you   flip   around,   right,   insight   first,   calculation   second,   and   if   you   can-  
+**Candidate:** Okay.  
+**Interviewer:** ...   speed   up   your   calculations,   then   inside   the   case,   that's   gonna   solve   80%   of   where   I   was   losing   confidence-  
+**Candidate:** Okay.  
+**Interviewer:** ...   inside   the   case.   Um,   so   I   wanna   ask   if   you   have   any   questions   about   that   feedback   before   we   go   back   to   the   structure?  
+**Candidate:** Um,   I,   I   guess   in   terms   of   practicing,   um-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   so   what   would   be   the   best   method   of   practice   to   improve   that   aspect?  
+**Interviewer:** Math,   and   then,   um,   redo   it.   So,   so   do   the   math   and-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   time   yourself,   and   at   five   minutes,   you   have   to   quit.  
+**Candidate:** Okay.  
+**Interviewer:** So   if   you   don't   get   it   done,   you   didn't   do   it   fast   enough.   (laughs)  
+**Candidate:** Okay.  
+**Interviewer:** Um,   and   then   do,   I   would   recommend   doing   each   math   problem   three   times.   So   whatever   cases   you've   already   done-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   those   are   actually   really   good   ones   to   go   back   on   and   just   try   to   do   them   faster.  
+**Candidate:** Okay.  
+**Interviewer:** Okay?   Um,   and   so,   uh,   but   it's,   it's   like,   it's   a   little   bit   of   math   mechanics   drills   and   it's   a   little   bit   of   math,   um,   like   applied   drills.  
+**Candidate:** Okay.  
+**Interviewer:** So   we,   and   we   actually,   I,   like,   y-   you   know,   I,   I   don't   a-   I   don't   always   pitch   things   for   situations   like   this.  
+**Candidate:** (laughs)   Okay.  
+**Interviewer:** But,   but   we   have,   we   do   have   a   mental   math   course.  
+**Candidate:** Yeah.  
+**Interviewer:** It's   $95   with,   that   has   like   all   of   that   in   there.   So   if   you   wanted   to   do   that,   um,   then   out,   out   of   everything   that   we   talked   about,   I   think   that   would   be   like   a   worth   the   investment-  
+**Candidate:** Okay.  
+**Interviewer:** ...   pro-   um,   from   what   we're   talking   about   here.   But   again,   if   you   wanna   kind   of   DIY,   what   you   do   is   you   go   back   through   math,   you   do   it   for   five   minutes,   you   time   yourself.   And   if   you   don't   get   it   done,   you   go   back   and   you   do   it   again.   And   if   you   need   to,   in   between,   like   if   you're   getting   frustrated   and   you're   not   getting   better,   then   you   go   back   through   and   you're   like,   "Okay,   I'm   gonna   give   myself,   you   know,   11   minutes   to   work   through   the   entire   thing."  
+**Candidate:** Okay.  
+**Interviewer:** "From   beginning   to   end,   make   sure   I   get   it   right,   and   then   I'm   gonna   go   back   and   figure   out   how   to   make   it   faster."   So   ideally,   you   work   on   speed   first.   If   you   can   just   get   through,   through   that,   that's   great.   If   not,   you   have   to   work   on   accuracy   first   and   then   speed.   Mm-hmm.  
+**Candidate:** Okay,   perfect.  
+**Interviewer:** Yeah.   Hopefully   that   gives   you   kind   of   like   a   very   s-   clear   pathway.   That's   the   goal.  
+**Candidate:** Yes.   Yes,   it   does.   (laughs)  
+**Interviewer:** Good.   Um,   one   of   the   things   that,   uh,   so   there   are   a   couple   questions   that   are   coming   in   that   I   wanna   address   first,   and   then   we're   gonna   go   back   to   the   structure.  
+**Candidate:** Sure.  
+**Interviewer:** So   number   one,   um,   at,   at   the   end   when   you   were   doing   the   multiplication   times   the   margins,   you   also   got   that   number   wrong.   Um,   so   the,   the,   like   make   sure   that   you   just   are   really   clear   on   when   you   take   1%   and   5%   and   10%   of   something.   'Cause   you   did   22%   and   you   said   3%   of   it   was   6.6,   um,   and   it   was   .66,   right?   'Cause   1%   was   .22.  
+**Candidate:** Oh,   yeah.  
+**Interviewer:** Right?   Mm,   and   so,   um,   so   your   numbers   still,   your,   your   takeaway,   um,   was,   was   pretty   close.   I   think   actually   like   mining,   um,   or   ag   when   you   did   it   that   way,   it   wasn't,   it   wasn't   the   way   that   I   did   it,   but   ag   is   a   little   bit   higher   in   terms   of   the   growth   rate,   but   the   profit   was   definitely   higher-  
+**Candidate:** Okay.  
+**Interviewer:** ...   for   the   mining   segment.   So   it   didn't   actually   change   your   takeaway,   but   it   did   change,   um,   the,   the   numbers   for   that.   But   yeah.  
+**Candidate:** Okay.  
+**Interviewer:** Um,   anybody   who   was   doing   that,   it   was   just   multiplication,   so   it   was   just   like   market   size   times   one   plus   the   growth   rate   raised   to   the   second   times   the   margin.   And   so   you   could   do   margin   times   that   growth   rate   or   you   could   do   market   times   that   growth   rate.   And   so   if   anybody   was   confused   about   which   one   you   needed   to   do   first,   you   could've   done   either.   So   the   way   that   you   did   it,   Megan,   wasn't   wrong.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um,   it   was   just   that   that   one   calculation   was   off.  
+**Candidate:** Okay.  
+**Interviewer:** The   other   ones   were   fine.   Um,   and   then,   um,   the   final   thing   that   I   wanted   to   say,   um,   somebody   also   asked   is   there   a   right   or   a   wrong   recommendation?   So   I   actually,   uh,   intentionally   wrote   this   case   so   that   it   could   be   either,   um,   it,   it,   it's   not   transportation.   It   doesn't   make   sense.   It's   too   small,   it's   n-   you   know,   not,   the,   the   growth   rate   isn't   there,   the,   the   repetitiveness   of   the   purchases   aren't   there.   It's   not   transportation.   But   between   mining   and   ag   and   forestry,   I   actually   left   it   a   little   open   because   mining   could   be   really   hard   to   enter.   It's   very,   very,   um,   consolidated   versus   the   fragmentation   of   the   ag   and   forestry   market.   And   so   I   wrote   it   so   that   somebody   could   defend   either   one.   What   I   liked   about   Megan's   conclusion   is   that   she   defended   one   very   clearly.   Um,   and   so   I   liked   that.   I   liked   that   she   backed   that   up   with   numbers.   Um,   that   for   me   was   what   made   it   a   very   good   recommendation,   not   the   fact   that   she   chose   the   right   one,   'cause   there   were   actually   two   optional   choices   for   the   answer   in   this   case.   Mm-hmm.   Okay,   awesome.   So,   um,   Megan,   any   final   questions   for   me   before   we   go   back   to   that   structure?  
+**Candidate:** Uh,   nope.  
+**Interviewer:** Awesome.   Okay.   So   we're   gonna   do   a   quick   structure   workshop.   So,   um,   we're   gonna   use   Megan's   structure.   So   Megan,   agriculture   and   forestry   industry,   right?   That   was   actually   the   first   thing   that   we   looked   at.   We   didn't   just   look   at   that   one,   we   looked   at   all   three.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um,   and   in   the   beginning   of   the   case,   you   don't   necessarily   have   to,   to   make   the   decision   on   Chainsaw,   but   if   we're   trying   to   grow,   maybe   that   would've   made   sense.   So   maybe   we-  
+**Candidate:** Okay.  
+**Interviewer:** ...   just   broaden   that   to   in,   you   know,   industry.   Um,   second   one   is   customer.   Okay?   Um,   and   s-   and   so,   um,   we're   gonna   talk   about   how   to,   we   didn't   actually   use   that   number   inside   the,   um......   case,   but   we   are-   we're   gonna   talk   about   how   to   kind   of   like   really   make   that   super   clear.   Product,   um,   and   then   financials,   right?   So   those   are   the   four.   So   I   want   everybody   to   use   these   when   we're   doing   the   structure   workshop.   Um,   so   Megan,   what   I   want   you   to   do   now   is   read   out   to   me   exactly   what   you   wrote   on   your   paper,   nothing   more.  
+**Candidate:** Okay,   sure.   So   under   industry   I   had   trends,   similar   products.   Uh,   I   know   that   in   the   sort   of   workshop   that   you   did   with   us,   um-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   you   look   for   specific   numbers.   And   I   guess,   I've   still   kind   of   struggled   with   that.   Um,   so-  
+**Interviewer:** Great,   that's   where   we're   gonna   get   to.  
+**Candidate:** Yeah.  
+**Interviewer:** Okay.   (laughs)  
+**Candidate:** So   that's,   I   think   that   I   write   down   more   so   ideas   than   try   to   get   from   numbers   from   there.  
+**Interviewer:** Exactly.   Yep.  
+**Candidate:** And   that's   why   I   talk   too   much.  
+**Interviewer:** Great.  
+**Candidate:** But,   okay.   So   in   customers   I   had   who,   uh,   channels/how   to   reach.  
+**Interviewer:** Great.  
+**Candidate:** For,   I   just-  
+**Interviewer:** So   who   ...   Oh   wait,   sorry,   sorry.   So   one,   bullet   one   is   who-  
+**Candidate:** And   then-  
+**Interviewer:** Bullet   two   is   channels-  
+**Candidate:** It   was   channels/how   to   reach,   like   channels   of   distribution.  
+**Interviewer:** Okay.  
+**Candidate:** Um-  
+**Interviewer:** Okay,   awesome.   Mm-hmm.  
+**Candidate:** Then   under   product   I   had   benefit,   and   then   two   was   pricing   strategy.   And   then   under   financials   I   just   had   initial   investment.   I   didn't   have   another   bullet   point   for   that   one.  
+**Interviewer:** Okay.   Awesome.   Great.   So   I,   what   I'm   gonna   do   is   I'm   gonna   give   everybody...   You,   you   guys   have   now   what   she   had   on   her   paper.   Here's   your   mission.   Underneath   each   one   of   these   things,   I   want   you   think   about   the   big   thing   that   you   wanna   calculate.   So   Megan,   what's   gonna   make   it   easier   is   if   we   start   at   the   end.  
+**Candidate:** Okay.  
+**Interviewer:** All   right?   So,   uh,   so   we're   gonna   talk   about   one   area   in   each   one   of   them,   and   then   I'm   gonna   give   you   two   minutes   to   go   rebuild   the   structure.  
+**Candidate:** Okay.  
+**Interviewer:** So   for   the   industry,   what   are   you   looking   for?   What's   one   metric   that   you're   looking   for   inside   the   industry?  
+**Candidate:** Uh,   market   size.  
+**Interviewer:** Great.   Okay.   And   so,   what   you   did   inside   the   case   was   you   had,   what   you   had   to   do   was   you   had   to   work   through   all   of   the   factors   that   you   needed   for   that.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Do   it   right   here.  
+**Candidate:** Okay.  
+**Interviewer:** Okay?  
+**Candidate:** Okay.  
+**Interviewer:** Put   those   in   here   so   that   it's   like,   I   wanna   know   how   many   employees   there   are   in   each   one   of   the   sectors,   or-  
+**Candidate:** Okay.  
+**Interviewer:** ...   y-   you   know,   if   you   were   just   doing   it   for   ag   and   forestry,   right,   how   many   employees   there   are,   what   percentage   of   them,   um,   use,   um,   uniforms   or   would   be   interested   in   chainsaw   pants,   whatever   that   is.  
+**Candidate:** Okay.  
+**Interviewer:** But   I,   I   don't   really   care   what   this   solves   for   us   'cause   you   don't   know   what   all   the   data   is   that   you're   gonna   get.   I   care   that   it's   very   clear   and   that   you   could   use   it   to   run   the   math.  
+**Candidate:** Okay.  
+**Interviewer:** That's   what   I   care   about   here.  
+**Candidate:** Okay.  
+**Interviewer:** Right?   Then,   um,   the   second   one   for   the   customer.   Give   me   a   number   for   that   one.   What   do   you   wanna,   what   do   you   wanna   calculate?   Hmm?  
+**Candidate:** Uh,   so   I   guess   this   would   kind   of   be   less   messy   because   I   think   that   industry   and   customers   kind   of   overlap.   Um,   because   I   think   the   custor-   customers,   that's   really   where   I   was   looking   for   like   the   number   of,   uh,   employees   within   that   industry.   Um,   so   then   when   I'm   going   back   to   customers,   I   guess   I'm   trying   to   figure   out   in   terms   of   the   numbers   how   I   can   make   that   different   than   what   I   was   looking   for   in   industry.  
+**Interviewer:** The   one   thing   we   don't   have   in   here   is   anything   around   competitors.   So   what   if   we   use   the   customer   bucket   to   talk   about   competitors?  
+**Candidate:** Okay.  
+**Interviewer:** Right?   Which   competitors   are   they   currently   buying   from,   what   ch-   you   know,   the   percentage   of   purchases-  
+**Candidate:** Okay.  
+**Interviewer:** ...   through   different   channels   like   e-commerce,   you   know,   et   cetera.  
+**Candidate:** Okay.  
+**Interviewer:** Right?   Um,   maybe   you   put   the   market   size   to   be   volume   and   you   do   the   price   point   here.   It's   po-   you   know,   it's   possible   that   you   could   do   that.  
+**Candidate:** Okay.  
+**Interviewer:** Right?   So   what   is   their,   what   is   their   willingness   to   pay?   You   could   put   it   in   either   place.   So   you're   right.   It   wouldn't   be   messy   if   we   do   the   same   things,   but   I   do   think   there   is   something   that   we   can   look   at   from   a   customer-  
+**Candidate:** Okay.  
+**Interviewer:** ...   standpoint   here.   Okay?  
+**Candidate:** Perfect.  
+**Interviewer:** So   and   basically   you,   what   you're   trying   to   get   to   there   is   market   is   one   thing,   who   we   get   as   our   customers   is   a   different   thing,   right?  
+**Candidate:** Mm-hmm.  
+**Interviewer:** So   really   you're   trying   to   get   market   share,   I   think,   in   the   customer   piece.  
+**Candidate:** Okay.  
+**Interviewer:** Does   that   make   sense   or...   ?  
+**Candidate:** Sure.  
+**Interviewer:** So   what   do   we   have   to   get?   We   have   to   get   our   potential   revenue,   which   is   different   than   the   total   market.   Hmm?  
+**Candidate:** Okay.  
+**Interviewer:** Okay?   Great.   What   about   the   third   one?   Product.  
+**Candidate:** Okay.   So,   um,   I   sort   of   moved   a   little   bit   ahead   trying   to   think   of   the   pricing   strategy.   Uh,   so-  
+**Interviewer:** Good.  
+**Candidate:** ...   would,   that   could   potentially   be   something   that   I   ask.  
+**Interviewer:** No,   you   said,   you   were,   you   were   like   pricing   strategy,   but,   but,   but   what   were   we   gonna   calculate?  
+**Candidate:** But   what   I  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Um,   I   had   initial   investment-  
+**Interviewer:** Great.  
+**Candidate:** ...   was   one   thing   I   wanted   to   look   at.  
+**Interviewer:** Great.   And   so   you're   thinking   of   that   as   a   one-time   cost,   right?   How   to-  
+**Candidate:** Mm-hmm.   So   like,   R&D,   when,   when   it   comes   to   just   the   initial   development   before   like   product   launch.  
+**Interviewer:** Great.   Um,   and   so,   and   what   else   then?   Hmm?  
+**Candidate:** Um,   so   then   another   thing,   again,   I'm   trying   to   separate   it   from   product,   so   I   don't   necessarily   wanna   go   into   the   cost   of   making   the   product.   Um-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   but   maybe   the   added   cost   to   the   company   of   adding   a   new   product.  
+**Interviewer:** Great.   So   like,   um,   any   kind   of,   um,   capacity   increase-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   or   something   like   that,   that   they-  
+**Candidate:** Yeah.   Okay.  
+**Interviewer:** ...   they'd   have   to   buy.  
+**Candidate:** Yeah.  
+**Interviewer:** They   have   to   buy   a   new   machine   or   something   like   that.   Hmm.   The   cost   of   a   capacity   increase.   And   then   there's,   uh,   probably   one   more   thing.   Um,   maybe   like   a,   um,   you   know,   additional   marketing   cost   or   something   like   that.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Right?  
+**Candidate:** Mm-hmm.  
+**Interviewer:** So,   so   the   one   before   was   assuming   that   a   customer   just   like   magically   appears   and   buys   this.  
+**Candidate:** Yeah.   (laughs)  
+**Interviewer:** But   we,   we   know   that,   um,   there's   so...   So,   so   really   basically   we've   got   like   one-time   and   ongoing   fixed   costs   is   in   that   final   category.  
+**Candidate:** Okay.  
+**Interviewer:** And   you   can   call   it   financials,   you   can   call   it   investment,   you   could   call   it   something   like   that.   Hmm?  
+**Candidate:** Okay.  
+**Interviewer:** Okay.   Great.   Um,   so   I   like   this.   Uh,   so   what   I   wrote   down   was   that   the   four   things   were   market   size,   market   share,   margin,   and,   um,   and,   um,   fixed   costs.And   I   like   that   because   that   seems   really   linear,   very   easy   to   collect   data   too   and   less   conceptual   than   what   we   were   talking   about   before.  
+**Candidate:** Okay.  
+**Interviewer:** So,   now   I'm   gonna   give   you   two   minutes   to   rewrite   what   data   you   need   to   calculate   those   things   (laughs) -  
+**Candidate:** Okay.  
+**Interviewer:** ...   uh,   inside   your   categories,   and   then   I'm   gonna   have   you   represent   it.   Okay?   And   I   want   everybody   to   go   through   this   exercise   that's   on   the   call.  
+**Candidate:** Okay.  
+**Interviewer:** I'm   gonna   set   a   two-minute   timer.   Go   for   it.   You   have   38   seconds   left,   so   keep   going.   Add,   add,   add,   add,   add.   That's   time.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** So,   Megan   volunteered,   so,   so   she   gets   all   the   coaching.   Anybody   who   wants   to   send   us   your   structure,   even   if   you've,   if   you   go   through   it   again   and   kind   of   redo   it,   not   necessarily   exactly   like   this   but   a   little   bit   differently,   you   can   send   it   to   us   by   email.   Jay,   if   you   can   put   your   email   into   the   chat   bar.   But   Megan,   before   you   present   it,   'cause   I   wanna,   um,   just   do   one   more   thing   on   the   presentation   before   we   sign   off.  
+**Candidate:** Okay.  
+**Interviewer:** Um,   what   I   want   you   to   do   is   to   just   reflect   on   the   order.   If   you're   happy   with   the   order   that   you   put   them   in,   you   can   deliver   them   in   that   order.   But   you   need   to   deliver   them   in   what   you   think   the   order   of   importance   is   for   a   Deloitte   or   a   BCG-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   or   any   kind   of   case   where   you're   gonna   be   in   charge   so   that   it's   not   like,   "Let's   look   at   all   this   potential"-  
+**Candidate:** (laughs)  
+**Interviewer:** ...   "fluff,"   you   know,   and   then   finally   get   into   the   data   in   like   bucket   three,   right?   So,   so   I'm   happy   with   the   order,   but   if   you,   I,   I,   I   want   you   to   basically   present   in   whatever   you   believe   is   convicted,   you   know,   your-  
+**Candidate:** Okay.  
+**Interviewer:** ...   your   kind   of   convicted   order.   Then   the   final,   um,   thing   is   that   when   you   are   telling   me   the   numbers,   I   w-   I   need   you   to   anchor   me   in   what's   on   your   paper.   So,   I,   um,   so   I   need   you   to   add,   like,   "Data   point   one   is..."  
+**Candidate:** Okay.  
+**Interviewer:** Say   the   word   and   then   explain.  
+**Candidate:** As   to   why   I   wanna-  
+**Interviewer:** Make   sure   before...   Yeah.   A-   and   so   I'm   gonna   taser   you   if   you   don't   do   that,   and   I   think   you're   moving   on   to   the   next   thing   (laughs) .  
+**Candidate:** Okay   (laughs) .  
+**Interviewer:** Um,   okay?   So,   so,   um,   to   keep   you   honest,   I   want   you   to   tell   me   how   many,   what   the   number   of   data   points   are   in   each   of   your   categories   to   start   with.  
+**Candidate:** Okay.   Do   you   want   me   to   do   that   now   before   I   present?  
+**Interviewer:** Yeah.   I   want   you   to   tell   me   before   you   present   'cause   I'm   gonna   see   if   I   think   that   you're   telling   me   seven,   but   you're   actually   only   trying   to   tell   me   three.  
+**Candidate:** Okay.   So,   um,   under   the   industry   or   market   size,   I   had   four.  
+**Interviewer:** Great.  
+**Candidate:** Um,   under   the   market   share,   I   had,   um,   two.  
+**Interviewer:** Okay.  
+**Candidate:** And   then   under   products,   I   had   three.  
+**Interviewer:** Yep.  
+**Candidate:** And   under   my,   um,   financials,   I   had   two.  
+**Interviewer:** Great.   Okay,   now   you   can   report   it   out.  
+**Candidate:** Okay   (laughs) ,   sounds   good.  
+**Interviewer:** I'm   gonna   give   you   a   two-minute   timer   for   this   one   and   I'm   gonna   cut   you   off   if   you   don't   finish   within   the   two   minutes.  
+**Candidate:** Okay.  
+**Interviewer:** If   you're   focusing   on   like   punctuation,   right?  
+**Candidate:** Okay.  
+**Interviewer:** So   like   here's   number   one,   here's   why.   Here's   number   two,   here's   why.  
+**Candidate:** Okay.   So,   when   looking   into,   uh,   which   market   we   should   pursue,   I   wanna   look   into   four   major   areas.   The   first   would   be   the   industry   or   market   size   specifically.  
+**Interviewer:** Great.  
+**Candidate:** Two   would   be   what   our   potential   market   share   could   be.   Uh,   three   would   be   more   of   a   cost   analysis,   uh,   or   the   financial   side   of   things.   And   then   number   four   would   be   our   product   specifically.   So,   when   looking   at   our   market   size,   um,   I   really   wanna   understand   how   many   workers   there   are   across   these,   uh,   three   sort   of-  
+**Interviewer:** Data   point   one.  
+**Candidate:** ...   areas.   Sorry.   Data   point   one   would   be,   um,   the   number   of   workers   across   these   three   different   industries.   Uh,   the   number...   Data   point   two   would   be   the   percentage   of   these   workers   that   utilize   uniforms   in   their   job.   Uh,   data   point   three   would   be   the   number   of   uniforms   that   each   worker,   um,   buys   per   year   or   has   to   own   for   their   job.   And   then   number   four   would   be   what   the   average   cost   of   those   uniforms   are.   Then   moving   into,   um,   our   market   share.   I   wanna   understand...   Or   data   point   one   would   be   how   many   competitors   there   are   within   the   space   across   all,   all   three   industries.   Um,   data   point   two   would   be   the   percent   market   share   that's   taken   by   our   competitors   to   kind   of   understand   we   c-   where   we   can   move   into   that   space.And   then   moving   into   my   financial   side   of   things,   um,   the   first   data   point   I   wanna   know   is   what   this   fixed   investment   cost   is   going   to   be   when   releasing   these,   this   product.   Um,   and   then   number   two   would   be   the   cost   of   sort   of   this   new   composition   or,   uh,   structure   change   to   our   department,   whether   this   includes   sort   of   our   marketing,   uh,   or   labor   costs,   or   maybe   the   utilities   for   manufacturing.   And   then   finally,   uh,   when   moving   into   the   product,   I   want   to...   The   first   data   point   I   want   is   to   understand   what   we're   thinking   of,   our   price   point   for   the   pants   will   be.   Um,   data   point   two   will   be   our   cost   of   manufacturing,   and   then,   uh,   data   point   three   will   be   our   potential   margin.   I   just   realized   that   I   didn't   explain   why   I   wanted   those.   (laughs)  
+**Interviewer:** That's   okay.  
+**Candidate:** (laughs)  
+**Interviewer:** That   was   two   minutes.  
+**Candidate:** Okay.  
+**Interviewer:** That   was   two   minutes.  
+**Candidate:** So   I'm   still   talking   too   much.   (laughs)  
+**Interviewer:** So   you   did   i-   in,   in,   just   a   little   bit.  
+**Candidate:** Okay.  
+**Interviewer:** Um,   and   I   also   tasered   you   at   the   beginning.   But   that,   how   did   that   feel   when   you   were   doing   that   version   of   the   structure   versus   the   last   one?  
+**Candidate:** Just   a   lot   more   concise   and,   like,   directed   in   terms   of   where   I   wanna   take   the   conversation   without-  
+**Interviewer:** Exactly,   because-  
+**Candidate:** ...   the   boring   plane.  
+**Interviewer:** ...   the,   the   la-   uh,   when   you...   So,   so   this   is   kind   of   just   to   illustrate   the   difference   between   using   con-   concepts   and   data-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   inside   the   structure,   right?   Because   before   you   were   like,   "I   wanna   look   at   who   it   is."   (laughs)  
+**Candidate:** Mm-hmm.  
+**Interviewer:** And   then   it's   like,   wait   a   second,   then   we   have   to   go   back   when   we're   inside   the   case   and   figure   out   what   that   means.  
+**Candidate:** Okay.  
+**Interviewer:** If   you   had   used   this   structure,   we   would   have   been   like   market   size,   go.   And-  
+**Candidate:** Okay.  
+**Interviewer:** You   know,   and   you   wouldn't   have   had...   You   wouldn't   necessarily   have   had   these   four   things,   they   wouldn't   have   always   lined   up   with   exactly   what   I   have   inside   the   case.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** But   I   would   have   within   30   seconds   been   able   to   deliver   the   data   to   you   rather   than   having   the   three-minute   conversation   about   what   this   looks   like   inside-  
+**Candidate:** Okay.  
+**Interviewer:** ...   the   case.   So   it   makes   your   whole   case   faster,   not   just   more   clear   at   the   beginning   as   well.  
+**Candidate:** Okay,   perfect.  
+**Interviewer:** Awesome.   And   so   what   I   would   do   now,   the   final   step,   which   we   don't   need   to   do   on   the   call,   um,   because   you've   had   enough   fun-  
+**Candidate:** (laughs)  
+**Interviewer:** ...   I   would   say,   but   for   one   day.   Um,   is,   is,   uh,   what   I   would   do   is   I   would   actually   go   back   if   you   wanna   tweak   anything,   um,   and   then   redo   the   delivery.  
+**Candidate:** Okay.  
+**Interviewer:** So,   um,   you   were,   you   were   kind   of   catching   yourself   as   you   were   going   through   the   delivery-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   as   you   were   trying   to   paragraph   the   whole   thing.   Um,   so   keep   bullet   pointing   it,   keep   making   it   super   explicit   and   practice   that   delivery   with   a   timer   so   you're   like,   "Dang   it,   that   was,   you   know,   three   and   a   half   minutes.   I   need   to   make   it-"  
+**Candidate:** Okay.  
+**Interviewer:** "...   crisper,   clearer."   Um,   and   if   it's   getting,   um...   Usually   what   I   find   is   that   if   people   do   a   really   good   job   of   writing   down   in   two   minutes,   they   do   a   good   job   of   delivering   in   two   minutes-  
+**Candidate:** Okay.  
+**Interviewer:** ...   if   you   practice   them.   All   right?  
+**Candidate:** Perfect.   Thank   you   so   much.  
+**Interviewer:** Okay,   amazing.   So   Megan,   I've   got...   I,   I'm   gonna   leave   the   last   seven   minutes   for   other   people   to,   um,   ask   questions,   but   I   just   want   to   say   one   more   big   thank   you   to   you   for-  
+**Candidate:** Of   course.  
+**Interviewer:** ...   um,   taking   the   courage   to   come   on   the   call   and   hope   you   got   a   lot   of   out   of   it   today.  
+**Candidate:** I   did.   Thank   you   so   much   for   the   feedback.  
+**Interviewer:** Absolutely.

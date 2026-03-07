@@ -1,0 +1,353 @@
+Case: Digital Transformation
+Case Type: Strategic Decision
+Firm: Bain
+Channel: iGotAnOffer: Consulting
+URL: https://www.youtube.com/watch?v=qjfkFSzWNIk
+============================================================
+
+**Interviewer:** (Music)   Hi,   I'm   John.   I'm   an   I   Got   An   Offer   coach   and   an   ex-Bain   manager.   And   today,   we   have   Brittney   joining   us,   who's   gonna   run   us   through   a   case.   So   Brittney,   maybe   you   can   introduce   yourself.   Thanks   for   joining.  
+**Candidate:** Yeah.   Thanks   for   having   me,   John.   Uh,   my   name's   Brittney   Gardner.   I   am   also   a   ex-Bain   consultant   and   an   I   Got   An   Offer   coach.  
+**Interviewer:** Great.   Thanks,   Brittney.   So   let's,   let's   jump   right   in   and   kick   off   the   case.   So   y-   I'll   start   with   the   situation.   So   your   client   is   the   head   of   network   in   one   of   Greece's   largest   banks,   established   in   the   1950s.   She   looks   after   all   the   brai-   bank's   physical   branches.   The   bank   used   to   be   state-owned,   but   has   been   privatized   five   years   ago.   Online   banking   is   almost   nonexistent   in   Greece   at   the   moment,   but   your   client   is   concerned   that   the   digital   trends   observed   in   other   countries   will   eventually   unfold   in   Greece   too,   and   have   an   impact   on   the   bank's   network.   The   bank   is   currently   facing   liquidity   issues   because   of   a   financial   crisis   in   the   country,   and   has   limited   funds   to   invest   in   a   digital   transformation.   Your   client   wants   to   know   what   to   do   to   be   prepared   for   this,   and   to   develop   a   strategy   for   the   future   of   the   bank's   physical   branches.  
+**Candidate:** Awesome.   This   sounds   like   a   really   interesting   case.   Um,   do   you   mind   if   I   quickly   recap   just   the,   the   case   very   quickly   so   that   I   can   ensure   that,   um,   I   got   the   right   context   down?  
+**Interviewer:** For   sure.   Sure.  
+**Candidate:** So   my   understanding   here   is   that   our   client   is   the   head   of   network   for   a   bank   in   Greece   that's   been   around   for   about   75   years.   This   bank   has   been   privatized   fairly   recently,   and   is   a   little   bit   cash   strapped.   Um,   our   client   has   had   the   foresight,   um,   noticing   digital   trends   in   other   countries,   to   go   about,   um,   trying   to   identify   what   their   digital   strategy   should   be   moving   forward,   and   has   engaged   Bain   to   come   in   and   help   with   that.  
+**Interviewer:** (Music)   Yeah,   that's   right.   And   I   think   probably   the   one   thing   I'd   add   to   that   is   just   that   they,   they   currently   have   limited   funds   to   invest   in   a   digital   transformation.  
+**Candidate:** For   sure,   for   sure.  
+**Interviewer:** They   kind   of   want,   want   to   know   how   they   should   approach   that.  
+**Candidate:** Before   I   dive   into   the   case   here,   um,   I'd   love   to   ask   a   couple   clarifying   questions,   if   that's   all   right?  
+**Interviewer:** Sure,   sure.  
+**Candidate:** So   do   we   have   an   understanding   about   how   large   this   particular   bank   is?  
+**Interviewer:** Yeah.   So   we,   we   don't   have   specific   revenue   or   kind   of   lending   book   size   numbers,   but   we   do   know   that   it's   one   of   the   country's   largest   banks.  
+**Candidate:** Okay.   So   really   large   bank   planning   to,   to   evaluate   digital   transformation.   Does   the   client   have   any   particular   goals   or   outcomes   from   this   digital   transformation   that   they'd   like   to   see,   or   timelines?  
+**Interviewer:** No.   I   think   they,   they   don't   have   any   sort   of   specific   metrics,   and   the   timeline   is,   for   them,   is   kind   of   as   soon   as   possible,   but   they,   they   really   want   the   Bain   team's   view   on,   on   how   they   should   think   about   it.  
+**Candidate:** Okay.   That   makes   sense.   And   do   we   know   what   kind   of   spurred   this   interest   in   digital   transformation   outside   of   the,   the   other   countries?   Have   we   seen   that   competitors   in   the   area   have   begun   moving   in   this   direction?  
+**Interviewer:** Yeah.   I   think   it's,   it's   almost   been   kind   of   an   industry-wide   phenomenon,   sort   of   across   countries,   as   you   mentioned.   In   general,   there's   been   a   trend   of   younger   customers   sort   of   transacting   and   using   their   banks   online-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   often   through   kind   of   a   mobile   app,   mobile   banking   approach   first.   So   our   client   has   sort   of   realized   that   that's   likely   where   the   industry   is   going,   and   so   she   just   wants   to   make   sure   that   if   people   are   banking   in   the   future   not   physically   in-branch-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   and   they're   doing   it   all   through   their   phones   or   through   their   desktop,   she   just   wants   to   make   sure   that   they're,   this   bank   is   kind   of   ready,   ready   for   that   strategy.  
+**Candidate:** Makes   sense.   It's   always   good   to   be   prepared.  
+**Interviewer:** The   first   thing   that   Brittney's   done   well   here   is   showcasing   her   business   intuition   by   trying   to   gauge   what   type   of,   what   size   of   client   this   is.   Is   this   a   large   bank   in   Greece?   Is   this   a   smaller   bank?   That's   gonna   be   important   for   how   she   approaches   the   case   later   on.   The   second   thing   she   does   well   here   is   identifying   the,   whether   the   client   has   any   specific   objectives.   I   always   tell   candidates   that   it's   important   to   be   as   specific   as   possible   here.   Is   there   a   quantifiable   target?   Is   there   a   number   in   mind   that   you're   trying   to   solve   for?   Lastly,   she   does   a   good   job   of   getting   helpful   context   on   what   is   going   on   in   the   banking   industry   in   Greece,   uh,   and   amongst   the   bank's   competitors.   Is   digital   transformation   something   that   everyone   else   has   done,   or   is   this   just   something   that   they're   looking   at   initially?  
+**Candidate:** Um,   this   is   wonderful   context.   Um,   do   you   mind   if   I   take   a   minute   or   two   just   to   dive   in,   come   up   with   a   framework,   um,   and   then   we   can   ju-   dive   into   my   approach   on   how   we   could   solve   this   problem?  
+**Interviewer:** For   sure.   Please   take   your   time.  
+**Candidate:** (Music)   (Typing sounds)   Um,   thanks   for   letting   me   take   that   time.   So,   um,   wanted   to   walk   you   through   kind   of   my   high-level   thoughts   on   how   we   could   approach   designing   the   digital   transformation   s-   strategy   for   our   client.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Now,   when   I   think   about   the   strategy,   I'm   really   thinking   about   it   in   terms   of   two   large   buckets.   One,   the   bank   and   its   capabilities   in   executing   upon   the   strategy,   and   then   second   is   taking   the   learnings   from   the   market   to   understand,   like,   what   would   be   the   best   path   forward   given   the   lessons   learned   from   other   entities.  
+**Interviewer:** That   sounds   good.  
+**Candidate:** So   why   don't   I   go   ahead   and   start,   um,   outlining   kind   of   the,   the   high-level   questions   I   would   ask   the   client,   uh,   on   the   banking   side   to   see   wha-   where   we   could   go.   So   there's   five   considerations   I   have   here.   The   first   is   the   physical   footprint   of   the   bank,   really   understanding,   like,   how,   how   large   is   this   bank?   We   know   it's   a,   a   large   institution,   but   understanding   the   geographic   concentration,   the   size   of   the   individual   banks,   the   traffic   that   goes   through   them   day   in   and   day   out-  
+**Interviewer:** Sure.  
+**Candidate:** ...   would   be   important.  
+**Interviewer:** Sure.  
+**Candidate:** Two   is   our   employee's   capabilities   and   talent.   We   know   that   digital   transformation   hasn't   fully   entered   the   Greek   market,   and   because   of   that,   our   employees   might   not   be   digitally   enabled   at   this   point   to   take   on   the   transformation   or   manage   the   day-to-day   operations   should   we   move   forward   with   the   strategy.  
+**Interviewer:** Yeah.  
+**Candidate:** Third   is   customer   demand.   Do   we   have   demand   for   this   type   of   technology   today?   It   sounds   like   we   might   be   growing,   but   might   not   fully   be   there,   and   understanding   that   impact   would   be   hugely   important   in   deciding   on   how   to   execute   on   the   strategy   and   the   timeline.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Fourth   is   gonna   be   IT   infrastructure   and   security....   given   that   the   bank   was   privatized   about   five   years   ago   and   it's   cash-strapped,   it's   a   situation   where   we   would   want   to   make   sure   that   the   technology   is   available   and   implemented   correctly   to   support   what   is   likely   going   to   be   a   larger,   like,   technology   ecosystem.   And   that   we   have   adequate   security   to   support   our   team   and   our   businesses   and   our   partners,   to   make   sure   that   we   wo-   don't   run   into   any   legal   issues   or   security   breaches.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** And   then   lastly,   but   very   importantly,   is   finance.   Do   we   have   the   cash   on   hand   to   move   forward   with   this   strategy?   How   will   a   digital   transformation   strategy   impact   our   cost   of   the   business,   impact   our   revenue   potential   as   well?  
+**Interviewer:** Right.  
+**Candidate:** So,   that's   what   I   think   about,   in   terms   of,   uh,   the   bank   specifically.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** But   then   next,   I'd   like   to   move   over   to   market   and   those,   those   learnings.  
+**Interviewer:** Sure.  
+**Candidate:** There's   two   things   I   would   evaluate   there.   The   first   is   our   competitors.   Do   we   have   any   indicators   telling   us   that   our   competitors   have   begun   investigating   or   even   investing   in   digital   transformation?  
+**Interviewer:** Yeah.  
+**Candidate:** Do   we   know   how   much?   Do   we   know   what   kinds   of   technologies   they're   investing   in,   and   what   successes   they've   had?  
+**Interviewer:** Mm-hmm.  
+**Candidate:** And   then   second   is   the   trends   in   other   countries.   Clearly,   there   is   a   move   in   other   countries   in   this   direction,   given   what   our   client   has   indicated.   Understanding   the   impact   on,   uh,   physical   footbranch,   footprint-  
+**Interviewer:** Sure.  
+**Candidate:** ...   the   traffic,   customer   preferences,   um,   there's   a,   a   lot   we   can   dig   in   there.   But   really   just   starting   at   the   high   level   and   understanding   what's   worked   and   what   hasn't   would   be   a   direction   I   would   want   to   go.  
+**Interviewer:** Yeah.  
+**Candidate:** But   given   the,   that,   our   client's   role,   I   think   specifically,   um,   well,   their   role   and   the   bank's   financial   standing   today,   I'd   be   most   interested   in   understanding   the   finance   side   of   things.  
+**Interviewer:** Yeah.  
+**Candidate:** Um,   if   that   makes   sense,   maybe   we   could   start   digging   in   there?  
+**Interviewer:** Yeah.   I   think   that,   that   sounds   good.   And,   and   nice   job   on   the   framework.   I   think   that's   quite   a   comprehensive   view   of   what   we'd   want   to   look   at.   First   thing   Brittney   does   well   here   is,   she's   very   clear   in   communicating   her   ideas   and   ensuring   that   her   framework   is   incredibly   structured   as   she   talks   me   through   it.   Next,   she   has   quite   exhausted   c-   exhaustive   coverage   of   the   ideas   that   she   wants   to   explore   in   her   framework.   So,   there's   not   much   for   me,   as   the   interviewer,   that   she   missed   that   I'm   expecting   her   to   bring   up.   Lastly,   she   really   shows   off   her   b-   strong   business   acumen,   both   for   internal   drivers   that   affect   the   bank   specifically,   as   well   as   external   factors   that   could   be   impacting   the   overall   Greek   banking   market.   So   yeah,   let,   let's   start,   as   you   said,   um,   kind   of   looking   on   the   financial   side.   Um,   so   we   know   that,   um,   our   client's   team   estimates,   and   it,   that,   to   sort   of   create   this   suite   of   digital   products   to   kick   off   this   transformation   is   going   to   require   an   initial   investment   of   20   million   euros.   And   we   know   that,   um,   all   right,   so   our   client   wants   to   find   out   how   many   branches   she   would   need   to   close   to   break   even   in   two   years.   So,   the   hypothesis   being   that   ban-   bank   branch   closures   is   going   to   help   to   kind   of   cover   the   cost   of   that,   that   20   million   euros.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** She's   also   said   that   in   any   given   city,   no   more   than   20%   of   branches   can   be   closed   to   ensure   a   minimum   footprint.   And   so,   her   team's   provided   some   data   regarding   the   number   of   branches   and   their   associated   expenses.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** So,   if   it's   okay   with   you,   I   might   just,   I'll   kind   of   read   these   off   and   maybe   you   can   kind   of   just   jot   them   down   as   we   go.  
+**Candidate:** Perfect.  
+**Interviewer:** Um,   so   in   our   first   column,   we   have   branch   location.   So,   beneath   that,   we   have   Athens,   uh,   to   the   br-   And   then   we   also   have   other   cities.   Um,   so   there's   basically   10   cities   in   total   in   that   other   bucket.   So   next,   next   column,   we've   got   monthly   rent   per   branch.   So,   we   know   that   for   Athens,   that's   1,500   euros.   And   for   other   cities,   that's   1,000   euros.   And   in   terms   of   number   of   branches,   we   know   that   we   have   100   branches   in   both   Athens   and   in   the   other   cities.   And   then   next,   we   have   number   of   employees   per   branch.   So   that's   15   in   Athens   and   10   in   other   cities.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** And   then   we've   got   the   average   monthly   salary   of   employees,   which   is   2,000   euros   in   Athens   and   1,500   in   other   cities.   And   then   lastly,   we   have   other   monthly   expenses,   which   are   2,000   in   Athens   and   1,500   in   other   cities.   So,   feel   free   to   kind   of   take   some   time   to   sort   of   think   through   that.   So   again-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   sort   of   we   can't   close   more   than   20%   of   branches   in   a   particular   city.   Um,   and   we   think   that   there   will   be   a   kind   of   20   million   euro   initial   investment   to   cover   the   cost   of   this   digital   transformation.  
+**Candidate:** Gotcha.   And   some   quick   observations   as   I   look   at   the   data   here.  
+**Interviewer:** Yeah.  
+**Candidate:** Um,   it   seems   like   the   Athens   branches   perhaps   are   a   little   bit   bigger,   just   because   there's   a   higher   number   of   employees   per   branch.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Maybe   there's   an   increased   competition   for   good   employees,   because   I   do   see   that   the   salary's   a   little   bit   higher   as   well.  
+**Interviewer:** Yeah.  
+**Candidate:** So,   when   I   think   about   branch   closer,   I'm   going   to   be   thinking   with   the   hypothesis   that   perhaps   it's   best   to   start   with   Athens,   because   it's   concentrated   in   one   city,   it's   higher   cost.  
+**Interviewer:** Okay.  
+**Candidate:** So,   I   think   as   I   approach   this   problem   in,   in   formulating   the,   the   way   that   I   would   want   to   close   the   businesses,   I'll   start   there,   and   then   move   on   to-  
+**Interviewer:** Sure.  
+**Candidate:** ...   our   other   category.  
+**Interviewer:** Yeah.   I   think   that   makes   sense.  
+**Candidate:** Um,   give   me   a   minute   f-   And   I'm   going   to   go   ahead   and   draft   a   kind   of   a   high-level   approach   to   getting   to   the,   the   branch   closures.  
+**Interviewer:** Sure.  
+**Candidate:** And   I'll   walk   you   through   my   math   before   I   actually   start   typing.  
+**Interviewer:** That   sounds   good.  
+**Candidate:** I,   I   think...   So   the,   the   approach   here   is   going   to   be   pretty,   pretty   straightforward.   And   I'll,   I'll   walk   you   through   it   live.  
+**Interviewer:** Sure.  
+**Candidate:** Basically,   we   need   to   first   arrive   at,   what   is   the,   um,   savings   per   location,   savings-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   per   location,   um,   monthly.  
+**Interviewer:** Okay.  
+**Candidate:** 'Cause   all   these   numbers   are   on   monthly   values.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** And   then   two   is   going   to   be   annualizing   that.   So,   analyze   savings   per   month.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** And   then   lastly,   what   we're   gonna   need   to   do   both   for   Athens   and   then   for   Greece   is,   determine   the   max   savings   per-...   closures,   foreclosures.  
+**Interviewer:** Okay.  
+**Candidate:** So,   going   through   the   math,   um,   I'll   start   with   Athens   first.   Oh-  
+**Interviewer:** So,   it's-  
+**Candidate:** Does   that   seem   like   an   okay   approach?  
+**Interviewer:** Yeah.   It   does.   May-   maybe   one   question   is,   we,   for,   as,   I   guess,   a   f-   a   fourth   step,   kind   of,   what   would   you   be   contrasting   the,   the   max   savings   per   closures   against?   I   guess,   like,   what   is   the-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   the   sort   of   year-end   target   you're   trying   to   solve   for?  
+**Candidate:** I,   I   get   where   you're   going.   So,   the   savings   that   we're,   we're   targeting   are   20,   20   million   euros   across   two   years.  
+**Interviewer:** Yeah.  
+**Candidate:** Given   that   we're   looking,   in   this   case,   towards   annualized   savings-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   we're   not   gonna   be   looking   at   the   20   million   euro   figure.   We're   gonna   be   looking   and   targeting   towards   the   10   million   euro   figure.  
+**Interviewer:** Mm-hmm.   Yep.   Perfect.  
+**Candidate:** So   with   that   in   mind,   I'll   go   ahead   and   get   started   on   the   math.  
+**Interviewer:** Sure.  
+**Candidate:** So   if   we're   looking   at   savings   per   location,   what   I'm   gonna   do   first   is,   for   Athens,   I'm   going   to   aggregate   all   of   the,   the   monthly   costs-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   so   monthly   rent.   Um,   we're   gonna   add   the   other   expenses   in   there.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** And   then   I'm   also   going   to   im-   multiply   the   number   of   employees   per   branch   by   the   average   monthly   salary.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** And   that   is   gonna   get   me   to   33,500   euro.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** And   apologies,   I'm   an   American-  
+**Interviewer:** D-   d-   yeah,   don't-   don't-  
+**Candidate:** ...   and   euro   is   not   the   default   for   me   (laughs) .  
+**Interviewer:** ...   worry.   Let-   let's   just   pretend   it's   dollars.   We'll   convert   at   the   end.  
+**Candidate:** (laughs)   Um,   so   that   gets   us   to   our   savings   per   location,   and   then   next   I'm   just   gonna   annualize   it   by   multiplying   it   by   12.  
+**Interviewer:** Yeah.  
+**Candidate:** And   then,   um,   I'll   just,   uh,   close   out   the   Athens   group   before   I   move   over   to   the   other   group.   I'm   gonna   take   this   402K-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   and   we   know   that's   for   one   closure.   We   can   actually   close   up   to   20%   of   the   locations.  
+**Interviewer:** Yeah.  
+**Candidate:** We're   gonna   see   the   majority   of   that's   going   to   be   in   Athens   because   it's   a   higher   cost   location.  
+**Interviewer:** Yeah.  
+**Candidate:** 20%   of   100   is   going   to   be   20,   so-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   I'm   gonna   multiply   this   402K-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   by   20   to   get   approximately   eight   million   euro.  
+**Interviewer:** Yep.   And   so   that's   basically   the   upper   threshold   of   how   much   we   could   save   from,   basically   maximized,   or   sorry,   closing   the   most   that   we   could   in   Athens.  
+**Candidate:** Absolutely.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** And   that   brings   us   over   to   our   other   group,   our   other   cities.   Um,   I   know   that   the   client   said   we   could   only   close   a   maximum   of   20%   of   the   locations   in   a   given   city.  
+**Interviewer:** Yeah.  
+**Candidate:** Is   it   okay   in   this   scenario   to   assume   that   other   is,   is   one   city?  
+**Interviewer:** Y-   yeah.   I,   I   think,   um   ...   So   I   think   they've   got,   like,   let's   assume   there's   100   branches   across   a   number   of   cities,   but,   e-   like,   for   the   purposes   of   simplicity,   we   can   basically   say   up   to   20%   of   those   100   branches.  
+**Candidate:** Okay,   perfect.   So   I'm   gonna   go   through   and,   um,   do   the   exact   same   math   here.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** I'm   going   to   determine   the   savings   per   location,   um,   I   adding   the   monthly   rent   to   the,   um,   other   expenses,   and   then   I'm   going   to   also   be   multiplying   the   number   of   employees   by   branch   by   their   monthly   salary.  
+**Interviewer:** Yep.  
+**Candidate:** And   that's   gonna   get   me   to   17,500   euro.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Multiplying   that   by   12   to   get   the   annualized   cost   per   branch.  
+**Interviewer:** Yep.  
+**Candidate:** And   then,   we,   we   know   based   off   of   the   other   numbers   here   that   we   don't   actually   need   to   close   20%   of   the   branches   in   the   other   group.  
+**Interviewer:** H-   how-   how   d-  
+**Candidate:** So-  
+**Interviewer:** Can   I   just   ask   how   you   know   that?  
+**Candidate:** Absolutely.   So,   we   know   that   we   need   to   hit   the   10   million   euro   figure.  
+**Interviewer:** Yeah.  
+**Candidate:** If   we've   already   closed   $8   million   worth   of   branches   in   Athens,   that   leaves   $2   million   that   would   need   to   be   covered   by   this   other   category.  
+**Interviewer:** Yeah.  
+**Candidate:** If   I   were   to   look   at   this   210,   like,   figure   here,   if   I   were   to   multiply   that   by   20-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   that's   gonna   get   me   to,   closer   to   4-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   million   euro   in   savings.   And-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   where   we   don't   have   to-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   um,   I   would   suggest   to   our   client   that   we   don't   close   bank   locations   that   are   used   and   loved   by   customers.  
+**Interviewer:** For   sure.   For   sure.   Okay.   Sorry   to   interrupt.  
+**Candidate:** No,   that   was   perfect.   (laughs)   I   think   we   just   did   the,   the   math   in   my   head   here,   where   we,   we   should   probably   only   close   about   10,   10   locations   in   the   other   cities.   But   just   to   make   sure,   I'm   gonna   go   ahead   and   double   check   that   math-  
+**Interviewer:** Sure.  
+**Candidate:** ...   and   multiply   the   210   by   10,   and   that   does   in   fact   get   us   to   the   closure   figure   we're   looking   for.  
+**Interviewer:** Okay.  
+**Candidate:** Which   is   the   10,   uh,   just   above   the,   the   10   million-  
+**Interviewer:** Right.  
+**Candidate:** ...   euro.  
+**Interviewer:** Okay.   Okay.   So   ...   Yeah,   sorry.   Go   ahead.  
+**Candidate:** As   I   look   at   the   10   million   euro   figure,   this   is   just   the   savings   from   closing   the   location.   I   think   there's   some   other   factors   that   we   would   want   to   consider.  
+**Interviewer:** Right.  
+**Candidate:** Including,   if   we're   gonna   close   locations,   what   are   the   associated   other,   like,   losses   that   we   would   take   into   consideration?  
+**Interviewer:** Okay.  
+**Candidate:** If   there   aren't   these   locations,   and   right   now   we're   primarily   a   physical   branch   based   business-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   I   would   assume   that   we'd   also   lose   customers,   maybe   perhaps   there's   services   that   they   wouldn't   access,   they   would   go   to   other   c-   competitors.  
+**Interviewer:** First   thing   Brittany's   done   really   well   here   is   she's   incredibly   structured   and   neat   in   terms   of   how   she   lays   out   the   math.   This   makes   it   really   easier,   easy   for   the   interviewer   to   follow,   and   also   for   me   to   help   correct   her   if   there   are   any   math   mistakes   or   things   that   she   may   have   set   up   incorrectly.   Secondly,   she's   incredibly   clear   in   how   she   communicates   her   logic   and   how   she's   approaching   the   math   to   the   interviewer.   Finally,   what   I   like   here   is   that   Brittany   really   contextualizes   her   answer.   She   thinks   through   the   10   million   euros   and   whether   there   are   other   factors   that   she   needs   to   consider.   Yeah.  
+**Candidate:** So   perhaps   we   look   at   those   associated   costs   and   see   if   that   10   million   euro   figure   is   gonna   be   sufficient   to   allow   us   to   move   forward   with   the   digital   transformation   strategy.  
+**Interviewer:** Yeah.   Yeah.   I   think   that's   a   great   segue   into   kind   of   my   next   question.   So,   yeah,   as   you   mentioned   that   sort   of   for   each   branch   that   we   close,   we'll   presumably   lose   some   of   the   customers   that   are   going   to   that   branch.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** So,   we,   we   currently   have   three   types   of   customers   at   the   bank.   So   Prime   One,   which   are   businesses.   Prime   Two,   which   are   wealthy   individuals.   And   Standard,   which   are   your   average   customer.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** So   we   want   to   quantify   the   short   term   impact   of   closing   branches   on   our   profitability....   and   I   can   give   you   some,   some   data   points   for   each   of   those   segments.  
+**Candidate:** Yeah,   that'd   be   great.  
+**Interviewer:** So,   yeah.   So,   for,   um,   our   first   row   will   be   revenue   per   customer   per   month   (keyboard clacking) .  
+**Candidate:** Mm-hmm.  
+**Interviewer:** And   we   know   that   for   businesses,   that's   €2,000   (keyboard clacking) ,   for   wealthy   individuals,   that's   400   (keyboard clacking) ,   and   for   standard,   that's   20   (keyboard clacking) .   Next,   we've   got   cost   to   serve   per   customer   per   month   (keyboard clacking) .   And   we   know   that's   1,500   for   businesses   (keyboard clacking) ,   100   for   wealthy,   and   15   for   standard.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** (keyboard clacking)   Next,   we've   got   number   of   customers   (keyboard clacking) ,   and   that's   600   businesses,   50,000   wealthy,   and   one   million   standard   (keyboard clacking) .   Okay.   And   last,   we've   got,   last   we've   got   the   likelihood   of   customers   leaving   if   the   branch   closes.   (keyboard clacking)   So   you   can   just   call   that   churn   if   you   want.  
+**Candidate:** Sure.  
+**Interviewer:** Yeah.   And   that's   40%   for   businesses   (keyboard clacking) ,   50%   for   wealthy,   and   70%   for   standard.  
+**Candidate:** 70%   for   standard.   Okay.  
+**Interviewer:** Yeah.  
+**Candidate:** Cool.   I'm   gonna   just   do   some   quick   formatting.  
+**Interviewer:** Sure.  
+**Candidate:** I   don't   know   what   it   is   about   formatting,   but   it   helps   me   think   better.   (instrumental music)  
+**Interviewer:** Uh,   it's   'cause   you're   an   ex-consultant.  
+**Candidate:** (laughs)  
+**Interviewer:** (laughs)  
+**Candidate:** Once   a   consultant,   always   a   consultant.  
+**Interviewer:** Yeah.  
+**Candidate:** There   we   go   (keyboard clacking) .   All   right.   So   this   is,   this   is   really   interesting   data.   It   seems,   when   I   look   at   the   data,   that,   one,   we   have   a   majority   of   our,   our   customers   are   standard,   and   this   is   going   to   be   the   segment   that   we're   going   to   likely   lose   the   most   with   a   bank   closure.   Um,   but   if   I   look   in   terms   of   profitability,   this   wealthy   segment   seems   like   it's   gonna   be   the   most   profitable.   So   I-  
+**Interviewer:** Um,   base.   Okay,   yeah.  
+**Candidate:** Profitability   in   terms   of   a   percent,   not   in   terms   of   aggregate,   like   dollars   per   customer.  
+**Interviewer:** Um.  
+**Candidate:** If   I   look   here,   this   is   $500-  
+**Interviewer:** Yeah.   Yeah.   For   sure.  
+**Candidate:** This   one   is   300,   but   as   a   percentage,   this   is   75%   profit-  
+**Interviewer:** Sure.   Yeah.  
+**Candidate:** ...   for,   uh,   revenue.  
+**Interviewer:** Yeah.   Yeah.  
+**Candidate:** Yeah.  
+**Interviewer:** For   sure.  
+**Candidate:** 75%   profit.   Well,   cool.   Um,   why   don't   I   take   a   second   here   and   let   me   structure   the   math   to   help   us   arrive   at   what   would   be   our   potential   loss   of   revenue   should   we   move   away   from   these   bank,   these   bank   locations   and   move   towards   the   digital   services   transformation.  
+**Interviewer:** Yeah.   Just   to,   just   to   cla-   um,   make   sure   that   wasn't   missed,   we're   looking   for   profit,   so   what   would   be   the   potential   profit   loss   instead   of   revenue?  
+**Candidate:** Ah.   Yes,   thank   you.   Profit   loss.  
+**Interviewer:** Yeah.  
+**Candidate:** Pardon   my,   my   verbiage   there.  
+**Interviewer:** No   worries.  
+**Candidate:** (paper rustling)   Okay.   So   I   think   for,   for   this   situation,   I   would   approach   the   math   in   a   four-step   process.   I   think   first,   I   would   determine   the,   um,   annualized   profit   per   customer-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   per   segment.  
+**Interviewer:** Yeah.  
+**Candidate:** Next,   I   would   determine   the   annualized   profit   per   segment.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Um,   third,   and   there's   a   couple   different   ways   you   can   go   about   this,   but   third,   I   think   what   I   would   want   to   do   is   determine   first,   like   if   we   were   to   lose   every   single   customer-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   um,   that,   where   a   bank   location   closed,   what   would   that   figure   look   like?   Because   that   is   truly,   like   what   could   potentially   happen-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   if   this   went   sideways.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** So,   um,   max   loss   from   closure.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** And   then,   we   would   calculate   the,   what   we'd   consider   the   more   standard   case,   which   is   given   the   parameters   we've   given,   the   likelihood   of   each   customer   segment   leaving,   how   much   would   we   truly   lose   in   terms   of   profitability   by   closing   these   30   locations?  
+**Interviewer:** Okay.  
+**Candidate:** Um...   (keyboard clacking)   And   I'll   call   that   our   typical   loss   from   closure.  
+**Interviewer:** Sure.  
+**Candidate:** So,   um,   diving   in,   um,   let's   go   ahead   and   determine   the   annualized   profit   per   customer   per   segment.   And   the   way   I   would   go   about   that   is   I   would,   um,   take   revenue,   subtract   out   my   costs-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   and   then   I   would   multiply   that   resulting   value   by   12   to   get   to   that   annualized   figure.  
+**Interviewer:** Yep.   Sounds   good.   (paper rustling)  
+**Candidate:** All   right.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** So   if   I   look   at   each   of   these   three   segments,   it's   kind   of   what   we   would   expect,   where   the   businesses   are   going   to   be   generating   the   most   profit,   followed   by   wealthy,   then   by   standard.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Um,   but   next   we   need   to   figure   out   what   the   concentration   of   profit   is   for   the   bank   today   by   multiplying   the,   um,   profit   per   customer   segment   by,   excuse   me,   profit   per   customer   by   segment   by   the   number   of   customers   to   get   to   that   total   value.  
+**Interviewer:** Yeah.  
+**Candidate:** And,   um,   really   interesting   here,   where   we   see   that   even   though   we   do   serve   businesses   and   they   make   us   more   money   on   a   per,   per   customer   basis,   they're,   since   they're   a   much   smaller   portion   of   our   business,   in   fact,   wealthy   is   going   to   be   where   we   generate   most   of   our,   our   profit.  
+**Interviewer:** Yeah.  
+**Candidate:** And   just   because   I,   because   we   can,   because   we   can,   what   I'm   gonna   do   is   I'm   actually   gonna   add   up   the   sum   of   our   profit   by   segment-  
+**Interviewer:** Sure.  
+**Candidate:** ...   just   so   I   can   understand   what   the   total   profit   is   for   the   bank.  
+**Interviewer:** Yeah.   Okay.  
+**Candidate:** So   we've   made   it   through   step   one   and   two.   Next,   I   wanna   think   about   what   is   the   max   loss   from   closure?  
+**Interviewer:** Okay.  
+**Candidate:** And   if   we   jump   all   the   way   back,   we   can   recall   that   we're   closing   30   locations   out   of   our   200.  
+**Interviewer:** Yeah.  
+**Candidate:** Um,   is   it   okay   to   assume   that   the,   um,   the   wealthy,   the   businesses,   and   the   standard   customer   segments   are   fairly   evenly   distributed-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   across?  
+**Interviewer:** Yeah,   that's   a   good   point.   And   yeah,   let's,   let's   make   that   assumption.
+**Candidate:** Okay.   In   that   case,   if   I   were   to   think   about   what   is   the,   the   max   profitability   loss   we   would   have,   what   I'm   going   to   do   is   I'm   actually   going   to   multiply,   um,   each   of   these   groups   by   15%-  
+**Interviewer:** Okay.  
+**Candidate:** ...   to   give   us   that,   that   max   number.  
+**Interviewer:** And   h-   how   did   you   get   15%?  
+**Candidate:** Absolutely.   So   if   I   take   30,   um,   essentially   30   locations   are   closed,   we   have-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   200.   That's   15%-  
+**Interviewer:** Gotcha.  
+**Candidate:** ...   of   all   locations.  
+**Interviewer:** Cool.  
+**Candidate:** All   right,   so   this   is   our   max   loss.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Maybe   I   should   just...   For   ease   of   looking   at   this,   it's   always   good   to   label   everything   clearly.   So   we   have   max   loss   from   closure-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   and   then   from   that,   let's   go   ahead   and   calculate   what   is   our,   our   typical   loss   of   closure   that   we   would   be...   we   would   likely   experience.  
+**Interviewer:** Sure.  
+**Candidate:** So   with   that,   we   know   that   out   of   everyone   who's   potentially   going   to   leave,   like,   this   is   the   likelihood   of   them   leaving.  
+**Interviewer:** Yeah.  
+**Candidate:** So   I'm   gonna   take   this   number   and   I'm   gonna   multiply   it   by   that   likelihood   of,   of   leaving.  
+**Interviewer:** Yeah.  
+**Candidate:** Um,   but   I   need   to...   Yeah,   let's   go   ahead   and   do   that.   All   right.  
+**Interviewer:** Okay.  
+**Candidate:** I'm   gonna   add   this   up.   I   love   it   when   Google   Sheets   (laughs)   does   it   for   me   automatically,   and   I   get   20   million   euros,   which   is   a   significant   sum.   If   we   recall,   by   closing   the   30   branches,   we   actually   were   essentially   taking   on   a   cost   avoidance   of   10   million   euros.  
+**Interviewer:** Correct.  
+**Candidate:** But   what   that   means   is   not   only   are   we...   we   have   that   cost   avoidance,   that   is   entirely   offset   and   then   and   some   by   the   loss   of   profitability.   So-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   we're   losing   money.   So   I'm   gonna   kind   of   say   a   hypothesis   here   where   I   just...   I   don't   think   that   this   is   a   feasible   strategy   for   the   bank   at   this   time,   given   the,   the   financial   loss   that   we   would   experience.  
+**Interviewer:** Yeah.  
+**Candidate:** One   thing   that   would   be   interesting   to   consider   is   we've   talked   about   the   loss   of   business   from   the   physical   branches-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   but   what   we've   not   talked   about   is,   what   is   the   incremental   revenue   you'd   experience   from   this   new   digital   transformation,   from   the   products-  
+**Interviewer:** Got   it.  
+**Candidate:** ...   that   we   would   potentially   be   launching?  
+**Interviewer:** First   thing   I   like   that   Brittney's   done   here   is   that   she's   taken   a   really   easy   step-by-step   approach   t-   for   setting   up   her   map,   and   that   makes   it   a   lot   easier   for   the   interviewer   to   follow.   Second   thing   she's   done   well   is   she's   tied   back   her   final   answer   to   the   other   calculations   that   we   did   throughout   the   case.   This   helps   her   put   it   into   context   and   figure   out   how   it   ties   back   to   previous   insights   that   she's   generated   to   think   through   what's   the   overall   impact   on   her   emerging   hypothesis   and   the   overall   case.   Lastly,   I   really   like   Brittney's   tactic   here   of   introducing   a   hypothesis.   In   general,   being   hypothesis-driven   is   a   great   way   to   approach   cases.   It   helps   you   to   start   formulating   potential   answers   early   on,   and   helps   you   narrow   down   the   list   of   criteria   that   could   be   driving   your   answer.   Right.  
+**Candidate:** So   something   to   keep   in   mind   as   we   evaluate   the   strategy.  
+**Interviewer:** Yeah,   I   think   that's,   that's   a   really   good   call-out.   And,   and   you're   right,   that   basically   this   implies   that   our   annual   profit   lost   or   plo-   profit   reduction   of   20   million   would   more   than   sort   of   surpass   the   cost   savings   of   branch   closures.   So   I   th-   I   think   I   agree   with   your   hypothesis   at   this   point,   that   doesn't   look   like   it's   the   right   strategy   for   us   to   pursue.   But   maybe,   I   mean,   we've,   we've   kind   of   going   back...   thinking   back   about   your   framework,   we've   only   looked   at   sort   of   financial   impact   thus   far.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** So   maybe   as   kind   of   one   last   step,   you   can   take   a   moment   and   brainstorm   what   might   be   some   other   sort   of   considerations   that   you   might   want   to   think   about,   I   guess   pros   or   con-   pros   and   cons   of   this,   this   potential   approach   towards   digital   transformation   for   the   bank?  
+**Candidate:** Absolutely.   Um,   do   you   mind   if   I   take   a   moment   just   to   jot   down-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   a   few   of   my   thoughts?  
+**Interviewer:** For   sure.  
+**Candidate:** So   off   the   cuff,   I   can   kind   of   think   of   five   considerations   that   we   would   wanna   keep   in   mind,   um,   if   we   were   to   move   forward   with   a   digital   transformation   strategy.   The   first   is   security.   If   we're   going   to   be   hosting   more   information   online   and   making   that   available   to   customers,   ensuring   that   their   data   is   protected   and   that   they   have   a   safe   way   to   access   their   funds,   um,   and,   and   perform   digital   transactions   wouldn't   be   incredibly   important.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** The   second   one   is   public   perception.   If   we   do   end   up   closing   these   bank   locations,   there   could   be   some   public   outcry,   backlash,   loss   of,   um,   brand   reputation.   Those   are   things   that   can   be   quite   difficult   to   recover,   so   understanding   what   the   repercussions   would   be   there   would   be   incredibly   important.  
+**Interviewer:** Sure.  
+**Candidate:** Third   is   employee   sentiment.   Not   only   on   the   side   of   the   bank   closures,   but   also   if   we   move   forward   the   digital   transformation   strategy,   their   job   roles   are   likely   to   change   quite   a   bit.   They're   gonna   move   from   the   day-to-day   handling   of   monetary   transactions   to   perhaps,   um,   taking   on   more   questions   related   to   how   to   use   an   application,   how   to   navigate   through   this   new   digital   ecosystem,   and   that's   gonna   come   with,   um,   a   little   bit   of   pain   and   a   little   bit   of   change   management.  
+**Interviewer:** Yeah.  
+**Candidate:** Third,   um,   which   we   didn't   talk   about   before   is   the   cost   of   employee   severance,   the   timing   to   actually   close   the   banks.   This   could   be   a   very   long   and   lengthy   drawn-out   process.   I'm   not   as   familiar   with   the   Grecian,   um,   kind   of   e-   employee   economics-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   but   I   do   know   in   many   European   countries,   it   is   a   incredibly   expensive   and   lengthy,   um,   lengthy   thing   to   do   to-  
+**Interviewer:** Dismiss   employees.  
+**Candidate:** ...   reduce   locations-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   and,   and   lay   some   people   off.  
+**Interviewer:** Yeah.  
+**Candidate:** Um,   and   incredibly   hard   thing   to   do   as   well.  
+**Interviewer:** Yeah.  
+**Candidate:** And   then   lastly   is   the   demand   triggers.   Right   now,   it   doesn't   seem   like   there   is   a   very   strong   demand   for   these   digital   tools,   this   digital   infrastructure,   but   understanding,   like,   what   are   those,   those   triggers   that   we   should   evaluate   in   the   market   that   say,   like,   "Hey,   we   should,   we   should   come   back   in.   We   should   reevaluate   our   digital   transformation   strategy."  
+**Interviewer:** Yeah.  
+**Candidate:** "Maybe   there's   a   way   to   do   it   without   closing   these,   these   banks.   Maybe   there's   a   way   that   we   can   gain   n-   new   customers   or   retain   our   existing   customers   in...   by   going   about   this,   um,   digital   strategy   down   the   line."
+**Interviewer:** The   first   thing   I   like   that   she's   done   here   is   that   she   has   brainstormed   quite   a   broad   list   of   potential   considerations   that   could   be   relevant   when,   when   branches   are   closed.   So,   thinking   through   how   this   might   impact   the   business   financially,   how   it   could   affect   their   employee   morale   and   sentiment,   uh,   its   perception   in   the   market   among   customers.   These   are   all,   all   great   ideas   that   she's   got.   Second   thing   she's   done   well   is   that   she's   provided   additional   context   to   help   the   interviewer   understand   the   exact   ideas   that   she's   written   down   on   paper.   So,   she   elaborates,   as   you   notice,   on,   on   the   points   that   she   comes   up   with.   Lastly,   she's   really   thought   through   case-specific   drivers.   So,   when   she   talks   about   potential   layoffs   or   employee   redundancies,   she   even   member-   mentions   the   fact   that   Greek   employment   labor   laws   might   differ.   Uh,   so   that's   something   that   we   would   need   to   look   into   as   a   client.   Okay.   Yeah,   I   think,   I   think   that's   a   good   list.   Um,   great.   So,   why   don't   you   maybe...   I   think   kind   of   the   client   is   pressing   us   for,   for   an   update,   so   why   don't   you   maybe   take   a   few   moments   and   pull   a   recommendation   together,   and   then   you   can   kind   of   talk   me   through   that?  
+**Candidate:** Absolutely.   (instrumental music)   Thanks   for   letting   me   take   that   time.   Um,   if   I   were   to   have   a   conversation   with   a   client   around   would...   "Is   this   digital   tra-   strategy   something   that   we   should   move   forward   with   at   this   time?"   I   would   strongly   recommend   that   we   should   not   move   forward   with   this   at   this   time,   and   there's   really   two   reasons   for   that.   First   is   the   overwhelming   cost   to   do   this.   It   looks   like   not   only   would   we   have   to   close,   potentially   close   some   locations,   but   we're   still   not   gonna   make   that   money   back,   and   it   doesn't   seem   like   we   have   a   strong   path   to   fund   the   digital   transformation   strategy   at   this   time.   Second   is   it   doesn't   seem   like   there   are   any   both   in-country   trends   or   even   close   competitors   in   Greece   that   are   moving   towards   this   digital   strategy.   So,   there   isn't   a   pressing   need   for   us   to   move   in   this   direction,   especially   given   that   cost.  
+**Interviewer:** Yeah.  
+**Candidate:** If   I   were   to   recommend   some   next   steps,   there   would   be   two   steps   I   would   recommend.   One   would   be   forecasting   the   impact   of   revenue   of   these   digital   products,   either   in   terms   of   cus-   retaining   customers,   getting   net   new   customers,   or   having   these   be   additional   products   that   we're   able   to   sell   to   customers   to   generate   more   revenue.   And   then   the   second   thing   I'd   do   is   I   would   determine   what   the   reevaluation   criteria   would   be.   Do   we   wait   until   our   competitors   start   moving   into   the   digital   transformation   space?   Do   we   wait   until,   um,   till   it's   fully   rolled   out   across   the   country?   Are   we   a   first   mover?   Are   we   a   late   mover?   Determining   what   we   want   that   positioning   to   be   is   also   gonna   be   important   for   our   client.  
+**Interviewer:** First   piece   of   feedback   is   that   Brittany's   taken   a   really   clear   recommendation   that   directly   answers   the   client's   question.   This   is   important   because   so   often   candidates   fail   to   actually   stick   to   a   clear   recommendation.   Remember,   you   always   need   to   be   either   recommending   that   the   client   proceed   or   recommending   that   they   do   not   proceed.   So,   really   make   sure   that   your,   your   final   recommendation   clearly   addresses   the   overall   objective   that   the   client   has.   Second,   what   I   like   is   that   she's   really   grounded   her   recommendation   in   the   key   numbers   and   the   calculations   from   her   case   and   brought   in   how   some   of   the   financial   calculations   that   she   did   will   actually   impact   the,   the   overall   answer   to   the   client.   Lastly,   what   I   think   is   really   important   because   so   often   in   the   recommendation   section   you   are   running   out   of   time   as   a   candidate.   Brittany   is...   She's   succinct,   she's   structured   in   her   answer,   and   she's   right   to   the   point,   so   it,   uh,   it   comes   across   as   a   very   crisp,   clear   recommendation.   Great.   Thanks,   Brittany.   Nice   job   on   that.   Just   wanted   to   see   how,   how   did   you   think   that   went?   Do   you   have   any   sort   of   reflections?   Um,   yeah,   how   did   it   feel   overall?  
+**Candidate:** Um,   overall,   it   felt   pretty   good.   If   I   were   to,   um,   kind   of   put   my   case   coaching   hat   on   and   think   about,   "What   could   I   have   done   to   improve   this?"   there's   a   couple   of   things.   Um,   one   is   when   I   was   going   about   structuring,   like,   creative,   uh,   the   creativity   questions,   I   think   I   would   have   liked   to   make   it   a   little   bit   more   messy.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** There's   a   trade-off   as   a   candidate   of   do   you   want   to   move   into   the   creativity   questions   very   quickly   and   have   it   slightly   less   structured-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   or   do   you   want   to   take   that   moment   and,   like,   put   down   a   really   strong   structure?   In   this   case,   because   we   spent   a   little   bit   more   time   on   the   math   section,   I   decided   to   abbreviate   that.  
+**Interviewer:** Yeah.  
+**Candidate:** Um,   the   second   thing   that   I   think   is   gonna   be,   uh,   I   would   do   a   little   bit   differently   is   around   the   math   section.   Generally,   since   you're   not   gonna   have   access   to,   like,   a,   a   calculator   or   a,   um,   a   Google   Sheet   like   we   were   so   lucky   to   have   access   to   today,   um,   figuring   out   the   balance   between   walking   your   interviewer   through   your   math-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   and   the   actual   details   that   they   can   follow   along   and   say,   and   provide   corrective   action   if   you,   you   kind   of   veer,   veer   elsewhere,   I   think,   um,   I   think   I   could   have   been   a   little   bit   more   polished   around   that.  
+**Interviewer:** Okay.  
+**Candidate:** And   then   third,   just   natural   tendency,   I   tend   to   be   a   little   bit   more   verbose.   So,   um,   I   would   suggest   for   a   candidate   to   be   a   little   bit   more   succinct   into   their   answers   because   you're   not   evaluated   just   on   cracking   the   case,   but   also   stylistically,   d-   did   you   go   about   the   most   efficient   route   to   craft   the   case?  
+**Interviewer:** Sure.   Yeah,   I,   I,   I   don't   think   you   were   verbose,   so   I,   I   don't   think   I   would   agree   with   the   last   point.   Um,   I   say   that   as   someone   who   is   verbose   on...   especially   when   I'm   solving   cases   as   a   candidate.   So,   don't   be   too   hard   on   yourself.   But   yeah,   great   job.   I   thought   it   was,   it   was   really   good,   um,   and   agree   with   your   other   feedback   points   as   well.   (instrumental music)  
+**Candidate:** Hello,   I   really   hope   you   found   that   useful.   If   you   did,   you   can   like   and   subscribe.   And   why   not   come   on   igotanoffer.com   to   see   more   videos   like   this,   study   case   interview   frameworks,   and   read   company   guides?   There,   you   can   also   practice   for   your   upcoming   case   interviews   with   coaches   from   McKinsey,   BCG,   Bain,   and   other   consulting   firms.   Thank   you   and   good   luck   with   your   upcoming   interviews.   (instrumental music)

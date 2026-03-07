@@ -1,0 +1,212 @@
+Case: Revenue Business Case
+Case Type: Profitability
+Firm: BCG
+Channel: iGotAnOffer: Consulting
+URL: https://www.youtube.com/watch?v=dYN3iBB5ACM
+============================================================
+
+**Interviewer:** Welcome   to   this   BCG   mock   interview   video.   I'm   about   to   start   interviewing   Gero,   who   spent   close   to   five   years   at   BCG   and   has   run   more   than   200   interviews   and   interview   coaching   sessions.   When   he   was   at   BCG,   Gero   also   trained   new   interviewers,   and   so   he   knows   exactly   what   the   firm   is   looking   for   in   candidates.   So   if   you're   preparing   for   BCG   or   for   case   interviews   in   general,   you're   in   the   right   place.   Hi,   Gero.   Do   you   want   to   introduce   yourself   before   we   get   started?  
+**Candidate:** Yeah,   sure.   Thanks   very   much   for   having   me,   Max.   I'm   honored   to   be   here.   I   just   left   BCG   in   December,   so   quite   recently.   And   at   BCG,   I   was   quite   heavily   engaged   in   internal   coaching   and   training,   and   of   course   recruiting.   And   now   having   made   that   my   full-time   profession,   I   really   enjoy   teaching   candidates   how   to   truly   think   like   a   consultant   and   to   attack   different   kinds   of   problems   in   a   structured   way.   So   I'm   happy   that   this   video   will   help   our   candidates   with   that,   and   I'm   eager   to   get   started   with   the   case.  
+**Interviewer:** Cool.   Let's   go.   All   right.   So,   um,   your   friend   is   an   inventor,   and   he,   uh,   he   has   invented   a,   a   machine   for   textile   manufacturing.   And   so   his,   uh,   his   machine   basically   takes,   uh,   recycled   textile   fibers   and   turns   them   into   yarn.   And,   um,   he's   launched   his   machine   in   the   UK   market,   uh,   for   the   first   time   about   a   year   ago,   and   it's   doing   less   well   than   he   was   expecting.   He's,   he's   selling   me-   less   machine   than,   than   he   was   initially   expecting.   So   he   gives   you   a   call   and   asks   you   to   help   him   figure   out   what's   going   on   and,   and   to   turn   things   around.  
+**Candidate:** Okay.   Thank   you   very   much.   That's   an   interesting   case.   I   would   like   to   quickly,   um,   quickly   go   over   what   I   understood   to   make   sure   I   got   everything   right   here.  
+**Interviewer:** Okay.  
+**Candidate:** Cool.   So,   um,   I   mean,   first   of   all,   it's   interesting.   Our   friend,   uh,   a-   apparently   is,   um...   He's   an   inventor,   and   I   understood-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   he   has,   he   has   invented   a   machine,   um,   for,   for   textile   manufacturing.   Um,   so   producing   clothes   essentially.   Um,   but-  
+**Interviewer:** Yep.  
+**Candidate:** ...   the   machine   essentially   takes   fibers   and,   and   create   yarn   out   of   it,   and   like...   Okay.  
+**Interviewer:** Yep.  
+**Candidate:** Like,   like   cotton   fibers   and   so   on.   Recycled   fibers   apparently.   And   I   understood   he's   on   the   UK   market   now   for   one   year,   and   a-   apparently   has   sold   less   machines   than   expected   and   wants   us   to   really   find   out   why   and,   and   what   he's   supposed   to   do,   right?  
+**Interviewer:** Yeah.  
+**Candidate:** Okay,   cool.   Interesting.   I'd,   I'd   like   to   ask,   uh,   perhaps   a   couple   of,   of   questions   to,   um-  
+**Interviewer:** Yeah,   go   on.  
+**Candidate:** ...   to   shed   some   additional   light   on   that.  
+**Interviewer:** Yeah.  
+**Candidate:** Cool.   Okay.   So   the   first   one   would   be,   given   the   friend   said   that   he   sold   less   machines   than,   than   he   expected,   uh-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   could   he   perhaps   quantify   that   for   us?   Uh,   like   how   many   less   did   he   sell   and,   and   what   did   he   actually   hope   to   sell?  
+**Interviewer:** Sure.   So   he   was   expecting   to   sell   a   hundred   machines   in   the   first   year.  
+**Candidate:** Okay.  
+**Interviewer:** And,   uh,   he   ended   up   selling   75.  
+**Candidate:** Okay.   He   sold   75,   so   a   solid   25%   less   co-   compared   to,   compared   to   what-  
+**Interviewer:** That's   right.   Yeah.  
+**Candidate:** ...   he   wanted   to   sell.  
+**Interviewer:** Yeah.  
+**Candidate:** Okay.   So   that,   that   sounds...   Doesn't   sound   too   good.   Um,   in   terms   of   his   overall   business,   did   I   understand   that   right   that   his   clients   are   the   textile   manufacturers?   So   it's   not,   not   the   end   consumers   buying   textiles,   but   it's   B2B   and   he   sells   to   other   kind   of   producers?  
+**Interviewer:** Yeah,   that's,   that's   right.   So   he   sells,   uh,   the   machines   to   textile   manufacturers.   So   your   friend   is   not   a   textile   manufacturer   h-   himself.   He,   he   just   sells   the   machines   to,   to   these   people   who,   um,   who   produce   clothing,   uh,   using,   I   guess,   a   mix   of,   uh,   recycled   textile   fibers   and,   and   normal   fibers   as   well.  
+**Candidate:** Okay.   Got   it.   Okay.   Thanks   very   much.   It's,   that's   good   to   understand.   Um,   just   coming   back   to,   to   the   first   question   I   asked   regarding   the   estimate   where   we   figured   out,   okay,   25%   less   than,   than   what   he   had   hoped   for   that   he   sold   to   these   textile   manufacturers,   do   we   have   any   idea   if   that   estimate,   that   expectation   i-   is   essentially   realistic   or   is   that   also   something   that   we   could   challenge?  
+**Interviewer:** Yeah,   so   that,   that's   a   good   question.   So   that's   one   thing   your,   uh,   your   friend   wondered   about,   and   he,   he   talked   to   a,   a   few,   like,   experts   in   the   field   and   they   all   said   that   a   hundred   machines   was,   like,   realistic   and   that   doesn't   seem-  
+**Candidate:** Okay.  
+**Interviewer:** ...   to   be   the   problem   basically.   Like,   we   believe   that   selling   a   hundred   machines   is   possible.   He   should   be   able   to   do   that.  
+**Candidate:** Okay.   Thanks.   I   understood   the   experts   say   it's   a   realistic,   it's   a   realistic   target.  
+**Interviewer:** Yeah.  
+**Candidate:** And   there   is   actually   a   problem   besides   just   perhaps,   uh,   an   over-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   optimism   here.  
+**Interviewer:** Yeah.  
+**Candidate:** Okay.   Yeah,   that,   that's   very   interesting.   And   this   is   the   last,   last   question   I,   I   have   on   that   is,   um...   I   mean,   it's   obviously   a   friend   of   ours   so   we   can   talk   with   him   openly.   He   has   probably   also   tried   to   understand   the   problem.   So   does   he   have   any   hypotheses   on,   on   what   the   problem   could   actually   be   here?  
+**Interviewer:** Not   really.   Uh,   his   only   hypothesis   was   that   maybe   he   was   being   over-optimistic,   but   that   doesn't   seem   to   be   the   case,   as   I,   as   I   just   said,   so...  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um,   yeah.   So   that's   kind   of   why   he,   uh,   he   reached   out   to   you.   He's   out   of   ideas.  
+**Candidate:** Okay.   Understood.   Okay,   then   let's,   let's   help   him   with   that.  
+**Interviewer:** The   first   point   is   that   Gero   quantified   that   sales   were   down   by   25%   by   asking   me   questions,   which   was   great.   When   a   metric   is   too   high   or   too   low,   you   should   always   try   to   quantify   by   how   much.   This   will   help   you   understand   how   big   the   problem   you're   trying   to   solve   is.   Second,   Gero   clarified   if   the   sales   target   of   a   hundred   machines   was   realistic   or   not.   This   was   an   important   question   because   if   it   had   not   been   realistic,   then   Gero   would   have   needed   to   spend   time   figuring   out   a   realistic   sales   target.   By   doing   that,   he   was   therefore   able   to   narrow   the   scope   of   the   case   considerably   and   to   reduce   its   complexity.   Third,   Gero   clarified   if   the   company   was   B2B   or   B2C   to   ensure   he   understood   the   situation   correctly.   Again,   you   should   do   this   whenever   in   doubt.  
+**Candidate:** Um,   I   think   I   understood   now   what   I,   what   I   need   to   understand   on,   on   our   friend's   situation.   Um...  
+**Interviewer:** Okay.
+**Candidate:** I   would   like   to   take   perhaps   one   or   two   minutes   just   to,   uh,   structure   my   a-   approach   for   that   question,   if   that's   fine   for   you.  
+**Interviewer:** Yeah,   go   for   it.  
+**Candidate:** (instrumental music) .   So,   essentially,   I   would   like   to   really   understand   the   problem   that   our   friend   faces   here,   and   then   go   to   solution.   And   I   would   do   that   in   a   kind   of   three-step   process.   I   would   really   first   try   to   kind   of   understand   the   problem.   What's   really   the   problem   behind   the   25%   less   sales   that   he,   that   he   saw?   Um-  
+**Interviewer:** Okay.  
+**Candidate:** And   once   we   have   understood   that   problem,   I   would   go   to   step   two   and,   um,   see   how   can   we   actually   address   this   problem.   Is   there   some   root   cause   that   we   can   address   in   order   to,   to,   to   bring   the   sales   up   to   the   expected   value?   Or   potentially,   it   might   also   be   the   case   that   we   cannot   fix   the   problem   and   need   to   come   up   with   some   other   levers   to   help   our   friend   achieve   this   goal   of   getting   100   sold,   um-  
+**Interviewer:** Okay.  
+**Candidate:** ...   per   annum.   And   then   the   th-   third   step   would   be   just   to,   to   check   if   what   we   developed   here   actually   works.   Um-  
+**Interviewer:** Okay.  
+**Candidate:** And,   uh,   to   start   with,   I   would   like   to   take   a   bit   of   a   deep   dive   into   the   step   one   here,   um,   looking   at   the   reasons   why,   actually,   he   sold   less   than   expected.   And   I   think   there   are   two   general   causes   that   could   be   at   play   here.   Um,   o-   one   cause   is-  
+**Interviewer:** Okay.  
+**Candidate:** ...   that,   that,   uh,   perhaps   the,   um,   the,   the   inventor   or   the   friend   was   not   able   to   supply   enough   machines,   um,   to   the   client.   So   it's   something   with   production   on   the   supply   side.   Um,   uh,   and   the   other,   uh,   principal   reason   is,   uh,   potentially   the   customer   has   just   ordered   less,   uh,   machines-  
+**Interviewer:** Okay.  
+**Candidate:** ...   than   what   we   had   expected   them   to   order.  
+**Interviewer:** Okay.  
+**Candidate:** Now,   g-   going   into   the   first   part,   I   think   with   the   supply-related   reasons,   it   might   be   that,   that   either   some   input   parts   that   the   machine   needs   to   be   assembled   are   lacking,   perhaps   there's   supply   chain   problems,   or   it   might   be   that-  
+**Interviewer:** Okay.  
+**Candidate:** ...   the   production   of   the   machine   is   somehow   slow,   the   assembly   doesn't   work   as   intended.  
+**Interviewer:** Okay.  
+**Candidate:** Or   perhaps   the   distribution   is,   is   a   bottleneck,   so   we   don't   actually   get   the   machine   to   the,   uh,   customers,   which   are   the   textile   manufacturers   because   perhaps   it's   bulky   or   some,   some   transport-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   related   issue   here.  
+**Interviewer:** Okay.  
+**Candidate:** And   going   to   the,   to   the   other   principal   reason,   uh,   that   the   customer   has   ordered   less,   I   a-   think   here's,   again,   three   potential   drivers   at   play.   So   first   driver   would   be   perhaps   the,   the   clients   are   not   aware.   Here,   we   really   need   to   find   out-  
+**Interviewer:** Okay.  
+**Candidate:** ...   do   the   textile   manufacturers   even   know   about   our   solution.   And   the   second   potential   driver   is   perhaps   it's   legally   forbidden   becau-   because   perhaps,   uh,   permits   also   are   lacking.   He   doesn't,   he   doesn't   really...   he's   not   allowed   to   sell   the   machine   everywhere   he   wants,   essentially.  
+**Interviewer:** Okay.  
+**Candidate:** And   then   the   third   potential   driver   would   be,   okay,   yeah,   just   the   customers,   they   were   allowed   to   buy   the   machine   and   they   did   know   about   the   machine,   but   they   decided   not   to   buy   it   anyway,   so   they   just   didn't   want   it.  
+**Interviewer:** Okay.  
+**Candidate:** Right?   And   then   here,   I   would   kind   of   dive   a   bit   deeper   and,   uh,   identify   two   principal   drivers   for   that   as   well.   Uh,   either   the   value   add   provided   by   the   machine   is   just   too   low,   which   might   be   related-  
+**Interviewer:** Okay.  
+**Candidate:** ...   either   to   the   output   quality   which   is   too   low   or   just-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   the,   the   cost   advantage   because   you   said   it   should   kind   of   provide   an   efficiency   advantage,   right,   in   a   production.   And   so   that   might   also   be   a   problem.   And   the,   the   other,   uh,   reason   might   be   that   the   value   add   is   just   not,   um,   realizable   for   some,   for   some   reason.   For   example,   they   cannot   integrate   the   machine,   uh,   into   the   production   process,   uh,   the   textile   manufacturers.   And   so   this   would   be   the   problems   that   I   would   like   to   look   at,   and   I   really   first   would   like   to   understand,   um,   if   the   product   actually   kind   of   works   as   promised   and   returns   the   output   and   the   efficiency   advantage.   Um,   because   for   a   machine   that   is   supposed   to,   uh,   boost   efficiency,   that's   really   a   must.  
+**Interviewer:** First,   Gero   built   an   issue   tree   with   four   levels,   and   therefore   quite   a   lot   of   depth.   Candidates   who   take   this   case   often   create   quite   shallow   frameworks,   and   so   the   fact   that   he   went   quite   deep   was   a   very   positive   thing   for   me.   When   building   issue   trees,   you   should   always   try   to   go   as   deep   as   you   can.   Second,   Gero   didn't   forget   about   the   supply   side   of   the   framework   here.   Again,   this   is   something   that   candidates   who   take   this   case   often   forget   to   mention.   But   in   reality,   the,   the   problem   could   be   that   the   inventor   does   not   manage   to   manufacture   enough   machines   or   to   deliver   enough   of   them   for   some   reason.   Finally,   Gero   made   it   clear   that   finding   the   root   cause   of   the   problem   is   just   step   one   in   the   process,   and   that   we   also   need   to   fix   the   problem.   Again,   this   is   something   that   very   typically   gets   missed,   uh,   in   this   case,   and   so   it   was   great   that   he   pointed   it   out.  
+**Candidate:** And   I'd   like   to   ask   if   we   have   any   th-   data,   like   test   results   or   perhaps   client,   uh,   complaints   also   on   that.  
+**Interviewer:** Yeah,   so   that's,   that's   a   good,   uh,   that's   a   good   question,   but   yeah,   it's   not   really   a,   it's   not   really   a   problem.   Like,   the,   the   machine   works   as   expected   and   it   kind   of   like   delivers,   uh,   what   the,   the   efficiency   gains   that   the,   the   clients   are   looking   for.   But   you,   you   mentioned,   um-  
+**Candidate:** Okay.  
+**Interviewer:** ...   one   of   the   things   you   mentioned   when   you   looked   at   your   last   point   was   that,   um,   the   clients   might   have   difficulties,   uh,   integrating   the,   the   machines,   um,   in   their,   in   their   workflow,   let's   say.   Um-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** I   think   that's   an   interesting   point.   So   can   you,   can   you   develop   that   a   bit   more?   What,   you   know,   what   could   be   some   of   the,   what,   what   could   be   some   of   the   problems   there?  
+**Candidate:** Okay.   In-   interesting.   Uh,   so   problem   with   integrations,   um,   like   in,   in   the   setup.   It's   fine   if   I   take   10,   15   seconds   to   think   about   that?  
+**Interviewer:** Yeah,   that's   fine.   Yeah.  
+**Candidate:** Okay.   (instrumental music)   Okay.   Max,   I   think   there,   there   are   three   reasons   that   could   drive   that   problem   here.   Um,   like-  
+**Interviewer:** Okay.  
+**Candidate:** ...   I,   I   think   first   is   related   to   the   change   of   setup,   seconds   to   the   inputs   needed,   and   third   to   the   skills   needed,   um,   for   integrating,   um,   the   machine-  
+**Interviewer:** Okay.  
+**Candidate:** ...   into   the   production.   Um,   uh,   for   the   first   point   on,   on   the   setup,   it   might   be   that   the   setup   change   is   not   easily   possible   because   kind   of   the,   for   example,   the   whole   production   setup   is,   is   really   oriented   towards   the   old   machine.   Um,   so   all-  
+**Interviewer:** Okay.  
+**Candidate:** ...   spare   parts,   logistics,   et   cetera,   uh,   that,   that   might   be   a   problem   that   you   can't   easily,   uh,   shift   it.   Um......   on   the   inputs   needed,   perhaps   the   new   machine   just   needs   more   or   totally   different   inputs   from   the   last   machine   that   we   cannot   really   provide.   So   o-one   example   would   be,   like,   it   needs   much   more   electricity,   it   needs   some,   uh,   computing   power   perhaps   if   it   is   especially,   um,   advanced,   perhaps   some   cooling   system   and   so   on.   So   here   we,   we   would   really   need   to   kind   of   investigate   about   the   product   characteristics   and   see   how   it   is   different   from,   from   the   other   machine.   Um,   and   regarding   skills,   here   again,   because   it's   a   new   machine,   perhaps   they   cannot   really   use   it   because   they   don't   have   the   skills   to   do   it.   And   here,   I   essentially   see   two   options.   Uh,   either   they   were   not   able   to   use   the   machine   at   all,   so   they   didn't   have   the   skills   to,   to   utilize   it,   and   the,   uh,   the   other   option   would   be,   um,   that   essentially,   they   made   the   machine   run   but   it   didn't   really   work   productively,   so   there   was   a   lot   of   waste,   for   example,   due   to   the   lack   of   skilled,   skilled,   uh,   labor   and,   and   general   skills.   So   these   would   be   the   three   reasons   which   I   would   kind   of,   uh,   further   investigate   by   asking   clients   and   looking   at   what   they   reported   and   where   issues   might   lie.  
+**Interviewer:** Yeah,   so   the,   the,   the   last   point   is   a,   is   a   good   point.   So,   I   mean,   all   three   points   are   good   points,   but   your,   your   friend   has   kind   of   noticed   that,   uh,   the   machine   needs,   uh,   employees   to   be   trained   a   lot   more   than   he   was   expecting,   so.  
+**Candidate:** Okay.  
+**Interviewer:** Um,   to   be   able   to   operate   the   machine,   um,   employees   of   the   clients   n-   need   extensive   training,   and   that's   been   a,   a   bit   of   a   barrier   to,   to   adoption   in   the   different   conversations   that,   that   he's   had.  
+**Candidate:** Okay.  
+**Interviewer:** And   so   he,   he   thinks   he   can   fix   this.   Uh,   he   thinks   he   can   make   the   machine   a   lot   easier   to   operate.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Uh,   but   that   would   cost   him,   uh,   one   million   euros.  
+**Candidate:** Okay.  
+**Interviewer:** And,   um,   he   only   wants   to   do   this   if   he   can,   uh,   pay   back   that   investment   over   the   course   of,   um,   of   his   lifetime.  
+**Candidate:** Okay.  
+**Interviewer:** And   so   every   time,   you   know,   he   sells   a   machine,   he   makes   10,000   euros   and   his   profit   margin   is,   uh,   is   15%   on,   uh,   on   each   unit.  
+**Candidate:** Oh,   so   the   10,000   is   the   price   essentially-  
+**Interviewer:** Yes.  
+**Candidate:** ...   that,   that,   that   he   makes   from   it?  
+**Interviewer:** Yeah.  
+**Candidate:** Okay.  
+**Interviewer:** And   so   he   wants   you   to   help   him   figure   out   whether,   you   know,   fixing   that   problem   is   really   worth   it   or   not,   um,   and   if   he,   you   know,   if,   if   it   works   for   him   financially.  
+**Candidate:** Okay,   thank   you.   Um,   I'm   happy   to   help   the,   the   friend   with   that   decision.   Just   so   I   understand,   s-   so,   so   simplifying   the   product   will,   will   fix   the   problem,   you   said.  
+**Interviewer:** Yeah.  
+**Candidate:** Does   that   mean   that   he   can   actually   now   sell,   like,   100   machines   a   year,   uh,   as   opposed   to   the   75   machines,   so   it   fixes   100%   of   the   problem,   so   to   say?  
+**Interviewer:** Yeah,   you   can   make   that   assumption.   Yeah.  
+**Candidate:** Okay.   Um,   okay.   So   now   he   sells   the   100   machines   and...   Sorry.   (laughs)   So,   okay.   And   the...   He   wants   to   have   it   in   his   lifetime,   right?   So   he   wants   to   see,   uh,   see   the   investment   pay   off   i-   in   his   lifetime   as   a   criterion.   (instrumental music)   And   so   the   way-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   I   would   approach   this   problem   is   really   to,   um,   uh,   look   at   the   investment,   which   is,   uh,   you   said   one   million.  
+**Interviewer:** Yeah,   that's   right.  
+**Candidate:** Um...   Okay.   It's,   it's   one   million   and,   uh,   then   essentially   I,   I   would   calculate   how   much   additional   profit   he   would   make   from   this   change   by   kind   of-  
+**Interviewer:** Yep.  
+**Candidate:** ...   increasing,   uh,   the   numbers   um,   and,   and   see   how   many   years   it   would   take,   um,   until   it,   it   breaks   even.   And   in   the   end,   compare   it   to,   uh,   kind   of   his   remaining   expected,   uh,   life   expectancy,   uh,   to   see   if   according   to   his   specific   criterion   of   having   it   pay   off   in   his   lifetime,   uh,   this   would   make   sense,   if,   if   you   agree.  
+**Interviewer:** Yeah.  
+**Candidate:** Okay.   So   n-   now   that   I   said   that,   perhaps   it   would   also   be   good   to   just   start   with   that.   Um,   do   we   know   how...   Well,   I   figure   we   can   just   ask   him.   Uh,   can   he   maybe   tell   us,   um,   how   old   he   is?  
+**Interviewer:** Yeah,   you   can,   you   can   assume   he's   50   years   old.  
+**Candidate:** Okay,   so   50,   50   years   old   friend.   Um,   from   that,   I   would   like   to   briefly   assess   how,   how   long   he   essentially   has   expectedly   to   live.   I   think   average   life   expectancy   is   about   80   years   of,   for   males.   So   I,   I   would   probably   say   that   it   should   be   a-   about   30   years   if   we   don't   have   any   specific   information   on,   like,   his   health   and   so   on.   So   we   should   be   able   to   calculate   with   30   years,   if   you   agree.  
+**Interviewer:** Yeah,   that's   fine.  
+**Candidate:** Okay.   And   so,   so   we   do   know   the   one   million   needs   to   kind   of   be   paid   off   in   terms   of   additional   profits   in   30   years.   So   we   can   now   look   at   the   additional   profit   each   year.   Um,   and   we   do   know   that   we   have   an   additional   kind   of,   uh,   sales   number   each   year,   or   additional   machines   sold   each   year.  
+**Interviewer:** Yeah.  
+**Candidate:** Because   now   we   have   75   and   it   would   be   100   because   we   fixed   the   problem,   so   it   should   be   25   new   machines,   um,   per   year   that   are   sold.  
+**Interviewer:** Yeah.  
+**Candidate:** And   the   margin   is,   um,   is   50%   so   I   would   say   the   profit   from   each   machine,   given   that   it   doesn't   change   with   the   additional,   uh,   machines   sold,   um,   should   be   15%   out   of   the   1,000,   uh,   price   that,   that   you   mentioned.   So   it   should   be,   um...   should   actually...   oh,   wait.   Let   me   quickly   check   my   notes   again.   Okay.   Uh,   you   said   it   makes   a   10,000,   uh,   10,000   price   per   machine,   right?   And   not   1,000.  
+**Interviewer:** Yeah.  
+**Candidate:** I   would   like   to   correct   myself   then   that   the   price   is,   price   is,   uh,   is   10,000   so   the   profit   per   machine   should   be   the   margin   of,   um,   of   15%,   so   .15   times   10,000.   So   it   should   be   1,500   euros   per   machine   that   he   makes.   And,   and   from   that,   we   should   be   able   to   look   at   the   profits,   uh,   per   year   that   he   makes   additionally. (instrumental music)   Which   should   be   the   profit,   uh,   by   machine   times   the   number   of   machines   that   he   sells   more   per   year.   So   we,   we   come   up   with,   uh,   37,500,   um,   as,   as   additional   profit   that   he   does   each   year.   And   so   it's   quite   easy   to   look   at   the   payoff   period,   so   to   say,   by   comparing   that   to   the   investment.   So   if   we   divide   th-   the   profit   per   year   by   the   investment...   Okay,   it   doesn't   really   give   us   a   good,   um...   Perhaps   it's   a   formatting   issue.   Oh,   sorry.   I   think   I   did   it   the   wrong   way.   It's   precisely   the   wrong   way.   If   we   want   the   number   of   years,   we   have   to   look   the   investment   through   the,   through   the   profit   per   annum.   Okay,   and   we   got   26.7   years   roughly,   so   I   think   we   can   conclude   that   that   is   below   the   30   years   that   we,   uh,   that   we   agreed   on   as   an   estimate   for   the   remaining   years   of   the   life   of   our   friend.   Um,   so   just   based   on   that   calculation,   uh,   uh,   we   could   conclude   that   it   makes   sense   to   simplify   the   machine   by   investing   a   million   euros.   And   especially   going   forward   because,   uh,   for   example,   his   successors,   his   children   perhaps,   will   also   benefit   from   that.   So   on,   in   the   long   term,   I   would   say   the   investment   makes,   makes   even   more   sense.  
+**Interviewer:** Okay,   cool.   Your,   your   friend   is   also   wondering   about,   you   know,   um,   how   much   profit   he's,   uh,   he's   currently,   um,   he's   currently   making.   Uh,   can   you   help   him   with   that?  
+**Candidate:** Okay.   Okay,   so   kind   of   the,   the   profit   he   currently   makes   i-   in   the   bad   year,   so   to   say,   right?   In,   in   the   first   year   that,   that   he   had.  
+**Interviewer:** Yeah.  
+**Candidate:** Okay.   (instrumental music)   Um,   well,   looking   at,   at   the   numbers,   I,   I   think   he   sold   75   machines,   uh,   in,   in   the   first   year.  
+**Interviewer:** Yeah.  
+**Candidate:** And,   uh,   the   price   is   probably   the   one   that   we   also   know   about,   right?   And   the   margin.   Because   where   else,   where   else   would   he   know   it   from?   If   we,   if   we   can   assume   that.   So   the   price   is   still   10,000-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   and   the   margin   is   still   15%.   So   in-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   in   that   case,   since,   since   we   know   what   the   result   would   be   for   25,   um,   kind   of   additional   machines,   the   profit   impact   of   that,   we   would   now   just   have   to   times   the   profit   impact   we   already   calculated   by   3.   Because   now   instead   of   having   it   for   25   machines   in   addition,   we   have,   have   it   for   75   machines   in   total.   So   it   would   just   be,   um,   3   or   75   divided   by   22,   um,   times   the   profit   annually   that   we   calculated   here.  
+**Interviewer:** Yeah.  
+**Candidate:** So   in   conclusion,   he   makes   112,500,   um,   a-   as   a   profit   in,   in   the   first   year   that   he   had.  
+**Interviewer:** Yeah,   that   makes   sense.  
+**Candidate:** Okay.   So   he   can   already,   uh,   live   off   it,   um,   even   though   he   has   some   problems,   I   would   say.  
+**Interviewer:** Yeah.   Cool.   (whoosh)   Gero   was   comfortable   calculating   the   payback   time   for   the   investment.   Theoretically,   payback   time   is   a   financial   metric   that   you   don't   necessarily   need   to   know   about   as   a   candidate.   But   in   practice,   if   you   know   the   main   financial   metrics   like   payback   time   and,   um,   ROI,   it'll   save   you   time.   That's   because   you   won't   have   to   ask   your   interviewer   what   they   are   and   how   to   calculate   them.   And   instead,   you'll   be   able   to   use   the   time   to   actually   solve   the   case.   Second,   Gero   was   quick   to   spot   that   to   calculate   total   current   profits   for   75   machines,   all   you   need   to   do   is   to   multiply   the   profits   for   25   machines   by   3.   This   is   something   that,   again,   a   lot   of   candidates   miss,   so   you   should   always   try   to   look   for   shortcuts   to   save   time   in   calculations   in   your   case   interviews.   Finally,   Gero   laid   out   what   approach   he   was   going   to   take   before   making   any   calculations.   This   way,   he   gave   me   the   chance   to   jump   in   to   say   if   I   agreed   with   his   approach   or   not.   This   is   something   you   should   do   too,   as   it   prevents   situations   where   your   interviewer   interrupts   you   in   the   middle   of   calculations   when   they   realize   you're   not   doing   what   they   want   you   to   do.   He's   also   thought   about   introducing   his,   uh,   machine   in   other   countries   than,   than   the   UK   because   he   holds   the   patent   for   the,   for   the   machine.   So   how   could   he   do   that?  
+**Candidate:** Okay.   So   he   wants   to   know,   um,   how,   like,   the   how   of   how   to   go   to   other   countries   given   that   he   has   the   legal   right   already   in   his   hands,   right?  
+**Interviewer:** Yeah.  
+**Candidate:** Okay,   cool.   I,   I'd   like   to   take   10   seconds,   if   that's   fine   for   you,   Max?  
+**Interviewer:** Yeah.   Go   on.   (instrumental music)  
+**Candidate:** Okay.   So   to   maybe   give   him   some   initial   perspective,   um,   on,   on   that-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   uh,   on   that   question,   I   think   essentially   our   friend   has,   has   three   opportunities   here,   three,   three   options   to,   to   go   about   that.  
+**Interviewer:** Yeah.  
+**Candidate:** Um,   so   I   think   the   first   one   would   be   he   could   essentially   do   it   on   his   own.   Um,   so   he   could   kind   of,   uh,   go   to   other   countries,   um,   open   up   own   production   capacities   there   as   he   has   previously   in   the   UK.   Um...  
+**Interviewer:** Yeah.  
+**Candidate:** And   I,   I   think   that   doesn't   sound   too   promising   from   my   perspective,   um,   because   he   would   need   a   lot   of   country-specific   expertise.   Uh,   he   would   need   sufficient   management   expertise,   which   we   would   have   to   kind   of   make   sure   that   he   has   it   as   an   inventor.  
+**Interviewer:** Okay.  
+**Candidate:** Um,   and,   and   also   it   would   mean,   like,   hard   work,   uh,   that   he   would   have   to   put   in   as   a,   uh,   kind   of   CEO   of   an   expanding   company,   so   to   say.  
+**Interviewer:** Okay.  
+**Candidate:** And   so,   so   that's   why   the   two   other   options   I   identified   are,   I   think,   a   bit   more   a-   attractive   on,   on,   at   first   glance.   So   the   second   option   would   be   to   do   a   licensing   deal.   So   he-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   would   go   to   some   company   that   can   actually   manufacture   these   machines   in   another   country   and   tell   them,   "Okay,   uh,   you   might   produce   them,   but   when   you..."   Either   for   each   produced   or   for   each   sold   machine,   they   would   have   to   pay   him   some   license   fee.
+**Interviewer:** Okay.  
+**Candidate:** And,   and   I   think   with   that,   yes,   he   can   go   to   many   countries   and   he   has   a   high   upside   be-   because   the   money   he   gains   scales   with   the   amount   of   machines,   um,   that   are   sold-  
+**Interviewer:** Okay.  
+**Candidate:** ...   based   on   the   license.   And   com-   compared   to   that,   the,   the   other   alternative   that's   a   bit   less   risky   is   just   selling   his,   his   patent.   Um,   so   you-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   can   just   kind   of   sell   it   off   and   someone   can   do   whatever   he   wants   from   it.   Um,   so   he   just   pays   a   fixed   price   and   he   can   either   produce   one   or   a   million   machines   from   it.  
+**Interviewer:** Yeah.  
+**Candidate:** So   while   not   really   scaling   with,   um,   with   the   amount   of   machines   sold,   the   upside   here   is   that   he   would   essentially,   given   that   he   finds   an   interested   buyer,   never   have   to   work   again,   so   to   say.   So   if   we-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   think   that   paying   off   in   his   lifetime   as,   as   he   suggested   we,   we   look   at   in   the   other   calculation   about,   um,   about   the   investment   and   the   simplification   paying   off,   then   I   think   selling   a   patent   might   be,   um,   uh,   might   be   an   interesting   way.   But   we   would   have   to   check   whether   a   licensing   deal   is   closer   to   his   interest   given   that   it   has,   has   some   more   upside   potential.  
+**Interviewer:** Okay.   That   makes   sense.   (air whooshing)   Gero   took   the   time   to   create   a   mini   framework   and   to   group   his   ideas   into   a   logical   structure.   This   is   something   that   a   lot   of   candidates   don't   do   for   brainstorming   questions.   Almost   everyone   does   it   for   framework   questions,   but   you   can   also   do   it   for   brainstorming   questions,   and   I   would   encourage   you   to   do   so.   Gero   also   took   the   time   to   explain   which   of   the   options   he   thought   would   be   the   best   one.   Again,   a   common   mistake   here   is   to   just   list   ideas   without   really   discussing   the   one   that's   most   likely   to   act.   (air whooshing)   So,   um,   your   friend   gives   you   a   call   and   wants   your   final   recommendation   on   all   this.   Wha-   what   would   you   tell   him?  
+**Candidate:** Okay.   So   it's,   it's   a   final,   a,   a   final   recommendation   as   conclusion   to   our   case.   I   understand.  
+**Interviewer:** Yeah.  
+**Candidate:** Cool.   Okay.   I   would   like   to   tell   him   that   I   would   like   15   seconds   to   think   about   it   before   I-   (laughs)  
+**Interviewer:** (laughs)   Cool.  
+**Candidate:** Okay.  
+**Interviewer:** Your   friend   agrees.  
+**Candidate:** Cool.   Okay.   (upbeat music)   Okay.   Um,   so   all   in   all,   I   would   like   to   tell   my   friend   that   he   should   really   invest   the   €1   million   in   a   simplification,   uh,   process-  
+**Interviewer:** Okay.  
+**Candidate:** ...   uh,   for   the   machine,   uh,   to   simplify   it   substantially,   um,   for   three   reasons.   Uh,   first   of   all-  
+**Interviewer:** Okay.  
+**Candidate:** ...   we   clearly   identified   the   complexity   of   the   machine   as   kind   of   driving   the   lack   of   sales   in   the   first   year.   So   because   it   was   really   kind   of   hard   to   use   skill-wise   for   the   clients.  
+**Interviewer:** Okay.  
+**Candidate:** Um,   uh,   secondly,   I,   I   think   we   c-   he   has   reason   to   believe   his   forecast   of   100,   um,   of   100   machines   sold.   Because   we   found   the   problem,   we   know   that   we   can   specifically   quantify   the   upside,   which   is   selling   25   machines   more,   um-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   per,   per   year,   which   will   pay   off   in,   in   less   than   30   years.   So   in   less   than   his   lifetime.   And   the   third   point   would   be   that   now   that   he   has   brought   up   to   the   table   that   he   might   expand   in   other   countries,   he   might   run   into   the   problem   over   there   as   well.   Um,   so   essentially   this   also   addresses   this   expansion.   So   regarding   next   steps,   I   wo-   I   would   really   encourage   him   to   kind   of   draft   a   specific   plan   on   how   to   implement,   um,   the   simplification   of   the   machine,   how   quickly,   um,   he   is   able   to,   to   pull   it   off.   Um,   and   also   plan   on   how   he,   um,   how   he   can   make   sure   that   he   enters   the   other   markets,   um,   in   a   licensing   deal   or   pays   off   the   patent,   um,   only   after-  
+**Interviewer:** Okay.  
+**Candidate:** ...   having   made   that   simplification   to   make   sure   that's   reflected   in   the   value   he   gets,   uh,   from   either   of   these   options.   And,   and   risk-wise,   I   would   say   I'd   really   look   at   if   the   simplification   that   he's   able   to   make   is   enough   for   all   countries,   because   he   has   now,   uh,   introduced   the   machine   in   the   UK,   which   already   has   quite   skilled,   um,   companies   and,   and,   and   laborers.   Um,   so   he   would   need   to   make   sure   the   machine   is   sufficiently   simplified   to   make   it   work,   for   example,   um,   in,   in,   uh,   more   further   away   countries   that   have   perhaps   a   less   skilled   workforce   on   average.  
+**Interviewer:** Cool.   That   makes   sense.   Well   done,   Gero.   (laughs)  
+**Candidate:** Cool.   (laughs)  
+**Interviewer:** (air whooshing)   First,   Gero's   recommendation   was   very   structured.   He   stated   his   recommendation   first,   and   then   he   gave   three   supporting   arguments,   which   is   always   what   you   should   try   to   do   in   a   case   if   you   can.   And   finally,   Gero   also   highlighted   next   steps   and   risks   in   his   recommendation,   which   once   again   you   should   always   do   if   possible   at   the   end   of   case   interviews.  
+**Candidate:** (upbeat music)   Yeah.   Thank   you,   Max.   That   was   fun.  
+**Interviewer:** Yeah?  
+**Candidate:** Yeah.   Yeah.  
+**Interviewer:** Okay.   Awesome.   I   think   you   did   well.   Great.   Well,   thanks   for,   uh,   you   know,   taking   the   time   to,   um,   to   work   through   this   with   me   and,   um,   yeah.   Um,   we'll   see   you   in,   uh,   in   the   next   video.   Thanks   everyone.   Bye-bye.  
+**Candidate:** Great.   Bye,   everyone.  
+**Interviewer:** Hello.   I   really   hope   you   found   that   useful.   If   you   did,   you   can   like   and   subscribe.   And   why   not   come   on   igotanoffer.com   to   see   more   videos   like   this,   study   case   interview   frameworks,   and   read   company   guides?   There   you   can   also   practice   for   your   upcoming   case   interviews   with   coaches   from   McKinsey,   BCG,   Bain,   and   other   consulting   firms.   Thank   you   and   good   luck   with   your   upcoming   interviews.

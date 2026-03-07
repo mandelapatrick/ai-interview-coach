@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 
-export type AvatarProvider = "heygen" | "anam";
+export type AvatarProvider = "heygen" | "anam" | "livekit";
 
 interface VideoLobbyProps {
   onJoin: (stream: MediaStream, avatarProvider: AvatarProvider) => void;
@@ -23,7 +23,7 @@ export default function VideoLobby({ onJoin, onBack }: VideoLobbyProps) {
   const [microphones, setMicrophones] = useState<MediaDeviceInfo[]>([]);
   const [selectedCamera, setSelectedCamera] = useState<string>("");
   const [selectedMicrophone, setSelectedMicrophone] = useState<string>("");
-  const [selectedAvatarProvider, setSelectedAvatarProvider] = useState<AvatarProvider>("anam");
+  const [selectedAvatarProvider, setSelectedAvatarProvider] = useState<AvatarProvider>("livekit");
   const [permissionError, setPermissionError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -284,6 +284,25 @@ export default function VideoLobby({ onJoin, onBack }: VideoLobbyProps) {
               <ChevronDownIcon className="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-gray-400 pointer-events-none" />
             </div>
           </div>
+
+          {/* Avatar Provider Selector — only visible in development */}
+          {process.env.NODE_ENV === "development" && (
+            <div className="flex items-center justify-center gap-2 mt-3 w-full">
+              {(["livekit", "anam", "heygen"] as AvatarProvider[]).map((provider) => (
+                <button
+                  key={provider}
+                  onClick={() => setSelectedAvatarProvider(provider)}
+                  className={`px-4 py-1.5 text-xs font-medium rounded-full border transition-colors ${
+                    selectedAvatarProvider === provider
+                      ? "bg-[#d4af37] text-white border-[#d4af37]"
+                      : "bg-transparent text-gray-500 border-gray-300 hover:bg-gray-50"
+                  }`}
+                >
+                  {provider === "livekit" ? "LiveKit" : provider === "anam" ? "Anam" : "HeyGen"}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Right side - Join CTA */}

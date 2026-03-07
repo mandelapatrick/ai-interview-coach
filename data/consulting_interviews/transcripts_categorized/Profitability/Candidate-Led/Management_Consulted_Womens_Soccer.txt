@@ -1,0 +1,351 @@
+Case: Women's Soccer
+Case Type: Profitability
+Firm: Kearney
+Channel: Management Consulted
+URL: https://www.youtube.com/watch?v=wti4Gjdg9JQ
+============================================================
+
+**Interviewer:** (instrumental music) .   Arden,   as   Nicholas   was   saying,   you   know,   it's   a   journey   to   learn   how   to   case,   and   so   I   want   to   start   by   saying   that   wherever   you   are   in   the   journey,   you   know,   you're   on   your   way,   and   I   know   that   it   takes   a   lot   of   preparation   to   do   well,   um,   in   these   t-   sorts   of   interviews   with,   with   many   of   the   top   firms,   um,   including   Kearney.   So   I'm   excited   to,   to   take   you   through   a   case   today,   Nicholas.   Um,   in   the   spirit   of,   uh,   the   Women's   World   Cup   going   on   right   now,   I'm   a   big-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   sports   fan,   um,   so   this   is   not   a   Kearney   case,   but   rather   one   that,   that   I   wrote   myself,   um,   about   a   soccer   nonprofit.   So   we'll   dive   right   in.   Um,   but   just   a   couple   of   things.   You   know,   we're,   we're   gonna   have   fun   today,   and,   and   hopefully   the,   the   group   on   the   call   will   have   fun   along   with   us,   all   right?  
+**Candidate:** Certainly.  
+**Interviewer:** All   righty,   cool.   So   our   client   is   Ligas   Femeninas.   Uh,   we're   gonna   call   them   LF   today.   Uh,   they   are   a   nonprofit   soccer   league   for   women   in   Peru,   and   the   founder,   uh,   Alex,   set   out   to   create   a   space   for   women   to   play   recreational   soccer,   which   didn't,   uh,   exist   anywhere   really   prior   to   LF.   And   their   mission   is   to   provide   a   safe   space,   uh,   for   women   to   play   sports,   and   as   I   mentioned,   the   focus   is   currently   soccer.   So   LF   has   been   really   successful   with   revenue   generation   in   its   first   few   years,   uh,   but   they've   come   to   us   today   with   a   twofold   ask.   Uh,   the   first   is   that   they   are   looking   to   increase   their   annual   revenue   by   25%   to   achieve   their   growth   goals   in   the   next   year.   The   second   piece   is   that   they're   also   interested   in   hearing   from   you,   Nicholas,   about   how   they   can   really   maximize   their   mission,   um,   and,   you   know,   just   creative   ideas   for   how   to   bring   that   to   life.   So   how   do   you   recommend   that   they   achieve   that   two-pronged   goal?  
+**Candidate:** Uh,   certainly.   First   of   all,   I   wanna   say   I'm   very   excited   for   this   case.   Coming   from   Colombia,   uh-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   soccer   is   a   big   thing,   so   I'm   very   excited   for   this.   Uh,   now   would   you   mind   if   I,   um,   give   you   a   quick   recap   of   the   case   to   make   sure   that   I   got   everything   and   all   of   the   information   necessary?  
+**Interviewer:** Absolutely.  
+**Candidate:** Awesome.   So   our   client   here   is   LF,   Ligas   Femeninas-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   uh,   who   is,   uh,   a   nonprofit   located   in   Peru,   and   they   are   a   soccer   league.   Um,   they,   their   mission   was   essentially   to   create   a   safe   space   for,   uh,   women   in   recreational   soccer.   Uh,   they   were   quite   successful   in   their   revenue   generation   in   the   first   few   years,   and   now   they,   um,   have   hired   Kearney   two,   for   two   specific   goals,   which   were   first,   increase,   um,   their   annual   revenue   by   25%   to   achieve   the   goal   next   year,   and   the   second   thing,   just   maximize   their   mission   through   creative   ideas.   Does,   does   that   seem   like   a   fair,   uh,   recap   for   you?  
+**Interviewer:** That's   exactly   right.  
+**Candidate:** Sounds   awesome.   So   I   do   have,   uh,   several   clarifying   questions   that   I   would   like   to   ask-  
+**Interviewer:** Sure.  
+**Candidate:** ...   if   you   don't   mind.  
+**Interviewer:** Yeah.  
+**Candidate:** Um,   certainly.   So,   um,   my   first   clarifying   question   is,   um,   so   the   timeline,   just   to   clarify-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   timeline   would   be   to   achieve   this   goal   of   25...   Of   increasing   revenues   by   25%,   uh,   in   the   next   year.   So   we   have   a   time   limit   of   about   a   year?  
+**Interviewer:** Yes.   So   we're,   uh,   making   quick   moves   here   (laughs) .  
+**Candidate:** That   sounds   great.   That's   awesome.   Um,   the   second   question   that   I   have   deals   with   the,   uh,   um,   I   guess   not   business   model   because   it's   not   generating   profit,   but   the   way   they   operate.   So   you-  
+**Interviewer:** Sure.  
+**Candidate:** ...   mentioned   that   they   provided   spaces   for   recreational   soccer.   Is   that   still   the   case   or   have   they   moved   on   to,   uh,   other   ventures   or   just   professional   soccer   or,   or   any   other   ventures   like   that?  
+**Interviewer:** Yeah,   absolutely.   Great   question.   So,   um,   they   currently   have   two   kind   of   main   sort   of   channels   for   soccer.   The   first,   um,   is   what   we   call   regular   leagues,   so   that   is   including,   um,   leagues   for   individuals,   you   know,   just   like   social   sports   in,   you   know,   cities   in   the   US.   It   also   includes   academies   for   girls   to   play   soccer,   um,   kind   of   growing   up,   right?   So   adults   and   children.   And   then   the   second   is   what   we   call   special   leagues.   So   this   is   more   of   a   corporate-focused   thing.   So,   you   know,   if   a   company   wanted   to   have   a   team,   uh,   they   could   do   that.   Does   that   make   sense?  
+**Candidate:** Yeah,   it   does   make   sense.  
+**Interviewer:** Perfect.  
+**Candidate:** So   three   different,   uh,   channels,   I   guess.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Uh,   one   for   adults,   one   for   children-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   and   one   for   companies.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Um,   sounds   awesome,   and   I-  
+**Interviewer:** Oh,   u-   uh,   sorry,   sorry.   Let   me   just   quick   clarify.   The   first   two   are   kind   of   in   one.  
+**Candidate:** Oh,   the   first   four   in   one.  
+**Interviewer:** Yeah.   Yeah,   and   then-  
+**Candidate:** Sounds   good.  
+**Interviewer:** ...   the   s-   the   third   is   correct.   Yeah.   Thank   you   for   clarifying   that.  
+**Candidate:** Yeah,   not   a   problem.   And   I   have   one   final   clarifying   question,   which   was-  
+**Interviewer:** Certainly.  
+**Candidate:** ...   in   terms   of   geography,   so   you   mentioned   that   they   were   located   in   Peru.   Um,   is   that   s-   is   that   still   going   to   be   the   same   in   this   case,   or   are   they   looking   into   expanding,   or   have   they   expanded   into   other   countries,   other   regions?  
+**Interviewer:** For   purposes   of   today,   um,   we   can   stick   to   Peru,   but   I   appreciate   the   dream   big   perspective   there   (laughs) .  
+**Candidate:** (laughs) .   Yeah,   great.   Uh,   awesome.   I   think   I   have   all   the   information   I   need   for   now,   so   would   you   mind   if   I   take   a   moment   to   structure   my   thoughts?  
+**Interviewer:** Absolutely.  
+**Candidate:** Thank   you.   Well,   okay,   great.   So   I   think   I   have   a   structure   ready   for   you.   So,   um,   there   are   four   different   categories   that   I   would   like   to   explore   here.  
+**Interviewer:** Great.  
+**Candidate:** Uh,   these   four   categories   are   first,   um,   the   price   at   which   our   players   are,   are   paying   or   the,   the   total   amount   that   they're   spending.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** The   second   category   would   be   the   quantity,   um,   of,   uh,   for   instance,   uh,   entries   to   our,   uh,   ligas,   to   our   leagues   here,   and   more   s-   well,   I   will   get   into   more   details   later.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** The   third   category,   uh,   would   be   our   other   leagues,   uh,   they're   a-   a-   acting   as   competitors.  
+**Interviewer:** Hmm.  
+**Candidate:** The   fourth   category   would   be,   um,   Ligas   Femeninas   in   itself   as   a,   uh,   liga,   as   a,   well,   as   a   league   or   as   a   company,   in   this   case,   a   nonprofit.   I   would   like   to   learn   more   about   them.   So   going   back   to   the   first   category   that   I   had,   I   would   be   very   interested   in   learning   more   about   the   pricing   strategy   that   they   have   been   implemented.   Uh-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** More   specifically,   I   would   be   interested   in,   um,   knowing   the   prices   of   entries   to   these   leagues,   uh,   through-...   uh,   for   instance,   through   the   different   segments   that   we   have   i-   identified,   such   as,   um,   both...   Well,   the   two   main   segments   or   two   main   channels,   which   are   the,   um,   adults   and   children,   and   the   companies   as   well.   I   would   be   interested   if,   uh,   also   if   we   are   segmenting,   um,   by,   um,   segment   in   this   case,   uh,   our   prices,   um,   if   we're   charging-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   for   instance,   lower   for,   for   children   in   the   aca-   in   the   academy   or   higher   for,   for   adults.   Um,   now,   the   second   category   that   I   would   like   to   explore,   which   I   mentioned   was   quantity.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** First   of   all,   I   would   like   to   know,   um,   how   many,   uh,   children   we   have   in   the   academies,   how   many   adults   are   playing   in   the   recreational   leagues,   and   how   many   companies   we   have   been   able   to,   uh,   get   to   play   in   our   leagues.   And   with   that,   how   many   players   within   those   companies   as   well.   I   fe-   I   believe   that   it   would   give   us   a   very   important   insight   for   later   on   in   this   case.   Um,   and,   uh,   um,   yeah,   I   think   that   will   be   for   my   second   category.   Uh,   for   my   third   category,   which   was   competitors,   I'm   very   interested   in   knowing   if   whether,   uh,   there   are   other   leagues,   perhaps   regional   or   local   leagues,   that   are   also   nearby,   perhaps   that,   uh,   our   customers   or   our   players   are   going   to,   uh,   whether,   um,   these   players   are   also   going   to   these,   uh,   competitors   simultaneously   as   with   us.   That   was   my   case   when   I   was   in   high   school,   I   used   to   go   to   two   different   leagues.   Um,   or   perhaps   they   just   choose   one   league.   Um,   and   I   would   also   like   to...   I'm   very   interested   in   knowing   the   differentiating   factor   of   other   competitors.   Now,   moving   on   to   my   fourth   and   final   category,   I'm   very   interested   in   Ligas   Femeninas   as   a   company   itself   versus   a   nonprofit.   First   of   all,   I   would   like   to   know,   uh,   their   marketing   challenge.   Um,   more   specifically,   how   are   they   advertising   per   segment,   um,   through   our   different   segments   of   adults,   children   and   companies?   The   second   thing   that   I   would   be   interested   within   the   same   category,   uh,   would   be   our   operational   costs   in   this   case.   So   for   instance,   I'm   very   interested   in   learning,   um,   the   hourly   rates   that   we're   paying   to   referees.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** I   understand   that   when   I   was   playing   soccer   in   leagues,   that   was   one   of   the   main   things.   Um,   I   would   also   be   interested   if   we   have   any   volunteers,   um,   if   these   referees   are   acting   as   volunteers   or   not,   I'm   also   interested   in   the   maintenance   costs   of   just   maintaining   the,   the,   the   soccer   fields.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** I   understand   it   involves   a   lot.   Um,   and   als-   I'm   also   interested   with   that   of   some   certain   fixed   costs   that   go   along   with   that,   for   instance,   utilities,   how   much   it   costs   us   to   run   these   facilities,   um,   et   cetera.   And,   um,   I   believe   those   would   be   all   of   my   four   categories.   So   with   that   being   said,   uh,   first   I   would   like   to   explore   the   first   category   that   I   mentioned,   which   was,   uh,   the   price   of   our   entries,   uh,   or   how   much   the-   these   segments   are   spending.   Do   we   have   any   information   on   that?  
+**Interviewer:** Yeah,   absolutely.   Let   me   just   share   my   screen.  
+**Candidate:** Great.   Yes,   I'm   able   to   see   it   here.  
+**Interviewer:** Fabulous.  
+**Candidate:** Awesome.   Okay,   would   you   mind   if   I   take   a   moment   to   analyze   this   graph   here-  
+**Interviewer:** Sure.  
+**Candidate:** ...   of   this   exhibit?   Thank   you.   Okay,   sounds   great.   So   it   seems   like   we   have   two   different   categories   of   very   important   information.   The   first   one   would   be   the   revenue   distributed   by,   uh,   the   different   revenue   streams   that   we   have,   which   in   this   case-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   are   going   to   be   the   regular   leagues   of,   um,   kids   and   adults   and   the   special   leagues   and   other   funding.   And   for   the   other,   uh,   part   of   this   exhibit   we   see,   I   see   that   we   have   the   projections.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Um,   I'm   assuming   it   would   be   for,   for   this   year.   Does   that   seem...   Or   2022   in   this   case?  
+**Interviewer:** Uh,   yes.   Well,   it's,   uh,   what   we   expect   to   be   at   the   year   end,   I   suppose   is   a   good   way   to   think   about   it.  
+**Candidate:** Okay.   At   the   year   end   of,   of   2020.   Okay,   that,   that   makes   sense.  
+**Interviewer:** Yeah.   Yeah.  
+**Candidate:** Awesome.   Um,   great.   And   I...   It's   very   interesting   that,   as   you   mentioned,   I   believe   in   this,   this   case,   looking   at   the   financial   of   the   revenue   streams   that   we   have-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   we   are   seeing   an   overall   increase   in   the   revenue.   Uh,   more   specifically-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   we're   seeing   that   each   of   these   categories   of   our   revenue   streams   are   increasing   as   well,   which   is   a,   a   quite   interesting   insight.   Um,   now   looking   at   the   other   exhibit,   I   see   that,   um,   we   have   here,   uh,   600   players.   Okay,   so   it   seems   like   we   have   600   players   for   the   regular   leagues   and   25   teams   in   the   special   leagues.   And   by   25   teams,   I   take   it   that   it's   25   different   companies,   or   can   different   companies   compete   within,   within...   Uh,   different   teams   compete   within   the   same   company?  
+**Interviewer:** Um,   so   yeah,   it   could   be   different   companies,   but   it   could   also...   You...   One   company   could   have   multiple   teams,   for   example.   Does   that   make   sense?  
+**Candidate:** Yeah,   that   makes   a   lot   of   sense.  
+**Interviewer:** Okay.   Yeah.  
+**Candidate:** Um,   okay.   And   I   see   that...   Okay,   so   each   team   is   bringing   about   a   thousand   dollars   in   revenue,   each   player   in   the   regular   leagues   about   $45,   uh,   and   in   other   funding   we...   Oh,   interesting,   we   have   gifts.   So   that   appears   to   be   an   important,   um,   uh,   cons-   uh,   factor   to   consider   in   this   case,   which   is   $28.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Yeah,   sounds   good.   Um,   that   is,   uh,   very   important   information.   Um,   with   that   being   said,   it   appears   that   our   pricing   strategy   seems   to   be,   seems   to   be   effective   considering   we   have   an   increase   in   revenues.   However,   we   are   s-   looking   to   achieve   this   25%   increase   here,   um,   as   an   objective.   So,   and   we   also   have   information   about   the   projected   units   and   quantities,   that's   very   interesting.   Um,   now   that   we   have   this,   do   we   have   any   perhaps   other   information   in   regard   into   competitors?   Perhaps   if   we   can   compare   the-   their   revenues,   their...   Uh,   any   financial   information   that   we   may   have?  
+**Interviewer:** Uh,   fair   question.   Um,   I   think   for   now   we   don't   have   a   ton   of   competitors,   uh,   for   Elef,   um,   but   you   know,   I   think   it   might   make   sense   for   us   to   circle   back   to   our   original   kind   of   two   questions   and   how   we   might   use   this   information   to   get   there.  
+**Candidate:** Uh,   yeah,   certainly.   So   our   original   two   questions   were,   um,   first   of   all,   how   we   can   increase   the   revenue   by   25%-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   in   this   case.   And   the   second   question   was   maximizing   our   mission.   So,   um,   here   we   have   that...We   have   $70,000   revenue   for   the   year   of   2022.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** So   I   would,   just   to   put   it   in   perspective,   I   would   like   to   calculate   the   25%   of   that   to   see   where   we   would   need   to   be,   uh,   in   our   next   year.   Does   that   seem   like   an   okay,   um,   calculation   to   make   for   now?  
+**Interviewer:** Um,   I   think   what   might   make   more   sense   is   if   we're   looking   at   2024,   is   figuring   out   what   we   think   the   2023   revenue   might   be,   and   then   going   to   25%.   Does   that   make   sense?  
+**Candidate:** Oh,   yeah,   it   does   make   sense.   I-   I   understood   that,   um,   the   year   we   were   looking   at   was   2020,   okay,   that   makes,   that   makes-  
+**Interviewer:** Yep.  
+**Candidate:** ...   a   lot   of   sense.   So   calculating   the   revenue   for   today's,   or   year,   which   is   2023.   That   makes   sense.  
+**Interviewer:** Yep.  
+**Candidate:** Awesome.   Um,   would   you   mind   if   I   take   a   moment   to...  
+**Interviewer:** Yeah,   of   course.  
+**Candidate:** ...   lay   out   my   logic   for   that?   Thank   you.  
+**Interviewer:** Sure,   sure.  
+**Candidate:** Great.   So   in   order   for   me   to   calculate   the   revenue   for   this   year,   I'm   going   to,   um,   first   of   all,   I'm   going   to   calculate   the   total   revenue   per   second   that   we   have   here.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** So   for   the   three   different   segments,   I'm   going   to   multiply   the   projected   units   times   the   revenue,   revenue   per   unit   to   get   the   total   revenue,   uh,   per   segment.  
+**Interviewer:** That's   right.  
+**Candidate:** Uh,   which   is   what   I'm   about   to   do   now.   So,   so   does   that   seem   like   an   okay   pro-   okay   procedure   to,   to,   um-  
+**Interviewer:** Yeah,   absolutely.  
+**Candidate:** Awesome.   Thank   you   for   that.   All   right.   So   looking   at   regular   leagues   first.   So   we   see   that   we   have   600   players,   and   I'm   going   to   multiply   this   by   45.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Which   is   the   revenue   per   unit   to   get   the   total   revenue   in   this   segment.   And   if   you   allow   me   one   second   to   make   this   calculation   here.  
+**Interviewer:** Sure.  
+**Candidate:** This   is   going   to   be,   um,   uh,   $27,000.   Does   that   seem   like   the   correct   number?  
+**Interviewer:** That's   what   I   got   too.  
+**Candidate:** Awesome.   Great.   Uh,   $27,000   here   for   regular   leagues.   And   for   special   leagues,   let's   see   here,   I'm   making   sure   that   I'm   as   organized   as   possible   with   this.  
+**Interviewer:** Okay.  
+**Candidate:** So   the   projected   units   that   we   have   is   25   teams,   and   each   team   is   contributing   around   $1,000.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** So   I'm   going   to   multiply   25   times   1,000,   which   is   going-  
+**Interviewer:** Yep.  
+**Candidate:** ...   to   give   me   25,000.  
+**Interviewer:** Yep.  
+**Candidate:** And   for   the,   um,   other   funding,   which   is   gifts   in   this   case,   we   have   1,000,   um,   1,000   gifts,   which   is   the   quantity,   and   we're   going   to   multiply   it   by   28,   which   is   the   average   gift   size,   gift   size.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** And   this   is   going   to   give   me   $28,000.   Now,   if   I   add   all   of   these   numbers,   I'm   going   to   get,   if   you   allow   me   one   second   here...  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Yeah,   it   should   be...   I   was   just   making   sure   that   I   got   my   math,   uh,   correct   here.   So   total   revenue   for   the   year   of   2023   of   $80,000.   Does   that   seem   like   a   correct   number   to   you?  
+**Interviewer:** 80,   right?   Yes,   eight,   zero?  
+**Candidate:** 80,   80,   $80,000.  
+**Interviewer:** Perfect.  
+**Candidate:** Yes,   eight,   zero.  
+**Interviewer:** Perfect.  
+**Candidate:** And   this   number   appears   to   be   a-   an   very   important   number   because   it   shows   that   we   are...   Oh,   sorry,   I   just...   Okay,   uh-  
+**Interviewer:** Oh,   yeah.   We   were   done   with   that   part,   so   I   just   took   it   down   (laughs) .  
+**Candidate:** Oh,   yeah,   no   problem.  
+**Interviewer:** Okay.  
+**Candidate:** I   just   wanted   to   quickly   mention   that   this   number   appears   to   be   a   very   important   number   considering   we   were   at   70,000   the   year,   uh,   before.   So   we   are   seeing   a   constant   increase   in   our   revenue,   which   is   important-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   for   our   goal   here,   which   is   achieving   an   increase   of   25%.  
+**Interviewer:** Yeah.   Cool.   So-  
+**Candidate:** Yeah.  
+**Interviewer:** Yeah,   where   do   we   go   now?  
+**Candidate:** Uh,   yeah,   uh,   yeah,   yeah.   Sorry,   uh,   I   was   just   making   sure   that,   um,   yeah,   we   were   done   with   that   part.  
+**Interviewer:** Okay.  
+**Candidate:** So   now   that   we   have   looked   at,   uh,   both   of   the   first,   the   two   initial   things   that   I   wanted   to   look   at,   which   were   price   and   quantity,   uh,   and   you   mentioned   that   we   did   not   have   any   information   on   competitors-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   or,   uh,   well,   they   weren't   as   important   in   this   case,   so   I'm   going   to   rule   this   part   out.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Uh,   I   would   be   very   interested   in   knowing   as,   uh,   or   learning   more   about   Ligas   Femeninas   itself.   So-  
+**Interviewer:** Sure.  
+**Candidate:** ...   uh,   perhaps   if   we   have   any   information   on   our   employee   headcount,   or   perhaps   in   our,   uh,   different   costs,   operational   costs   that   we,   we   incur   on   a   yearly   basis?  
+**Interviewer:** Um,   yeah,   sure.   We   could   talk   about   that   for   a   little   bit.   Um,   but   one   quick   thing   I   wanted   to   double   back   on.   So   just   circling   back   to   our   questions,   um,   remind   me   what   the   first   question   was   again?  
+**Candidate:** Yeah.   The   first   question   was   increasing   an   annual   revenue   by   25%.  
+**Interviewer:** So   now   that   we   know   what   the   revenue   is   for   this   year,   do   we   know   what   our   target   is?  
+**Candidate:** Yeah,   certainly.   Uh,   so   we   would   have   to...   What   I   would   do   first,   so   since   we   are   in   the   year   2023   and   we   have   a   revenue   of   $80,000-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   then   I'm   going   to   take   25%   of   that   and   I'm   going   to   add   it   on   top   of   $80,000.  
+**Interviewer:** Okay.  
+**Candidate:** So,   um,   I   would   like   to,   the   trick   that   I   like   to   use   usually...   Well,   oh,   actually,   there's   an   easier   way   to   do   this.   So   25%   of   80   is   essentially   dividing   80   by   four,   which   is   20-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   in   this   case.  
+**Interviewer:** Yep.  
+**Candidate:** Uh,   if   we   add   $20,000,   uh,   to   $80,000,   we   see   that   our,   our   goal   for   next   year   is   going   to   be   80,   uh,   I   apologize,   $100,000.  
+**Interviewer:** Great.   Perfect.   Yeah,   I   just,   I   think   it's   always   important   to   contextualize   what   is   our   goal   and   like   what's   the   gap   so   that   we   can   pursue   the   opportunities   that   will   achieve   that,   right?   Um,   and,   and   circling   back   to   your   question   about   Ligas   Femeninas,   so   the   good   news   is   that   we   don't   really   have   competitors,   um,   leadership   is   pretty   stable.   I   think   the   brand   has   good   recognition.   Um,   so   I   think   we're,   we're   really   poised   to   grow.   Um,   you   know,   one,   one   update   that   I   can   provide   for   you,   Nicolas,   is   that,   um,   you   know,   the,   the   leadership   is   really   open   to   ideas   and,   you   know,   if   there's   some   things   that   are   on,   maybe   on   your   mind   about,   all   right,   how   are   we   gonna   get   $20,000   and   how   does   that   work   for   our   company,   um,   you   know,   maybe   we   could   brainstorm   that   together.  
+**Candidate:** Yeah,   certainly.   Uh,   would   you   mind   if   I   take   a   quick   moment   to-  
+**Interviewer:** Sure.  
+**Candidate:** ...   uh,   structure   my   thinking?  
+**Interviewer:** Go   for   it.  
+**Candidate:** Thank   you.   Okay.   So,   so   far   I   have   two   different   categories   of   ideas   to   which   we   could   actually-  
+**Interviewer:** Awesome.  
+**Candidate:** ...   maximize   our   mission   and   increase   our   revenue.  
+**Interviewer:** Cool.  
+**Candidate:** The   first   category   that   I   have   would   be   extracurricular   activities,   and   by   we-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** What   I'm,   what   I   mean   by   that   is   activities   that   are   not   necessarily   leagues   or   any   type   of,   um......   competitive,   um,   activity.   And   the   second   category   that   I   have   would   be   diversifying   our   marketing   channels.  
+**Interviewer:** Okay.  
+**Candidate:** Now,   going   back   to   the   first   category   that   I   have   would   be   extracurricular   activities.   From   my   personal   experience   volunteering   and   being   a   part   of   a   soccer   league,   uh,   I   found   it   very,   um,   successful   to   see   fe-   festivals   happening   during   the   weekends.  
+**Interviewer:** Okay.  
+**Candidate:** Uh,   and   this   would   be   during   the   weekends   through   which   they   don't   have   any   games,   uh,   or   perhaps   nothing's   happening.   Festivals   are   a   great   way   of   getting   more   people   together,   uh,   getting...   again,   uh,   building   a   sense   of,   uh,   family   within   the   community   of,   uh,   Ligas   Femeninas,   and   also,   uh,   through   different   festival   venues   and   different   things   like   we   could   put   in   the   festival,   we   could   increase   our   revenue.   Another   thing   that   I   was,   uh,   thinking   in   this   same   aspect,   uh,   would   be,   um,   in-   within   these   festivals,   or   perhaps   just,   um-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   as   a   side   of   these   festivals   would   be   holding,   uh,   yearly,   uh,   gatherings   in   which   we   announce,   uh,   for   instance,   uh,   yearly   awards.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Um,   and   these   festivals   could...   or   this,   I   apologize,   these   gatherings   could   be,   uh,   formal,   uh,   gatherings.   We   could   charge   an   entry   for   these.   And   with   these   gatherings,   um,   the-   the   league   would   essentially   announce,   for   instance,   the   most,   uh...   the   player   with   the   most   sports-   sportsmanship,   or   the   company   who   had   the-   the   highest   number   of   wins,   uh,   and   things   like   that.   Now-  
+**Interviewer:** Cool.  
+**Candidate:** ...   moving   to   my   second   category   of,   uh-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   marketing   o-   of   our   ideas,   I'm   very   interested   in,   um,   diversifying   our   marketing   strategy.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Uh,   uh,   one   way   through   which   we   could   do   this   is   by   sending   perhaps   representatives   or   volunteers,   or   even   children   who   are   already   playing   in   these   leagues   to   advertise,   or   not   necessarily   advertise,   but   just,   uh,   put   a   good   word   for   the   league   in   their   schools.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Perhaps   if   we   send   a   representative   from   our   league,   uh,   to   these   local   schools,   then   it   would   gather   more-   more   people   to   go   to   our   leagues.   And   knowing   how   popular   soccer   is,   I-   I   find   this,   uh,   very-   very   efficient.   And   another   thing,   um,   within   the   same   category   would   be-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   putting   in,   uh,   putting,   um,   advertisements   on,   uh,   newspapers.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** I   understand   this   is   huge   within   local   communities.   Uh,   still   huge   in...   Coming   from   South   America,   I   understand   that,   uh,   newspapers   are   still   a   big   thing,   and   especially   for   older   generations-  
+**Interviewer:** Hmm.  
+**Candidate:** ...   who   may   consider,   may   see   these   announcements   or   may   see   these-   these   advertisements   and   may   consider   getting   their   children,   uh,   to-   to   play   for   these   leagues.  
+**Interviewer:** Very   cool.   I   like   these   creative   ideas.   Um,   so   the   good   news   is,   Nicolas,   is   that   we   actually   were   able   to   conduct   an   interview   before   we   stopped   you   on   the   project.   Um,   and   it   turns   out   that   LF   actually   has   some   ideas   as   well   and   has   done   a   little   bit   of   a   light   assessment   on   some   of   them,   but   wants   to   hear   what   you   think   about   these   ideas.  
+**Candidate:** Uh,   certainly.   Um,   so   I'm   gonna   take   a   quick   moment   to   see   this,   these   ideas.  
+**Interviewer:** Sure.  
+**Candidate:** Apologies.   I   had   a   quick   question.   So   for   the-  
+**Interviewer:** Sure.  
+**Candidate:** ...   for   the   part-time   salesperson.   Uh,   would   the   salesperson   be   in   charge   of   selling,   um,   entries   to   the   tournaments   or   would   they   be   in   charge   of   selling   merchandise,   the   ............................?  
+**Interviewer:** Oh,   uh,   this   person   would   be   in   charge   of,   uh,   league   sales.   So   it'd   be   either   individual   players,   um,   or   the-   the   special   leagues.   So   it'd   be   regular   league   and   special   league   focused.  
+**Candidate:** Okay.   Sounds   good.  
+**Interviewer:** Yeah.  
+**Candidate:** Sounds   great.  
+**Interviewer:** Yep.  
+**Candidate:** Interesting.   So   I   see   that   we   have   five   different   ideas   and   I   also-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   found   that,   um,   um...   Okay.   Interesting.   And   it   appears   that   the   idea   with   the   most   anticipated   revenue   impact   would   be   the   hire-   hiring   the   part-time   salesperson,   which   is   an   idea   that   I'll   be   very   interested   in   considering,   uh-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   knowing   that   it's   going   to   bring   in   so   much   revenue.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Um,   uh,   the   idea   of   targeting   digital   marketing   does   not   seem   as,   um,   beneficial   for   the   revenue.   Um,   and   in   terms   of   the   investment,   it   makes   sense   that   the   higher   part-time   would   be...   uh,   would,   um,   have   to   have   the-   the   highest   investment   in   this   case.   And   the   target   digital   mar-   market   would   incur   or   would   have   to...   would   ha-   does-   ha-   has,   I   apologize,   has   the   lowest,   uh,   investment.   Um...  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Which   makes   sense.   Um,   with   that   being   said,   would   you   mind   if   I   take   a   moment   to   perhaps   calculate   the-   calculate   the   anticipated,   um,   profit   that   each   ideas   would-   would   bring   in?  
+**Interviewer:** Um,   sure.   Well,   before   we   jump   into   that,   just   wanted   to-   to   think   through   it   slightly.   So,   um,   I   think   one   thing   to   keep   in   mind   is,   um,   our-   our   budget,   right?   So,   um-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   we   didn't   quite   talk   about   that,   but   I   think   we   need   to   target   a   budget   of   about,   uh,   10K.   Um,   and   then   the   other   piece,   can   you   remind   me   of   our   timeframe?  
+**Candidate:** Our   timeframe   would   be,   uh,   within   the   next   year.  
+**Interviewer:** That's   right.   So,   um,   yeah,   and   then   how   might   you   go   about   the-   the   profit   piece   for   comparing-  
+**Candidate:** Yes.  
+**Interviewer:** ...   these   projects?  
+**Candidate:** Uh,   certainly.   So   first   of   all,   I   would   be...   Anticipated   revenue.   Yeah.   Um,   I   would   be   very   interested   in,   um,   getting   the...   Apologies,   would   you   mind   if   I   take   a   moment,   I   think   I   might   have,   uh,   gotten   another   idea-  
+**Interviewer:** Okay.   Sure.  
+**Candidate:** ...   uh,   for   this.   Um...   Okay.   So   the   first   idea   that   I   had   and   the   reason   why   I   had   to   take   a   moment   was   because-  
+**Interviewer:** Sure.  
+**Candidate:** ...   I   was   thinking   of   perhaps,   um,   taking   just   the   anticipated   revenue   impact   and   subtracting   the   investment   from   that   revenue   impact.   The   second   idea   that   I   was   thinking,   considering   we   have   a   timeframe   would   be-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   uh,   dividing   the   anticipated   revenue   impact   by   the-   that   number   of   months   and   then,   uh,   getting   the   break-even   point.   Uh,   do   you-  
+**Interviewer:** Ah.  
+**Candidate:** Which   idea   would   you   consider,   uh,   best   in   this   case?  
+**Interviewer:** Um,   good   thought.   I   think,   uh,   for   purposes   of   this,   um,   how   I   would   think   about   this   is   maybe   a   ratio   of   the   revenue   impact   and   the   investment.   And   then   I   think   for   purposes   of   time,   though   I-   I   appreciate   your   thought   there,   let's   just   make   sure   that   we   could   do   it   in   a   year.   Does   that   make   sense?
+**Candidate:** Um,   uh,   by   that   you   mean,   um,   that   we   would   be   able...   Considering   our   budget?   Is   that-  
+**Interviewer:** Uh,   like   just   in   terms   of,   like   the   time   to   recognize   the   impact   would   need   to   be   less   than   12,   right?   Basically.  
+**Candidate:** Right.  
+**Interviewer:** Yeah.   Does   that   make   sense?  
+**Candidate:** Um,   yeah,   I   believe   so.   So,   um-  
+**Interviewer:** Perfect.  
+**Candidate:** ...   by...   Okay.   So   just   to   make   sure   that   I   understand,   um,   uh,   this,   this   goal   here   would   be   just   essentially   trying   to   get   the   ratio   of   the   anticipated   revenue,   um,   to   the   investment   and   seeing   if   this   would   be   a,   a   reasonable   or   feasible   solution   to   implement?  
+**Interviewer:** Yep.  
+**Candidate:** Okay.   Sounds   good.   I'm   going   to   take   a   moment   now   to   do   that.  
+**Interviewer:** Great.  
+**Candidate:** Okay.   So-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   now   I,   I   already   laid   out   my   structure,   so   I   wanted   to   tell   you-  
+**Interviewer:** Great.  
+**Candidate:** ...   what   I'm   doing   here.   So   for   the   first-  
+**Interviewer:** Sure.  
+**Candidate:** Uh,   what   I'm   doing   for   each   of   these   categories   is   that   I'm   taking   essentially   a   return   on   investment   ratio,   which   is   essentially,   uh,   the   anticipated   revenue   over   the   investment,   uh,   cost   here.  
+**Interviewer:** Mm-hmm.   Mm-hmm.  
+**Candidate:** And   this   would   give   me,   for   instance,   uh,   when   I   look   at   the   first   idea,   I   see   that   I   have   $15,000   in   revenue   impact   over,   uh,   the   investment,   which   is   $10,000,   which   gives   me   a   return   on   investment   of   1.5.   So   around,   uh,   50%   on,   on   our,   our   investment,   which   is...   seems   great.  
+**Interviewer:** Great.  
+**Candidate:** And   this   idea   seems   feasible   as   well,   because   it's   under   the,   the   time   limit   that   we   have.  
+**Interviewer:** Yep.  
+**Candidate:** Uh,   for   the   target   in...   for   the   targeted   digital   marketing,   I   s-   marketing,   I   see   that   we   have   a,   a   revenue   of,   uh,   $4,000   divided   by   $2,000,   which   is,   uh,   two   in   this   case.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** So   we   have   a   return   on   investment   of   100%   in   this   case.   Seems,   seems   great.   Uh,   actually   200%.   I   apologize.   Um...  
+**Interviewer:** (laughs)  
+**Candidate:** Uh,   does...   Do,   do   those   s-   uh,   numbers   seem   like   they   are   fair?  
+**Interviewer:** Yeah.  
+**Candidate:** A-   awesome.   Great.  
+**Interviewer:** Yeah,   we're   good.  
+**Candidate:** Uh,   for   the   third   one,   third   idea,   which   is   the   branded   gear,   we   see   that   we   have   eight-   $8,000   over   $2,000.   This   is   going   to   give   us   $4,000,   so   we   have   a,   a   return   on   investment   of   around   400%.   Um,   seems   great   as   well.   Um,   okay.   Looking   at   this,   um,   for   the   fourth   idea,   I   actually   did   not   want   to   do   any   calculations   in   this   idea-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   because   it's   past   the   time   limit,   so   I   am   going   to   skip   it.  
+**Interviewer:** Exactly.   Yep.  
+**Candidate:** Great.   And   for   the   final   idea,   we   have   10   over   5-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   which   is   going   to   give   us   2,   so   again,   a   return   on   investment   of   around,   um,   well,   100%.   Um,   yes,   I,   I   apologize.   It,   it   appears   that   I   got   the,   the   calculations   right,   but   perhaps   I   might   have   not   voiced   them   correctly.   Do,   do   all   of   these   calculations   seem,   seem   correct   to   you   so   far?  
+**Interviewer:** Yes,   I   think   we're   good.   Yeah.   1.5,   2,   4,   we   skipped   that   one,   and   then   another   two.   So,   um,   awesome.   Great.   So,   uh,   so   what   now?  
+**Candidate:** Yeah.   First   of   all,   I   would   like   to,   um,   compare   all   of   these,   these   ideas   to   see   which   one   seems   to   be   more,   more   profitable.   And   with   that,   I   will   also   keep   in   mind   our   budget,   uh,   of   $10,000.  
+**Interviewer:** Yep.  
+**Candidate:** So   with   that,   we   see   that,   um...   Um,   okay.   First   of   all,   I   do   not...   I   would   not   consider   the   idea   of   purchasing   fields,   considering   it   would   take   up   all   of   our   budget.  
+**Interviewer:** Yep.  
+**Candidate:** And   the   return   on   investment   is   not   even   profitable   as   well.  
+**Interviewer:** All   right,   great   with   you.  
+**Candidate:** Does,   do   you   concur   with   that?   Okay,   great.  
+**Interviewer:** I   do   concur.  
+**Candidate:** Awesome.   Uh,   so   we   are   eliminating   one   of   four.   Great.   So   now   we   are   left   with   two,   three   and   five,   which   is   marketing,   branded   gear,   and   basketball   league.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Um,   and   it   appears   that   if   we   implement   all   of   these   three,   we   would   be   staying,   uh,   within   the   budget   of,   uh,   $10,000.   So   might   as   well...   and   considering   the   su-   substantial   return   on   investment   of   each   of   the-   these   ideas,   I   think   that   it   would   be   prof-   or   it   would   be   beneficial   for,   for   our   client   to   implement   all   of   these   ideas,   staying   within   the   budget   and   getting   a   quite   substantial   return   on   investment.  
+**Interviewer:** Yeah.   And   can   you   put   a   number   on   that   substantial   return   on   investment?  
+**Candidate:** Certainly.   So   if   we   are   looking   at...   And   do   you   want   the   number   as   a   percentage   or   just   want   it   as   a   total,   like,   uh,   anticipated   revenue?   Um-  
+**Interviewer:** Um,   I   think   a   total,   total   number   revenue   would   be   perfecto.  
+**Candidate:** Awesome.   So   we're   looking   at   the   anticipated   revenue   impact   of   the,   the   marketing   idea   which   is   $4,000.   Uh,   we're   adding   that   to   the   branded   gear,   which   is   $8,000.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** We're   adding   that   to   $10,000,   which   w-   then   we   are   seeing,   uh,   $22,000   in   anticipated   revenue   impact.   And   going   back   to   our   initial   question,   which   was   increasing   our   revenue   by   25%.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** If   I   go   back   to   this,   uh,   we   see   that   this   actually,   uh,   does   go   over   the   25%,   um,   increase,   which   is   awesome   for   us   and   for   our   client,   meaning   that   we...   through   these   strategies,   we   would   be   able   to   achieve   our,   our   goal   and   I   think   we   would   also   be   achieving   both   of   our   goals.  
+**Interviewer:** Yeah.  
+**Candidate:** Uh,   maximizing   our   mission   as   well.  
+**Interviewer:** Okay.   That's   amazing.   Well,   cool.   So,   um,   I   want   to   go   ahead   and,   and   ha-   give   you   the   opportunity   to   kind   of   put   a   bow   on   this.   But   one   last   thing   is,   we   have   a   little   budget   left,   right?   We   have   $1,000   which   admittedly   is   not   much,   but   in,   in   the   world   of   nonprofits,   um,   you   know,   you   use   everything   you   got,   right?   So   any   thoughts,   especially   as   it   relates   to   part   two   of   our   question   around   mission,   like   how   might   you   use   that?  
+**Candidate:** Yeah,   certainly.   Um,   I'm   going   to   take   a   quick   moment   to   think   of   some-  
+**Interviewer:** Sure.  
+**Candidate:** ...   uh,   strategies   that   I   could-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   uh,   use   that   money   with.  
+**Interviewer:** Certainly.  
+**Candidate:** Okay.   So   I'm   very   invested   in   the   idea   of   this-   of   having   a   c-   a   festival   in   this   case   or   carnival.  
+**Interviewer:** (laughs)  
+**Candidate:** So,   um,   there   are   several   things   that   we   could,   uh,   implement   in   this,   in   this   carnival   in   order   to   increase   a   sense   of   community   and   maximize   our   mission-  
+**Interviewer:** Great.  
+**Candidate:** ...   to   provide,   um,   women   a   safe   space   to,   to   play.   Uh,   first   of   all   would   be,   uh,   um,   getting   some   rides   for   the   carnival.   They   don't   have   to   be   as   big.  
+**Interviewer:** Okay.  
+**Candidate:** But   I   would   certainly   think   that   some   small   rides,   uh,   would   be,   um,   um,   quite   affordable   for   us.  
+**Interviewer:** Sure.  
+**Candidate:** The   second   thing   would   be   getting   food.   Some   type,   type   of   catering,   uh,   would   be   certainly   great   for,   for   parents   and   children   as   well.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Um,   and   finally,   I   would   be   very   interested   in,   in,   um,   um,   getting   one   final   idea   perhaps   to,   to   happen,   which   is,   um...   And   this   would   be   at   no   cost....   sure.   We,   I   would   be   interested   in,   uh,   getting   someone   from,   perhaps   a   local   person   that's,   um,   perhaps   a   coach   or   a,   a,   a   r-   renowned   soccer   player.   It   doesn't   have   to   be   like   super   professional,   super   famous,   but,   uh,   has   to   be   local-  
+**Interviewer:** (laughs)  
+**Candidate:** ...   to   come   and   speak   at   this   festival.  
+**Interviewer:** Hmm.  
+**Candidate:** And   usually   with   these   type   of,   uh,   characters,   they   are   not   going   to   charge   anything   because   it's   for   the   community,   and   we   would   essentially   get   a   lot   of   traction   and   a   lot   of   l-   it   would   be   very   attractive   for,   uh,   our,   for,   for   our,   our   Ligas   Femininas.   And   more   specifically,   it   would   be   a   plus   if   it   w-   if   it   were   a   woman.   If   it   were   a   woman-  
+**Interviewer:** Perfect.  
+**Candidate:** ...   for   sure.  
+**Interviewer:** Yeah.   Awesome.   All   right.   Well,   I   love   those   ideas.   All   right.   Cool.   Well,   let's   bring   it   in   for   a   landing,   Nicholas.   So,   um,   could   you   go   ahead   and   just   kind   of   summarize   everything   for   you,   if   you   were   gonna   give   a   quick,   you   know,   um,   quick   minute   update   to   the   leaders   of   LF?  
+**Candidate:** Uh,   certainly.   So,   um,   uh,   it   has   been   a   pleasure   working   in   this   case   here.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** So,   in   order   for   us   to   increase   our   annual   revenue   by   25%,   we   would   be   able   to...   We   should   implement   three   different   things.   Targeted   digital   marketing-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   us   starting   our   own   branded   line   of   gear,   and,   um,   there   was   another   strategy   that   perhaps   is   coming   out,   out   of   my   mind.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** But   those   would   be   the   three   main   strategies   that   we   would   achieve.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** And   by   doing   th-   by   achieving   these   strategies,   we   would   get   to   that,   that,   that   mark   of,   uh,   25%.   Um,   the   ways   through   which   we   can   maximize   our   mission   would   be   by,   uh,   establishing   a   festival,   um,   um,   with   rides,   food,   and   a   renowned   person   from   the   local   community.   And,   uh,   finally,   there   are   some   risks   with   these-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   uh,   strategies,   for   sure   to   keep   in   mind.   First   of   all,   making   sure   that,   uh,   um,   that   our   costs   are   going   to   stay   the   same.   I   understand   that   especially   with   the,   the,   well,   the   world   of   soccer,   many   things   could   go   wrong,   especially   with   when   it   comes   to   weather,   when   it   comes   to   things   like   that-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   that   could   increase   our   costs   perhaps   for,   um,   main-   maintaining   our   fields   or,   or   implementing   these   new   strategies   that   we   have,   and   making   sure   that   our,   our   costs   remain   the   same.   The   second   risk   that   I   could   think   of   would   be,   um,   being   very,   uh,   careful   when   it   comes   to   the   rest   of   the,   the,   the   budget   that   we   have   left   and   ensuring   that   we   do   not   go   past   this   budget   through   these   other   different   activities   that   I   mentioned.   Finally,   some   next   steps   to   look   into.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Um,   there   are   some   things   that   I   would   definitely   recommend,   um,   our   client   keeping   in   mind.   Uh,   the   first   thing   would   be   that   since   we   are   implementing   new   strategies,   I   would   recommend   the   client   also   maintaining   a   careful   watch   on   the   other   strategies   that   we   have   a-   already   been   implementing   on   the   leagues   and   ensuring   that   these   new   strategies   are   actually   going   to   bring   in   new,   more   people.   Uh,   if   they   are   not-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   being   as   successful,   then   we   could   consider   perhaps   taking   another   route   and   being   adaptable   to   the   situation.   Another   next   step   that   I   would   definitely   keep   in   mind,   um,   um,   would   be   in   this   case,   just   going   back   to   our   cores   in   terms   of   our,   our   client.   Just   providing,   ensuring   that   all   of   these   strategies   are   gonna   be   aimed   towards   providing   women   a   safe   space,   because   I   feel   like-  
+**Interviewer:** Yep.  
+**Candidate:** ...   uh,   oftentimes   considering   the   complexity   of   this   strategy,   we,   we   might,   uh,   go   on   a   tangent,   but   just   reminding   the   client   to   go   back   to   th-   their   cores,   which   I,   I   think   that   they,   they   will   definitely   keep   in   mind.  
+**Interviewer:** Fabulous.   Well,   thank   you   so   much,   Nicholas.   I   think   that   LF   will   find   all   of   this   very   helpful   and   I'm   so   glad   that   you   are   on   the   team   to   help   us   solve   this   problem.  
+**Candidate:** Yeah.   I'm   very   excited   for   that.  
+**Interviewer:** Perfect.   Awesome.   Well,   first   off,   Nicholas,   again,   this   is,   uh,   super   brave   (laughs)   to   do   something   like   this.  
+**Candidate:** (laughs)  
+**Interviewer:** And,   um,   you   know,   it,   overall,   you   know,   great   job,   you   know,   leaning   in   and   being   adaptable   to   your,   your   point.   So,   um,   just   a   couple   of,   of   high   level   points   that   I'll   start   with.   Um,   and   this   is   kind   of   my   own   personal   advice,   I   would   say   always   keep   the   question   top   of   mind   because,   you   know,   you   wanna...   There's   always   exciting   things   to   talk   about,   especially   when   you've   got,   you   know,   two   smart   people   in   a   room   doing   a   case   you   could   go   rep,   right?   So   just   making   sure   you,   uh,   you   keep   the   question   or   multi-pronged   question   in   this   case   in   mind.   Um,   in   terms   of   things   that   I,   I   look   for   in   candidates,   always   looking   for   intellectual   curiosity.   How   do   you   communicate?   How's   your   executive   presence?   Which   I   thought   you   were,   you   were   phenomenal   in   that   way,   by   the   way.   Um,   structured   thinking,   but   then   also   creative   thinking,   right?   You   know,   we   wanna   be   organized,   but   we   also   wanna   be   fun,   right?   Not   robotic.   And   we   wanna   make   sure   that   we   are,   um,   you   know,   thinking   about   traditional   things   and   non-traditional   things,   um,   you   know,   as   long   as   they   are   legal,   ethical,   et   cetera,   right?   Um,   cool.   So   in   terms   of   the,   the   actual   case,   um,   I   think,   you   know,   you   did   a   great   job   of   recapping   and   understanding   like   what   the   question   is,   right?   That   kind   of   links   back   to   my   number   one   piece   of   advice,   being   super   clear   on   what   you're   solving   for,   right?   So   nice   job   there.   Um,   I   think   with   regard   to   the   framework,   uh,   I   generally   recommend   trying   to   keep   the   framework   to   90   secs   to   two   minutes   in   terms   of   the   time   that   you're   sketching   out.   Um,   so   just   as   you   practice,   um,   I   recall   when   I   was   in   business   school   and,   and   practicing,   I   used   a   timer.   Um,   and   then   with   regard   to   the   framework,   I   thought   it   was   very   complete.   You   know,   obviously   when   you're   talking   about   revenue,   you   always   wanna   have   price   and   quantity,   and   then   you   had   the   piece   around   competitor   and   company,   which   is,   I   think   also   very   helpful.   Um,   one   other   piece   of   advice   regarding   timing.   I   think   sometimes   it   could   be   tempting   to,   you   know,   spill   all   of   your   sort   of   exhaustive   thoughts   on   the   framework.   And,   uh,   while   I   don't   think   that's   inherently   a   bad   thing,   I   do   think   that   it   can   use   time   that   could   otherwise   be   y-   used   to   sort   of,   um,   narrow   down   what   are   the   priorities   and   then,   you   know,   you   can   dive   deeper   into   the   priorities.   So   that's   just   something   to,   to   be   cognizant   of.   Um,   walking   through   the,   the   exhibits   piece,   um,   I   think   there's   different,   different   thoughts   around   this   and   different   practitioners.   For   me,   when   I   see   an   exhibit,   I   tend   to   just   talk   through   it   rather   than   taking   a   moment.   So   I'll   say   something   like,   "Okay,   it   looks   like   we're   looking   at   the   revenue   for   each   business   line   for   three   different   years.   And   what   I'm   seeing   is   this."   And   then   always   feel   free,   and,   and   it   didn't   necessarily   apply   in   this   case,   but   if   you   have   questions   about   what   anything   is,   you   know,   feel   free   to   ask,   right?   It's   always   good   to   be   crystal   clear   as   to,   to   make   the   most   of   your   time   together.   I   loved   how   you   aligned   with   me   on   the   math   to   say,   "Hey.You   know,   I   think   we   need   to,   to   multiply   these   units   by   this,   you   know,   quantity   of   dollars   and   then   together   that   will   get   us   our   revenue."   Um,   and,   and   being,   you   know,   well-aligned   on   that.   Um,   I   think   another   critical   piece,   and   it   maybe   not   as   applicable   in   this   case   but   just   in   general,   is   always   making   sure   you   know   the   units   of   your   output.   In   this   case   it   was   dollars   but   it   can   always   be   other   things.   Um,   then   kind   of   moving   through,   um,   oh,   something   else   that   I,   I   liked   that   you   said   in   that   part,   you   know,   you,   you   said   something   about   ruling   out   the   competitors   piece.   It's   always   great   to,   to   prioritize.   Uh,   ruthless   prioritization   in,   in   casing   I   think   is   the   best   practice   because   again,   there's   only   so   many   ways   you   could   go   and   you've   only   got   about,   like,   25,   30   minutes,   right?   Cool.   So,   um,   moving   into   the   piece   around   the,   kind   of   the   opportunity   assessment.   Um,   so   I,   I   thought   you   did   a   nice   job   of   being   conversational   with   me   in   this   part.   It   was   a   bit   of   an   ambiguous,   um,   exhibit,   right?   Um,   so   you,   you   did   a   nice   job   of   flexing,   um,   and   then,   you   know,   I   think   whenever   you've   got   an   investment   situation,   clarifying   the   budget   is,   is   good.   Um,   and   then   generally   I   think   it's   good   to   do   a   ratio.   I   think   if   you   would   have   subtracted   it   probably   would   have   been   fine   too   but   I   think   ratios   are   always   kind   of   a   best   practice   in   terms   of   evaluating   the   attractiveness   of   an   investment.   Um,   and   then   with   regard   to   the   opportunities,   I   think   you   did   a   nice   job   of   realizing   that   you   could   use   your   whole   budget,   uh,   or   excuse   me,   use,   deploy   the   entire   budget   is   what   I   mean   to   say.   And   then   if   there's   ever   anything   left   over,   that's   always   your   time   to   shine   in   showing   your   creativity   and   resourcefulness.   Um,   you   know,   kind   of   giving   it   everything   you've   got   for   the   client.   Um,   and   then   you   did   a   nice   job   of   connecting   back,   "Hey,   this   is   gonna   be   $22,000.   That's   above   our   $20,000   mark,   so   that's   good."   Um,   and   you   know,   tying   it   back   to   the   question   and,   and   then   being   able   to   tie   it   back   to   part   B   of   the   question   as   well.   So,   um,   with   regard   to   the   conclusion,   um,   you   know,   again,   I   thought   you   were   very   polished   in   your   speaking   throughout,   so   great   job   there.   You   did   a   nice   job   talking   about   risks   and   next   steps.   I   think   one   thing   that   I   would   encourage   you   to   think   about   is   making   the   risks   and   the   next   steps   super   targeted   towards   the   solution   that   we   proposed,   right?   So,   um,   you   know,   targeted   digital   marketing,   starting   the   brand   gear,   um,   launching   the   basketball   league.   Um,   you   know,   for   example,   targe-   targeted   digital   marketing,   that   to   me   feels   like   the   easiest   one   to   do.   You   just   hire   someone   to   help   you   with   that,   right?   Versus,   like,   (laughs)   starting   a   brand   of   gear.   You   know,   you   have   to   assess   the,   the   vendors   and   determine   the   timelines   and,   you   know,   figure   out   the   steer   of   that,   and   launching   a   basketball   league   is   kind   of   an   ordeal   as   well,   right?   Um,   so   just   thinking   through   those.   But,   but   overall   a   great   job,   Nicholas.   I   think   you   did   a   great   job   staying   composed,   um,   and   you   know,   again,   just   glad   that   we   were   able   to   run   through   this   together.  
+**Candidate:** Thank   you   so   much,   Caroline.   I   really   appreciate   it.   (upbeat music)

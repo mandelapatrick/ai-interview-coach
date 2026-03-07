@@ -1,0 +1,286 @@
+Case: Ministry of Travel
+Case Type: Strategic Decision
+Firm: Kearney
+Channel: Management Consulted
+URL: https://www.youtube.com/watch?v=SWe-tJ3L9go
+============================================================
+
+**Interviewer:** All   right,   Ed,   I've   got   a   case   for   you.   You   ready   for   this?  
+**Candidate:** I   am.  
+**Interviewer:** Fantastic.   Uh,   our   case   is   going   to   be   a   kearney   case.  
+**Candidate:** Okay.  
+**Interviewer:** Heavy   on   the   math,   really   solid   on   the   analytics.   I'm   looking   for   really   clear   linear   insights.   Uh,   just   make   sure   that   you   stay   super   structured,   but   otherwise   it   could   be   kind   of   tricky   to   finish   the   case-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   in   the   timing   that   we've   got.   Um,   and   so   I'm   gonna   walk   through   just   the   background   of   the   case   and   we'll   dive   in,   okay?  
+**Candidate:** Perfect.   Sounds   good.  
+**Interviewer:** Awesome.   So,   uh,   today's   case   is   called   Ministry   of   Travel,   and   our   client   is   the   Ministry   of   Tourism   of   a   West   African   country.   Uh,   we've   been   hired   to   produce   a   plan   on   how   to   increase   the   revenues   generated   by   tourism   in   the   country,   and   hence   further   contribute   to   economic   development.   When   we   refer   to   revenues   generated   by   the   tourism   industry,   we   actually   refer   to   all   spending   done   by   travelers,   including   accommodation,   food,   transportation,   activities,   et   cetera,   both   for   business   and   for   the   leisure   travel   segments,   both   domestic   and   international.  
+**Candidate:** Correct.  
+**Interviewer:** Okay?   So   any   questions   for   you?  
+**Candidate:** Yeah.   So   just   to   clarify,   our   client   today   is   the   Ministry   of   Travel.   Um,   they   are   a   company,   did   you   say   located   in,   in   West   Africa?  
+**Interviewer:** Yep.   West   Africa.  
+**Candidate:** Okay.   Perfect.  
+**Interviewer:** Mm-hmm.   Mm-hmm.  
+**Candidate:** And,   um,   are   we   assuming   that   that   is   the...   that's   the   entire   scope   of   this,   of   this   engagement,   is   just-  
+**Interviewer:** Do   you   want   more?   (laughs)  
+**Candidate:** Uh,   let's,   let's   keep   it   simple.   Let's   keep   it   in   West   Africa.  
+**Interviewer:** Okay.   (laughs)  
+**Candidate:** Um,   okay,   perfect.   And   the   goal   here   is   to   increase   tourism   revenue,   that's   things   like   accommodation,   food,   transport,   anything   done   by,   by   tourists   and,   and   visitors   to   the   area.  
+**Interviewer:** Yeah,   absolutely.  
+**Candidate:** Great.   Okay.   Well,   I'm,   uh...   Do   you   mind   if   I   just   take   a   minute   or   two   to   organize   my   thoughts?  
+**Interviewer:** No,   go   ahead.  
+**Candidate:** Okay,   perfect.   So   I'm   ready   to   walk   you   through   my   thoughts   here.   Um,   obviously   the,   the   main   issue   here   is,   is   revenue.   And   so   I   really   just   wanted   to,   to   drill   down   into   all   the   different   categories   in   that.   And   actually,   you   did   me   a   huge   favor   and   you   provided   me   with   quite   a   few,   uh,   in   the   prompt.   So   I   wanted   to   dig   a   little-  
+**Interviewer:** You're   welcome.  
+**Candidate:** Yeah.   (laughs)  
+**Interviewer:** (laughs)  
+**Candidate:** I   wanted   to   dig   a   little   bit   deeper   into   all   of   those.  
+**Interviewer:** Great.  
+**Candidate:** So   the   four   that   I   outlined,   um,   and   there   is   a   tiny   bit   of   overlap   between   accommodations   and   food,   but   I   wanted   to   look   at   accommodation,   food,   transport,   and   other.  
+**Interviewer:** Okay.  
+**Candidate:** So   accommodation,   we've   got   hotels   as   probably   gonna   be   the   biggest   one.  
+**Interviewer:** Okay.  
+**Candidate:** Um,   and,   and   bearing   in   mind   that   you   could   almost   imagine   copy   and   pasting   this   structure   into   two   buckets   in   terms   of   people   are   here   for   business   and   people   are   here   for   pleasure,   or,   or   leisure,   I   think   is   the...   is   another   way,   uh,   that   they   refer   to   it.   Um,   there's   also   hostels,   there's...   I   don't,   I   don't   know   what   the   official   term   is   for   this,   but   things   like   Airbnbs   and   Vrbos.   I   don't   know   if   there's   a...   just   like   rent,   renting-  
+**Interviewer:** Vacation   rentals   maybe.  
+**Candidate:** Vacation   rentals.  
+**Interviewer:** Mm-hmm.   Mm-hmm.   Okay.  
+**Candidate:** Um,   and   then   in   terms   of   food,   I   think   restaurant's   gonna   be   the   biggest   one.   Uh,   there's   bars   as   well.   And   then   one   thing   that   can   still   be   and   should   still   be   considered   is,   is   grocery   shopping.   I   don't   think   that'll   be   as   common   except   for   people   who   are   there   for   much   longer   stays.   So   it'll   be   actually   interesting   to   kind   of   dive   into   that   a   little   bit   later.   Uh,   transport,   Ubers,   taxis.   Um,   and   a,   and   a   clarifying   question   I   forgot   to   ask   earlier,   can   we   include   airfare   in   and   out   of   this,   um,   area?   Is   that,   is   that   part   of   tourism   spend?  
+**Interviewer:** It's   a   good   question.   I   would   say   that   absolutely   it   would,   it   would   contribute   to-  
+**Candidate:** Definitely   on   the   way   out   at   least.  
+**Interviewer:** ...   uh,   it,   it   just   depends   on   obviously   whether   or   not   the   owner   is...   Uh,   uh,   right,   many   countries   have   their   own   airline   or   their-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   own   branded   airline.   If   it's   not   that   one,   if   it's   a   British   Airways   flying   into   this   West   African   country,   then   it's   not   probably   going   to   contribute.  
+**Candidate:** Interesting.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Okay.  
+**Interviewer:** So-  
+**Candidate:** Wonderful.  
+**Interviewer:** ...   so,   uh,   however   you   wanna   think   about   that   in   the   matrix,   that   helps.  
+**Candidate:** Great.   And   then   just   in   terms   of   other,   things   like   shopping,   you   know,   trinkets   and,   and   forget   me   nots   that   you   might   buy   from   this   place,   as   well   as   activities.   And   I   think   that   could   actually   be   a,   a   big   area   we   want   to   explore.   So,   uh,   going   jet   skiing   on   the   beach   or   going   on   a   safari   or   doing   something,   uh,   you   know,   fun   that...   That's   probably   gonna   generate   a   lot   of   revenue   and   it's   probably   something   that,   especially   on   the   leisure   side,   a   lot   of   people   do.  
+**Interviewer:** Great.   Mm-hmm.  
+**Candidate:** Do   you   have   anywhere   you'd   want   to   dive   in   p-   in   particular,   or   do   you   want   me   to   just   kind   of   take   this   and   run   with   it?  
+**Interviewer:** Now,   Ed,   I've   got   a   lot   of   good   information,   but,   um,   I,   I,   I'm   actually   more   curious   about   where   you   would   want   to   dive   in   if,   if   I   did   let   you   run   with   it.   I'm   not   saying   I   will.  
+**Candidate:** Yeah.   Well,   I   think   there's   two   ways   we   can   look   at   this.   I   think   we   can   either   look   into   accommodation   first   or   we   can   just   look   in   terms   of,   of   an   over-   if   we   have   any   overarching   numbers,   right?   So   maybe   like   here's,   here's   what   everyone   spends   all   inclusive   or   if   we   have   a   breakdown,   I'd   love   either   of   those   pieces   of   info.  
+**Interviewer:** Okay.   And   why   accommodation?  
+**Candidate:** So   accommodation,   at   least   in   personal   experience,   I'm   not   extremely   well   traveled,   but   I   know   that   most   of   the   time   it's   airfare   and   accommodation   that   cost   the   most.   Uh,   and   the   longer   you   are   there,   the   more   that   accommodation   becomes   the   most   prevalent   thing.   Um,   and   so   that's   why   I'd   love   to   dive   into   that   first,   and   that's   probably   one   of   the   biggest   key   drivers   in   terms   of   the   actual   tourism   revenue.  
+**Interviewer:** Okay.   I   like   it.   So   I   do   have   information   about   accommodation.  
+**Candidate:** Great.  
+**Interviewer:** Um,   and,   uh,   it   might   not   be   the   information   the   way   that   you   broke   it   down,   but   I'm   gonna-  
+**Candidate:** Okay.  
+**Interviewer:** ...   give   this   exhibit   to   you.   I   want   you   to   just   kind   of   look   through   the   exhibit,   uh-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   digest   it,   and   also   tell   me   what   math   you   would   want   to   do   before   you   do   math.  
+**Candidate:** Before   I   do.  
+**Interviewer:** And   then   I'll,   I'll   kind   of   walk   you   through,   uh,   when   the   timing   is   to   do   that   as   well.  
+**Candidate:** Great.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Okay.   So   just   looking   at   this,   uh,   it's   broken   up   into   general   leisure   and   business.   Can   I   assume   general   is,   is   domestic   population?  
+**Interviewer:** Exactly.   Mm-hmm.  
+**Candidate:** So   people   in,   uh,   other   areas   that   are,   that   are   visiting   here   then?  
+**Interviewer:** So,   uh,   the   general   though   doesn't   necessarily   include   that.   Um,   uh,   the,   the,   the   leisure   and   the   business   are   the   purposes.   Those   actually   include   all   general.   So-  
+**Candidate:** They're   all-  
+**Interviewer:** ...   general   is   the   summary.  
+**Candidate:** Perfect.  
+**Interviewer:** Um,   so   this   is   the   country's   population   and   then   this   one   is   the   number   of   stays   for   all   visitors,   domestic   and   international.  
+**Candidate:** So   general   encompasses   both   business   and   leisure?  
+**Interviewer:** Correct.  
+**Candidate:** Can   we   assume   that   business   and   leisure   make   up   100%   of   general?   Is   that   okay?  
+**Interviewer:** Exactly.   Mm-hmm.  
+**Candidate:** Great.   Okay.   Uh,   and   what   I'm   looking   at   here   is   we're   comparing   it   to   three   pair   countries.   Um,   and   the   first   thing   I'm   noticing   is   the   percentage   of   total   stays   coming   from   leisure   and   business   are   pretty   similar   across   the   board.   Um,   the   average   spend   per   day   is   much   lower   for   leisure.   Um,   it   is   actually   the   highest   for   business.   Um,   but   just   diving   a   little   bit   further   into   leisure   here-The,   we   have   the   average   spend   per   stay   and   per   day,   so   maybe   just   I   would   calculate   the   actual   number   of   days   stayed.   That   could   be   something   interesting   to   look   into.   Um,   I'm   happy   to   do   the   same   on   business.   Um,   that   looks   like   it's   a   little   bit   less,   um,   less   of   a   driver   hit,   also   just   because   leisure   makes   up   80%   of   our,   um,   country's   visitors.   So   that's   probably   gonna   be   the   biggest,   the   biggest   weight.  
+**Interviewer:** Okay.   Awesome.   Uh,   if   you   want   to   do   some   math.   I'll   let   you   do   math   now.  
+**Candidate:** Yeah.   Absolutely.   So   just   to   walk   you   what   I'm   doing   here.   Uh,   the   first   thing   I'm   going   to   do   is,   is   what   I   mentioned   earlier   and   calculate   the   actual   number   of   days   stayed   in   all   of   these   pair   countries   for   leisure,   and   then   if   we   don't   find   anything   interesting,   we   can   go   into   business   and   we   can   explore   other   areas.  
+**Interviewer:** Now   instead   of   just   looking   for   something   interesting,   what   are   we   looking   for?  
+**Candidate:** So   yeah,   before   I,   I   guess   before   I   go   into   math,   back   to   what   we're   actually   looking   for,   I   really   want   to   find,   um,   almost   what   has   the   most   leverage   here,   right?   I'm,   uh,   I'm   imagining   that   they   are   really   looking   for   something   that   if   they   can   just   turn   that   dial,   the   output   is   much   higher   and   much   greater   because-  
+**Interviewer:** What   are   the   choices?   What   are   we   gonna   assess?  
+**Candidate:** Yeah.   So   if   we're   looking   at,   we   can   look   at   the   average   spend   per   day.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** If   you   increase   that,   then   that's   going   to   increase   for-   the   amount   of   days   you   have.   If   you   increase   the   average   length   you're   staying,   then   that's   going   to   increase   by   the   other   factors   and   it's   kind   of   like   the   reverse   there.   Um,   we   can   also   look   at   the,   the   number   of   total   stays,   right?   So   I   think   those   are   like   the   three   things,   and   I'd   really   like   to   focus   on   the   number   of   days   stayed   and   the,   and   the   amount   paid   per   day.  
+**Interviewer:** Okay.   Let's   try   it.  
+**Candidate:** Perfect.   And   actually   before   I,   before   I   jump   in,   the   average   spend   per   day   is   pretty   similar   across   the   board.   Uh,   we're   pretty   much   exactly   or   we're   just,   we're   just   above   average   or   we   are   exactly   average   with   our,   with   our   competitors.  
+**Interviewer:** Okay.  
+**Candidate:** So   reassessing,   I   really   want   to   look   into   the   number   of   days.  
+**Interviewer:** Okay.   Mm-hmm.  
+**Candidate:** Okay,   so   I'm   just   going   to   walk   you   through   what   I'm   doing   here.   Uh,   we're   going   to   start   with   the   client   country   and   then   we're   going   to   look   at   the   pair   countries,   and   I   want   to   look   at   the   number   of   days   spent   on   average   in   this   country.  
+**Interviewer:** Okay.  
+**Candidate:** So   to   do   that   I'm   going   to   divi-   divide   the   average   spend   per   day   per   stay   divided   by   the   spend   per   day   to   get   number   of   days.   So   for   our   client   that's   going   to   be   300   divided   by   100   which   is   just   three.   So   three   days.   For   pair   country   A   we   have   630   divided   by   90,   or   63   divided   by   9.   There's   a   factor   of   seven   there.   For   pair   country   B   we   have   660   divided   by   110.   That's   going   to   be   six,   and   for   pair   country   C   we   have   800   over   100.   That's   just   equal   to   eight.   So   before   I   go   any   further   with   any   other   calculations,   we   are   really,   really   lacking   on   the,   on   the   average,   um,   amount   of   time   spent   here,   and   I   don't   know   if   we   have   any   information   as   to   why   that   may   be   or   if   we   want   to   explore   that.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** But   that's   definitely   where   I'd   like   to   take   this   case   is   the   fact   that   we   are   pretty   much   half,   less   than   half   of   the   average   amount   of   time   spent   compared   to   our,   our   peer   countries,   which   is,   which   is   really   interesting   because   I   think   talk   about   leverage   and   talk   about   what   a   key   drive   is,   if   we   can   just   get   up   to   the   average,   we're   doubling   the   amount   of   tourism   revenue   essentially-  
+**Interviewer:** I   like   it.  
+**Candidate:** ...   from   leisure.  
+**Interviewer:** So,   um,   uh,   w-   just   before   we   leave   this   exhibit,   you   mentioned   why   you   wanted   to   focus   on   the   leisure   side   or   leisure-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   as   you   say   it.  
+**Candidate:** Yeah.   (laughs)  
+**Interviewer:** Uh,   and   so,   um,   I,   I'm   just   curious   if   you   can   run   the   same   calculations   in   the   business   side-  
+**Candidate:** Yeah.   Absolutely.  
+**Interviewer:** ...   and   just   tell   us   if   there's   any   insights   there.   W-   want   to   make   sure   that   before   we   move   on,   we   kind   of   see   what's   going   on   there.  
+**Candidate:** Yeah.   So   just   to   do   the   same   with   business,   um,   for   our   client   it's   1,000   divided   by   500,   nice   and   easy,   that's   two.   For   pair   country   A,   that's   700   divided   by   400,   which   is   just   under   two   I'm   gonna   say.   Um,   and   I   can   get   exact   numbers   if   you   want   at   any   point.  
+**Interviewer:** It's   okay.   I   think   this   is   fine.  
+**Candidate:** Um,   pair   country   B   is   750   divided   by   350.   Again,   just-  
+**Interviewer:** Just   check   that   number.   Mm-hmm.  
+**Candidate:** Oh,   700,   sorry,   over   350.   That   makes   it   easier.   That's   two.   And   then   lastly,   900   over   450,   um,   that   is   two   as   well.   Okay,   and   the   only,   the   only   thing   that's   interesting   about   this   is   I'm   wondering   for   every   other   calculation   it   was   an   exact   number.   I'm   wondering   why   the   average   spend   per   day   for   business   in   pair   country   A   is   400   and   the   average   spend   per   stay   is   700.   That's,   that's   an   interesting   thing,   and   maybe   people   are   flying   out,   uh,   after   half   a   day   or   something.   Uh,   that's,   that's   an   interesting   thing   I,   I   noticed   there.  
+**Interviewer:** Well,   of   course   there   will   be   some   people   that'll   stay   longer   and   some   that'll   stay   shorter.   So-  
+**Candidate:** Absolutely.   Um-  
+**Interviewer:** So   it   could   be   that   as   well.   Um,   which   country   is   our,   is   our   favorite?   Like   if   we   kind   of   were   like   hey-  
+**Candidate:** If   I   were   to,   uh-  
+**Interviewer:** ...   we   want   to   become   like   another   country,   uh,   not,   not   just   all   of   the   other   peers,   but   is   there   anybody   that   in   particular   you're   interested   in   figuring   out?  
+**Candidate:** Um,   I   mean,   pair,   pair   country   C   looks   pretty,   pretty   great   in   my   opinion.   They   have   the   most   amount   of   stays   by,   by   quite   a   healthy   margin.   They're,   they're   very   dominant   in,   in   terms   of   leisure   compared   to   all   the   other,   and   compared   to   business.   So   that   is   maybe   I   guess   a   risk   with   that   in   case   of   some   sort   of   macroeconomic   factor   that   could,   that   could   cause   devastation   there.   Um,   but   they're   sta-   they're   staying   for   eight   days,   and   while   they're   not   paying   the   most,   they're   still   paying   a,   a   very   healthy   amount,   but   they're   staying   for   over   a   week,   which   is,   must   be   generating   so   much   revenue.   So   I   really   wanna,   I   wanna   match   country,   country   C   if   we   can.  
+**Interviewer:** Okay.   Great.   Awesome.   So   let's   move   on.   What   do   you   want   to   look   at   next?   You   were,   you   mentioned   to,   uh,   a   few   things   earlier   but   now   that   we've   talked   through   all   of   that,   what   do   you   want   to   do?   Mm-hmm.  
+**Candidate:** Yeah.   So   we've   calculated   that   we   have   a   lower   number   of   stays.   Is   there...   I'm   just   wondering   actually,   going   back   to   the   beginning,   I   know   we   want   to   increase   tourism   revenue.   Did   we   have   a   goal   that   we   wanted   to   get   to   or   a   timeframe   or   something?  
+**Interviewer:** We   do   actually.  
+**Candidate:** Great.  
+**Interviewer:** So   in   the   next   five   years,   we,   um,   believe   through   the   ministry   that   we   can   reach   a   level   where   revenues   from   the   tourism   sector   amount   to   about   100   million   US   dollars.
+**Candidate:** And   that's,   uh,   that's   for   the   general,   right?  
+**Interviewer:** That's-  
+**Candidate:** For   leisure   and   business.  
+**Interviewer:** That's   for   leisure   and   business,   and   it's   specifically   for   accommodation.   So   of   course,   there   are   gonna   be   these   other   ancillary   factors   that   you   laid   out,   right?   Those   people   will   also   spend   money   and   they'll   rent   cars   and   they'll   do   other   things.  
+**Candidate:** But   we're   looking   at   just   accommodation.  
+**Interviewer:** That's   correct.  
+**Candidate:** Great,   okay.  
+**Interviewer:** And,   uh,   and   so   if   you   can   kind   of   keep   us,   it,   in   the   focus   for   what   that   will   look   like,   then   that'll   be   helpful.  
+**Candidate:** Perfect.  
+**Interviewer:** Um,   and   so   yeah.   So,   um,   what   will   be   the   required   average   duration   per   se-  
+**Candidate:** Hmm.  
+**Interviewer:** ...   for   leisure   travelers   if   we   want   to   achieve   this   target?   And   I   actually   have   some   more   data   for   you   on   this.  
+**Candidate:** Great.  
+**Interviewer:** So   I'm   gonna   put   this   on   top   of   this   one.  
+**Candidate:** Yeah.  
+**Interviewer:** But   you're   welcome   to   move   those   if   you   want   to,   um,   u-   use   any   of   the   information   from   the   first  
+**Candidate:** Perfect.   I'm   just   gonna   take   a   second   to   look   through   this,   walk   you   through   it,   and   then   we   can   maybe   do   what   we   did   on   the   last   question   where   I   can   walk   you   through   the   math,   but   I   wanna   do   and   we   can   go   ahead   and   do   that.  
+**Interviewer:** Sounds   good.  
+**Candidate:** So   leisure   stays   800   and   I   am   just   actually   (laughs)   I'm   gonna   switch   back   and   forth   from   them.   Uh,   so   that's   80,000   stays.   This   is   today.   Um,   okay,   and   I   can   see   that   that's,   that's   80%   of   the   100,000   total.  
+**Interviewer:** Correct.  
+**Candidate:** Um,   and   so   business   would   be,   be   tw-   tw-   20,000   there.   Um,   in   terms   of   the   growth,   that's   10%   per   year   linear.   Um,   okay,   so   that   just   basically   means   we   can   multiply   that.   So   over   five   years,   we   can   just   say   50%.  
+**Interviewer:** Yep.  
+**Candidate:** Um...  
+**Interviewer:** How   nice.  
+**Candidate:** Yeah.   Very,   very   kind   of   a,   of   a,   of   you   to   do   that.   Um,   okay,   so   that   we've   got   the   average   duration   for   business,   we   have   the   average   spend   for   both,   and   we've   got   our   objective.   What   I   am   seeing   is   obviously   we're   missing   the   duration   for   leisure.   So   that's   what   we're   trying   to   calculate   for.   So   what   I'd   probably   do   here   is   take   that   100   thous-   100   million   US   dollars,   uh,   subtract   the   amount   of   money   generated   or   estimated   generation   from   business,   and   then   calculate   the   needed   or   required   length   of   stay   on   average.   And   to   do   that,   I   just,   uh,   and   I   can,   I   can   get   into   that   then,   but   I'd   probably   divide   the   amount   of   total   revenue   divided   by...   Or   the   amount   of   total   revenue   with   the   total   stays   divided   by   the,   um,   I   guess   the   average   duration   to   find   how   many   total,   total   days   they   need   to   stay.  
+**Interviewer:** Okay.   Let's   walk   me   through   it.  
+**Candidate:** Okay,   perfect.   So   obviously   our   goal   is   that   100   million.   So   the   first   thing   I   wanna   do   is   calculate   how   much   we're   getting   from   businesses.  
+**Interviewer:** Okay.  
+**Candidate:** So   we   know   that   businesses,   uh,   as   I   mentioned   before,   it's   gonna   be   20,000,   um,   stays   per   year.   And   we   actually   know...   In   fact,   actually,   sorry.   Before   I   go   into   that,   I   just   want   to   go   back   to   that   100,000   and   let's   increase   that   at   the   beginning.   That   might   make   it   a   little   bit   easier.  
+**Interviewer:** Okay.  
+**Candidate:** So   100,000,   again,   nice   and   easy   number,   it's   gonna   be   150,000   total   stays.  
+**Interviewer:** Great.  
+**Candidate:** And   we   know   that   business   makes   up   20%   of   that.   So   I'm   just   gonna   kind   of   break   this   up   here.   Um,   20%   of   150,000,   10%   is   15,000,   20%   is   30,000.   And   that   means   that   when   we   come   back   to   leisure,   we   know   it's   120,000.  
+**Interviewer:** Great.  
+**Candidate:** So   once   we've   got   that   30,000   stays,   we   need   to   multiply   it   by   the   actual   amount   of   time   they're   spending   there.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** So   30,000   multiplied   by   two   days,   again   nice   and   easy   numbers   here,   60,000.   And   then   from   there,   we   know   that   they're   spending   500   US   dollars   a   day.   So   60,000   multiplied   by   five   is   300,000,   and   then   tack   on   those   two   zeros,   gets   us   to   30   million.   I   should   make   that   more   clear.   Okay,   so   now   we   know   what   we   actually   need   from   the   leisure   section.   We   need   70   million.   And   to   get   that,   I   just   did   the   100   million   total   goal   minus   the   30   million   that   we're   getting   from   business.  
+**Interviewer:** Okay,   great.  
+**Candidate:** So   now   we   have   our   70   million   that   we   need.   We   know   that   we   have   a   hun-   120,000   stays,   and   we   know   that   they're   spending   $100   a   day.   So   what   I'm   first   gonna   do   is   divide   the   70   million   by   $100.  
+**Interviewer:** Okay.  
+**Candidate:** And   that's   gonna   be   70   million   divided   by   10   will   be   7   million.   It's   gonna   go   down   to   $700,000,   so   or   700,000,   um...   I'm   actually,   let   me   just   make   sure   I've   got   the   right   units   there.   So   it's   $70   million   divided   by   the   dollar   spent.   So   it's   just   seven,   700,000.   And   then   we   know   that   we   have   120,000   stays.   So   120,000   stays   multiplied   by   X   number   of   days   on   average   gets   us   our   700,   um,   thousand.  
+**Interviewer:** Okay.  
+**Candidate:** So   I'm   gonna   do   700,000   and   I'm   going   to   divide   that   by   120,000.   Um,   and   that   is   gonna   be   a   little   bit   under,   uh,   six,   but   I'm   gonna   round   up   to   six.   Obviously,   they   can't   stay   for   a   quarter   of   a   day.   I   know   there's   caveats   there   with   late   check-outs   and,   and   other   things.   Um,   so   we're   saying   that's   about   six   days,   uh,   is   what   we   need.   And   before   actually   we   do   anything   more,   I   do   want   to   just   compare   that   to   the   benchmarks   of   the   competitors   I   know.  
+**Interviewer:** Okay.  
+**Candidate:** I   remember,   yeah,   so   Peer   Country   C   is,   uh,   eight   days.   So   they're   actually   doing   even   more   than   this.   This   is,   this   is,   uh,   almost   like   a,   a   conservative   estimate   here.   Um,   and   the   other   companies   are   seven   and   six   days.   So   we're,   we're   on   the   lower   end   of   the,   of   the   average   number   of   stays.   I   think   it's   very   doable,   but   maybe   we   could   go   into   a   little   bit   more   in   terms   of,   of   how   it's   achievable.  
+**Interviewer:** Great,   let's   talk   about   it.  
+**Candidate:** Perfect.  
+**Interviewer:** So,   uh,   y-   you   know,   I   think   the   key   kind   of   focus   here   is   just   making   sure   that   we   can   think   about   how   we're   going   to   increase   the   average   length   of   stay.   And   you   don't   have   to   limit   it   to   the   six   days.   We   could   go   beyond   that.  
+**Candidate:** Yeah.  
+**Interviewer:** So   what   are   some   of   the   levers   that   you   would   pull   in   order   to   move   from   where   we   are   now   with   just   a   couple   of   days   to   the   six   days?  
+**Candidate:** Yeah,   well,   I   mean,   just   to   immediately   tie   it   back   to,   to   personal   experience,   um,   I'm   almost   done   with   college.   I   recently   had   spring   break.  
+**Interviewer:** Okay.  
+**Candidate:** And   a   huge   place   that   everyone   loves   to   go   is,   is   Cabo   San   Lucas,   Mexico.  
+**Interviewer:** Absolutely.   (laughs)  
+**Candidate:** And   they   stay   for   about   five   or   six   days.   And   so   I   just   want   to   draw   from   that,   and   I   think   a   big   reason   they   do   that,   and   especially   at   least   for   the   student   demographic,   is   all-inclusive.   And   so   having   these   sort   of   bundles   where,   um,   they   say   you've   got   the   food,   you've   got   the   activities,   you've   got   all   this.   Uh,   you   pay   a   premium   on   it,   but   you   stay   for   longer.And   actually,   uh,   my   roommate   and   I   tried   to   go   for   two   days   and   they   wouldn't   let   us.   They   had   a   minimum   amount.   So   that's   an   interesting   thing   that   they   could   add   in   there   is-   is,   "Yeah,   we'll   do   all-inclusive   but   you   have   to   stay   for   five   days   minimum."   And   it's   actually   cheaper   the   longer   you   stay,   right?  
+**Interviewer:** Okay.  
+**Candidate:** So   incentivize   them   to-   to   actually   stay   longer.   Um,   and   I   know   we're   limiting   it   to   accommodation   there,   but   the   longer   they   stay,   the   more   revenue   that   generates   for   you   as   well.  
+**Interviewer:** Okay.  
+**Candidate:** Um,   some   other   things   with   that   as   well   are   maybe,   again,   with   the   hotels,   if   they're   partnering   with   other   restaurants,   "Oh,   come   stay   with   us   and   we'll-   we'll   recommend   you   some   restaurants   and   we   can   make   it   cheaper   there."   Give   some   sort   of   incentives   to   go   out   there.   Um,   and   I-   I   just   wanna   make   sure   I'm-   I'm   focused   on   the   right   point.   Are   we   talking   specifically   about   accommodation   here   or   in   general?  
+**Interviewer:** So,   I   think   we're   assuming   that   if   we   improve   the   accommodation   piece,   then   everything   else   will   follow.  
+**Candidate:** Yeah.  
+**Interviewer:** That   people   will   also   spend   more   money-  
+**Candidate:** Okay.  
+**Interviewer:** ...   in   restaurants,   they'll   s-   buy   more   rental   car   days,   they'll   do   kind-   all   the   up-   more-   additional   activities.   But   certainly,   um,   if   there's   something   that   you   think   will   drive   the   length   of   stay-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   in   some   of   those   issues,   then   please   tell   me   that   as   well.  
+**Candidate:** Yeah.   I   think,   um,   obviously   some   marketing.   I've-   I've   actually   never   seen   anything   in-   in   West   Africa   advertised   to   me.   I've   heard   of   a   lot   of   tourist   spots   and   I   haven't   really   heard   about   that.   So   maybe   just   getting   on   the   map   a   little   bit   more.  
+**Interviewer:** Okay.  
+**Candidate:** I'm   not   sure   where   most   of   their   tourists   come   from   or   if   it's   pretty   uniform   from   the   world.   But   it'd   be   interesting   to   have   them   go   ahead   and   push   out   some   more   marketing   for   there,   really   advertise   on   Instagram   and   to   whether   they   do   couples   packages   or   whether   they   do   family   packages.   Um,   I   think   that   could   be   a   huge   driver   in   just   getting   more   traffic,   as   well   as   maybe   just   highlighting   what's   so   amazing   about-   about   where   they're   staying,   right?   So   if   it's   on   the   beach   side,   having   a   beach   side   resort.   If   it's,   uh,   maybe   closer   to-   to   the   center   of-   of   this   area,   then   maybe   they   can   advertise   safaris   or   other   things   and-   and   activities,   um,   for   groups   to   do.  
+**Interviewer:** Awesome.   Anything   else?  
+**Candidate:** Um,   yeah.   I   think   as   well   just   like   making   it-   making   it   really   easy   for   people.   If   people   are   going   here   on   vacation   they-   they   probably   want   things   like   a   shuttle   from   the   airport   and   little   amenities   that   add   up   and   just   make   your   stay   way   easier   and   way   nicer,   I   think   could   also   help   them-   them   get   a   little   bit   more   people.  
+**Interviewer:** What   else?  
+**Candidate:** Um,   let   me   think.   Maybe   having   some   sort   of   ...   And-   and   again,   just   really   focusing   on   the   accommodation   here,   having   more   like   in-house   restaurants   and   more,   again,   just   keeping   it,   um,   closer   to   that   all-inclusive   package.   You   could   also   offer,   um,   like   a   non-all-inclusive   package   where   people   can   stay   for   a   short   amount   of   time,   but   it's   maybe   p-   perhaps   more   expensive   or   something.   And   just-   just   making   sure   we're   catering   as   well   to   all   demographics,   so   people   who   don't   want   to   spend   a   fortune   can   still   stay   here,   but   people   who   wanna   have   a   luxury   all-inclusive   stay   can   also   pay   the   premium   for   that.  
+**Interviewer:** Now,   assuming   that   there's   gonna   be   alignment   but   also   a   difference   in   purpose,   um,   one   final   question   before   we   conclude.   How   would   you   think   about   the   Ministry   of   Tourism's   role   specifically   in   accomplishing   these   things?  
+**Candidate:** Yeah.   Interesting.   Well,   first   thing   I'm   thinking   is   maybe   some   sort   of   like   subsidizing   so   they   can   make   it   easier   for   hotels   and   for   places   to   actually   attract   people.   I   think   at   the   end   of   the   day,   a   lot   of   these   hotels   and   accommodation,   um,   resorts,   they're-   they're   a   business.   They're   in   it   for   the   money   and   so   if   it's   way   more   expensive   for   them   to-   to   make   these   changes   and   they're   not   seeing   an   immediate   response,   they   might   be   a   bit   more   reluctant   to.   So   if   the   Ministry   of   Tourism   can-   can   work   with   them   to   help   make   that   a   little   bit   of   an   easier   change,   that's   probably   gonna   be   more   incentivizing.   Um,   as   well   as   just   helping   make   sure   it's,   one,   it's   a   safe   environment.   I'm   not   sure   how   safe   or   unsafe,   uh,   this   area   of   West   Africa   is,   but   just   making   sure   that   tourists   know   it's   safe   and   know   that   there's,   um,   there's   resources   there   and   things   like   that,   just   to   again   appeal   to-   to   all   tourists.   I   think   that's   probably   something   that   would   help   as   well.  
+**Interviewer:** Okay.   Great.   Final   recommendation.  
+**Candidate:** Yes.  
+**Interviewer:** What   would   you   think   that   they   should   do?   What   else   should   they   do   that   we   haven't   h-   been   able   to   cover   in   the   case   today?  
+**Candidate:** Um,   yeah.   So   to   summarize,   I   think   the   biggest-   the   biggest   issue   here   is   the   length   of   stay,   and   so   we   really   need   to   increase   the   length   of   stay.   And   I   think   some   ways   we   can   do   that   is   to   work   with   the   Minis-   the   Ministry   of   Tourism   can   work   with,   uh,   resorts   and   hotels   in   order   to   both   improve   the   quality,   um,   as   well   as   offer   some   sort   of   bundles   and   other   incentives   that-   that   bring   tourists   into   this   country.   Um,   I   think   some-   some   risks   that   may-   may   come   with   that   are   if   all   this   money   is   spent   advertising   and   it   doesn't   reach   a   critical   mass   of   people   coming   over,   that   almost   might   have   negative   PR   if-   if   people   are   seeing   this   place   advertised   but   no   one   knows   anyone   who's   been   there.   That   could   almost   reverse   what   they   are   trying   to   do.   Um,   but   I   think   some   next   steps   are   maybe   work   ...   Have   the   Ministry   of   Tourism   work   with   some   hotels   to   start   building   some   sort   of   strategy   to   both   market   and   improve   their   hotels.  
+**Interviewer:** Okay.   So,   what   do   you   think?  
+**Candidate:** It   was-   it   was   a   really   interesting   case.   I   quite-   I   quite   liked   that.   Um,   I   always   think   it's   interesting   when   it's   talking   about   something   I   don't   know.   So   I   have   no   experience   with   West   Africa,   um,   relatively   little   case   experience   with   like   hotels,   so   it   was   really   interesting   to   dive   into   some   of   the   components   there.   And   I-   I   really   like   the   analytical   side   of   these   cases   where   I   can   h-   I   have   to   figure   out   what   numbers   I   need   to   calculate   and   go   there.   And   I   think   I   did   a   well-   a   relatively   well-structured   job   of   doing   that.   Uh,   when   it   came   to   the   end,   I   felt   like   I   was   maybe   babbling   a   little   bit   and   maybe   not   generating   enough   new   creative   ideas   in   terms   of   how   they   can   solve   the   problems,   but   that   was   just   maybe   one   or   two   things   I   noticed.  
+**Interviewer:** Cool.   Awesome.   So,   uh,   I-   I'll-   I'll   address   the   babbling   when   I'm   going   through   the   feedback.  
+**Candidate:** Yes.  
+**Interviewer:** But   overall,   uh,   like   I   felt   like   your   math   and   your   focus   were   two   real   highlights   of   this   case.  
+**Candidate:** Okay.  
+**Interviewer:** Uh,   so   it   ...   The   math   was   very   fluid.   You   used   it   to   support   it,   but   you   also-   you   kept   bringing   me   back   to   the   main   thing.   I   do   think   that   there   were   a   couple   of   kind   of,   uh,   low-hanging   fruit   pieces   outside   of   the   core   that   you   could've   focused   on,   but   it-   it   left   me   no   question   that   when   given   the   choice   between   doing   lots   and   doing   the   main   thing,   you   would   always   choose   the   main   thing.   So   that's   really-  
+**Candidate:** Okay.  
+**Interviewer:** ...   I   think   a   key   fo-   fun   highlight   from   this   case.   Um,   the   first   thing   is   just,   uh,   you   know,   I   thought   your   note   taking   and   your   recap   at   the   beginning   was   really   good.   But   I   don't   know   that   you   fully   understood   what   a   Ministry   of   Travel   did,   and   I   feel   like   you   could've   asked   me-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   a   clarifying   question   or   two.   Uh,   you   know,   and   really,   um,   some   Ministry   of   Travels   are   actually   paid   by   hotels.   There's   a   hotel   tax-  
+**Candidate:** Oh,   okay.  
+**Interviewer:** ...   that   funds   them,   and   so   that   would've   tied   us   right   into   the   accommodation   piece.   You   got   there   pretty   quickly   anyhow.   Um,   but-   but,   uh,   other   ones   are   just   sponsored   by   the   government.   But   yeah,   at-   at   any   rate,   they're   not   incentivized.Right?  
+**Candidate:** Yes.  
+**Interviewer:** They   don't   make   more   money,   I   mean,   they'll   have   a   bigger   budget-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   maybe.   But,   um,   but   they,   they're   mandated.   It's,   it's   a   different-  
+**Candidate:** Yes.  
+**Interviewer:** ...   kind   of   organization   that's,   that's   thinking   on   a   purpose   that's   a   little   different   than   some   other   (paper rustling)   companies.   And   so   just   I   think   highlighting   maybe   a   few   of   those   differences,   um,   some   of   your   clarifying   questions   don't   necessarily   have   to   be   about   the   problem   here.   Um,   although   I   think   you   could've   also   maybe   gone   into   the   problem   just   a   little   bit.  
+**Candidate:** Yeah.  
+**Interviewer:** Right?   You   know,   are   there   other   countries   who   are   doing,   um,   you   know,   really   well?   Probably,   let's   look   at   some   of   that.   Right?   You   know,   there,   there   could've   been   some   other   things   you   could   ask   there.  
+**Candidate:** Yeah.  
+**Interviewer:** So,   you   basically   asked   no   clarifying   questions.   I   just   felt   like   I,   it,   it   made   me   question   whether   you   had   a   full   understanding   of   it,   and   by   the   time-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   we   got   to   the   end,   I   still   wasn't   100%   sure.   Um,   on   your   case   structure,   um,   and,   and   so   actually   just   going   back   through   the   numbers,   so   I   give   you   a   three   on   the   case   re-   recap   and   a   three   on   the,   um,   clarifying   questions   because   you,   uh,   you   know,   asked   a   question   or   two   just   kind   of   checking   to   make   sure   you'd   gotten   everything,   but   you   didn't   really   dive   into   that   a   little   bit   more.   Um,   I   put   a   three   for   your   case   structure.   I   actually   really   liked   your   case   structure.   Um,   th-   the,   my,   the,   the   one   thing   that   would've   made   it   a   four,   so,   uh,   three   on   cont-   four   on   content,   three   on   just   verbal   delivery,   and   again-  
+**Candidate:** Okay.  
+**Interviewer:** ...   uh,   right   now   we're   sitting   in   the   same   room.   You   wouldn't   always   do   that.   Sometimes   you'll   be   on   Zoom   or   remote,   um,   but,   but   I   would've   wanted   you   to   actually   tell   me,   bucket   one,   bucket   two,   bucket   three.  
+**Candidate:** Right.  
+**Interviewer:** And,   and,   and   if   I   wasn't   able   to   look   at   your   paper,   sneak   peak   here,   I   felt   like   there   could've   been   a   little   bit   of   a   lack   of   structure   there.  
+**Candidate:** Oh,   yeah.  
+**Interviewer:** Um,   uh,   in   addition,   you,   uh,   put   accommodation   first.   It   was   your   priority   bucket,   but   you   didn't   mention   that.   I   had   to   prompt   you   for   that.  
+**Candidate:** Okay.   Okay.  
+**Interviewer:** And   so   again,   right,   why   is   accommodation   your   priority?   And,   um,   it...   was   it   actually   first   in   your   paper,   if   we   can   just   look   at   it   really   quickly?  
+**Candidate:** It   was,   yeah.  
+**Interviewer:** Yeah,   yeah.   It   was   first.   Um,   but   again,   you   know,   you   didn't...   right,   right   when   you   finished   your   structure,   you   just   dove   right   into   the   presentation.   I   just   really   encourage   you   to   take   a   second   to,   to,   five   seconds   to   reflect   on   is   this-  
+**Candidate:** That's   the   plan.  
+**Interviewer:** ...   is   this   the   order   that   I   wanna   present   these   in?   Um,   because   it,   in   this   case,   uh,   as   a   Kearney   case,   I'm   really   directing   it,   but   let's   say   it   wasn't   your...   let's   say   you   get   a   pretty   chill   interviewer.  
+**Candidate:** Yeah.  
+**Interviewer:** I   am   not   chill.  
+**Candidate:** (laughs) .  
+**Interviewer:** Uh,   but,   but   in   case   you   did,   then   we'd   wanna   make   sure   that   you   were   really   driving   that   forward.  
+**Candidate:** Yeah.  
+**Interviewer:** Um,   your   math   was,   was   really,   uh,   awesome.   Flawless,   clear.   You   know,   I   felt   like   you   laid   it   out   on   your   paper.   I   was   able   to   follow   what   you   were   thinking.   Um,   uh,   uh,   like,   I   would've   maybe   mentioned   a   few   of   the   bonus   pieces.  
+**Candidate:** Okay.  
+**Interviewer:** So,   not   just   like,   "Hey,   let's   look   at   this   and   let's   look   at   the   next   thing."   But   like,   if   we   had   more   time   or   if   we   have   budget   or   different   staff,   I   would   also,   you   know,   j-   uh,   like   one   of   the   key   insights   from   one   of   the,   from   the   first,   um,   chart   is   that,   right,   the,   the,   um,   total   spend   per   stay,   um,   actually   across   the   board,   is   higher   in   business   versus   leisure.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** And   so,   um,   you   know-  
+**Candidate:** Oh,   yeah.   That's   a   good   point.  
+**Interviewer:** ...   so   even   though   it's   a   bigger   portion   of   it   and   it's,   it's   more   profitable,   like,   if   you   are   able   to   do   something   in   that-  
+**Candidate:** Per   unit   increase-  
+**Interviewer:** Correct.  
+**Candidate:** ...   is   way   better   in   business.  
+**Interviewer:** Correct.   And   so   I   felt   like   there   were   some   of   those   second   level   insights   that   I   didn't   get   from   you   that   I   would've   loved   to   have   seen.  
+**Candidate:** Yeah.  
+**Interviewer:** Uh,   I   didn't   need   them   to,   you   know,   pass   you   on.   It...   right?   Th-   this   was...   the   case   was   good   enough   without   it,   but,   but   just   kind   of   as   a   bonus.   Um,   but   I   gave   you   a   four,   um,   for   the   math,   uh,   for   the   first   half   and   a   fourth   for   the   second   half.   Right?   Correct   answer,   approached   it   quickly,   good   verbal   explanation,   um,   excellent   insights   tied   back   to   the   big   picture.   So,   um,   so   I   thought   that   was   really   good.   Your   c-   um,   case   creative   question,   I   give   you   a   three   on.   Uh,   actually,   I'll   give   you   a   two.   Sorry.  
+**Candidate:** Okay.   No   worries.   (laughs) .  
+**Interviewer:** Um,   the,   um,   no   structure.  
+**Candidate:** Yeah.  
+**Interviewer:** (laughs)   Right?   Good   ideas,   but   no   structure   to   them.  
+**Candidate:** Yes.  
+**Interviewer:** You,   you   didn't   write   anything   down.   Um,   so   you   got,   you   got   kind   of   in   the   flow   of   just   explaining   your   thoughts.   So,   the   ideas   were   good,   but   then   I...   that's,   that's   why   on   that   one,   if   you   noticed,   I   punched   you   on   what   else,   what   else-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   what   else.   'Cause   I   was   trying   to   trap   you   a   little   bit.   You   n-   uh,   I   never   got   you,   but,   um,   but   I   really   wanted   to   see   kind   of   where   the   boundaries   were   of   your   mental   recall.  
+**Candidate:** Yes.  
+**Interviewer:** And   I,   I   felt   like,   um,   again,   you   lacked   if   you   didn't   do   the   written   brainstorming,   the   ability   to   reprioritize,   to   focus,   or   to   dive   deeper   on   any   of   those   areas.   And   so   I,   I   just   felt   like   you   were   bearing   a   risk   that   was   unnecessary   there.  
+**Candidate:** So,   should   I   have,   I   guess,   A,   asked   for   more   time   and   written   all   my   demo   ￡   presented,   or   B,   as   I'm   talking   to   you,   writing   them   down?  
+**Interviewer:** I   actually   really   like   it   when   somebody   walks   through   it.   You,   uh,   uh,   you're   demonstrating   that   you're   quick   on   your   feet-  
+**Candidate:** Okay.  
+**Interviewer:** ...   you're   thoughtful,   you're   creative.   I   like   it   when   you   don't   take   the   time   to   write   it   down.   I   don't   need   it   to   be   that   prepared.   I   just   need   to   know   that   you   remember   what   you   wrote   down   and   that   it   leads   you   to   further   brainstorming.  
+**Candidate:** Okay.  
+**Interviewer:** So,   I   felt   like   there   w-   we   were   just   kind   of   missing   a   little   piece   on   that.   And   then,   great.   Final   recommendation,   right?   Um,   you've   got   here...   y-   you   kind   of   dove   in   at   the   beginning.   I'd   rather   have   you   just   say,   uh,   "Look."  
+**Candidate:** Here's   what   we're   looking   at.  
+**Interviewer:** Here,   you   know,   what,   what   we're   looking   at   is   increasing   the   total   revenue   and   to   do   that   we   found   that   one   major   way   is   this.  
+**Candidate:** Yeah.  
+**Interviewer:** Um,   I   also   felt   like   your   next   steps   could've   gone   back   had   you   taken   either   more   notes   or   developed   some   of   those   insights   to   that-  
+**Candidate:** Okay.  
+**Interviewer:** ...   there's   more   that   we   can   do.   Right?   Um,   look,   we   could   look   at   more   days.   We   could   look   at   additional   incentives.   We   could   look   at   business.   We   could   look   at...   uh,   right,   additional   peer   countries.   There's   more   that   we   could   do.   So   I   felt   like   there,   there   were...   was   a   little   bit   of   it   broader   there.   Um,   I,   I   wouldn't   need   more   structure.   You   were   very   structured,   but   just   more   content   on   top.   (instrumental music)

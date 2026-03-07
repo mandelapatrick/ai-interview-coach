@@ -1,0 +1,24 @@
+Key,Description,Required,Type,Default,Values
+title,Name of the case,TRUE,Text,N/A,
+description,The case scenario to ask the candidate. ,TRUE,Text,N/A,
+additional_info,Additional info to be be provided if candidate asks. The list is used to represent a case with multiple prompts and additional info for each prompt. The length of the list == number of prompts for case.,TRUE,List,[],
+additional_questions,"If it's a interview led question, there's usually multiple follow-up questions after the main case scenario is given. The length of the list == number of follow-up questions for the case.",FALSE,List,[],
+exhibit_images,Link to images/screenshots of the exhibits for the case. This is also a list as there may be multiple exhibits in a case.,FALSE,List,[],
+solution,The solution to the case,TRUE,Text,N/A,
+evaluation,The rubric to grade the performance on the case,TRUE,Text,N/A,
+companySlug,The company that asks the case question,TRUE,Text,N/A,"[mckinsey, bcg, bain, deloitte, accenture, kearney, oliver-wyman, roland-berger, lek, strategy-and]"
+type,The core thing the case is evaluating/testing,TRUE,Text,N/A,"[profitability, market-entry, market-sizing, m&a, operations, growth-strategy, pricing, competitive-response, brainteasers, turnarounds, strategic-decision, industry-analysis]"
+difficulty,The difficulty of the case question,TRUE,Text,medium,"[easy, medium, hard]"
+industry,What industry is the case about,FALSE,Text,N/A,"[consumer-packaged-goods, oil&gas, manufacturing, financial-services, healthcare, private-equity, Investments, pharmaceuticals, airline, media, technology]"
+interviewFormat,The structure of the interview,TRUE,Text,candidate-led,"[candidate-led, interviewer-led]"
+source,The casebook (e.g. Tuck2009) the question came from,TRUE,Text,N/A,
+,,FALSE,,,
+,,FALSE,,,
+,,FALSE,,,
+,,FALSE,,,
+,,FALSE,,,
+,,FALSE,,,
+,,FALSE,,,
+,,FALSE,,,
+,,FALSE,,,
+,,FALSE,,,

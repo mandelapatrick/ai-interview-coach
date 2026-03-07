@@ -1,0 +1,274 @@
+Case: CookieCo
+Case Type: Profitability
+Firm: BCG
+Channel: Management Consulted
+URL: https://www.youtube.com/watch?v=M0-c7rXzhwk
+============================================================
+
+**Interviewer:** Hey,   Ed.   I'm   excited   to   walk   through   this   case   with   you.   Just   for   context,   this   is   a   BCG-style   case,   and   so   I'm   going   to   look   for   you   to   lead   me   through   it.   If   there   are   numbers   or   exhibits,   it'll   be   up   to   you   to   put   some   information   in   your   structure,   and   then   we   will   dive   in   from   there.  
+**Candidate:** Great.  
+**Interviewer:** Sound   good?  
+**Candidate:** Sounds   good.  
+**Interviewer:** Okay.   Awesome.   (instrumental music)   So   let's   get   started.   Our   client   today   is   a   national   manufacturer   and   seller   of   packaged   cookies   in   the   United   States   called   Cookie   Co.   In   the   last   two   to   three   years,   they've   seen   a   decline   in   profits,   whereas   the   rest   of   the   industry   has   experienced   healthy   growth.   They've   come   to   us   to   identify   the   root   cause   of   this   issue   and   how   they   can   reverse   it.  
+**Candidate:** Perfect.   So   just   to   clarify,   our   client   today   is   Cookie   Co.   They   are   a   national   manufacturer   and   seller   of   packaged   cookies   in   the   United   States,   and   over   the   past   two   to   three   years,   they've   actually   noticed   a   decline   in   profitability,   whereas   all   their   competitors   and   the   market   in   general   seems   to   actually   be   stagnant   if   not   growing.  
+**Interviewer:** Exactly.  
+**Candidate:** Perfect.   Okay.   So   just   a   few   questions   before   I   jump   into   my   framework.  
+**Interviewer:** Awesome.  
+**Candidate:** Um,   their,   their   scope   for   this   is   j-   is   just   the   United   States,   correct?  
+**Interviewer:** Absolutely.  
+**Candidate:** Okay.   Wonderful.   And   can   we   assume   that   they   maybe   just   pr-   provide   cookies,   they   don't   sell   any   other   sort   of   packaged   goods,   and   if,   if   they   do,   we're   just   focusing   on   the   cookies   today?  
+**Interviewer:** So   yes,   they   do   sell   other   products,   but   our   only   focus   today   is   on   their   cookie   segment.  
+**Candidate:** Wonderful.   Sounds   good.   Do   you   mind   if   I   take   a   few   minutes   to   structure   my   thoughts?  
+**Interviewer:** Go   for   it.  
+**Candidate:** Perfect.  
+**Interviewer:** Awesome.  
+**Candidate:** Okay.   So   I'm   ready   to   walk   you   through   my   thoughts   for   this.  
+**Interviewer:** Amazing.  
+**Candidate:** So   when   it   comes   to   profitability,   obviously   there's,   there's   two   main   things   that   can,   that   can   in-   increase   or   decrease   profitability,   the   revenues   and   the   costs.   So   they   are   actually   two   of   the   things   that   I   want   to   include   in,   um,   my   thoughts   here,   as   well   as   the   market   itself,   so   we're   thinking   competitors,   consumer   preferences.   Um,   but   let's   dive   into   revenues   a   little   bit   more.   Um,   when   it   comes   to   revenues,   two   of   the   things   that   I   think   could   really   impact   this   are   actually   how   many   cookies   they're   selling   or   the   price   at   which   they're   selling   them   at.  
+**Interviewer:** Okay.  
+**Candidate:** Um,   and   I'm   gonna   keep   it   a   little   bit   surface   level   now.   Maybe   we   can   dive   into   them   later   if   we   have   any   information   on   that.  
+**Interviewer:** Okay.   Mm-hmm.  
+**Candidate:** In   terms   of   costs,   there's   fixed   and   variable.   Fixed   might   include   labor   or   the   warehousing   costs,   distribution,   things   like   that.   And,   uh,   variable   would   be   ingredients   and   raw   materials.   (smacks lips)   In   terms   of   the   market   itself,   obviously   we've   noticed   that   the   competitors   are   actually   increasing.   So   they,   they   are   eating   up   our   market   share.   So   one   thing   that   might   be   causing   that   is   maybe   some   sort   of   innovation   in   the   cookie   space,   maybe   a   new   product   or   a   new   type   of   product.   And   linked   to   that   could   be   some   sort   of   consumer   preference.   Maybe   consumers   are   trying   to   go   sugar-free   now,   and   we're   not   catering   to   that,   um,   area   of   the   market.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** So   with   that,   let's   maybe   dive   into   revenues   and   cost.   Do   we   have   any   information   on,   on   that?  
+**Interviewer:** So   we   do,   but   f-   first   of   all,   I   just   have   a   question   about   your   hypothesis.  
+**Candidate:** Yeah.   Absolutely.  
+**Interviewer:** So   talk   to   me   about   whether   you   think   it   is   revenues   or   costs   that   are   the   key   issue   here.   As   we   know,   they're   declining   in   profitability.   The   market   has   been   growing.   What   do   you   think   is   going   on?  
+**Candidate:** Yeah.   Well,   uh,   my   initial   hypothesis   with   that   would   be   if   the   market   is   growing   itself,   we   are   probably   incurring   either   more   costs   or   making   less   revenue   per   cost,   i.e.,   our   margin   is   probably   decreasing.   Um,   again,   if   the   whole   market's   improving   and   all   our   competitors   are   improving,   we're   probably   selling   just   fine   would   be   my   initial   guess.   Obviously,   I'd   want   some   more   information   on   that.   But   I   would   imagine   that   the   root   of   that   would   be   somewhere   in   the   costs.  
+**Interviewer:** Okay.   Awesome.   Well,   I   actually   do   have   a   breakdown   of   costs.   Can   you   walk   me   through   the   cost   that   you   talked   through   before?   I   know   you   mentioned   some   of   them   in   your   structure.  
+**Candidate:** Yeah.  
+**Interviewer:** And   can   I-   do   the   same   thing,   right?   Just   give   me,   hey,   what   do   you   think   are   the   costs   for   this   business,   and   what   do   you   think   would   be   the   first   place   you   would   look   there?  
+**Candidate:** Yeah.   So   let's   almost   go   in,   in   a   chronological   journey   of   the   cookie,   right?   So   they're   making   the   cookie   itself.   That's   where   I   think   a   lot   of   the   variable   costs   are   gonna   come   in,   in   terms   of,   uh,   ingredients,   maybe,   um,   running   the-   some   of   the   factories   in   terms   of   the   per-unit   cost   there.  
+**Interviewer:** Okay.  
+**Candidate:** And   then   once   we've   actually   made   them,   we   need   to   do   a   few   things   to   them.   We   need   to   store   them   somewhere,   we   need   to   package   them,   uh,   and   we   need   to   distribute   them.  
+**Interviewer:** Okay.  
+**Candidate:** And   I   would   imagine   that   the,   um,   root   costs   here   are   probably   gonna   be   somewhere   in   terms   of   the   storing   or   the   distribution   of   the   cookies.   Maybe,   um,   there's   something,   uh...   Actually,   um,   I   might   even   steer   more   clear   from   the   distribution   just   because   that   might   be   something   that   would   affect   the   whole   market   instead   of   just   our   company.  
+**Interviewer:** Okay.  
+**Candidate:** Um,   but   I'd   love   to   know   if   you   have   more   information   on   that.  
+**Interviewer:** Yeah.   I   think   that's   a   good   insight.   Um,   just   talking   back   through   some   of   the   other   things,   talk   about   the   macroeconomic   environment   that   we've   been   in,   right,   2020,   2021,   2022.   Wh-   you   know,   walk   through   some   of   what   you   think   the   context   is.   And   what   cost   would   you   expect   to   increase,   and   which   ones   would   you   not   expect   to   increase?   You   mentioned   distribution.   I   think   that's   really   insightful.   Can   you   just   give   us   a   little   bit   more   layering   on   that?   Mm-hmm.  
+**Candidate:** Yeah.   If   we're   talking   about   distribution   in   particular,   obviously   we've   been   through,   we've   been   through   a   lot   in   the   past   few   years,   whether   it's   been   pandemics   and,   and   other   sort   of,   um,   economic   factors,   maybe   some   sort   of,   uh,   recession   that's   coming   along.   And   I   think   that   one   of   the   big   things   there   is   that,   um,   and,   and   focusing-  
+**Interviewer:** You   say   it   so   casually.  
+**Candidate:** (laughs)  
+**Interviewer:** Just   recessions   and   pandemics,   you   know-  
+**Candidate:** Exactly.   Well,   look-  
+**Interviewer:** ...   earthquakes   and   tornadoes,   as   you   do.   (laughs)  
+**Candidate:** Yeah.   Luckily,   I'm   not   the   CEO   of   a   cookie   company,   so   I   don't   have   to   worry   about   it   too   much.  
+**Interviewer:** (laughs)   Not   yet.  
+**Candidate:** Not   yet.   Um,   I   think   one   of   the   big   things   with   that   would   be,   uh,   when   it   comes   to   distribution,   with   a   pandemic   and   with   a   recession,   uh,   that's   definitely   a   cost   that   could   increase   if   the,   if   the   actual,   um,   supply   of   labor   for   distribution,   whether   it's   drivers,   whether   it's,   uh,   some   sort   of   freight   operators,   that   is   naturally   gonna   be   a   little   bit   lower.   And   so   if   that's   the   case-...   obviously   just   with   supply   and   demand,   that's   gonna   be   something   that's,   uh,   gonna   come   at   a   premium-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   compared   to   what   it   might   have   been   three,   four,   or   five   years   ago.  
+**Interviewer:** Yep.   Okay,   good.   I'm   just   making   a   couple   of   notes   here.  
+**Candidate:** Yeah.   No   worries.  
+**Interviewer:** Fantastic.   Okay.   So,   um,   so   picking   one,   what's   your   number   one,   uh,   uh,   area   of   cost   that   you'd   want   to   look   at   here?  
+**Candidate:** Well,   I   know   we've   driven   into,   um,   the   distribution   channels.   If   we   had   any   information   on   raw   materials   or   maybe   a   portfolio   of   the,   the   breakdown   of   costs,   that   would   be   really   interesting.   But   if   I   had   to   go   right   now,   I   think   distribution   is   probably   where   I   would   be,   where   I'd   be   focusing.  
+**Interviewer:** Okay.   Awesome.   Well,   I   do   have   one   exhibit.   Let   me   put   this-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   over   in   front   of   you.   And,   um,   so   if   you   wanna   just   kind   of   walk   me   through   what   you   think   the   exhibit   says   here.   Um,   we've   got   s-,   you   know,   breakdown   of   some   of   the   costs   you've   requested.   And   so   tell   me   what   you   think   this   his-   exhibit   is   talking   through.  
+**Candidate:** Yeah.   So   this   is   great.   So   it   looks   here,   um,   like   we   are   talking   about   the   previous   three   years   in   terms   of   a   breakdown   of   costs   and   actually   what's   happening   over   those   three   years.   And   immediately,   my   eyes   are   going   to   storage   and   warehousing.   That's   the,   seems   like   the   biggest   increase.   I   will,   I'm   gonna   work   through   them   left   to   right,   as   that   seems   a   little   bit   easier.  
+**Interviewer:** Okay.  
+**Candidate:** So   in   terms   of   raw   materials,   that   is   incrementally   increasing   almost   at   a   linear   rate.   That's   not   actually,   um,   something   I   would   be   terrified   about,   just   because   I   would   expect   that   to   happen   wi-   given   what's   happened   with   COVID   and   with   recessions.   And   so   that   would   be   something   that's   expected.  
+**Interviewer:** Why   would   you   ex-   why   would   you   expect   the   raw   materials   to   increase?  
+**Candidate:** Again-  
+**Interviewer:** I   don't   think   you're   wrong,   but   explain-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   explain   how   that   ties   together.   Mm-hmm.  
+**Candidate:** Again,   if,   um   ...   So   in   a   similar   manner   to   the   distribution   channels,   if   there   is   a   decrease   in   labor   or   if   there's   an   increase   in   demand,   um,   with   those   things,   I   would   imagine   that   raw   materials   naturally   might   just   be   a   little   bit   more   expensive.   Um,   and   if,   if,   if   the   cookie   industry   is   growing   as   well   and   more   people   are   demanding   those   ingredients,   that's   probably   gonna   lead   to   an   increase.  
+**Interviewer:** Okay.   Makes   sense.  
+**Candidate:** In   terms   of   storage   and   warehousing,   um,   that's   actually   increased   the   most.   It   looks   like   in   2020   it   was   around   maybe   12%,   and   in   2022,   we're   looking   at   closer   to   22%.   Um,   so   it's   quite   a   large   increase   there   over,   over   two   years.   And   so   that   would   be   really   interesting   if   we   had   a   further   breakdown   of   that.   Um,   but   we'll,   we'll   dive   into   that   a   little   bit   later.   Um,   but   I   would   imagine   just,   just   from   looking   at   this,   that's   probably   now   the   biggest   concern   for   me,   and   I'm,   and   I'm   shifting   a   little   bit   more,   uh,   away   from   distribution   just   because   giving   us   the   next   one   that   actually   was   stagnant   for   a   year   and   then   has   only   increased   marginally.   Um,   and   that's   the   same   with   marketing   and   promotions.   And   so   not   only   could   2022   be   some   sort   of   anomaly   with,   again,   macroeconomic   factors,   um,   contributing   to   that.   But   it   doesn't   seem   like   it's   increasing   that   much   and   if   they're   noticing   that   they've   had   a   steady   decline   in   profit,   then   it's   probably   not   there.   SG&A,   pretty   stagnant.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Um,   maybe,   maybe   a,   a   later   thing   to   look   into   would   be   actually   increasing   those   costs   in   terms   of   trying   to   push   more   units.   But   I   imagine   that   the,   the   root   of   the   problem   here   lies   within   storage   and   warehousing,   uh,   and   maybe   a   tiny   bit   in   raw   materials.  
+**Interviewer:** Great.   Is   there   anything   in   here   that   confirms   that   we   are   probably   growing   revenue,   like   your   hypothesis   was   there   before?  
+**Candidate:** Yeah.   Do   you   know   what?   That's   a,   that's   a   really   good   point   that   you   bring   that   up.   Uh,   if   raw   materials   are   increasing,   one   possibility   is   that   the   actual   price   of   raw   materials   is   increasing,   but   it   could   also   mean   we're   spending   more.   Um,   but   I   think   the   biggest   thing   would   be   distribution.   If   we're   spending   more   on   distribution,   o-   one   of   the   options   for   that   and   one   of   the   reasons   that   could   be   is   actually   we   are   distributing   more   products.   And   if   we're   distributing   more   products,   we're   probably   growing   in   revenue.  
+**Interviewer:** Love   it.   Mm-hmm.   Okay.   Great.   Anything   else   you   want   to   talk   about   here   before   we   move   on?   Hmm.  
+**Candidate:** No,   I'm   happy   to   move   on.   Yeah.  
+**Interviewer:** Awesome.   So   I'll   leave   that   there   in   case   the,   it's   helpful   context   for   you.  
+**Candidate:** Okay.  
+**Interviewer:** What   else   do   you   want   to   talk   about?  
+**Candidate:** Um,   do   we   have   any   more   information   on   storage   and   warehousing?   That's,   again,   where   my   concern   is   more   focused   now.  
+**Interviewer:** Yeah.   Well,   why   don't   you   break   it   down?   What   do   you   think   are   the   components   of   storage   and   warehousing   if   we   click   down   a   layer?  
+**Candidate:** Yeah.  
+**Interviewer:** Um,   imagine   that   we   were   kind   of   creating   a,   uh,   an   Excel   spreadsheet,   breaking   that   down   into   its   subcomponents.  
+**Candidate:** Perfect.  
+**Interviewer:** What   are   the   subcomponents   of   storage   and   warehousing   here?   Hmm.  
+**Candidate:** Well,   you   have   to   forgive   me.   I'm   not   an   expert   in   the,   in   the   storage   industry,   but   I   would   imagine,   uh,   the   biggest-  
+**Interviewer:** Not   yet.   Let   me   say   it   again.   (laughs)  
+**Candidate:** Yeah.   Not   yet.   (laughs)   I   would   imagine   the   biggest   cost   is   probably   just   the   rent   itself   in   terms   of   how   much   you're   actually   paying   for   this   big   storage   and   warehouse.  
+**Interviewer:** Okay.  
+**Candidate:** Uh,   if   it's   something   like,   uh,   food,   I   would   imagine   there's   probably   also   some   sort   of   climate   control   in   there.   You   don't   want   it   to   be   humid.   You   don't   want   it   to   be   too   hot.   So   maybe   that's   an   element.   Um,   another   thing   would   be,   um,   maybe   in   terms   of   actually   inputting   those   and   managing   that   storage   facility.   So,   um,   my   thought   there   immediately   goes   to   Amazon   when   they   have   a   ...   Obviously,   it's   a   much   bigger   scale   there,   but   they   have   millions   of   products   coming   in   and   out   every   day   and   so   actually   hiring   the   workers   to   go   ahead   and   manage   that   and   bring   products   in   and   out   could   be   another   thing.   And   then   when   it   comes   to   cookie   companies   and,   and,   and   food   in   general,   there   is   probably   some   sort   of,   um,   cost   associated   with   the   loss   of   goods.   So   obviously   if   you're   selling   a   sofa   or   a   couch,   it's   not   gonna   expire,   whereas   a   cookie,   if   we're   not   selling   enough   units,   which   may   not   actually   be   the   issue   here,   but   if   we're   not   selling   enough   units,   we   might   not   actually   be   able   to,   um,   ship   out   all   our   products   before   they   expire.  
+**Interviewer:** Mm,   okay.  
+**Candidate:** So   I   don't   know   if   that   would   be   under   storage   and   warehousing   or   if   that   would   be   under,   um,   raw   materials   or   distribution.   Um,   but   that,   that   could   be   in,   in   there.  
+**Interviewer:** It,   it's   interesting   that   you   mentioned   that   the   product   expiring   piece.   Um,   how   ...   Is   that   a   cost?   Is   that   a,   uh   ...   You   know,   how,   how   would   we   actually   put   that   on   the   books   for   the   business?   Hmm.  
+**Candidate:** So   naturally   I   would   assume   that   if   it's,   if   you're   losing   it,   you're   just   not   getting   the   revenue   and   so   you're,   you're   paying   100%   of   the   cost,   or   maybe   not   100%,   right?   You're   not   paying   for   distribution.   But   you're   paying   for   most   of   the   cost   and   you're   incurring   no   revenue   from   that.   So   you   are   getting   a   negative   rev,   a   neg-   negative   profit   with   that.  
+**Interviewer:** Okay.  
+**Candidate:** Um,   am   I   on   the   right   li-   right,   right   line   there?  
+**Interviewer:** Yeah,   that   makes   sense.   So   let's   poke   into   that   a   little   bit   more.  
+**Candidate:** Yeah.  
+**Interviewer:** We   have   noticed   that   inventory   losses   have   spiked   in   the   last   two-  
+**Candidate:** Okay.  
+**Interviewer:** ...   to   three   years.   Uh,   can   you   suggest   a   couple   of   ways   to   potentially   bring   them   under   control?  
+**Candidate:** Yeah.   Do   you   mind   if   I   just   take   20,   30   seconds   to   organize   my   thoughts   on   that?  
+**Interviewer:** I'll   let   you   do   that   just   this   once.  
+**Candidate:** Thank   you.  
+**Interviewer:** Uh-
+**Candidate:** Okay.   So   I   came   up   with   a   few   ideas   there.  
+**Interviewer:** Great.  
+**Candidate:** Um,   and   let   me   just   walk   you   th-   walk   you   through   those.  
+**Interviewer:** Okay.  
+**Candidate:** Uh,   when   it   comes   to   those   inventory   losses,   um,   and   I   actually   forgot   to   include   one   on   that,   there's,   there's   three   main   categories   I'd   look   at.  
+**Interviewer:** Okay.  
+**Candidate:** The   actual   storage   facility   itself,   so   how   are   we,   how   are   we   storing   them?   Is   the   storage,   are   the   storage   conditions   good   enough?  
+**Interviewer:** Okay.  
+**Candidate:** Um,   and   the   management   of   there.   Are   we,   are   we   tucking   away   a   box   of   cookies   in   the   back   of   the   storage   facility   and   forgetting   about   them   until   it's   too   late?  
+**Interviewer:** Great.  
+**Candidate:** Uh,   as   well   as   not   selling   enough,   so   just   not   having   enough   turnover.   Maybe   producing   more   than   we   can   actually   sell.  
+**Interviewer:** Okay.  
+**Candidate:** And   then   the   last   thing   would,   um,   would   actually   be   in   terms   of   the,   the   cookies   themselves.   Are   they   ...   If   they're   not   fresh   cookies,   like   crumble   or   something   else,   maybe   they're,   maybe   they're   expiring   too   fast   and   there's   op,   room   for   optimization   there.   But   I   would   really   want   to   drill   down   on   the   first   two.  
+**Interviewer:** Awesome.   How'd   you   fix   'em?  
+**Candidate:** Yeah.   So   we're   talking   about   the   bad   storage   itself,   the   climate   is   one   thing   we   could   fix.   Making   sure   the   storage   facility   isn't   getting   too   humid,   making   sure   it's   not   getting   too   hot.   An   important   caveat   there   is   that   that   is   something   that   the   packaging   itself   should   be   doing.   In   terms   of   the   management   systems,   maybe   there   are   none   in   place.   Maybe   the   management   systems   are   suboptimal,   but   I   would   make   sure   that   we're   really   adopting   a,   a,   and   not   to   get   too   accounting   here,   but   a   FIFO   method   in   terms   of-  
+**Interviewer:** Okay.  
+**Candidate:** ...   first   in,   first   out.   So   ...   Or,   sorry,   we   et-   we   should   actually   do   LIFO,   uh,   last   in,   first   out.  
+**Interviewer:** You   sure?  
+**Candidate:** Uh,   let   me   just   m-   let   me   define   it   and   then   we   can   make   sure   that   I've   got   the   right   one.  
+**Interviewer:** (laughs)  
+**Candidate:** Um,   whatever   is   going   into   the,   uh   ...   So   it   would   be   FIFO.  
+**Interviewer:** Okay.   (laughs)  
+**Candidate:** Whatever's   going   into   the   warehouse   first   should   be   the   first   to   come   out.  
+**Interviewer:** Makes   sense.  
+**Candidate:** We   don't   want,   um,   months   where   cookies   are   sitting   in   place   where   other   ...   there's   turnover   of   other   cookies.  
+**Interviewer:** Absolutely.  
+**Candidate:** Um,   especially   if   we   have   one   bad   month   of   sales,   that   could   really   pile   up   and,   and   make   the   issue   worse.   In   terms   of   not   selling   enough,   I   think   that   the   biggest   solution   there   would   be   some   sort   of   analytics.   Just   making   sure   we   can   predict   more   accurately   how   many   units   were   forecasted   to   sell,   and   then   we   just   make   that,   make   a   little   bit   more   obviously   than   that.   And   make   sure   that   we're   not   making   way   too   many   when   maybe   during   a   recession   or   during,   uh,   changing   times,   people   aren't   buying   as   many   cookies.   Again,   I   don't   think   that's   the   issue.   It's   probably   one   of   the,   one   of   the   first   ones.  
+**Interviewer:** Okay.   Love   it.   So,   uh,   uh,   great.   At   this   point,   I   think   we   are   getting   pretty   close   to   time   on   the   case.  
+**Candidate:** Yeah.  
+**Interviewer:** I'm   gonna   ask   you   just   to   provide   a   final   recommendation   for   the   client.  
+**Candidate:** Yeah.  
+**Interviewer:** I   know   that,   of   course,   there   are   things   that   we   could   look   at   if   we   had   more   time.  
+**Candidate:** Yeah.  
+**Interviewer:** But   if   we   were   just   here,   you're   in   an   elevator   and   the   CEO's   there,   what   would   you   say?  
+**Candidate:** Yeah.   Well,   thank   you   for   meeting   with   me.   I   think   the,   the   most   important   thing   to,   to   note   here   is   that   the   storage   and   warehousing   costs   are,   are   getting   too   high.   Too   high,   and   are   actually   creating   an   issue,   uh,   for   the   profitability   of   the   company.   And   I   think   to,   to   fix   this,   we   really   need   to   look   into   the   root   of   that.   And,   and   I   think   one   of   the   biggest   roots   could   be   the   climate   and   also   the   management   systems   in   place.   So   in   terms   of   some   next   steps,   I   think   developing,   um,   if   we   don't   already   have   it,   some   sort   of   management   system   to   make   sure   that,   uh,   all   of   our   inventory   is   getting   out   in   the   right   time   and   it's   not   getting   clogged   by   other   units.   I   think   that's   gonna   be   the   best   way   to   solve   this   problem.   Now,   I   will   say   that,   that   a   risk   with   that   is   if   we   start   incurring   even   more   money   on   this   and   we   can't   find   the   issue   soon   enough,   we   could   potentially   be   driving   our   profits   even   further   down.  
+**Interviewer:** Fantastic.  
+**Candidate:** Thank   you.  
+**Interviewer:** All   right.   So   let   me   provide   some   feedback.   Are   you   ready   for   this?  
+**Candidate:** Yeah.  
+**Interviewer:** First   of   all,   just   what   were   your   thoughts?   How   did   you   feel?   What   did   you   like?   What   do   you   think   you   could   have   done   better?  
+**Candidate:** Yeah.   As   a   pretty,   um,   math-focused   person,   I   always   love   it   when   there's   more   calculations   involved   and   maybe   less   of   the   creativity   side.   But   I   really   enjoyed   this   case.   I   thought,   um,   the   exhibit   itself   wasn't   too   difficult   to   read   into.   Um,   I   definitely   had   to   pivot   once   or   twice.   I   think   we   noticed   that   throughout   the   case   that   you   ...   I   almost   felt   like   I   was   led   into   one   place   and   then   it   was   like,   actually,   with   this   piece   of   information,   I   need   to   just   quickly   pivot.   And   so   I   think   that's   really   good   practice   to   be   able   to   do   that   because   that's   what   happens   a   lot   of   the   time.  
+**Interviewer:** Totally.  
+**Candidate:** Both   in   case   interviews   and   in   the   real   world.   Um,   but   I   think   that   maybe   could   have   been   a   little   bit   more   structured   in   terms   of   the   ...   Once   we   knew   it   was   storage   and   warehousing,   figuring   out   the   potential   solutions.   I   probably   could   have   listed   a   few   more   there   and   maybe   dug   into   those.  
+**Interviewer:** Love   it.   So   I'll   just   provide   you   with   my   feedback   again.   Overall,   really   good   job.   I   got   the   general   sense   that   you   knew   it   was   happening,   that   you   were   being   insightful,   that   you   were   layering   on   those   insights.   Of   course,   I   ...   You   know,   every   consultant   can   find   something   that   they   could   improve   on.  
+**Candidate:** Yeah.  
+**Interviewer:** So   I'm   gonna   just   go   through.   Uh,   I   thought   with   your   beginning,   I   thought   you   did   a   really   good   job.   Um,   both   ...   The   recap   was   clear,   concise.   Didn't   ...   This   is   a   very   short   one,   doesn't   need   to   be   long.  
+**Candidate:** Yeah.  
+**Interviewer:** Um,   and,   uh,   you   know,   the   only   thing   that   I   might   have   enhanced   there   was   just,   uh,   really   making   sure   that   you   reflected   on   this   question   of   whether   you   thought   if   it   was   a   macroeconomic   issue   where   others   were   doing   well,   um,   w-   was   it   because   they   had   been   cost-cutting   or   was   it   because   they   had   been,   you   know,   uh,   punching   revenue   growth?  
+**Candidate:** Yeah.  
+**Interviewer:** And   if   ...   And,   you   know,   ex-   expecting   that   based   on   what   we've   seen   in   the   last   couple   of   years   with   inflation,   but   also   with   the,   um,   improvement   in   consumer   goods   purchasing,   like,   the   ...   It's   probably   gonna   be   a   cost   issue.  
+**Candidate:** Yeah.  
+**Interviewer:** I   think   you   could   have   identified   that   earlier.  
+**Candidate:** Okay.  
+**Interviewer:** And,   um,   and,   you   know,   you   don't   ...   Uh,   you   don't   even   have   to   necessarily   ask   it   as   a   clarifying   question,   but   just   giving   me   that   context   as   a   heads   up   would   have,   would   have   really   kind   of   improved   that.  
+**Candidate:** 100%.  
+**Interviewer:** And,   and   it   would   have,   um,   helped   me   make   sure   that   you   were   focusing   on   profitability   'cause   actually   when   you   went   to   your   structure,   I   wasn't   100%   sure.  
+**Candidate:** Okay.  
+**Interviewer:** Um,   I   also   just   thought   you   could   have   maybe   provided   me   some   of   the   context   for   your   questions.   So   really   good   questions,   but,   right,   here's   why   I'm   asking.  
+**Candidate:** Okay.  
+**Interviewer:** If   we   need   to   look   outside   of   the   US,   obviously   there   would   be   a   much   broader   scope   of   this.   There's   a   lot   of   complexity-  
+**Candidate:** Okay.  
+**Interviewer:** ...   in,   in   the   way   that   we   think   about   our   supply   chain,   so   I'm   assuming   we're   gonna   focus   on   the   US,   right?   So   giving   me   just   a   little   bit   more   of   that   background.   You   had   more   time,   felt   like   you   were   rushing   to   get   into   the   structure,   and   there's   a   difference   between   kind   of   command   and   rushing   at   the   beginning.  
+**Candidate:** Yes.  
+**Interviewer:** So,   uh,   so   I   think   you   have   a   little   bit   more   time   to   sit   back   into   it,   like   really   kind   of,   you   know,   marinate   on   the   issues   and   also   explain   to   me   what   those   are.   Um,   uh,   with   your   structure,   you   know,   I   think,   again,   really   good   kind   of   core   questions.   I   give   you   a   three,   um,   on   the   structure.   I   didn't   actually   ...   I   gave   you   the   ratings   for   everything.   Let   me   go   back   to   that.   So,   um,   I   give   you-  
+**Candidate:** That's   not   out   of   10,   right?   (laughs)  
+**Interviewer:** No,   no,   no.   Out   of   four.   Um,   so   in   the   MC,   um,   case   scoring,   right?   Three   and   a   half   for   the   case   recap   and   a   three   for   the   clarifying   questions,   and   then   I   gave   you   a   three   for   the   case   structure.   Um,   and,   and   the   guidance   here   is   that   it   has   at   least   three   buckets.   You   did.   Um,   the   buckets   have   three   ideas   that   focus   on   data.   A   little   bit   light   on   that....   um,   but,   um,   the   ideas   are   MECE.   I   felt   like   that   was   pretty   good.   Um,   I   would   have   liked   to   have   seen   two   different   things   to   make   it   a   four.   One   is   I   wanted   you   to   present   the   costs   first.  
+**Candidate:** Yeah.  
+**Interviewer:** Right?   When   I   asked   you   the   question,   you   got   there,   but   you   had   a   full   extra   minute   in   your   preparation   time   where   you   could   have   thought   about   it,   punched   a   little   deeper   on   the   costs,   and   presented   it.   Even   if   you   wrote   down   revenues,   cost,   market,   you   could   have   presented   the   cost   first.  
+**Candidate:** Gotcha.  
+**Interviewer:** I   would   have   liked   to   have   seen   that.   Anytime   we're   doing   a   profitability   case   and   you're   able   to   just   not   walk   me   through   here's   what   the   profitability   is,   and   kind   of   more   like   here's   what   I   think   the   issue   is,   I,   I'm   gonna   appreciate   that,   especially   when   I'm   in   BCG.  
+**Candidate:** Yeah.  
+**Interviewer:** Um,   and   then   in   addition,   you   kind   of   said,   you   know,   "I'm   going   to   keep   it   at   a   high   level."   I   don't   want   a   high   level.   I   actually   do   really   want   a   more   comprehensive   structure   here,   so   I,   I   would   have   wanted   for   your   revenues   to   highlight   not   just   the   units   sold   and   the   prices   sold,   but   maybe   product   mix   or   something   else   kind   of   focused   on   the   revenue   side,   right?   Or   discounting-  
+**Candidate:** Yes.  
+**Interviewer:** ...   inflation-  
+**Candidate:** Okay.  
+**Interviewer:** Right?   Like,   impacts   of,   of,   of   those   things.   Um,   and   I,   so   in   fact,   I   think   that   here   you   could   have   actually   broken   out   revenues   into   prices   and-  
+**Candidate:** Okay.  
+**Interviewer:** ...   um,   and   quantities.   Um,   or   I   think   you   could   have   broken   out   costs.  
+**Candidate:** Yeah.  
+**Interviewer:** Um,   but   if   you're,   if   you're   gonna   do   the   market   piece,   just   make   sure   that   you   don't   include   ...   I   think,   I   think   what   was,   is   challenging   about   this   specific   structure   is   that   you   have   to   make   sure   it's   MECE,   so   you   can't   go   too   detailed   on   the   revenue   side   and   include   the   market-  
+**Candidate:** Exactly.  
+**Interviewer:** ...   piece   as   well.  
+**Candidate:** Yeah.  
+**Interviewer:** So   you   might   have   just   wanted   to   go   a   little   bit   more   granular   on   a   traditional   market,   uh,   profitability   structure,   but   just   reorganize   it   a   little   bit.  
+**Candidate:** Okay.  
+**Interviewer:** So   you   could   go   a   little   bit   more-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   detailed.   Um,   and   so,   so   good   job,   but   I   think   there   was   a   great   there   that   you   could   have   attained.   Um,   on   the   case   math   question,   eh,   you   know,   you,   you,   I   could   tell   you   were   thrilled-  
+**Candidate:** (laughs)  
+**Interviewer:** ...   about   the   case.  
+**Candidate:** Yeah.  
+**Interviewer:** Um,   obviously   with   BCG,   you   have   to   lead   yourself   into   it,   which   is   why-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   at   the   end   of   the   structure   I   asked   you   the   question   about   cost,   I   asked   you   to   delineate   what   the   costs   were.   You   could   have   done   that   independently   a   little   bit   better.  
+**Candidate:** Okay.  
+**Interviewer:** Um,   also   I,   I   don't   th-   at   one   point   you   mentioned,   I   don't   know   if   it   was   misspeaking,   but,   um,   you   mentioned   that   the,   it   was   percentage   increase,   and   I   don't   know   if   you   were   making   a   calculation   or   if   you   were   reading   this   as   percentage   instead   of   millions   of   dollars.  
+**Candidate:** Okay.  
+**Interviewer:** So   just   make   sure   that   as   you're   talking   through   it,   I   would   just   give   the   context   at   the   beginning,   right?   This   is   in   dollars,   so   these   are   real   increases,   right?   Um,   and,   and   then   I   will   calculate   the   percentages.   Just   maybe,   for   me   the   interviewer-  
+**Candidate:** Okay.   Yeah.  
+**Interviewer:** ...   lay   out   for   me,   um,   because   a   lot   of   those   insights   I   thought   were   pretty   good.   And,   um,   and   then   I,   I   also,   you   mentioned   that   there   might   have   been   a   decrease   in   labor   on   the,   um,   raw   materials   side.   Again,   I   think   it   may   have   been   misspeaking.   I   think   you   were   talking   about   decrease   in   labor   availability.  
+**Candidate:** Yes.  
+**Interviewer:** Is   that   right?  
+**Candidate:** Yeah,   yeah,   yeah.  
+**Interviewer:** Like   right-  
+**Candidate:** When   you   talked   about   the   trends.  
+**Interviewer:** ...   leading   to   a   price   increase-  
+**Candidate:** Yes.  
+**Interviewer:** ...   of,   um,   of   labor.   And   so,   but   there   were   a   few   things   that   kind   of   didn't   follow   linear   thinking   there.  
+**Candidate:** Okay.  
+**Interviewer:** And   so,   um,   so   again,   I   gave   you   a   th-   a   three,   under   five   minutes   actually,   m-   maybe   too   little   time.   Um,   but   I   would,   really   wanted   you   to   begin   to,   um,   punch   into   those   extra   things   that   I   asked   you   about   on   the   end,   when   I   asked   you   "Did   you   do   a   good   job?"   Um,   for,   uh,   the   case   creative   stuff,   when   you   started   to,   uh,   break   this   down,   I   got   a   little   nervous.   You   have   a   pretty   great   mental   recall,   but   you   didn't   write   down   the   brainstorming   list   of   the   different   factors.   So   and,   and   a   couple   times   you   kept   like,   putting   the   cap   on   the   pen   and   putting   it   down.  
+**Candidate:** Yeah.  
+**Interviewer:** And,   and   so   I   would   just   say   maybe   keep   yourself   poised   at   the   ready,   especially   in   a   BCG   case   because   of   the   brainstorming   and   the   leading.   Um,   if,   if   you're   in   a   McKinsey   case,   you're   gonna   know   when   they're   moving   on.   In   a   BCG   case,   maybe   not.  
+**Candidate:** Okay.  
+**Interviewer:** So,   so   just,   uh,   just   to   think   about   that.   Um,   yeah.  
+**Candidate:** Um,   when   it   comes   to   that,   I   can't   remember   if,   if   I   asked   for   more   time   then,   maybe   like   30   seconds.  
+**Interviewer:** You   did,   yeah.  
+**Candidate:** Okay.   Is   that,   is   that   the   right   step   then   for   someone   to   do   in   that,   in   that   position?  
+**Interviewer:** You   can   always   do   it.   I   would   just   say   if   we're   practicing,   there,   I,   you   know,   I,   I   was   tempted   because   in   BCG   I   generally   would   say   no.   This   is   conversational.  
+**Candidate:** Yeah.  
+**Interviewer:** Uh,   and   so,   so   contextually,   in   McKinsey,   yes,   in   BCG   no,   in   Bain   maybe.   Practice   it   both   ways.  
+**Candidate:** Yeah.  
+**Interviewer:** Um,   and   so,   uh,   I,   I   wa-   I   was   tempted   to   say   no,   but   I   felt   like   giving   you   a   break   on   this   one.   So,   um,   it,   it   could   have   gone   either   way   for   you.  
+**Candidate:** Okay,   yeah.  
+**Interviewer:** Always   it's   fine   to   ask.   Just   be   ready   to   have   them   say   no.  
+**Candidate:** Just   be   ready   to   hear   no.   Yeah.  
+**Interviewer:** And   if   they   say   no   the   first   time,   never   ask   again.  
+**Candidate:** R-   that's   a   really   good   piece   of   advice.  
+**Interviewer:** Right.  
+**Candidate:** Yeah.  
+**Interviewer:** Um,   and   then   finally,   um,   on   the   case   creative   question,   so   again,   I   thought   you   did   a   good   job   of   listing   out   the   initial   level,   but   it   was   really   just   a   brainstorming   list   and   it   didn't   address   what   I   asked   you.   I   think   you   could   have   clarified   what   I   asked.   What   I   asked   specifically   was   can   you   suggest   some   ways   to   bring   them   under   control?   And   so,   uh,   you   gave   me   what   the   problems   could   be,   but   not   the   solutions.   And   so   we   had   to   go   back   to   that,   and   you   also,   you   didn't   write   down   what   the   solutions   were   as   you   were   talking   through   it.  
+**Candidate:** Yeah.  
+**Interviewer:** So   I   feel   like,   um,   that   will   lead   me   into   my   final   piece.   So,   so   kind   of   three,   three   across   the   board   there   too.   And   then   on   the   final   recommendation,   I   felt   like   that   was   like   a   2.53.   I   think   that   at   the   beginning   you   could   have   just   gone,   given   one   sentence   of   context,   right?   "We're   looking   at   profitability-  
+**Candidate:** Yeah.  
+**Interviewer:** "...   that's   out   of   line   with   market   growth   of   other   competitors.   We've   found   that   the   issue   was..."   Right?   Just   a   little   bit   more   of   a   story   format.   Um,   and   I   felt   like   if   you   had   had   the,   the   notes   and   the   responses,   you   might   have   been   able   to   tick   a   few   of   those   things   off-  
+**Candidate:** Okay.  
+**Interviewer:** ...   a   little   bit   more   clearly.  
+**Candidate:** Yeah.  
+**Interviewer:** I   would   also   just   recommend   in   your   risks   and   next   steps   that   you   number   them   for   me.  
+**Candidate:** Yeah.  
+**Interviewer:** Um,   I   was   taking   notes   and   I   actually   don't   know   if   you   had   one,   two,   or   three.   I,   I   don't   know   if   you   were   sub-heading   or   if   you   were   moving   on.  
+**Candidate:** Yeah.  
+**Interviewer:** And   so   just,   you   know,   right   at   the   very   end   write,   uh,   w-   when   I,   when   you   know   I'm   gonna   walk   out   and   score   you   on   whether   you   were   structured   or   not,   give   me   the   most   structured   final   recommendation-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   that   you   can.  
+**Candidate:** Wonderful.  
+**Interviewer:** Other   than   that,   final   questions?  
+**Candidate:** Um,   I   guess   in   terms   of   the   conclusion   there,   um,   straight   into   it,   no,   no   time   to,   to   formulate   or   anything,   um,   gi-   given   it's   a   BCG   case.  
+**Interviewer:** There,   and,   and   good   that   way,   yes,   exactly.   Mm-hmm.  
+**Candidate:** And   so   should   I   keep   the   pen   cap   there   and   just   give   you   it   verbally   with   the   structure?  
+**Interviewer:** I   think   that's   fine.  
+**Candidate:** Okay.  
+**Interviewer:** I   wouldn't,   I   wouldn't   normally   have   you   write   down   anything   during   the   final-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   recommendation.   It's   really   just   during   the   brainstorming   and,   uh,   so   if   I   ask   you   a   question   and,   and   you're   thinking   through   things,   if   you   t-   what   I,   what   I,   what   you   risk   if   you   don't   write   it   down   is   that   you   talk   through   them,   you   have   great   ideas,   and   you   forget   them-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   when   you   move   on   to   the   next   section.  
+**Candidate:** Yeah.  
+**Interviewer:** So   just   in   terms   of   organization   and   structure,   just   try   and   keep   everything   together.  
+**Candidate:** Wonderful.  
+**Interviewer:** Awesome.  
+**Candidate:** Well,   thank   you.  
+**Interviewer:** Thank   you.
