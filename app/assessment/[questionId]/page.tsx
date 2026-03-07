@@ -242,7 +242,7 @@ export default function AssessmentPage() {
       <main className="max-w-4xl mx-auto px-4 py-8">
         {/* Title */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2 font-display">
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 font-display">
             Interview Assessment
           </h1>
           <p className="text-gray-500">
@@ -311,9 +311,9 @@ export default function AssessmentPage() {
                 </h2>
                 <div className="flex items-center gap-2">
                   <ScoreRing score={assessment.overallScore} />
-                  <div className="text-4xl font-bold text-[#d4af37]">
+                  <div className="text-3xl sm:text-4xl font-bold text-[#d4af37]">
                     {assessment.overallScore.toFixed(1)}
-                    <span className="text-lg text-gray-600">/5</span>
+                    <span className="text-base sm:text-lg text-gray-600">/5</span>
                   </div>
                 </div>
               </div>
@@ -441,16 +441,16 @@ export default function AssessmentPage() {
             </div>
 
             {/* Actions */}
-            <div className="flex gap-4 justify-center pt-4">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
               <Link
                 href={`/practice/${questionId}`}
-                className="px-6 py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-lg font-medium hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
+                className="px-6 py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-lg font-medium hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all text-center"
               >
                 Practice Again
               </Link>
               <Link
                 href={`/dashboard/questions?track=${question.track}`}
-                className="px-6 py-3 bg-white text-gray-900 rounded-lg font-medium hover:bg-gray-50 transition-colors border border-gray-200"
+                className="px-6 py-3 bg-white text-gray-900 rounded-lg font-medium hover:bg-gray-50 transition-colors border border-gray-200 text-center"
               >
                 Try Another Question
               </Link>
@@ -506,12 +506,12 @@ function ScoreItem({ label, score, weight }: { label: string; score: number; wei
   };
 
   return (
-    <div className={`flex items-center justify-between p-3 rounded-lg border ${getColor(score)}`}>
-      <div>
-        <span className="text-sm font-medium">{label}</span>
-        <span className="text-xs text-gray-600 ml-1">({weight})</span>
+    <div className={`p-3 rounded-lg border ${getColor(score)}`}>
+      <div className="text-sm font-medium leading-snug mb-1">{label}</div>
+      <div className="flex items-center justify-between">
+        <span className="text-xs text-gray-600">({weight})</span>
+        <span className="font-bold">{score}/5</span>
       </div>
-      <span className="font-bold">{score}/5</span>
     </div>
   );
 }
