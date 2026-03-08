@@ -45,7 +45,7 @@ async def entrypoint(ctx: JobContext):
                 model="eleven_turbo_v2_5",
             ),
             vad=silero.VAD.load(),
-            turn_detection=MultilingualModel(),
+            # turn_detection=MultilingualModel(),
         )
 
         # Only start Anam avatar when avatar_mode is "anam"
