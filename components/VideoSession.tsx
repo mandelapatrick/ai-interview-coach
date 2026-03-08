@@ -177,10 +177,12 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
     isTalking: livekitSession.isTalking,
     error: heygenAvatar.error || livekitSession.error,
     initializeAvatar: async (videoEl: HTMLVideoElement) => {
-      // HeyGen inits first (visual layer), then LiveKit connects (conversation)
-      const ok1 = await heygenAvatar.initializeAvatar(videoEl);
-      if (!ok1) return false;
-      return await livekitSession.initializeSession(videoEl);
+      // HeyGen visual layer and LiveKit conversation layer are independent — init in parallel
+      const [ok1, ok2] = await Promise.all([
+        heygenAvatar.initializeAvatar(videoEl),
+        livekitSession.initializeSession(videoEl),
+      ]);
+      return ok1 && ok2;
     },
     interrupt: () => { heygenAvatar.interrupt(); livekitSession.interrupt(); },
     stopAvatar: async () => { await heygenAvatar.stopAvatar(); await livekitSession.stopSession(); },
@@ -362,7 +364,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
         startRecording(canvasStream);
         console.log("[VideoSession] Started composite recording");
       }
-    }, 1000);
+    }, 200);
 
     return () => {
       if (animationFrameRef.current) {

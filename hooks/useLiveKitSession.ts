@@ -262,35 +262,36 @@ export function useLiveKitSession(options: UseLiveKitSessionOptions) {
         await room.connect(url, token);
         console.log("[LiveKit] Connected to room:", room.name);
 
-        // Unlock audio playback on mobile browsers
-        await room.startAudio();
-        console.log("[LiveKit] Audio playback unlocked");
-
         // Log any already-connected participants
         console.log(`[LiveKit] Remote participants: ${room.remoteParticipants.size}`);
         for (const [, p] of room.remoteParticipants) {
           console.log(`[LiveKit] Already in room: ${p.identity}`);
         }
 
-        // Step 5: Publish user's microphone
-        // Publish the existing lobby mic track directly to preserve the user gesture chain
-        // and avoid re-requesting getUserMedia (which can fail when gesture context expires on mobile).
-        if (userStream) {
-          const audioTrack = userStream.getAudioTracks()[0];
-          if (audioTrack) {
-            const localTrack = new LocalAudioTrack(audioTrack, undefined, false);
-            await room.localParticipant.publishTrack(localTrack, {
-              source: Track.Source.Microphone,
-            });
-            console.log("[LiveKit] Published existing microphone track");
+        // Step 5: Unlock audio playback and publish microphone in parallel (independent after connect)
+        const publishMic = async () => {
+          if (userStream) {
+            const audioTrack = userStream.getAudioTracks()[0];
+            if (audioTrack) {
+              const localTrack = new LocalAudioTrack(audioTrack, undefined, false);
+              await room.localParticipant.publishTrack(localTrack, {
+                source: Track.Source.Microphone,
+              });
+              console.log("[LiveKit] Published existing microphone track");
+            } else {
+              await room.localParticipant.setMicrophoneEnabled(true);
+              console.log("[LiveKit] Microphone enabled (no existing track)");
+            }
           } else {
             await room.localParticipant.setMicrophoneEnabled(true);
-            console.log("[LiveKit] Microphone enabled (no existing track)");
+            console.log("[LiveKit] Microphone enabled (default device)");
           }
-        } else {
-          await room.localParticipant.setMicrophoneEnabled(true);
-          console.log("[LiveKit] Microphone enabled (default device)");
-        }
+        };
+
+        await Promise.all([
+          room.startAudio().then(() => console.log("[LiveKit] Audio playback unlocked")),
+          publishMic(),
+        ]);
 
         // Timeout if agent never publishes tracks
         agentTimeoutRef.current = setTimeout(() => {

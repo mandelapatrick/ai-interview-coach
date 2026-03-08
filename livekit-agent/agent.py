@@ -11,6 +11,9 @@ from livekit.agents import Agent, AgentSession, JobContext, WorkerOptions, cli, 
 from livekit.plugins import openai, elevenlabs, silero, anam, noise_cancellation
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
 
+# Preload Silero VAD model at module level so it's cached before the first job arrives
+_preloaded_vad = silero.VAD.load()
+
 
 async def entrypoint(ctx: JobContext):
     try:
@@ -44,7 +47,7 @@ async def entrypoint(ctx: JobContext):
                 voice_id="o0A9ZeHFlYO5UFbSjH7b",
                 model="eleven_turbo_v2_5",
             ),
-            vad=silero.VAD.load(),
+            vad=_preloaded_vad,
             # turn_detection=MultilingualModel(),
         )
 

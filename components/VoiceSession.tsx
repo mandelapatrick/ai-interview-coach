@@ -217,14 +217,11 @@ export default function VoiceSession({ question, maxDurationSeconds }: VoiceSess
       setTranscript([]);
       setDuration(0);
 
-      // Small delay to ensure state is set before initializing
-      // (userStream ref needs to be populated)
-      setTimeout(async () => {
-        const success = await livekitSession.initializeSession(dummyVideo);
-        if (!success) {
-          setIsRecording(false);
-        }
-      }, 100);
+      // Ref is already populated synchronously above, initialize immediately
+      const success = await livekitSession.initializeSession(dummyVideo);
+      if (!success) {
+        setIsRecording(false);
+      }
     } catch (err) {
       console.error("[VoiceSession] Failed to start:", err);
     }
