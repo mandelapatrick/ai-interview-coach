@@ -587,10 +587,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
           />
 
           {/* Mobile-only top bar: Timer + End Interview button */}
-          <div className="absolute top-3 left-3 right-3 flex items-center justify-between md:hidden z-10">
-            <div className="flex items-center gap-2 px-3 py-1.5 bg-black/50 rounded-lg backdrop-blur-sm">
-              <span className="text-white text-sm font-medium">Interviewer</span>
-            </div>
+          <div className="absolute top-3 left-3 right-3 flex items-center justify-end md:hidden z-10">
             <div className="flex items-center gap-2">
               <span className="text-white font-mono text-sm font-semibold bg-black/50 px-3 py-1.5 rounded-lg backdrop-blur-sm">
                 {formatTime(duration)}
@@ -602,11 +599,6 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
                 End
               </button>
             </div>
-          </div>
-
-          {/* Interviewer Label - Top Left (desktop only) */}
-          <div className="absolute top-4 left-4 hidden md:flex items-center gap-2 px-3 py-1.5 bg-black/50 rounded-lg backdrop-blur-sm">
-            <span className="text-white text-sm font-medium">Interviewer</span>
           </div>
 
           {/* User Video (PiP) - Bottom Right */}
