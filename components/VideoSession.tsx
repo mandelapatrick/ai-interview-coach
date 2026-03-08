@@ -589,9 +589,6 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
           {/* Mobile-only top bar: Timer + End Interview button */}
           <div className="absolute top-3 left-3 right-3 flex items-center justify-between md:hidden z-10">
             <div className="flex items-center gap-2 px-3 py-1.5 bg-black/50 rounded-lg backdrop-blur-sm">
-              {avatar.isTalking && (
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              )}
               <span className="text-white text-sm font-medium">Interviewer</span>
             </div>
             <div className="flex items-center gap-2">
@@ -609,9 +606,6 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
 
           {/* Interviewer Label - Top Left (desktop only) */}
           <div className="absolute top-4 left-4 hidden md:flex items-center gap-2 px-3 py-1.5 bg-black/50 rounded-lg backdrop-blur-sm">
-            {avatar.isTalking && (
-              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-            )}
             <span className="text-white text-sm font-medium">Interviewer</span>
           </div>
 

@@ -79,45 +79,6 @@ function PulsingCircle({ isActive, isSpeaking }: { isActive: boolean; isSpeaking
   );
 }
 
-// Status Badge Component
-function StatusBadge({ status }: { status: "idle" | "connecting" | "listening" | "speaking" }) {
-  const configs = {
-    idle: { text: "Ready", bg: "bg-gray-100", textColor: "text-gray-600" },
-    connecting: { text: "Connecting...", bg: "bg-[#d4af37]/20", textColor: "text-[#d4af37]" },
-    listening: { text: "Listening", bg: "bg-[#d4af37]/20", textColor: "text-[#d4af37]" },
-    speaking: { text: "Speaking", bg: "bg-[#d4af37]", textColor: "text-white" },
-  };
-
-  const config = configs[status];
-
-  return (
-    <div
-      className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full ${config.bg} ${config.textColor} text-sm font-medium transition-all duration-300`}
-    >
-      {status === "connecting" && (
-        <div className="w-2 h-2 rounded-full bg-current animate-pulse" />
-      )}
-      {status === "listening" && (
-        <div className="relative w-2 h-2">
-          <div className="absolute inset-0 rounded-full bg-current animate-ping" />
-          <div className="relative w-2 h-2 rounded-full bg-current" />
-        </div>
-      )}
-      {status === "speaking" && (
-        <div className="flex items-center gap-0.5">
-          {[0, 1, 2].map((i) => (
-            <div
-              key={i}
-              className="w-1 h-2 bg-current rounded-full animate-bounce"
-              style={{ animationDelay: `${i * 0.1}s`, animationDuration: "0.6s" }}
-            />
-          ))}
-        </div>
-      )}
-      {config.text}
-    </div>
-  );
-}
 
 // Circular Control Button Component
 function ControlButton({
@@ -360,13 +321,6 @@ export default function VoiceSession({ question, maxDurationSeconds }: VoiceSess
   const error = livekitSession.error;
   const isSpeaking = livekitSession.isTalking;
 
-  // Determine current status
-  const getStatus = (): "idle" | "connecting" | "listening" | "speaking" => {
-    if (isRecording && transcript.length === 0) return "connecting";
-    if (!isRecording) return "idle";
-    if (isSpeaking) return "speaking";
-    return "listening";
-  };
 
   return (
     <div className="flex flex-col h-full bg-white">
@@ -400,9 +354,6 @@ export default function VoiceSession({ question, maxDurationSeconds }: VoiceSess
       {/* Main Visualization Area */}
       <div className="flex-shrink-0 flex flex-col items-center justify-center py-12 px-6">
         <PulsingCircle isActive={isRecording} isSpeaking={isSpeaking} />
-        <div className="mt-6">
-          <StatusBadge status={getStatus()} />
-        </div>
       </div>
 
       {/* Control Buttons */}
