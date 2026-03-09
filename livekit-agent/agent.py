@@ -1,5 +1,6 @@
 import os
 import json
+import re
 import asyncio
 import logging
 from dotenv import load_dotenv
@@ -23,6 +24,9 @@ CANDIDATE_AVATAR_ID = "c1785d08-9825-4ead-89b3-171d3f667c47"
 # ElevenLabs voice IDs
 INTERVIEWER_VOICE_ID = "o0A9ZeHFlYO5UFbSjH7b"
 CANDIDATE_VOICE_ID = "ud0kCO8FgufQlMpW9wg6"
+
+# Pattern to detect exhibit references in agent speech (e.g., "Exhibit 1", "exhibit 2")
+EXHIBIT_PATTERN = re.compile(r'exhibit\s*(\d+)', re.IGNORECASE)
 
 
 async def run_learn_mode(ctx: JobContext, meta: dict):
@@ -306,6 +310,8 @@ async def entrypoint(ctx: JobContext):
                 model="eleven_turbo_v2_5",
             ),
             vad=_preloaded_vad,
+            min_interruption_duration=0.8,  # Require longer speech to interrupt (was 0.5)
+            min_interruption_words=2,       # Require at least 2 words before interrupting
             # turn_detection=MultilingualModel(),
         )
 
@@ -320,6 +326,34 @@ async def entrypoint(ctx: JobContext):
             )
             logger.info("Starting avatar session...")
             await avatar.start(session, room=ctx.room)
+
+        # Exhibit reveal support for practice mode
+        exhibit_count = meta.get("exhibit_count", 0)
+        revealed_exhibits = set()
+
+        async def send_practice_data(payload: dict):
+            try:
+                data = json.dumps(payload).encode("utf-8")
+                await ctx.room.local_participant.publish_data(data, reliable=True)
+            except Exception as e:
+                logger.error(f"Failed to send practice data message: {e}")
+
+        if exhibit_count > 0:
+            @session.on("conversation_item_added")
+            def on_practice_speech(ev):
+                item = ev.item
+                if not hasattr(item, "role") or item.role != "assistant":
+                    return
+                text = item.text_content or ""
+                for match in EXHIBIT_PATTERN.finditer(text):
+                    idx = int(match.group(1)) - 1
+                    if 0 <= idx < exhibit_count and idx not in revealed_exhibits:
+                        revealed_exhibits.add(idx)
+                        logger.info(f"Revealing exhibit {idx + 1}")
+                        asyncio.create_task(send_practice_data({
+                            "type": "reveal_exhibit",
+                            "exhibit_index": idx,
+                        }))
 
         logger.info("Starting agent session...")
         await session.start(
