@@ -71,7 +71,7 @@ export default async function LandingPage() {
               </h1>
 
               <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-lg">
-                Practice case interviews with an AI interviewer that adapts to your skill level. Get instant feedback and improve faster than ever.
+                Practice interviews with an AI interviewer that adapts to your skill level. Get instant feedback and improve faster than ever.
               </p>
 
               {/* Dual CTAs */}
