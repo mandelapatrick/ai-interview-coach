@@ -45,8 +45,15 @@ ${getConsultingClosingSections()}
   }
 
   if (question.additionalInfoImages && question.additionalInfoImages.length > 0) {
+    const n = question.additionalInfoImages.length;
     prompt += `
-*   **Exhibits Available:** ${question.additionalInfoImages.length} chart(s)/table(s) the candidate can view on screen`;
+*   **Exhibits Available:** ${n} locked exhibit(s) visible to the candidate as blurred thumbnails. The candidate cannot access them until you unlock them.
+*   **Exhibit Unlock Trigger:** To unlock an exhibit, say exactly "Take a look at Exhibit N" (e.g., "Take a look at Exhibit 1"). This phrase triggers the system to unlock and display the exhibit to the candidate.
+*   **Exhibit Timing:** Do NOT present all exhibits at once. Reveal each exhibit at the moment it becomes relevant to the analysis. ${
+      format === "interviewer-led"
+        ? "Proactively present exhibits at the appropriate phase of your guided analysis."
+        : "When the candidate asks for data that matches an exhibit, unlock it for them."
+    }`;
   }
 
   if (question.additionalQuestions && question.additionalQuestions.length > 0) {

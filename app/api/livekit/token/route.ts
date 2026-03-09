@@ -4,7 +4,7 @@ import { AccessToken, RoomAgentDispatch, RoomConfiguration } from "livekit-serve
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { systemPrompt, avatarMode, mode, interviewerPrompt, candidatePrompt, maxTurns } = body;
+    const { systemPrompt, avatarMode, mode, interviewerPrompt, candidatePrompt, maxTurns, exhibitCount } = body;
 
     const livekitUrl = process.env.LIVEKIT_URL;
     const apiKey = process.env.LIVEKIT_API_KEY;
@@ -49,6 +49,7 @@ export async function POST(req: NextRequest) {
       roomConfig.metadata = JSON.stringify({
         system_prompt: systemPrompt || "",
         avatar_mode: avatarMode || "anam",
+        exhibit_count: exhibitCount || 0,
       });
     }
 

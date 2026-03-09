@@ -41,6 +41,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
   const [currentHint, setCurrentHint] = useState<string | null>(null);
   const [isLoadingHint, setIsLoadingHint] = useState(false);
   const [showHintModal, setShowHintModal] = useState(false);
+  const [revealedExhibits, setRevealedExhibits] = useState<Set<number>>(new Set());
 
   const avatarVideoRef = useRef<HTMLVideoElement>(null);
   const userVideoRef = useRef<HTMLVideoElement>(null);
@@ -123,10 +124,22 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
 
   // LiveKit session hook - Python agent handles STT/LLM/TTS
   // Used for "livekit" mode (with Anam avatar) AND "heygen" mode (audio bridge to HeyGen)
+  const exhibitCount = question.additionalInfoImages?.length || 0;
+
   const livekitSession = useLiveKitSession({
     systemPrompt,
     userStream,
     avatarMode: avatarProvider === "heygen" ? "heygen" : avatarProvider === "livekit" ? "anam" : "anam",
+    exhibitCount,
+    onExhibitRevealed: (exhibitIndex: number) => {
+      setRevealedExhibits((prev) => {
+        const next = new Set(prev);
+        next.add(exhibitIndex);
+        return next;
+      });
+      // Auto-open the exhibit modal
+      setShowExhibit(exhibitIndex);
+    },
     onAgentAudioData: avatarProvider === "heygen" ? (base64Audio) => {
       // Pipe LiveKit agent audio to HeyGen for lip-sync
       heygenAvatar.sendAudio(base64Audio);
@@ -707,17 +720,41 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
           <div className="p-4 border-b border-gray-100 flex-shrink-0">
             <h3 className="text-xs font-medium text-gray-600 uppercase tracking-wider mb-3">Exhibits</h3>
             <div className="flex gap-2">
-              {question.additionalInfoImages.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setShowExhibit(index)}
-                  className="w-12 h-12 rounded-xl bg-[#d4af37]/10 hover:bg-[#d4af37]/20 flex items-center justify-center transition-colors"
-                >
-                  <svg className="w-6 h-6 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                </button>
-              ))}
+              {question.additionalInfoImages.map((imgUrl, index) => {
+                const isRevealed = revealedExhibits.has(index);
+                return (
+                  <button
+                    key={index}
+                    onClick={() => isRevealed && setShowExhibit(index)}
+                    disabled={!isRevealed}
+                    className={`relative w-16 h-16 rounded-xl overflow-hidden border-2 transition-all duration-300 ${
+                      isRevealed
+                        ? "cursor-pointer border-[#d4af37] hover:border-[#b8972e]"
+                        : "cursor-not-allowed border-gray-200"
+                    }`}
+                  >
+                    <img
+                      src={imgUrl}
+                      alt={`Exhibit ${index + 1}`}
+                      className={`w-full h-full object-cover transition-all duration-500 ${
+                        isRevealed ? "" : "blur-sm opacity-50 grayscale"
+                      }`}
+                    />
+                    {!isRevealed && (
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                        <svg className="w-5 h-5 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                      </div>
+                    )}
+                    {isRevealed && (
+                      <div className="absolute bottom-0 left-0 right-0 bg-black/40 text-white text-[10px] text-center py-0.5">
+                        {index + 1}
+                      </div>
+                    )}
+                  </button>
+                );
+              })}
             </div>
             <button
               onClick={handleGetHint}

@@ -15,12 +15,14 @@ export interface UseLiveKitSessionOptions {
   systemPrompt: string;
   userStream: MediaStream;
   avatarMode?: "anam" | "heygen" | "none";
+  exhibitCount?: number;
   onAgentAudioData?: (base64Audio: string) => void;
   onAgentSpeakingDone?: () => void;
   onAvatarStartTalking?: () => void;
   onAvatarStopTalking?: () => void;
   onAvatarTranscription?: (text: string) => void;
   onUserTranscription?: (text: string) => void;
+  onExhibitRevealed?: (exhibitIndex: number) => void;
   onStreamReady?: () => void;
   onError?: (error: string) => void;
 }
@@ -30,12 +32,14 @@ export function useLiveKitSession(options: UseLiveKitSessionOptions) {
     systemPrompt,
     userStream,
     avatarMode = "anam",
+    exhibitCount = 0,
     onAgentAudioData,
     onAgentSpeakingDone,
     onAvatarStartTalking,
     onAvatarStopTalking,
     onAvatarTranscription,
     onUserTranscription,
+    onExhibitRevealed,
     onStreamReady,
     onError,
   } = options;
@@ -92,7 +96,7 @@ export function useLiveKitSession(options: UseLiveKitSessionOptions) {
         const tokenRes = await fetch("/api/livekit/token", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ systemPrompt, avatarMode }),
+          body: JSON.stringify({ systemPrompt, avatarMode, exhibitCount }),
         });
 
         if (!tokenRes.ok) {
@@ -253,6 +257,19 @@ export function useLiveKitSession(options: UseLiveKitSessionOptions) {
           }
         });
 
+        // Handle data messages from agent (e.g., exhibit reveals)
+        room.on(RoomEvent.DataReceived, (payload: Uint8Array) => {
+          try {
+            const msg = JSON.parse(new TextDecoder().decode(payload));
+            if (msg.type === "reveal_exhibit" && typeof msg.exhibit_index === "number") {
+              console.log(`[LiveKit] Exhibit ${msg.exhibit_index + 1} revealed`);
+              onExhibitRevealed?.(msg.exhibit_index);
+            }
+          } catch (e) {
+            console.warn("[LiveKit] Failed to parse data message:", e);
+          }
+        });
+
         room.on(RoomEvent.Disconnected, () => {
           console.log("[LiveKit] Disconnected from room");
           setIsInitialized(false);
@@ -322,10 +339,12 @@ export function useLiveKitSession(options: UseLiveKitSessionOptions) {
       systemPrompt,
       userStream,
       avatarMode,
+      exhibitCount,
       onAvatarStartTalking,
       onAvatarStopTalking,
       onAvatarTranscription,
       onUserTranscription,
+      onExhibitRevealed,
       onStreamReady,
       onError,
     ]
