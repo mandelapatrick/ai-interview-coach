@@ -65,7 +65,7 @@ export default async function LandingPage() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 font-display leading-tight">
                 Master Your{" "}
                 <span className="bg-gradient-to-r from-[#d4af37] to-[#f4d03f] bg-clip-text text-transparent">
-                  Case Interview
+                  Interview
                 </span>{" "}
                 with AI
               </h1>
