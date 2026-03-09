@@ -408,9 +408,10 @@ export function useLiveKitLearnSession(
       });
 
       setIsPaused(false);
+      setAllAudioMuted(false);
       await sendDataMessage({ type: "ask_question", text: question });
     },
-    [addToTranscript, sendDataMessage]
+    [addToTranscript, sendDataMessage, setAllAudioMuted]
   );
 
   const stopAvatars = useCallback(async () => {
