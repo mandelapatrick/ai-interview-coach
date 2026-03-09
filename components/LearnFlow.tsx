@@ -14,6 +14,7 @@ interface LearnFlowProps {
 
 export default function LearnFlow({ question }: LearnFlowProps) {
   const [flowState, setFlowState] = useState<FlowState>("intro");
+  const [sessionKey, setSessionKey] = useState(0);
   const [sessionTranscript, setSessionTranscript] = useState<
     Array<{ speaker: "interviewer" | "candidate"; text: string; timestamp: Date }>
   >([]);
@@ -36,6 +37,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
     } catch (err) {
       console.error("Failed to record learn usage:", err);
     }
+    setSessionKey((k) => k + 1);
     setFlowState("watching");
   };
 
@@ -157,7 +159,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
       );
 
     case "watching":
-      return <LearnSession question={question} onEnd={handleSessionEnd} maxDurationSeconds={maxDurationSeconds} />;
+      return <LearnSession key={sessionKey} question={question} onEnd={handleSessionEnd} maxDurationSeconds={maxDurationSeconds} />;
 
     case "summary":
       return (

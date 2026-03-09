@@ -178,6 +178,16 @@ export function useLiveKitLearnSession(
         interviewerVideoRef.current = interviewerVideo;
         candidateVideoRef.current = candidateVideo;
 
+        // Clear any stale srcObject from previous sessions
+        interviewerVideo.srcObject = null;
+        candidateVideo.srcObject = null;
+
+        // Clear stale role mappings and segment data
+        participantRoleMap.current.clear();
+        segmentMaps.current.clear();
+
+        console.log("[LearnLK] Cleared stale video sources and role mappings");
+
         // Initially mute candidate, unmute interviewer
         interviewerVideo.muted = false;
         candidateVideo.muted = true;
@@ -234,13 +244,8 @@ export function useLiveKitLearnSession(
                 : interviewerVideoRef.current;
 
               if (targetVideo) {
-                const mediaStream = new MediaStream([track.mediaStreamTrack]);
-                const existingSrc = targetVideo.srcObject as MediaStream | null;
-                if (existingSrc) {
-                  existingSrc.addTrack(track.mediaStreamTrack);
-                } else {
-                  targetVideo.srcObject = mediaStream;
-                }
+                // Always create a fresh MediaStream to avoid stale track issues
+                targetVideo.srcObject = new MediaStream([track.mediaStreamTrack]);
                 targetVideo.play().catch(console.error);
                 console.log(`[LearnLK] Attached video track to ${role || "unknown"} video element`);
               }
@@ -257,8 +262,9 @@ export function useLiveKitLearnSession(
         });
 
         room.on(RoomEvent.ParticipantConnected, (participant: RemoteParticipant) => {
-          console.log(`[LearnLK] Participant connected: ${participant.identity}`);
-          getParticipantRole(participant);
+          console.log(`[LearnLK] Participant connected: ${participant.identity} (metadata: ${participant.metadata || "none"})`);
+          const role = getParticipantRole(participant);
+          console.log(`[LearnLK] Mapped participant ${participant.identity} → ${role || "unknown"}`);
         });
 
         room.on(RoomEvent.ParticipantDisconnected, (participant: RemoteParticipant) => {
