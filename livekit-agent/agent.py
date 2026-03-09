@@ -1,5 +1,6 @@
 import os
 import json
+import asyncio
 import logging
 from dotenv import load_dotenv
 
@@ -7,12 +8,238 @@ load_dotenv(".env.local", override=False)
 
 logger = logging.getLogger("interview-agent")
 
+from livekit import rtc
 from livekit.agents import Agent, AgentSession, JobContext, WorkerOptions, cli, room_io
 from livekit.plugins import openai, elevenlabs, silero, anam, noise_cancellation
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
 
 # Preload Silero VAD model at module level so it's cached before the first job arrives
 _preloaded_vad = silero.VAD.load()
+
+# Anam avatar IDs for learn mode (interviewer and candidate)
+INTERVIEWER_AVATAR_ID = "bdaaedfa-00f2-417a-8239-8bb89adec682"
+CANDIDATE_AVATAR_ID = "edf6fdcb-acab-44b8-b974-ded72665ee26"
+
+# ElevenLabs voice IDs
+INTERVIEWER_VOICE_ID = "o0A9ZeHFlYO5UFbSjH7b"
+CANDIDATE_VOICE_ID = "pFZP5JQG7iQjIQuC4Bku"  # Lily
+
+
+async def run_learn_mode(ctx: JobContext, meta: dict):
+    """Run learn mode with two agent sessions having a conversation."""
+    interviewer_prompt = meta.get("interviewer_prompt", "You are an interviewer.")
+    candidate_prompt = meta.get("candidate_prompt", "You are a candidate.")
+    max_turns = meta.get("max_turns", 10)
+
+    eleven_key = os.getenv("ELEVEN_API_KEY")
+    anam_key = os.getenv("ANAM_API_KEY")
+
+    logger.info(f"Learn mode: max_turns={max_turns}")
+
+    # Create two AgentSessions - no STT/VAD needed (no user audio input)
+    interviewer_session = AgentSession(
+        llm=openai.LLM(model="gpt-4o"),
+        tts=elevenlabs.TTS(
+            api_key=eleven_key,
+            voice_id=INTERVIEWER_VOICE_ID,
+            model="eleven_turbo_v2_5",
+        ),
+    )
+
+    candidate_session = AgentSession(
+        llm=openai.LLM(model="gpt-4o"),
+        tts=elevenlabs.TTS(
+            api_key=eleven_key,
+            voice_id=CANDIDATE_VOICE_ID,
+            model="eleven_turbo_v2_5",
+        ),
+    )
+
+    # Create two Anam avatar sessions with different personas and unique identities
+    interviewer_avatar = anam.AvatarSession(
+        persona_config=anam.PersonaConfig(
+            name="Interviewer",
+            avatarId=INTERVIEWER_AVATAR_ID,
+        ),
+        api_key=anam_key,
+        avatar_participant_identity="interviewer-avatar",
+        avatar_participant_name="Interviewer",
+    )
+
+    candidate_avatar = anam.AvatarSession(
+        persona_config=anam.PersonaConfig(
+            name="Candidate",
+            avatarId=CANDIDATE_AVATAR_ID,
+        ),
+        api_key=anam_key,
+        avatar_participant_identity="candidate-avatar",
+        avatar_participant_name="Expert Candidate",
+    )
+
+    # Start avatar sessions (each binds to its agent session's audio output)
+    logger.info("Starting interviewer avatar session...")
+    await interviewer_avatar.start(interviewer_session, room=ctx.room)
+
+    logger.info("Starting candidate avatar session...")
+    await candidate_avatar.start(candidate_session, room=ctx.room)
+
+    # Start both agent sessions with no audio/text input (conversation is orchestrated)
+    logger.info("Starting interviewer agent session...")
+    await interviewer_session.start(
+        agent=Agent(instructions=interviewer_prompt),
+        room=ctx.room,
+        room_input_options=room_io.RoomInputOptions(
+            audio_enabled=False,
+            text_enabled=False,
+        ),
+    )
+
+    logger.info("Starting candidate agent session...")
+    await candidate_session.start(
+        agent=Agent(instructions=candidate_prompt),
+        room=ctx.room,
+        room_input_options=room_io.RoomInputOptions(
+            audio_enabled=False,
+            text_enabled=False,
+        ),
+    )
+
+    # Conversation state
+    pause_event = asyncio.Event()
+    pause_event.set()  # Start unpaused
+    stop_requested = False
+    pending_question = None
+
+    # Helper to send data messages to the frontend
+    async def send_data(payload: dict):
+        try:
+            data = json.dumps(payload).encode("utf-8")
+            await ctx.room.local_participant.publish_data(data, reliable=True)
+        except Exception as e:
+            logger.error(f"Failed to send data message: {e}")
+
+    # Listen for data messages from frontend
+    @ctx.room.on("data_received")
+    def on_data_received(data_packet):
+        nonlocal stop_requested, pending_question
+        try:
+            msg = json.loads(data_packet.data.decode("utf-8"))
+            msg_type = msg.get("type")
+            logger.info(f"Received data message: {msg_type}")
+
+            if msg_type == "pause":
+                pause_event.clear()
+            elif msg_type == "resume":
+                pause_event.set()
+            elif msg_type == "ask_question":
+                pending_question = msg.get("text", "")
+                pause_event.set()  # Unpause to process question
+            elif msg_type == "end":
+                stop_requested = True
+                pause_event.set()  # Unpause to allow loop to exit
+        except Exception as e:
+            logger.error(f"Failed to parse data message: {e}")
+
+    # Run the conversation loop
+    turn = 0
+    conversation_history = []
+
+    try:
+        while turn < max_turns and not stop_requested:
+            # Wait if paused
+            await pause_event.wait()
+            if stop_requested:
+                break
+
+            # --- Interviewer's turn ---
+            await send_data({"type": "speaker_change", "speaker": "interviewer"})
+
+            if turn == 0:
+                instructions = "Greet the candidate and ask your first interview question."
+            else:
+                last_candidate_text = conversation_history[-1]["text"] if conversation_history else ""
+                instructions = f"The candidate just said: \"{last_candidate_text}\"\n\nAsk a follow-up question or move to the next topic."
+
+            logger.info(f"Turn {turn}: Interviewer generating reply...")
+            handle = interviewer_session.generate_reply(instructions=instructions)
+            await handle
+            interviewer_text = ""
+            for item in handle.chat_items:
+                if hasattr(item, "text_content") and item.text_content:
+                    interviewer_text = item.text_content
+                    break
+
+            if not interviewer_text:
+                logger.warning("Interviewer produced no text, using fallback")
+                interviewer_text = "Let's continue with the next question."
+
+            conversation_history.append({"speaker": "interviewer", "text": interviewer_text})
+            logger.info(f"Interviewer said: {interviewer_text[:80]}...")
+
+            # Check for stop/pause between turns
+            if stop_requested:
+                break
+            await pause_event.wait()
+            if stop_requested:
+                break
+
+            # Handle pending user question if any
+            if pending_question:
+                question_text = pending_question
+                pending_question = None
+
+                await send_data({"type": "speaker_change", "speaker": "candidate"})
+                logger.info(f"Processing user question: {question_text[:80]}...")
+
+                q_instructions = f"The observer asks you: \"{question_text}\"\n\nAnswer this question directly, then the interview will resume."
+                q_handle = candidate_session.generate_reply(instructions=q_instructions)
+                await q_handle
+                q_answer = ""
+                for item in q_handle.chat_items:
+                    if hasattr(item, "text_content") and item.text_content:
+                        q_answer = item.text_content
+                        break
+
+                if q_answer:
+                    conversation_history.append({"speaker": "candidate", "text": f"[User Q&A] {q_answer}"})
+
+                if stop_requested:
+                    break
+                await pause_event.wait()
+                if stop_requested:
+                    break
+
+            # --- Candidate's turn ---
+            await send_data({"type": "speaker_change", "speaker": "candidate"})
+
+            candidate_instructions = f"The interviewer just said: \"{interviewer_text}\"\n\nProvide your response."
+
+            logger.info(f"Turn {turn}: Candidate generating reply...")
+            handle = candidate_session.generate_reply(instructions=candidate_instructions)
+            await handle
+            candidate_text = ""
+            for item in handle.chat_items:
+                if hasattr(item, "text_content") and item.text_content:
+                    candidate_text = item.text_content
+                    break
+
+            if not candidate_text:
+                logger.warning("Candidate produced no text, using fallback")
+                candidate_text = "That's a great question. Let me think about that."
+
+            conversation_history.append({"speaker": "candidate", "text": candidate_text})
+            logger.info(f"Candidate said: {candidate_text[:80]}...")
+
+            turn += 1
+
+        # Session ended
+        reason = "stopped" if stop_requested else "max_turns"
+        await send_data({"type": "session_end", "reason": reason})
+        logger.info(f"Learn mode session ended: {reason}, {turn} turns completed")
+
+    except Exception as e:
+        logger.error(f"Learn mode conversation loop failed: {e}", exc_info=True)
+        await send_data({"type": "session_end", "reason": "error"})
 
 
 async def entrypoint(ctx: JobContext):
@@ -31,12 +258,20 @@ async def entrypoint(ctx: JobContext):
             meta = json.loads(raw)
             system_prompt = meta.get("system_prompt", "You are a case interview coach.")
             avatar_mode = meta.get("avatar_mode", "anam")
+            mode = meta.get("mode", "practice")
         except (json.JSONDecodeError, TypeError):
             system_prompt = raw or "You are a case interview coach."
             avatar_mode = "anam"
+            mode = "practice"
 
-        logger.info(f"Avatar mode: {avatar_mode}")
+        logger.info(f"Mode: {mode}, Avatar mode: {avatar_mode}")
 
+        # Branch on mode
+        if mode == "learn":
+            await run_learn_mode(ctx, meta)
+            return
+
+        # --- Practice mode (existing behavior) ---
         eleven_key = os.getenv("ELEVEN_API_KEY")
 
         session = AgentSession(
@@ -44,7 +279,7 @@ async def entrypoint(ctx: JobContext):
             llm=openai.LLM(model="gpt-4o"),
             tts=elevenlabs.TTS(
                 api_key=eleven_key,
-                voice_id="o0A9ZeHFlYO5UFbSjH7b",
+                voice_id=INTERVIEWER_VOICE_ID,
                 model="eleven_turbo_v2_5",
             ),
             vad=_preloaded_vad,
@@ -56,7 +291,7 @@ async def entrypoint(ctx: JobContext):
             avatar = anam.AvatarSession(
                 persona_config=anam.PersonaConfig(
                     name="Interviewer",
-                    avatarId="bdaaedfa-00f2-417a-8239-8bb89adec682",
+                    avatarId=INTERVIEWER_AVATAR_ID,
                 ),
                 api_key=os.getenv("ANAM_API_KEY"),
             )
