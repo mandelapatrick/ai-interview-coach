@@ -125,36 +125,81 @@ export default async function LandingPage() {
                     <span className="text-xs text-gray-400 font-medium">AceInterview — Practice Session</span>
                   </div>
                 </div>
-                {/* Mockup Body */}
-                <div className="p-6 space-y-4">
-                  {/* AI Interviewer message */}
-                  <div className="flex gap-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-[#d4af37] to-[#f4d03f] rounded-full flex items-center justify-center flex-shrink-0">
-                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-                      </svg>
+                {/* Video Interview Body */}
+                <div className="relative">
+                  {/* Two-panel video grid */}
+                  <div className="grid grid-cols-2 gap-0.5 bg-gray-800">
+                    {/* AI Interviewer panel */}
+                    <div className="relative bg-gray-900 aspect-[4/3] flex flex-col items-center justify-center">
+                      {/* AI Avatar */}
+                      <div className="relative">
+                        <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#d4af37] to-[#f4d03f] flex items-center justify-center">
+                          <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                          </svg>
+                        </div>
+                        {/* Animated speaking indicator */}
+                        <div className="absolute -inset-1.5 rounded-full border-2 border-[#d4af37]/60 animate-ping" style={{ animationDuration: '2s' }}></div>
+                        <div className="absolute -inset-3 rounded-full border border-[#d4af37]/30 animate-pulse"></div>
+                      </div>
+                      {/* Name label */}
+                      <div className="mt-3 flex items-center gap-1.5">
+                        <span className="text-white text-xs font-medium">AI Interviewer</span>
+                        <div className="flex gap-0.5 items-end h-3">
+                          <div className="w-0.5 bg-emerald-400 rounded-full animate-pulse h-1.5" style={{ animationDelay: '0ms' }}></div>
+                          <div className="w-0.5 bg-emerald-400 rounded-full animate-pulse h-3" style={{ animationDelay: '150ms' }}></div>
+                          <div className="w-0.5 bg-emerald-400 rounded-full animate-pulse h-2" style={{ animationDelay: '300ms' }}></div>
+                        </div>
+                      </div>
                     </div>
-                    <div className="bg-gray-50 rounded-xl rounded-tl-sm px-4 py-3 max-w-[280px]">
-                      <p className="text-sm text-gray-700">Your client is a national grocery chain experiencing a 15% decline in profit margins. Walk me through your approach.</p>
+                    {/* Candidate panel */}
+                    <div className="relative bg-gray-800 aspect-[4/3] flex flex-col items-center justify-center">
+                      {/* User avatar */}
+                      <div className="w-20 h-20 rounded-full bg-[#1e3a5f] flex items-center justify-center">
+                        <span className="text-white text-2xl font-bold">Y</span>
+                      </div>
+                      {/* Name label */}
+                      <div className="mt-3 flex items-center gap-1.5">
+                        <span className="text-white/80 text-xs font-medium">You</span>
+                        <svg className="w-3 h-3 text-red-400" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M19 11h-1.7c0 .74-.16 1.43-.43 2.05l1.23 1.23c.56-.98.9-2.09.9-3.28zm-4.02.17c0-.06.02-.11.02-.17V5c0-1.66-1.34-3-3-3S9 3.34 9 5v.18l5.98 5.99zM4.27 3L3 4.27l6.01 6.01V11c0 1.66 1.33 3 2.99 3 .22 0 .44-.03.65-.08l1.66 1.66c-.71.33-1.5.52-2.31.52-2.76 0-5.3-2.1-5.3-5.1H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c.91-.13 1.77-.45 2.54-.9L19.73 21 21 19.73 4.27 3z" />
+                        </svg>
+                      </div>
                     </div>
                   </div>
-                  {/* User message */}
-                  <div className="flex gap-3 justify-end">
-                    <div className="bg-[#d4af37]/10 rounded-xl rounded-tr-sm px-4 py-3 max-w-[260px]">
-                      <p className="text-sm text-gray-700">I&apos;d like to start by clarifying a few things about the client&apos;s situation...</p>
+                  {/* Bottom control bar */}
+                  <div className="bg-gray-900 px-4 py-2.5 flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      {/* Mic button */}
+                      <div className="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                        </svg>
+                      </div>
+                      {/* Camera button */}
+                      <div className="w-8 h-8 rounded-full bg-gray-700 flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                      {/* End call button */}
+                      <div className="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M16 8l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M5 3a2 2 0 00-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 002-2v-3.28a1 1 0 00-.684-.948l-4.493-1.498a1 1 0 00-1.21.502l-1.13 2.257a11.042 11.042 0 01-5.516-5.517l2.257-1.128a1 1 0 00.502-1.21L9.228 3.683A1 1 0 008.279 3H5z" />
+                        </svg>
+                      </div>
                     </div>
-                    <div className="w-8 h-8 bg-[#1e3a5f] rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white text-xs font-bold">Y</span>
-                    </div>
+                    {/* Timer */}
+                    <span className="text-white/60 text-xs font-mono">12:34</span>
                   </div>
-                  {/* Score indicator */}
-                  <div className="flex items-center gap-3 bg-emerald-50 border border-emerald-200 rounded-lg px-4 py-2.5">
-                    <svg className="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  {/* Floating feedback badge */}
+                  <div className="absolute bottom-12 right-3 flex items-center gap-2 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2 shadow-lg">
+                    <svg className="w-4 h-4 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <div>
-                      <p className="text-xs font-semibold text-emerald-800">Strong Clarification</p>
-                      <p className="text-xs text-emerald-600">Great framework — structured and concise</p>
+                      <p className="text-[10px] font-semibold text-emerald-800">Strong Clarification</p>
+                      <p className="text-[10px] text-emerald-600">Great framework — structured and concise</p>
                     </div>
                   </div>
                 </div>
