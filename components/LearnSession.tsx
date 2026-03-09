@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, useState, useCallback } from "react";
 import { Question } from "@/types";
-import { useDualAnamAvatars, TranscriptEntry } from "@/hooks/useDualAnamAvatars";
+import { useLiveKitLearnSession, TranscriptEntry } from "@/hooks/useLiveKitLearnSession";
 import { getSystemPrompt, getCandidatePrompt } from "@/data/prompts";
 import ClarifyingQuestionModal from "./ClarifyingQuestionModal";
 
@@ -41,7 +41,7 @@ export default function LearnSession({ question, onEnd, maxDurationSeconds }: Le
     resume,
     askCandidateQuestion,
     stopAvatars,
-  } = useDualAnamAvatars({
+  } = useLiveKitLearnSession({
     interviewerPrompt,
     candidatePrompt,
     onSessionEnd: () => {

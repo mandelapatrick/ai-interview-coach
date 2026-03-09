@@ -3,7 +3,8 @@ import { AccessToken, RoomAgentDispatch, RoomConfiguration } from "livekit-serve
 
 export async function POST(req: NextRequest) {
   try {
-    const { systemPrompt, avatarMode } = await req.json();
+    const body = await req.json();
+    const { systemPrompt, avatarMode, mode, interviewerPrompt, candidatePrompt, maxTurns } = body;
 
     const livekitUrl = process.env.LIVEKIT_URL;
     const apiKey = process.env.LIVEKIT_API_KEY;
@@ -36,10 +37,20 @@ export async function POST(req: NextRequest) {
         new RoomAgentDispatch({ agentName: "interview-agent" }),
       ],
     });
-    roomConfig.metadata = JSON.stringify({
-      system_prompt: systemPrompt || "",
-      avatar_mode: avatarMode || "anam",
-    });
+
+    if (mode === "learn") {
+      roomConfig.metadata = JSON.stringify({
+        mode: "learn",
+        interviewer_prompt: interviewerPrompt || "",
+        candidate_prompt: candidatePrompt || "",
+        max_turns: maxTurns || 10,
+      });
+    } else {
+      roomConfig.metadata = JSON.stringify({
+        system_prompt: systemPrompt || "",
+        avatar_mode: avatarMode || "anam",
+      });
+    }
 
     token.roomConfig = roomConfig;
 
