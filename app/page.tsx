@@ -53,15 +53,6 @@ export default async function LandingPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left: Text */}
             <div>
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-[#d4af37]/10 text-[#b8972e] px-4 py-1.5 rounded-full text-sm font-medium mb-6">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#d4af37] opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#d4af37]"></span>
-                </span>
-                Trusted by 5,000+ candidates
-              </div>
-
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 font-display leading-tight">
                 Master Your{" "}
                 <span className="bg-gradient-to-r from-[#d4af37] to-[#f4d03f] bg-clip-text text-transparent">
@@ -97,19 +88,6 @@ export default async function LandingPage() {
                 </a>
               </div>
 
-              {/* Avatar stack social proof */}
-              <div className="flex items-center gap-3">
-                <div className="flex -space-x-2">
-                  {["bg-blue-500", "bg-emerald-500", "bg-purple-500", "bg-orange-500"].map((color, i) => (
-                    <div key={i} className={`w-8 h-8 rounded-full ${color} border-2 border-white flex items-center justify-center text-white text-xs font-bold`}>
-                      {["A", "S", "M", "J"][i]}
-                    </div>
-                  ))}
-                </div>
-                <p className="text-sm text-gray-600">
-                  <span className="font-semibold text-gray-900">2,400+</span> practicing this month
-                </p>
-              </div>
             </div>
 
             {/* Right: Product Mockup */}
@@ -211,17 +189,6 @@ export default async function LandingPage() {
         </div>
       </section>
 
-      {/* Stats Bar */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
-            <StatItem number="5,000+" label="Candidates Trained" />
-            <StatItem number="92%" label="Improved Confidence" />
-            <StatItem number="15,000+" label="Sessions Completed" />
-            <StatItem number="4.8/5" label="Average Rating" />
-          </div>
-        </div>
-      </section>
 
       {/* Features Section */}
       <section id="features" className="bg-gray-50 py-20">
