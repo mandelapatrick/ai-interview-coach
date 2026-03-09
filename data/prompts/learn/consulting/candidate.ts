@@ -1,4 +1,7 @@
 /**
+ * @deprecated This file is superseded by the type-specific prompts in ./types/ and the new ./index.ts orchestrator.
+ * Kept for reference only. Import from "./learn/consulting" instead.
+ *
  * Consulting Case Interview Candidate Prompt for Learn Mode
  * Structured case interview approach with explicit check-in points
  */

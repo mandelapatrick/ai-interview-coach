@@ -7,7 +7,7 @@ import { Question } from "@/types";
 import { getConsultingPrompt } from "./practice/consulting";
 import { getPMPrompt } from "./practice/pm";
 import { getPMCandidatePrompt } from "./learn/pm";
-import { getConsultingCandidatePrompt } from "./learn/consulting/candidate";
+import { getConsultingCandidatePrompt } from "./learn/consulting";
 
 // Re-export practice mode functions
 export {
@@ -29,7 +29,7 @@ export * from "./practice/pm/types";
 // Re-export learn mode functions
 export { getPMCandidatePrompt, getCandidateTypePrompt } from "./learn/pm";
 export * from "./learn/pm/types";
-export { getConsultingCandidatePrompt } from "./learn/consulting/candidate";
+export { getConsultingCandidatePrompt } from "./learn/consulting";
 
 /**
  * Main function to get the system prompt for practice mode (interviewer)
