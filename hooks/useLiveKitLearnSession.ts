@@ -300,9 +300,9 @@ export function useLiveKitLearnSession(
         room.on(RoomEvent.TranscriptionReceived, (segments, participant) => {
           if (!participant || participant.isLocal) return;
 
-          const role = currentSpeakerRef.current
-            || participantRoleMap.current.get(participant.identity)
-            || getParticipantRole(participant as RemoteParticipant);
+          const role = participantRoleMap.current.get(participant.identity)
+            || getParticipantRole(participant as RemoteParticipant)
+            || currentSpeakerRef.current;
           if (!role) return;
 
           // Get or create segment map for this participant
