@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
@@ -133,17 +134,13 @@ export default async function LandingPage() {
                     <div className="relative bg-gray-900 aspect-[4/3] flex flex-col items-center justify-center">
                       {/* AI Avatar */}
                       <div className="relative">
-                        <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#d4af37] to-[#f4d03f] flex items-center justify-center">
-                          <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-                          </svg>
-                        </div>
+                        <Image src="/avatars/ai-interviewer.png" alt="AI Interviewer" width={80} height={80} className="w-20 h-20 rounded-full object-cover" />
                         {/* Animated speaking indicator */}
                         <div className="absolute -inset-1.5 rounded-full border-2 border-[#d4af37]/60 animate-ping" style={{ animationDuration: '2s' }}></div>
                         <div className="absolute -inset-3 rounded-full border border-[#d4af37]/30 animate-pulse"></div>
                       </div>
-                      {/* Name label */}
-                      <div className="mt-3 flex items-center gap-1.5">
+                      {/* Upper-right label */}
+                      <div className="absolute top-2 right-2 bg-black/50 backdrop-blur-sm rounded-full px-2 py-1 flex items-center gap-1.5">
                         <span className="text-white text-xs font-medium">AI Interviewer</span>
                         <div className="flex gap-0.5 items-end h-3">
                           <div className="w-0.5 bg-emerald-400 rounded-full animate-pulse h-1.5" style={{ animationDelay: '0ms' }}></div>
@@ -155,11 +152,9 @@ export default async function LandingPage() {
                     {/* Candidate panel */}
                     <div className="relative bg-gray-800 aspect-[4/3] flex flex-col items-center justify-center">
                       {/* User avatar */}
-                      <div className="w-20 h-20 rounded-full bg-[#1e3a5f] flex items-center justify-center">
-                        <span className="text-white text-2xl font-bold">Y</span>
-                      </div>
-                      {/* Name label */}
-                      <div className="mt-3 flex items-center gap-1.5">
+                      <Image src="/avatars/candidate.png" alt="Candidate" width={80} height={80} className="w-20 h-20 rounded-full object-cover" />
+                      {/* Upper-right label */}
+                      <div className="absolute top-2 right-2 bg-black/50 backdrop-blur-sm rounded-full px-2 py-1 flex items-center gap-1.5">
                         <span className="text-white/80 text-xs font-medium">You</span>
                         <svg className="w-3 h-3 text-red-400" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M19 11h-1.7c0 .74-.16 1.43-.43 2.05l1.23 1.23c.56-.98.9-2.09.9-3.28zm-4.02.17c0-.06.02-.11.02-.17V5c0-1.66-1.34-3-3-3S9 3.34 9 5v.18l5.98 5.99zM4.27 3L3 4.27l6.01 6.01V11c0 1.66 1.33 3 2.99 3 .22 0 .44-.03.65-.08l1.66 1.66c-.71.33-1.5.52-2.31.52-2.76 0-5.3-2.1-5.3-5.1H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c.91-.13 1.77-.45 2.54-.9L19.73 21 21 19.73 4.27 3z" />
