@@ -114,13 +114,23 @@ export function useLiveKitLearnSession(
     setCurrentSpeaker(speaker);
     onSpeakerChangeRef.current?.(speaker);
 
-    // Mute/unmute video elements based on who is speaking
-    if (interviewerVideoRef.current) {
-      interviewerVideoRef.current.muted = speaker !== "interviewer";
+    // Unmute the new speaker immediately
+    if (speaker === "interviewer" && interviewerVideoRef.current) {
+      interviewerVideoRef.current.muted = false;
     }
-    if (candidateVideoRef.current) {
-      candidateVideoRef.current.muted = speaker !== "candidate";
+    if (speaker === "candidate" && candidateVideoRef.current) {
+      candidateVideoRef.current.muted = false;
     }
+
+    // Delay muting the other speaker to allow their audio tail to finish
+    setTimeout(() => {
+      if (interviewerVideoRef.current && currentSpeakerRef.current !== "interviewer") {
+        interviewerVideoRef.current.muted = true;
+      }
+      if (candidateVideoRef.current && currentSpeakerRef.current !== "candidate") {
+        candidateVideoRef.current.muted = true;
+      }
+    }, 1500); // 1.5s delay to let avatar audio drain
   }, []);
 
   // Mute/unmute all remote audio tracks (for pause/resume)
