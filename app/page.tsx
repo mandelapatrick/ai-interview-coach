@@ -131,14 +131,8 @@ export default async function LandingPage() {
                   {/* Two-panel video grid */}
                   <div className="grid grid-cols-2 gap-0.5 bg-gray-800">
                     {/* AI Interviewer panel */}
-                    <div className="relative bg-gray-900 aspect-[4/3] flex flex-col items-center justify-center">
-                      {/* AI Avatar */}
-                      <div className="relative">
-                        <Image src="/avatars/ai-interviewer.png" alt="AI Interviewer" width={80} height={80} className="w-20 h-20 rounded-full object-cover" />
-                        {/* Animated speaking indicator */}
-                        <div className="absolute -inset-1.5 rounded-full border-2 border-[#d4af37]/60 animate-ping" style={{ animationDuration: '2s' }}></div>
-                        <div className="absolute -inset-3 rounded-full border border-[#d4af37]/30 animate-pulse"></div>
-                      </div>
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <Image src="/avatars/ai-interviewer.png" alt="AI Interviewer" fill className="object-cover" />
                       {/* Upper-right label */}
                       <div className="absolute top-2 right-2 bg-black/50 backdrop-blur-sm rounded-full px-2 py-1 flex items-center gap-1.5">
                         <span className="text-white text-xs font-medium">AI Interviewer</span>
@@ -150,9 +144,8 @@ export default async function LandingPage() {
                       </div>
                     </div>
                     {/* Candidate panel */}
-                    <div className="relative bg-gray-800 aspect-[4/3] flex flex-col items-center justify-center">
-                      {/* User avatar */}
-                      <Image src="/avatars/candidate.png" alt="Candidate" width={80} height={80} className="w-20 h-20 rounded-full object-cover" />
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <Image src="/avatars/candidate.png" alt="Candidate" fill className="object-cover" />
                       {/* Upper-right label */}
                       <div className="absolute top-2 right-2 bg-black/50 backdrop-blur-sm rounded-full px-2 py-1 flex items-center gap-1.5">
                         <span className="text-white/80 text-xs font-medium">You</span>
