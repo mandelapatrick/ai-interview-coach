@@ -216,7 +216,7 @@ export default async function LandingPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
                 </svg>
               }
-              title="Voice-Based Practice"
+              title="Video-Based Practice"
               description="Speak naturally with our AI interviewer, just like a real interview setting."
             />
             <FeatureCard
@@ -281,7 +281,7 @@ export default async function LandingPage() {
               <StepCard
                 number="2"
                 title="Practice with AI"
-                description="Start a voice session with our AI interviewer who guides you through the case in real time."
+                description="Start a video session with our AI interviewer who guides you through the case in real time."
               />
               <StepCard
                 number="3"
@@ -346,7 +346,7 @@ export default async function LandingPage() {
             />
             <FAQItem
               question="What equipment do I need?"
-              answer="Just a computer or phone with a microphone. Our voice-based practice works in your browser — no downloads or special equipment required. A quiet environment is recommended for the best experience."
+              answer="Just a computer or phone with a camera and microphone. Our video-based practice works in your browser — no downloads or special equipment required. A quiet environment is recommended for the best experience."
             />
             <FAQItem
               question="How is this better than practicing with a partner?"
