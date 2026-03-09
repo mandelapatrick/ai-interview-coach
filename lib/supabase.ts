@@ -75,6 +75,68 @@ export interface DbUsageTracking {
   created_at: string;
 }
 
+export interface DbUserOnboarding {
+  id: string;
+  user_email: string;
+  role: string;
+  referral_source: string | null;
+  onboarding_completed: boolean;
+  created_at: string;
+  updated_at: string;
+}
+
+export async function getUserOnboarding(email: string): Promise<DbUserOnboarding | null> {
+  if (!supabaseAdmin) return null;
+  const { data, error } = await supabaseAdmin
+    .from("user_onboarding")
+    .select("*")
+    .eq("user_email", email)
+    .single();
+  if (error) return null;
+  return data;
+}
+
+export async function saveUserOnboarding(data: {
+  user_email: string;
+  role: string;
+  referral_source?: string;
+}) {
+  if (!supabaseAdmin) return null;
+  const { data: result, error } = await supabaseAdmin
+    .from("user_onboarding")
+    .upsert(
+      {
+        user_email: data.user_email,
+        role: data.role,
+        referral_source: data.referral_source || null,
+        updated_at: new Date().toISOString(),
+      },
+      { onConflict: "user_email" }
+    )
+    .select()
+    .single();
+  if (error) {
+    console.error("Error saving onboarding:", error);
+    throw error;
+  }
+  return result;
+}
+
+export async function markOnboardingComplete(email: string) {
+  if (!supabaseAdmin) return null;
+  const { data, error } = await supabaseAdmin
+    .from("user_onboarding")
+    .update({ onboarding_completed: true, updated_at: new Date().toISOString() })
+    .eq("user_email", email)
+    .select()
+    .single();
+  if (error) {
+    console.error("Error marking onboarding complete:", error);
+    throw error;
+  }
+  return data;
+}
+
 // Helper functions
 export async function saveSession(session: Omit<DbSession, "id" | "created_at">) {
   if (!supabase) {

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { useParams, useSearchParams } from "next/navigation";
 import { getQuestionById } from "@/data/questions";
 import { getCompanyBySlug } from "@/data/companies";
 import { QUESTION_TYPE_LABELS, PM_QUESTION_TYPE_LABELS, PMQuestionType, InterviewTrack } from "@/types";
@@ -65,8 +65,10 @@ interface Assessment {
 
 export default function AssessmentPage() {
   const params = useParams();
+  const searchParams = useSearchParams();
   const questionId = params.questionId as string;
   const question = getQuestionById(questionId);
+  const isOnboarding = searchParams.get("onboarding") === "true";
   const company = question ? getCompanyBySlug(question.companySlug) : null;
 
   const [sessionData, setSessionData] = useState<SessionData | null>(null);
@@ -224,18 +226,29 @@ export default function AssessmentPage() {
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
-          <Link
-            href={`/dashboard/questions?track=${question.track}`}
-            className="text-sm text-[#d4af37] hover:text-[#f4d03f] transition-colors"
-          >
-            ← Back to Question Bank
-          </Link>
-          <Link
-            href="/history"
-            className="text-sm text-gray-500 hover:text-[#d4af37] transition-colors"
-          >
-            View History
-          </Link>
+          {isOnboarding ? (
+            <a
+              href="/dashboard"
+              className="text-sm text-[#d4af37] hover:text-[#f4d03f] transition-colors"
+            >
+              ← Go to Dashboard
+            </a>
+          ) : (
+            <Link
+              href={`/dashboard/questions?track=${question.track}`}
+              className="text-sm text-[#d4af37] hover:text-[#f4d03f] transition-colors"
+            >
+              ← Back to Question Bank
+            </Link>
+          )}
+          {!isOnboarding && (
+            <Link
+              href="/history"
+              className="text-sm text-gray-500 hover:text-[#d4af37] transition-colors"
+            >
+              View History
+            </Link>
+          )}
         </div>
       </header>
 
@@ -442,18 +455,29 @@ export default function AssessmentPage() {
 
             {/* Actions */}
             <div className="flex flex-col sm:flex-row gap-3 justify-center pt-4">
-              <Link
-                href={`/practice/${questionId}`}
-                className="px-6 py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-lg font-medium hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all text-center"
-              >
-                Practice Again
-              </Link>
-              <Link
-                href={`/dashboard/questions?track=${question.track}`}
-                className="px-6 py-3 bg-white text-gray-900 rounded-lg font-medium hover:bg-gray-50 transition-colors border border-gray-200 text-center"
-              >
-                Try Another Question
-              </Link>
+              {isOnboarding ? (
+                <a
+                  href="/dashboard"
+                  className="px-6 py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-lg font-medium hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all text-center"
+                >
+                  Go to Dashboard
+                </a>
+              ) : (
+                <>
+                  <Link
+                    href={`/practice/${questionId}`}
+                    className="px-6 py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-lg font-medium hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all text-center"
+                  >
+                    Practice Again
+                  </Link>
+                  <Link
+                    href={`/dashboard/questions?track=${question.track}`}
+                    className="px-6 py-3 bg-white text-gray-900 rounded-lg font-medium hover:bg-gray-50 transition-colors border border-gray-200 text-center"
+                  >
+                    Try Another Question
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         ) : null}

@@ -19,6 +19,7 @@ interface VideoSessionProps {
   avatarProvider: AvatarProvider;
   onBack: () => void;
   maxDurationSeconds?: number | null;
+  assessmentRedirect?: string;
 }
 
 interface TranscriptEntry {
@@ -27,7 +28,7 @@ interface TranscriptEntry {
   timestamp: Date;
 }
 
-export default function VideoSession({ question, userStream, avatarProvider, onBack, maxDurationSeconds }: VideoSessionProps) {
+export default function VideoSession({ question, userStream, avatarProvider, onBack, maxDurationSeconds, assessmentRedirect }: VideoSessionProps) {
   const router = useRouter();
   const [showEndConfirm, setShowEndConfirm] = useState(false);
   const [showTimeWarning, setShowTimeWarning] = useState(false);
@@ -493,7 +494,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
 
     await cleanup();
     // Navigate immediately - upload will happen in background on assessment page
-    router.push(`/assessment/${question.id}`);
+    router.push(assessmentRedirect || `/assessment/${question.id}`);
   };
 
   const formatTime = (seconds: number) => {
@@ -681,7 +682,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
       </div>
 
       {/* Right Sidebar - hidden on mobile, full sidebar on desktop */}
-      <div className="hidden md:flex flex-shrink-0 md:w-[360px] md:h-full md:max-h-[calc(100vh-170px)] bg-white flex-col border-l border-gray-200 overflow-hidden">
+      <div className="hidden md:flex flex-shrink-0 md:w-[360px] md:h-full bg-white flex-col border-l border-gray-200 overflow-hidden">
         {/* Header - Company & Timer */}
         <div className="p-4 border-b border-gray-100 flex-shrink-0">
           <div className="flex items-start justify-between">

@@ -1,6 +1,8 @@
 import { auth } from "@/lib/auth";
 import { redirect } from "next/navigation";
+import { unstable_noStore } from "next/cache";
 import Sidebar from "@/components/Sidebar";
+import { getUserOnboarding } from "@/lib/supabase";
 
 export default async function DashboardLayout({
   children,
@@ -11,6 +13,15 @@ export default async function DashboardLayout({
 
   if (!session) {
     redirect("/");
+  }
+
+  // Redirect first-time users to onboarding
+  if (session.user?.email) {
+    unstable_noStore();
+    const onboarding = await getUserOnboarding(session.user.email);
+    if (!onboarding || !onboarding.onboarding_completed) {
+      redirect("/onboarding");
+    }
   }
 
   return (

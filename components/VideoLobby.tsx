@@ -7,6 +7,8 @@ export type AvatarProvider = "heygen" | "anam" | "livekit";
 interface VideoLobbyProps {
   onJoin: (stream: MediaStream, avatarProvider: AvatarProvider) => void;
   onBack: () => void;
+  joinLabel?: string;
+  backLabel?: string;
 }
 
 interface MediaDeviceInfo {
@@ -14,7 +16,7 @@ interface MediaDeviceInfo {
   label: string;
 }
 
-export default function VideoLobby({ onJoin, onBack }: VideoLobbyProps) {
+export default function VideoLobby({ onJoin, onBack, joinLabel, backLabel }: VideoLobbyProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [stream, setStream] = useState<MediaStream | null>(null);
   const [isVideoEnabled, setIsVideoEnabled] = useState(true);
@@ -324,14 +326,14 @@ export default function VideoLobby({ onJoin, onBack }: VideoLobbyProps) {
             disabled={!stream}
             className="w-full lg:w-auto px-10 py-3 bg-[#d4af37] hover:bg-[#c4a030] text-white rounded-full font-medium transition-all disabled:opacity-50 disabled:cursor-not-allowed mb-3"
           >
-            Join now
+            {joinLabel || "Join now"}
           </button>
 
           <button
             onClick={onBack}
             className="w-full lg:w-auto px-10 py-3 text-[#d4af37] hover:bg-[#d4af37]/10 rounded-full font-medium transition-all border border-[#d4af37]/30"
           >
-            Go back
+            {backLabel || "Go back"}
           </button>
         </div>
       </div>
