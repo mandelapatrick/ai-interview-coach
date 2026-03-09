@@ -201,10 +201,10 @@ export default async function LandingPage() {
       <section className="border-y border-gray-200 py-10 bg-gray-50/50">
         <div className="max-w-6xl mx-auto px-4">
           <p className="text-center text-xs text-gray-500 uppercase tracking-[0.2em] font-medium mb-8">
-            Prepare for top consulting firms
+            Trusted by candidates at top companies
           </p>
           <div className="flex justify-center items-center gap-8 md:gap-14 flex-wrap">
-            {["McKinsey", "BCG", "Bain", "Deloitte", "Accenture", "Oliver Wyman", "Kearney"].map((firm) => (
+            {["Google", "Amazon", "McKinsey", "Goldman Sachs", "Meta", "Apple", "Microsoft"].map((firm) => (
               <span key={firm} className="text-gray-400 font-semibold text-lg tracking-wide">{firm}</span>
             ))}
           </div>
@@ -231,7 +231,7 @@ export default async function LandingPage() {
             Why AceInterview?
           </h2>
           <p className="text-center text-gray-600 mb-14 max-w-xl mx-auto">
-            Everything you need to ace your consulting case interview, powered by AI
+            Everything you need to ace your next interview, powered by AI
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <FeatureCard
@@ -241,7 +241,7 @@ export default async function LandingPage() {
                 </svg>
               }
               title="Real Case Questions"
-              description="Practice with actual cases from McKinsey, BCG, Bain, and other top consulting firms."
+              description="Practice with real interview questions from top companies across industries."
             />
             <FeatureCard
               icon={
@@ -309,7 +309,7 @@ export default async function LandingPage() {
               <StepCard
                 number="1"
                 title="Choose a Company"
-                description="Select from top consulting firms and browse their real case interview questions."
+                description="Select from top companies and browse their real interview questions."
               />
               <StepCard
                 number="2"
@@ -334,20 +334,20 @@ export default async function LandingPage() {
             What Our Users Say
           </h2>
           <p className="text-center text-gray-600 mb-14 max-w-xl mx-auto">
-            Join thousands of candidates who landed their dream consulting offers
+            Join thousands of candidates who landed their dream offers
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             <TestimonialCard
-              quote="AceInterview completely changed how I prepared. The AI felt like a real McKinsey interviewer — challenging but fair."
+              quote="AceInterview completely changed how I prepared. The AI felt like a real interviewer — challenging but fair."
               name="Sarah K."
-              role="McKinsey Associate"
+              role="Product Manager"
               initial="S"
               color="bg-blue-500"
             />
             <TestimonialCard
               quote="I went from struggling with market sizing to confidently solving cases in two weeks. The instant feedback loop is incredible."
               name="Michael T."
-              role="BCG Consultant"
+              role="Strategy Analyst"
               initial="M"
               color="bg-emerald-500"
             />
@@ -375,7 +375,7 @@ export default async function LandingPage() {
           <div className="space-y-3">
             <FAQItem
               question="How realistic is the AI interviewer?"
-              answer="Our AI is trained on real case interviews from top consulting firms. It adapts to your responses, asks follow-up questions, and pushes back just like a real interviewer would. Many users say it feels indistinguishable from practicing with an actual consultant."
+              answer="Our AI is trained on real interviews from top companies. It adapts to your responses, asks follow-up questions, and pushes back just like a real interviewer would. Many users say it feels indistinguishable from practicing with a real person."
             />
             <FAQItem
               question="What equipment do I need?"
@@ -407,7 +407,7 @@ export default async function LandingPage() {
 
             <div className="relative">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-display">
-                Ready to Land Your Dream Consulting Job?
+                Ready to Land Your Dream Job?
               </h2>
               <p className="text-gray-300 mb-8 max-w-lg mx-auto">
                 Join thousands of candidates who improved their case skills with AceInterview. Start practicing today.
@@ -444,7 +444,7 @@ export default async function LandingPage() {
                   Ace<span className="text-[#d4af37]">Interview</span>
                 </span>
               </div>
-              <p className="text-sm text-gray-500">AI-powered case interview practice for aspiring consultants.</p>
+              <p className="text-sm text-gray-500">AI-powered interview practice for ambitious candidates.</p>
             </div>
             {/* Product links */}
             <div>
