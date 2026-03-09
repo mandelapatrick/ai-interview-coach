@@ -179,7 +179,7 @@ async def run_learn_mode(ctx: JobContext, meta: dict):
             await send_data({"type": "speaker_change", "speaker": "interviewer"})
 
             if turn == 0:
-                instructions = "Greet the candidate and ask your first interview question."
+                instructions = "Greet the candidate warmly and ask how they're doing. Do NOT ask your interview question yet — wait for them to respond first."
             else:
                 last_candidate_text = conversation_history[-1]["text"] if conversation_history else ""
                 instructions = f"The candidate just said: \"{last_candidate_text}\"\n\nAsk a follow-up question or move to the next topic."
@@ -367,7 +367,7 @@ async def entrypoint(ctx: JobContext):
         )
         logger.info("Generating initial reply...")
         await session.generate_reply(
-            instructions="Greet the candidate and present the case."
+            instructions="Greet the candidate warmly and ask how they're doing. Do NOT present the case yet — wait for them to respond first."
         )
     except Exception as e:
         logger.error(f"Agent entrypoint failed: {e}", exc_info=True)

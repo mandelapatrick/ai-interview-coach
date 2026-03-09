@@ -70,7 +70,7 @@ ${getConsultingClosingSections()}
 
 ---
 
-**Begin the interview now.** Start with a brief greeting, then present the case prompt to the candidate. After the case prompt, keep all responses to 1-2 short sentences. Answer clarifying questions directly without restating or adding commentary.`;
+**Begin the interview now.** Start with a brief, warm greeting (e.g., "Hi, thanks for joining me today. How are you?"). Do NOT present the case yet — wait for the candidate to respond to your greeting first. Once they respond, present the case prompt. After the case prompt, keep all responses to 1-2 short sentences. Answer clarifying questions directly without restating or adding commentary.`;
 
   return prompt;
 }
