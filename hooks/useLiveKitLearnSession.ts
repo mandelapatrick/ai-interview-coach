@@ -69,6 +69,7 @@ export function useLiveKitLearnSession(
   const candidateVideoRef = useRef<HTMLVideoElement | null>(null);
   const agentTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const transcriptRef = useRef<TranscriptEntry[]>([]);
+  const audioTracksRef = useRef<Map<string, RemoteTrack>>(new Map());
 
   // Track which participants map to which role
   // The agent publishes two avatar participants; we identify them by their identity/metadata
@@ -118,6 +119,15 @@ export function useLiveKitLearnSession(
     if (candidateVideoRef.current) {
       candidateVideoRef.current.muted = speaker !== "candidate";
     }
+  }, []);
+
+  // Mute/unmute all remote audio tracks (for pause/resume)
+  const setAllAudioMuted = useCallback((muted: boolean) => {
+    audioTracksRef.current.forEach((track) => {
+      for (const el of track.attachedElements) {
+        el.muted = muted;
+      }
+    });
   }, []);
 
   // Send data message to agent
@@ -252,6 +262,7 @@ export function useLiveKitLearnSession(
             } else if (track.kind === Track.Kind.Audio) {
               // Attach audio - LiveKit will handle playback via its own <audio> element
               track.attach();
+              audioTracksRef.current.set(track.sid, track);
               console.log(`[LearnLK] Attached audio track from ${role || "unknown"}`);
             }
           }
@@ -259,6 +270,7 @@ export function useLiveKitLearnSession(
 
         room.on(RoomEvent.TrackUnsubscribed, (track: RemoteTrack) => {
           console.log(`[LearnLK] Track unsubscribed: ${track.kind}`);
+          audioTracksRef.current.delete(track.sid);
         });
 
         room.on(RoomEvent.ParticipantConnected, (participant: RemoteParticipant) => {
@@ -376,13 +388,15 @@ export function useLiveKitLearnSession(
 
   const pause = useCallback(() => {
     setIsPaused(true);
+    setAllAudioMuted(true);
     sendDataMessage({ type: "pause" });
-  }, [sendDataMessage]);
+  }, [sendDataMessage, setAllAudioMuted]);
 
   const resume = useCallback(() => {
     setIsPaused(false);
+    setAllAudioMuted(false);
     sendDataMessage({ type: "resume" });
-  }, [sendDataMessage]);
+  }, [sendDataMessage, setAllAudioMuted]);
 
   const askCandidateQuestion = useCallback(
     async (question: string) => {
@@ -415,6 +429,7 @@ export function useLiveKitLearnSession(
       setIsInitialized(false);
       setCurrentSpeaker(null);
       setIsPaused(false);
+      audioTracksRef.current.clear();
 
       console.log("[LearnLK] Session stopped");
     } catch (err) {

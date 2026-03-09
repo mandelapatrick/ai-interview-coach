@@ -109,6 +109,7 @@ async def run_learn_mode(ctx: JobContext, meta: dict):
     pause_event.set()  # Start unpaused
     stop_requested = False
     pending_question = None
+    current_handle = None  # Track the active SpeechHandle for interruption
 
     # Helper to send data messages to the frontend
     async def send_data(payload: dict):
@@ -129,6 +130,8 @@ async def run_learn_mode(ctx: JobContext, meta: dict):
 
             if msg_type == "pause":
                 pause_event.clear()
+                if current_handle and not current_handle.done():
+                    current_handle.interrupt(force=True)
             elif msg_type == "resume":
                 pause_event.set()
             elif msg_type == "ask_question":
@@ -139,6 +142,23 @@ async def run_learn_mode(ctx: JobContext, meta: dict):
                 pause_event.set()  # Unpause to allow loop to exit
         except Exception as e:
             logger.error(f"Failed to parse data message: {e}")
+
+    async def generate_and_wait(session, instructions):
+        """Generate a reply and handle pause/interrupt. Re-generates if interrupted."""
+        nonlocal current_handle
+        while True:
+            handle = session.generate_reply(instructions=instructions)
+            current_handle = handle
+            await handle
+            current_handle = None
+            if handle.interrupted:
+                logger.info("Speech interrupted by pause, waiting for resume...")
+                await pause_event.wait()
+                if stop_requested:
+                    return handle
+                logger.info("Resumed after interrupt, re-generating reply")
+                continue
+            return handle
 
     # Run the conversation loop
     turn = 0
@@ -161,8 +181,9 @@ async def run_learn_mode(ctx: JobContext, meta: dict):
                 instructions = f"The candidate just said: \"{last_candidate_text}\"\n\nAsk a follow-up question or move to the next topic."
 
             logger.info(f"Turn {turn}: Interviewer generating reply...")
-            handle = interviewer_session.generate_reply(instructions=instructions)
-            await handle
+            handle = await generate_and_wait(interviewer_session, instructions)
+            if stop_requested:
+                break
             interviewer_text = ""
             for item in handle.chat_items:
                 if hasattr(item, "text_content") and item.text_content:
@@ -192,8 +213,9 @@ async def run_learn_mode(ctx: JobContext, meta: dict):
                 logger.info(f"Processing user question: {question_text[:80]}...")
 
                 q_instructions = f"The observer asks you: \"{question_text}\"\n\nAnswer this question directly, then the interview will resume."
-                q_handle = candidate_session.generate_reply(instructions=q_instructions)
-                await q_handle
+                q_handle = await generate_and_wait(candidate_session, q_instructions)
+                if stop_requested:
+                    break
                 q_answer = ""
                 for item in q_handle.chat_items:
                     if hasattr(item, "text_content") and item.text_content:
@@ -215,8 +237,9 @@ async def run_learn_mode(ctx: JobContext, meta: dict):
             candidate_instructions = f"The interviewer just said: \"{interviewer_text}\"\n\nProvide your response."
 
             logger.info(f"Turn {turn}: Candidate generating reply...")
-            handle = candidate_session.generate_reply(instructions=candidate_instructions)
-            await handle
+            handle = await generate_and_wait(candidate_session, candidate_instructions)
+            if stop_requested:
+                break
             candidate_text = ""
             for item in handle.chat_items:
                 if hasattr(item, "text_content") and item.text_content:
