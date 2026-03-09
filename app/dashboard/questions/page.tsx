@@ -35,6 +35,7 @@ export default function QuestionBankPage() {
   const [search, setSearch] = useState("");
   const [companyFilter, setCompanyFilter] = useState<string>("all");
   const [typeFilter, setTypeFilter] = useState<string>("all");
+  const [styleFilter, setStyleFilter] = useState<string>("all");
 
   // Track is determined by URL param
   const trackFilter = trackFromUrl || "product-management";
@@ -96,9 +97,14 @@ export default function QuestionBankPage() {
         return false;
       }
 
+      // Interview style filter (consulting only)
+      if (styleFilter !== "all" && q.interviewFormat !== styleFilter) {
+        return false;
+      }
+
       return true;
     });
-  }, [search, trackFilter, companyFilter, typeFilter, validCompanySlugs]);
+  }, [search, trackFilter, companyFilter, typeFilter, styleFilter, validCompanySlugs]);
 
   const getTypeColor = (question: Question) => {
     if (question.track === "consulting") {
@@ -145,9 +151,9 @@ export default function QuestionBankPage() {
 
       {/* Filters */}
       <div className="bg-white rounded-xl border border-gray-200 p-4 mb-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className={`grid grid-cols-1 ${trackFilter === "consulting" ? "md:grid-cols-4" : "md:grid-cols-3"} gap-4`}>
           {/* Search */}
-          <div className="md:col-span-3">
+          <div className={trackFilter === "consulting" ? "md:col-span-4" : "md:col-span-3"}>
             <div className="relative">
               <input
                 type="text"
@@ -202,6 +208,22 @@ export default function QuestionBankPage() {
               ))}
             </select>
           </div>
+
+          {/* Interview Style Filter (consulting only) */}
+          {trackFilter === "consulting" && (
+            <div>
+              <label className="block text-sm text-gray-600 mb-1.5">Interview Style</label>
+              <select
+                value={styleFilter}
+                onChange={(e) => setStyleFilter(e.target.value)}
+                className="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-gray-900 focus:outline-none focus:border-[#d4af37]/50 appearance-none cursor-pointer"
+              >
+                <option value="all">All Styles</option>
+                <option value="candidate-led">Candidate-Led</option>
+                <option value="interviewer-led">Interviewer-Led</option>
+              </select>
+            </div>
+          )}
 
           {/* Results count */}
           <div className="flex items-end">

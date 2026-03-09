@@ -128,6 +128,7 @@ export default function CompanyQuestionsPage() {
   const [difficultyFilter, setDifficultyFilter] = useState<Difficulty | "all">("all");
   const [frequencyFilter, setFrequencyFilter] = useState<Frequency | "all">("all");
   const [searchQuery, setSearchQuery] = useState("");
+  const [styleFilter, setStyleFilter] = useState<string>("all");
 
   const filteredQuestions = useMemo(() => {
     return allQuestions.filter((q) => {
@@ -135,9 +136,10 @@ export default function CompanyQuestionsPage() {
       const matchesDifficulty = difficultyFilter === "all" || q.difficulty === difficultyFilter;
       const matchesFrequency = frequencyFilter === "all" || q.frequency === frequencyFilter;
       const matchesSearch = q.title.toLowerCase().includes(searchQuery.toLowerCase());
-      return matchesType && matchesDifficulty && matchesFrequency && matchesSearch;
+      const matchesStyle = styleFilter === "all" || q.interviewFormat === styleFilter;
+      return matchesType && matchesDifficulty && matchesFrequency && matchesSearch && matchesStyle;
     });
-  }, [allQuestions, typeFilter, difficultyFilter, frequencyFilter, searchQuery]);
+  }, [allQuestions, typeFilter, difficultyFilter, frequencyFilter, searchQuery, styleFilter]);
 
   if (!company) {
     return (
@@ -247,6 +249,19 @@ export default function CompanyQuestionsPage() {
               <option value="medium">Medium Frequency</option>
               <option value="low">Low Frequency</option>
             </select>
+
+            {/* Interview Style Filter (consulting only) */}
+            {!isPM && (
+              <select
+                value={styleFilter}
+                onChange={(e) => setStyleFilter(e.target.value)}
+                className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
+              >
+                <option value="all">All Styles</option>
+                <option value="candidate-led">Candidate-Led</option>
+                <option value="interviewer-led">Interviewer-Led</option>
+              </select>
+            )}
 
             <span className="text-sm text-gray-600">
               {filteredQuestions.length} questions
