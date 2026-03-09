@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useSubscription } from "@/hooks/useSubscription";
+import { handleSignOut } from "@/lib/actions";
 import PlanBadge from "./PlanBadge";
 
 interface SubMenuItem {
@@ -390,7 +391,7 @@ export default function Sidebar({ user }: SidebarProps) {
                     </span>
                     {!subLoading && <PlanBadge plan={plan} />}
                   </div>
-                  <form action="/api/auth/signout" method="POST">
+                  <form action={handleSignOut}>
                     <button
                       type="submit"
                       className="text-xs text-gray-600 hover:text-[#d4af37] transition-colors"
@@ -528,7 +529,7 @@ export default function Sidebar({ user }: SidebarProps) {
                   </span>
                   {!subLoading && <PlanBadge plan={plan} />}
                 </div>
-                <form action="/api/auth/signout" method="POST">
+                <form action={handleSignOut}>
                   <button
                     type="submit"
                     className="text-xs text-gray-500 hover:text-[#d4af37] transition-colors"
