@@ -1,0 +1,251 @@
+Problem: Mock Product Manager Interview (LinkedIn PM): Improve Spotify's Social Features
+Problem Type: Product Design
+Firm: LinkedIn
+Channel: Exponent
+URL: https://www.youtube.com/watch?v=1dj0zA7jlGc
+============================================================
+
+**Interviewer:** Hey,   everyone.   I'm   here   today   with   Mitchell,   who   is   one   of   our   PM   interview   coaches,   as   well   as   someone   who   works   in   product   at   LinkedIn.   Uh,   I'm   super   excited   to   be   here   with   Mitchell   today.   We're   going   to   be   doing   a   mock   PM   interview,   where   I   ask   Mitchell   a   question,   and   he'll   give   the   answer   to   that   question,   and   then   we'll   follow   up   with   feedback.   Um,   Mitchell,   you   ready   to   jump   into   it?  
+**Candidate:** Yeah.   Sounds   good.  
+**Interviewer:** Cool.   Um,   so   for   the   purpose   of   this   interview   question,   we're   going   to   be   doing   a   product   design   question.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um,   the   particular   question   involves   Spotify-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   Spotify   app.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Uh,   and   I   want   us   to   improve   the   product   using   social   features.  
+**Candidate:** Mm-hmm.   Mm-hmm.  
+**Interviewer:** So   how   can   we   improve   the   Spotify-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   app   or   the   Spotify   experience-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   using   something   related   to   a   social,   or   social   connection   features?  
+**Candidate:** Got   it.   So,   uh,   you   want   to   improve   Spotify   through   social   improvement   features.   Could   you   give   me,   like,   a   minute   to   just   organize   my   thoughts?  
+**Interviewer:** Yeah,   totally.  
+**Candidate:** Thank   you.   Cool.   So,   um,   just   before   I   get   started   on   the   actual   brainstorming   for   the   features,   I   thought   I   would   just,   um,   describe   s-   Spotify's   situation   as   I   know,   and   then   just   confirm   with   you   the   goal   for-  
+**Interviewer:** Okay.  
+**Candidate:** ...   the,   uh,   the   design.   So   I   was   thinking   Spotify,   so   far,   has   been   focusing   mostly   on   discovery   and   recommendation   features.   And   the   appeal   to   its   core   demographics,   which   I   assume   to   be   the   young   millennials,   20   to   maybe   even   40   or   even   younger,   um,   was,   like,   the   chic   and   sexy   design   it   has,   and   just   the   superiority   of   the   discovery   and   the   recommendation   engine   it   has.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** So   I'm   assuming   it   wants   to   still   appeal   to   and   keep   that   appeal,   but   so   don't   distract   that   with   the   design,   but   also   just   lock   down   this   user   base,   just   'cause   there   are   a   lot   of   this,   like   Pandora   or,   like,   y-   music   services   coming   out,   but   it   just   wants   to   lock   them   down   by   building,   like,   a   network   that   has,   um,   a   innate   moat   with   just   people   interacting   and   just,   uh,   staying   on   the   site.   So   is   that   the   right   assumption?   Should   I   go   with   that?  
+**Interviewer:** Um,   yeah.   So   we're...   What   I'm   hearing   is   that   a   moat-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   for   Spotify-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   is   kind   of   one   of   the   next   steps-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   but   Spotify   has   acquired   a   lot   of   users.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** There   is   competition,   but   Spotify   has   clearly   captured   a   segment   of   the   millennial   market.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um,   and   yeah,   I   think   that's   a   great   way   to   go.   Let's   think   about   how   Spotify   can   leverage   its   social   features-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   to   build   a   moat   around   it-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   so   that   it's   better   insulated   against   competition.  
+**Candidate:** Cool.   Sounds   good.  
+**Interviewer:** Cool.  
+**Candidate:** And   then,   uh,   uh,   for   this   exercise,   can   I   just   assume   you're   designing   for   the   music   feature   rather   than   podcast?  
+**Interviewer:** Yes.  
+**Candidate:** Yeah.  
+**Interviewer:** Yeah.   That's   a   fair   assumption.  
+**Candidate:** Mm-hmm.   Cool.   And,   uh,   I   will   also   keep   to   the   mobile,   um,   solution,   considering   the   demographics.   Obvio-   obviously,   uh,   expanding   it   to   desktop   won't   be   that   hard,   but   just   for   the   exercise,   just   give   me   a...   Okay?  
+**Interviewer:** Cool.  
+**Candidate:** Cool.   And   I'll   take   probably   a   minute   again   to   just   think   about   some   features.  
+**Interviewer:** Awesome.   Cool.  
+**Candidate:** Cool.   So,   um,   I   know   that   Spotify   recently   announced   some   features   that   will   encourage   more   social   activities,   like   the   shared   playlist,   but   what   I   wanted   to   focus   more   on   was   just,   like,   what   I   actually   notice   a   lot   on,   um,   Instagram.   So   I   see-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   a   lot   of   my   friends   who   listen   to   just   cool   music,   some   obscure   artists   sometime,   and   they   just   post   on   Instagram.   They   have   that   story   sharing   feature,   uh,   through   the   Spotify   integration.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** And   I'm   just   thinking   behind   the   psychology   of   that   is   you   want   to   appear   as   a   music   enthusiast,   um,   just,   "This   is   my   jam.   You   guys   should   also   listen   to   it,"   and   kind   of   just,   like,   want   to   appear   cool   as   well.  
+**Interviewer:** Mm-hmm.   Mm-hmm.  
+**Candidate:** So,   um,   I   want   to,   uh,   if   you   don't   have   any   other   recommendation,   uh,   focus   on,   uh,   appealing   to   that,   um,   psychology   of   the   users-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   as,   uh,   our   demographics,   once   again,   similar   to   Instagram   user   base,   is   that   I   see   this   behavior   from   the   young   millennials   who   are   tech   savvy   and   also,   um,   just   design   sensitive.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** And   they   care   a   lot   about   music,   obviously,   and   they   want   to...   want   the   world   to   know   that.  
+**Interviewer:** Hmm.  
+**Candidate:** Yeah.  
+**Interviewer:** Gotcha.   So   what   we're   focusing   on   is   the   way   that   people   use   music   to   express   their   identity   to   other   people.  
+**Candidate:** Yes.   Yes.  
+**Interviewer:** Um,   gotcha.   Okay.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** That   makes   sense   to   me.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um,   and   so   this   is   sort   of   our,   uh,   need,   user   need,   that   we're   gonna   dive   into.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um,   why   do   we...   Why   are   we   picking   this   user   need?   Like,   why   do   you   think   this   is   an   important   one   to   talk   about?  
+**Candidate:** Got   it.   Mm-hmm.  
+**Interviewer:** Yeah.  
+**Candidate:** Yeah.   Um,   so   I   think   another   thing   that   we   could   talk   about   here   is,   once   again,   just   doubling   down   on   discovery   and   recommendation,   obviously.   And,   uh,   so...   And   social   could   definitely,   um,   take   a   place   in   there,   like,   just   like,   um,   Spotify   has   r-   um,   discovery   for   you,   recommendation   for   you,   and   I'm   assuming   if   we   build   out   enough   user   bases,   we   can   do   like,   "Hey,   this   is   what   your   friends   are   listening   to   too."   But   I   think   there   is   a   need   to   really   build   that   network,   just   like   how   Facebook   got   started.   Um,   and   I   think,   uh,   just   sh-   seeing   how   Spotify   attracted   its   user   with   just   the   sexiness   of   the   design   and   the,   um...   it's   just   cool   to   use   the   app.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** I   thought   it'd   be,   uh,   great   if   we   could   double   down   on   the,   the   psychology   of   the   existing   users,   and   then   have   them,   a   place   to   ident-   um,   express   that   identity   on   the   platform   without   disrupting   much   of   the   current   workflow,   if   that   makes   sense.  
+**Interviewer:** Gotcha.  
+**Candidate:** Yeah.  
+**Interviewer:** I'm   hearing   that,   and   I,   I   think   it's   a   good   point   you're   making,   is   that   Spotify   is   already...   kind   of   have   this   advantage.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Like...   And   so   we   can   double   down   on   it   or-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   expand   it   into   this   social   realm   as,   like,   this-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   coolness   sort   of   vibe   that   Spotify   has   going   on.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um-Cool.   Okay.   Sounds   good.  
+**Candidate:** Cool.  
+**Interviewer:** Uh,   let's   dive   into   it.   Yeah.  
+**Candidate:** Awesome.   Um...   Okay.   I   have   a   couple   features   in   mind.   Um,   and,   um,   I   th-   I   can   prioritize   them   and   there   should   be   some   practice   metrics   too,   but   I   think   we,   there   is   a   way   to   like   layer   them   as   well.   So   I'll   go,   just   go   through   one   of   them   and   then   what   I   think   we   should   do   first,   if   that   makes   sense.   Um...  
+**Interviewer:** Cool.  
+**Candidate:** Um,   so,   um,   I   don't   know   if   there   was   like   an   equivalent,   uh,   feature,   uh,   in   the   United   States,   but   in   Korea   where   I'm   from,   um,   there   was   like   a   really   popular,   uh,   social   media   service   called   Cyworld.   And   then   w-   and   even   with   our,   uh,   dominant   chat   service   similar   to   WeChat   called   K-   Kakao,   um,   what   a   lot   of   people   do   is   on   their   mini   homepage   of   the   Cyworld,   which   is   their   identity   on   the   place,   just   their   dot   in   the   network,   they   had   the   background   music   that   is,   um,   that   tells   a   story   about   themselves.   They   can   change   it   every   day.   So   people   came,   came   in   and   just   like,   "Okay,   so   this   is   cool.   This   is   what   you   listen   to."   So   that   was   like   part   of   their   identity   and   people   loved   this   feature.   And   on   Kakao   as   well,   um,   it's   like   a   chat   application,   but   similar   to   InstaStory,   you   can   pick   a   song   and   then   just   have   that   as   your   theme   for   the   day.   So   people   just   change   it   around.   So   what   I   thought,   um,   inspired   by   that   feature,   I   thought   we   could   to-   definitely   revamp   the   Spotify   personal   profile   right   now,   which   is   basically   just   purely   populated   based   on   your   activities.   So   right   now   it   has   the   artists   you   listen   to,   the   playlists   you   have,   and   some   followers,   but   it's   definitely   just,   uh,   pretty   passive   and   no   one   really   looks   into   it   unless   you're   like   stalking   somebody   on   Spotify,   which   is   not   really   a   thing.   So   I   thought,   um,   we   could,   um,   instead   of   passively   having   users   just   populate   it   based   on   their   activities,   have,   give   users   the   control   to   populate   that   profile   based   on   what   they   want   from   their   music.   And   so   it's   aligned   with   our,   um,   our   attempt   to,   uh,   give   users   the   ability   to   express   themselves   through   music.   So   just   like   a   huge   banner   maybe   that   they   can   use   their   pho-   photos   or   we   can   give   them   some,   um,   pictures   through   Unsplash   or   whatever   it   is,   and   then   that   feeds,   fits   into   the   music   and   then   just   play   it.   Okay,   this   is   background,   this   is   how   I   feel   today   or   for   the   week.   You   guys   should   come   listen   to   it.   And   then   below   that,   maybe   just,   um...   so   playlist   has   a   section   right   now,   but,   uh,   what   I   want   for   my   playlist   is   actually   s-   some   people   to   find   it   more,   some   of   my   friends   to   find   it   more.   And   right   now   I   have   like   two   followers   per   each   playlist   or   something   like   that,   so   that's   not   that   impressive.   So   under   the   banner   they   can   have   like,   "Hey,   come   into,   these   are   the   playlists   that   I've   been   listening   to,   that   I   curated.   You   should   come   listen   to   it."   So   that's   like   a   way   for   them   to   sh-   um,   tell   the   world,   "This   is   the   music   I   listen   to,   this   is   what   I   jam   to   and   what   I   like   to   do,   and   this   is   how   I   feel."   So   I   think   that   would   be   a   really   cool   feature.   So   that's   the   first   one.   So   a   music   based   profile   that   has   more   curation   abilities.   And   another,   um,   feature...  
+**Interviewer:** Uh,   before   you   move   on   to   the   second   one,   that's   awesome.  
+**Candidate:** Mm-hmm.   Yeah.  
+**Interviewer:** I   just   wanted   to   ask   you   a   couple   more   questions   about   it.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um,   so   the,   the,   uh,   what   I'm   imagining   here   is   like   we   have   personal   profiles   in   Spotify,   people   can   access   my   playlists,   things   like   that.  
+**Candidate:** Mm-hmm.   Mm-hmm.  
+**Interviewer:** Um,   is   this   something   that   you   imagine   the   users   doing   every   day?   Like,   I   come   in   and   log   in   and   do   that?  
+**Candidate:** Mm-hmm.   Mm-hmm.  
+**Interviewer:** Um,   one   fear   I'm,   I'm   sort   of   concerned   about   is   that   maybe   it's   a   lot   of   upkeep.  
+**Candidate:** Right.  
+**Interviewer:** Like,   oh,   I   have   to   add   a   new   song   every   day.  
+**Candidate:** Yeah.  
+**Interviewer:** Like,   what   if   I   forget,   I'm   too   lazy?  
+**Candidate:** Yeah.  
+**Interviewer:** You   have   no   song   that   day.   Like,   what   happened?  
+**Candidate:** Right.  
+**Interviewer:** How,   how   would   you   think   about   the,   um,   burden   on   the   user   with   relation   to   that?   Or   maybe   how   does   Kakao   do   it   or   how   do   other   apps   do   it?  
+**Candidate:** Mm-hmm.   So,   um,   for   other   apps   that   I've   seen,   it's   not   like   a   daily   thing   you   have   to   keep   up.   So   as   long   as   you   update   it,   it's   gonna   be   live   for   however   many   long.  
+**Interviewer:** Until   you   change   it,   yeah?   I   see.  
+**Candidate:** And   then   you   just   change   it   whenever   you   feel   like   it.   And,   um,   uh,   maybe,   um...   hmm.   Yeah,   I   think   that's   a   good   point   that   we,   uh,   want   to   reward   the   users,   uh,   based   on,   um,   their   activities   to   keep   them   doing,   keep   them   changing   the   music   and   whatever   it   is.   So   I   find   Instagram   Stories   very   appealing   because   you   s-   you   go   on   Instagram   Stories   and   you   see   how   many   people   have   seen   it,   and   that   kind   of   keeps   you   going   with   the   dopamine   hit.   Obviously   I'm   not   saying   that's   like   the   best   thing   in   the   world,   but   I   think   there   are   many   different   ways   we   can,   um,   surface   how   many   people   have   visited   your   profile.   So   things   like   that   to   encourage   the   users   to   keep   doing   it.   But   obviously   it's   not   like   an   obligation   you   have   to   do   it   every   day,   so   it'll   be   on   until   you   decide   to   take   it   down   or   change   it.  
+**Interviewer:** I,   I   love   that   direction.   I   love   the   idea   that   there's   some...   even,   even   though   it's   just   seen,   like   views,   there's   some   interactivity   that   makes   me   more   excited   to   actually   post   it   and   to   get   it   shared   with   my   friends.  
+**Candidate:** Yeah.  
+**Interviewer:** So,   um,   yeah,   I   think   that's   cool.   That's   a   cool   first   start.   Okay.  
+**Candidate:** Yeah.  
+**Interviewer:** Um,   let's   move   on   to   the   second   point.  
+**Candidate:** Yeah.  
+**Interviewer:** Yeah.  
+**Candidate:** Another   thing   that   I   thought   would   be   cool   is   just,   uh,   changing   chat,   um,   just   maybe   chatting   through   music   as   well.   So   it's,   one   use   case   is   just   like,   "Hey,   this   is   to,   cool   music   that   I   just   found.   Just   hear   it."   Just,   that's   one   thing.   But,   uh,   just   like   how   there   was   a   meme   culture   and   GIF   culture   on   Facebook   Messenger   and   people   just   find   it,   or   even   in   iMessages,   I   thought,   uh,   Spotify,   since   they   have   the   music,   uh,   archive   li-   library,   they   can   give   the   users   the   ability   to   cut   music   into   different   snippets.   They   already   do   that   for   Instagram,   but   just   share   it   to   each   other   w-   between   the   network   through   the   message,   messaging   feature.   So   I   thought   that   would   be   a   cool   nerf,   inter-   interactive   feature   that   could   follow   on   a,   uh,   social,   uh,   direction.   And,   um...Yeah.   And   lastly,   just,   um,   it's,   um,   based   on   the   profile   idea,   I   thought   it   would   be   really   cool   to   follow   that   with   a   music-based   feed.   So,   uh,   right   now   Spotify   has,   uh,   like   friends'   activity,   uh,   panel   on   the   right,   but   it's,   um,   unlike   the   other   cool   design   of   the   entire   app,   it   just   feels   out   of   place   and   it   just-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   feels   really   old.   It's   been   there   since   the   beginning   of   things   and   no   one   really   looks   at   it   anymore.   I   don't   at   least.   So   I   thought   we   can   definitely   revamp   that,   uh,   after   the   profile,   maybe,   um,   just   a   curation   of   different   people's   profile   and   then   having   another   exposure   point   so   people   can,   instead   of   just   going   and   searching   for   each   other's   profile,   there's   a   feed   of,   okay,   Mitchell   is   listening   to   this   and   you   can   just   click   on   it   and   go   to   their   profile.   And   you   can   also   see   the   history   of   the   past   changes   of   the   music   as   well   as   Steven   is   listening   to.   So   it's   a   p-   uh,   feed   of   people's   different   music   and   maybe   Spotify   can   eventually   throw   in   concerts.   Okay,   so   I   was   at   this   concert,   so   that's   kind   of   just   solely   based   on,   um,   discovery,   and   I   think   it   goes   very   well   hand   in   hand   with,   uh,   Spotify's,   uh,   doubling   down   on   discovery   and   recommendation   through   social.   So,   um,   those   are   the   three.   And   I,   just   to,   um,   address   what   I   meant   by   we   can   definitely   prioritize   this,   but   also   this   feature   can   come   in   progression.   I   thought   for   any   social   features   like   the   feed   or   the   music   chat,   just   like   what   I   mentioned   about   the   Facebook   whole   star   problem,   there   needs   to   be   some,   uh,   solid   user   bases   of   people   interacting.   So   it,   the   profile   I   think   could   be   a   first   feature   that   has   a   lighter   investment   because   we   already   have   the   profile,   uh,   entry   point   and   it's   pretty   simple   to   build   out   to   just   test   out,   okay,   are   people   just   willing   to   do   this   at   all?   Are   they   actually   expressing   their   identity   through   music?   And   then,   um,   the   discovery   feed   I   think   is   a   good   way   to   add   an   exposure   to   this   profile.   So   that's   the   way   of,   uh,   adding   interaction   and   feedback   loop   for   the   users   to   keep   doing   what   they're   doing.   And   then   lastly,   I   think   the   chat   is   the   most,   uh,   intensive   investment   because   it's   a   whole   nother   thing.   Spotify   doesn't   have   a   chat   at   all,   so   I   think   it's   a   huge   investment.   So   it   could   come   at   the   end   after   we   verify   our   hypothesis   through   the   first   and   the   second   feature,   which   is   the   profile   and   the   feed.   So..  
+**Interviewer:** Gotcha.  
+**Candidate:** If   I   were   the   PM   working   on   the   social   feature   for   Spotify,   I   think   that's   how   I   would,   um,   progress.  
+**Interviewer:** Cool.   Thanks   for   pro-   prioritizing   that.   That   was   my   next   question   also.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um,   it   sounds   like   we're   gonna   prioritize   the   first   one   first,   right?  
+**Candidate:** Yeah.  
+**Interviewer:** Um,   how,   what   would   be   the   first   step   that   we   would   take?   Let's   say   that   you're   the   PM   on   the   team   right   now.  
+**Candidate:** Mm-hmm,   mm-hmm.  
+**Interviewer:** What   are   you   gonna   do?   What   are   you   gonna   start   doing   this   week   that   will   start   testing   this   or   start   launching   this   feature   that   you   think   is   important?  
+**Candidate:** Yeah.   Yeah.   Um,   so   what   I'd   do   is,   um,   Spotify   has   this   Instagram,   um,   uh,   integration   and   I'm   sure   there   are   data   on   like   who's   actually   using   it.   So   I   would   actually   brought   it,   bring   in   a   couple   people   that   are   actively   doing   this   for   user   research   session   and   then,   uh,   draw,   drew   a   couple   mocks   of,   uh,   this   new   profile   image   and   then   ask   them,   is   this   something   you   do?   How   often   would   you   do   it?   And   then   why   are   you   doing   this   on   Instagram   right   now?   What   is   the   goal   and   purposes?   Are   you   getting,   uh,   your   intended,   um,   I   guess,   um,   feedback   loop   from   Instagram   and   then   would   you   actually   do   it   on   Spotify?   So,   so   that's   the   first   pro-   concept   in-   just   even   before   building   it   out   fully,   I   would   do   that   first   and   then   go   from   there.  
+**Interviewer:** Gotcha.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um,   cool.   Are   there   any   other   things   you   wanted   to   comment   on   before,   I   wanted   to   ask   you   a   little   bit   about   trade-offs   at   the   end.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um,   are   there   any   other   things   that,   you   know,   you   want   to   comment   on   about   the   design   of   this   app   or   experience?  
+**Candidate:** Yeah.   So   as,   uh,   I   mentioned   briefly   in   the   beginning,   Spotify   has   been   just   great   with   this   design   and   focus,   really   ruthless   focus   on   discovering   recommendations.   So   what   I   really   want   to   do,   um,   here   is   introduce   features   in   an,   uh,   unobtrusive   way   through   the   current   workflow.   So   suddenly   nobody   feels   like,   okay,   Facebook   is   becoming,   uh,   Spotify   is   becoming   another   Instagram   or   something   like   that.   So,   um,   I   would   carefully   pro-   progress.   And   I   think   any   of   this   feature   besides   the   chat,   the   profile,   and   just   the   feed,   the   profile   at   least   is   like   a   lightweight,   non-obtrusive   way   to   introduce   it   first.   And   then   I'll   just   take   to   some   read   and   then,   uh,   depends   on   the   reception.   Uh,   think   about   the   trade-off   between   introducing   new   social   features   versus   focusing   on   doubling   down   on   what   is   already   working.  
+**Interviewer:** Mm-hmm.   Um,   yeah.   So   we   don't   want   to   socialize   it   and   make   it   into   another   social   media   app,   sort   of,   is   what   you're   saying.  
+**Candidate:** Mm-hmm.   Um,   maybe   eventually,   um,   that's   what   could   happen   from   it,   but   I   think   still,   yes,   uh,   Spotify's,   uh,   sole   focus   is   discovering   recommendation,   helping   people   find   cool   music,   helping   creators   get   their   music   out   there.   So   I   definitely   don't   want   to,   um,   um,   get   in   the   way   of   that.   So   I   think   the   social   should   be   a   hand   of,   uh,   enhancing   discovery   and   recommendation   through   my   friends   and   social   rather   than   primary   being   a   social   media.  
+**Interviewer:** Gotcha,   gotcha.   Cool.   Um,   okay,   Mitchell,   well,   I   wanted   to   keep   this   a   little   bit   short   for   the   interview,   but   is   there   anything   else,   uh,   that   you   wanted   to   add   to   this   question   before   we   move   on   to   feedback   and   talking   about   it?  
+**Candidate:** Uh,   cool.   I   mean,   uh,   if   I...   hmm.   I   don't   know,   if   I   were   to,   uh,   ask   this   question   in   my,   uh,   to   my   client,   I   would   probably   ask   at   the   end,   like,   what   are,   what   kind   of   metrics   would   we   be   looking   at?   But,   um,   so-  
+**Interviewer:** Yeah,   we   could   talk   a   little   bit   about   metrics   before   we   move   on   to   the   trade-off   section.   Yeah,   I,   I   think   it   would   be,   we   have   a   couple   minutes   so   we   can   talk   about   that.  
+**Candidate:** Yeah.  
+**Interviewer:** Yeah.  
+**Candidate:** Um,   so   I   think   then,   um,   just   at   LinkedIn   too,   what   we   look   at   for   profile   feature   is   just   how   complete   it   is.   So   I'll   first   see   how   many   people   are   actually   completing   their   profiles   or   so   updating   that   music   section.   And,   um,   obviously   what   we   care   about   is   are   people   getting   what   they   want   from   this,   which   is   like   a   recognition   from   others.   So   how   many   people   are   actually   visiting   these   profiles?   And,   and   that   would   probably   guide   the   direction   of   how   we're   gonna   design   the   discovery   feed   that's   gonna,   uh,   introduce   more,   um,   traffic   to   the   individual   profiles,   uh,   per   se.   And,   uh......   lastly,   I   would   see   how   this   actually   impacts   the   retention   because,   uh,   right   now   I   listen   to   Spotify   daily,   but   I'm   sure,   uh,   some   people   don't,   and   maybe-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   just   to   update   their   profile   just   to   see   how   many   people   have   viewed,   uh,   th-   your   profile,   we   can   probably   expect   some   kind   of   retention,   uh,   lift.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** So   I   would   definitely   look   at   those   three.   Yeah.  
+**Interviewer:** And   h-   how   would   you   evaluate   the...   'cause   at   the   beginning   we   were   talking   about   the-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   moats,   right?   Like-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   is   there   a   way   that   you   would   evaluate   the   ability   for   Spotify   to   maintain   that   moat,   you   know?  
+**Candidate:** Right.   Mm.   Uh,   yeah,   I   think   on   that   thread,   retention   is   definitely   something   I   would-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   uh,   continue   to   look   at.   Um,   and,   um,   I   don't   know   if   there   are,   um,   specific   metrics   around   this,   but   just   the   network   density   of   the   people   connected.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** I   think   that's   something   that   I   would   look   into   'cause   the   ultimate   moat's   gonna   be   how   connected   people   are   on   the   Spotify   social   network,   so   I   would   look   at   that.  
+**Interviewer:** Totally.  
+**Candidate:** Yeah.  
+**Interviewer:** Yeah.   I   think   network   density   is   a,   is   kinda   what   I   was   looking   for   there.  
+**Candidate:** Yeah.  
+**Interviewer:** It's   like,   yeah,   like,   I   mean,   ever   developing   a   social   feature,   you   wanna   make   sure   that   there's,   um,   you   know,   not   just   like   a   random   person   looking   at   your   view   every   now   and   then-  
+**Candidate:** Yeah.   (laughs)  
+**Interviewer:** ...   and   it's   kind   of   unexciting.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um,   and,   and   so   one   other   question   I   have   on   this   is   kind   of   like   how   you   would   consider   launching,   uh,   this   social   feature.   Mm  
+**Candidate:** So   obviously   you   could   just   launch   it   publicly.  
+**Interviewer:** Sure.  
+**Candidate:** Could   you   start   with   sub-groups?   Like,   how   would   you   think   about   testing   out   those   features?  
+**Interviewer:** Yeah.  
+**Candidate:** Because   you   want   it,   you   want   it   to   be   like   a-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   social   network.   You   don't   want   it   to   be   like   just,   you   know-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   people   c-   casually   looking   at   their   friends.  
+**Interviewer:** Mm-hmm.   Which   is   kind   of   how   the   feed,   activity   feed   works   right   now  
+**Candidate:** Yeah.  
+**Interviewer:** It's   like,   "Oh,   a   couple   of   my   friends   are   there.   I   don't   really   care   to   follow   them."  
+**Candidate:** Yeah.  
+**Interviewer:** Things   like   that.  
+**Candidate:** You   know,   I   think   what   would   be   really   cool   in   launching   this   and   kind   of   a   marketing   play   is   just,   uh,   reaching   out   to   a   couple,   um,   creators   and   artists   within   the   Spotify   network   and   that   are   really   in-   influential   as   part   of   the   beta   or   a-   alpha   and   have   them   curate   a   really   cool   profile   and   then   have   people   follow   them.   I   mean,   obviously   we   listen   to   their   music   and   we   want   to,   like,   know   what's   up   in   their   life.   Maybe   you   can   introduce   some   things   that   could   portray   more   about   the   music   and,   like,   the   backstory   of   it.   I   think   there   are   a   lot   of   cool   ways,   and   that's   also   gonna   be   a   really   positive   thing   for   artists   who   are   not   a-   not   popular   yet   and   they   just   want,   uh,   more   publicity   and   more   connection   between   the   fan   bases.   So   I   think   if   I   were   to   launch   this,   actually,   I   would,   uh,   go   with   the   artists   and,   uh,   create   a   creators'   community   first   too.   Just   also   I   think   it   looks   more   exclusive,   more   cool,   so   I   think   more   people   will   be,   uh,   um,   appealed,   i-   it   will   appeal   to   more   people   and   they   would   want   to   do   it   more.  
+**Interviewer:** Yeah.   I   think   that's   a   really   good   point.   I   think,   um,   if   you   got   all   the   artists   to   do   this   to   their   pages   and   their   theme   songs,   I   think   then   everyone   will   follow   and   that   really   fits   the   c-   coolness.   I   love   that   go-to-market   strategy   there.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um,   okay.   Cool.   Well,   anything   else   on   this   question   then,   or...  
+**Candidate:** Uh,   I   think   that's   what   I   wanted   to   say.   Yeah,   that's   all   I   wanted   to   say.  
+**Interviewer:** Cool.   Awesome.   Um,   so   now   we'll   sort   of   transition   to   feedback   part   of   this.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um,   and   so   we'll   talk   a   little   bit   through   sort   of   how...   W-   what   I   think   Mitchell   did   a   really   great   job   with   in   this   interview   and   maybe   a   couple   points   also.  
+**Candidate:** Totally.  
+**Interviewer:** Um,   so   overall,   excellent   job,   Mitchell.   You're   clearly   a   pro   at   product   management   interviews.   You   know   how   to,   like,   uh,   put   them   together   and   bring   everything   together.   Um,   and   I   think   y-   you   are   doing   a   great   job   of   going   through   the   framework,   going   through   kind   of   all   the   different   steps.  
+**Candidate:** Okay.  
+**Interviewer:** Um,   I   noticed...   The   things   that   I   noticed   that   you   do   a   really   good   job   with-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   um,   is   repeating   questions.   So,   like,   when   I   asked   a   question,   you   repeated   it   right   after.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um,   you   took   time   to   pause,   to   write   down   your,   your,   um,   thoughts.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** You   came   in   with   assumptions,   you   were   very   clear   about   what   your   assumptions   were,   and   you   were   like,   "Hey,   is   this   a   okay   assumption?"   And   I   was   like,   "Yeah,   that's   an   okay   assumption."  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um,   you   also...   So   one   slight   thing   for   me   is,   like,   uh,   I   think   you   could   have   come   in   even   stronger   on   the   moat   thing   and   just   been   like,   "Oh,   this   is   what   I   think   we   should   do."   As   opposed   to,   "Is   that   okay   what   we   should   do?"  
+**Candidate:** Yeah.  
+**Interviewer:** But,   you   know,   I   understand   this   is   also   a   contrived   situation   between   us.  
+**Candidate:** (laughs)  
+**Interviewer:** Um,   and   then   I   think...   Yeah,   I-   I-   I   drilled   you   in   on   this,   but   I   love   more   info   on   like   how...   why   is   this   a   good   user   need   to   discuss?  
+**Candidate:** Mm.  
+**Interviewer:** Like,   why   should   we   talk   about   the   cool   thing?   And   I   got   it   out   of   you,   but-  
+**Candidate:** Mm.  
+**Interviewer:** ...   um,   you   could   put   that   up   front   a   little   bit   more.  
+**Candidate:** Totally.   Totally.  
+**Interviewer:** I   thought   that   you   sh-   demonstrated   a   lot   of   product   strategy   in   this   interview,   which   was   really   effective.  
+**Candidate:** Mm.  
+**Interviewer:** In   fact,   I   would   say   that   this   is   almost   a   product   strategy   interview   in   some   ways   more   so   than   a   product   design   interview,   or,   or   maybe   both.  
+**Candidate:** Gotcha.   Mm.  
+**Interviewer:** Because   we   did   a   lot   of   work   on   moats   and   on   social   features   and   on   go-to-market.  
+**Candidate:** Gotcha.  
+**Interviewer:** And   those   concepts   which   are   more   relevant   to   a   product   strategy   session.  
+**Candidate:** Yeah.   Mm.  
+**Interviewer:** Um,   I   think   that   the,   uh...   You   did   a   great   job   checking   in   with   me.   I   always   think   checking   in   is   great   and   important,   so   that   was   excellent.   Um,   you   did   an   excellent   job   enumerating   the   product   features   that   we   were   going   through,   one,   two,   three,   and   we   talked   about   them   in   that   order.   Mm   If   you   were...   If   we   had   a   whiteboard,   we   would   do   a   little   bit   of   that,   but   we   obviously   don't   have   one  
+**Candidate:** Totally.  
+**Interviewer:** Um,   product...   Uh,   yeah,   and   I-   I   think   in   general   it   was   a   great   way   to,   for   you,   when   you   concretely   described   how   to   implement   the   features   or   how   you   would   prioritize   them,   I   felt   like   you   did   a   great   job   of   being   in   the   air   and   talking   about   the   overall   product   strategy   and   product   vision,   and   then   we   kind   of   dove   down   into   the   details   and   were   like,   "Okay,   like,   this   is   how   we   do   it."   Or,   "This   is   what   we   should   change."   Um,   "And   this   is   exactly   the   step   that   we   should   do."   So...   And,   and   one   of   the   times   that   I   thought   you   really   shined   was   the   user   interview   session   where   you   were   like,   "Oh   yeah,   we   should   connect   at   a   user   interview   session."   And   that   to   me   is   just   very   on   the   nose.   Like,   oh   yeah,   first,   before   doing   anything,   we   have   to   understand   the   problem   before   we   just   start   building.   Like,   the   wrong...   any   wrong   answer   would   have   been   like,   "Oh   yeah,   we   should   build   this   feature."  
+**Candidate:** (laughs)  
+**Interviewer:** Um,   because,   like,   you   shouldn't   build   a   feature   until   you   understand   that   it's   right.  
+**Candidate:** Right.  
+**Interviewer:** And   so   you   started   off   with   that   user   interview   session,   which   I   thought   was   excellent.  
+**Candidate:** Mm.  
+**Interviewer:** Um,   and   lastly,   yeah,   I   loved   that   conversation   at   the   end   about   creators   and   artists   being   the   profile.  
+**Candidate:** Yeah.  
+**Interviewer:** Like,   that   was   really   cool.   We   could   bring   that   up   earlier,   and   we   probably   came   up   with   it,   like,   at   the   end,   but   yeah.   (laughs)  
+**Candidate:** (laughs)  
+**Interviewer:** But   yeah,   that's   a   really   cool   one   to   double   down   on,   and   it's   like,   yeah,   this   totally   fits   what   we're   trying   to   go   for.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um,   overall...   So   overall,   like,   excellent   interview.   I   thought   you   did   an   amazing   job.   Um,   and   yeah,   thanks   for   that.   Any   reactions   to   some   of   the   comments?   Or   yeah.  
+**Candidate:** No.   Thank   you   so   much.   And,   uh,   I   tend   to   have,   and   I   will,   uh,   I   would   actually   point   out   whenever   my   client   says   this,   I   want   to   seem   like   I   know   the   trade-off   and   the   good   and   the   bad,   so   I   am   a   little   passive   when   I   make   assumption   and   statements,   so   I   think   it's   also   part   of   me   to   keep   working   on   that.   When   can   I   be   more   assertive   versus   when   can   I,   uh,   mention   the   both   sides   of   the   picture?   I   think   I   can   do   both.   Uh,   it's   not   mutually   exclusive.   So   yeah.  
+**Interviewer:** Totally.   And,   uh,   you   know,   for   us,   we,   with   our   whole   coaching   team,   we   believe   in   feedback   strongly,   and   feedback   is   the   only   way   you   can   improve.  
+**Candidate:** Yeah.  
+**Interviewer:** And   so   it's,   it's   awesome   to   have   you   as   a   coach   and,   you   know,   maybe   we   can   do   the   opposite   way   too   and,   you   know,   you  
+**Candidate:** (laughs)  
+**Interviewer:** ...   you   know   what   I   mean?  
+**Candidate:** Awesome.  
+**Interviewer:** Um,   but   I   think,   I   think   you   really   killed   it   and   did   an   excellent   job.   This   was   a   stellar   PM   interview.   So   yeah.  
+**Candidate:** Thank   you   so   much.   Yeah.   Thank   you   for   your   time.  
+**Interviewer:** Um,   cool.   Thank   you,   Mitchell.  
+**Candidate:** Thanks.

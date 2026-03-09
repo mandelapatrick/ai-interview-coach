@@ -1,0 +1,242 @@
+Problem: falling metrics
+Problem Type: Execution
+Firm: Amazon
+Channel: RocketBlocks
+URL: https://www.youtube.com/watch?v=LC92F0nUOV0
+============================================================
+
+**Interviewer:** Hello,   everyone.   Kent   and   Covescu   from   the   RocketBlocks   team   here.   In   this   mock   interview   video,   we're   sitting   down   with   Jessie   Lau,   who   is   a   senior   product   manager   at   Amazon,   focused   on   the   Kindle   product.   And   in   this   particular   interview,   we're   going   to   be   doing   a   product   execution   question   focused   on   the   popular   grocery   delivery   app,   Instacart,   and   they're   seeing   a   decline   in   one   of   their   core   metrics.   So   let's   go   ahead   and   jump   in,   and   see   how   Jessie   walks   through   this.   Okay,   so   let's   imagine   you   are   a   product   manager   working   on   Instacart,   the   grocery   delivery   app,   and,   uh,   you   walk   in   one   day   and   your   manager   pulls   you   aside   and   says,   "Hey,   uh,   order   deliveries,   uh,   you   know,   the   number   of   orders   placed   on   a,   on   a   day-to-day   basis   is   down   4%   week   over   week   from   where   it   was   last   week.   Um,   and   we   don't   know   what's   going   on.   We   need   you   to   help   us   figure   it   out."   So   my   question   to   you   is,   how   would   you   figure   out   what's   going   on   and   then   sort   of   walk   me   through   that   process?   And,   you   know,   feel   free   to   ask   any   que-   clarifying   questions   or,   you   know,   um,   ask   for   more   info   if   you   need   it.  
+**Candidate:** Yeah.   So   the   first   thing   I   would   do   is   ask,   um,   "Is   this   a   real   problem   or   a   not   real   problem?"   Like,   is-  
+**Interviewer:** Mm-hmm.   How-   what   do   you   mean   by   that?  
+**Candidate:** Yeah.   Look-  
+**Interviewer:** How   do   you   decide   whether   it's   real   or   not   real?  
+**Candidate:** Yeah,   like   is   the...   Is,   is,   is   4%   a   normal   fluctuation   that   you   might   see   week   over   week,   especially   if   it,   if   it   fits   inside   of   a,   of   a   normally   understandable   seasonal   pattern?  
+**Interviewer:** Yep.  
+**Candidate:** So   shopping   goes   up   before   Thanksgiving   (laughs)   and-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   and   things   like   that.   So-  
+**Interviewer:** Yep.  
+**Candidate:** ...   if   last   week   was   Thanksgiving,   for   instance,   then   perhaps   this   week   is   down   because   last   week   was,   was   normally   high.  
+**Interviewer:** Ah,   good,   good   point.   So   you're   basically   like,   is   this   normal   or   is   there   like   a   really   high   comp   the   week   before   that   makes   this   look   like   we're   down,   but   we're   just   going,   we're   just   reverting   to   the   mean.  
+**Candidate:** Yeah.  
+**Interviewer:** Yeah,   fair   question.   So   the   normal   sort   of   week-to-week   fluctuation   is   about   1%,   1.5%,   so   4%   does   seem   high,   which   is   why   it   caught,   caught   our   attention.   Uh,   and,   and   then   to   your   question   about,   you   know,   is   this   a   high   comp   issue   like   it   was   Thanksgiving   last   week   or   something   like   that   that   spiked   orders   up?   That   is   not   the   case.   It,   it,   you   know,   we're   sort   of   mid-June,   so   it   doesn't   seem   like   there's   sort   of   any   obvious,   um,   you   know,   reason   why   it   would   have   spiked   up   last   week.  
+**Candidate:** Got   it,   got   it.   Okay.   So,   so   it   is,   it   is   a,   it   is   a   real   problem.   So   okay,   let's   go   work   on   it.   You   know,   one   of   the   things   I,   I've,   um,   we   do,   I've   done   in   my   past   is,   um,   we   will   set   up   predictive   alarms   against   some   of   our   metrics.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** So   they'll   actually,   you   know,   um,   they'll   notice   when   there   is   higher   variability   in   our   data   over   time,   and   the   alarms   will   expand   their   allowable   range   of,   of,   uh,   variance   in   those   periods.  
+**Interviewer:** Yeah.  
+**Candidate:** So   it's   good   to   know   that   this   is,   um,   this   would   have   triggered   that   alarm.   (laughs)  
+**Interviewer:** Yep.   (laughs)  
+**Candidate:** Um,   okay,   cool.   Um,   the...   So   the,   the   second   thing   I'd   wanna   know   then   is,   um,   what's   the   geography   we're   talking   about   here?   So   I   presume   we're   primarily   focused   on   the   US.  
+**Interviewer:** Yep.   So   fair   point.   So,   uh,   right   now   we're   100%   operating   in   US   markets,   so   you're   dealing   with   just,   uh,   you   know,   one   country.   Um,   and   s-   happy   to   answer   any   sort   of   other   geography   questions   you   have   beyond   that   too.  
+**Candidate:** Yeah,   I'm   curious,   um,   is   that   4%   consistent   across   the   US   or   do   we   see   variance,   um,   in   different   regions?  
+**Interviewer:** Mm.   So   good   question.   Um,   one   question   back   for   you   is   like   what   type   of   cuts   would   you   wanna   see   or,   you   know,   if   you,   if   you   could   sort   of   ma-   wave   your   magic   wand,   like   how   would   you   wanna   grab-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   uh,   that,   that's,   um,   answer   your   own   question   there?  
+**Candidate:** Mm-hmm.   Um,   you   know,   I'm   not   exactly   certain   yet,   but,   I   mean,   typical   cuts   I   might   make   in   a   t-   at   a,   at   a   time   like   this   where   I'm   just   initiating   an   investigation   would   be,   you   know,   one   would   be   geographical.  
+**Interviewer:** Yeah.  
+**Candidate:** Um,   e-   in   terms   of   regions,   right?  
+**Interviewer:** Okay.  
+**Candidate:** Like   the   west   or   the   northeast.  
+**Interviewer:** So   you   just   cut   it   by   r-   that's   why   I   was   asking   you.   You   just   cut   it   by   some   regions?  
+**Candidate:** Yeah,   I   mean,   that's   one   way.   Another   way   I   would   think   about   is,   um,   urban   versus   suburban   versus   rural.  
+**Interviewer:** Okay.  
+**Candidate:** Um,   and   then,   I   don't   know,   like   if   I   knew   this   industry   better,   I   might,   um,   instead   of   cutting   by   region,   I   might   cut   by,   like,   um,   who   our   key   partners   are,   right?   Like-  
+**Interviewer:** Ah,   okay.  
+**Candidate:** ...   uh,   I   don't   know.  
+**Interviewer:** So   like   your   grocery   partners.  
+**Candidate:** Yeah,   like   if   Albert   ...   If   there   was   some...   if   we   had   some   change   in   our   relationship   with   Albertsons   or   something   like   that-  
+**Interviewer:** Okay.  
+**Candidate:** ...   that   might-  
+**Interviewer:** Yeah,   yeah,   yeah.   Okay.   So   that's,   that's   fair.   So   those   are   three   interesting   ways   to   cut   it.   I   can,   I   can,   uh,   go   retrieve   that   data   for   you.   Um,   the   first-  
+**Candidate:** Thank   you.  
+**Interviewer:** ...   one   which   was   geographic   regions.   Uh,   so   we've   returned   basically   Western   US,   the   Midwest,   the   Northeast,   and   the   Southeast.   Uh,   and   it   does   look   like   the   4%   is   basically   down   across   the   board.   Like   it's-  
+**Candidate:** Oh,   it   is   down   across   the   board.  
+**Interviewer:** ...   like   3.8   in   the   West   and   4.5   in   the   Northeast,   whatever,   but   it's   like   all   around   the   same,   hovering-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   around   that   same   4%.  
+**Candidate:** Okay.  
+**Interviewer:** Um,   the   second,   uh,   cut   that   you   mentioned   around   rural,   urban,   same   thing   there.   There,   there's   a   little   bit   of   variance,   um,   but   we're   not   seeing   that,   like   rural   is   up   and   urban   is   down   or   anything   like   that.   Um,   they're   both   sort   of   down   around   4%.  
+**Candidate:** Okay.  
+**Interviewer:** And   then   the   last   one   you   mentioned,   uh,   similar   story   there.   Like   if   you   cut   it   by   grocery   partner,   uh,   which   is   an   interesting   idea,   we   don't   see   any...   You   know,   there's   no   like   obvious   smoking   gun   that   like,   hey,   uh,   Albertsons,   to   use   your   example,   is,   you   know,   falling   off   a   cliff   for   some   reason.  
+**Candidate:** Got   it.   So   it   feels   pretty   evenly   dispersed,   uh,   across   the   country.  
+**Interviewer:** Yeah,   yeah.  
+**Candidate:** Um,   what   about...   What   about   competition?   Have,   um,   have...   Any...   Has   anything   changed   in   the   competitive   landscape?  
+**Interviewer:** Yeah.   Um,   good   question.   So   in   terms   of   major   stuff   happening   in   the   marketplace   right   now,   I   mean,   uh,   this   is   not   new,   but   so   for   the   last......   couple   of   years,   Instacart   has   been   competing   against   Amazon,   um,   and   Amazon's   line   of   grocery   delivery   stuff,   which   I   think   is   called   Amazon   Fresh.   Uh,   and,   and,   and,   you   know,   that's,   like,   evolved   and   changed   a   little   bit   over   the   years.   But   nothing,   to   our   knowledge,   has   changed   in   the   last   week   with   that.  
+**Candidate:** Mm-hmm.  
+**Interviewer:** Um,   we   haven't   seen   anything   there.   There   have   been   some   rumblings,   like   if   you,   you   know,   read   like   TechCrunch,   that   type   of   stuff,   that,   that   Uber   is   considering   getting   into   grocery   delivery,   uh,   in   a   bigger   business.   Obviously,   that   they   operate   in   a   tangential   space   with   Uber   Eats.   You   know,   there,   there   are   some-  
+**Candidate:** Hmm.  
+**Interviewer:** ...   similarities   there.   Um,   and   clearly   they   know   a   little   bit   about   logistics.   But   there's   no,   um,   you   know,   as   far   as   we   know,   they're,   they're,   they   don't   have   any   material   presence.   They're   not   actually   testing   it;   it's   just   sort   of   like-  
+**Candidate:** Hmm.  
+**Interviewer:** ...   TechCrunch   rumors,   um,   at   this   point.  
+**Candidate:** Interesting.   Um   ...   I'm   curious   to   know   if   there's   any   way   that,   and   I'm   just   thinking   out   loud   here.  
+**Interviewer:** Yeah.  
+**Candidate:** But   I'm,   I'm   curious   to   know   if   there's   any   way   that   though,   just   rumblings   about   Uber   could   have,   have,   have   driven   some   sort   of   impact.   Um-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Sorry,   it   seems   like   you   have   something   you   were   gonna   say.   Go   ahead.  
+**Interviewer:** Yeah,   I   mean,   I   think,   um,   hard   to   know   for   sure   from,   from   my   perspective.   I   mean,   certainly,   you   know,   consumers   might   have   heard   something.   My,   my   guess   is   it   seems   unlikely.   Um,   but-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   if   you   have   a   specific   idea   of   how   that,   that   might   translate   into   something   like   this,   I'd   be   curious   to   hear   it   for   sure.  
+**Candidate:** Well,   I   don't   think   this   is   a   very   good   idea,   but   I'll,   I'll   share   it,   is,   you   know,   uh,   I've,   I've   known,   uh,   Uber   to   be   pretty   competitive.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** So   I   could   envision   a   world   where   they   might,   um,   especially   competitive   on   the,   on   the   s-   on   the   supply   side.  
+**Interviewer:** Okay.  
+**Candidate:** So   I   could,   it,   I   mean,   this   seems   almost   nonsensical   to   me,   or   certainly   not   a,   not   a,   not   a   sustainable   business   strategy,   but   I   could,   I   could   imagine   them   starting   to   hire,   uh,   delivery   people,   um-  
+**Interviewer:** Hm.  
+**Candidate:** ...   in,   in   preparation   for   a   launch   or   something   like   that.  
+**Interviewer:** Oh   yeah,   ah.  
+**Candidate:** But   I   couldn't   imagine   that   that   would   lead   to   such   a   large   impact   on   Instacart.  
+**Interviewer:** That   is,   that   is   interesting.   And   so   take   me   to,   like,   if,   if   Uber   were   doing   that   right   now,   or   some   other   competitor   out   there   was   doing   the   same   thing-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   how,   what,   what,   what's   the   logical   chain   of   how   that   would,   uh,   affect   the   overall   sort   of   decline   in,   in   orders   we're   seeing?  
+**Candidate:** Yeah,   for   sure.   I   mean,   I   think   that   what   would   happen   is,   um,   your,   uh,   our,   our   delivery   windows   would,   um,   either,   uh,   shrink   or,   um,   they   would,   they   would   shrink   or   they   would   get   further   out.  
+**Interviewer:** Okay.  
+**Candidate:** And   so   as   a   customer   ...   I   mean,   this   has   happened   to   me   several   times   in   the   last,   um,   uh,   with,   with,   with,   with   Amazon   in   the   last,   uh,   year,   where   during   moments   of   what   feel   like   more   of   like   a   crisis,   um,   the   delivery   windows   become   less   and   less   available.   And   in   that   case,   I   presume   it's   because   the   orders   are   up.   But,   um,   but   in   general,   if   there's   less   labor   supply,   um,   from,   from   Instacart   to   go   pick   the   groceries   and   bring   them   by,   then   that   becomes   a   less   interesting   option   for   me   as   a   customer,   and   I,   I'd   probably   go   somewhere   else   to   order   and   just   do   it   myself.  
+**Interviewer:** Ah,   okay,   interesting.   That   is,   that   is   a   fair   point.   Um,   so,   um,   I   could   see   that   happening.   And,   and   I,   I   know   what   you're   talking   about.   Certainly   in,   in   periods   of   spiked   demand   does   delivery   windows   increase,   but   the,   the   sort   of   logic   of   like,   hey,   if   our,   if   our   essentially   drivers   and,   and   shopper   agents   were   getting   poached,   and   then   the   delivery   times,   um,   you   know,   spiked   up,   uh,   I   could   see,   you   know,   users   bulking   and   basically   not   placing   orders.   So   that's   interesting.   Um,   let   me   ask   you   this.   Like,   if   you,   if   you   wanted   to   try   and   prove   or   disprove,   uh,   whether   that   was   going   on,   and   again,   you   can   wave   your   magic   wand-  
+**Candidate:** Hm.  
+**Interviewer:** ...   and   pull   some   data,   what   type   of   data   would   you   want   to   see   whether   that   hypothesis   holds,   holds   water?  
+**Candidate:** Ah.   Um,   so   I   think,   let,   let   me   think   about   this   for   a   sec.   I'll,   I'll   just   go   ahead   and   think   out   loud.  
+**Interviewer:** Yeah.  
+**Candidate:** Um,   so   I   guess   I   suppose   one   thing   we   could,   we   could   look   at   is,   um,   the,   whether   the   gap   ...   For,   for   those   who   did   submit   orders,   whether   the   gap   in   time   order   is   placed   until   time   delivery   is   made,   um,   has   increased.  
+**Interviewer:** Okay.  
+**Candidate:** Um,   I   think   we   could   also   look   at,   um,   in   the,   in   the,   in   the   clickstreams   data,   I   imagine   we   could   look   at,   um,   at   the   point   of   purchase   when   you're   told   when   your   delivery   window   is.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** If,   if   we're   seeing   extra   drop   off   there   or   somewhere   else.  
+**Interviewer:** Okay.   Okay.  
+**Candidate:** Um,   yeah,   so   those   are   the   two   ideas   that   pop   off   the   top   of   my   head.  
+**Interviewer:** Got   it,   okay.   So   you   wanna   look   at   essentially,   uh,   the   first   thing   you   mentioned   was   average   deliveries,   like   how   long   does   it   take   to   get   the   delivery?  
+**Candidate:** Yeah.  
+**Interviewer:** And,   and   the   second   thing   you   wanna   look   at   is   are   we   seeing   a   bigger   drop   off   from   when   you   first   see   the   window   to,   to   placing   an   order   than-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   than   we   typically   see.   Um,   okay.   Sounds   good.   So,   um,   we   can   look   those   both   up.   Uh,   average   delivery   time   is,   um,   on   par.   There's   no,   no   material   changes   that,   that   seem   outside   of,   um,   regular   standard   deviation.   Uh,   and   sim-   similar   with   the   drop   off   rate.   We're   not   seeing   like   a   spike   in,   in   drop   off   rates.   So   it   doesn't   seem-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   like,   um,   it   doesn't   seem   like   that   might   be   the   case.  
+**Candidate:** Yeah,   this   feel-  
+**Interviewer:** But   could   I-  
+**Candidate:** And   if   ...   It   didn't   feel   like   a,   a   super   strong   hypothesis   to   me,   but,   um,   since   you   brought   up   the   Uber,   um,   the   Uber   thing,   I,   I,   I   wanted   to,   I   wanted   to   check   in   on   it.   You   know,   I   wonder   if,   um,   this   might   be,   uh,   potentially   a   self-inflicted   wound.  
+**Interviewer:** Okay.  
+**Candidate:** Where   we've,   um,   where   we've   done   some,   we've   changed   something   about   our,   either   our   recommendation   or   sorting   algorithms   for   shoppers-  
+**Interviewer:** Okay.  
+**Candidate:** ...   that,   uh,   they're   not,   they're,   they're   just   purchasing,   their   average   cart   is   less   than   it   was,   um,   before.  
+**Interviewer:** Okay.   Um,   well,   so   what,   um,   what   information   would   you   like   to   know   or   sort   of   what's-...   um,   yeah.   What's,   w-   what   would   you,   I   guess,   ask   your   fellow   PMs   or   what   type   of   information   would   you   try   and   gather   there?  
+**Candidate:** Yeah.   I   mean,   the   easiest   thing   would   be   to   look   and   see   if   there   were   any,   um,   any   A/B   tests   run   or   changes   made   to,   um,   to   the   shopping,   uh,   to   the,   to   the   shopping   s-   site   to,   um   ...   that,   that   may   have   had   a   negative   impact.  
+**Interviewer:** Got   it.   Okay.  
+**Candidate:** Um,   yeah.  
+**Interviewer:** Makes   sense.   So,   um,   I   can   retrieve   some   of   that   info   for   you   here.   Uh,   essentially,   um,   there   are   three   main   experiments   running   right   now-  
+**Candidate:** Hmm.  
+**Interviewer:** ...   three   A/B   experiments   going   on.   Uh,   the   first   is   there's   an   experiment   that,   um,   they're   playing   around   with   the   logic   that   depays-   uh,   displ-   displays   the   suggested   items   that   show   up   on   the   home   screen   of   the   app   when   you-  
+**Candidate:** Hmm.  
+**Interviewer:** ...   pull   it   forward.   So   when   you   log   into   Instacart,   uh,   as   a,   as   a   user,   Instacart   will   suggest   items   that   you've   purchased   in   the   past   to   put,   to   put   back   in   your   cart   this   time.  
+**Candidate:** Yeah.  
+**Interviewer:** And   this   experiment   is   essentially   changing   the   logic   of   how   those   suggestions   work.  
+**Candidate:** Yeah.  
+**Interviewer:** That,   that's   the   first   thing.   Uh,   the   second   thing   that   your   teammates   mentioned   is   there's   another   experiment   going   on   where   some   users,   uh,   this   is   30%   of   users,   are   receiving   new   push   notifications   which   are   alerting   them   about   deals   happening,   um,   in   their   local   area   for   the   grocery   stores   that   are   supported   on   Instacart.   So   for   example,   this   would   be   like,   you   know,   if,   if,   uh   ...   I   actually   don't   know   if   Albertsons   is   in   Seattle,   but   like,   uh,   if   Albertsons   were   having   a   special,   Instacart   might   notice   you   as   an   Insta-   notify   you   as   an   Instacart   customer.   Like,   "Hey,   you   know,   if   you   shop   at   Albertsons   this   week,   you'll   get   10%   off   all   your   stuff."  
+**Candidate:** Okay.   Can   I,   can   I,   can   I   d-   dive   into   that   one-  
+**Interviewer:** Sure.  
+**Candidate:** ...   um,   really   quickly?   And   then   I,   I   do   wanna   get   back   to   the   third   one   but   I   wanna   ask   a   couple   of   questions   on   that   one.   Um,   so   th-   this   is   a   new   push   notification   strategy   that   didn't   exist   before.  
+**Interviewer:** Correct.   Entirely   new.   We   didn't   do   this   in   the   past.  
+**Candidate:** Okay.   And   then,   um,   and   then   the,   um   ...   And,   and,   and   what   those   push   notifications   do   is   they   alert   customers   to   specific   deals   in   their   local   area?  
+**Interviewer:** Yeah.  
+**Candidate:** Okay.   Um,   I   have   one   other   follow-up   question   on   the   prompt   to   make   sure   I   didn't   misunderstand   the   prompt   at   the   beginning.  
+**Interviewer:** Yeah.  
+**Candidate:** When   you   said   orders   are   down   4%,   do   we   mean   the,   like,   average   order   size   or   do   we   mean   the   total   amount   of   orders?  
+**Interviewer:** That's   a   good   question.   We   mean   the   total   amount   of   orders.  
+**Candidate:** Okay   'cause,   um,   my   initial   instinct   was,   if   we're   push   notifying   on,   on   discounted   deals,   um,   maybe   we're   having   more   mo-   more   and   more   orders   but   the   average   ticket   on   those   orders   is   lower.   But   it   sounds   like   that's   not   the   case.   So,   um-  
+**Interviewer:** Yeah.   That's   a   good   question   and   good   clarification.   The   4%   down   is   definitely   on   the   absolute   number   of   orders   placed,   not   the   average   order   size.  
+**Candidate:** Got   it.   Great.   Okay.   Thank   you.  
+**Interviewer:** Yeah.   Um,   and   the,   and   the   third   experiment   running   is   that   there   is   an   update   to   essentially   the   color   palette   that's   been   used   and   the   layout   of   the,   um   ...   two   parts   of   the   checkup   flow.   Basically   the   checkout   overall   and   the   part   that   comes   right   before   the   checkout   which   is   when   the   user   has   selected   the   items   that   they   want   in   their   cart-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   um,   and   they   go   to   check   out,   there's   a   screen   right   before   that   that   basically   says,   you   know,   if   this   order   is   ...   Or   sorry,   if   this   good   is   not   there,   how   do   you   want   ...   Do   you   want   us   to   just   not   deliver   it   or   do   you   want   us   to   replace   it   with   something   else?   There's   basically   this   UI   that   lets   people   make   a   decision   then.   So   the   color   palette   and   the   layout   o-   of   those   screens   has   been   adjusted   to   match,   um,   some   redesign   that   happened   to   the   general   Instacart   app   about   three   months   ago.  
+**Candidate:** Yeah.  
+**Interviewer:** But   this   part   was   done   last.   It   was   sort   of   the,   the   last   to   be   done.  
+**Candidate:** Got   it.   Got   it.   Okay.   Well,   um,   I   will,   um   ...   So   taking   those,   I,   I'm   gonna,   I'm   gonna   break   those   down   into   four   parts.  
+**Interviewer:** Okay.  
+**Candidate:** Re-   recognize   that   the,   the   color   and   layout   are   one   and   the   same,   but   I'm   gonna   split   those   two   things   apart.  
+**Interviewer:** Okay.  
+**Candidate:** And,   and   say   that   my   ...   So   I'm   gonna   go   ahead   and   say   that   my   hypothesis,   um,   is   that   the,   the   two   most   important   things   for   us   to   dig   into   here   are   the   logic   of   suggested   items-  
+**Interviewer:** Okay.  
+**Candidate:** ...   and,   and   the   layout   of   the   checkout   flow.  
+**Interviewer:** Okay.  
+**Candidate:** Um-  
+**Interviewer:** And   why   do   you   say   those   two   things   out   of   the   four   that   I   mentioned?  
+**Candidate:** You   know,   I   mean,   it's,   it's,   it's   well   established   now   that,   um,   that   the   algorithmic   recommendations   work.  
+**Interviewer:** (laughs)  
+**Candidate:** And   homepage   is   a   good   place   to   put   algorithmic   recommendations.  
+**Interviewer:** Yeah.  
+**Candidate:** So   my   instinct   is   very,   very   small   changes   on,   um,   on   algorithms,   uh,   recommending   what   to   buy,   um,   when   you   open   an   app   could   have   really   big   impacts   on   our   business.  
+**Interviewer:** Okay.  
+**Candidate:** So   that's,   that's   the   one   I   would   investigate   really   deeply.   I   would   guess   whoever   made   that   change   is,   is   watching   that   closely.   I   would   hope   so.  
+**Interviewer:** Okay.  
+**Candidate:** Um,   and   then   on   the   layout,   I   think   ...   You   know,   the   color   I   think   is   a,   is   a,   uh,   is   important   and   it   is   ...   You   know,   we've   ...   I've   worked   in   places   where   I've   made   a   button   blue   and   made   more   money   because   of   it.   So   I   know   that   that's   ...   that   can   happen.  
+**Interviewer:** Yeah.  
+**Candidate:** Um,   it's   just   less   likely   than   a   layout   change.   And   I   could   envision   a   world   here   where   like,   um,   a   layout   change   on   ...   especially   on   the   replace   item   flow   is   ...   has,   has,   um,   has   changed   in   such   a   way   that   previously   we   were   getting,   like,   lots   of   replacements   and   now   the,   the   decision   is,   um,   that   instead   of   getting   a   replacement   we're   just,   you   know,   removing   an   item   from   an   order,   um,   which,   which   could   have   had   a,   a   negative   impact.   Um,   I'll   give   an   example   for   me   personally.   I   actually   (laughs)   pretty   recently   in   this   exact   experience   is,   um,   for   a   long   time,   um,   when   I   ordered   on   Amazon,   um,   they   would   recommend   a   replacement   only   if   there   was   a   close   replacement.  
+**Interviewer:** Okay.  
+**Candidate:** And   so,   like,   I   guess   ...   I,   I   never   remember   which   one's   type   one   and   which   one's   type   two   error,   but   I,   my   ...   They   would   default   to   a   smaller   cart....   because,   you   know,   if   they   couldn't   find   something   that   was   pretty   close-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   um,   they   would   get   rid   of   it.   The   last   time   I   ordered   and   there   wasn't   a   replacement,   they   just,   like   (laughs)   the   shopper   just   threw   some   random   thing   in   there   that,   um,   had,   was   nothing   like   what   I   wanted   and   so   I   had   to   actively   go   in   and   say,   like,   "No,   thank   you.   I   do   not   want   that."  
+**Interviewer:** Yeah.  
+**Candidate:** And   so   they   just   there,   they   have   an   error   of   inclusion   rather   an   error   of   exclusion   and   I   could,   I'd   be   pretty   concerned   about   that   potentially   happening   over   here   as   well.  
+**Interviewer:** And   so   your   hypothesis   there   is,   just   to   make   sure   I   understand,   you're   saying   that   that   behavior   of,   like,   then   getting   the   wrong   items,   uh,   might   frustrate   people   and   they   might   just   place   less   orders   in   the   future   and   that   would,   that   would   lead   to   the   order   decrease   that   we're   seeing?  
+**Candidate:** s-  
+**Interviewer:** Or   am   I   misunderstanding?  
+**Candidate:** S-   yeah.   Um,   it   is,   uh,   either,   like,   uh,   I'm,   I'm,   yeah.   So   I   am...   Thank   you   for   clarifying.   I   am   considering,   I,   I   suppose   two   things.   Like   one   is   that,   that,   that   that   would   throw   off   a   customer.   They   may   not   want   to   place   an   order   in   the   future.  
+**Interviewer:** Okay.  
+**Candidate:** That   could   certainly   happen.   Another   could   just   be   as   simple   as   layout   change,   especially   I,   I   mean   adding   the   color   change   to   it   would   exacerbate   this.   It's   just,   it's   just   unfamiliar   for   the   customer.   And   there   may   even   just   be,   you   know,   it's   not   that   hard   to   engender   like   a   one   or   two   percentage   points   of   mistakes   of   people   accidentally   canceling   orders.  
+**Interviewer:** Yeah.  
+**Candidate:** And   that   would,   from   my   perspective,   like   I've   had   experiences   where   I've   put   like   37   items   into   a   cart   and   then   them,   them   not   get   purchased   and   I'm   like,   "Forget   it.   I'm   just   going   to   the   store."  
+**Interviewer:** Yeah.  
+**Candidate:** So,   um-  
+**Interviewer:** Okay.  
+**Candidate:** I   could,   I   could   also   see   that   happening.  
+**Interviewer:** Okay.   Cool.   Um,   well   let's...   So   thank   you   for   clarifying   why   you   sort   of   highlighted   those   two   things   out   of   the,   the,   the   four   as   you   sort   of   broke   it   down.   Um,   starting   at   sort   of   the,   the   top   of   those.   Uh,   the   first   one   was   you   talk   about   sort   of   the   algorithmic   changes   on   the   logic   there.   Um,   if   you,   you   could,   you   know,   grab   the   PM   that's   running   that   experiment,   what   would   you   want   to   ask   him   or   her   to   see   if   it   feels   like   maybe   that's   having   an   impact   or   what-  
+**Candidate:** (laughs)   Oh,   I   would   hope   that   they   ran   an   A/B   test.   (laughs)  
+**Interviewer:** (laughs)  
+**Candidate:** And   I   would   hope   I   could   look   at   the   results   of   their   A/B   test.  
+**Interviewer:** Okay,   so-  
+**Candidate:** Um,   you   know,   yeah.  
+**Interviewer:** Got   it.   So   they   did   run   an   A/B   test,   um,   and   they   did   look   at,   uh,   you   know,   for   the,   the   folks   in   the   new   variant,   um,   how   many   of   those   sort   of   suggested   items   did   they   end   up   placing   into   their   cart   versus,   you   know,   how   many   on   average   versus   the,   the   old   variant   and   what   was   the   average   cart   size   versus   the   old   cart   size   and   what   was   the   average   likelihood   of   opening   the   app   to   placing   an   order.   So   what   was   the   drop-off   for   folks   in   both   variants?   And   they   found   that,   um,   basically   across   the   board,   they   saw   about   a   one   to   2%   increase   in   those   metrics.   So   about   1%   to   2%   more   items   from   the   suggestive   list   were   getting   added,   um,   slightly   higher   performance   of   actually   completing   the   actual   order   and   slightly   higher   order   value.  
+**Candidate:** Great.   So   now   we   gotta   find   like   negative   6%   (laughs)   on   sales   loss.   (laughs)  
+**Interviewer:** (laughs)  
+**Candidate:** Um,   well,   good.   Well,   let's   dial   that   one   up   and   then   we   won't   (laughs)   and   then   we   won't,   uh,   we,   we'll   be   down   to   just   negative   one,   I   suppose.  
+**Interviewer:** Okay.  
+**Candidate:** Um,   okay.   Yeah.   Let's,   let's,   let's   keep   going.  
+**Interviewer:** Yeah.  
+**Candidate:** Maybe   jump   to   three   and   then   we   can,   if,   if   three   doesn't   feel   like   the,   um,   the   right   one,   then   we   can   go   back   to   push   notifications.  
+**Interviewer:** Okay.   Cool.   Um,   so   we'll   skip   push   notifications.   On   the   third,   um,   you   know,   again,   just,   if   you   could   wave   your   magic   wand,   what   type   of   metrics...   And   there   w-   there   is   an   A/B   test   running   on   this,   but   what   type   of   metrics   would   you   ideally   wanna   see   for   this   third   experiment   about-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   changes?  
+**Candidate:** Yeah.   I   mean,   you   know,   I   think   in   commerce   my   experience   is   it's   super   important   to   always   measure   the   purchase,   um,   if   you   can,   right?   Like   get   to   as   close   to   measuring   the   purchase   as   possible   against   every   single   A/B   test.   So-  
+**Interviewer:** Okay.  
+**Candidate:** ...   like   the   o-   there   should   be   a   metric,   um,   of   aggregate-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   both   total   orders   and   aggregate   purchase   value   on   both   this   A/B   test   and   the   first   one   we   described.  
+**Interviewer:** Okay.   Yeah.  
+**Candidate:** Um,   so   I   want   that   one.  
+**Interviewer:** Got   it.  
+**Candidate:** But   you   can   also   look   at   other   pieces   of   data   too.   Um,   in   d-   in,   in   particular   we   can   look   at,   um,   just   the,   especially   in   the,   the,   both   the   pre-checkout   page   and   the   checkout   page.   Hopefully   we   can   A/B   test   the   number   of,   um,   the   number   of,   uh,   like   dropped   shopping   carts   that   happened   at   each   of   those   stages.  
+**Interviewer:** Okay.  
+**Candidate:** Um,   and   that   should   give   us   a   much   more   direct,   um,   sense   as   to,   um,   whether   this   was   the   cause   of   the   reduction   in   orders.  
+**Interviewer:** Okay.   Sounds   good.   So   the   information   we've   got   is   that   this   experiment,   um,   was   running   on   30%   of,   of   live   customers.   So   70%   were   in   the   default-  
+**Candidate:** Wow.  
+**Interviewer:** ...   default   experience.   30%   were   running   in   this,   this   new   variant.   Um,   average   order   value,   uh,   for   the   customers   in,   in   the   30%   percent,   um,   was   actually   up,   uh,   about   one   and   a   half   percent.   Uh,   and   the,   uh,   number   of   orders   placed   relative   to   control,   um,   was   down   about   21%.  
+**Candidate:** Oof.   Whoops.   (laughs)  
+**Interviewer:** (laughs)  
+**Candidate:** Yeah.   So   clearly,   um,   this   is   a   problem.  
+**Interviewer:** (laughs)  
+**Candidate:** Uh.  
+**Interviewer:** I   would   agree.   (laughs)  
+**Candidate:** Uh,   so   first   of   all,   I   mean,   just   in   general,   I'd   be   pretty,   you   know,   it's...   What   it   sounds   like   to   me   is   that   this,   um,   this   change   was   more   oriented   around   brand-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   than   it   was   around,   um,   improve,   uh,   business   improvement.  
+**Interviewer:** Yeah.  
+**Candidate:** And   that,   uh,   that   the   rest   of   the   brand   had,   um,   changed   its,   um,   color   palette   and   layout,   uh,   before,   uh,   before   this   one,   and   that   we   wanted   to,   um,   make   this   one,   um,   match   that.And   that's   okay.   That's   important.   Uh,   brand   value   is   important   and   it's   much   harder   to   A-D   test,   but   it's   important.  
+**Interviewer:** Yeah.  
+**Candidate:** Um,   it   is   not   to   my,   uh,   in   my   mind   an   acceptable   thing   to   do,   to   compromise,   uh,   financial   performance,   um,   for,   uh,   pr-   uh,   for   improving   the   consistency   of   a   brand,   uh,   to   this   level.   And   I   think   it   was,   to   be   honest,   kind   of   careless   to   have   dialed   this   experiment   all   the   way   up   to   30%   when   you   didn't   have   a   hypothesis   about,   um...   or   when   the   initiating   hypothesis   for   doing   it   was   not   growing   revenue.   Um,   my   hunch,   based   on   the   fact   that   average   order   value   is   up,   but   the   total   number   of   orders   is   down,   is,   um,   either   customers   are...   E-   probab-   either   or   both   customers   are   just   getting   confused   and   exiting   the   app   because   they're   confused,   or,   um,   we're   asking   them   to   do   a   lot   more   work,   um,   in   order   to,   like,   select   which   products   they're   keeping   and,   and   not   keeping.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** And,   and   either   making   them   do   it   or,   or   something   like   that.  
+**Interviewer:** Yeah.  
+**Candidate:** And   so   the   folks   who   do   decide   to   do   it   are   buying   more,   but   way,   way   more   folks   are   just   choosing   not   to   buy.   And,   and   that's   a   pretty   unacceptable   outcome.   So   I'd   immediately   dial   this   experiment   down   and   go   back   to   the   drawing   board   with   the   design   and   orient   the   design   first   around,   um,   um,   (laughs)   around...   certainly   acknowledging   the   color   palette   and   layout   specifications   that   we   want   to   consider,   but   orienting   the   experiment   around   growing   or   at   least   maintaining   our,   our,   um,   our,   our   order   levels.  
+**Interviewer:** Got   it.   Okay.   Sounds   good.   Well,   I   think   you   did   a   good   job   at   identifying   (laughs)   the   driver   of   our-  
+**Candidate:** (laughs)  
+**Interviewer:** ...   of   our   decline   here.   And,   uh,   I   agree   with   the   recommendations   that,   you   know,   brand   is   important,   but   we   need   to   make   sure   that   it,   uh,   you   know,   can   be,   uh,   holistically   sort   of   incorporated   without,   you   know,   driving   a   material   decline   in,   in   our,   uh,   business   metrics.  
+**Candidate:** Cool.   Thank   you.  
+**Interviewer:** Sounds   good.

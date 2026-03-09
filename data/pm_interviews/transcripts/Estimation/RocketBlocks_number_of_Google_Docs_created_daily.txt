@@ -1,0 +1,232 @@
+Problem: number of Google Docs created daily
+Problem Type: Estimation
+Firm: Google
+Channel: RocketBlocks
+URL: https://www.youtube.com/watch?v=WT1qlov1q24
+============================================================
+
+**Interviewer:** Hello,   everyone.   Kenton   Kovesdu   here   from   the   RocketBlocks   team.   In   this   mock   interview   video,   we're   going   to   be   sitting   down   with   Darsh   Thakkar,   who   is   a   product   manager   at   Microsoft,   focusing   on   the   Microsoft   Teams   product.   In   this   particular   mock   interview   video,   we're   going   to   be   doing   a   product   estimation   question.   And   specifically,   Darsh   is   gonna   be   working   on   estimating   the   number   of   new   Google   Docs   created   in   any   given   day.   So   let's   go   ahead   and   jump   in   and   see   how   Darsh   approaches   this.   So   let's   imagine   that   you   are   a   product   manager   and   you're   working   at-   at   Google.   And   for   an   upcoming   project   that   you're   gonna   be   working   on,   one   of   the   key   things   you   need   to   do   is   estimate   the   number   of   Google   Docs   that   are   created   on   any   given   day.   Now,   this   number   exists   internally   and   there   are   dashboards,   but   at   the   moment,   you're   in   a   different   group,   you   don't   have   access   to   it,   so   you   actually   need   to   build   an   estimate   from   scratch.   So   how   would   you   go   about   doing   that?  
+**Candidate:** Sure,   that   makes   sense.   Um,   so   I   think   Google   Doc   is   a   pretty   massive   product,   uh,   with   lot   of   segment,   lot   of   users.   And   overall,   there   is   a   complexity   here,   like   there   are   Google   Drive   users,   there   are   Gmail   users,   there   are   internet   users.  
+**Interviewer:** (laughs)  
+**Candidate:** So   I   guess,   um,   before   like   quite   of   digging   into   the   problem,   like   one   question   I   would   have   is,   um,   are   we   looking   for   any   geographical   bound   for   this   problem,   for   a   particular   geographical   area   or   throughout   the   globe?  
+**Interviewer:** Yeah.   Good   question.   So   for   the   purposes   of   this   exercise,   we   can   think   about   Google   Docs   created   within   the   United   States   of   America.   So   the-   the   end   user   that's   creating   the   doc   is   sort   of   within   the-   the   boundaries   of   the   United   States.  
+**Candidate:** Okay.   Got   it.   Uh,   that's   good   to   know.   And   I   guess   one   more   question   I   had   was,   when   you   think   about,   uh,   Google   Doc,   uh,   it's   part   of,   uh,   G   Suite.  
+**Interviewer:** Yeah.  
+**Candidate:** Which   has   a   different   kind   of   users,   like,   uh,   casual   users-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   so   like   person   like   me   who   has   a   normal   Gmail   ID,   or   there   might   be   like   an   enterprise   user   who   is   basically   using   Google   Doc   as   part   of   their   company,   like   Google   employees,   for   example.  
+**Interviewer:** Yeah.  
+**Candidate:** So   are   we   concerned   about   any   specific   kind   of   users   or   we   just   want   to   estimate   an   overall   number?  
+**Interviewer:** Ah,   good   question.   So   I   definitely   agree   about   those   two   different   segments.   For   the   purposes   of   this   exercise,   let's   focus   on   just   getting   to   an   overall   number.  
+**Candidate:** Okay.  
+**Interviewer:** But   if   you   wanna   think   about   it   in   terms   of   a   segmented   way,   that's   totally   fine   by   us.  
+**Candidate:** Okay,   that   makes   sense.   Um,   I   think   at   some   point,   I   would,   uh,   think   about   segments-  
+**Interviewer:** Okay.  
+**Candidate:** ...   because,   uh,   their   usage   is   different.  
+**Interviewer:** Hmm.  
+**Candidate:** And,   uh,   thinking   about   just   few   thoughts   here   is   like,   Google   Doc   is   not   something   that   is   kind   of   like   one-to-one   matching.   Uh,   so   what   I   mean   is,   if   I   use   Google   Docs,   that   doesn't   mean   I   only   open   Google   Doc   once   in   a   day   and   it   varies   depends   on   y-   depending   on   your   usage.  
+**Interviewer:** Yeah.  
+**Candidate:** So   the-   that   is   just   a   point   that   I   had   in   mind.   Um,   so   give   me   five   seconds   here   to   just,   uh,   think   about   the   thought   process   and   how   I   want   to   approach   this   problem.  
+**Interviewer:** Okay.   Sure.  
+**Candidate:** Okay.   So   I   have   a   potential   trail   of   thought,   um,   and   this   is   something   like,   um,   I   wanna   keep   it   like   a   conversation,   because,   uh,   there   might   be   like   a   right   answer,   wrong   answer,   but   I   think   it's   just   a   good   problem   to   kind   of   have   thought   out   of.   And   if-  
+**Interviewer:** Okay.  
+**Candidate:** ...   you   feel   like   I   might   be   going   in   a   wrong   direction,   feel   free   to   interrupt   me.  
+**Interviewer:** Sure.  
+**Candidate:** Um,   so   this   is   what   I'm   going   to   do.   I   am   going   to   take   like   a   top-down   approach.   So   I'm   going   to   consider,   first   of   all,   like   how   many   people,   uh,   are   there   in   United   States.   And   from   then,   I   want   to   derive   on   how   many   people   use   internet.  
+**Interviewer:** Okay.  
+**Candidate:** From   there,   I   would   go   to   like,   not   everybody   who   uses   internet   has   an   email   ID.   So   out   of   that,   how   many   email   users   are   there?   And   out   of   that,   how   many   Gmail   users   are   there?   Because   there   are   definitely   like,   uh,   people   who   don't   use   Gmail   or   Gmail   is   not   something   exclusive.  
+**Interviewer:** Yeah.  
+**Candidate:** Like   I   have   like   four   email   IDs   straight   across.  
+**Interviewer:** (laughs)  
+**Candidate:** So   that   is   something   to   consider.   And,   um,   then   I'll   think   about   how   to   kind   of   come   to   a   Google   Doc,   uh,   from   a   Gmail   user.   So   first   I   would   try   to   estimate   how   many   Gmail   users   are   there   in   United   States.  
+**Interviewer:** Okay.  
+**Candidate:** Um,   and   this   is   something   that   I   think,   um,   a   Google   Search   can   also   provide,   but   going   from   the   mindset.   Um,   first   of   all,   uh,   I   think   the   population   of   United   States   is   around   the   number   of   330   million.   Um-  
+**Interviewer:** Okay.  
+**Candidate:** ...   correct   me   if   I'm   wrong.   That's   just   an   estimate   that   I'm   aware   of.  
+**Interviewer:** It   sounds   right   to   me.  
+**Candidate:** Um,   out   of   that,   um,   now   I   want   to   think   about   how   many   people   in   United   States   have   access   to   internet.   So   considering   the   fact   that   United   States   is   a   developed   country   and   internet   is   something   widespreadly   used   in   metro   areas,   rural   areas   as   well   these   days.  
+**Interviewer:** Okay.  
+**Candidate:** So   I   think   the-   it   might   be   a   good   approximation   to   approximate   a   higher   range   rather   than   some   other   country.  
+**Interviewer:** Okay.  
+**Candidate:** So   I   think   a   good   estimate   would   be   around   85   to   80%.  
+**Interviewer:** Okay.  
+**Candidate:** So   I   would   go   ahead   with   85   for   now.  
+**Interviewer:** Okay.  
+**Candidate:** That,   uh,   85%   of   people   within   United   States   have   access   to   internet.  
+**Interviewer:** Got   it.  
+**Candidate:** So,   uh,   we   previously   made   a   fact   that   330   million   people   we   are   assuming,   uh,   are,   is   the   population   of   United   States.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** So   if   we   do   85%   of   that,   um,   that   approximately   comes   down   to   280.5   million.  
+**Interviewer:** Okay.
+**Candidate:** So,   uh,   before   I   go   ahead,   just   wanna   take   a   pause   if,   uh,   like,   you   are   with   me   on   this?  
+**Interviewer:** Yep,   I'm   following   you   so   far.  
+**Candidate:** Okay.   So   next   up,   um,   I   want   to   estimate   out   of   these   internet   users,   how   many   people   even,   um,   have   an   email   ID.   So   again,   since   we   are   considering   United   States   as   a   country,   um,   there   are   many   people   who   use   internet   for   their   daily   lives,   and   thus,   there   are   many   people   who   would   use   an   email   ID.   So   again,   taking   an   approximation,   I   don't   think   this   would   be   100%,   uh,   that   every   person   who   has   access   to   internet   has   an   email   ID,   but   still   it   would   be   pretty   close   to   100%.   So   I   would   go   with,   let's   say,   95%   approximation,   just   for   the   fact.  
+**Interviewer:** Okay.  
+**Candidate:** So   that   brings   us   to   around,   uh,   266.5,   rounding   off   the   number.   So,   266.5   million   people   within   United   States,   uh,   having   an   email   ID.   So   the   reason   I'm,   uh,   focusing   on   email   ID   is,   uh,   because   you   can   only   access   Google   Drive   if   you   have   an   email   ID.   You   cannot   access   apart   from   that.  
+**Interviewer:** Okay.  
+**Candidate:** So   out   of   266.5   million,   uh,   I   want   to   estimate   how   many   people   are   Gmail   users.   Now,   as   I   said,   um,   kind   of   like   there   is   a   segregation   between   enterprise   users,   casual   users,   and   it   might   be,   I   might   be   working   for   a   company   which   doesn't   use   Gmail,   but   my   personal   ID   might   be   a   Gmail   ID.  
+**Interviewer:** (laughs)   Yeah.  
+**Candidate:** So,   uh,   this   is   like   a   kind   of   critical   path   which   might   be   wrong,   but   I   think   a   good   estimation...   I-   I'm   aware   that   Gmail   is   the   leading   email   provider   in   United   States.   So,   uh,   I   think   Gmail,   Outlook,   and   Yahoo   are   the   three   leading   provider,   and   then   there   are   others.  
+**Interviewer:** Yep.  
+**Candidate:** But   estimating,   like,   Gmail   is   the   leading   provider,   and   most   people   have   a   personal   Gmail   account.   And   plus,   their   enterprise   might   be   something   else,   but   just   focusing   on   personal   Gmail   account   right   now,   I   think   more   than...   Almost   70   to   75%   people   who   have   an   email   ID   would   have   a   Gmail   ID,   even   though   they   have   some   other   email   ID   as   well.   That's   my   assumption.  
+**Interviewer:** Okay.  
+**Candidate:** It   can   be   wrong,   but,   um,   I   just   want   to   check   in   with   you   if   you   think   this   is   a   correct   assumption   to   make.  
+**Interviewer:** Um,   I   think   it   seems   roughly   right.   I   don't   know   the   email   market   shares   of,   of   the   leading   companies.   I   do   think   that   Gmail   is   the   biggest.   Um-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   and   I   would   guess   they   certainly   have   over   50%   of   the   market   for   sure.   So   I   think,   you   know,   and,   and   knowing   your   point   about   there's   gonna   be   some   duplication,   like   many   people   have   Gmail   and   Yahoo!   and   Outlook   or   some   permutation   there,   I   think   that   seems   reasonable.  
+**Candidate:** Got   it.   So,   um,   be-   based   on   your   point   and   my   thought   of   trail   before,   I   wouldn't   go   ahead   and   lock   in   s-   70%.   As   we   mentioned,   like   for   enterprise   users,   actually,   Gmail   may   not   be   that   popular   because   a   lot   of   companies,   uh,   are   using   like   Microsoft   these   days,   especially   organization.   So   they   use   like   Outlook   and...   Lot   of   students   as   well.  
+**Interviewer:** Yeah.  
+**Candidate:** So   expecting   like   in   the   enterprise   market   and   student,   like,   uh,   university   market,   the   share   of   Gmail   would   be   slight   less   than   the   consumer   market,   so   I   would   consider   that   about   50   to   55%.  
+**Interviewer:** Okay.  
+**Candidate:** And   given   this   50%   and   the   75%,   which   is   enterprise   and   consumer,   I   think   the   best   way   to   estimate   without   going   like   a   very   deep-rooted,   uh,   calculus   route   would   be   just   to   take   a   simple   average   between   those   two.  
+**Interviewer:** Okay.  
+**Candidate:** So   taking   an   average   between,   um,   55   and   70,   that   would   be   about,   uh,   62.5.   So   for   the   sake   of   calculation,   I   would   take   it   as   60%.  
+**Interviewer:** Okay.  
+**Candidate:** So...   And   we   previously,   uh,   create   a   paradigm   that   there   are   about   266.5   million   people   who   have   an   email   ID.  
+**Interviewer:** Okay.  
+**Candidate:** So   now   I'll   go   ahead   and   I'll   take   60%   of   266.5   million.  
+**Interviewer:** Okay.  
+**Candidate:** So   that   is   around,   um,   some   ballpark   range   of   160   mil-   million,   rounding   off.  
+**Interviewer:** Okay.  
+**Candidate:** Okay.   So   I   wanna   take   a   pause   here   and   I   want   to   reiterate   that   we   have   come   to   an   estimation   that   there   are   about   160   million   users   of   Gmail   in   United   States.   Okay?  
+**Interviewer:** Okay.   Yeah.  
+**Candidate:** So   now   I   want   to,   uh,   put   in   the   place   the   fact   that   we   discussed   before,   like   there   is   difference   between   enter-   usage   of   enterprise   users   and   usage   of,   um,   consumer,   like   a   normal-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   person.   Now,   thinking   deeply   about,   like,   how   would   this   segregation   go?   Like   not...   It   wouldn't   be   50/50.   Like   out   of   160   million,   I   wouldn't   expect   like   50%   of   those   are   enterprise   users   because   obviously   enterprise   people,   uh,   are   basically   people   who   are   working   for   a   company   or   a   firm   or   an   organization   which   uses   Gmail   service   as   their   emailing   service.   So   that   would   be   much   less.   Um,   similar   to   the   fact,   uh,   for   example,   there   might   be   10,000   per-   um,   90,000   people   working   at   Google,   but   number   of   people   who   use   Google   products   are   a   lot   more.  
+**Interviewer:** (laughs)   Yeah.  
+**Candidate:** So   given...   With   the   same   assumption,   uh,   based   on   that   calculated   risk,   I   would   say   about......   15%   of   our   current,   um,   figure   would   be   enterprise   user   and   rest,   85%,   would   be   consumers.   So-  
+**Interviewer:** Okay.  
+**Candidate:** ...   that's   like   a   assumption   I'm   making.   Um,   feel   free   to   chime   in   if   you   think,   uh,   this   might   be   wrong   or   maybe   some   others'   s-   assumption   might   be   better   to   go   ahead   with.  
+**Interviewer:** Yeah,   I   mean,   I,   I,   I   don't   know   that   split   off   the   top   of   my   head.   I   agree   with   your   sort   of   high-level   logic   that,   you   know,   the,   the   w-   you   know,   percentage   that   are   enterprise   users   is   gonna   be   a   lot   less.   So,   I   think,   you   know,   I'm   not   gonna   argue   with   the   particular   number   you   picked   there,   so   let's   go   with   that.  
+**Candidate:** Okay.   So,   um,   just   reiterating   again,   we   have   two   segments   here.   Segment   one   is   enterprise   user,   which   is   15%   of   160   mil-   million.  
+**Interviewer:** Okay.  
+**Candidate:** And   segment   two   is,   uh,   the   normal   consumer,   which   is   85%   of   160   million.  
+**Interviewer:** Got   it.   Okay.  
+**Candidate:** So,   putting   that   into   reference,   the   85%   would   be   basically   136   million   people.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** And   the   other   would   be,   uh,   24   million.  
+**Interviewer:** Yep.   I'm   with   you   there.  
+**Candidate:** Okay.   So   now,   we   have   these   two   different   figures   and   now,   uh,   we   have   to   look   into   that   if   you   have   a   Gmail   ID,   basically   you   can   use   Google   Drive   as   a   service.  
+**Interviewer:** Yeah.  
+**Candidate:** If   you   are   a   consumer,   you   have   a   limited,   uh,   amount   of   storage   of   I   think   20,   25   GB.   And   if   you're   an   enterprise   user,   you   might   have   unlimited   depending   on   your   admin   or,   uh,   your   organization.  
+**Interviewer:** Yeah.  
+**Candidate:** Excuse   me.   So,   one   thing   to   think   here   about   is,   while   I'm   estimating   this,   not   every   user   uses   Google   Drive.   Like,   just   imagine,   like,   if   there   is   a,   a   law   firm   using   Google   as,   like,   their   main   emailing   service,   maybe,   like,   even   the   janitor   might   have   a   Gmail   account,   but   he   might   just   be   using   for,   like,   looking   at   his   appointments   or   email   or   where   does   he   have   to   go   to   work   next,   but   may   not   be   using   Google   Drive-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   or,   like,   Google   Docs   in   any   way.  
+**Interviewer:** Yeah,   I   think   that's  
+**Candidate:** right.  
+**Candidate:** ...   how   I   think   we   have   to   take   into   account   some   amount,   some   percentage   of   depreciation.   That   out   of   these   many   users   of   Gmail,   how   many   can   we   estimate,   uh,   would   actually   use   Google   Drive?  
+**Interviewer:** Yeah.  
+**Candidate:** And   then-  
+**Interviewer:** Right.  
+**Candidate:** ...   we'll   move   into   Google   Docs.   So,   I   know   this   might   be   a   lengthy   process,   but   I   think   it's   a   good   estimate   to   make.  
+**Interviewer:** Yeah.  
+**Candidate:** So,   out   of   our   current   assumption,   I   would   estimate,   um,   for   the   enterprise   users   that   out   of   24   million   that   we   have,   abo-   ballpark   of   around   70%   would   use   G-   uh,   Google   Drive   on   a-  
+**Interviewer:** Okay.  
+**Candidate:** ...   weekly   basis.   So   here   again,   I'm   just   making   an   assumption   of   weekly   basis   and   not   daily   basis.  
+**Interviewer:** Okay,   so   70%   weekly.   Got   it.  
+**Candidate:** Yeah.   So   that   would   be   around,   uh,   16.8.   So   I'll   just   round   it   off   to   17   million.  
+**Interviewer:** Okay.  
+**Candidate:** Now,   moving   on   to   our   second   segment,   which   is   the   consumers.   Here,   it's   very   important   to   know   that   not   all   consumers   use   Google   Drive.   The   fact   that   enterprise   users'、   uh,   percentage   would   be   more   is   because   they   use   Gmail   or   Google   Drive   for   their   work.  
+**Interviewer:** Yeah.  
+**Candidate:** So   there   is   a   good   assumption   there,   uh,   that   these   users   are   people   who   often   use   GSuite,   ex-   spreadsheets,   Google   Docs,   so   their   percentage   would   be   more.   And   again,   to   highlight   here   that   we   did   include,   um,   enterprise   student   accounts.   So   schools   that   might   be   using,   uh,   Google   as   a   mail   service,   but   again,   the   segment   two   might   have   a   duplicated   account.   Like   they   might   have   a   school   account   in   Outlook,   but   they   might   have   a   personal   Gmail   account.  
+**Interviewer:** Yeah.  
+**Candidate:** So...   But   the   fact   here   is   that   lot   many   consumers   wouldn't   use   Google   Drive   every   day,   so   that   percentage   would   be   less   than   enterprise.  
+**Interviewer:** Yeah.  
+**Candidate:** For   enterprise,   we   went   ahead   with   an   estimation   of   70%.   With   normal   consumer,   I   would   go   ahead   with   an   estimate   of   about   35   to   40%   and-  
+**Interviewer:** Okay.  
+**Candidate:** ...   the   reason   being   many   people   just   use   Gmail   as   a   service   and-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   not   use   Google   Drive.  
+**Interviewer:** Yeah,   I   agree   with   that.   I   think   that   seems   fair.   So   which-  
+**Candidate:** Okay.  
+**Interviewer:** ...   number   do   you   wanna   do?   Are   you   using   35   or   40%?  
+**Candidate:** I   would   go   ahead   and   do   35.   Um-  
+**Interviewer:** 35%.  
+**Candidate:** But   I   can   be   wrong,   but   just   to   go   ahead   with   this   consideration,   I   would   take   35%,   so   that   takes   us   to   around   47.6   million.   Uh,   for   the   ease   of   calculation,   I'll   round   it   off   to   48.  
+**Interviewer:** Okay.   And   this   is   35%   weekly,   correct?  
+**Candidate:** Yeah,   weekly.  
+**Interviewer:** Okay.  
+**Candidate:** So   both   figures,   um,   for   segment   one,   uh,   enterprise   is   17   million   Google   Drive   users   weekly.  
+**Interviewer:** Got   it.   Okay.  
+**Candidate:** And   for   segment   two,   it's   48   million   Google   Drive   users   weekly.  
+**Interviewer:** Okay.   Cool.  
+**Candidate:** That   is   our   estimate.   Now,   um,   the   important   part   here   is,   like,   how   many   of   these   users   actually   use   Google   Docs   as   a   service.   So   I   think   it's,   uh,   very   difficult   to   estimate,   um,   the   distribution   uniformly,   like   at   any   given   day,   40%   of   people   would   use   it.   So   that's   pretty   difficult   to   estimate.   But,   uh,   something   that   might   be,   uh,   easier   to   kind   of   stat-   statistically   think   about   this   is   the   concept   of   uniform   distribution-  
+**Interviewer:** Okay.  
+**Candidate:** ...   or   bell   curve.  
+**Interviewer:** Okay.  
+**Candidate:** So   according   to   uniform   distribution,   I   think,   uh,   you   have   to   take...   If,   um,   you   don't   mind,   I   might   want   to   look   up   uniform   distribution,   because   it   has   like,   um,   certain   number   associated   to   it,   but   it   is   something   that   is   applicable   when   you   are   in   a   situation   where   you're   not   sure   what   would   be   the   behavior   of,   uh,   the   given   data.  
+**Interviewer:** Okay.
+**Candidate:** So,   um,   if   I   quickly   look   up   uniform   distribution...   Okay.   So,   um,   so   there   was   a   small   mistake   by   me.   Uh,   what   I   meant   was   normal   distribution   and   not   uniform   distribution.  
+**Interviewer:** (laughs)   Okay,   got   it.  
+**Candidate:** Because,   uh,   uniform   distribution   is   what   is   something   that   may   not   work   here.   Um,   is   that   correct,   uh,   to   kind   of   follow   up   or   do   you   think   that   may   not   be   required   here?  
+**Interviewer:** Um,   so   I-   I'm   definitely   familiar   with   normal   distributions   and   thinking   about   those   type   of   bell   curves   and   I   agree   that,   you   know,   s-   there's   gonna   be   a   distribution   of   how   these   different   users   use   Drive.   Um,   so,   you   know,   trying   to   apply   that,   uh,   that   level   of   detail   might   not   be   necessary   here,   so   some   sort   of   proxy   could   be   fine.   Um,   I'm   okay   with   that.   And   I   think,   you   know,   right   now   where   we   are   as   you   said,   right,   we   have   17   million,   uh,   weekly   users   of...   is   it   Drive?   Was   that   Drive   or   Google   Doc   specific?  
+**Candidate:** That   is   Google   Drive.  
+**Interviewer:** Google   Dr-   Okay.   So   17   million   users   who   use   Google   Drive   in   the   enterprise   and   48   million   consumers-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   that   use   Drive   on   a   weekly   basis.  
+**Candidate:** Yes.  
+**Interviewer:** Okay,   cool.  
+**Candidate:** Okay.   So,   um,   if   we   think   about   Google   Drive,   what   are   different   functions   that   we   can   do   in   Google   Drive?   So,   four   of   them,   which   are   the   most   popular   one,   is   create   a   Google   doc-  
+**Interviewer:** Okay.  
+**Candidate:** ...   create   a   spreadsheet,   create   a   PowerPoint,   or,   um,   maybe   use   it   to   store   some   files   or   folders.  
+**Interviewer:** Okay.  
+**Candidate:** So   thinking   about   both   different   kind   of   users   we   have,   I   think,   uh,   number   one   use   that   Google   Drive   users   do,   is   use   Google   Drive   to   store   their   documents   on   the   cloud.   Like,   I   might   have   some   folder,   I   just   create   that   and   save   it   there.   And   or   almost   equal   to   that   is   creating   a   document   in   G   Suite   and   storing   it   there.  
+**Interviewer:** Okay.  
+**Candidate:** So   it   might   be   a   collaborative   Google   Doc   or   spreadsheet   or   PowerPoint.  
+**Interviewer:** Okay.  
+**Candidate:** Now,   thinking   about   these   three   users,   I   think,   um,   going   with   like   user's   perspective   and   considering   myself   as   a   user-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   I   think   the   most   often   that   we   use   is   a   Google   Doc   or   the   spreadsheet.  
+**Interviewer:** Yeah.  
+**Candidate:** The   reason   we   use   Google   Doc   is   simply   because   it's   collaborative,   much   like   others,   but   compared   to   when   would   you   require   a   PowerPoint?   It   is   basically   when   you   have   to   show   a   slide   deck   or   something   like   that.   When   would   you   require   a   spreadsheet?   It   is   to   kind   of   store   a   lot   of   numbers   or   something   like   that.   But   Google   Doc   is   something   that   y-   you   can   use   for   notes,   you   can   just   use   for   anything   personal.  
+**Interviewer:** Yeah.  
+**Candidate:** So,   pointing   out   these   four   things   that   I   mentioned,   storing   things,   Google   Doc,   uh,   slides   and   sheets,   here   I   would   apply   the   normal   distribution,   which   I   was   talking   about,   which   is   like,   uh,   divided   into   percentages,   that   is   68,   95   and   99.7.  
+**Interviewer:** Okay.  
+**Candidate:** So   out   of   this,   I   would   go   ahead   with   68%   probability   that   people   who   use   Google   Drive   would   u-   use   Google   Docs.  
+**Interviewer:** Okay.  
+**Candidate:** So   rounding   off   that   68   to   70%   for   ease   of   calculation,   I   would   just   apply   that   number   to   the   user   base   we   have.   So   multiplying,   uh,   each   of   the   numbers   we   have   by   0.7.  
+**Interviewer:** Okay.  
+**Candidate:** So   that   comes   to   17   million   into   0.7   and   40...   that   is   around   12   million,   and   our   other   figure,   which   is   48   million   into   0.7   is   around   45.5   million.  
+**Interviewer:** Okay.   I   got   the   same   number.   Sounds   good.  
+**Candidate:** Yep.   So   these   are   weekly   active   users-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   who   might   use   Google   Doc   on   a   weekly   basis.  
+**Interviewer:** Yep.  
+**Candidate:** Now   obviously,   using   a   Google   Doc   is   very   different   than   creating   a   Google   Doc.  
+**Interviewer:** Yeah.  
+**Candidate:** And,   um,   so   here   I   would   take   a   pause   and   use   another   approximation   to   narrow   it   down,   like   how   many   times   people   might   create   a,   a   Google   Doc   rather   than   use   it.  
+**Interviewer:** Okay.  
+**Candidate:** So   I   would   say   that   approximation   I   would   like   to   take   is   30/70%.   That   30%   of   the   times   I   might   create   a   new   doc   and   70%   of   the   time   is   I   might   reuse   something   that   is   already   there.  
+**Interviewer:** Okay.  
+**Candidate:** Which   I   think   is   a   fair   approximation   because   we   often   just   write   in   the   documents   that   we   have-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   and   compared   to   that,   create   a   new   one   rather   simply   is,   uh,   less   number   of   times.  
+**Interviewer:** Sure.   Yeah.   I,   I   think   that   seems   reasonable.   I   can   see   30   or,   you   know,   20%   even,   10%.   Any   of   those   I   think   seem   like   a   fair   assumption.  
+**Candidate:** Yep.   So   going   ahead   with   the   same   calculation   and   same   numbers,   for   segment   one   we   would   have   around   36.-   uh,   3.6   million   and   for   segment   two   we   would   go   ahead   and   have   around   13.5   million.   So-  
+**Interviewer:** Got   it.   This   is,   this   is   using   30%?  
+**Candidate:** Yeah,   using   30%.  
+**Interviewer:** Right.   Right.  
+**Candidate:** Now,   um,   there   is   another   segue   here   that,   um,   we   went   ahead   and   did   weekly   account.  
+**Interviewer:** Yeah.  
+**Candidate:** So   these   are   weekly   numbers.   Now   we   want   to   do   it,   um,   kind   of   daily.   So   the   reason   why   I   didn't   add   up,   uh,   both   segments   from   the   start,   uh,   like   last   two,   three   steps   we   are   multiplying   it   by   the   same   numbers,   is   because   for   weekly   users,   enterprise   users   week   is   five.
+**Interviewer:** Ah,   okay.  
+**Candidate:** ...   and   sub-consumers   week   might   be   five,   might   be   six,   might   be   seven.   So   for   enterprise   users,   I'll   just   divide   3.6   by   5.  
+**Interviewer:** Okay.  
+**Candidate:** So   doing   that,   it   would   give   me   around,   uh,   0.72   million   per   day.  
+**Interviewer:** Okay.  
+**Candidate:** And   for,   um,   um,   segment   2,   I   would,   uh,   go   ahead   and   create   divide   by   six,   just   for   the   ease   of   calculation   because   you   often   work   on   weekends   as   well,   sometimes   as   like   a   normal   user   or   student,   but   obviously   you   cannot   assume   like   all   days   of   the   week   you   work.  
+**Interviewer:** (laughs)  
+**Candidate:** So   here   I   would   divide   the,   uh,   amount   by   six.  
+**Interviewer:** Okay.  
+**Candidate:** So   that   would   give,   um,   13   point...   Sorry.   13.5   divide   by   6,   so   that   is   2.25.   And   then   if   we   just   go   ahead   and   add   both   of   our   numbers,   that   would   give   us   around   2.97,   and   to   approximately   go   ahead   I   would   say   the   answer   of   the   question   it   might   be   around   three   million   Google   Doc   documents   created   every   day.  
+**Interviewer:** Okay.   Awesome.   So,   three   million   Google   Docs   created   every   day   in   the   United   States   of   America.   Does   that   sound...   How   do   you   feel   about   that   estimate?   Does   that   feel   good?   How   would   you...   And   like   how   would   you   maybe   sanity   check   it   or   gut   check   it?  
+**Candidate:** So,   I   think   if   I   have   to   go   ahead   and   do   a   gut   check   for   this   number,   um,   I   think   it   might   be   a   little   less   than   the   actual   number.  
+**Interviewer:** Hmm.  
+**Candidate:** And   if   I   have   to   go   where   my   calculation   went   wrong,   I   think,   uh,   it   might   have   been   somewhere   in   the   conversion   of,   um,   how   many   people   use   Google   Drive   to   Google   Docs   and   how   many   people   use,   uh,   have   Gmail   account   to   Google   Drive.  
+**Interviewer:** Got   it.   Okay.  
+**Candidate:** Because   that's   I   think   a   complex   calculation   and   based   a   lot   on   probability,   statistics   and   behavior   psychology,   so   that's-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   kind   of   difficult   to   estimate.  
+**Interviewer:** Yep.   I   agree.   It's   definitely   a   difficult   estimate.   I   mean,   I   think   three   million   per   day   seems   certainly   like   right   order   of   magnitude   to   me,   I   mean,   I   don't   know   these   numbers,   they're   s-   they're   private   to   Google   obviously,   but   if   you   think   about   it   you're   saying   a   little   less   than,   uh,   1%   of   all   Americans   are   creating   a   Google   Doc   every   day.   You   know?   Doesn't   sound   crazy.   Um,   seems   like   it's   in   the   right   ballpark,   so   good   work.  
+**Candidate:** Okay.

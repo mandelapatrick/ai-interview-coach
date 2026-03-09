@@ -1,0 +1,71 @@
+Problem: Explain cloud computing
+Problem Type: Technical
+Firm: Microsoft
+Channel: RocketBlocks
+URL: https://www.youtube.com/watch?v=l1LYyNm15gA
+============================================================
+
+**Interviewer:** Hi,   everyone.   Kenton   from   the   RocketBlocks   team   here.   In   this   mock   interview   video,   we're   sitting   down   with   Ankur   Biswas,   who   is   a   product   manager   at   Microsoft   focusing   on   their   Azure   cloud   computing   group.   And   in   this   particular   mock   interview   video,   we're   gonna   ask   Ankur   to   explain   the   concept   of   cloud   computing   to   someone   non-technical   like   his   grandfather   or   his   grandmother.   So   let's   go   ahead   and   see   how   Ankur   handles   this.   Okay.   So,   uh,   let's   imagine   that   you   are   a,   um,   product   manager,   uh,   you   work   at   Microsoft   and   you   need   to   explain,   uh,   cloud   computing   to   someone   that's   got   no   familiarity   with   the   space,   like   explaining   it   to   your   grandfather   or   your   grandmother.   How   would   you   explain   what   cloud   computing   is   to   them?  
+**Candidate:** That's,   that's   interesting.   Uh,   I'm   gonna   go   off   of   the   assumption   here   that   the,   the   audience   I'm   speaking   to   is,   is   not   technical,   but,   but   fairly   familiar   with   kind   of   how   the   world   works   in   general   because   I   generally   tend   to   explain   with   examples   and   analogies.   Uh,   so   if   I'm   swaying   off   and,   and   you   don't   understand   it   and   you're   in   that   persona,   just   let   me   know   and   I   can   go   into   more   detail.  
+**Interviewer:** Okay.   So,   uh,   I'll   pretend   that   I'm,   I'm   your   grandfather-  
+**Candidate:** Awesome.  
+**Interviewer:** ...   and   what   I'll   say   is   that,   uh,   I'm   fairl-   I'm   familiar   with   how   the   world   works.   I   have   like   a,   a   Gmail   account   that   I,   that   I   use-  
+**Candidate:** Sure.  
+**Interviewer:** ...   to   communicate   with   you-  
+**Candidate:** Mm-hmm.  
+**Interviewer:** ...   and   s-   and,   you   know,   other   family   members   and,   um,   yeah,   but   I,   I,   I   didn't   c-   I'm   not   an   engineer   by   trade.  
+**Candidate:** Awesome.  
+**Interviewer:** I'm   not   a   computer   science   person.  
+**Candidate:** Okay.   That,   that,   that   absolutely   makes   sense.   Uh,   so   if   I   were   to   focus   on   cloud   computing,   there's   many   different   parts   of   it   and   I'll   try   and   explain   and   break   down   the   crux   of   the   service   and   what's   in   it   for,   for   people   and,   and   why   it   is   so   popular   because-  
+**Interviewer:** Okay.  
+**Candidate:** ...   that's   kind   of   the   big   questions   in,   in   people's   mind.   Very   simply   defined   at   a   very,   very   high   level,   cloud   computing   or   cloud   infrastructure   is   a   very   wide   network   of   services,   tools,   and   infrastructure   that   makes   it   easy   for   a   customer   at   the   end   of   the   day   to   run   their   business   or   be   productive   or   do   what   they   want.   Now,   there's   many,   many,   many   things   that   I   just   said   which,   which   may   not-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   not   altogether   make   sense.   But   ideally,   it's   a,   it's   a...   you   can   think   about   it   as   a   black   box   that   makes   it   easier   for   businesses   and   people   to   do   what   they   want   to   do.   And   let's,   let's   go   into   that   a   little   bit.  
+**Interviewer:** Yeah.  
+**Candidate:** As   an   example,   I'm,   I'm   fairly   familiar   that...   um,   I,   I   know   most   people   are   fairly   familiar   and   you   should   be   too   with   just   money   and,   and   how   you   behave   with   money.   Uh-  
+**Interviewer:** Yeah.  
+**Candidate:** ...   you,   you   have   money   that   you've   earned   through   your   job   or   you've   go-   acquired   through   other   ways.   What   you   basically   want   with,   with   that   money   is   easy   access   to   it   and   you   want   to   be   able   to   spend   that   money   on   whatever   services   you   want   whenever   you   want   to,   w-   want   to   spend   it.   You   don't   necessarily   want   to   think   about   the   security   guards   you   need   to   hire   to   protect   it.   You   don't   necessarily   want   to,   uh,   really   be   concerned   that   a   moth   may   eat   it   while   you   store   it   under   your   bed.   Uh,   you   want   to   know   that   it's,   that   it's   safe   and   secure   somewhere.   Uh,   rights,   things   like   that.   That's   where   the   services   of   a   bank   comes   in.   A   bank   helps   keep   that   money   safe   for   you.   The   bank   holds   it   on   your   behalf   and   through   things   like   ATMs,   debit   cards,   credit   cards,   et   cetera,   makes   it   very   easy   for   you   to   access   that   money   and   spend   that   money   and   you   know   that   that   money   is   rightfully   yours,   it's   not   going   to   go   to   anyone   else.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Cloud   computing   fol-   follows   a   very,   very   similar   concept,   but   for   computing   services   essentially.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Computers,   databases,   security,   firewalls,   thing-   things   like   that.   So   anything   that,   that   a   computer   would   need   to   be   really,   really   productive.   Let's,   let's...   Yeah.   Go   ahead.   You   have,   you   have   a   question?  
+**Interviewer:** Yeah.   So   you're   saying   like,   I   could   have   a   computer   and   use   it,   but   it,   it   would   be   in   some   sort   of   computing   bank?  
+**Candidate:** Very,   very   similar   to   that.   And,   and   I   can,   I   can   give   you   an   example   of   the   ad-   advantages   as   well.  
+**Interviewer:** Okay.  
+**Candidate:** Uh,   it's,   it's   the   way   for   you   to,   to   maybe   rent   out   a   computer   from   someone   else   and   use   it   like   it   was   your   own,   but   not   have   to   worry   about   where   it...   o-   about   it   breaking   down.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** You   wouldn't   have   to   worry   about   updating   it   with   the   latest   software.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** Uh,   you   wouldn't   necessarily   have   to   worry,   uh,   about,   um,   how   much...   or   how   much   you're   using   it   at   one   point   in   time   which   is   especially   relevant   for   businesses.   So-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** And   that's   where   the   majority   of   cloud   computing   money   comes   from.   Uh,   so   let's   take   another   example.   Let's,   let's   think   about   airlines.  
+**Interviewer:** Okay.  
+**Candidate:** You,   you   are,   uh,   familiar   with   American   Airlines,   um,   I'm   sure.  
+**Interviewer:** Yeah.  
+**Candidate:** Which   is   a   huge   kind   of   airline   company.   Now   as   American   Airlines,   your   specialty   and   what   you're   really   good   at   is   flying   planes   and   providing   kind   of   transportation   services   for   people.   You   may   not   necessarily   have   the   most   qualified   software   engineers.   You   may   not   want   to   necessarily   spend,   uh,   the   amount   of   money   it   takes   to   get   software   engineers   from   Google   or   from   Facebook   or   from   Microsoft   onto   your   team   to   control   your   computers.  
+**Interviewer:** Okay.  
+**Candidate:** That's   one   thing.   The   other   thing   is   that   you   may   have   seasonal   trends   in,   in   people   consuming   your   services,   right?   So   let's   say,   uh,   in   November   and   December,   Thanksgiving   and   Christmas   period   in   America,   there's   a   huge   number   of   travelers   who   want   to   go   home   to   visit   their   families.  
+**Interviewer:** Mm-hmm.   Yeah.  
+**Candidate:** And   you   need,   let's   say,   when   people   are   booking   tickets   online,   50,000   computers   to   serve   the   needs   of,   of   this   many   travelers.  
+**Interviewer:** Okay.  
+**Candidate:** Um,   however,   in   the   month   of   March   when   there's   final   exams   going   on,   those   same   students   aren't   traveling   to   visit   home,   visit,   visit   their   families,   so   maybe   you   just   need   10,000   computers   to   service   the   entire   demand   of   American   Airlines   across   the   US   at,   at   that   time.   In,   in   the   world   in   which   you   are   responsible   for   all   of   those   computers,   you   have   to   buy   50,000   computers   and   maintain   all   50,000   of   them   through   the   entire   year   only   for   that   two-week   or   one-month   period   when,   when   all   50,000   computers-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   are   actually   in   use.   What   cloud   computing   does   is   that   it   allows   you   to,   to   give   away   that   part   or   that   burden......   to   another   company,   like-  
+**Interviewer:** Mm-hmm.  
+**Candidate:** ...   Amazon   or   Microsoft.   So   in   this   case,   Microsoft   owns   100,000   computers   or   a   million   computers   because   that's   the   business   that   they're   in.   They   rent   out   50,000   of   them   to   you   over   the   month   Nov-   November   and   December   when   you   really   need   them   and   in   January,   they   flip   a   switch   and   you're   only   using   10,000   computers.   What   that   means   is   over   the   two-month   period   when   you   have   lots   of   traffic,   you're   paying   f-   rent   for   50,000   computers,   but   over   the   rest   of   the   10   months,   you're   paying   for   a   lot   less.  
+**Interviewer:** Mm-hmm.  
+**Candidate:** So   it's,   it's   much   better   for   your   bottom   line.   You   don't   have   to   buy   and   maintain   50,000   computers.   The   other   thing   is   Microsoft   does   have   the   best   software   engineers   in   the   world.   They   have   the   best   security   specialists   in   the   world   because   that's   the   business   that   they're   in.   You   can,   kind   of,   offshore   that   responsibility   of   maintaining   that   IT   or   computer   infrastructure   to   Microsoft   and   you   can   pay   them   for   it,   or   maybe   they'll   give   it   to   you   for   free   if   you,   if   you-  
+**Interviewer:** Hmm.  
+**Candidate:** ...   rent   enough   computers,   for   example.   You   don't   have   to   worry   about   hiring   the   talent,   you   don't   have   to   worry   about   paying   the   talent,   all   you   have   to   worry   about   is   hiring   the   best,   uh,   pilots,   buying   the   best   planes,   spending   the   most   amount   of   time   making   the   journey   comfortable   for   your   customers,   what   you   want   to   do   and   where   your   money   comes   from.  
+**Interviewer:** Mm.   Okay.   Th-   th-   that's-  
+**Candidate:** So   that's,   that's   the   beauty   of   cloud   computing   to   the   business   as   well   as   to,   to   cloud   providers   themselves.  
+**Interviewer:** Okay.   That,   m-   that   makes   sense.   You   know,   I'm   not   a,   not   a   computer   science   major,   but   I   was   an   economics   major-  
+**Candidate:** (laughs)  
+**Interviewer:** ...   and   it   sounds   like   you're   talking   about,   like,   a   comparative   advantage   here   is-  
+**Candidate:** Yeah.  
+**Interviewer:** ...   Microsoft   sets   us   up   and   I   can   use   their   computing   power-  
+**Candidate:** Correct.  
+**Interviewer:** ...   wi-   without   having   to   have   my   own   computers   for   my   business.  
+**Candidate:** Yeah.   There's,   there's   that   and   also   allowing   you   to   free   up   the   opportunity   cost   of   having   to   spend   money   and   resources   doing   something   which   you   may   not   want   to   do   or   may   not   necessarily   be   very   good   at.   So   that's   another   huge   advantage   of,   of,   of   that   too.   And   also   being   able   to   scale   your   business,   so   next   year   if,   if   your   company   does   really   well   and   you   need   100,000   computers,   you   can   just   rent   an   additional   50,000   from   Microsoft   instead   of   buying   another   50,000,   uh,   that,   that   may   save   you   money   on   the   long   term.   Uh,   so   that's   another   big   advantage   of,   of   being   in   the,   in   the   cloud   space   as,   as   well.  
+**Interviewer:** Got   it.   Sounds   convenient.   I   like   it.  
+**Candidate:** All   right.   Yeah.   Cool.   Thank   you.
