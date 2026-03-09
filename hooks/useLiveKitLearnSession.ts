@@ -70,6 +70,7 @@ export function useLiveKitLearnSession(
   const agentTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const transcriptRef = useRef<TranscriptEntry[]>([]);
   const audioTracksRef = useRef<Map<string, RemoteTrack>>(new Map());
+  const currentSpeakerRef = useRef<"interviewer" | "candidate" | null>(null);
 
   // Track which participants map to which role
   // The agent publishes two avatar participants; we identify them by their identity/metadata
@@ -109,6 +110,7 @@ export function useLiveKitLearnSession(
   }, []);
 
   const updateSpeaker = useCallback((speaker: "interviewer" | "candidate" | null) => {
+    currentSpeakerRef.current = speaker;
     setCurrentSpeaker(speaker);
     onSpeakerChangeRef.current?.(speaker);
 
@@ -298,7 +300,9 @@ export function useLiveKitLearnSession(
         room.on(RoomEvent.TranscriptionReceived, (segments, participant) => {
           if (!participant || participant.isLocal) return;
 
-          const role = participantRoleMap.current.get(participant.identity);
+          const role = currentSpeakerRef.current
+            || participantRoleMap.current.get(participant.identity)
+            || getParticipantRole(participant as RemoteParticipant);
           if (!role) return;
 
           // Get or create segment map for this participant
