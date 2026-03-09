@@ -12,10 +12,13 @@ const DIFFICULTY_COLORS_DARK: Record<string, string> = {
 
 export default async function LearnPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ questionId: string }>;
+  searchParams: Promise<{ company?: string; type?: string; style?: string }>;
 }) {
   const { questionId } = await params;
+  const { company, type, style } = await searchParams;
   const question = getQuestionById(questionId);
 
   if (!question) {
@@ -26,11 +29,19 @@ export default async function LearnPage({
     );
   }
 
-  const company = getCompanyBySlug(question.companySlug);
+  const companyData = getCompanyBySlug(question.companySlug);
   const isPM = question.track === "product-management";
   const typeLabel = isPM
     ? PM_QUESTION_TYPE_LABELS[question.type as PMQuestionType]
     : QUESTION_TYPE_LABELS[question.type as keyof typeof QUESTION_TYPE_LABELS];
+
+  // Build back URL preserving filter params
+  const backParams = new URLSearchParams();
+  backParams.set("track", question.track);
+  if (company) backParams.set("company", company);
+  if (type) backParams.set("type", type);
+  if (style) backParams.set("style", style);
+  const backUrl = `/dashboard/questions?${backParams.toString()}`;
 
   return (
     <div className="h-screen bg-gray-50 text-gray-900 flex flex-col overflow-hidden">
@@ -39,7 +50,7 @@ export default async function LearnPage({
         <div className="max-w-6xl mx-auto px-3 py-2 md:px-4 md:py-3">
           <div className="flex items-center justify-between">
             <Link
-              href={`/dashboard/questions?track=${question.track}`}
+              href={backUrl}
               className="text-sm text-[#d4af37] hover:text-[#f4d03f] transition-colors"
             >
               <span className="hidden sm:inline">← Back to Question Bank</span>

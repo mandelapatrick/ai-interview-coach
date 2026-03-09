@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useCallback } from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import { questions as consultingQuestions } from "@/data/questions";
 import { pmQuestions } from "@/data/pm-questions";
 import { companies, pmCompanies } from "@/data/companies";
@@ -30,15 +30,29 @@ const pmTypes = (Object.keys(PM_QUESTION_TYPE_LABELS) as PMQuestionType[]).filte
 
 export default function QuestionBankPage() {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const trackFromUrl = searchParams.get("track") as InterviewTrack | null;
 
   const [search, setSearch] = useState("");
-  const [companyFilter, setCompanyFilter] = useState<string>("all");
-  const [typeFilter, setTypeFilter] = useState<string>("all");
-  const [styleFilter, setStyleFilter] = useState<string>("all");
+
+  // Read filters from URL search params
+  const companyFilter = searchParams.get("company") || "all";
+  const typeFilter = searchParams.get("type") || "all";
+  const styleFilter = searchParams.get("style") || "all";
 
   // Track is determined by URL param
   const trackFilter = trackFromUrl || "product-management";
+
+  // Update URL on filter change
+  const updateFilter = useCallback((key: string, value: string) => {
+    const params = new URLSearchParams(searchParams.toString());
+    if (value === "all") {
+      params.delete(key);
+    } else {
+      params.set(key, value);
+    }
+    router.replace(`/dashboard/questions?${params.toString()}`, { scroll: false });
+  }, [searchParams, router]);
 
   // Get page title based on track
   const pageTitle = trackFilter === "consulting"
@@ -130,11 +144,24 @@ export default function QuestionBankPage() {
     return company?.logoUrl || null;
   };
 
+  const buildFilterQuery = useCallback(() => {
+    const params = new URLSearchParams();
+    if (companyFilter !== "all") params.set("company", companyFilter);
+    if (typeFilter !== "all") params.set("type", typeFilter);
+    if (styleFilter !== "all") params.set("style", styleFilter);
+    return params.toString();
+  }, [companyFilter, typeFilter, styleFilter]);
+
+  const buildQuestionLink = useCallback((base: string, questionId: string) => {
+    const qs = buildFilterQuery();
+    return qs ? `${base}/${questionId}?${qs}` : `${base}/${questionId}`;
+  }, [buildFilterQuery]);
+
   const getPracticeLink = (question: Question) => {
     if (question.track === "product-management") {
-      return `/learn/${question.id}`;
+      return buildQuestionLink("/learn", question.id);
     }
-    return `/practice/${question.id}`;
+    return buildQuestionLink("/practice", question.id);
   };
 
   return (
@@ -180,7 +207,7 @@ export default function QuestionBankPage() {
             <label className="block text-sm text-gray-600 mb-1.5">Company</label>
             <select
               value={companyFilter}
-              onChange={(e) => setCompanyFilter(e.target.value)}
+              onChange={(e) => updateFilter("company", e.target.value)}
               className="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-gray-900 focus:outline-none focus:border-[#d4af37]/50 appearance-none cursor-pointer"
             >
               <option value="all">All Companies</option>
@@ -197,7 +224,7 @@ export default function QuestionBankPage() {
             <label className="block text-sm text-gray-600 mb-1.5">Question Type</label>
             <select
               value={typeFilter}
-              onChange={(e) => setTypeFilter(e.target.value)}
+              onChange={(e) => updateFilter("type", e.target.value)}
               className="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-gray-900 focus:outline-none focus:border-[#d4af37]/50 appearance-none cursor-pointer"
             >
               <option value="all">All Types</option>
@@ -215,7 +242,7 @@ export default function QuestionBankPage() {
               <label className="block text-sm text-gray-600 mb-1.5">Interview Style</label>
               <select
                 value={styleFilter}
-                onChange={(e) => setStyleFilter(e.target.value)}
+                onChange={(e) => updateFilter("style", e.target.value)}
                 className="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-gray-900 focus:outline-none focus:border-[#d4af37]/50 appearance-none cursor-pointer"
               >
                 <option value="all">All Styles</option>
@@ -301,13 +328,13 @@ export default function QuestionBankPage() {
                   {/* Practice & Learn Buttons */}
                   <div className="flex flex-row gap-2 sm:flex-col sm:flex-shrink-0">
                     <Link
-                      href={`/practice/${question.id}`}
+                      href={buildQuestionLink("/practice", question.id)}
                       className="flex-1 sm:flex-none px-4 py-2 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-lg font-medium text-sm hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all text-center"
                     >
                       Practice
                     </Link>
                     <Link
-                      href={`/learn/${question.id}`}
+                      href={buildQuestionLink("/learn", question.id)}
                       className="flex-1 sm:flex-none px-4 py-2 border border-[#d4af37] text-[#d4af37] rounded-lg font-medium text-sm hover:bg-[#d4af37]/10 transition-all text-center"
                     >
                       Learn

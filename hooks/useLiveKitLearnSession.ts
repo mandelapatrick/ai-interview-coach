@@ -262,7 +262,7 @@ export function useLiveKitLearnSession(
             } else if (track.kind === Track.Kind.Audio) {
               // Attach audio - LiveKit will handle playback via its own <audio> element
               track.attach();
-              audioTracksRef.current.set(track.sid, track);
+              if (track.sid) audioTracksRef.current.set(track.sid, track);
               console.log(`[LearnLK] Attached audio track from ${role || "unknown"}`);
             }
           }
@@ -270,7 +270,7 @@ export function useLiveKitLearnSession(
 
         room.on(RoomEvent.TrackUnsubscribed, (track: RemoteTrack) => {
           console.log(`[LearnLK] Track unsubscribed: ${track.kind}`);
-          audioTracksRef.current.delete(track.sid);
+          if (track.sid) audioTracksRef.current.delete(track.sid);
         });
 
         room.on(RoomEvent.ParticipantConnected, (participant: RemoteParticipant) => {
