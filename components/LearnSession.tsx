@@ -151,19 +151,10 @@ export default function LearnSession({ question, onEnd, maxDurationSeconds }: Le
               className="w-full h-full object-cover"
             />
             {/* Interviewer Label */}
-            <div className="absolute top-2 left-2 md:top-4 md:left-4 flex items-center gap-2">
-              <div
-                className={`px-2 py-1 md:px-3 md:py-1.5 rounded-lg text-xs md:text-sm font-medium backdrop-blur-sm ${
-                  currentSpeaker === "interviewer"
-                    ? "bg-blue-500 text-white"
-                    : "bg-black/50 text-gray-300"
-                }`}
-              >
+            <div className="absolute top-2 left-2 md:top-4 md:left-4">
+              <div className="px-2 py-1 md:px-3 md:py-1.5 rounded-lg text-xs md:text-sm font-medium backdrop-blur-sm bg-black/50 text-gray-300">
                 Interviewer
               </div>
-              {currentSpeaker === "interviewer" && (
-                <div className="w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full animate-pulse" />
-              )}
             </div>
             {/* Mobile-only timer overlay on first video */}
             <div className="absolute top-2 right-2 md:hidden">
@@ -196,19 +187,10 @@ export default function LearnSession({ question, onEnd, maxDurationSeconds }: Le
               className="w-full h-full object-cover"
             />
             {/* Candidate Label */}
-            <div className="absolute top-2 left-2 md:top-4 md:left-4 flex items-center gap-2">
-              <div
-                className={`px-2 py-1 md:px-3 md:py-1.5 rounded-lg text-xs md:text-sm font-medium backdrop-blur-sm ${
-                  currentSpeaker === "candidate"
-                    ? "bg-violet-500 text-white"
-                    : "bg-black/50 text-gray-300"
-                }`}
-              >
+            <div className="absolute top-2 left-2 md:top-4 md:left-4">
+              <div className="px-2 py-1 md:px-3 md:py-1.5 rounded-lg text-xs md:text-sm font-medium backdrop-blur-sm bg-black/50 text-gray-300">
                 Expert Candidate
               </div>
-              {currentSpeaker === "candidate" && (
-                <div className="w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full animate-pulse" />
-              )}
             </div>
             {/* Loading overlay */}
             {isConnecting && (

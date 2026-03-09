@@ -18,11 +18,11 @@ _preloaded_vad = silero.VAD.load()
 
 # Anam avatar IDs for learn mode (interviewer and candidate)
 INTERVIEWER_AVATAR_ID = "bdaaedfa-00f2-417a-8239-8bb89adec682"
-CANDIDATE_AVATAR_ID = "edf6fdcb-acab-44b8-b974-ded72665ee26"
+CANDIDATE_AVATAR_ID = "c1785d08-9825-4ead-89b3-171d3f667c47"
 
 # ElevenLabs voice IDs
 INTERVIEWER_VOICE_ID = "o0A9ZeHFlYO5UFbSjH7b"
-CANDIDATE_VOICE_ID = "pFZP5JQG7iQjIQuC4Bku"  # Lily
+CANDIDATE_VOICE_ID = "ud0kCO8FgufQlMpW9wg6"
 
 
 async def run_learn_mode(ctx: JobContext, meta: dict):
