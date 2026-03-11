@@ -28,11 +28,13 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { role, referral_source, markComplete } = body;
 
-    // Save onboarding data
+    // Save onboarding data with country from Vercel header
+    const country = request.headers.get("x-vercel-ip-country") || null;
     const result = await saveUserOnboarding({
       user_email: session.user.email,
       role: role || "",
       referral_source,
+      country: country || undefined,
     });
 
     // Optionally mark as complete

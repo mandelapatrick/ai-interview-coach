@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
+import TrackedCTALink from "@/components/TrackedCTALink";
 
 export default async function LandingPage() {
   const session = await auth();
@@ -31,12 +32,13 @@ export default async function LandingPage() {
             <a href="#how-it-works" className="text-sm text-gray-600 hover:text-[#d4af37] transition-colors">How It Works</a>
             <Link href="/pricing" className="text-sm text-gray-600 hover:text-[#d4af37] transition-colors">Pricing</Link>
           </div>
-          <Link
+          <TrackedCTALink
             href="/api/auth/signin"
+            location="nav"
             className="bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white px-5 py-2 rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
           >
             Get Started Free
-          </Link>
+          </TrackedCTALink>
         </div>
       </nav>
 
@@ -67,15 +69,16 @@ export default async function LandingPage() {
 
               {/* Dual CTAs */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Link
+                <TrackedCTALink
                   href="/api/auth/signin"
+                  location="hero"
                   className="inline-flex items-center justify-center bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
                 >
                   Start Practicing Free
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
-                </Link>
+                </TrackedCTALink>
                 <a
                   href="#how-it-works"
                   className="inline-flex items-center justify-center border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold text-lg hover:border-[#d4af37] hover:text-[#d4af37] transition-all"
@@ -379,15 +382,16 @@ export default async function LandingPage() {
               <p className="text-gray-300 mb-8 max-w-lg mx-auto">
                 Join thousands of candidates who improved their case skills with AceInterview. Start practicing today.
               </p>
-              <Link
+              <TrackedCTALink
                 href="/api/auth/signin"
+                location="bottom-cta"
                 className="inline-flex items-center justify-center bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
               >
                 Get Started Free
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-              </Link>
+              </TrackedCTALink>
               <p className="mt-4 text-sm text-gray-400">No credit card required</p>
             </div>
           </div>

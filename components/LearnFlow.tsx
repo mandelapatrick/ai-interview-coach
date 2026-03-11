@@ -5,6 +5,7 @@ import { Question } from "@/types";
 import { useSubscription } from "@/hooks/useSubscription";
 import LearnSession from "./LearnSession";
 import UpgradeModal from "./UpgradeModal";
+import { track } from "@/lib/analytics-client";
 
 type FlowState = "intro" | "watching" | "summary";
 
@@ -27,6 +28,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
       setShowUpgrade(true);
       return;
     }
+    track("learn_start", { question_id: question.id });
     // Record learn usage
     try {
       await fetch("/api/usage/record", {

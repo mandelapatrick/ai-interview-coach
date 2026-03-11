@@ -171,7 +171,8 @@ export async function getUsageThisMonth(
 export async function recordUsage(
   email: string,
   sessionType: "practice" | "learn",
-  questionId?: string
+  questionId?: string,
+  interviewMode?: string
 ): Promise<void> {
   if (!supabase) return;
 
@@ -180,12 +181,15 @@ export async function recordUsage(
     .toISOString()
     .split("T")[0];
 
-  await supabase.from("usage_tracking").insert({
+  const record: Record<string, unknown> = {
     user_email: email,
     session_type: sessionType,
     question_id: questionId || null,
     period_start: periodStart,
-  });
+  };
+  if (interviewMode) record.interview_mode = interviewMode;
+
+  await supabase.from("usage_tracking").insert(record);
 }
 
 export async function canStartSession(

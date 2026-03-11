@@ -71,6 +71,7 @@ export interface DbUsageTracking {
   user_email: string;
   session_type: "practice" | "learn";
   question_id: string | null;
+  interview_mode: string | null;
   period_start: string;
   created_at: string;
 }
@@ -80,9 +81,20 @@ export interface DbUserOnboarding {
   user_email: string;
   role: string;
   referral_source: string | null;
+  country: string | null;
   onboarding_completed: boolean;
   created_at: string;
   updated_at: string;
+}
+
+export interface DbAnalyticsEvent {
+  id: string;
+  user_email: string | null;
+  anonymous_id: string | null;
+  event_name: string;
+  properties: Record<string, unknown>;
+  country: string | null;
+  created_at: string;
 }
 
 export async function getUserOnboarding(email: string): Promise<DbUserOnboarding | null> {
@@ -100,19 +112,19 @@ export async function saveUserOnboarding(data: {
   user_email: string;
   role: string;
   referral_source?: string;
+  country?: string;
 }) {
   if (!supabaseAdmin) return null;
+  const upsertData: Record<string, unknown> = {
+    user_email: data.user_email,
+    role: data.role,
+    referral_source: data.referral_source || null,
+    updated_at: new Date().toISOString(),
+  };
+  if (data.country) upsertData.country = data.country;
   const { data: result, error } = await supabaseAdmin
     .from("user_onboarding")
-    .upsert(
-      {
-        user_email: data.user_email,
-        role: data.role,
-        referral_source: data.referral_source || null,
-        updated_at: new Date().toISOString(),
-      },
-      { onConflict: "user_email" }
-    )
+    .upsert(upsertData, { onConflict: "user_email" })
     .select()
     .single();
   if (error) {

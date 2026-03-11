@@ -9,6 +9,7 @@ import VideoSession from "./VideoSession";
 import VoiceSession from "./VoiceSession";
 import AnamAudioSession from "./AnamAudioSession";
 import UpgradeModal from "./UpgradeModal";
+import { track } from "@/lib/analytics-client";
 
 type FlowState = "mode-select" | "audio" | "audio-livekit" | "video-lobby" | "video-session";
 
@@ -29,6 +30,9 @@ export default function PracticeFlow({ question }: PracticeFlowProps) {
       setShowUpgrade(true);
       return;
     }
+
+    track("mode_select", { mode });
+    track("practice_start", { question_id: question.id });
 
     if (mode === "audio") {
       setFlowState("audio"); // Uses LiveKit agent - default

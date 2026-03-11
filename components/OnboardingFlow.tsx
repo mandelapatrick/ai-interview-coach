@@ -6,6 +6,7 @@ import VideoLobby from "@/components/VideoLobby";
 import VideoSession from "@/components/VideoSession";
 import { getQuestionById } from "@/data/questions";
 import type { AvatarProvider } from "@/components/VideoLobby";
+import { track } from "@/lib/analytics-client";
 
 type OnboardingStep = "role-selection" | "referral-source" | "ready-to-practice" | "interview";
 
@@ -50,6 +51,7 @@ export default function OnboardingFlow() {
   const question = getQuestionById(questionId);
 
   const handleReferralNext = async () => {
+    track("onboarding_step", { step: "referral" });
     setIsSaving(true);
     try {
       await fetch("/api/onboarding", {
@@ -65,9 +67,11 @@ export default function OnboardingFlow() {
     }
     setIsSaving(false);
     setStep("ready-to-practice");
+    track("onboarding_step", { step: "lobby" });
   };
 
   const handleJoinNow = async (stream: MediaStream, provider: AvatarProvider) => {
+    track("onboarding_practice_decision", { choice: "join_now" });
     setUserStream(stream);
     setAvatarProvider(provider);
 
@@ -90,6 +94,7 @@ export default function OnboardingFlow() {
   };
 
   const handleJoinLater = async () => {
+    track("onboarding_practice_decision", { choice: "join_later" });
     try {
       await fetch("/api/onboarding", {
         method: "POST",
@@ -184,7 +189,10 @@ export default function OnboardingFlow() {
             </div>
 
             <button
-              onClick={() => setStep("referral-source")}
+              onClick={() => {
+                track("onboarding_step", { step: "role" });
+                setStep("referral-source");
+              }}
               disabled={!selectedRole}
               className="w-full max-w-xs mx-auto px-8 py-3 bg-[#d4af37] hover:bg-[#c4a030] text-white rounded-full font-medium transition-all disabled:opacity-40 disabled:cursor-not-allowed"
             >

@@ -9,6 +9,7 @@ import { QUESTION_TYPE_LABELS, PM_QUESTION_TYPE_LABELS, PMQuestionType, Intervie
 import { TranscriptEntry } from "@/types";
 import { getPendingRecording } from "@/lib/recordingTransfer";
 import { uploadRecording } from "@/hooks/useVideoRecorder";
+import { track } from "@/lib/analytics-client";
 
 interface SessionData {
   questionId: string;
@@ -76,6 +77,11 @@ export default function AssessmentPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [videoRecordingUrl, setVideoRecordingUrl] = useState<string | null>(null);
+
+  // Track assessment view
+  useEffect(() => {
+    track("assessment_view", { question_id: questionId });
+  }, [questionId]);
 
   // Handle background upload of video recording
   useEffect(() => {

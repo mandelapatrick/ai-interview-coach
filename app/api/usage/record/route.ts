@@ -9,13 +9,13 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const { sessionType, questionId } = await request.json();
+    const { sessionType, questionId, interviewMode } = await request.json();
 
     if (sessionType !== "practice" && sessionType !== "learn") {
       return NextResponse.json({ error: "Invalid session type" }, { status: 400 });
     }
 
-    await recordUsage(session.user.email, sessionType, questionId);
+    await recordUsage(session.user.email, sessionType, questionId, interviewMode);
 
     return NextResponse.json({ success: true });
   } catch (error) {
