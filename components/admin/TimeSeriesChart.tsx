@@ -48,13 +48,16 @@ export default function TimeSeriesChart({
             dataKey="date"
             tick={{ fontSize: 12 }}
             tickFormatter={(v) => {
-              const d = new Date(v);
-              return `${d.getMonth() + 1}/${d.getDate()}`;
+              const [, m, d] = v.split("-");
+              return `${parseInt(m)}/${parseInt(d)}`;
             }}
           />
           <YAxis tick={{ fontSize: 12 }} />
           <Tooltip
-            labelFormatter={(v) => new Date(v as string).toLocaleDateString()}
+            labelFormatter={(v) => {
+              const [y, m, d] = (v as string).split("-");
+              return `${parseInt(m)}/${parseInt(d)}/${y}`;
+            }}
           />
           {lines.map((line) =>
             type === "area" ? (

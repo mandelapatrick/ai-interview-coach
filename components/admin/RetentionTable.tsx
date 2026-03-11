@@ -50,10 +50,11 @@ export default function RetentionTable({ cohorts, periods, loading }: RetentionT
           {cohorts.map((cohort) => (
             <tr key={cohort.week} className="border-t border-gray-100">
               <td className="py-2 px-3 text-gray-700 font-medium whitespace-nowrap">
-                {new Date(cohort.week).toLocaleDateString("en-US", {
-                  month: "short",
-                  day: "numeric",
-                })}
+                {(() => {
+                  const [, m, d] = cohort.week.split("-");
+                  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+                  return `${months[parseInt(m) - 1]} ${parseInt(d)}`;
+                })()}
               </td>
               <td className="py-2 px-3 text-center text-gray-600">{cohort.size}</td>
               {periods.map((period) => {
