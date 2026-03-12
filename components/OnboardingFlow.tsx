@@ -29,6 +29,8 @@ const REFERRAL_SOURCES = [
   "Threads",
   "Google",
   "ChatGPT",
+  "Friends",
+  "Other",
 ];
 
 function getQuestionIdForRole(role: string): string {
