@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { isAdmin, getDateRange } from "@/lib/analytics";
+import { isAdmin, getDateRange, toDateInTz } from "@/lib/analytics";
 import { supabaseAdmin } from "@/lib/supabase";
 
 export async function GET(request: NextRequest) {
@@ -35,7 +35,7 @@ export async function GET(request: NextRequest) {
   const byRole: Record<string, number> = {};
 
   for (const row of data || []) {
-    const day = row.created_at.split("T")[0];
+    const day = toDateInTz(row.created_at);
     byDay[day] = (byDay[day] || 0) + 1;
     if (row.country) byCountry[row.country] = (byCountry[row.country] || 0) + 1;
     if (row.role) byRole[row.role] = (byRole[row.role] || 0) + 1;

@@ -20,6 +20,12 @@ export function getTodayStartISO(tz: string = DEFAULT_TZ): string {
   return todayStart.toISOString();
 }
 
+/** Converts a UTC ISO timestamp to a YYYY-MM-DD string in the given timezone. */
+export function toDateInTz(isoString: string, tz: string = DEFAULT_TZ): string {
+  const d = new Date(isoString);
+  return new Intl.DateTimeFormat("en-CA", { timeZone: tz }).format(d);
+}
+
 export function isAdmin(email: string | null | undefined): boolean {
   if (!email) return false;
   const adminEmails = (process.env.ADMIN_EMAILS || "")
@@ -30,25 +36,42 @@ export function isAdmin(email: string | null | undefined): boolean {
 }
 
 export function getDateRange(range: string): { start: string; end: string } {
-  const end = new Date();
-  const start = new Date();
+  const now = new Date();
+  const end = now.toISOString();
 
+  // Compute PST midnight today, then subtract N days
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: DEFAULT_TZ,
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+    hour12: false,
+  }).formatToParts(now);
+  const h = parseInt(parts.find((p) => p.type === "hour")?.value || "0");
+  const m = parseInt(parts.find((p) => p.type === "minute")?.value || "0");
+  const s = parseInt(parts.find((p) => p.type === "second")?.value || "0");
+  const todayMidnight = new Date(now.getTime() - (h * 3600 + m * 60 + s) * 1000);
+  todayMidnight.setMilliseconds(0);
+
+  let days: number;
   switch (range) {
     case "7d":
-      start.setDate(end.getDate() - 7);
+      days = 7;
       break;
     case "90d":
-      start.setDate(end.getDate() - 90);
+      days = 90;
       break;
     case "30d":
     default:
-      start.setDate(end.getDate() - 30);
+      days = 30;
       break;
   }
 
+  const start = new Date(todayMidnight.getTime() - days * 24 * 60 * 60 * 1000);
+
   return {
     start: start.toISOString(),
-    end: end.toISOString(),
+    end,
   };
 }
 
@@ -85,7 +108,7 @@ export async function countEventsByDay(
 
   const counts: Record<string, number> = {};
   for (const row of data) {
-    const day = row.created_at.split("T")[0];
+    const day = toDateInTz(row.created_at);
     counts[day] = (counts[day] || 0) + 1;
   }
 
@@ -111,7 +134,7 @@ export async function countLandingPageViewsByDay(
 
   const dailyVisitors: Record<string, Set<string>> = {};
   for (const row of data) {
-    const day = row.created_at.split("T")[0];
+    const day = toDateInTz(row.created_at);
     const id = row.user_email || row.anonymous_id;
     if (!id) continue;
     if (!dailyVisitors[day]) dailyVisitors[day] = new Set();
@@ -138,13 +161,42 @@ export async function countSessionsByDay(
 
   const counts: Record<string, number> = {};
   for (const row of data) {
-    const day = row.created_at.split("T")[0];
+    const day = toDateInTz(row.created_at);
     counts[day] = (counts[day] || 0) + 1;
   }
 
   return Object.entries(counts)
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([date, count]) => ({ date, count }));
+}
+
+export async function countInterestedUsersByDay(
+  startDate: string,
+  endDate: string
+): Promise<{ date: string; count: number }[]> {
+  if (!supabaseAdmin) return [];
+  const { data } = await supabaseAdmin
+    .from("analytics_events")
+    .select("created_at, user_email, anonymous_id")
+    .eq("event_name", "page_view")
+    .eq("properties->>page", "/signin")
+    .gte("created_at", startDate)
+    .lte("created_at", endDate);
+
+  if (!data) return [];
+
+  const dailyVisitors: Record<string, Set<string>> = {};
+  for (const row of data) {
+    const day = toDateInTz(row.created_at);
+    const id = row.user_email || row.anonymous_id;
+    if (!id) continue;
+    if (!dailyVisitors[day]) dailyVisitors[day] = new Set();
+    dailyVisitors[day].add(id);
+  }
+
+  return Object.entries(dailyVisitors)
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([date, visitors]) => ({ date, count: visitors.size }));
 }
 
 export async function countUniqueUsersByDay(
@@ -165,7 +217,7 @@ export async function countUniqueUsersByDay(
 
   const dailyUsers: Record<string, Set<string>> = {};
   for (const row of data) {
-    const day = row.created_at.split("T")[0];
+    const day = toDateInTz(row.created_at);
     if (!dailyUsers[day]) dailyUsers[day] = new Set();
     dailyUsers[day].add(row.user_email);
   }

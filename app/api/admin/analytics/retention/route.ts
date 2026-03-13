@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { isAdmin } from "@/lib/analytics";
+import { isAdmin, toDateInTz } from "@/lib/analytics";
 import { supabaseAdmin } from "@/lib/supabase";
 
 export async function GET(request: NextRequest) {
@@ -34,7 +34,7 @@ export async function GET(request: NextRequest) {
   for (const event of events || []) {
     if (!event.user_email) continue;
     if (!activityMap[event.user_email]) activityMap[event.user_email] = new Set();
-    activityMap[event.user_email].add(event.created_at.split("T")[0]);
+    activityMap[event.user_email].add(toDateInTz(event.created_at));
   }
 
   // Group users into weekly cohorts
@@ -46,7 +46,7 @@ export async function GET(request: NextRequest) {
     const diff = signup.getDate() - day + (day === 0 ? -6 : 1);
     const monday = new Date(signup);
     monday.setDate(diff);
-    const weekKey = monday.toISOString().split("T")[0];
+    const weekKey = toDateInTz(monday.toISOString());
 
     if (!cohortMap[weekKey]) cohortMap[weekKey] = [];
     cohortMap[weekKey].push({ email: user.user_email, signupDate: signup });
@@ -72,7 +72,7 @@ export async function GET(request: NextRequest) {
         for (const member of members) {
           const targetDate = new Date(member.signupDate);
           targetDate.setDate(targetDate.getDate() + period.days);
-          const targetStr = targetDate.toISOString().split("T")[0];
+          const targetStr = toDateInTz(targetDate.toISOString());
 
           // Check if user was active on or after target date (within a 1-day window)
           const activities = activityMap[member.email];

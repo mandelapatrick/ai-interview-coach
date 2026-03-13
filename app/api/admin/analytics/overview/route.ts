@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { isAdmin, getDateRange, countEventsByDay, countUniqueUsersByDay, countLandingPageViewsByDay, countSessionsByDay, getTodayStartISO } from "@/lib/analytics";
+import { isAdmin, getDateRange, countEventsByDay, countUniqueUsersByDay, countLandingPageViewsByDay, countInterestedUsersByDay, countSessionsByDay, getTodayStartISO, toDateInTz } from "@/lib/analytics";
 import { supabaseAdmin } from "@/lib/supabase";
 
 export async function GET(request: NextRequest) {
@@ -45,6 +45,18 @@ export async function GET(request: NextRequest) {
     (landingData || []).map((r) => r.user_email || r.anonymous_id)
   );
 
+  // Interested users (unique visitors to /signin today)
+  const { data: interestedData } = await supabaseAdmin
+    .from("analytics_events")
+    .select("user_email, anonymous_id")
+    .eq("event_name", "page_view")
+    .eq("properties->>page", "/signin")
+    .gte("created_at", todayStartISO);
+
+  const interestedSet = new Set(
+    (interestedData || []).map((r) => r.user_email || r.anonymous_id)
+  );
+
   // Sessions today
   const { count: sessionsToday } = await supabaseAdmin
     .from("usage_tracking")
@@ -74,6 +86,9 @@ export async function GET(request: NextRequest) {
   // Landing page views trend (unique visitors to / per day)
   const landingTrend = await countLandingPageViewsByDay(start, end);
 
+  // Interested users trend (unique visitors to /signin per day)
+  const interestedTrend = await countInterestedUsersByDay(start, end);
+
   // Sessions trend
   const sessionsTrend = await countSessionsByDay(start, end);
 
@@ -86,7 +101,7 @@ export async function GET(request: NextRequest) {
 
   const signupsByDay: Record<string, number> = {};
   for (const row of signups || []) {
-    const day = row.created_at.split("T")[0];
+    const day = toDateInTz(row.created_at);
     signupsByDay[day] = (signupsByDay[day] || 0) + 1;
   }
 
@@ -98,11 +113,14 @@ export async function GET(request: NextRequest) {
     totalUsers: totalUsers || 0,
     dau: dauSet.size,
     landingPageViews: landingSet.size,
+    interestedUsers: interestedSet.size,
     sessionsToday: sessionsToday || 0,
+    newSignupsToday: signupsToday || 0,
     conversionPct,
     signupTrend: signupTrendData,
     dauTrend: dauTrend,
     landingTrend: landingTrend,
+    interestedTrend: interestedTrend,
     sessionsTrend: sessionsTrend,
   });
 }

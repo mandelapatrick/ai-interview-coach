@@ -11,9 +11,12 @@ interface OverviewData {
   landingPageViews: number;
   sessionsToday: number;
   conversionPct: number;
+  newSignupsToday: number;
+  interestedUsers: number;
   signupTrend: { date: string; count: number }[];
   dauTrend: { date: string; count: number }[];
   landingTrend: { date: string; count: number }[];
+  interestedTrend: { date: string; count: number }[];
   sessionsTrend: { date: string; count: number }[];
 }
 
@@ -37,17 +40,21 @@ export default function OverviewPage() {
         <DateRangePicker value={range} onChange={setRange} />
       </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
-        <KPICard label="Total Registered Users" subtitle="(All-Time)" value={data?.totalUsers ?? "-"} loading={loading} />
+      <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
         <KPICard label="Landing Page Viewers" subtitle="(Today)" value={data?.landingPageViews ?? "-"} loading={loading} />
-        <KPICard label="DAU" subtitle="(Today)" value={data?.dau ?? "-"} loading={loading} />
-        <KPICard label="Sessions" subtitle="(Today)" value={data?.sessionsToday ?? "-"} loading={loading} />
+        <KPICard label="Interested Users" subtitle="(Today)" value={data?.interestedUsers ?? "-"} loading={loading} />
+        <KPICard label="New Signups" subtitle="(Today)" value={data?.newSignupsToday ?? "-"} loading={loading} />
         <KPICard
           label="Onboarding Conversion"
           subtitle="(Today)"
           value={data ? `${data.conversionPct}%` : "-"}
           loading={loading}
         />
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <KPICard label="Total Registered Users" subtitle="(All-Time)" value={data?.totalUsers ?? "-"} loading={loading} />
+        <KPICard label="DAU" subtitle="(Today)" value={data?.dau ?? "-"} loading={loading} />
+        <KPICard label="Sessions" subtitle="(Today)" value={data?.sessionsToday ?? "-"} loading={loading} />
       </div>
 
       <div className="grid lg:grid-cols-2 gap-6">
@@ -69,6 +76,13 @@ export default function OverviewPage() {
           title="Landing Page Viewers"
           data={data?.landingTrend || []}
           lines={[{ key: "count", color: "#6b8e23", name: "Visitors" }]}
+          type="area"
+          loading={loading}
+        />
+        <TimeSeriesChart
+          title="Interested Users"
+          data={data?.interestedTrend || []}
+          lines={[{ key: "count", color: "#e67e22", name: "Interested" }]}
           type="area"
           loading={loading}
         />

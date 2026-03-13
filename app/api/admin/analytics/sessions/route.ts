@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { isAdmin, getDateRange } from "@/lib/analytics";
+import { isAdmin, getDateRange, toDateInTz } from "@/lib/analytics";
 import { supabaseAdmin } from "@/lib/supabase";
 
 export async function GET(request: NextRequest) {
@@ -48,7 +48,7 @@ export async function GET(request: NextRequest) {
   const learnByDay: Record<string, number> = {};
 
   for (const row of filtered) {
-    const day = row.created_at.split("T")[0];
+    const day = toDateInTz(row.created_at);
     if (row.session_type === "practice") {
       practiceByDay[day] = (practiceByDay[day] || 0) + 1;
     } else {
