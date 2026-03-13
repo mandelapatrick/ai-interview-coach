@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { isAdmin, toDateInTz } from "@/lib/analytics";
+import { isAdmin, toDateInTz, excludedEmailsFilter } from "@/lib/analytics";
 import { supabaseAdmin } from "@/lib/supabase";
 
 export async function GET(request: NextRequest) {
@@ -12,10 +12,13 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: "DB not configured" }, { status: 500 });
   }
 
+  const excludeFilter = excludedEmailsFilter();
+
   // Get all users with signup date
   const { data: users } = await supabaseAdmin
     .from("user_onboarding")
     .select("user_email, created_at")
+    .not("user_email", "in", excludeFilter)
     .order("created_at", { ascending: true });
 
   if (!users || users.length === 0) {
@@ -27,7 +30,8 @@ export async function GET(request: NextRequest) {
     .from("analytics_events")
     .select("user_email, created_at")
     .eq("event_name", "page_view")
-    .not("user_email", "is", null);
+    .not("user_email", "is", null)
+    .not("user_email", "in", excludeFilter);
 
   // Build user activity map: email -> Set of dates active
   const activityMap: Record<string, Set<string>> = {};

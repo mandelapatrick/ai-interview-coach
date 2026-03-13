@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { isAdmin, getDateRange, toDateInTz } from "@/lib/analytics";
+import { isAdmin, getDateRange, toDateInTz, excludedEmailsFilter, ensureTodayEntry } from "@/lib/analytics";
 import { supabaseAdmin } from "@/lib/supabase";
 
 export async function GET(request: NextRequest) {
@@ -17,9 +17,12 @@ export async function GET(request: NextRequest) {
   const role = request.nextUrl.searchParams.get("role") || null;
   const { start, end } = getDateRange(range);
 
+  const excludeFilter = excludedEmailsFilter();
+
   let query = supabaseAdmin
     .from("usage_tracking")
     .select("created_at, session_type, interview_mode, user_email")
+    .not("user_email", "in", excludeFilter)
     .gte("created_at", start)
     .lte("created_at", end);
 
@@ -35,7 +38,8 @@ export async function GET(request: NextRequest) {
     const { data: roleData } = await supabaseAdmin
       .from("user_onboarding")
       .select("user_email")
-      .eq("role", role);
+      .eq("role", role)
+      .not("user_email", "in", excludeFilter);
     roleEmails = new Set((roleData || []).map((r) => r.user_email));
   }
 
@@ -58,13 +62,17 @@ export async function GET(request: NextRequest) {
 
   // Merge into single series
   const allDays = new Set([...Object.keys(practiceByDay), ...Object.keys(learnByDay)]);
-  const series = Array.from(allDays)
-    .sort()
-    .map((date) => ({
-      date,
-      practice: practiceByDay[date] || 0,
-      learn: learnByDay[date] || 0,
-    }));
+  const series = ensureTodayEntry(
+    Array.from(allDays)
+      .sort()
+      .map((date) => ({
+        date,
+        practice: practiceByDay[date] || 0,
+        learn: learnByDay[date] || 0,
+      })),
+    "date",
+    { practice: 0, learn: 0 }
+  );
 
   // Avg sessions per user per week
   const uniqueUsers = new Set(filtered.map((r) => r.user_email));

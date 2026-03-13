@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { isAdmin, getDateRange, countUniqueUsersByDay } from "@/lib/analytics";
+import { isAdmin, getDateRange, countUniqueUsersByDay, ensureTodayEntry } from "@/lib/analytics";
 
 export async function GET(request: NextRequest) {
   const session = await auth();
@@ -38,5 +38,5 @@ export async function GET(request: NextRequest) {
     return { date: point.date, dau: point.count, wau, mau };
   });
 
-  return NextResponse.json({ series: enriched });
+  return NextResponse.json({ series: ensureTodayEntry(enriched, "date", { dau: 0, wau: 0, mau: 0 }) });
 }

@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { isAdmin } from "@/lib/analytics";
+import { isAdmin, excludedEmailsFilter, getExcludedEmails } from "@/lib/analytics";
 import { supabaseAdmin } from "@/lib/supabase";
 
 export async function GET() {
@@ -12,16 +12,24 @@ export async function GET() {
     return NextResponse.json({ error: "DB not configured" }, { status: 500 });
   }
 
+  const excludeFilter = excludedEmailsFilter();
+  const excluded = getExcludedEmails();
+
   // Total onboarded users
   const { count: totalUsers } = await supabaseAdmin
     .from("user_onboarding")
     .select("*", { count: "exact", head: true })
+    .not("user_email", "in", excludeFilter)
     .eq("onboarding_completed", true);
 
   // Subscriptions breakdown
-  const { data: subs } = await supabaseAdmin
+  const { data: subsRaw } = await supabaseAdmin
     .from("user_subscriptions")
-    .select("plan_type, billing_interval, status");
+    .select("plan_type, billing_interval, status, user_email");
+
+  const subs = (subsRaw || []).filter(
+    (s) => !s.user_email || !excluded.includes(s.user_email.toLowerCase())
+  );
 
   const activePro = (subs || []).filter(
     (s) => s.plan_type === "pro" && s.status === "active"

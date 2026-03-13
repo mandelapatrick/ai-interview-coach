@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { isAdmin, getDateRange, toDateInTz } from "@/lib/analytics";
+import { isAdmin, getDateRange, toDateInTz, excludedEmailsFilter, ensureTodayEntry } from "@/lib/analytics";
 import { supabaseAdmin } from "@/lib/supabase";
 
 export async function GET(request: NextRequest) {
@@ -18,7 +18,8 @@ export async function GET(request: NextRequest) {
 
   let query = supabaseAdmin
     .from("user_onboarding")
-    .select("created_at, country, role")
+    .select("created_at, country, role, user_email")
+    .not("user_email", "in", excludedEmailsFilter())
     .gte("created_at", start)
     .lte("created_at", end)
     .order("created_at", { ascending: true });
@@ -41,10 +42,16 @@ export async function GET(request: NextRequest) {
     if (row.role) byRole[row.role] = (byRole[row.role] || 0) + 1;
   }
 
-  return NextResponse.json({
-    daily: Object.entries(byDay)
+  const daily = ensureTodayEntry(
+    Object.entries(byDay)
       .sort(([a], [b]) => a.localeCompare(b))
       .map(([date, count]) => ({ date, count })),
+    "date",
+    { count: 0 }
+  );
+
+  return NextResponse.json({
+    daily,
     byCountry: Object.entries(byCountry)
       .sort(([, a], [, b]) => b - a)
       .map(([country, count]) => ({ country, count })),

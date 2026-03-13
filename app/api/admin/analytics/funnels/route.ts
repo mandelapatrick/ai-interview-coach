@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { isAdmin, getDateRange } from "@/lib/analytics";
+import { isAdmin, getDateRange, excludedEmailsFilter, getExcludedEmails } from "@/lib/analytics";
 import { supabaseAdmin } from "@/lib/supabase";
 
 export async function GET(request: NextRequest) {
@@ -14,6 +14,9 @@ export async function GET(request: NextRequest) {
 
   const range = request.nextUrl.searchParams.get("range") || "30d";
   const { start, end } = getDateRange(range);
+
+  const excludeFilter = excludedEmailsFilter();
+  const excluded = getExcludedEmails();
 
   // Helper to count unique users for an event
   async function countUniqueForEvent(eventName: string, properties?: Record<string, string>) {
@@ -31,7 +34,11 @@ export async function GET(request: NextRequest) {
     }
 
     const { data } = await query;
-    const unique = new Set((data || []).map((r) => r.user_email || r.anonymous_id));
+    const unique = new Set(
+      (data || [])
+        .filter((r) => !r.user_email || !excluded.includes(r.user_email.toLowerCase()))
+        .map((r) => r.user_email || r.anonymous_id)
+    );
     return unique.size;
   }
 
@@ -42,6 +49,7 @@ export async function GET(request: NextRequest) {
   const { count: signups } = await supabaseAdmin
     .from("user_onboarding")
     .select("*", { count: "exact", head: true })
+    .not("user_email", "in", excludeFilter)
     .gte("created_at", start)
     .lte("created_at", end);
 

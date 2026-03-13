@@ -2,6 +2,19 @@ import { supabaseAdmin } from "./supabase";
 
 const DEFAULT_TZ = "America/Los_Angeles";
 
+/** Returns lowercase emails from PRO_OVERRIDE_EMAILS env var (internal/test accounts). */
+export function getExcludedEmails(): string[] {
+  return (process.env.PRO_OVERRIDE_EMAILS || "")
+    .split(",")
+    .map((e) => e.trim().toLowerCase())
+    .filter(Boolean);
+}
+
+/** Formats excluded emails for Supabase .not('col', 'in', '(...)') filter. */
+export function excludedEmailsFilter(): string {
+  return `(${getExcludedEmails().join(",")})`;
+}
+
 /** Returns an ISO string for midnight today in the given IANA timezone. */
 export function getTodayStartISO(tz: string = DEFAULT_TZ): string {
   const now = new Date();
@@ -75,6 +88,18 @@ export function getDateRange(range: string): { start: string; end: string } {
   };
 }
 
+/** Ensures the trend array includes an entry for today (PST). Appends {date: today, ...zeroValues} if missing. */
+export function ensureTodayEntry<T extends Record<string, unknown>>(
+  data: T[],
+  dateKey: string = "date",
+  zeroTemplate?: Partial<T>
+): T[] {
+  const today = toDateInTz(new Date().toISOString());
+  if (data.some((d) => d[dateKey] === today)) return data;
+  const zero = { [dateKey]: today, ...zeroTemplate } as T;
+  return [...data, zero];
+}
+
 export async function queryEvents(
   eventName: string,
   startDate: string,
@@ -87,6 +112,7 @@ export async function queryEvents(
     .eq("event_name", eventName)
     .gte("created_at", startDate)
     .lte("created_at", endDate)
+    .not("user_email", "in", excludedEmailsFilter())
     .order("created_at", { ascending: true });
   return data || [];
 }
@@ -102,7 +128,8 @@ export async function countEventsByDay(
     .select("created_at")
     .eq("event_name", eventName)
     .gte("created_at", startDate)
-    .lte("created_at", endDate);
+    .lte("created_at", endDate)
+    .not("user_email", "in", excludedEmailsFilter());
 
   if (!data) return [];
 
@@ -112,9 +139,10 @@ export async function countEventsByDay(
     counts[day] = (counts[day] || 0) + 1;
   }
 
-  return Object.entries(counts)
+  const result = Object.entries(counts)
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([date, count]) => ({ date, count }));
+  return ensureTodayEntry(result, "date", { count: 0 });
 }
 
 export async function countLandingPageViewsByDay(
@@ -132,8 +160,10 @@ export async function countLandingPageViewsByDay(
 
   if (!data) return [];
 
+  const excluded = getExcludedEmails();
   const dailyVisitors: Record<string, Set<string>> = {};
   for (const row of data) {
+    if (row.user_email && excluded.includes(row.user_email.toLowerCase())) continue;
     const day = toDateInTz(row.created_at);
     const id = row.user_email || row.anonymous_id;
     if (!id) continue;
@@ -141,9 +171,10 @@ export async function countLandingPageViewsByDay(
     dailyVisitors[day].add(id);
   }
 
-  return Object.entries(dailyVisitors)
+  const result = Object.entries(dailyVisitors)
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([date, visitors]) => ({ date, count: visitors.size }));
+  return ensureTodayEntry(result, "date", { count: 0 });
 }
 
 export async function countSessionsByDay(
@@ -153,9 +184,10 @@ export async function countSessionsByDay(
   if (!supabaseAdmin) return [];
   const { data } = await supabaseAdmin
     .from("usage_tracking")
-    .select("created_at")
+    .select("created_at, user_email")
     .gte("created_at", startDate)
-    .lte("created_at", endDate);
+    .lte("created_at", endDate)
+    .not("user_email", "in", excludedEmailsFilter());
 
   if (!data) return [];
 
@@ -165,9 +197,10 @@ export async function countSessionsByDay(
     counts[day] = (counts[day] || 0) + 1;
   }
 
-  return Object.entries(counts)
+  const result = Object.entries(counts)
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([date, count]) => ({ date, count }));
+  return ensureTodayEntry(result, "date", { count: 0 });
 }
 
 export async function countInterestedUsersByDay(
@@ -185,8 +218,10 @@ export async function countInterestedUsersByDay(
 
   if (!data) return [];
 
+  const excluded = getExcludedEmails();
   const dailyVisitors: Record<string, Set<string>> = {};
   for (const row of data) {
+    if (row.user_email && excluded.includes(row.user_email.toLowerCase())) continue;
     const day = toDateInTz(row.created_at);
     const id = row.user_email || row.anonymous_id;
     if (!id) continue;
@@ -194,9 +229,10 @@ export async function countInterestedUsersByDay(
     dailyVisitors[day].add(id);
   }
 
-  return Object.entries(dailyVisitors)
+  const result = Object.entries(dailyVisitors)
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([date, visitors]) => ({ date, count: visitors.size }));
+  return ensureTodayEntry(result, "date", { count: 0 });
 }
 
 export async function countUniqueUsersByDay(
@@ -210,6 +246,7 @@ export async function countUniqueUsersByDay(
     .select("created_at, user_email")
     .eq("event_name", eventName)
     .not("user_email", "is", null)
+    .not("user_email", "in", excludedEmailsFilter())
     .gte("created_at", startDate)
     .lte("created_at", endDate);
 
@@ -222,7 +259,8 @@ export async function countUniqueUsersByDay(
     dailyUsers[day].add(row.user_email);
   }
 
-  return Object.entries(dailyUsers)
+  const result = Object.entries(dailyUsers)
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([date, users]) => ({ date, count: users.size }));
+  return ensureTodayEntry(result, "date", { count: 0 });
 }

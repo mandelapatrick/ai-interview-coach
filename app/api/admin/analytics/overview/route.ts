@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { isAdmin, getDateRange, countEventsByDay, countUniqueUsersByDay, countLandingPageViewsByDay, countInterestedUsersByDay, countSessionsByDay, getTodayStartISO, toDateInTz } from "@/lib/analytics";
+import { isAdmin, getDateRange, countEventsByDay, countUniqueUsersByDay, countLandingPageViewsByDay, countInterestedUsersByDay, countSessionsByDay, getTodayStartISO, toDateInTz, excludedEmailsFilter, getExcludedEmails, ensureTodayEntry } from "@/lib/analytics";
 import { supabaseAdmin } from "@/lib/supabase";
 
 export async function GET(request: NextRequest) {
@@ -15,10 +15,13 @@ export async function GET(request: NextRequest) {
   const range = request.nextUrl.searchParams.get("range") || "30d";
   const { start, end } = getDateRange(range);
 
+  const excludeFilter = excludedEmailsFilter();
+
   // Total users
   const { count: totalUsers } = await supabaseAdmin
     .from("user_onboarding")
-    .select("*", { count: "exact", head: true });
+    .select("*", { count: "exact", head: true })
+    .not("user_email", "in", excludeFilter);
 
   // DAU (unique users with page_view today, PST)
   const todayStartISO = getTodayStartISO();
@@ -27,6 +30,7 @@ export async function GET(request: NextRequest) {
     .select("user_email")
     .eq("event_name", "page_view")
     .not("user_email", "is", null)
+    .not("user_email", "in", excludeFilter)
     .gte("created_at", todayStartISO);
 
   const dauSet = new Set(
@@ -41,8 +45,11 @@ export async function GET(request: NextRequest) {
     .eq("properties->>page", "/")
     .gte("created_at", todayStartISO);
 
+  const excluded = getExcludedEmails();
   const landingSet = new Set(
-    (landingData || []).map((r) => r.user_email || r.anonymous_id)
+    (landingData || [])
+      .filter((r) => !r.user_email || !excluded.includes(r.user_email.toLowerCase()))
+      .map((r) => r.user_email || r.anonymous_id)
   );
 
   // Interested users (unique visitors to /signin today)
@@ -54,25 +61,30 @@ export async function GET(request: NextRequest) {
     .gte("created_at", todayStartISO);
 
   const interestedSet = new Set(
-    (interestedData || []).map((r) => r.user_email || r.anonymous_id)
+    (interestedData || [])
+      .filter((r) => !r.user_email || !excluded.includes(r.user_email.toLowerCase()))
+      .map((r) => r.user_email || r.anonymous_id)
   );
 
   // Sessions today
   const { count: sessionsToday } = await supabaseAdmin
     .from("usage_tracking")
     .select("*", { count: "exact", head: true })
+    .not("user_email", "in", excludeFilter)
     .gte("created_at", todayStartISO);
 
   // Conversion today: users who signed up today and completed onboarding
   const { count: signupsToday } = await supabaseAdmin
     .from("user_onboarding")
     .select("*", { count: "exact", head: true })
+    .not("user_email", "in", excludeFilter)
     .gte("created_at", todayStartISO);
 
   const { count: completedToday } = await supabaseAdmin
     .from("user_onboarding")
     .select("*", { count: "exact", head: true })
     .eq("onboarding_completed", true)
+    .not("user_email", "in", excludeFilter)
     .gte("created_at", todayStartISO);
 
   const conversionPct =
@@ -96,6 +108,7 @@ export async function GET(request: NextRequest) {
   const { data: signups } = await supabaseAdmin
     .from("user_onboarding")
     .select("created_at")
+    .not("user_email", "in", excludeFilter)
     .gte("created_at", start)
     .lte("created_at", end);
 
@@ -105,9 +118,13 @@ export async function GET(request: NextRequest) {
     signupsByDay[day] = (signupsByDay[day] || 0) + 1;
   }
 
-  const signupTrendData = Object.entries(signupsByDay)
-    .sort(([a], [b]) => a.localeCompare(b))
-    .map(([date, count]) => ({ date, count }));
+  const signupTrendData = ensureTodayEntry(
+    Object.entries(signupsByDay)
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([date, count]) => ({ date, count })),
+    "date",
+    { count: 0 }
+  );
 
   return NextResponse.json({
     totalUsers: totalUsers || 0,
