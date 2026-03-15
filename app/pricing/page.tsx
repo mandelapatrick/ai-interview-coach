@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useSubscription } from "@/hooks/useSubscription";
+import { trackMetaEvent } from "@/lib/meta-pixel";
 
 const features = {
   free: [
@@ -47,6 +48,10 @@ export default function PricingPage() {
 
   const handleUpgrade = async () => {
     setLoading(true);
+    trackMetaEvent('InitiateCheckout', {
+      value: billingInterval === 'monthly' ? 49 : 399,
+      currency: 'USD',
+    });
     try {
       const response = await fetch("/api/stripe/checkout", {
         method: "POST",

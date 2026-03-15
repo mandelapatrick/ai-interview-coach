@@ -2,8 +2,10 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { QUESTION_TYPE_LABELS, QuestionType } from "@/types";
 import { useSubscription } from "@/hooks/useSubscription";
+import { trackMetaEvent } from "@/lib/meta-pixel";
 
 interface SessionWithAssessment {
   id: string;
@@ -40,6 +42,7 @@ const TYPE_COLORS: Record<string, string> = {
 };
 
 export default function DashboardPage() {
+  const searchParams = useSearchParams();
   const [sessions, setSessions] = useState<SessionWithAssessment[]>([]);
   const [loading, setLoading] = useState(true);
   const {
@@ -53,6 +56,12 @@ export default function DashboardPage() {
     cancelAtPeriodEnd,
     loading: subLoading,
   } = useSubscription();
+
+  useEffect(() => {
+    if (searchParams.get('upgraded') === 'true') {
+      trackMetaEvent('Purchase', { value: 0, currency: 'USD' });
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     const fetchSessions = async () => {

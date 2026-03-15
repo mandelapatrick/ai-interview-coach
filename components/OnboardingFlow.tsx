@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import VideoLobby from "@/components/VideoLobby";
-import VideoSession from "@/components/VideoSession";
+import LearnSession from "@/components/LearnSession";
+import OnboardingUpgradeModal from "@/components/OnboardingUpgradeModal";
 import { getQuestionById } from "@/data/questions";
-import type { AvatarProvider } from "@/components/VideoLobby";
 import { track } from "@/lib/analytics-client";
+import { trackMetaEvent } from "@/lib/meta-pixel";
 
-type OnboardingStep = "role-selection" | "referral-source" | "ready-to-practice" | "interview";
+type OnboardingStep = "role-selection" | "referral-source" | "learn" | "upgrade";
 
 const ROLES = [
   "Consulting",
@@ -45,10 +45,6 @@ export default function OnboardingFlow() {
   const [selectedReferral, setSelectedReferral] = useState<string>("");
   const [isSaving, setIsSaving] = useState(false);
 
-  // Interview state
-  const [userStream, setUserStream] = useState<MediaStream | null>(null);
-  const [avatarProvider, setAvatarProvider] = useState<AvatarProvider>("livekit");
-
   const questionId = getQuestionIdForRole(selectedRole);
   const question = getQuestionById(questionId);
 
@@ -62,95 +58,52 @@ export default function OnboardingFlow() {
         body: JSON.stringify({
           role: selectedRole,
           referral_source: selectedReferral,
+          markComplete: true,
         }),
       });
+      trackMetaEvent('CompleteRegistration', { content_name: selectedRole });
     } catch (err) {
       console.error("Failed to save onboarding:", err);
     }
     setIsSaving(false);
-    setStep("ready-to-practice");
-    track("onboarding_step", { step: "lobby" });
+    setStep("learn");
+    track("onboarding_step", { step: "learn" });
   };
 
-  const handleJoinNow = async (stream: MediaStream, provider: AvatarProvider) => {
-    track("onboarding_practice_decision", { choice: "join_now" });
-    setUserStream(stream);
-    setAvatarProvider(provider);
-
-    // Mark onboarding complete
-    try {
-      await fetch("/api/onboarding", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          role: selectedRole,
-          referral_source: selectedReferral,
-          markComplete: true,
-        }),
-      });
-    } catch (err) {
-      console.error("Failed to mark onboarding complete:", err);
-    }
-
-    setStep("interview");
+  const handleLearnEnd = () => {
+    track("onboarding_learn_completed", { role: selectedRole, question_id: questionId });
+    setStep("upgrade");
   };
 
-  const handleJoinLater = async () => {
-    track("onboarding_practice_decision", { choice: "join_later" });
-    try {
-      await fetch("/api/onboarding", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          role: selectedRole,
-          referral_source: selectedReferral,
-          markComplete: true,
-        }),
-      });
-    } catch (err) {
-      console.error("Failed to mark onboarding complete:", err);
-    }
-    window.location.href = "/dashboard";
+  const handleViewPlans = () => {
+    track("onboarding_upgrade_prompt", { action: "view_plans" });
   };
 
-  // Step 4: Interview
-  if (step === "interview" && question && userStream) {
+  const handleUpgradeSkip = () => {
+    track("onboarding_upgrade_prompt", { action: "skip" });
+    router.push("/dashboard");
+  };
+
+  // Step 3: Learn Mode
+  if (step === "learn" && question) {
     return (
       <div className="h-screen">
-        <VideoSession
+        <LearnSession
           question={question}
-          userStream={userStream}
-          avatarProvider={avatarProvider}
-          onBack={() => { window.location.href = "/dashboard"; }}
-          assessmentRedirect={`/assessment/${questionId}?onboarding=true`}
+          onEnd={handleLearnEnd}
+          maxDurationSeconds={300}
         />
       </div>
     );
   }
 
-  // Step 3: Ready to Practice (Video Lobby)
-  if (step === "ready-to-practice") {
+  // Step 4: Upgrade Modal
+  if (step === "upgrade") {
     return (
-      <div className="min-h-screen flex flex-col">
-        <div className="flex-1 flex flex-col items-center justify-center px-4 py-8">
-          <div className="text-center mb-6">
-            <h1 className="text-3xl font-bold text-gray-900 font-display mb-2">
-              Ready to practice?
-            </h1>
-            <p className="text-gray-500">
-              Set up your camera and microphone, then jump into your first interview
-            </p>
-          </div>
-          <div className="w-full max-w-5xl">
-            <VideoLobby
-              onJoin={handleJoinNow}
-              onBack={handleJoinLater}
-              joinLabel="Join Now"
-              backLabel="Join Later"
-            />
-          </div>
-        </div>
-      </div>
+      <OnboardingUpgradeModal
+        onViewPlans={handleViewPlans}
+        onSkip={handleUpgradeSkip}
+      />
     );
   }
 
