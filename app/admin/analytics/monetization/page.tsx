@@ -20,7 +20,7 @@ interface MonetizationData {
   plans: { plan: string; count: number }[];
 }
 
-const COLORS = ["#9ca3af", "#d4af37", "#1e3a5f"];
+const COLORS = ["#9ca3af", "#c1f879", "#1e3a5f"];
 
 export default function MonetizationPage() {
   const [data, setData] = useState<MonetizationData | null>(null);

@@ -6,7 +6,7 @@ import LearnFlow from "@/components/LearnFlow";
 
 const DIFFICULTY_COLORS_DARK: Record<string, string> = {
   easy: "text-green-600 bg-green-400/10",
-  medium: "text-[#d4af37] bg-[#d4af37]/10",
+  medium: "text-[#4d7c0f] bg-[#c1f879]/10",
   hard: "text-red-600 bg-red-400/10",
 };
 
@@ -51,13 +51,13 @@ export default async function LearnPage({
           <div className="flex items-center justify-between">
             <Link
               href={backUrl}
-              className="text-sm text-[#d4af37] hover:text-[#f4d03f] transition-colors"
+              className="text-sm text-[#4d7c0f] hover:text-[#3d6b0a] transition-colors"
             >
               <span className="hidden sm:inline">← Back to Question Bank</span>
               <span className="sm:hidden">← Back</span>
             </Link>
             <div className="flex items-center gap-2 md:gap-3">
-              <span className="px-2 py-1 text-xs font-medium rounded-full bg-[#d4af37]/10 text-[#d4af37]">
+              <span className="px-2 py-1 text-xs font-medium rounded-full bg-[#c1f879]/10 text-[#1b1b1b]">
                 Learn Mode
               </span>
               <span className="text-xs md:text-sm text-gray-600 hidden sm:inline">

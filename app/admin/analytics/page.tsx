@@ -61,7 +61,7 @@ export default function OverviewPage() {
         <TimeSeriesChart
           title="Daily Signups"
           data={data?.signupTrend || []}
-          lines={[{ key: "count", color: "#d4af37", name: "Signups" }]}
+          lines={[{ key: "count", color: "#c1f879", name: "Signups" }]}
           type="area"
           loading={loading}
         />

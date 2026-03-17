@@ -1,20 +1,13 @@
 import { signIn } from "@/lib/auth";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function SignInPage() {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center">
       <div className="bg-white p-8 rounded-xl border border-gray-200 w-full max-w-md shadow-sm">
-        <Link href="/" className="flex items-center justify-center gap-2 mb-8">
-          <div className="w-8 h-8 bg-gradient-to-br from-[#d4af37] to-[#f4d03f] rounded-lg flex items-center justify-center">
-            <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-              <polyline points="22 4 12 14.01 9 11.01"/>
-            </svg>
-          </div>
-          <span className="text-xl font-bold text-gray-900">
-            Ace<span className="text-[#d4af37]">Interview</span>
-          </span>
+        <Link href="/" className="flex items-center justify-center mb-8">
+          <Image src="/ace_logo.png" alt="Ace" width={65} height={40} />
         </Link>
 
         <h1 className="text-2xl font-bold text-gray-900 text-center mb-2 font-display">

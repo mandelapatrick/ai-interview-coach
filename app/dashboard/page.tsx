@@ -88,33 +88,35 @@ export default function DashboardPage() {
     });
   };
 
+  const getScorePct = (score: number) => Math.round((score / 5) * 100);
+
   const getScoreColor = (score: number) => {
-    if (score >= 4) return "text-green-400";
-    if (score >= 3) return "text-[#d4af37]";
-    return "text-red-400";
+    const pct = getScorePct(score);
+    if (pct >= 60) return "text-[#1e4635]";
+    return "text-[#ef8660]";
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-6 py-8">
+    <div className="max-w-4xl mx-auto px-8 py-8">
       {/* Welcome Section */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2 font-display">
+        <h1 className="text-[34px] font-normal text-[#1b1b1b] tracking-[-0.5px] font-display" style={{ fontVariationSettings: "'SOFT' 100, 'WONK' 1" }}>
           Welcome to AceInterview!
         </h1>
-        <p className="text-gray-600">Ready to get started?</p>
+        <p className="text-[#1b1b1b]/45 text-[14px] mt-1">Ready to get started?</p>
       </div>
 
       {/* Usage Summary (free plan only) */}
       {!subLoading && plan === "free" && (
         <section className="mb-8">
-          <div className="bg-white rounded-xl border border-gray-200 p-6">
+          <div className="bg-white rounded-2xl border border-[#1b1b1b]/[0.07] p-6 shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-lg font-semibold text-gray-900">
+              <h2 className="text-[15px] font-normal text-[#1b1b1b] font-display" style={{ fontVariationSettings: "'SOFT' 100, 'WONK' 1" }}>
                 Monthly Usage
               </h2>
               <Link
                 href="/pricing"
-                className="text-sm text-[#d4af37] hover:text-[#f4d03f] font-medium transition-colors"
+                className="text-[13px] bg-[#c1f879] text-[#1b1b1b] font-semibold px-4 py-1.5 rounded-full hover:bg-[#b5ee6a] transition-colors"
               >
                 Upgrade to Pro
               </Link>
@@ -122,17 +124,17 @@ export default function DashboardPage() {
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-sm text-gray-600">Practice sessions</span>
-                  <span className="text-sm font-medium text-gray-900">
+                  <span className="text-[13px] text-[#1b1b1b]/45">Practice sessions</span>
+                  <span className="text-[13px] font-semibold text-[#1b1b1b]">
                     {practiceUsed}/{practiceLimit}
                   </span>
                 </div>
-                <div className="w-full bg-gray-100 rounded-full h-2">
+                <div className="w-full bg-[#1b1b1b]/[0.06] rounded-full h-2">
                   <div
                     className={`h-2 rounded-full transition-all ${
                       practiceLimit && practiceUsed >= practiceLimit
-                        ? "bg-red-400"
-                        : "bg-[#d4af37]"
+                        ? "bg-[#ef8660]"
+                        : "bg-[#c1f879]"
                     }`}
                     style={{
                       width: `${Math.min(100, practiceLimit ? (practiceUsed / practiceLimit) * 100 : 0)}%`,
@@ -142,17 +144,17 @@ export default function DashboardPage() {
               </div>
               <div>
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-sm text-gray-600">Learn sessions</span>
-                  <span className="text-sm font-medium text-gray-900">
+                  <span className="text-[13px] text-[#1b1b1b]/45">Learn sessions</span>
+                  <span className="text-[13px] font-semibold text-[#1b1b1b]">
                     {learnUsed}/{learnLimit}
                   </span>
                 </div>
-                <div className="w-full bg-gray-100 rounded-full h-2">
+                <div className="w-full bg-[#1b1b1b]/[0.06] rounded-full h-2">
                   <div
                     className={`h-2 rounded-full transition-all ${
                       learnLimit && learnUsed >= learnLimit
-                        ? "bg-red-400"
-                        : "bg-[#d4af37]"
+                        ? "bg-[#ef8660]"
+                        : "bg-[#c1f879]"
                     }`}
                     style={{
                       width: `${Math.min(100, learnLimit ? (learnUsed / learnLimit) * 100 : 0)}%`,
@@ -168,28 +170,28 @@ export default function DashboardPage() {
       {/* Pro Subscription Card */}
       {!subLoading && plan === "pro" && (
         <section className="mb-8">
-          <div className="bg-white rounded-xl border border-gray-200 p-6">
+          <div className="bg-white rounded-2xl border border-[#1b1b1b]/[0.07] p-6 shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-[#d4af37]/10 flex items-center justify-center">
-                  <svg className="w-5 h-5 text-[#d4af37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <div className="w-10 h-10 rounded-[10px] bg-[#c1f879]/20 flex items-center justify-center">
+                  <svg className="w-5 h-5 text-[#1e4635]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
                   </svg>
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <h2 className="text-lg font-semibold text-gray-900">
+                    <h2 className="text-[15px] font-normal text-[#1b1b1b] font-display" style={{ fontVariationSettings: "'SOFT' 100, 'WONK' 1" }}>
                       Pro Plan
                     </h2>
-                    <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${
+                    <span className={`text-[12px] font-semibold px-2.5 py-0.5 rounded-full ${
                       cancelAtPeriodEnd
-                        ? "bg-amber-100 text-amber-600"
-                        : "bg-[#d4af37]/10 text-[#d4af37]"
+                        ? "bg-[#fde8d8] text-[#6f260b]"
+                        : "bg-[#d4ecb8] text-[#1e4635]"
                     }`}>
                       {cancelAtPeriodEnd ? "Cancelling" : "Active"}
                     </span>
                   </div>
-                  <div className="text-sm text-gray-600 mt-0.5">
+                  <div className="text-[13px] text-[#1b1b1b]/45 mt-0.5">
                     {billingInterval && (
                       <span>
                         {billingInterval === "yearly" ? "Annual" : "Monthly"} billing
@@ -206,7 +208,7 @@ export default function DashboardPage() {
                       </span>
                     )}
                     {cancelAtPeriodEnd && currentPeriodEnd && (
-                      <span className="text-amber-600 font-medium">
+                      <span className="text-[#6f260b] font-medium">
                         {billingInterval ? " · " : ""}Ends{" "}
                         {new Date(currentPeriodEnd).toLocaleDateString("en-US", {
                           month: "short",
@@ -220,7 +222,7 @@ export default function DashboardPage() {
               </div>
               <Link
                 href="/pricing"
-                className="text-sm text-[#d4af37] hover:text-[#f4d03f] font-medium transition-colors"
+                className="text-[13px] text-[#1b1b1b]/45 hover:text-[#1b1b1b]/70 font-medium transition-colors"
               >
                 Manage
               </Link>
@@ -231,19 +233,19 @@ export default function DashboardPage() {
 
       {/* Based on your recent practice */}
       <section className="mb-8">
-        <h2 className="text-lg font-semibold text-gray-900 mb-4">
+        <h2 className="text-[15px] font-normal text-[#1b1b1b] mb-4 font-display" style={{ fontVariationSettings: "'SOFT' 100, 'WONK' 1" }}>
           Based on your recent practice
         </h2>
-        <div className="bg-white rounded-xl border border-gray-200 p-8">
+        <div className="bg-white rounded-2xl border border-[#1b1b1b]/[0.07] p-8 shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]">
           {loading ? (
             <div className="flex flex-col items-center justify-center py-8">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#d4af37] mb-4"></div>
-              <p className="text-gray-600">Loading...</p>
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#1b1b1b] mb-4"></div>
+              <p className="text-[#1b1b1b]/45">Loading...</p>
             </div>
           ) : sessions.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-8">
               <svg
-                className="w-12 h-12 text-gray-500 mb-4"
+                className="w-12 h-12 text-[#1b1b1b]/20 mb-4"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -252,16 +254,16 @@ export default function DashboardPage() {
                 <circle cx="11" cy="11" r="8" />
                 <line x1="21" y1="21" x2="16.65" y2="16.65" />
               </svg>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <h3 className="text-[15px] font-normal text-[#1b1b1b] mb-2 font-display" style={{ fontVariationSettings: "'SOFT' 100, 'WONK' 1" }}>
                 Hmmm, no activity.
               </h3>
-              <p className="text-gray-600 text-center mb-4 max-w-md">
+              <p className="text-[#1b1b1b]/45 text-center mb-4 max-w-md text-[13px]">
                 We&apos;ll suggest personalized questions based on your practice
                 history. Begin by exploring the question bank.
               </p>
               <Link
                 href="/dashboard/questions"
-                className="text-[#d4af37] hover:text-[#f4d03f] font-medium transition-colors"
+                className="text-[13px] bg-[#c1f879] text-[#1b1b1b] font-semibold px-5 py-2 rounded-full hover:bg-[#b5ee6a] transition-colors"
               >
                 Start exploring
               </Link>
@@ -275,12 +277,12 @@ export default function DashboardPage() {
                   <Link
                     key={session.id}
                     href={`/session/${session.id}`}
-                    className="flex items-center justify-between p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors"
+                    className="flex items-center justify-between p-4 rounded-xl bg-[#1b1b1b]/[0.02] hover:bg-[#1b1b1b]/[0.04] transition-colors border border-[#1b1b1b]/[0.04]"
                   >
                     <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 rounded-lg bg-[#d4af37]/10 flex items-center justify-center">
+                      <div className="w-10 h-10 rounded-[10px] bg-[#c1f879]/15 flex items-center justify-center">
                         <svg
-                          className="w-5 h-5 text-[#d4af37]"
+                          className="w-5 h-5 text-[#1e4635]"
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
@@ -290,12 +292,12 @@ export default function DashboardPage() {
                         </svg>
                       </div>
                       <div>
-                        <div className="font-medium text-gray-900 text-sm">
+                        <div className="font-medium text-[#1b1b1b] text-[13px]">
                           {session.question_title}
                         </div>
                         <div className="flex items-center gap-2 mt-1">
                           <span
-                            className={`text-xs px-2 py-0.5 rounded-full ${
+                            className={`text-[11px] px-2 py-0.5 rounded-full ${
                               TYPE_COLORS[questionType] ||
                               "text-gray-400 bg-gray-400/10"
                             }`}
@@ -303,7 +305,7 @@ export default function DashboardPage() {
                             {QUESTION_TYPE_LABELS[questionType] ||
                               session.question_type}
                           </span>
-                          <span className="text-xs text-gray-600">
+                          <span className="text-[11px] text-[#1b1b1b]/45">
                             {formatDate(session.created_at)}
                           </span>
                         </div>
@@ -311,11 +313,11 @@ export default function DashboardPage() {
                     </div>
                     {assessment && assessment.overall_score != null && (
                       <div
-                        className={`font-semibold ${getScoreColor(
+                        className={`font-semibold text-[14px] ${getScoreColor(
                           assessment.overall_score
                         )}`}
                       >
-                        {assessment.overall_score.toFixed(1)}/5
+                        {getScorePct(assessment.overall_score)}%
                       </div>
                     )}
                   </Link>
@@ -323,7 +325,7 @@ export default function DashboardPage() {
               })}
               <Link
                 href="/dashboard/history"
-                className="block text-center text-[#d4af37] hover:text-[#f4d03f] font-medium pt-2 transition-colors"
+                className="block text-center text-[13px] text-[#1b1b1b]/45 hover:text-[#1b1b1b]/70 font-medium pt-2 transition-colors"
               >
                 View all history
               </Link>
@@ -334,18 +336,20 @@ export default function DashboardPage() {
 
       {/* Pick back up */}
       <section className="mb-8">
-        <h2 className="text-lg font-semibold text-gray-900 mb-4">Pick back up</h2>
-        <div className="bg-white rounded-xl border border-gray-200 p-8">
+        <h2 className="text-[15px] font-normal text-[#1b1b1b] mb-4 font-display" style={{ fontVariationSettings: "'SOFT' 100, 'WONK' 1" }}>
+          Pick back up
+        </h2>
+        <div className="bg-white rounded-2xl border border-[#1b1b1b]/[0.07] p-8 shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]">
           <div className="flex flex-col items-center justify-center py-4">
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+            <h3 className="text-[15px] font-normal text-[#1b1b1b] mb-2 font-display" style={{ fontVariationSettings: "'SOFT' 100, 'WONK' 1" }}>
               Nothing in progress
             </h3>
-            <p className="text-gray-600 text-center mb-4">
+            <p className="text-[#1b1b1b]/45 text-center mb-4 text-[13px]">
               Practice sessions you&apos;ve started will show up here.
             </p>
             <Link
               href="/dashboard/questions"
-              className="text-[#d4af37] hover:text-[#f4d03f] font-medium transition-colors"
+              className="text-[13px] text-[#1b1b1b]/45 hover:text-[#1b1b1b]/70 font-medium transition-colors"
             >
               Go to Question Bank
             </Link>
@@ -355,18 +359,18 @@ export default function DashboardPage() {
 
       {/* Quick access to tracks */}
       <section>
-        <h2 className="text-lg font-semibold text-gray-900 mb-4">
+        <h2 className="text-[15px] font-normal text-[#1b1b1b] mb-4 font-display" style={{ fontVariationSettings: "'SOFT' 100, 'WONK' 1" }}>
           Browse by track
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Link
             href="/dashboard/questions?track=consulting"
-            className="group bg-white rounded-xl border border-gray-200 p-6 hover:border-blue-500/50 transition-all"
+            className="group bg-white rounded-2xl border border-[#1b1b1b]/[0.07] p-6 hover:border-[#1b1b1b]/15 transition-all shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]"
           >
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 rounded-xl bg-[#c1f879]/15 flex items-center justify-center group-hover:scale-110 transition-transform">
                 <svg
-                  className="w-6 h-6 text-blue-400"
+                  className="w-6 h-6 text-[#1e4635]"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -378,22 +382,22 @@ export default function DashboardPage() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 group-hover:text-blue-400 transition-colors">
+                <h3 className="font-semibold text-[#1b1b1b] text-[14px] group-hover:text-[#1e4635] transition-colors">
                   Consulting
                 </h3>
-                <p className="text-sm text-gray-600">MBB & Big 4 case interviews</p>
+                <p className="text-[13px] text-[#1b1b1b]/45">MBB & Big 4 case interviews</p>
               </div>
             </div>
           </Link>
 
           <Link
             href="/dashboard/questions?track=product-management"
-            className="group bg-white rounded-xl border border-gray-200 p-6 hover:border-violet-500/50 transition-all"
+            className="group bg-white rounded-2xl border border-[#1b1b1b]/[0.07] p-6 hover:border-[#1b1b1b]/15 transition-all shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]"
           >
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 rounded-xl bg-[#c1f879]/15 flex items-center justify-center group-hover:scale-110 transition-transform">
                 <svg
-                  className="w-6 h-6 text-violet-400"
+                  className="w-6 h-6 text-[#1e4635]"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -405,10 +409,10 @@ export default function DashboardPage() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 group-hover:text-violet-400 transition-colors">
+                <h3 className="font-semibold text-[#1b1b1b] text-[14px] group-hover:text-[#1e4635] transition-colors">
                   Product Management
                 </h3>
-                <p className="text-sm text-gray-600">FAANG & tech company PMs</p>
+                <p className="text-[13px] text-[#1b1b1b]/45">FAANG & tech company PMs</p>
               </div>
             </div>
           </Link>

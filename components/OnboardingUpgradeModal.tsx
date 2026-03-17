@@ -12,9 +12,9 @@ export default function OnboardingUpgradeModal({ onViewPlans, onSkip }: Onboardi
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
       <div className="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl animate-slide-up text-center">
         {/* Icon */}
-        <div className="w-14 h-14 rounded-full bg-[#d4af37]/10 flex items-center justify-center mx-auto mb-5">
+        <div className="w-14 h-14 rounded-full bg-[#c1f879]/10 flex items-center justify-center mx-auto mb-5">
           <svg
-            className="w-7 h-7 text-[#d4af37]"
+            className="w-7 h-7 text-[#4d7c0f]"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -37,21 +37,21 @@ export default function OnboardingUpgradeModal({ onViewPlans, onSkip }: Onboardi
         </p>
 
         {/* Benefits */}
-        <div className="bg-[#faf8f5] rounded-xl p-4 mb-6 border border-[#d4af37]/20 text-left space-y-3">
+        <div className="bg-[#faf8f5] rounded-xl p-4 mb-6 border border-[#c1f879]/20 text-left space-y-3">
           <div className="flex items-start gap-3">
-            <svg className="w-5 h-5 text-[#d4af37] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <svg className="w-5 h-5 text-[#4d7c0f] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
             <span className="text-gray-700 text-sm">Unlimited learn &amp; practice sessions</span>
           </div>
           <div className="flex items-start gap-3">
-            <svg className="w-5 h-5 text-[#d4af37] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <svg className="w-5 h-5 text-[#4d7c0f] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
             <span className="text-gray-700 text-sm">Real-time AI feedback on your answers</span>
           </div>
           <div className="flex items-start gap-3">
-            <svg className="w-5 h-5 text-[#d4af37] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <svg className="w-5 h-5 text-[#4d7c0f] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
             <span className="text-gray-700 text-sm">Detailed assessments to track your progress</span>
@@ -63,7 +63,7 @@ export default function OnboardingUpgradeModal({ onViewPlans, onSkip }: Onboardi
           <Link
             href="/pricing"
             onClick={onViewPlans}
-            className="w-full py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-xl font-medium text-center hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
+            className="w-full py-3 bg-[#c1f879] text-[#1b1b1b] rounded-xl font-medium text-center hover:shadow-lg hover:shadow-[#c1f879]/25 transition-all"
           >
             Unlock Full Access
           </Link>

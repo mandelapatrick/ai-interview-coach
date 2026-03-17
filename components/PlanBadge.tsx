@@ -7,7 +7,7 @@ interface PlanBadgeProps {
 export default function PlanBadge({ plan }: PlanBadgeProps) {
   if (plan === "pro") {
     return (
-      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-[#d4af37]/10 text-[#d4af37]">
+      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-[#c1f879]/10 text-[#1b1b1b]">
         Pro
       </span>
     );

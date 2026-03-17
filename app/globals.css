@@ -7,9 +7,9 @@
   --brand-navy-light: #1e4a6d;
   --brand-teal: #0d4a4a;
 
-  --brand-gold: #d4af37;
-  --brand-gold-light: #f4d03f;
-  --brand-gold-dark: #b8972e;
+  --brand-lime: #c1f879;
+  --brand-lime-light: #d4ffa0;
+  --brand-lime-dark: #a8e05f;
 
   /* Surface Colors - Light theme */
   --surface-dark: #f9fafb;
@@ -19,7 +19,7 @@
   /* Border Colors */
   --border-subtle: rgba(0, 0, 0, 0.06);
   --border-default: rgba(0, 0, 0, 0.1);
-  --border-gold: rgba(212, 175, 55, 0.3);
+  --border-lime: rgba(193, 248, 121, 0.3);
 
   /* Text Colors */
   --text-primary: #111827;
@@ -58,7 +58,7 @@ body {
 
 /* Selection color */
 ::selection {
-  background: rgba(212, 175, 55, 0.2);
+  background: rgba(193, 248, 121, 0.2);
   color: #111827;
 }
 

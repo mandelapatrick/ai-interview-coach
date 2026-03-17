@@ -76,7 +76,7 @@ const companyInitials: Record<string, string> = {
 
 const DIFFICULTY_COLORS_DARK: Record<Difficulty, string> = {
   easy: "text-green-600 bg-green-400/10",
-  medium: "text-[#d4af37] bg-[#d4af37]/10",
+  medium: "text-[#4d7c0f] bg-[#c1f879]/10",
   hard: "text-red-600 bg-red-400/10",
 };
 
@@ -187,7 +187,7 @@ export default function CompanyQuestionsPage() {
       {/* Header */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-4">
-          <Link href={backLink} className="text-sm text-[#d4af37] hover:text-[#f4d03f] mb-4 inline-block">
+          <Link href={backLink} className="text-sm text-[#4d7c0f] hover:text-[#3d6b0a] mb-4 inline-block">
             ← {backText}
           </Link>
           <div className="flex items-center gap-4">
@@ -222,14 +222,14 @@ export default function CompanyQuestionsPage() {
               placeholder="Search questions..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:border-transparent w-64"
+              className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#c1f879] focus:border-transparent w-64"
             />
 
             {/* Type Filter */}
             <select
               value={typeFilter}
               onChange={(e) => setTypeFilter(e.target.value as AllQuestionTypes | "all")}
-              className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
+              className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#c1f879]"
             >
               {questionTypes.map((type) => (
                 <option key={type} value={type}>
@@ -242,7 +242,7 @@ export default function CompanyQuestionsPage() {
             <select
               value={frequencyFilter}
               onChange={(e) => setFrequencyFilter(e.target.value as Frequency | "all")}
-              className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
+              className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#c1f879]"
             >
               <option value="all">All Frequencies</option>
               <option value="high">High Frequency</option>
@@ -255,7 +255,7 @@ export default function CompanyQuestionsPage() {
               <select
                 value={styleFilter}
                 onChange={(e) => setStyleFilter(e.target.value)}
-                className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
+                className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#c1f879]"
               >
                 <option value="all">All Styles</option>
                 <option value="candidate-led">Candidate-Led</option>
@@ -321,7 +321,7 @@ export default function CompanyQuestionsPage() {
                       </Link>
                       <Link
                         href={`/practice/${question.id}`}
-                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white text-sm font-medium rounded-lg hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
+                        className="inline-flex items-center px-4 py-2 bg-[#c1f879] text-[#1b1b1b] text-sm font-medium rounded-lg hover:shadow-lg hover:shadow-[#c1f879]/25 transition-all"
                       >
                         Practice
                       </Link>

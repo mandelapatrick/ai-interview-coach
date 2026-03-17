@@ -187,7 +187,7 @@ export default function QuestionBankPage() {
                 placeholder="Search questions..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 pl-10 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#d4af37]/50 focus:ring-1 focus:ring-[#d4af37]/50"
+                className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 pl-10 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#c1f879]/50 focus:ring-1 focus:ring-[#c1f879]/50"
               />
               <svg
                 className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400"
@@ -208,7 +208,7 @@ export default function QuestionBankPage() {
             <select
               value={companyFilter}
               onChange={(e) => updateFilter("company", e.target.value)}
-              className="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-gray-900 focus:outline-none focus:border-[#d4af37]/50 appearance-none cursor-pointer"
+              className="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-gray-900 focus:outline-none focus:border-[#c1f879]/50 appearance-none cursor-pointer"
             >
               <option value="all">All Companies</option>
               {filteredCompanies.map((company) => (
@@ -225,7 +225,7 @@ export default function QuestionBankPage() {
             <select
               value={typeFilter}
               onChange={(e) => updateFilter("type", e.target.value)}
-              className="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-gray-900 focus:outline-none focus:border-[#d4af37]/50 appearance-none cursor-pointer"
+              className="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-gray-900 focus:outline-none focus:border-[#c1f879]/50 appearance-none cursor-pointer"
             >
               <option value="all">All Types</option>
               {availableTypes.map((type) => (
@@ -243,7 +243,7 @@ export default function QuestionBankPage() {
               <select
                 value={styleFilter}
                 onChange={(e) => updateFilter("style", e.target.value)}
-                className="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-gray-900 focus:outline-none focus:border-[#d4af37]/50 appearance-none cursor-pointer"
+                className="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-gray-900 focus:outline-none focus:border-[#c1f879]/50 appearance-none cursor-pointer"
               >
                 <option value="all">All Styles</option>
                 <option value="candidate-led">Candidate-Led</option>
@@ -329,13 +329,13 @@ export default function QuestionBankPage() {
                   <div className="flex flex-row gap-2 sm:flex-col sm:flex-shrink-0">
                     <Link
                       href={buildQuestionLink("/practice", question.id)}
-                      className="flex-1 sm:flex-none px-4 py-2 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-lg font-medium text-sm hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all text-center"
+                      className="flex-1 sm:flex-none px-4 py-2 bg-[#c1f879] text-[#1b1b1b] rounded-full font-medium text-sm hover:shadow-lg hover:shadow-[#c1f879]/25 transition-all text-center"
                     >
                       Practice
                     </Link>
                     <Link
                       href={buildQuestionLink("/learn", question.id)}
-                      className="flex-1 sm:flex-none px-4 py-2 border border-[#d4af37] text-[#d4af37] rounded-lg font-medium text-sm hover:bg-[#d4af37]/10 transition-all text-center"
+                      className="flex-1 sm:flex-none px-4 py-2 border border-[#1b1b1b]/20 text-[#1b1b1b] rounded-full font-medium text-sm hover:bg-[#1b1b1b]/5 transition-all text-center"
                     >
                       Learn
                     </Link>

@@ -58,7 +58,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
   if (loading) {
     return (
       <div className="min-h-full flex items-center justify-center">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#d4af37]"></div>
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#c1f879]"></div>
       </div>
     );
   }
@@ -96,7 +96,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
                 <h3 className="font-semibold mb-3 md:mb-4 text-gray-800">What to expect:</h3>
                 <ul className="space-y-3 text-gray-600 text-sm md:text-base">
                   <li className="flex items-start gap-3">
-                    <span className="text-[#d4af37] mt-1">
+                    <span className="text-[#4d7c0f] mt-1">
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                         <path
                           fillRule="evenodd"
@@ -111,7 +111,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-[#d4af37] mt-1">
+                    <span className="text-[#4d7c0f] mt-1">
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                         <path
                           fillRule="evenodd"
@@ -126,7 +126,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-[#d4af37] mt-1">
+                    <span className="text-[#4d7c0f] mt-1">
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                         <path
                           fillRule="evenodd"
@@ -145,7 +145,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
 
               <button
                 onClick={handleStartWatching}
-                className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white font-medium rounded-xl hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
+                className="w-full sm:w-auto px-8 py-3 bg-[#c1f879] text-[#1b1b1b] font-medium rounded-xl hover:shadow-lg hover:shadow-[#c1f879]/25 transition-all"
               >
                 Start Learning
               </button>
@@ -185,14 +185,14 @@ export default function LearnFlow({ question }: LearnFlowProps) {
                       className={`p-3 rounded-lg ${
                         entry.speaker === "interviewer"
                           ? "bg-blue-500/10 border-l-2 border-blue-400"
-                          : "bg-[#d4af37]/10 border-l-2 border-[#d4af37]"
+                          : "bg-[#c1f879]/10 border-l-2 border-[#c1f879]"
                       }`}
                     >
                       <span
                         className={`text-xs font-medium uppercase ${
                           entry.speaker === "interviewer"
                             ? "text-blue-400"
-                            : "text-[#d4af37]"
+                            : "text-[#4d7c0f]"
                         }`}
                       >
                         {entry.speaker}
@@ -218,7 +218,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
               </button>
               <a
                 href={`/practice/${question.id}`}
-                className="px-6 py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white font-medium rounded-xl hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all text-center"
+                className="px-6 py-3 bg-[#c1f879] text-[#1b1b1b] font-medium rounded-xl hover:shadow-lg hover:shadow-[#c1f879]/25 transition-all text-center"
               >
                 Practice Now
               </a>

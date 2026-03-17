@@ -113,8 +113,8 @@ export default function OnboardingFlow() {
       <div className="w-full max-w-lg">
         {/* Progress indicator */}
         <div className="flex items-center justify-center gap-2 mb-10">
-          <div className={`h-1.5 w-12 rounded-full transition-colors ${step === "role-selection" ? "bg-[#d4af37]" : "bg-[#d4af37]"}`} />
-          <div className={`h-1.5 w-12 rounded-full transition-colors ${step === "referral-source" ? "bg-[#d4af37]" : "bg-gray-200"}`} />
+          <div className={`h-1.5 w-12 rounded-full transition-colors ${step === "role-selection" ? "bg-[#c1f879]" : "bg-[#c1f879]"}`} />
+          <div className={`h-1.5 w-12 rounded-full transition-colors ${step === "referral-source" ? "bg-[#c1f879]" : "bg-gray-200"}`} />
           <div className="h-1.5 w-12 rounded-full bg-gray-200" />
         </div>
 
@@ -134,7 +134,7 @@ export default function OnboardingFlow() {
                   onClick={() => setSelectedRole(role)}
                   className={`px-5 py-2.5 rounded-full text-sm font-medium border transition-all ${
                     selectedRole === role
-                      ? "bg-[#d4af37] text-white border-[#d4af37] shadow-md shadow-[#d4af37]/20"
+                      ? "bg-[#c1f879] text-[#1b1b1b] border-[#c1f879] shadow-md shadow-[#c1f879]/20"
                       : "bg-white text-gray-700 border-gray-200 hover:border-gray-300 hover:bg-gray-50"
                   }`}
                 >
@@ -149,7 +149,7 @@ export default function OnboardingFlow() {
                 setStep("referral-source");
               }}
               disabled={!selectedRole}
-              className="w-full max-w-xs mx-auto px-8 py-3 bg-[#d4af37] hover:bg-[#c4a030] text-white rounded-full font-medium transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+              className="w-full max-w-xs mx-auto px-8 py-3 bg-[#c1f879] hover:bg-[#a8e05f] text-[#1b1b1b] rounded-full font-medium transition-all disabled:opacity-40 disabled:cursor-not-allowed"
             >
               Next
             </button>
@@ -172,7 +172,7 @@ export default function OnboardingFlow() {
                   onClick={() => setSelectedReferral(source)}
                   className={`px-5 py-2.5 rounded-full text-sm font-medium border transition-all ${
                     selectedReferral === source
-                      ? "bg-[#d4af37] text-white border-[#d4af37] shadow-md shadow-[#d4af37]/20"
+                      ? "bg-[#c1f879] text-[#1b1b1b] border-[#c1f879] shadow-md shadow-[#c1f879]/20"
                       : "bg-white text-gray-700 border-gray-200 hover:border-gray-300 hover:bg-gray-50"
                   }`}
                 >
@@ -191,7 +191,7 @@ export default function OnboardingFlow() {
               <button
                 onClick={handleReferralNext}
                 disabled={!selectedReferral || isSaving}
-                className="px-8 py-3 bg-[#d4af37] hover:bg-[#c4a030] text-white rounded-full font-medium transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+                className="px-8 py-3 bg-[#c1f879] hover:bg-[#a8e05f] text-[#1b1b1b] rounded-full font-medium transition-all disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 {isSaving ? "Saving..." : "Next"}
               </button>

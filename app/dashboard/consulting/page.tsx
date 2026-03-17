@@ -8,7 +8,7 @@ export default function ConsultingDashboardPage() {
       <div className="mb-8">
         <Link
           href="/dashboard"
-          className="inline-flex items-center gap-2 text-gray-500 hover:text-[#d4af37] transition-colors mb-4"
+          className="inline-flex items-center gap-2 text-gray-500 hover:text-[#4d7c0f] transition-colors mb-4"
         >
           <svg
             className="w-4 h-4"

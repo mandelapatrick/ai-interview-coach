@@ -51,7 +51,7 @@ export default function FunnelChart({ title, steps, loading }: FunnelChartProps)
               </div>
               <div className="h-8 bg-gray-100 rounded overflow-hidden">
                 <div
-                  className="h-full bg-gradient-to-r from-[#d4af37] to-[#f4d03f] rounded transition-all duration-500"
+                  className="h-full bg-gradient-to-r from-[#c1f879] to-[#d4ffa0] rounded transition-all duration-500"
                   style={{ width: `${pct}%` }}
                 />
               </div>

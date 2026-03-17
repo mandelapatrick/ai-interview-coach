@@ -219,94 +219,171 @@ export default function AssessmentPage() {
     return `${mins}:${secs.toString().padStart(2, "0")}`;
   };
 
+  // Get score entries for category tiles
+  const getScoreEntries = (): { label: string; score: number; weight: string }[] => {
+    if (!assessment) return [];
+
+    if (assessment.assessmentSchema === "product-sense") {
+      const s = assessment.scores as ProductSenseScores;
+      return [
+        { label: "Product Motivation", score: s.productMotivation, weight: "20%" },
+        { label: "Target Audience", score: s.targetAudience, weight: "25%" },
+        { label: "Problem Identification", score: s.problemIdentification, weight: "25%" },
+        { label: "Solution Development", score: s.solutionDevelopment, weight: "20%" },
+        { label: "Communication", score: s.communicationStructure, weight: "10%" },
+      ];
+    }
+    if (assessment.assessmentSchema === "analytical-thinking") {
+      const s = assessment.scores as AnalyticalThinkingScores;
+      return [
+        { label: "Product Rationale", score: s.productRationale, weight: "15%" },
+        { label: "Measuring Impact", score: s.measuringImpact, weight: "35%" },
+        { label: "Setting Goals", score: s.settingGoals, weight: "25%" },
+        { label: "Evaluating Tradeoffs", score: s.evaluatingTradeoffs, weight: "25%" },
+      ];
+    }
+    if (assessment.track === "product-management") {
+      const s = assessment.scores as PMScores;
+      return [
+        { label: "Product Thinking", score: s.productThinking, weight: "25%" },
+        { label: "Communication", score: s.communication, weight: "20%" },
+        { label: "User Empathy", score: s.userEmpathy, weight: "15%" },
+        { label: "Technical Depth", score: s.technicalDepth, weight: "15%" },
+        { label: "Analytical Skills", score: s.analyticalSkills, weight: "15%" },
+        { label: "Creativity", score: s.creativity, weight: "10%" },
+      ];
+    }
+    // Default: consulting
+    const s = assessment.scores as ConsultingScores;
+    return [
+      { label: "Structure", score: s.structure, weight: "25%" },
+      { label: "Problem Solving", score: s.problemSolving, weight: "20%" },
+      { label: "Business Sense", score: s.businessJudgment, weight: "20%" },
+      { label: "Communication", score: s.communication, weight: "15%" },
+      { label: "Quantitative", score: s.quantitative, weight: "10%" },
+      { label: "Creativity", score: s.creativity, weight: "10%" },
+    ];
+  };
+
   if (!question) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <p className="text-gray-500">Question not found</p>
+      <div className="min-h-screen bg-[#fcfaf6] flex items-center justify-center">
+        <p className="text-[#1b1b1b]/45">Question not found</p>
       </div>
     );
   }
 
+  const isConsulting = question.track === "consulting";
+  const interviewTypeLabel = isConsulting ? "Consulting Interview" : "PM Interview";
+  const overallPct = assessment ? Math.round((assessment.overallScore / 5) * 100) : 0;
+  const scoreEntries = getScoreEntries();
+  const numCategories = scoreEntries.length;
+
+  const getScoreBadge = (pct: number) => {
+    if (pct >= 80) return { label: "Excellent", bg: "bg-[#d4ecb8]", text: "text-[#1e4635]" };
+    if (pct >= 60) return { label: "Good", bg: "bg-[#d4ecb8]", text: "text-[#1e4635]" };
+    if (pct >= 40) return { label: "Needs Improvement", bg: "bg-[#fde8d8]", text: "text-[#6f260b]" };
+    return { label: "Needs Improvement", bg: "bg-[#fde8d8]", text: "text-[#6f260b]" };
+  };
+
+  const scoreBadge = getScoreBadge(overallPct);
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white border-b border-gray-200">
-        <div className="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div className="min-h-screen bg-[#fcfaf6]">
+      {/* Topbar */}
+      <header className="bg-[#fcfaf6] border-b border-[#1b1b1b]/[0.08] sticky top-0 z-10">
+        <div className="max-w-5xl mx-auto px-8 h-[54px] flex items-center justify-between">
           {isOnboarding ? (
             <a
               href="/dashboard"
-              className="text-sm text-[#d4af37] hover:text-[#f4d03f] transition-colors"
+              className="flex items-center gap-1.5 text-[13.5px] text-[#1b1b1b]/45 hover:text-[#1b1b1b]/70 transition-colors font-medium"
             >
-              ← Go to Dashboard
+              <svg className="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="15 18 9 12 15 6" />
+              </svg>
+              Go to Dashboard
             </a>
           ) : (
             <Link
               href={`/dashboard/questions?track=${question.track}`}
-              className="text-sm text-[#d4af37] hover:text-[#f4d03f] transition-colors"
+              className="flex items-center gap-1.5 text-[13.5px] text-[#1b1b1b]/45 hover:text-[#1b1b1b]/70 transition-colors font-medium"
             >
-              ← Back to Question Bank
+              <svg className="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="15 18 9 12 15 6" />
+              </svg>
+              Back to Question Bank
             </Link>
           )}
-          {!isOnboarding && (
-            <Link
-              href="/history"
-              className="text-sm text-gray-500 hover:text-[#d4af37] transition-colors"
-            >
-              View History
-            </Link>
-          )}
+          <div className="flex items-center gap-2 text-[13px]">
+            <span className="font-semibold text-[#1b1b1b]">{interviewTypeLabel}</span>
+            <span className="w-1 h-1 rounded-full bg-[#1b1b1b]/20" />
+            <span className="text-[#1b1b1b]/45">{sessionData ? formatDuration(sessionData.duration) : "--:--"} session</span>
+            {!isOnboarding && (
+              <>
+                <span className="w-1 h-1 rounded-full bg-[#1b1b1b]/20" />
+                <Link
+                  href="/dashboard/history"
+                  className="text-[#1b1b1b]/45 hover:text-[#1b1b1b]/70 transition-colors"
+                >
+                  View History
+                </Link>
+              </>
+            )}
+          </div>
         </div>
       </header>
 
-      <main className="max-w-4xl mx-auto px-4 py-8">
-        {/* Title */}
-        <div className="mb-8">
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 font-display">
+      <main className="max-w-5xl mx-auto px-8 py-7">
+        {/* Page header */}
+        <div className="mb-6">
+          <h1 className="text-[34px] font-normal text-[#1b1b1b] tracking-[-0.5px] font-display" style={{ fontVariationSettings: "'SOFT' 100, 'WONK' 1" }}>
             Interview Assessment
           </h1>
-          <p className="text-gray-500">
-            {question.title} • {sessionData ? formatDuration(sessionData.duration) : "--:--"} session
-          </p>
+          <div className="flex items-center gap-2 mt-1.5 text-[13.5px] text-[#1b1b1b]/45">
+            <span>{question.title}</span>
+            <span className="w-[3px] h-[3px] rounded-full bg-[#1b1b1b]/25" />
+            <span>{sessionData ? formatDuration(sessionData.duration) : "--:--"} session</span>
+          </div>
         </div>
 
         {loading ? (
           <div className="text-center py-12">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#d4af37] mx-auto mb-4"></div>
-            <p className="text-gray-600">Analyzing your performance with AI...</p>
-            <p className="text-sm text-gray-600 mt-2">This may take a few seconds</p>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#1b1b1b] mx-auto mb-4"></div>
+            <p className="text-[#1b1b1b]/[0.68]">Analyzing your performance with AI...</p>
+            <p className="text-[13px] text-[#1b1b1b]/45 mt-2">This may take a few seconds</p>
           </div>
         ) : error ? (
-          <div className="text-center py-12 bg-white rounded-xl border border-gray-200">
-            <p className="text-red-400 mb-4">{error}</p>
+          <div className="text-center py-12 bg-white rounded-2xl border border-[#1b1b1b]/[0.07]">
+            <p className="text-[#ef8660] mb-4">{error}</p>
             <Link
               href={`/practice/${questionId}`}
-              className="text-[#d4af37] hover:text-[#f4d03f] transition-colors"
+              className="text-[#1b1b1b]/45 hover:text-[#1b1b1b]/70 transition-colors"
             >
               Start a new practice session
             </Link>
           </div>
         ) : !sessionData ? (
-          <div className="text-center py-12 bg-white rounded-xl border border-gray-200">
-            <p className="text-gray-500 mb-4">No session data found.</p>
+          <div className="text-center py-12 bg-white rounded-2xl border border-[#1b1b1b]/[0.07]">
+            <p className="text-[#1b1b1b]/45 mb-4">No session data found.</p>
             <Link
               href={`/practice/${questionId}`}
-              className="text-[#d4af37] hover:text-[#f4d03f] transition-colors"
+              className="text-[#1b1b1b]/45 hover:text-[#1b1b1b]/70 transition-colors"
             >
               Start a new practice session
             </Link>
           </div>
         ) : assessment ? (
-          <div className="space-y-6">
+          <div className="space-y-5">
             {/* Session Recording */}
             {(videoRecordingUrl || sessionData?.videoRecordingUrl) && (
-              <div className="bg-white rounded-xl border border-gray-200 p-6">
-                <h2 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                  <svg className="w-5 h-5 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="bg-white rounded-2xl border border-[#1b1b1b]/[0.07] p-6 shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]">
+                <h2 className="text-[15px] font-normal text-[#1b1b1b] mb-4 font-display flex items-center gap-2" style={{ fontVariationSettings: "'SOFT' 100, 'WONK' 1" }}>
+                  <svg className="w-[18px] h-[18px] text-[#1b1b1b]/65" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                   </svg>
                   Session Recording
                 </h2>
-                <div className="rounded-lg overflow-hidden bg-black">
+                <div className="rounded-xl overflow-hidden bg-black">
                   <video
                     src={videoRecordingUrl || sessionData.videoRecordingUrl || ''}
                     controls
@@ -316,118 +393,162 @@ export default function AssessmentPage() {
                     Your browser does not support the video tag.
                   </video>
                 </div>
-                <p className="text-gray-600 text-sm mt-2">
+                <p className="text-[#1b1b1b]/45 text-[13px] mt-3">
                   Watch your interview recording to review your performance.
                 </p>
               </div>
             )}
 
-            {/* Overall Score */}
-            <div className="bg-white rounded-xl border border-gray-200 p-6">
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-xl font-semibold text-gray-900">
-                  Overall Score
-                </h2>
-                <div className="flex items-center gap-2">
-                  <ScoreRing score={assessment.overallScore} />
-                  <div className="text-3xl sm:text-4xl font-bold text-[#d4af37]">
-                    {assessment.overallScore.toFixed(1)}
-                    <span className="text-base sm:text-lg text-gray-600">/5</span>
+            {/* Score + AI Feedback row */}
+            <div className="flex gap-[18px] items-start">
+              {/* Score panel */}
+              <div className="flex-1 bg-white rounded-2xl border border-[#1b1b1b]/[0.07] p-6 shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]">
+                {/* Header */}
+                <div className="flex items-center justify-between mb-5">
+                  <div className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-[#1b1b1b]/65" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <rect x="3" y="12" width="4" height="9" rx="1" />
+                      <rect x="10" y="7" width="4" height="14" rx="1" />
+                      <rect x="17" y="3" width="4" height="18" rx="1" />
+                    </svg>
+                    <span className="text-[15px] font-normal text-[#1b1b1b] font-display" style={{ fontVariationSettings: "'SOFT' 100, 'WONK' 1" }}>
+                      Overall Score
+                    </span>
                   </div>
+                  <Link
+                    href="#details"
+                    className="bg-[#c1f879] text-[#1b1b1b] text-[13px] font-semibold px-[18px] py-2 rounded-full tracking-[0.1px] hover:bg-[#b5ee6a] transition-colors"
+                  >
+                    Details &rarr;
+                  </Link>
+                </div>
+
+                {/* Gauge + score info */}
+                <div className="flex items-center gap-5 pb-5 border-b border-[#1b1b1b]/[0.07] mb-5">
+                  <ScoreGauge percentage={overallPct} />
+                  <div>
+                    <span className={`inline-flex px-3 py-1 rounded-full text-[13px] font-semibold ${scoreBadge.bg} ${scoreBadge.text}`}>
+                      {scoreBadge.label}
+                    </span>
+                    <p className="text-[13px] text-[#1b1b1b]/45 mt-2">
+                      {overallPct}% overall across {numCategories} categories
+                    </p>
+                  </div>
+                </div>
+
+                {/* Category tiles */}
+                <div className="grid grid-cols-3 gap-3">
+                  {scoreEntries.map((entry) => (
+                    <CategoryTile key={entry.label} label={entry.label} score={entry.score} weight={entry.weight} />
+                  ))}
                 </div>
               </div>
 
-              {/* Score Breakdown */}
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {assessment.assessmentSchema === "product-sense" ? (
-                  <>
-                    <ScoreItem label="Product Motivation" score={(assessment.scores as ProductSenseScores).productMotivation} weight="20%" />
-                    <ScoreItem label="Target Audience" score={(assessment.scores as ProductSenseScores).targetAudience} weight="25%" />
-                    <ScoreItem label="Problem Identification" score={(assessment.scores as ProductSenseScores).problemIdentification} weight="25%" />
-                    <ScoreItem label="Solution Development" score={(assessment.scores as ProductSenseScores).solutionDevelopment} weight="20%" />
-                    <ScoreItem label="Communication" score={(assessment.scores as ProductSenseScores).communicationStructure} weight="10%" />
-                  </>
-                ) : assessment.assessmentSchema === "analytical-thinking" ? (
-                  <>
-                    <ScoreItem label="Product Rationale" score={(assessment.scores as AnalyticalThinkingScores).productRationale} weight="15%" />
-                    <ScoreItem label="Measuring Impact" score={(assessment.scores as AnalyticalThinkingScores).measuringImpact} weight="35%" />
-                    <ScoreItem label="Setting Goals" score={(assessment.scores as AnalyticalThinkingScores).settingGoals} weight="25%" />
-                    <ScoreItem label="Evaluating Tradeoffs" score={(assessment.scores as AnalyticalThinkingScores).evaluatingTradeoffs} weight="25%" />
-                  </>
-                ) : assessment.track === "product-management" ? (
-                  <>
-                    <ScoreItem label="Product Thinking" score={(assessment.scores as PMScores).productThinking} weight="25%" />
-                    <ScoreItem label="Communication" score={(assessment.scores as PMScores).communication} weight="20%" />
-                    <ScoreItem label="User Empathy" score={(assessment.scores as PMScores).userEmpathy} weight="15%" />
-                    <ScoreItem label="Technical Depth" score={(assessment.scores as PMScores).technicalDepth} weight="15%" />
-                    <ScoreItem label="Analytical Skills" score={(assessment.scores as PMScores).analyticalSkills} weight="15%" />
-                    <ScoreItem label="Creativity" score={(assessment.scores as PMScores).creativity} weight="10%" />
-                  </>
-                ) : (
-                  <>
-                    <ScoreItem label="Structure" score={(assessment.scores as ConsultingScores).structure} weight="25%" />
-                    <ScoreItem label="Problem Solving" score={(assessment.scores as ConsultingScores).problemSolving} weight="20%" />
-                    <ScoreItem label="Business Sense" score={(assessment.scores as ConsultingScores).businessJudgment} weight="20%" />
-                    <ScoreItem label="Communication" score={(assessment.scores as ConsultingScores).communication} weight="15%" />
-                    <ScoreItem label="Quantitative" score={(assessment.scores as ConsultingScores).quantitative} weight="10%" />
-                    <ScoreItem label="Creativity" score={(assessment.scores as ConsultingScores).creativity} weight="10%" />
-                  </>
-                )}
+              {/* AI Feedback panel */}
+              <div className="w-[315px] shrink-0">
+                <div className="bg-white rounded-2xl border border-[#1b1b1b]/[0.07] p-6 shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]">
+                  {/* Header */}
+                  <div className="flex items-center gap-2.5 mb-4">
+                    <div className="w-[30px] h-[30px] rounded-[9px] flex items-center justify-center" style={{ backgroundImage: "linear-gradient(135deg, rgb(232, 211, 248) 0%, rgb(204, 242, 251) 100%)" }}>
+                      <span className="text-[#1b1b1b] text-sm">&#10022;</span>
+                    </div>
+                    <span className="text-[15px] font-normal text-[#1b1b1b] font-display" style={{ fontVariationSettings: "'SOFT' 100, 'WONK' 1" }}>
+                      AI Feedback
+                    </span>
+                  </div>
+
+                  {/* Feedback paragraphs */}
+                  <div className="space-y-2.5 mb-4">
+                    {assessment.feedback.split("\n").filter(Boolean).map((paragraph, i) => (
+                      <p key={i} className="text-[13px] leading-[22px] text-[#1b1b1b]/[0.68]">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+
+                  {/* Recommendation box */}
+                  {assessment.improvements && assessment.improvements.length > 0 && (
+                    <div className="bg-[#c1f879]/10 border border-[#c1f879]/30 rounded-[10px] p-3.5">
+                      <div className="flex gap-2.5 items-start">
+                        <span className="text-[#1e4635]/70 text-[13px] mt-0.5 shrink-0">&#10022;</span>
+                        <p className="text-[13px] leading-[20px] text-[#1b1b1b]/65">
+                          {assessment.improvements[0]}
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
 
-            {/* Feedback */}
-            <div className="bg-white rounded-xl border border-gray-200 p-6">
-              <h2 className="text-xl font-semibold text-gray-900 mb-4">
-                AI Feedback
-              </h2>
-              <p className="text-gray-600 leading-relaxed">{assessment.feedback}</p>
-            </div>
-
-            {/* Dimension-Specific Feedback (Product Sense and Analytical Thinking) */}
+            {/* Dimension-Specific Feedback */}
             {(assessment.assessmentSchema === "product-sense" || assessment.assessmentSchema === "analytical-thinking") && assessment.dimensionFeedback && (
-              <div className="bg-white rounded-xl border border-gray-200 p-6">
-                <h2 className="text-xl font-semibold text-gray-900 mb-4">
+              <div className="bg-white rounded-2xl border border-[#1b1b1b]/[0.07] p-6 shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]">
+                <h2 className="text-[15px] font-normal text-[#1b1b1b] mb-4 font-display" style={{ fontVariationSettings: "'SOFT' 100, 'WONK' 1" }}>
                   Detailed Dimension Feedback
                 </h2>
                 <div className="space-y-4">
                   {Object.entries(assessment.dimensionFeedback).map(([dimension, feedback]) => (
-                    <div key={dimension} className="border-l-2 border-[#d4af37]/50 pl-4">
-                      <h3 className="text-sm font-medium text-[#d4af37] mb-1">
+                    <div key={dimension} className="border-l-2 border-[#c1f879]/50 pl-4">
+                      <h3 className="text-[12px] font-semibold text-[#1e4635] uppercase tracking-[0.5px] mb-1">
                         {formatDimensionName(dimension)}
                       </h3>
-                      <p className="text-gray-600 text-sm">{feedback}</p>
+                      <p className="text-[13px] leading-[21px] text-[#1b1b1b]/[0.68]">{feedback}</p>
                     </div>
                   ))}
                 </div>
               </div>
             )}
 
-            {/* Strengths & Improvements */}
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-xl border border-gray-200 p-6">
-                <h2 className="text-lg font-semibold text-green-400 mb-4 flex items-center gap-2">
-                  <span className="text-xl">✓</span> Strengths
-                </h2>
+            {/* Strengths + Areas to Improve */}
+            <div className="flex gap-[18px]" id="details">
+              {/* Strengths */}
+              <div className="flex-1 bg-white rounded-2xl border border-[#1b1b1b]/[0.07] p-6 shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-2">
+                    <svg className="w-[18px] h-[18px] text-[#1e4635]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                    <span className="text-[15px] font-normal text-[#1b1b1b] font-display" style={{ fontVariationSettings: "'SOFT' 100, 'WONK' 1" }}>
+                      Strengths
+                    </span>
+                  </div>
+                  <span className="bg-[#d4ecb8] text-[#1e4635] text-[12px] font-semibold px-2.5 py-0.5 rounded-full">
+                    {assessment.strengths?.length || 0} items
+                  </span>
+                </div>
                 <ul className="space-y-3">
                   {assessment.strengths.map((item, i) => (
-                    <li key={i} className="text-gray-600 flex items-start gap-2">
-                      <span className="text-green-400 mt-1">•</span>
-                      {item}
+                    <li key={i} className="flex items-start gap-2.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#1e4635] mt-2 shrink-0" />
+                      <span className="text-[13px] leading-[21px] text-[#1b1b1b]/[0.72]">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="bg-white rounded-xl border border-gray-200 p-6">
-                <h2 className="text-lg font-semibold text-[#d4af37] mb-4 flex items-center gap-2">
-                  <span className="text-xl">↑</span> Areas to Improve
-                </h2>
+              {/* Areas to Improve */}
+              <div className="flex-1 bg-white rounded-2xl border border-[#1b1b1b]/[0.07] p-6 shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-2">
+                    <svg className="w-[18px] h-[18px] text-[#ef8660]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                      <polyline points="17 6 23 6 23 12" />
+                    </svg>
+                    <span className="text-[15px] font-normal text-[#1b1b1b] font-display" style={{ fontVariationSettings: "'SOFT' 100, 'WONK' 1" }}>
+                      Areas to Improve
+                    </span>
+                  </div>
+                  <span className="bg-[#fde8d8] text-[#6f260b] text-[12px] font-semibold px-2.5 py-0.5 rounded-full">
+                    {assessment.improvements?.length || 0} items
+                  </span>
+                </div>
                 <ul className="space-y-3">
                   {assessment.improvements.map((item, i) => (
-                    <li key={i} className="text-gray-600 flex items-start gap-2">
-                      <span className="text-[#d4af37] mt-1">•</span>
-                      {item}
+                    <li key={i} className="flex items-start gap-2.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#ef8660] mt-2 shrink-0" />
+                      <span className="text-[13px] leading-[21px] text-[#1b1b1b]/[0.72]">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -435,21 +556,21 @@ export default function AssessmentPage() {
             </div>
 
             {/* Transcript */}
-            <div className="bg-white rounded-xl border border-gray-200 p-6">
-              <h2 className="text-xl font-semibold text-gray-900 mb-4">
+            <div className="bg-white rounded-2xl border border-[#1b1b1b]/[0.07] p-6 shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]">
+              <h2 className="text-[15px] font-normal text-[#1b1b1b] mb-4 font-display" style={{ fontVariationSettings: "'SOFT' 100, 'WONK' 1" }}>
                 Session Transcript
               </h2>
               <div className="space-y-4 max-h-96 overflow-y-auto">
                 {sessionData.transcript.map((entry, i) => (
                   <div key={i}>
-                    <div className="text-xs font-medium text-gray-600 mb-1">
+                    <div className="text-[11px] font-semibold text-[#1b1b1b]/45 uppercase tracking-[0.5px] mb-1">
                       {entry.role === "user" ? "You" : "AI Interviewer"}
                     </div>
                     <p
-                      className={`text-gray-700 p-3 rounded-lg ${
+                      className={`text-[13px] leading-[21px] text-[#1b1b1b]/[0.72] p-3 rounded-xl ${
                         entry.role === "user"
-                          ? "bg-[#d4af37]/10 border-l-4 border-[#d4af37]"
-                          : "bg-gray-50 border-l-4 border-gray-300"
+                          ? "bg-[#c1f879]/10 border-l-[3px] border-[#c1f879]"
+                          : "bg-[#1b1b1b]/[0.03] border-l-[3px] border-[#1b1b1b]/10"
                       }`}
                     >
                       {entry.text}
@@ -464,7 +585,7 @@ export default function AssessmentPage() {
               {isOnboarding ? (
                 <a
                   href="/dashboard"
-                  className="px-6 py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-lg font-medium hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all text-center"
+                  className="px-6 py-3 bg-[#c1f879] text-[#1b1b1b] rounded-full font-semibold hover:bg-[#b5ee6a] transition-colors text-center text-[14px]"
                 >
                   Go to Dashboard
                 </a>
@@ -472,13 +593,13 @@ export default function AssessmentPage() {
                 <>
                   <Link
                     href={`/practice/${questionId}`}
-                    className="px-6 py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-lg font-medium hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all text-center"
+                    className="px-6 py-3 bg-[#c1f879] text-[#1b1b1b] rounded-full font-semibold hover:bg-[#b5ee6a] transition-colors text-center text-[14px]"
                   >
                     Practice Again
                   </Link>
                   <Link
                     href={`/dashboard/questions?track=${question.track}`}
-                    className="px-6 py-3 bg-white text-gray-900 rounded-lg font-medium hover:bg-gray-50 transition-colors border border-gray-200 text-center"
+                    className="px-6 py-3 bg-white text-[#1b1b1b] rounded-full font-semibold hover:bg-[#1b1b1b]/[0.03] transition-colors border border-[#1b1b1b]/[0.07] text-center text-[14px]"
                   >
                     Try Another Question
                   </Link>
@@ -492,55 +613,77 @@ export default function AssessmentPage() {
   );
 }
 
-function ScoreRing({ score }: { score: number }) {
-  const percentage = (score / 5) * 100;
-  const circumference = 2 * Math.PI * 20;
+function ScoreGauge({ percentage }: { percentage: number }) {
+  const size = 98;
+  const strokeWidth = 6;
+  const radius = (size - strokeWidth) / 2;
+  const circumference = 2 * Math.PI * radius;
   const strokeDashoffset = circumference - (percentage / 100) * circumference;
 
-  const getColor = (s: number) => {
-    if (s >= 4) return "#22c55e";
-    if (s >= 3) return "#d4af37";
-    return "#ef4444";
+  const getColor = (pct: number) => {
+    if (pct >= 60) return "#1e4635";
+    return "#ef8660";
+  };
+
+  const getTrackColor = (pct: number) => {
+    if (pct >= 60) return "#d4ecb8";
+    return "#fde8d8";
   };
 
   return (
-    <svg width="50" height="50" className="-rotate-90">
-      <circle
-        cx="25"
-        cy="25"
-        r="20"
-        fill="none"
-        stroke="#e5e7eb"
-        strokeWidth="4"
-      />
-      <circle
-        cx="25"
-        cy="25"
-        r="20"
-        fill="none"
-        stroke={getColor(score)}
-        strokeWidth="4"
-        strokeDasharray={circumference}
-        strokeDashoffset={strokeDashoffset}
-        strokeLinecap="round"
-      />
-    </svg>
+    <div className="relative shrink-0" style={{ width: size, height: size }}>
+      <svg width={size} height={size} className="-rotate-90">
+        <circle
+          cx={size / 2}
+          cy={size / 2}
+          r={radius}
+          fill="none"
+          stroke={getTrackColor(percentage)}
+          strokeWidth={strokeWidth}
+        />
+        <circle
+          cx={size / 2}
+          cy={size / 2}
+          r={radius}
+          fill="none"
+          stroke={getColor(percentage)}
+          strokeWidth={strokeWidth}
+          strokeDasharray={circumference}
+          strokeDashoffset={strokeDashoffset}
+          strokeLinecap="round"
+        />
+      </svg>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <span className="text-[22px] text-[#1b1b1b] font-display" style={{ fontVariationSettings: "'SOFT' 0, 'WONK' 1" }}>
+          {percentage}%
+        </span>
+      </div>
+    </div>
   );
 }
 
-function ScoreItem({ label, score, weight }: { label: string; score: number; weight: string }) {
-  const getColor = (s: number) => {
-    if (s >= 4) return "text-green-400 bg-green-400/10 border-green-400/20";
-    if (s >= 3) return "text-[#d4af37] bg-[#d4af37]/10 border-[#d4af37]/20";
-    return "text-red-400 bg-red-400/10 border-red-400/20";
-  };
+function CategoryTile({ label, score, weight }: { label: string; score: number; weight: string }) {
+  const pct = Math.round((score / 5) * 100);
+  const isGood = pct >= 60;
 
   return (
-    <div className={`p-3 rounded-lg border ${getColor(score)}`}>
-      <div className="text-sm font-medium leading-snug mb-1">{label}</div>
-      <div className="flex items-center justify-between">
-        <span className="text-xs text-gray-600">({weight})</span>
-        <span className="font-bold">{score}/5</span>
+    <div className={`rounded-xl border border-[#1b1b1b]/[0.06] p-4 ${
+      isGood ? "bg-[#f1fae9]" : "bg-[#fef4ed]"
+    }`}>
+      <div className={`text-[30px] font-display leading-[30px] ${
+        isGood ? "text-[#1e4635]" : "text-[#ef8660]"
+      }`} style={{ fontVariationSettings: "'SOFT' 0, 'WONK' 1" }}>
+        {pct}%
+      </div>
+      <div className={`text-[10px] font-semibold uppercase tracking-[0.7px] mt-1.5 ${
+        isGood ? "text-[#1e4635]/60" : "text-[#6f260b]/55"
+      }`}>
+        {label}
+      </div>
+      <div className={`text-[9px] tracking-[0.3px] mt-0.5 ${
+        isGood ? "text-[#1e4635]/40" : "text-[#6f260b]/35"
+      }`}>
+        ({weight})
       </div>
     </div>
   );

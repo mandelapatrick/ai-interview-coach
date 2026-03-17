@@ -20,15 +20,15 @@ function PulsingCircle({ isActive, isSpeaking }: { isActive: boolean; isSpeaking
       {isActive && isSpeaking && (
         <>
           <div
-            className="absolute w-full h-full rounded-full bg-[#d4af37]/20 animate-pulse-ring"
+            className="absolute w-full h-full rounded-full bg-[#c1f879]/20 animate-pulse-ring"
             style={{ animationDelay: "0s" }}
           />
           <div
-            className="absolute w-[85%] h-[85%] rounded-full bg-[#d4af37]/25 animate-pulse-ring"
+            className="absolute w-[85%] h-[85%] rounded-full bg-[#c1f879]/25 animate-pulse-ring"
             style={{ animationDelay: "0.2s" }}
           />
           <div
-            className="absolute w-[70%] h-[70%] rounded-full bg-[#d4af37]/30 animate-pulse-ring"
+            className="absolute w-[70%] h-[70%] rounded-full bg-[#c1f879]/30 animate-pulse-ring"
             style={{ animationDelay: "0.4s" }}
           />
         </>
@@ -38,10 +38,10 @@ function PulsingCircle({ isActive, isSpeaking }: { isActive: boolean; isSpeaking
       {isActive && !isSpeaking && (
         <>
           <div
-            className="absolute w-full h-full rounded-full border-2 border-[#d4af37]/20 animate-ping-slow"
+            className="absolute w-full h-full rounded-full border-2 border-[#c1f879]/20 animate-ping-slow"
           />
           <div
-            className="absolute w-[120%] h-[120%] rounded-full border border-[#d4af37]/10 animate-ping-slow"
+            className="absolute w-[120%] h-[120%] rounded-full border border-[#c1f879]/10 animate-ping-slow"
             style={{ animationDelay: "0.5s" }}
           />
         </>
@@ -49,12 +49,12 @@ function PulsingCircle({ isActive, isSpeaking }: { isActive: boolean; isSpeaking
 
       {/* Main circle with gradient */}
       <div
-        className={`relative w-20 h-20 rounded-full bg-gradient-to-br from-[#f4d03f] via-[#d4af37] to-[#c9a227] transition-all duration-300 ${
+        className={`relative w-20 h-20 rounded-full bg-[#c1f879] transition-all duration-300 ${
           isActive
             ? isSpeaking
-              ? "scale-110 shadow-[0_0_40px_rgba(212,175,55,0.6)]"
-              : "scale-100 shadow-[0_0_25px_rgba(212,175,55,0.4)]"
-            : "scale-90 opacity-60 shadow-[0_0_15px_rgba(212,175,55,0.2)]"
+              ? "scale-110 shadow-[0_0_40px_rgba(193,248,121,0.6)]"
+              : "scale-100 shadow-[0_0_25px_rgba(193,248,121,0.4)]"
+            : "scale-90 opacity-60 shadow-[0_0_15px_rgba(193,248,121,0.2)]"
         }`}
       >
         {/* Inner highlight */}
@@ -73,7 +73,7 @@ function PulsingCircle({ isActive, isSpeaking }: { isActive: boolean; isSpeaking
         className={`absolute w-24 h-24 rounded-full blur-xl transition-opacity duration-500 ${
           isActive ? "opacity-50" : "opacity-0"
         }`}
-        style={{ background: "radial-gradient(circle, #d4af37 0%, transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, #c1f879 0%, transparent 70%)" }}
       />
     </div>
   );
@@ -97,9 +97,9 @@ function ControlButton({
   tooltip?: string;
 }) {
   const variants = {
-    default: `bg-gray-100 hover:bg-gray-200 text-gray-600 ${active ? "bg-[#d4af37]/10 text-[#d4af37]" : ""}`,
+    default: `bg-gray-100 hover:bg-gray-200 text-gray-600 ${active ? "bg-[#c1f879]/10 text-[#4d7c0f]" : ""}`,
     danger: "bg-red-500/90 hover:bg-red-500 text-white",
-    primary: "bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white hover:shadow-lg hover:shadow-[#d4af37]/25",
+    primary: "bg-[#c1f879] text-[#1b1b1b] hover:shadow-lg hover:shadow-[#c1f879]/25",
   };
 
   return (
@@ -343,7 +343,7 @@ export default function VoiceSession({ question, maxDurationSeconds }: VoiceSess
             </div>
           )}
         </div>
-        <div className="text-xl font-mono text-[#d4af37] tabular-nums">
+        <div className="text-xl font-mono text-[#4d7c0f] tabular-nums">
           {formatDuration(duration)}
         </div>
       </div>
@@ -358,7 +358,7 @@ export default function VoiceSession({ question, maxDurationSeconds }: VoiceSess
         {!isRecording ? (
           <button
             onClick={startSession}
-            className="flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all hover:scale-105 active:scale-95"
+            className="flex items-center gap-3 px-8 py-4 bg-[#c1f879] text-[#1b1b1b] rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-[#c1f879]/25 transition-all hover:scale-105 active:scale-95"
           >
             <MicIcon />
             Start Interview
@@ -448,7 +448,7 @@ export default function VoiceSession({ question, maxDurationSeconds }: VoiceSess
               </button>
               <button
                 onClick={confirmEnd}
-                className="flex-1 px-4 py-2 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-lg hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all font-medium"
+                className="flex-1 px-4 py-2 bg-[#c1f879] text-[#1b1b1b] rounded-lg hover:shadow-lg hover:shadow-[#c1f879]/25 transition-all font-medium"
               >
                 End & Get Assessment
               </button>
@@ -477,7 +477,7 @@ function TranscriptBubble({ entry }: { entry: TranscriptEntry }) {
       <div
         className={`max-w-[85%] rounded-2xl px-4 py-3 shadow-sm ${
           isUser
-            ? "bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white"
+            ? "bg-[#c1f879] text-[#1b1b1b]"
             : "bg-white text-gray-800 border border-gray-100"
         }`}
       >

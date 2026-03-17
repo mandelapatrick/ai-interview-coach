@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { auth } from "@/lib/auth";
 import { handleSignOut } from "@/lib/actions";
 import NavDropdown from "./NavDropdown";
@@ -10,22 +11,14 @@ export default async function Navbar() {
     <nav className="border-b border-gray-200 bg-white/95 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center gap-6">
-          <Link href="/dashboard" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-[#d4af37] to-[#f4d03f] rounded-lg flex items-center justify-center">
-              <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                <polyline points="22 4 12 14.01 9 11.01"/>
-              </svg>
-            </div>
-            <span className="text-xl font-bold text-gray-900">
-              Ace<span className="text-[#d4af37]">Interview</span>
-            </span>
+          <Link href="/dashboard" className="flex items-center">
+            <Image src="/ace_logo.png" alt="Ace" width={65} height={40} />
           </Link>
           <div className="hidden md:flex items-center gap-4">
             <NavDropdown />
             <Link
               href="/history"
-              className="text-sm text-gray-600 hover:text-[#d4af37] transition-colors"
+              className="text-sm text-gray-600 hover:text-[#4d7c0f] transition-colors"
             >
               History
             </Link>
@@ -42,13 +35,13 @@ export default async function Navbar() {
                 <img
                   src={session.user.image}
                   alt=""
-                  className="w-8 h-8 rounded-full ring-2 ring-[#d4af37]/30"
+                  className="w-8 h-8 rounded-full ring-2 ring-[#c1f879]/30"
                 />
               )}
               <form action={handleSignOut}>
                 <button
                   type="submit"
-                  className="text-sm text-gray-600 hover:text-[#d4af37] transition-colors"
+                  className="text-sm text-gray-600 hover:text-[#4d7c0f] transition-colors"
                 >
                   Sign out
                 </button>

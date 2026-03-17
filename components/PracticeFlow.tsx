@@ -65,7 +65,7 @@ export default function PracticeFlow({ question }: PracticeFlowProps) {
   if (loading) {
     return (
       <div className="min-h-full flex items-center justify-center">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#d4af37]"></div>
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#c1f879]"></div>
       </div>
     );
   }

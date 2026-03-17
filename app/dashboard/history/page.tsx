@@ -60,10 +60,24 @@ export default function HistoryPage() {
     return `${mins}:${secs.toString().padStart(2, "0")}`;
   };
 
+  const getScorePct = (score: number) => Math.round((score / 5) * 100);
+
   const getScoreColor = (score: number) => {
-    if (score >= 4) return "text-green-400";
-    if (score >= 3) return "text-[#d4af37]";
-    return "text-red-400";
+    const pct = getScorePct(score);
+    if (pct >= 60) return "text-[#1e4635]";
+    return "text-[#ef8660]";
+  };
+
+  const getScoreRingColor = (score: number) => {
+    const pct = getScorePct(score);
+    if (pct >= 60) return "#1e4635";
+    return "#ef8660";
+  };
+
+  const getScoreTrackColor = (score: number) => {
+    const pct = getScorePct(score);
+    if (pct >= 60) return "#d4ecb8";
+    return "#fde8d8";
   };
 
   // Calculate stats
@@ -78,46 +92,46 @@ export default function HistoryPage() {
   const totalTime = sessions.reduce((acc, s) => acc + (s.duration_seconds || 0), 0);
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-8">
+    <div className="max-w-6xl mx-auto px-8 py-8">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2 font-display">
+        <h1 className="text-[34px] font-normal text-[#1b1b1b] tracking-[-0.5px] font-display" style={{ fontVariationSettings: "'SOFT' 100, 'WONK' 1" }}>
           Practice History
         </h1>
-        <p className="text-gray-500">
+        <p className="text-[#1b1b1b]/45 text-[14px] mt-1">
           Track your progress and review past interview sessions.
         </p>
       </div>
 
       {/* Stats */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-        <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
-          <div className="text-3xl font-bold text-gray-900">{totalSessions}</div>
-          <div className="text-sm text-gray-600">Total Sessions</div>
+        <div className="bg-white rounded-2xl border border-[#1b1b1b]/[0.07] p-4 text-center shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]">
+          <div className="text-[30px] font-display text-[#1b1b1b]" style={{ fontVariationSettings: "'SOFT' 0, 'WONK' 1" }}>{totalSessions}</div>
+          <div className="text-[13px] text-[#1b1b1b]/45">Total Sessions</div>
         </div>
-        <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
-          <div className={`text-3xl font-bold ${getScoreColor(avgScore)}`}>
-            {avgScore > 0 ? avgScore.toFixed(1) : "-"}
+        <div className="bg-white rounded-2xl border border-[#1b1b1b]/[0.07] p-4 text-center shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]">
+          <div className={`text-[30px] font-display ${getScoreColor(avgScore)}`} style={{ fontVariationSettings: "'SOFT' 0, 'WONK' 1" }}>
+            {avgScore > 0 ? `${getScorePct(avgScore)}%` : "-"}
           </div>
-          <div className="text-sm text-gray-600">Average Score</div>
+          <div className="text-[13px] text-[#1b1b1b]/45">Average Score</div>
         </div>
-        <div className="bg-white rounded-xl border border-gray-200 p-4 text-center">
-          <div className="text-3xl font-bold text-[#d4af37]">
+        <div className="bg-white rounded-2xl border border-[#1b1b1b]/[0.07] p-4 text-center shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]">
+          <div className="text-[30px] font-display text-[#1e4635]" style={{ fontVariationSettings: "'SOFT' 0, 'WONK' 1" }}>
             {Math.floor(totalTime / 60)}m
           </div>
-          <div className="text-sm text-gray-600">Total Practice Time</div>
+          <div className="text-[13px] text-[#1b1b1b]/45">Total Practice Time</div>
         </div>
       </div>
 
       {loading ? (
         <div className="text-center py-12">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#d4af37] mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading history...</p>
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#1b1b1b] mx-auto mb-4"></div>
+          <p className="text-[#1b1b1b]/45">Loading history...</p>
         </div>
       ) : sessions.length === 0 ? (
-        <div className="text-center py-12 bg-white rounded-xl border border-gray-200">
-          <div className="w-16 h-16 bg-gradient-to-br from-[#d4af37] to-[#f4d03f] rounded-full flex items-center justify-center mx-auto mb-4">
+        <div className="text-center py-12 bg-white rounded-2xl border border-[#1b1b1b]/[0.07] shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]">
+          <div className="w-16 h-16 bg-[#c1f879] rounded-full flex items-center justify-center mx-auto mb-4">
             <svg
-              className="w-8 h-8 text-white"
+              className="w-8 h-8 text-[#1b1b1b]"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -130,46 +144,46 @@ export default function HistoryPage() {
               />
             </svg>
           </div>
-          <h2 className="text-xl font-semibold text-gray-900 mb-2">
+          <h2 className="text-[15px] font-normal text-[#1b1b1b] mb-2 font-display" style={{ fontVariationSettings: "'SOFT' 100, 'WONK' 1" }}>
             No practice sessions yet
           </h2>
-          <p className="text-gray-500 mb-6">
+          <p className="text-[#1b1b1b]/45 mb-6 text-[13px]">
             Complete your first interview practice to see your history here.
           </p>
           <Link
             href="/dashboard/questions"
-            className="inline-block px-6 py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-lg font-medium hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
+            className="inline-block px-6 py-3 bg-[#c1f879] text-[#1b1b1b] rounded-full font-semibold hover:bg-[#b5ee6a] transition-colors text-[14px]"
           >
             Start Practicing
           </Link>
         </div>
       ) : (
-        <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+        <div className="bg-white rounded-2xl border border-[#1b1b1b]/[0.07] overflow-hidden shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]">
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="border-b border-gray-200">
+              <thead className="border-b border-[#1b1b1b]/[0.07]">
                 <tr>
-                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-500 tracking-wider">
+                  <th className="text-left px-6 py-3 text-[10px] font-semibold text-[#1b1b1b]/45 tracking-[0.7px] uppercase">
                     Question
                   </th>
-                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-500 tracking-wider">
+                  <th className="text-left px-6 py-3 text-[10px] font-semibold text-[#1b1b1b]/45 tracking-[0.7px] uppercase">
                     Duration
                   </th>
-                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-500 tracking-wider">
+                  <th className="text-left px-6 py-3 text-[10px] font-semibold text-[#1b1b1b]/45 tracking-[0.7px] uppercase">
                     Date
                   </th>
-                  <th className="text-left px-6 py-3 text-xs font-medium text-gray-500 tracking-wider">
+                  <th className="text-left px-6 py-3 text-[10px] font-semibold text-[#1b1b1b]/45 tracking-[0.7px] uppercase">
                     Score
                   </th>
-                  <th className="text-center px-6 py-3 text-xs font-medium text-gray-500 tracking-wider">
+                  <th className="text-center px-6 py-3 text-[10px] font-semibold text-[#1b1b1b]/45 tracking-[0.7px] uppercase">
                     Recording
                   </th>
-                  <th className="text-right px-6 py-3 text-xs font-medium text-gray-500 tracking-wider">
+                  <th className="text-right px-6 py-3 text-[10px] font-semibold text-[#1b1b1b]/45 tracking-[0.7px] uppercase">
                     Action
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-200">
+              <tbody className="divide-y divide-[#1b1b1b]/[0.05]">
                 {sessions.map((session) => {
                   const assessment = session.assessments?.[0];
                   const hasAssessment = !!assessment;
@@ -177,7 +191,7 @@ export default function HistoryPage() {
                   return (
                     <tr
                       key={session.id}
-                      className={`hover:bg-gray-100 ${
+                      className={`hover:bg-[#1b1b1b]/[0.02] ${
                         hasAssessment ? "cursor-pointer" : ""
                       }`}
                       onClick={() =>
@@ -187,29 +201,29 @@ export default function HistoryPage() {
                     >
                       {/* Question */}
                       <td className="px-6 py-4">
-                        <div className="font-medium text-gray-900">
+                        <div className="font-medium text-[#1b1b1b] text-[13px]">
                           {session.question_title}
                         </div>
                       </td>
                       {/* Duration */}
-                      <td className="px-6 py-4 text-gray-600">
+                      <td className="px-6 py-4 text-[13px] text-[#1b1b1b]/[0.68]">
                         {formatDuration(session.duration_seconds)}
                       </td>
                       {/* Date */}
-                      <td className="px-6 py-4 text-gray-600 text-sm">
+                      <td className="px-6 py-4 text-[13px] text-[#1b1b1b]/[0.68]">
                         {formatDate(session.created_at)}
                       </td>
-                      {/* Score - circular progress ring */}
+                      {/* Score */}
                       <td className="px-6 py-4">
                         {assessment && assessment.overall_score != null ? (
                           <div className="flex items-center gap-2">
-                            <svg width="24" height="24" viewBox="0 0 24 24" className="shrink-0">
+                            <svg width="24" height="24" viewBox="0 0 24 24" className="shrink-0 -rotate-90">
                               <circle
                                 cx="12"
                                 cy="12"
                                 r="10"
                                 fill="none"
-                                stroke="#e5e7eb"
+                                stroke={getScoreTrackColor(assessment.overall_score)}
                                 strokeWidth="3"
                               />
                               <circle
@@ -217,30 +231,29 @@ export default function HistoryPage() {
                                 cy="12"
                                 r="10"
                                 fill="none"
-                                stroke="#f59e0b"
+                                stroke={getScoreRingColor(assessment.overall_score)}
                                 strokeWidth="3"
                                 strokeLinecap="round"
                                 strokeDasharray={`${(assessment.overall_score / 5) * 62.83} 62.83`}
-                                transform="rotate(-90 12 12)"
                               />
                             </svg>
-                            <span className="text-sm font-medium text-gray-700">
-                              {Math.round(assessment.overall_score)}/5
+                            <span className={`text-[13px] font-semibold ${getScoreColor(assessment.overall_score)}`}>
+                              {getScorePct(assessment.overall_score)}%
                             </span>
                           </div>
                         ) : (
-                          <span className="text-gray-500">-</span>
+                          <span className="text-[#1b1b1b]/30">-</span>
                         )}
                       </td>
                       {/* Recording */}
                       <td className="px-6 py-4 text-center">
                         {session.video_recording_url ? (
                           <span
-                            className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-teal-50"
+                            className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#c1f879]/15"
                             title="Recording available"
                           >
                             <svg
-                              className="w-4 h-4 text-teal-500"
+                              className="w-4 h-4 text-[#1e4635]"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke="currentColor"
@@ -254,19 +267,19 @@ export default function HistoryPage() {
                             </svg>
                           </span>
                         ) : (
-                          <span className="text-gray-400">-</span>
+                          <span className="text-[#1b1b1b]/20">-</span>
                         )}
                       </td>
-                      {/* Action - Practice link */}
+                      {/* Action */}
                       <td className="px-6 py-4 text-right">
                         <Link
                           href={`/practice/${session.question_id}`}
                           onClick={(e) => e.stopPropagation()}
-                          className="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 text-sm font-medium transition-colors"
+                          className="inline-flex items-center gap-2 text-[#1e4635] hover:text-[#1e4635]/80 text-[13px] font-medium transition-colors"
                         >
                           Practice
-                          <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-teal-50">
-                            <svg className="w-3.5 h-3.5 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#c1f879]/15">
+                            <svg className="w-3.5 h-3.5 text-[#1e4635]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                             </svg>
                           </span>

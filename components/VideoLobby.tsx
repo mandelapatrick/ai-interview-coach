@@ -164,7 +164,7 @@ export default function VideoLobby({ onJoin, onBack, joinLabel, backLabel }: Vid
     return (
       <div className="flex items-center justify-center h-full min-h-[calc(100vh-200px)]">
         <div className="flex flex-col items-center">
-          <div className="w-12 h-12 border-4 border-[#d4af37] border-t-transparent rounded-full animate-spin mb-4" />
+          <div className="w-12 h-12 border-4 border-[#c1f879] border-t-transparent rounded-full animate-spin mb-4" />
           <p className="text-gray-500">Requesting camera access...</p>
         </div>
       </div>
@@ -296,7 +296,7 @@ export default function VideoLobby({ onJoin, onBack, joinLabel, backLabel }: Vid
                   onClick={() => setSelectedAvatarProvider(provider)}
                   className={`px-4 py-1.5 text-xs font-medium rounded-full border transition-colors ${
                     selectedAvatarProvider === provider
-                      ? "bg-[#d4af37] text-white border-[#d4af37]"
+                      ? "bg-[#c1f879] text-[#1b1b1b] border-[#c1f879]"
                       : "bg-transparent text-gray-500 border-gray-300 hover:bg-gray-50"
                   }`}
                 >
@@ -309,8 +309,8 @@ export default function VideoLobby({ onJoin, onBack, joinLabel, backLabel }: Vid
 
         {/* Right side - Join CTA */}
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left lg:min-w-[280px]">
-          <div className="w-12 h-12 rounded-full bg-[#d4af37]/20 hidden lg:flex items-center justify-center mb-4">
-            <VideoIcon className="w-6 h-6 text-[#d4af37]" />
+          <div className="w-12 h-12 rounded-full bg-[#c1f879]/20 hidden lg:flex items-center justify-center mb-4">
+            <VideoIcon className="w-6 h-6 text-[#4d7c0f]" />
           </div>
 
           <h2 className="text-2xl font-semibold text-gray-900 mb-2 font-display hidden lg:block">
@@ -324,14 +324,14 @@ export default function VideoLobby({ onJoin, onBack, joinLabel, backLabel }: Vid
           <button
             onClick={handleJoin}
             disabled={!stream}
-            className="w-full lg:w-auto px-10 py-3 bg-[#d4af37] hover:bg-[#c4a030] text-white rounded-full font-medium transition-all disabled:opacity-50 disabled:cursor-not-allowed mb-3"
+            className="w-full lg:w-auto px-10 py-3 bg-[#c1f879] hover:bg-[#a8e05f] text-[#1b1b1b] rounded-full font-medium transition-all disabled:opacity-50 disabled:cursor-not-allowed mb-3"
           >
             {joinLabel || "Join now"}
           </button>
 
           <button
             onClick={onBack}
-            className="w-full lg:w-auto px-10 py-3 text-[#d4af37] hover:bg-[#d4af37]/10 rounded-full font-medium transition-all border border-[#d4af37]/30"
+            className="w-full lg:w-auto px-10 py-3 text-[#1b1b1b] hover:bg-[#1b1b1b]/5 rounded-full font-medium transition-all border border-[#1b1b1b]/20"
           >
             {backLabel || "Go back"}
           </button>

@@ -15,10 +15,10 @@ const config: Config = {
             light: '#1e4a6d',
           },
           teal: '#0d4a4a',
-          gold: {
-            dark: '#b8972e',
-            DEFAULT: '#d4af37',
-            light: '#f4d03f',
+          lime: {
+            dark: '#a8e05f',
+            DEFAULT: '#c1f879',
+            light: '#d4ffa0',
           },
         },
         surface: {
@@ -33,7 +33,7 @@ const config: Config = {
       },
       backgroundImage: {
         'brand-gradient': 'linear-gradient(135deg, #ffffff 0%, #f9fafb 50%, #f3f4f6 100%)',
-        'gold-gradient': 'linear-gradient(135deg, #d4af37 0%, #f4d03f 50%, #d4af37 100%)',
+        'lime-gradient': 'linear-gradient(135deg, #c1f879 0%, #d4ffa0 50%, #c1f879 100%)',
       },
     },
   },

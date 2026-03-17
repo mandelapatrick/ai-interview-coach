@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useSubscription } from "@/hooks/useSubscription";
 import { trackMetaEvent } from "@/lib/meta-pixel";
 
@@ -107,28 +108,12 @@ export default function PricingPage() {
       {/* Navigation */}
       <nav className="border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-[#d4af37] to-[#f4d03f] rounded-lg flex items-center justify-center">
-              <svg
-                className="w-5 h-5 text-white"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                <polyline points="22 4 12 14.01 9 11.01" />
-              </svg>
-            </div>
-            <span className="text-xl font-bold text-gray-900">
-              Ace<span className="text-[#d4af37]">Interview</span>
-            </span>
+          <Link href="/" className="flex items-center">
+            <Image src="/ace_logo.png" alt="Ace" width={65} height={40} />
           </Link>
           <Link
             href="/dashboard"
-            className="text-sm text-gray-600 hover:text-[#d4af37] transition-colors"
+            className="text-sm text-gray-600 hover:text-[#4d7c0f] transition-colors"
           >
             Dashboard
           </Link>
@@ -147,7 +132,7 @@ export default function PricingPage() {
               ) : (
                 <>
                   Land Your Dream{" "}
-                  <span className="bg-gradient-to-r from-[#d4af37] to-[#f4d03f] bg-clip-text text-transparent">
+                  <span className="bg-[#c1f879] bg-clip-text text-transparent">
                     Consulting Offer
                   </span>
                 </>
@@ -169,7 +154,7 @@ export default function PricingPage() {
             className={`rounded-2xl p-6 md:p-8 border ${
               cancelAtPeriodEnd
                 ? "bg-amber-50/50 border-amber-200"
-                : "bg-gradient-to-r from-[#d4af37]/5 to-[#f4d03f]/5 border-[#d4af37]/20"
+                : "bg-[#c1f879]/5 border-[#c1f879]/20"
             }`}
           >
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -183,7 +168,7 @@ export default function PricingPage() {
                       Canceling
                     </span>
                   ) : (
-                    <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-[#d4af37]/10 text-[#d4af37] border border-[#d4af37]/20">
+                    <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-[#c1f879]/10 text-[#1b1b1b] border border-[#c1f879]/20">
                       Active
                     </span>
                   )}
@@ -212,7 +197,7 @@ export default function PricingPage() {
                 <button
                   onClick={handleManageSubscription}
                   disabled={portalLoading}
-                  className="px-6 py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-xl font-medium hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+                  className="px-6 py-3 bg-[#c1f879] text-[#1b1b1b] rounded-xl font-medium hover:shadow-lg hover:shadow-[#c1f879]/25 transition-all disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
                 >
                   {portalLoading ? "Redirecting..." : "Resubscribe"}
                 </button>
@@ -307,24 +292,24 @@ export default function PricingPage() {
         </div>
 
         {/* Pro Plan */}
-        <div className="bg-white rounded-2xl border-2 border-[#d4af37] p-8 flex flex-col relative">
+        <div className="bg-white rounded-2xl border-2 border-[#c1f879] p-8 flex flex-col relative">
           {!isPro && billingInterval === "yearly" && (
             <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-              <span className="bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white text-xs font-medium px-3 py-1 rounded-full">
+              <span className="bg-[#c1f879] text-[#1b1b1b] text-xs font-medium px-3 py-1 rounded-full">
                 Best value
               </span>
             </div>
           )}
           {isPro && !cancelAtPeriodEnd && (
             <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-              <span className="bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white text-xs font-medium px-3 py-1 rounded-full">
+              <span className="bg-[#c1f879] text-[#1b1b1b] text-xs font-medium px-3 py-1 rounded-full">
                 Current plan
               </span>
             </div>
           )}
           {isPro && cancelAtPeriodEnd && (
             <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-              <span className="bg-amber-500 text-white text-xs font-medium px-3 py-1 rounded-full">
+              <span className="bg-amber-500 text-[#1b1b1b] text-xs font-medium px-3 py-1 rounded-full">
                 Expiring soon
               </span>
             </div>
@@ -362,7 +347,7 @@ export default function PricingPage() {
             {features.pro.map((feature) => (
               <li key={feature} className="flex items-start gap-3 text-sm">
                 <svg
-                  className="w-5 h-5 text-[#d4af37] flex-shrink-0 mt-0.5"
+                  className="w-5 h-5 text-[#4d7c0f] flex-shrink-0 mt-0.5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -383,7 +368,7 @@ export default function PricingPage() {
             <button
               onClick={handleManageSubscription}
               disabled={portalLoading}
-              className="w-full py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-xl font-medium hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full py-3 bg-[#c1f879] text-[#1b1b1b] rounded-xl font-medium hover:shadow-lg hover:shadow-[#c1f879]/25 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {portalLoading ? "Redirecting..." : "Resubscribe"}
             </button>
@@ -391,7 +376,7 @@ export default function PricingPage() {
             <button
               onClick={handleManageSubscription}
               disabled={portalLoading}
-              className="w-full py-3 border border-[#d4af37] text-[#d4af37] rounded-xl font-medium hover:bg-[#d4af37]/5 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full py-3 border border-[#1b1b1b]/20 text-[#1b1b1b] rounded-xl font-medium hover:bg-[#1b1b1b]/5 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {portalLoading ? "Redirecting..." : "Manage Subscription"}
             </button>
@@ -399,7 +384,7 @@ export default function PricingPage() {
             <button
               onClick={handleUpgrade}
               disabled={loading}
-              className="w-full py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-xl font-medium hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full py-3 bg-[#c1f879] text-[#1b1b1b] rounded-xl font-medium hover:shadow-lg hover:shadow-[#c1f879]/25 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? "Redirecting..." : "Upgrade to Pro"}
             </button>

@@ -19,9 +19,9 @@ export default function HintModal({ hint, hintNumber, onClose }: HintModalProps)
         {/* Header */}
         <div className="flex items-start justify-between mb-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-[#d4af37]/10 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-full bg-[#c1f879]/10 flex items-center justify-center">
               <svg
-                className="w-5 h-5 text-[#d4af37]"
+                className="w-5 h-5 text-[#4d7c0f]"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -64,14 +64,14 @@ export default function HintModal({ hint, hintNumber, onClose }: HintModalProps)
         </div>
 
         {/* Hint Content */}
-        <div className="bg-[#faf8f5] rounded-xl p-4 mb-5 border border-[#d4af37]/20">
+        <div className="bg-[#faf8f5] rounded-xl p-4 mb-5 border border-[#c1f879]/20">
           <p className="text-gray-700 leading-relaxed">{hint}</p>
         </div>
 
         {/* Footer */}
         <button
           onClick={onClose}
-          className="w-full py-3 bg-[#d4af37] hover:bg-[#b8972e] text-white rounded-xl font-medium transition-colors"
+          className="w-full py-3 bg-[#c1f879] hover:bg-[#a8e05f] text-[#1b1b1b] rounded-xl font-medium transition-colors"
         >
           Got it
         </button>

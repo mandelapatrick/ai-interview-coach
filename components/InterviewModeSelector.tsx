@@ -25,10 +25,10 @@ export default function InterviewModeSelector({
         <div className="flex flex-col items-center">
           <button
             onClick={() => onSelectMode(audioProvider === "livekit" ? "audio" : "audio-livekit")}
-            className="group relative flex flex-col items-center p-8 bg-white rounded-2xl border border-gray-200 hover:border-[#d4af37]/50 transition-all hover:shadow-lg hover:shadow-[#d4af37]/10 w-full"
+            className="group relative flex flex-col items-center p-8 bg-white rounded-2xl border border-gray-200 hover:border-[#c1f879]/50 transition-all hover:shadow-lg hover:shadow-[#c1f879]/10 w-full"
           >
-            <div className="w-16 h-16 rounded-full bg-gray-50 flex items-center justify-center mb-4 group-hover:bg-[#d4af37]/10 transition-colors">
-              <MicrophoneIcon className="w-8 h-8 text-[#d4af37]" />
+            <div className="w-16 h-16 rounded-full bg-gray-50 flex items-center justify-center mb-4 group-hover:bg-[#c1f879]/10 transition-colors">
+              <MicrophoneIcon className="w-8 h-8 text-[#4d7c0f]" />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
               Audio Interview
@@ -72,10 +72,10 @@ export default function InterviewModeSelector({
         {/* Video Interview Option */}
         <button
           onClick={() => onSelectMode("video")}
-          className="group relative flex flex-col items-center p-8 bg-white rounded-2xl border border-[#d4af37]/30 hover:border-[#d4af37] transition-all hover:shadow-lg hover:shadow-[#d4af37]/20"
+          className="group relative flex flex-col items-center p-8 bg-white rounded-2xl border border-[#c1f879]/30 hover:border-[#c1f879] transition-all hover:shadow-lg hover:shadow-[#c1f879]/20"
         >
-<div className="w-16 h-16 rounded-full bg-[#d4af37]/10 flex items-center justify-center mb-4 group-hover:from-[#d4af37]/30 group-hover:to-[#f4d03f]/20 transition-colors">
-            <VideoIcon className="w-8 h-8 text-[#d4af37]" />
+<div className="w-16 h-16 rounded-full bg-[#c1f879]/10 flex items-center justify-center mb-4 group-hover:bg-[#c1f879]/20 transition-colors">
+            <VideoIcon className="w-8 h-8 text-[#4d7c0f]" />
           </div>
           <h3 className="text-lg font-semibold text-gray-900 mb-2">
             Video Interview
@@ -85,7 +85,7 @@ export default function InterviewModeSelector({
             interview experience.
           </p>
           <div className="mt-4 flex flex-col items-center gap-2">
-            <div className="px-4 py-2 bg-gray-50 rounded-full text-sm text-[#d4af37]">
+            <div className="px-4 py-2 bg-gray-50 rounded-full text-sm text-[#4d7c0f]">
               Camera + Microphone
             </div>
           </div>

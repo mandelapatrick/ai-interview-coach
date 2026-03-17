@@ -6,7 +6,7 @@ import { Company } from "@/types";
 export default function CompanyCard({ company }: { company: Company }) {
   return (
     <Link href={`/company/${company.slug}`} className="block h-full">
-      <div className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-[#d4af37]/40 hover:bg-gray-100 transition-all cursor-pointer h-full flex flex-col group">
+      <div className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-[#c1f879]/40 hover:bg-gray-100 transition-all cursor-pointer h-full flex flex-col group">
         {/* Logo Area */}
         <div className="h-32 bg-white flex items-center justify-center flex-shrink-0">
           {company.logoUrl ? (
@@ -26,7 +26,7 @@ export default function CompanyCard({ company }: { company: Company }) {
         <div className="p-4 flex flex-col flex-grow">
           {/* Name and Question Count */}
           <div className="flex justify-between items-start mb-3">
-            <h3 className="text-base font-semibold text-gray-900 group-hover:text-[#d4af37] transition-colors line-clamp-1">
+            <h3 className="text-base font-semibold text-gray-900 group-hover:text-[#4d7c0f] transition-colors line-clamp-1">
               {company.name}
             </h3>
             <span className="text-sm text-gray-600 whitespace-nowrap ml-2">

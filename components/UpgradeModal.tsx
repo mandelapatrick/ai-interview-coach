@@ -20,9 +20,9 @@ export default function UpgradeModal({ sessionType, onClose }: UpgradeModalProps
         {/* Header */}
         <div className="flex items-start justify-between mb-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-[#d4af37]/10 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-full bg-[#c1f879]/10 flex items-center justify-center">
               <svg
-                className="w-5 h-5 text-[#d4af37]"
+                className="w-5 h-5 text-[#4d7c0f]"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -63,7 +63,7 @@ export default function UpgradeModal({ sessionType, onClose }: UpgradeModalProps
         </div>
 
         {/* Content */}
-        <div className="bg-[#faf8f5] rounded-xl p-4 mb-5 border border-[#d4af37]/20">
+        <div className="bg-[#faf8f5] rounded-xl p-4 mb-5 border border-[#c1f879]/20">
           <p className="text-gray-700 leading-relaxed">
             You&apos;ve used your free {sessionType} session this month.
             Upgrade to Pro for unlimited {sessionType === "practice" ? "practice sessions" : "learning sessions"},
@@ -75,7 +75,7 @@ export default function UpgradeModal({ sessionType, onClose }: UpgradeModalProps
         <div className="flex flex-col gap-3">
           <Link
             href="/pricing"
-            className="w-full py-3 bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-white rounded-xl font-medium text-center hover:shadow-lg hover:shadow-[#d4af37]/25 transition-all"
+            className="w-full py-3 bg-[#c1f879] text-[#1b1b1b] rounded-xl font-medium text-center hover:shadow-lg hover:shadow-[#c1f879]/25 transition-all"
           >
             View Plans
           </Link>

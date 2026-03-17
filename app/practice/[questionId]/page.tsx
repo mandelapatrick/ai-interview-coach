@@ -6,7 +6,7 @@ import PracticeFlow from "@/components/PracticeFlow";
 
 const DIFFICULTY_COLORS_DARK: Record<string, string> = {
   easy: "text-green-600 bg-green-400/10",
-  medium: "text-[#d4af37] bg-[#d4af37]/10",
+  medium: "text-[#4d7c0f] bg-[#c1f879]/10",
   hard: "text-red-600 bg-red-400/10",
 };
 
@@ -51,7 +51,7 @@ export default async function PracticePage({
           <div className="flex items-center justify-between">
             <Link
               href={backUrl}
-              className="text-sm text-[#d4af37] hover:text-[#f4d03f] transition-colors"
+              className="text-sm text-[#4d7c0f] hover:text-[#3d6b0a] transition-colors"
             >
               ← Back to Question Bank
             </Link>

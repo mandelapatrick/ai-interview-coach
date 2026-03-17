@@ -99,7 +99,7 @@ export default function EngagementPage() {
         title="Sessions Per Day"
         data={sessions?.series || []}
         lines={[
-          { key: "practice", color: "#d4af37", name: "Practice" },
+          { key: "practice", color: "#c1f879", name: "Practice" },
           { key: "learn", color: "#1e3a5f", name: "Learn" },
         ]}
         loading={loading}
@@ -109,7 +109,7 @@ export default function EngagementPage() {
         title="DAU / WAU / MAU"
         data={activeUsers?.series || []}
         lines={[
-          { key: "dau", color: "#d4af37", name: "DAU" },
+          { key: "dau", color: "#c1f879", name: "DAU" },
           { key: "wau", color: "#22c55e", name: "WAU" },
           { key: "mau", color: "#1e3a5f", name: "MAU" },
         ]}

@@ -569,7 +569,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
           {/* Loading overlay */}
           {isLoading && (
             <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-gray-900">
-              <div className="w-16 h-16 border-4 border-[#d4af37] border-t-transparent rounded-full animate-spin mb-4" />
+              <div className="w-16 h-16 border-4 border-[#c1f879] border-t-transparent rounded-full animate-spin mb-4" />
               <p className="text-white/60">
                 Connecting to AI interviewer...
               </p>
@@ -610,7 +610,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
               </span>
               <button
                 onClick={handleEnd}
-                className="px-3 py-1.5 bg-[#d4af37] hover:bg-[#b8972e] text-white rounded-lg font-medium transition-colors text-sm"
+                className="px-3 py-1.5 bg-[#c1f879] hover:bg-[#a8e05f] text-[#1b1b1b] rounded-lg font-medium transition-colors text-sm"
               >
                 End
               </button>
@@ -730,7 +730,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
                     disabled={!isRevealed}
                     className={`relative w-16 h-16 rounded-xl overflow-hidden border-2 transition-all duration-300 ${
                       isRevealed
-                        ? "cursor-pointer border-[#d4af37] hover:border-[#b8972e]"
+                        ? "cursor-pointer border-[#c1f879] hover:border-[#a8e05f]"
                         : "cursor-not-allowed border-gray-200"
                     }`}
                   >
@@ -817,7 +817,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
           >
             {transcript.map((entry, i) => (
               <div key={i} className="text-sm">
-                <span className={`text-xs font-medium ${entry.role === "assistant" ? "text-[#d4af37]" : "text-blue-600"}`}>
+                <span className={`text-xs font-medium ${entry.role === "assistant" ? "text-[#4d7c0f]" : "text-blue-600"}`}>
                   {entry.role === "assistant" ? "AI Interviewer" : "You"}
                 </span>
                 <p className="text-gray-700 mt-0.5 leading-relaxed">{entry.text}</p>
@@ -840,7 +840,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
             </div>
             <button
               onClick={handleEnd}
-              className="px-5 py-2 bg-[#d4af37] hover:bg-[#b8972e] text-white rounded-lg font-medium transition-colors text-sm"
+              className="px-5 py-2 bg-[#c1f879] hover:bg-[#a8e05f] text-[#1b1b1b] rounded-lg font-medium transition-colors text-sm"
             >
               End Interview
             </button>
@@ -895,7 +895,7 @@ export default function VideoSession({ question, userStream, avatarProvider, onB
               </button>
               <button
                 onClick={confirmEnd}
-                className="flex-1 px-4 py-2.5 bg-[#d4af37] hover:bg-[#b8972e] text-white rounded-xl font-medium transition-colors"
+                className="flex-1 px-4 py-2.5 bg-[#c1f879] hover:bg-[#a8e05f] text-[#1b1b1b] rounded-xl font-medium transition-colors"
               >
                 End & Get Assessment
               </button>
