@@ -48,6 +48,42 @@ export function isAdmin(email: string | null | undefined): boolean {
   return adminEmails.includes(email.toLowerCase());
 }
 
+export function getDateRangeFromParams(params: URLSearchParams): { start: string; end: string } {
+  const startDate = params.get("startDate");
+  const endDate = params.get("endDate");
+  if (startDate && endDate) {
+    // Convert YYYY-MM-DD dates to PST-aware ISO timestamps
+    const startParts = startDate.split("-").map(Number);
+    const endParts = endDate.split("-").map(Number);
+    // Start: midnight PST on startDate
+    const startLocal = new Date(startParts[0], startParts[1] - 1, startParts[2]);
+    // End: end of day PST on endDate (use next day midnight)
+    const endLocal = new Date(endParts[0], endParts[1] - 1, endParts[2] + 1);
+    // Get PST offset by comparing a known date
+    const now = new Date();
+    const pstOffset = getTimezoneOffsetMs(now, DEFAULT_TZ);
+    return {
+      start: new Date(startLocal.getTime() + pstOffset).toISOString(),
+      end: new Date(endLocal.getTime() + pstOffset).toISOString(),
+    };
+  }
+  const range = params.get("range") || "30d";
+  return getDateRange(range);
+}
+
+/** Returns offset in ms to convert a local-style Date to UTC for a given timezone. */
+function getTimezoneOffsetMs(refDate: Date, tz: string): number {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: tz,
+    year: "numeric", month: "2-digit", day: "2-digit",
+    hour: "numeric", minute: "numeric", second: "numeric",
+    hour12: false,
+  }).formatToParts(refDate);
+  const get = (type: string) => parseInt(parts.find((p) => p.type === type)?.value || "0");
+  const tzNow = new Date(get("year"), get("month") - 1, get("day"), get("hour"), get("minute"), get("second"));
+  return refDate.getTime() - tzNow.getTime();
+}
+
 export function getDateRange(range: string): { start: string; end: string } {
   const now = new Date();
   const end = now.toISOString();

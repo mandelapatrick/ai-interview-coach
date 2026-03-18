@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import KPICard from "@/components/admin/KPICard";
 import TimeSeriesChart from "@/components/admin/TimeSeriesChart";
-import DateRangePicker from "@/components/admin/DateRangePicker";
+import DateRangePicker, { buildRangeParams } from "@/components/admin/DateRangePicker";
 import FilterBar from "@/components/admin/FilterBar";
 
 interface SessionsData {
@@ -26,13 +26,16 @@ export default function EngagementPage() {
 
   useEffect(() => {
     setLoading(true);
-    const params = new URLSearchParams({ range });
-    if (filters.mode) params.set("mode", filters.mode);
-    if (filters.role) params.set("role", filters.role);
+    const baseParams = buildRangeParams(range);
+    const extraParams = new URLSearchParams();
+    if (filters.mode) extraParams.set("mode", filters.mode);
+    if (filters.role) extraParams.set("role", filters.role);
+    const extra = extraParams.toString();
+    const sessionParams = extra ? `${baseParams}&${extra}` : baseParams;
 
     Promise.all([
-      fetch(`/api/admin/analytics/sessions?${params}`).then((r) => r.json()),
-      fetch(`/api/admin/analytics/active-users?range=${range}`).then((r) => r.json()),
+      fetch(`/api/admin/analytics/sessions?${sessionParams}`).then((r) => r.json()),
+      fetch(`/api/admin/analytics/active-users?${baseParams}`).then((r) => r.json()),
     ])
       .then(([s, a]) => {
         setSessions(s);

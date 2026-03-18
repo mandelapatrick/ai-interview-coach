@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 import KPICard from "@/components/admin/KPICard";
 import TimeSeriesChart from "@/components/admin/TimeSeriesChart";
-import DateRangePicker from "@/components/admin/DateRangePicker";
+import BarDistributionChart from "@/components/admin/BarDistributionChart";
+import DateRangePicker, { buildRangeParams } from "@/components/admin/DateRangePicker";
 
 interface OverviewData {
   totalUsers: number;
@@ -18,6 +19,9 @@ interface OverviewData {
   landingTrend: { date: string; count: number }[];
   interestedTrend: { date: string; count: number }[];
   sessionsTrend: { date: string; count: number }[];
+  byReferralSource: { label: string; count: number }[];
+  byRole: { label: string; count: number }[];
+  byCountry: { label: string; count: number }[];
 }
 
 export default function OverviewPage() {
@@ -27,7 +31,7 @@ export default function OverviewPage() {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`/api/admin/analytics/overview?range=${range}`)
+    fetch(`/api/admin/analytics/overview?${buildRangeParams(range)}`)
       .then((r) => r.json())
       .then(setData)
       .finally(() => setLoading(false));
@@ -92,6 +96,27 @@ export default function OverviewPage() {
           lines={[{ key: "count", color: "#8b5cf6", name: "Sessions" }]}
           type="area"
           loading={loading}
+        />
+      </div>
+
+      <div className="grid lg:grid-cols-3 gap-6">
+        <BarDistributionChart
+          title="Referral Source"
+          data={data?.byReferralSource || []}
+          loading={loading}
+          color="#8b5cf6"
+        />
+        <BarDistributionChart
+          title="Interested Role"
+          data={data?.byRole || []}
+          loading={loading}
+          color="#e67e22"
+        />
+        <BarDistributionChart
+          title="Country"
+          data={data?.byCountry || []}
+          loading={loading}
+          color="#1e3a5f"
         />
       </div>
     </div>

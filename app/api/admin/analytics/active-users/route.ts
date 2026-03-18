@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { isAdmin, getDateRange, countUniqueUsersByDay, ensureTodayEntry } from "@/lib/analytics";
+import { isAdmin, getDateRangeFromParams, countUniqueUsersByDay, ensureTodayEntry } from "@/lib/analytics";
 
 export async function GET(request: NextRequest) {
   const session = await auth();
@@ -8,8 +8,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: "Forbidden" }, { status: 403 });
   }
 
-  const range = request.nextUrl.searchParams.get("range") || "30d";
-  const { start, end } = getDateRange(range);
+  const { start, end } = getDateRangeFromParams(request.nextUrl.searchParams);
 
   const dauSeries = await countUniqueUsersByDay("page_view", start, end);
 

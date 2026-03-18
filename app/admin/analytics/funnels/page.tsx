@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import FunnelChart from "@/components/admin/FunnelChart";
-import DateRangePicker from "@/components/admin/DateRangePicker";
+import DateRangePicker, { buildRangeParams } from "@/components/admin/DateRangePicker";
 
 interface FunnelStep {
   step: string;
@@ -22,7 +22,7 @@ export default function FunnelsPage() {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`/api/admin/analytics/funnels?range=${range}`)
+    fetch(`/api/admin/analytics/funnels?${buildRangeParams(range)}`)
       .then((r) => r.json())
       .then(setData)
       .finally(() => setLoading(false));

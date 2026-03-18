@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { isAdmin, getDateRange, toDateInTz, excludedEmailsFilter, ensureTodayEntry } from "@/lib/analytics";
+import { isAdmin, getDateRangeFromParams, toDateInTz, excludedEmailsFilter, ensureTodayEntry } from "@/lib/analytics";
 import { supabaseAdmin } from "@/lib/supabase";
 
 export async function GET(request: NextRequest) {
@@ -12,10 +12,9 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: "DB not configured" }, { status: 500 });
   }
 
-  const range = request.nextUrl.searchParams.get("range") || "30d";
   const mode = request.nextUrl.searchParams.get("mode") || null;
   const role = request.nextUrl.searchParams.get("role") || null;
-  const { start, end } = getDateRange(range);
+  const { start, end } = getDateRangeFromParams(request.nextUrl.searchParams);
 
   const excludeFilter = excludedEmailsFilter();
 

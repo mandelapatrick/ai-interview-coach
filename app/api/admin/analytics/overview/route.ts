@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
-import { isAdmin, getDateRange, countEventsByDay, countUniqueUsersByDay, countLandingPageViewsByDay, countInterestedUsersByDay, countSessionsByDay, getTodayStartISO, toDateInTz, excludedEmailsFilter, getExcludedEmails, ensureTodayEntry } from "@/lib/analytics";
+import { isAdmin, getDateRangeFromParams, countEventsByDay, countUniqueUsersByDay, countLandingPageViewsByDay, countInterestedUsersByDay, countSessionsByDay, getTodayStartISO, toDateInTz, excludedEmailsFilter, getExcludedEmails, ensureTodayEntry } from "@/lib/analytics";
 import { supabaseAdmin } from "@/lib/supabase";
 
 export async function GET(request: NextRequest) {
@@ -12,8 +12,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: "DB not configured" }, { status: 500 });
   }
 
-  const range = request.nextUrl.searchParams.get("range") || "30d";
-  const { start, end } = getDateRange(range);
+  const { start, end } = getDateRangeFromParams(request.nextUrl.searchParams);
 
   const excludeFilter = excludedEmailsFilter();
 
@@ -107,15 +106,21 @@ export async function GET(request: NextRequest) {
   // Fetch actual signups from user_onboarding
   const { data: signups } = await supabaseAdmin
     .from("user_onboarding")
-    .select("created_at")
+    .select("created_at, referral_source, role, country")
     .not("user_email", "in", excludeFilter)
     .gte("created_at", start)
     .lte("created_at", end);
 
   const signupsByDay: Record<string, number> = {};
+  const byReferralSource: Record<string, number> = {};
+  const byRole: Record<string, number> = {};
+  const byCountry: Record<string, number> = {};
   for (const row of signups || []) {
     const day = toDateInTz(row.created_at);
     signupsByDay[day] = (signupsByDay[day] || 0) + 1;
+    if (row.referral_source) byReferralSource[row.referral_source] = (byReferralSource[row.referral_source] || 0) + 1;
+    if (row.role) byRole[row.role] = (byRole[row.role] || 0) + 1;
+    if (row.country) byCountry[row.country] = (byCountry[row.country] || 0) + 1;
   }
 
   const signupTrendData = ensureTodayEntry(
@@ -139,5 +144,14 @@ export async function GET(request: NextRequest) {
     landingTrend: landingTrend,
     interestedTrend: interestedTrend,
     sessionsTrend: sessionsTrend,
+    byReferralSource: Object.entries(byReferralSource)
+      .sort(([, a], [, b]) => b - a)
+      .map(([label, count]) => ({ label, count })),
+    byRole: Object.entries(byRole)
+      .sort(([, a], [, b]) => b - a)
+      .map(([label, count]) => ({ label, count })),
+    byCountry: Object.entries(byCountry)
+      .sort(([, a], [, b]) => b - a)
+      .map(([label, count]) => ({ label, count })),
   });
 }
