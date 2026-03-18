@@ -92,7 +92,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
                 </p>
               </div>
 
-              <div className="bg-white rounded-xl p-4 md:p-6 mb-6 md:mb-8 text-left border border-gray-200">
+              <div className="bg-[#fdf9f4] rounded-xl p-4 md:p-6 mb-6 md:mb-8 text-left border border-[#e8dfd4]">
                 <h3 className="font-semibold mb-3 md:mb-4 text-gray-800">What to expect:</h3>
                 <ul className="space-y-3 text-gray-600 text-sm md:text-base">
                   <li className="flex items-start gap-3">
@@ -145,7 +145,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
 
               <button
                 onClick={handleStartWatching}
-                className="w-full sm:w-auto px-8 py-3 bg-[#c1f879] text-[#1b1b1b] font-medium rounded-xl hover:shadow-lg hover:shadow-[#c1f879]/25 transition-all"
+                className="w-full sm:w-auto px-8 py-3 bg-[#c1f879] text-[#1b1b1b] font-medium rounded-full hover:shadow-lg hover:shadow-[#c1f879]/25 transition-all"
               >
                 Start Learning
               </button>
@@ -175,7 +175,7 @@ export default function LearnFlow({ question }: LearnFlowProps) {
             </div>
 
             {/* Transcript Summary */}
-            <div className="bg-white rounded-xl p-4 md:p-6 mb-6 md:mb-8 border border-gray-200">
+            <div className="bg-[#fdf9f4] rounded-xl p-4 md:p-6 mb-6 md:mb-8 border border-[#e8dfd4]">
               <h3 className="font-semibold mb-3 md:mb-4 text-gray-800">Conversation Transcript</h3>
               <div className="space-y-3 md:space-y-4 max-h-96 overflow-y-auto">
                 {sessionTranscript.length > 0 ? (
@@ -184,15 +184,15 @@ export default function LearnFlow({ question }: LearnFlowProps) {
                       key={idx}
                       className={`p-3 rounded-lg ${
                         entry.speaker === "interviewer"
-                          ? "bg-blue-500/10 border-l-2 border-blue-400"
-                          : "bg-[#c1f879]/10 border-l-2 border-[#c1f879]"
+                          ? "bg-gray-100 border-l-2 border-gray-400"
+                          : "bg-purple-50 border-l-2 border-purple-400"
                       }`}
                     >
                       <span
                         className={`text-xs font-medium uppercase ${
                           entry.speaker === "interviewer"
-                            ? "text-blue-400"
-                            : "text-[#4d7c0f]"
+                            ? "text-gray-500"
+                            : "text-purple-500"
                         }`}
                       >
                         {entry.speaker}
@@ -212,13 +212,13 @@ export default function LearnFlow({ question }: LearnFlowProps) {
             <div className="flex flex-col sm:flex-row justify-center gap-3 md:gap-4">
               <button
                 onClick={handleBackToIntro}
-                className="px-6 py-3 bg-white text-gray-900 font-medium rounded-xl hover:bg-gray-100 transition-all border border-gray-200"
+                className="px-6 py-3 bg-[#fdf9f4] text-gray-900 font-medium rounded-full hover:bg-[#f5efe6] transition-all border border-[#e8dfd4]"
               >
                 Watch Again
               </button>
               <a
                 href={`/practice/${question.id}`}
-                className="px-6 py-3 bg-[#c1f879] text-[#1b1b1b] font-medium rounded-xl hover:shadow-lg hover:shadow-[#c1f879]/25 transition-all text-center"
+                className="px-6 py-3 bg-[#c1f879] text-[#1b1b1b] font-medium rounded-full hover:shadow-lg hover:shadow-[#c1f879]/25 transition-all text-center"
               >
                 Practice Now
               </a>

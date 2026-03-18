@@ -128,7 +128,7 @@ export default function LearnSession({ question, onEnd, maxDurationSeconds }: Le
   };
 
   return (
-    <div className="h-full flex flex-col bg-white">
+    <div className="h-full flex flex-col bg-[#faf6f0]">
       {/* Time limit warning banner */}
       {showTimeWarning && maxDurationSeconds && (
         <div className="bg-amber-50 border-b border-amber-200 px-4 py-2 text-center">
@@ -143,7 +143,7 @@ export default function LearnSession({ question, onEnd, maxDurationSeconds }: Le
         {/* Video Section - Vertical on mobile, Side by Side on desktop */}
         <div className="flex-1 flex flex-col md:flex-row gap-1 md:gap-4 p-1 md:p-4 min-h-0">
           {/* Interviewer Video */}
-          <div className="flex-1 relative rounded-xl overflow-hidden bg-gray-100 min-h-0">
+          <div className="flex-1 relative rounded-xl overflow-hidden bg-[#f5efe6] min-h-0">
             <video
               ref={interviewerVideoRef}
               autoPlay
@@ -164,14 +164,14 @@ export default function LearnSession({ question, onEnd, maxDurationSeconds }: Le
             </div>
             {/* Loading overlay */}
             {isConnecting && (
-              <div className="absolute inset-0 bg-gray-100 flex flex-col items-center justify-center">
+              <div className="absolute inset-0 bg-[#f5efe6] flex flex-col items-center justify-center">
                 <div className="w-10 h-10 md:w-12 md:h-12 border-4 border-blue-400/30 border-t-blue-400 rounded-full animate-spin mb-3 md:mb-4" />
                 <p className="text-gray-500 text-sm">Connecting interviewer...</p>
               </div>
             )}
             {/* Reconnecting overlay */}
             {reconnectingAvatar === "interviewer" && (
-              <div className="absolute inset-0 bg-gray-100/80 flex flex-col items-center justify-center backdrop-blur-sm">
+              <div className="absolute inset-0 bg-[#f5efe6]/80 flex flex-col items-center justify-center backdrop-blur-sm">
                 <div className="w-10 h-10 border-4 border-blue-400/30 border-t-blue-400 rounded-full animate-spin mb-3" />
                 <p className="text-gray-600 text-sm">Reconnecting interviewer...</p>
               </div>
@@ -179,7 +179,7 @@ export default function LearnSession({ question, onEnd, maxDurationSeconds }: Le
           </div>
 
           {/* Candidate Video */}
-          <div className="flex-1 relative rounded-xl overflow-hidden bg-gray-100 min-h-0">
+          <div className="flex-1 relative rounded-xl overflow-hidden bg-[#f5efe6] min-h-0">
             <video
               ref={candidateVideoRef}
               autoPlay
@@ -194,14 +194,14 @@ export default function LearnSession({ question, onEnd, maxDurationSeconds }: Le
             </div>
             {/* Loading overlay */}
             {isConnecting && (
-              <div className="absolute inset-0 bg-gray-100 flex flex-col items-center justify-center">
+              <div className="absolute inset-0 bg-[#f5efe6] flex flex-col items-center justify-center">
                 <div className="w-10 h-10 md:w-12 md:h-12 border-4 border-violet-400/30 border-t-violet-400 rounded-full animate-spin mb-3 md:mb-4" />
                 <p className="text-gray-500 text-sm">Connecting candidate...</p>
               </div>
             )}
             {/* Reconnecting overlay */}
             {reconnectingAvatar === "candidate" && (
-              <div className="absolute inset-0 bg-gray-100/80 flex flex-col items-center justify-center backdrop-blur-sm">
+              <div className="absolute inset-0 bg-[#f5efe6]/80 flex flex-col items-center justify-center backdrop-blur-sm">
                 <div className="w-10 h-10 border-4 border-violet-400/30 border-t-violet-400 rounded-full animate-spin mb-3" />
                 <p className="text-gray-600 text-sm">Reconnecting candidate...</p>
               </div>
@@ -210,9 +210,9 @@ export default function LearnSession({ question, onEnd, maxDurationSeconds }: Le
         </div>
 
         {/* Sidebar - Transcript (hidden on mobile) */}
-        <div className="hidden md:flex w-96 border-l border-gray-200 flex-col bg-gray-50">
+        <div className="hidden md:flex w-96 border-l border-[#e8dfd4] flex-col bg-[#fdf9f4]">
           {/* Header */}
-          <div className="p-4 border-b border-gray-200">
+          <div className="p-4 border-b border-[#e8dfd4]">
             <div className="flex items-center justify-between mb-2">
               <h3 className="font-semibold text-gray-900">Live Transcript</h3>
               <span className="text-sm text-gray-600">{formatDuration(duration)}</span>
@@ -241,15 +241,15 @@ export default function LearnSession({ question, onEnd, maxDurationSeconds }: Le
                   key={idx}
                   className={`p-3 rounded-lg ${
                     entry.speaker === "interviewer"
-                      ? "bg-blue-500/10 border-l-2 border-blue-400"
-                      : "bg-violet-500/10 border-l-2 border-violet-400"
+                      ? "bg-gray-100 border-l-2 border-gray-400"
+                      : "bg-purple-50 border-l-2 border-purple-400"
                   }`}
                 >
                   <span
                     className={`text-xs font-medium uppercase ${
                       entry.speaker === "interviewer"
-                        ? "text-blue-400"
-                        : "text-violet-400"
+                        ? "text-gray-500"
+                        : "text-purple-500"
                     }`}
                   >
                     {entry.speaker}
@@ -270,13 +270,13 @@ export default function LearnSession({ question, onEnd, maxDurationSeconds }: Le
       )}
 
       {/* Control Bar */}
-      <div className="border-t border-gray-200 p-2 md:p-4 bg-gray-50">
+      <div className="border-t border-[#e8dfd4] p-2 md:p-4 bg-[#fdf9f4]">
         <div className="max-w-4xl mx-auto flex items-center justify-center gap-2 md:gap-4">
           {/* Pause/Resume Button */}
           <button
             onClick={isPaused ? resume : pause}
             disabled={!isInitialized}
-            className="px-3 py-2 md:px-6 md:py-2.5 bg-gray-100 text-gray-900 font-medium rounded-lg hover:bg-gray-200 transition-all border border-gray-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-1.5 md:gap-2 text-sm md:text-base"
+            className="px-3 py-2 md:px-6 md:py-2.5 bg-[#22c55e] text-white font-medium rounded-full hover:bg-green-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-1.5 md:gap-2 text-sm md:text-base"
           >
             {isPaused ? (
               <>
@@ -307,7 +307,7 @@ export default function LearnSession({ question, onEnd, maxDurationSeconds }: Le
           <button
             onClick={handleOpenQuestionModal}
             disabled={!isInitialized}
-            className="px-3 py-2 md:px-6 md:py-2.5 bg-violet-500/20 text-violet-600 font-medium rounded-lg hover:bg-violet-500/30 transition-all border border-violet-500/30 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-1.5 md:gap-2 text-sm md:text-base"
+            className="px-3 py-2 md:px-6 md:py-2.5 bg-[#6366f1] text-white font-medium rounded-full hover:bg-indigo-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-1.5 md:gap-2 text-sm md:text-base"
           >
             <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
@@ -324,7 +324,7 @@ export default function LearnSession({ question, onEnd, maxDurationSeconds }: Le
           {/* End Interview Button */}
           <button
             onClick={() => setShowEndConfirm(true)}
-            className="px-3 py-2 md:px-6 md:py-2.5 bg-red-500/20 text-red-500 font-medium rounded-lg hover:bg-red-500/30 transition-all border border-red-500/30 flex items-center gap-1.5 md:gap-2 text-sm md:text-base"
+            className="px-3 py-2 md:px-6 md:py-2.5 bg-[#f97316] text-white font-medium rounded-full hover:bg-orange-600 transition-all flex items-center gap-1.5 md:gap-2 text-sm md:text-base"
           >
             <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
@@ -343,7 +343,7 @@ export default function LearnSession({ question, onEnd, maxDurationSeconds }: Le
       {/* End Confirmation Modal */}
       {showEndConfirm && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-gray-100 rounded-xl p-6 max-w-md w-full mx-4 border border-gray-200">
+          <div className="bg-[#fdf9f4] rounded-xl p-6 max-w-md w-full mx-4 border border-[#e8dfd4]">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">End Interview?</h3>
             <p className="text-gray-500 mb-6">
               Are you sure you want to end the interview demonstration? You&apos;ll see a
@@ -352,7 +352,7 @@ export default function LearnSession({ question, onEnd, maxDurationSeconds }: Le
             <div className="flex gap-3 justify-end">
               <button
                 onClick={() => setShowEndConfirm(false)}
-                className="px-4 py-2 bg-gray-100 text-gray-900 rounded-lg hover:bg-gray-200 transition-all border border-gray-200"
+                className="px-4 py-2 bg-[#fdf9f4] text-gray-900 rounded-full hover:bg-[#f5efe6] transition-all border border-[#e8dfd4]"
               >
                 Cancel
               </button>
@@ -361,7 +361,7 @@ export default function LearnSession({ question, onEnd, maxDurationSeconds }: Le
                   setShowEndConfirm(false);
                   handleEndInterview();
                 }}
-                className="px-4 py-2 bg-red-500 text-gray-900 rounded-lg hover:bg-red-600 transition-all"
+                className="px-4 py-2 bg-[#f97316] text-white rounded-full hover:bg-orange-600 transition-all"
               >
                 End Interview
               </button>

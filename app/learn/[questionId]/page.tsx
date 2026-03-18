@@ -23,7 +23,7 @@ export default async function LearnPage({
 
   if (!question) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen bg-[#faf6f0] flex items-center justify-center">
         <p className="text-gray-500">Question not found</p>
       </div>
     );
@@ -44,17 +44,17 @@ export default async function LearnPage({
   const backUrl = `/dashboard/questions?${backParams.toString()}`;
 
   return (
-    <div className="h-screen bg-gray-50 text-gray-900 flex flex-col overflow-hidden">
+    <div className="h-screen bg-[#faf6f0] text-gray-900 flex flex-col overflow-hidden">
       {/* Header */}
-      <header className="border-b border-gray-200 bg-white/95 backdrop-blur sticky top-0 z-10">
+      <header className="border-b border-[#e8dfd4] bg-[#fdf9f4]/95 backdrop-blur sticky top-0 z-10">
         <div className="max-w-6xl mx-auto px-3 py-2 md:px-4 md:py-3">
           <div className="flex items-center justify-between">
             <Link
               href={backUrl}
               className="text-sm text-[#4d7c0f] hover:text-[#3d6b0a] transition-colors"
             >
-              <span className="hidden sm:inline">← Back to Question Bank</span>
-              <span className="sm:hidden">← Back</span>
+              <span className="hidden sm:inline">&larr; Back to Question Bank</span>
+              <span className="sm:hidden">&larr; Back</span>
             </Link>
             <div className="flex items-center gap-2 md:gap-3">
               <span className="px-2 py-1 text-xs font-medium rounded-full bg-[#c1f879]/10 text-[#1b1b1b]">
@@ -63,13 +63,22 @@ export default async function LearnPage({
               <span className="text-xs md:text-sm text-gray-600 hidden sm:inline">
                 {typeLabel}
               </span>
+              {/* Round navigation pills */}
+              <div className="hidden sm:flex items-center gap-1.5">
+                <span className="px-3 py-1 text-xs font-medium rounded-full bg-[#6366f1] text-white">
+                  Round 1 (Live)
+                </span>
+                <span className="px-3 py-1 text-xs font-medium rounded-full border border-[#e8dfd4] text-gray-500">
+                  Round 2
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </header>
 
       {/* Question Info */}
-      <div className="border-b border-gray-200 bg-white">
+      <div className="border-b border-[#e8dfd4] bg-[#f5efe6]">
         <div className="max-w-6xl mx-auto px-3 py-3 md:px-4 md:py-6">
           <h1 className="text-lg md:text-2xl font-bold mb-1 md:mb-2 font-display">{question.title}</h1>
           <p className="text-gray-500 text-sm md:text-base line-clamp-2 md:line-clamp-none">{question.description}</p>

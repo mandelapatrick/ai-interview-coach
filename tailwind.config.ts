@@ -26,6 +26,12 @@ const config: Config = {
           card: '#ffffff',
           elevated: '#f3f4f6',
         },
+        warm: {
+          bg: '#faf6f0',
+          card: '#f5efe6',
+          border: '#e8dfd4',
+          light: '#fdf9f4',
+        },
       },
       fontFamily: {
         display: ['Fraunces', 'serif'],
