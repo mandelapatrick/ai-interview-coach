@@ -275,7 +275,7 @@ export default function AssessmentPage() {
 
   const isConsulting = question.track === "consulting";
   const interviewTypeLabel = isConsulting ? "Consulting Interview" : "PM Interview";
-  const overallPct = assessment ? Math.round((assessment.overallScore / 5) * 100) : 0;
+  const overallPct = assessment ? Math.round(((assessment.overallScore ?? 0) / 5) * 100) : 0;
   const scoreEntries = getScoreEntries();
   const numCategories = scoreEntries.length;
 
@@ -292,38 +292,38 @@ export default function AssessmentPage() {
     <div className="min-h-screen bg-[#fcfaf6]">
       {/* Topbar */}
       <header className="bg-[#fcfaf6] border-b border-[#1b1b1b]/[0.08] sticky top-0 z-10">
-        <div className="max-w-5xl mx-auto px-8 h-[54px] flex items-center justify-between">
+        <div className="max-w-5xl mx-auto px-4 sm:px-8 h-[54px] flex items-center justify-between gap-2">
           {isOnboarding ? (
             <a
               href="/dashboard"
-              className="flex items-center gap-1.5 text-[13.5px] text-[#1b1b1b]/45 hover:text-[#1b1b1b]/70 transition-colors font-medium"
+              className="flex items-center gap-1.5 text-[13.5px] text-[#1b1b1b]/45 hover:text-[#1b1b1b]/70 transition-colors font-medium shrink-0"
             >
               <svg className="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="15 18 9 12 15 6" />
               </svg>
-              Go to Dashboard
+              <span className="hidden sm:inline">Go to Dashboard</span>
             </a>
           ) : (
             <Link
               href={`/dashboard/questions?track=${question.track}`}
-              className="flex items-center gap-1.5 text-[13.5px] text-[#1b1b1b]/45 hover:text-[#1b1b1b]/70 transition-colors font-medium"
+              className="flex items-center gap-1.5 text-[13.5px] text-[#1b1b1b]/45 hover:text-[#1b1b1b]/70 transition-colors font-medium shrink-0"
             >
               <svg className="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <polyline points="15 18 9 12 15 6" />
               </svg>
-              Back to Question Bank
+              <span className="hidden xs:inline">Back to</span> Question Bank
             </Link>
           )}
-          <div className="flex items-center gap-2 text-[13px]">
-            <span className="font-semibold text-[#1b1b1b]">{interviewTypeLabel}</span>
-            <span className="w-1 h-1 rounded-full bg-[#1b1b1b]/20" />
-            <span className="text-[#1b1b1b]/45">{sessionData ? formatDuration(sessionData.duration) : "--:--"} session</span>
+          <div className="flex items-center gap-2 text-[13px] min-w-0">
+            <span className="font-semibold text-[#1b1b1b] truncate">{interviewTypeLabel}</span>
+            <span className="w-1 h-1 rounded-full bg-[#1b1b1b]/20 shrink-0" />
+            <span className="text-[#1b1b1b]/45 shrink-0">{sessionData ? formatDuration(sessionData.duration) : "--:--"} session</span>
             {!isOnboarding && (
               <>
-                <span className="w-1 h-1 rounded-full bg-[#1b1b1b]/20" />
+                <span className="w-1 h-1 rounded-full bg-[#1b1b1b]/20 shrink-0 hidden sm:block" />
                 <Link
                   href="/dashboard/history"
-                  className="text-[#1b1b1b]/45 hover:text-[#1b1b1b]/70 transition-colors"
+                  className="text-[#1b1b1b]/45 hover:text-[#1b1b1b]/70 transition-colors shrink-0 hidden sm:block"
                 >
                   View History
                 </Link>
@@ -333,10 +333,10 @@ export default function AssessmentPage() {
         </div>
       </header>
 
-      <main className="max-w-5xl mx-auto px-8 py-7">
+      <main className="max-w-5xl mx-auto px-4 sm:px-8 py-5 sm:py-7">
         {/* Page header */}
-        <div className="mb-6">
-          <h1 className="text-[34px] font-normal text-[#1b1b1b] tracking-[-0.5px] font-display" style={{ fontVariationSettings: "'SOFT' 100, 'WONK' 1" }}>
+        <div className="mb-5 sm:mb-6">
+          <h1 className="text-[26px] sm:text-[34px] font-normal text-[#1b1b1b] tracking-[-0.5px] font-display" style={{ fontVariationSettings: "'SOFT' 100, 'WONK' 1" }}>
             Interview Assessment
           </h1>
           <div className="flex items-center gap-2 mt-1.5 text-[13.5px] text-[#1b1b1b]/45">
@@ -400,9 +400,9 @@ export default function AssessmentPage() {
             )}
 
             {/* Score + AI Feedback row */}
-            <div className="flex gap-[18px] items-start">
+            <div className="flex flex-col sm:flex-row gap-[18px] items-start">
               {/* Score panel */}
-              <div className="flex-1 bg-white rounded-2xl border border-[#1b1b1b]/[0.07] p-6 shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]">
+              <div className="flex-1 w-full bg-white rounded-2xl border border-[#1b1b1b]/[0.07] p-5 sm:p-6 shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]">
                 {/* Header */}
                 <div className="flex items-center justify-between mb-5">
                   <div className="flex items-center gap-2">
@@ -437,7 +437,7 @@ export default function AssessmentPage() {
                 </div>
 
                 {/* Category tiles */}
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                   {scoreEntries.map((entry) => (
                     <CategoryTile key={entry.label} label={entry.label} score={entry.score} weight={entry.weight} />
                   ))}
@@ -445,8 +445,8 @@ export default function AssessmentPage() {
               </div>
 
               {/* AI Feedback panel */}
-              <div className="w-[315px] shrink-0">
-                <div className="bg-white rounded-2xl border border-[#1b1b1b]/[0.07] p-6 shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]">
+              <div className="w-full sm:w-[315px] sm:shrink-0">
+                <div className="bg-white rounded-2xl border border-[#1b1b1b]/[0.07] p-5 sm:p-6 shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]">
                   {/* Header */}
                   <div className="flex items-center gap-2.5 mb-4">
                     <div className="w-[30px] h-[30px] rounded-[9px] flex items-center justify-center" style={{ backgroundImage: "linear-gradient(135deg, rgb(232, 211, 248) 0%, rgb(204, 242, 251) 100%)" }}>
@@ -501,9 +501,9 @@ export default function AssessmentPage() {
             )}
 
             {/* Strengths + Areas to Improve */}
-            <div className="flex gap-[18px]" id="details">
+            <div className="flex flex-col sm:flex-row gap-[18px]" id="details">
               {/* Strengths */}
-              <div className="flex-1 bg-white rounded-2xl border border-[#1b1b1b]/[0.07] p-6 shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]">
+              <div className="flex-1 bg-white rounded-2xl border border-[#1b1b1b]/[0.07] p-5 sm:p-6 shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-2">
                     <svg className="w-[18px] h-[18px] text-[#1e4635]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -529,7 +529,7 @@ export default function AssessmentPage() {
               </div>
 
               {/* Areas to Improve */}
-              <div className="flex-1 bg-white rounded-2xl border border-[#1b1b1b]/[0.07] p-6 shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]">
+              <div className="flex-1 bg-white rounded-2xl border border-[#1b1b1b]/[0.07] p-5 sm:p-6 shadow-[0px_1px_4px_rgba(27,27,27,0.04),0px_4px_20px_rgba(27,27,27,0.04)]">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-2">
                     <svg className="w-[18px] h-[18px] text-[#ef8660]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -663,7 +663,7 @@ function ScoreGauge({ percentage }: { percentage: number }) {
 }
 
 function CategoryTile({ label, score, weight }: { label: string; score: number; weight: string }) {
-  const pct = Math.round((score / 5) * 100);
+  const pct = Math.round(((score ?? 0) / 5) * 100);
   const isGood = pct >= 60;
 
   return (
