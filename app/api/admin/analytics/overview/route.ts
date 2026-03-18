@@ -104,6 +104,21 @@ export async function GET(request: NextRequest) {
   const sessionsTrend = await countSessionsByDay(start, end);
 
   // Fetch actual signups from user_onboarding
+  // Device distribution (desktop vs mobile from page_view events)
+  const { data: deviceData } = await supabaseAdmin
+    .from("analytics_events")
+    .select("properties")
+    .eq("event_name", "page_view")
+    .not("user_email", "in", excludeFilter)
+    .gte("created_at", start)
+    .lte("created_at", end);
+
+  const byDeviceMap: Record<string, number> = {};
+  for (const row of deviceData || []) {
+    const device = (row.properties as Record<string, string>)?.device;
+    if (device) byDeviceMap[device] = (byDeviceMap[device] || 0) + 1;
+  }
+
   const { data: signups } = await supabaseAdmin
     .from("user_onboarding")
     .select("created_at, referral_source, role, country")
@@ -151,6 +166,9 @@ export async function GET(request: NextRequest) {
       .sort(([, a], [, b]) => b - a)
       .map(([label, count]) => ({ label, count })),
     byCountry: Object.entries(byCountry)
+      .sort(([, a], [, b]) => b - a)
+      .map(([label, count]) => ({ label, count })),
+    byDevice: Object.entries(byDeviceMap)
       .sort(([, a], [, b]) => b - a)
       .map(([label, count]) => ({ label, count })),
   });
