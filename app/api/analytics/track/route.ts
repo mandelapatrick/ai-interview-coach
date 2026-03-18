@@ -25,11 +25,15 @@ export async function POST(request: NextRequest) {
 
     const country = request.headers.get("x-vercel-ip-country") || null;
 
+    const userAgent = request.headers.get("user-agent") || "";
+    const isMobile = /mobile|android|iphone|ipad|ipod|blackberry|windows phone/i.test(userAgent);
+    const device = isMobile ? "Mobile" : "Desktop";
+
     await supabaseAdmin.from("analytics_events").insert({
       user_email: userEmail,
       anonymous_id: anonymous_id || null,
       event_name,
-      properties: properties || {},
+      properties: { ...(properties || {}), device },
       country,
     });
 

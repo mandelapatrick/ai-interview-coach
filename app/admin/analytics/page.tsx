@@ -22,6 +22,7 @@ interface OverviewData {
   byReferralSource: { label: string; count: number }[];
   byRole: { label: string; count: number }[];
   byCountry: { label: string; count: number }[];
+  byDevice: { label: string; count: number }[];
 }
 
 export default function OverviewPage() {
@@ -117,6 +118,15 @@ export default function OverviewPage() {
           data={data?.byCountry || []}
           loading={loading}
           color="#1e3a5f"
+        />
+      </div>
+
+      <div className="grid lg:grid-cols-3 gap-6">
+        <BarDistributionChart
+          title="Device Type"
+          data={data?.byDevice || []}
+          loading={loading}
+          color="#0ea5e9"
         />
       </div>
     </div>
