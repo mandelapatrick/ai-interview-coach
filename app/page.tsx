@@ -21,10 +21,10 @@ export default async function LandingPage() {
       <NavBar />
 
       {/* ─── HERO ─── */}
-      <section className="relative overflow-hidden px-6 md:px-[60px]" style={{ background: "linear-gradient(to bottom, #fcfaf6, #ede6d4)", padding: "16px 60px 60px" }}>
+      <section className="relative overflow-hidden px-6 md:px-[60px]" style={{ background: "linear-gradient(to bottom, #fcfaf6, #ede6d4)", paddingTop: "16px", paddingBottom: "60px" }}>
         <div className="flex flex-col md:flex-row items-center justify-between max-w-[1350px] mx-auto md:min-h-[774px]">
           {/* Left: content */}
-          <div className="flex flex-col justify-end gap-[33px] flex-shrink-0 h-auto md:h-[774px] pt-20 md:pt-0 w-full md:w-auto max-md:items-start">
+          <div className="flex flex-col justify-end gap-[33px] flex-shrink-0 h-auto md:h-[774px] pt-20 md:pt-0 w-full md:w-auto max-md:items-center">
             <h1 className="font-display font-normal text-[#1b1b1b] text-[36px] md:text-[60px] lg:text-[81px] leading-[1.3] w-full md:w-[619px]">
               Master your interview with AI
             </h1>
