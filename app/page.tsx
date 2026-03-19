@@ -35,14 +35,14 @@ export default async function LandingPage() {
               <TrackedCTALink
                 href="/api/auth/signin"
                 location="hero"
-                className="inline-flex items-center gap-2 bg-[#c1f879] text-[#1b1b1b] font-display font-normal text-[20px] h-[60px] px-8 rounded-full no-underline transition-opacity hover:opacity-[0.88] active:scale-[0.97]"
+                className="inline-flex items-center gap-2 bg-[#c1f879] text-[#1b1b1b] font-display font-normal text-[20px] h-[60px] px-8 rounded-full no-underline transition-opacity hover:opacity-[0.88] active:scale-[0.97] whitespace-nowrap"
               >
                 <Image src="/landing/sparkles.svg" alt="" width={24} height={24} />
                 <em className="font-display italic font-medium">start</em> practicing free
               </TrackedCTALink>
               <a
                 href="#how-it-works"
-                className="inline-flex items-center gap-2 bg-[#fcfaf6] text-[#1b1b1b] font-display font-normal text-[20px] h-[60px] px-8 rounded-full no-underline border border-[#1b1b1b] transition-opacity hover:opacity-80 active:scale-[0.97]"
+                className="inline-flex items-center gap-2 bg-[#fcfaf6] text-[#1b1b1b] font-display font-normal text-[20px] h-[60px] px-8 rounded-full no-underline border border-[#1b1b1b] transition-opacity hover:opacity-80 active:scale-[0.97] whitespace-nowrap"
               >
                 <Image src="/landing/play.svg" alt="" width={24} height={24} />
                 <em className="font-display italic font-medium">watch</em> demo
