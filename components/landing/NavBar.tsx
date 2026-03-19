@@ -35,7 +35,7 @@ export default function NavBar() {
             <li><a href="#how-it-works" className="font-sans font-normal text-[15px] text-[#1b1b1b] no-underline transition-opacity hover:opacity-60 whitespace-nowrap">how it works</a></li>
             <li><Link href="/pricing" className="font-sans font-normal text-[15px] text-[#1b1b1b] no-underline transition-opacity hover:opacity-60 whitespace-nowrap">pricing</Link></li>
           </ul>
-          <div className="flex items-center gap-2.5">
+          <div className="flex items-center gap-2.5 ml-auto">
             <TrackedCTALink
               href="/api/auth/signin"
               location="nav"
