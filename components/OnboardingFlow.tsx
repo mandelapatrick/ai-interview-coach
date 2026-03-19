@@ -2,13 +2,14 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import LearnSession from "@/components/LearnSession";
-import OnboardingUpgradeModal from "@/components/OnboardingUpgradeModal";
+import VideoLobby, { AvatarProvider } from "@/components/VideoLobby";
+import VideoSession from "@/components/VideoSession";
+import { useSubscription } from "@/hooks/useSubscription";
 import { getQuestionById } from "@/data/questions";
 import { track } from "@/lib/analytics-client";
 import { trackMetaEvent } from "@/lib/meta-pixel";
 
-type OnboardingStep = "role-selection" | "referral-source" | "learn" | "upgrade";
+type OnboardingStep = "role-selection" | "referral-source" | "video-lobby" | "video-session";
 
 const ROLES = [
   "Consulting",
@@ -44,6 +45,9 @@ export default function OnboardingFlow() {
   const [selectedRole, setSelectedRole] = useState<string>("");
   const [selectedReferral, setSelectedReferral] = useState<string>("");
   const [isSaving, setIsSaving] = useState(false);
+  const [userStream, setUserStream] = useState<MediaStream | null>(null);
+  const [avatarProvider, setAvatarProvider] = useState<AvatarProvider>("livekit");
+  const { maxDurationSeconds } = useSubscription();
 
   const questionId = getQuestionIdForRole(selectedRole);
   const question = getQuestionById(questionId);
@@ -66,44 +70,60 @@ export default function OnboardingFlow() {
       console.error("Failed to save onboarding:", err);
     }
     setIsSaving(false);
-    setStep("learn");
-    track("onboarding_step", { step: "learn" });
+    setStep("video-lobby");
+    track("onboarding_step", { step: "video-lobby" });
   };
 
-  const handleLearnEnd = () => {
-    track("onboarding_learn_completed", { role: selectedRole, question_id: questionId });
-    setStep("upgrade");
+  const handleVideoLobbyJoin = (stream: MediaStream, provider: AvatarProvider) => {
+    setUserStream(stream);
+    setAvatarProvider(provider);
+    setStep("video-session");
+    track("onboarding_step", { step: "video-session" });
   };
 
-  const handleViewPlans = () => {
-    track("onboarding_upgrade_prompt", { action: "view_plans" });
+  const handleVideoLobbyBack = () => {
+    if (selectedRole === "Product Management") {
+      router.push("/dashboard/questions?track=product-management");
+    } else if (selectedRole === "Consulting") {
+      router.push("/dashboard/questions?track=consulting");
+    } else {
+      router.push("/dashboard/questions");
+    }
   };
 
-  const handleUpgradeSkip = () => {
-    track("onboarding_upgrade_prompt", { action: "skip" });
-    router.push("/dashboard");
+  const handleVideoSessionBack = () => {
+    if (userStream) {
+      userStream.getTracks().forEach((track) => track.stop());
+      setUserStream(null);
+    }
+    setStep("video-lobby");
   };
 
-  // Step 3: Learn Mode
-  if (step === "learn" && question) {
+  // Step 3: Video Lobby
+  if (step === "video-lobby") {
     return (
       <div className="h-screen">
-        <LearnSession
-          question={question}
-          onEnd={handleLearnEnd}
-          maxDurationSeconds={300}
+        <VideoLobby
+          onJoin={handleVideoLobbyJoin}
+          onBack={handleVideoLobbyBack}
+          backLabel="Join Later"
         />
       </div>
     );
   }
 
-  // Step 4: Upgrade Modal
-  if (step === "upgrade") {
+  // Step 4: Video Session
+  if (step === "video-session" && question && userStream) {
     return (
-      <OnboardingUpgradeModal
-        onViewPlans={handleViewPlans}
-        onSkip={handleUpgradeSkip}
-      />
+      <div className="h-screen">
+        <VideoSession
+          question={question}
+          userStream={userStream}
+          avatarProvider={avatarProvider}
+          onBack={handleVideoSessionBack}
+          maxDurationSeconds={maxDurationSeconds}
+        />
+      </div>
     );
   }
 
