@@ -18,9 +18,9 @@ export default function NavBar() {
 
   return (
     <>
-      <nav className="fixed top-5 left-0 right-0 z-[100] bg-transparent border-b-0 pointer-events-none text-center">
+      <nav className="fixed top-5 left-0 right-0 z-[100] bg-transparent border-b-0 pointer-events-none">
         <div
-          className={`mx-auto inline-flex items-center gap-12 rounded-full pointer-events-auto transition-shadow duration-300 ${
+          className={`mx-6 md:mx-[60px] flex items-center gap-12 rounded-full pointer-events-auto transition-shadow duration-300 ${
             scrolled
               ? "shadow-[0_4px_32px_rgba(27,27,27,0.14),0_0_0_1px_rgba(27,27,27,0.04)]"
               : "shadow-[0_2px_24px_rgba(27,27,27,0.08),0_0_0_1px_rgba(27,27,27,0.04)]"
