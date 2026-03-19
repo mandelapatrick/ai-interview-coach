@@ -108,6 +108,7 @@ export async function GET(request: NextRequest) {
     .from("analytics_events")
     .select("properties, user_email")
     .eq("event_name", "page_view")
+    .not("properties->>device", "is", null)
     .gte("created_at", start)
     .lte("created_at", end);
 
