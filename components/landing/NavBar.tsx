@@ -39,8 +39,7 @@ export default function NavBar() {
             <TrackedCTALink
               href="/api/auth/signin"
               location="nav"
-              className="hidden md:inline-flex items-center gap-2 bg-[#c1f879] text-[#1b1b1b] font-display font-normal text-[15px] rounded-full no-underline whitespace-nowrap flex-shrink-0 transition-opacity hover:opacity-[0.88]"
-              style={{ padding: "14px 24px" }}
+              className="hidden md:inline-flex items-center gap-2 bg-[#c1f879] text-[#1b1b1b] font-display font-normal text-[15px] rounded-full no-underline whitespace-nowrap flex-shrink-0 transition-opacity hover:opacity-[0.88] px-6 py-[14px]"
             >
               <Image src="/landing/sparkles.svg" alt="" width={18} height={18} />
               start now, free
