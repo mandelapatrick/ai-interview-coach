@@ -23,6 +23,7 @@ interface OverviewData {
   byRole: { label: string; count: number }[];
   byCountry: { label: string; count: number }[];
   byDevice: { label: string; count: number }[];
+  otherRoleEntries: { label: string; count: number }[];
 }
 
 export default function OverviewPage() {
@@ -129,6 +130,28 @@ export default function OverviewPage() {
           color="#0ea5e9"
         />
       </div>
+
+      {(data?.otherRoleEntries?.length ?? 0) > 0 && (
+        <div className="bg-white rounded-xl border border-gray-200 p-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Custom &quot;Other&quot; Roles</h3>
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-gray-100">
+                <th className="text-left py-2 text-gray-500 font-medium">Role</th>
+                <th className="text-right py-2 text-gray-500 font-medium">Count</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data!.otherRoleEntries.map((entry) => (
+                <tr key={entry.label} className="border-b border-gray-50">
+                  <td className="py-2 text-gray-900">{entry.label}</td>
+                  <td className="py-2 text-right text-gray-700">{entry.count}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 }

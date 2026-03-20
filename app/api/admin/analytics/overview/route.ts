@@ -139,6 +139,14 @@ export async function GET(request: NextRequest) {
     if (row.country) byCountry[row.country] = (byCountry[row.country] || 0) + 1;
   }
 
+  const otherRoleCounts: Record<string, number> = {};
+  for (const row of signups || []) {
+    if (row.role && row.role.startsWith("Other:")) {
+      const label = row.role.slice(7).trim();
+      if (label) otherRoleCounts[label] = (otherRoleCounts[label] || 0) + 1;
+    }
+  }
+
   const signupTrendData = ensureTodayEntry(
     Object.entries(signupsByDay)
       .sort(([a], [b]) => a.localeCompare(b))
@@ -170,6 +178,9 @@ export async function GET(request: NextRequest) {
       .sort(([, a], [, b]) => b - a)
       .map(([label, count]) => ({ label, count })),
     byDevice: Object.entries(byDeviceMap)
+      .sort(([, a], [, b]) => b - a)
+      .map(([label, count]) => ({ label, count })),
+    otherRoleEntries: Object.entries(otherRoleCounts)
       .sort(([, a], [, b]) => b - a)
       .map(([label, count]) => ({ label, count })),
   });

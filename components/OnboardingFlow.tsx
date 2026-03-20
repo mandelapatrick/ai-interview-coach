@@ -44,6 +44,7 @@ export default function OnboardingFlow() {
   const router = useRouter();
   const [step, setStep] = useState<OnboardingStep>("role-selection");
   const [selectedRole, setSelectedRole] = useState<string>("");
+  const [otherRoleText, setOtherRoleText] = useState<string>("");
   const [selectedReferral, setSelectedReferral] = useState<string>("");
   const [isSaving, setIsSaving] = useState(false);
   const [userStream, setUserStream] = useState<MediaStream | null>(null);
@@ -61,7 +62,7 @@ export default function OnboardingFlow() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          role: selectedRole,
+          role: selectedRole === "Other" ? `Other: ${otherRoleText}` : selectedRole,
           referral_source: selectedReferral,
           markComplete: true,
         }),
@@ -152,7 +153,10 @@ export default function OnboardingFlow() {
               {ROLES.map((role) => (
                 <button
                   key={role}
-                  onClick={() => setSelectedRole(role)}
+                  onClick={() => {
+                    setSelectedRole(role);
+                    if (role !== "Other") setOtherRoleText("");
+                  }}
                   className={`px-5 py-2.5 rounded-full text-sm font-medium border transition-all ${
                     selectedRole === role
                       ? "bg-[#c1f879] text-[#1b1b1b] border-[#c1f879] shadow-md shadow-[#c1f879]/20"
@@ -164,12 +168,24 @@ export default function OnboardingFlow() {
               ))}
             </div>
 
+            {selectedRole === "Other" && (
+              <div className="mb-10">
+                <input
+                  type="text"
+                  value={otherRoleText}
+                  onChange={(e) => setOtherRoleText(e.target.value)}
+                  placeholder="Enter your role"
+                  className="w-full max-w-xs mx-auto block px-4 py-2.5 rounded-full border border-gray-200 text-sm text-gray-900 focus:outline-none focus:border-[#c1f879] focus:ring-1 focus:ring-[#c1f879] transition-colors"
+                />
+              </div>
+            )}
+
             <button
               onClick={() => {
                 track("onboarding_step", { step: "role" });
                 setStep("referral-source");
               }}
-              disabled={!selectedRole}
+              disabled={!selectedRole || (selectedRole === "Other" && otherRoleText.length < 4)}
               className="w-full max-w-xs mx-auto px-8 py-3 bg-[#c1f879] hover:bg-[#a8e05f] text-[#1b1b1b] rounded-full font-medium transition-all disabled:opacity-40 disabled:cursor-not-allowed"
             >
               Next
