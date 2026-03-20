@@ -11,10 +11,10 @@ export default function SignInPage() {
         </Link>
 
         <h1 className="text-2xl font-bold text-gray-900 text-center mb-2 font-display">
-          Welcome back
+          Create account
         </h1>
         <p className="text-gray-600 text-center mb-8">
-          Sign in to continue practicing
+          Sign up to land your dream job
         </p>
 
         <form
