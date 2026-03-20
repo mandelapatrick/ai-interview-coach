@@ -434,7 +434,7 @@ export async function POST(request: NextRequest) {
     const isProductSense = isPM && questionType === "Product Sense";
     // Analytical Thinking detection - "Execution" type maps to AT assessment
     const isAnalyticalThinking = isPM && (questionType === "Analytical Thinking" || questionType === "Execution");
-    const isBehavioral = isPM && questionType === "Behavioral";
+    const isBehavioral = (isPM && questionType === "Behavioral") || track === "behavioral";
     const isTechnical = isPM && questionType === "Technical";
     const isStrategy = isPM && questionType === "Strategy";
     const isEstimation = isPM && questionType === "Estimation";

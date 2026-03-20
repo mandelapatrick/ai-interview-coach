@@ -36,10 +36,13 @@ export { getConsultingCandidatePrompt } from "./learn/consulting";
  * This is the primary export used by VoiceSession, VideoSession, and AnamAudioSession
  */
 export function getSystemPrompt(question: Question): string {
-  const isPM = question.track === "product-management";
-
-  if (isPM) {
+  if (question.track === "product-management") {
     return getPMPrompt(question);
+  }
+
+  if (question.track === "behavioral") {
+    // Reuse PM behavioral prompt — it already handles STAR method, probing, follow-ups
+    return getPMPrompt({ ...question, type: "behavioral", track: "product-management" });
   }
 
   // Default to consulting case interview
@@ -51,10 +54,12 @@ export function getSystemPrompt(question: Question): string {
  * Routes to the appropriate type-specific prompt based on question track and type
  */
 export function getCandidatePrompt(question: Question): string {
-  const isPM = question.track === "product-management";
-
-  if (isPM) {
+  if (question.track === "product-management") {
     return getPMCandidatePrompt(question);
+  }
+
+  if (question.track === "behavioral") {
+    return getPMCandidatePrompt({ ...question, type: "behavioral", track: "product-management" });
   }
 
   // Default to consulting candidate prompt

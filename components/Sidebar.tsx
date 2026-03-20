@@ -50,6 +50,7 @@ const navItems: NavItem[] = [
     subItems: [
       { name: "Product Management", href: "/dashboard/questions?track=product-management" },
       { name: "Consulting", href: "/dashboard/questions?track=consulting" },
+      { name: "Behavioral", href: "/dashboard/questions?track=behavioral" },
     ],
   },
   {

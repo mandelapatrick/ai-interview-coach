@@ -36,7 +36,8 @@ const REFERRAL_SOURCES = [
 
 function getQuestionIdForRole(role: string): string {
   if (role === "Product Management") return "pm-231";
-  return "mck-1";
+  if (role === "Consulting") return "mck-1";
+  return "beh-1"; // Behavioral track for Other / non-specific roles
 }
 
 export default function OnboardingFlow() {
@@ -87,7 +88,7 @@ export default function OnboardingFlow() {
     } else if (selectedRole === "Consulting") {
       router.push("/dashboard/questions?track=consulting");
     } else {
-      router.push("/dashboard/questions");
+      router.push("/dashboard/questions?track=behavioral");
     }
   };
 

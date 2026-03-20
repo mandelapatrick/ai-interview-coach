@@ -5,21 +5,25 @@ import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
 import { questions as consultingQuestions } from "@/data/questions";
 import { pmQuestions } from "@/data/pm-questions";
-import { companies, pmCompanies } from "@/data/companies";
+import { behavioralQuestions } from "@/data/behavioral-questions";
+import { companies, pmCompanies, behavioralCompanies } from "@/data/companies";
 import {
   Question,
   InterviewTrack,
   QUESTION_TYPE_LABELS,
   PM_QUESTION_TYPE_LABELS,
+  BEHAVIORAL_QUESTION_TYPE_LABELS,
   TYPE_COLORS_DARK,
   PM_TYPE_COLORS_DARK,
+  BEHAVIORAL_TYPE_COLORS_DARK,
   QuestionType,
   PMQuestionType,
+  BehavioralQuestionType,
 } from "@/types";
 
 // Combine all questions
-const allQuestions = [...consultingQuestions, ...pmQuestions];
-const allCompanies = [...companies, ...pmCompanies];
+const allQuestions = [...consultingQuestions, ...pmQuestions, ...behavioralQuestions];
+const allCompanies = [...companies, ...pmCompanies, ...behavioralCompanies];
 
 // Get unique question types for each track
 const consultingTypes = Object.keys(QUESTION_TYPE_LABELS) as QuestionType[];
@@ -27,6 +31,7 @@ const consultingTypes = Object.keys(QUESTION_TYPE_LABELS) as QuestionType[];
 const pmTypes = (Object.keys(PM_QUESTION_TYPE_LABELS) as PMQuestionType[]).filter(
   (t) => t !== "execution"
 );
+const behavioralTypes = Object.keys(BEHAVIORAL_QUESTION_TYPE_LABELS) as BehavioralQuestionType[];
 
 export default function QuestionBankPage() {
   const searchParams = useSearchParams();
@@ -57,7 +62,9 @@ export default function QuestionBankPage() {
   // Get page title based on track
   const pageTitle = trackFilter === "consulting"
     ? "Consulting Question Bank"
-    : "Product Management Question Bank";
+    : trackFilter === "behavioral"
+      ? "Behavioral Question Bank"
+      : "Product Management Question Bank";
 
   // Filter companies based on selected track
   const filteredCompanies = useMemo(() => {
@@ -68,6 +75,9 @@ export default function QuestionBankPage() {
   const availableTypes = useMemo(() => {
     if (trackFilter === "consulting") {
       return consultingTypes.map((t) => ({ value: t, label: QUESTION_TYPE_LABELS[t] }));
+    }
+    if (trackFilter === "behavioral") {
+      return behavioralTypes.map((t) => ({ value: t, label: BEHAVIORAL_QUESTION_TYPE_LABELS[t] }));
     }
     return pmTypes.map((t) => ({ value: t, label: PM_QUESTION_TYPE_LABELS[t] }));
   }, [trackFilter]);
@@ -124,12 +134,18 @@ export default function QuestionBankPage() {
     if (question.track === "consulting") {
       return TYPE_COLORS_DARK[question.type as QuestionType] || "text-gray-600 bg-gray-400/10";
     }
+    if (question.track === "behavioral") {
+      return BEHAVIORAL_TYPE_COLORS_DARK[question.type as BehavioralQuestionType] || "text-gray-600 bg-gray-400/10";
+    }
     return PM_TYPE_COLORS_DARK[question.type as PMQuestionType] || "text-gray-600 bg-gray-400/10";
   };
 
   const getTypeLabel = (question: Question) => {
     if (question.track === "consulting") {
       return QUESTION_TYPE_LABELS[question.type as QuestionType] || question.type;
+    }
+    if (question.track === "behavioral") {
+      return BEHAVIORAL_QUESTION_TYPE_LABELS[question.type as BehavioralQuestionType] || question.type;
     }
     return PM_QUESTION_TYPE_LABELS[question.type as PMQuestionType] || question.type;
   };
@@ -172,15 +188,17 @@ export default function QuestionBankPage() {
           {pageTitle}
         </h1>
         <p className="text-gray-500">
-          Browse and practice {trackFilter === "consulting" ? "consulting" : "product management"} interview questions from top companies.
+          {trackFilter === "behavioral"
+            ? "Practice general behavioral interview questions — STAR stories, strengths & weaknesses, motivation, and more."
+            : `Browse and practice ${trackFilter === "consulting" ? "consulting" : "product management"} interview questions from top companies.`}
         </p>
       </div>
 
       {/* Filters */}
       <div className="bg-white rounded-xl border border-gray-200 p-4 mb-6">
-        <div className={`grid grid-cols-1 ${trackFilter === "consulting" ? "md:grid-cols-4" : "md:grid-cols-3"} gap-4`}>
+        <div className={`grid grid-cols-1 ${trackFilter === "consulting" ? "md:grid-cols-4" : trackFilter === "behavioral" ? "md:grid-cols-2" : "md:grid-cols-3"} gap-4`}>
           {/* Search */}
-          <div className={trackFilter === "consulting" ? "md:col-span-4" : "md:col-span-3"}>
+          <div className={trackFilter === "consulting" ? "md:col-span-4" : trackFilter === "behavioral" ? "md:col-span-2" : "md:col-span-3"}>
             <div className="relative">
               <input
                 type="text"
@@ -202,22 +220,24 @@ export default function QuestionBankPage() {
             </div>
           </div>
 
-          {/* Company Filter */}
-          <div>
-            <label className="block text-sm text-gray-600 mb-1.5">Company</label>
-            <select
-              value={companyFilter}
-              onChange={(e) => updateFilter("company", e.target.value)}
-              className="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-gray-900 focus:outline-none focus:border-[#c1f879]/50 appearance-none cursor-pointer"
-            >
-              <option value="all">All Companies</option>
-              {filteredCompanies.map((company) => (
-                <option key={company.slug} value={company.slug}>
-                  {company.name}
-                </option>
-              ))}
-            </select>
-          </div>
+          {/* Company Filter (hidden for behavioral — all questions are general) */}
+          {trackFilter !== "behavioral" && (
+            <div>
+              <label className="block text-sm text-gray-600 mb-1.5">Company</label>
+              <select
+                value={companyFilter}
+                onChange={(e) => updateFilter("company", e.target.value)}
+                className="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-gray-900 focus:outline-none focus:border-[#c1f879]/50 appearance-none cursor-pointer"
+              >
+                <option value="all">All Companies</option>
+                {filteredCompanies.map((company) => (
+                  <option key={company.slug} value={company.slug}>
+                    {company.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
 
           {/* Type Filter */}
           <div>
@@ -312,10 +332,14 @@ export default function QuestionBankPage() {
                         {question.description}
                       </p>
                       <div className="flex items-center gap-2 flex-wrap">
-                        <span className="text-xs text-gray-600">
-                          {getCompanyName(question.companySlug)}
-                        </span>
-                        <span className="text-gray-400">&bull;</span>
+                        {question.track !== "behavioral" && (
+                          <>
+                            <span className="text-xs text-gray-600">
+                              {getCompanyName(question.companySlug)}
+                            </span>
+                            <span className="text-gray-400">&bull;</span>
+                          </>
+                        )}
                         <span
                           className={`text-xs px-2 py-0.5 rounded-full ${getTypeColor(question)}`}
                         >

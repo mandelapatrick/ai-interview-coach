@@ -1,9 +1,10 @@
 import { Question, InterviewTrack } from "@/types";
 import { pmQuestions } from "./pm-questions";
 import { consultingQuestions } from "./consulting-questions";
+import { behavioralQuestions } from "./behavioral-questions";
 
-// All questions (consulting + PM)
-export const allQuestions: Question[] = [...consultingQuestions, ...pmQuestions];
+// All questions (consulting + PM + behavioral)
+export const allQuestions: Question[] = [...consultingQuestions, ...pmQuestions, ...behavioralQuestions];
 
 // Re-export for backwards compatibility
 export const questions = consultingQuestions;

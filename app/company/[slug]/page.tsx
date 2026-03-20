@@ -111,10 +111,20 @@ const PM_TYPE_COLORS_DARK: Record<PMQuestionType, string> = {
   estimation: "text-indigo-600 bg-indigo-400/10",
 };
 
+const BEHAVIORAL_TYPE_COLORS_DARK_LOCAL: Record<string, string> = {
+  "tell-me-about-yourself": "text-sky-600 bg-sky-400/10",
+  "star-behavioral": "text-amber-600 bg-amber-400/10",
+  "strengths-weaknesses": "text-violet-600 bg-violet-400/10",
+  situational: "text-teal-600 bg-teal-400/10",
+  motivation: "text-rose-600 bg-rose-400/10",
+  "conflict-resolution": "text-orange-600 bg-orange-400/10",
+};
+
 const ALL_TYPE_COLORS_DARK: Record<AllQuestionTypes, string> = {
   ...CONSULTING_TYPE_COLORS_DARK,
   ...PM_TYPE_COLORS_DARK,
-};
+  ...BEHAVIORAL_TYPE_COLORS_DARK_LOCAL,
+} as Record<AllQuestionTypes, string>;
 
 export default function CompanyQuestionsPage() {
   const params = useParams();

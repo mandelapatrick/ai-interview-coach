@@ -1,19 +1,20 @@
-import { Company, QUESTION_TYPE_LABELS, PM_QUESTION_TYPE_LABELS, InterviewTrack, QuestionType, PMQuestionType } from "@/types";
+import { Company, QUESTION_TYPE_LABELS, PM_QUESTION_TYPE_LABELS, BEHAVIORAL_QUESTION_TYPE_LABELS, InterviewTrack, QuestionType, PMQuestionType, BehavioralQuestionType } from "@/types";
 import { consultingQuestions } from "./consulting-questions";
 import { pmQuestions } from "./pm-questions";
+import { behavioralQuestions } from "./behavioral-questions";
 
 // Derive categories from actual questions for each company
 function getCategoriesForCompany(companySlug: string, track: InterviewTrack = "consulting"): string[] {
-  const questionPool = track === "consulting" ? consultingQuestions : pmQuestions;
+  const questionPool = track === "consulting" ? consultingQuestions : track === "behavioral" ? behavioralQuestions : pmQuestions;
   const companyQuestions = questionPool.filter((q) => q.companySlug === companySlug);
   const types = [...new Set(companyQuestions.map((q) => q.type))];
-  const labels = track === "consulting" ? QUESTION_TYPE_LABELS : PM_QUESTION_TYPE_LABELS;
+  const labels = track === "consulting" ? QUESTION_TYPE_LABELS : track === "behavioral" ? BEHAVIORAL_QUESTION_TYPE_LABELS : PM_QUESTION_TYPE_LABELS;
   return types.map((type) => labels[type as keyof typeof labels] || type);
 }
 
 // Get actual question count for each company
 function getQuestionCount(companySlug: string, track: InterviewTrack = "consulting"): number {
-  const questionPool = track === "consulting" ? consultingQuestions : pmQuestions;
+  const questionPool = track === "consulting" ? consultingQuestions : track === "behavioral" ? behavioralQuestions : pmQuestions;
   return questionPool.filter((q) => q.companySlug === companySlug).length;
 }
 
@@ -745,12 +746,27 @@ export const pmCompanies: Company[] = [
   },
 ];
 
-// Get all companies across both tracks
-export const allCompanies: Company[] = [...companies, ...pmCompanies];
+// Behavioral companies
+export const behavioralCompanies: Company[] = [
+  {
+    slug: "general",
+    name: "General Interview",
+    logo: "B",
+    description: "General behavioral interview questions for any role",
+    questionCount: getQuestionCount("general", "behavioral"),
+    categories: getCategoriesForCompany("general", "behavioral"),
+    track: "behavioral",
+  },
+];
+
+// Get all companies across all tracks
+export const allCompanies: Company[] = [...companies, ...pmCompanies, ...behavioralCompanies];
 
 // Get companies by track
 export function getCompaniesByTrack(track: InterviewTrack): Company[] {
-  return track === "consulting" ? companies : pmCompanies;
+  if (track === "consulting") return companies;
+  if (track === "behavioral") return behavioralCompanies;
+  return pmCompanies;
 }
 
 export function getCompanyBySlug(slug: string): Company | undefined {

@@ -2,7 +2,7 @@ export type InterviewFormat =
   | "candidate-led"   // Typical of Bain, BCG, LEK. User drives the structure.
   | "interviewer-led"; // Typical of McKinsey. AI drives with specific questions.
 
-export type InterviewTrack = "consulting" | "product-management";
+export type InterviewTrack = "consulting" | "product-management" | "behavioral";
 
 export type QuestionType =
   | "profitability"        // Revenue/Cost analysis
@@ -27,7 +27,15 @@ export type PMQuestionType =
   | "strategy"             // Market analysis, competitive positioning
   | "estimation";          // Market sizing, capacity planning
 
-export type AllQuestionTypes = QuestionType | PMQuestionType;
+export type BehavioralQuestionType =
+  | "tell-me-about-yourself"   // Introduction / elevator pitch
+  | "star-behavioral"          // "Tell me about a time..." STAR stories
+  | "strengths-weaknesses"     // Self-assessment questions
+  | "situational"              // "What would you do if..." hypotheticals
+  | "motivation"               // "Why this company?", career goals
+  | "conflict-resolution";     // Disagreements, difficult conversations
+
+export type AllQuestionTypes = QuestionType | PMQuestionType | BehavioralQuestionType;
 
 export type Difficulty = "easy" | "medium" | "hard";
 
@@ -134,8 +142,16 @@ export interface ConsultingScores {
   creativity: number;
 }
 
+// Behavioral scores (STAR method dimensions)
+export interface BehavioralScores {
+  situationContext: number;
+  taskOwnership: number;
+  actionDetail: number;
+  resultImpact: number;
+}
+
 // Assessment schema types
-export type AssessmentSchema = "product-sense" | "analytical-thinking" | "pm-generic" | "consulting";
+export type AssessmentSchema = "product-sense" | "analytical-thinking" | "behavioral" | "pm-generic" | "consulting";
 
 export const QUESTION_TYPE_LABELS: Record<QuestionType, string> = {
   profitability: "Profitability",
@@ -208,6 +224,34 @@ export const PM_TYPE_COLORS_DARK: Record<PMQuestionType, string> = {
   execution: "text-emerald-600 bg-emerald-400/10",
   strategy: "text-rose-600 bg-rose-400/10",
   estimation: "text-indigo-600 bg-indigo-400/10",
+};
+
+// Behavioral Interview Types
+export const BEHAVIORAL_QUESTION_TYPE_LABELS: Record<BehavioralQuestionType, string> = {
+  "tell-me-about-yourself": "Tell Me About Yourself",
+  "star-behavioral": "STAR Behavioral",
+  "strengths-weaknesses": "Strengths & Weaknesses",
+  situational: "Situational",
+  motivation: "Motivation",
+  "conflict-resolution": "Conflict Resolution",
+};
+
+export const BEHAVIORAL_TYPE_COLORS: Record<BehavioralQuestionType, string> = {
+  "tell-me-about-yourself": "text-sky-600 bg-sky-50",
+  "star-behavioral": "text-amber-600 bg-amber-50",
+  "strengths-weaknesses": "text-violet-600 bg-violet-50",
+  situational: "text-teal-600 bg-teal-50",
+  motivation: "text-rose-600 bg-rose-50",
+  "conflict-resolution": "text-orange-600 bg-orange-50",
+};
+
+export const BEHAVIORAL_TYPE_COLORS_DARK: Record<BehavioralQuestionType, string> = {
+  "tell-me-about-yourself": "text-sky-600 bg-sky-400/10",
+  "star-behavioral": "text-amber-600 bg-amber-400/10",
+  "strengths-weaknesses": "text-violet-600 bg-violet-400/10",
+  situational: "text-teal-600 bg-teal-400/10",
+  motivation: "text-rose-600 bg-rose-400/10",
+  "conflict-resolution": "text-orange-600 bg-orange-400/10",
 };
 
 // Dark background variants for consulting types
