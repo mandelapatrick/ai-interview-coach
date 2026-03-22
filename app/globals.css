@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme {
+  --font-display: 'Fraunces', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
 :root {
   /* Brand Colors - Modern Blue & Accent */
   --brand-navy-dark: #ffffff;
@@ -132,6 +137,14 @@ body {
   animation: pulse-ring 1.5s ease-in-out infinite;
 }
 
+/* Fraunces variable font axes */
+.font-display-soft {
+  font-variation-settings: 'SOFT' 100, 'WONK' 1;
+}
+.font-display-sharp {
+  font-variation-settings: 'SOFT' 0, 'WONK' 1;
+}
+
 /* Landing page utilities */
 details summary::-webkit-details-marker {
   display: none;
@@ -188,6 +201,7 @@ html {
   line-height: 0.9;
   color: #1b1b1b;
   transition: opacity 0.35s ease, transform 0.35s ease;
+  font-variation-settings: 'SOFT' 0, 'WONK' 1;
 }
 .how-big-number.changing {
   opacity: 0;
@@ -214,6 +228,7 @@ html {
   margin-bottom: 20px;
   transform: translateY(12px);
   transition: color 0.5s ease, transform 0.5s ease;
+  font-variation-settings: 'SOFT' 0, 'WONK' 1;
 }
 .how-step-item.active .step-title {
   color: #1b1b1b;
@@ -304,6 +319,7 @@ html {
   text-align: center;
   flex: 1;
   padding-left: 48px;
+  font-variation-settings: 'SOFT' 0, 'WONK' 1;
 }
 .faq-question-text em {
   font-style: italic;
@@ -354,6 +370,44 @@ html {
   transform: translateY(0);
 }
 
+/* Hero section responsive padding */
+.hero-section {
+  padding-top: 72px;
+  padding-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .hero-section {
+    padding-top: 16px;
+    padding-bottom: 60px;
+  }
+}
+
+/* Hero image cards responsive */
+.hero-card-ai {
+  left: 0;
+  width: 254px;
+  height: 176px;
+}
+.hero-card-candidate {
+  top: 136px;
+  left: 88px;
+  width: 254px;
+  height: 176px;
+}
+@media (min-width: 768px) {
+  .hero-card-ai {
+    left: -91px;
+    width: 520px;
+    height: 360px;
+  }
+  .hero-card-candidate {
+    top: 279px;
+    left: 181px;
+    width: 520px;
+    height: 360px;
+  }
+}
+
 /* Hero tooltip glassmorphism */
 .hero-tooltip {
   position: absolute;
@@ -362,10 +416,15 @@ html {
   background: rgba(255,255,255,0.4);
   border-radius: 12px;
   padding: 12px;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 8px;
   z-index: 5;
+}
+@media (min-width: 768px) {
+  .hero-tooltip {
+    display: flex;
+  }
 }
 
 /* ─── LANDING RESPONSIVE: 1080px ─── */
