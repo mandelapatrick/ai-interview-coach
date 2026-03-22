@@ -24,7 +24,7 @@ export default async function AdminLayout({
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Image src="/ace_logo.png" alt="Ace" width={65} height={40} />
+            <Image src="/landing/logo_navbar.svg" alt="Ace" width={65} height={40} />
             <h1 className="text-lg font-bold text-gray-900">Analytics Dashboard</h1>
           </div>
           <a href="/dashboard" className="text-sm text-gray-500 hover:text-[#4d7c0f] transition-colors">

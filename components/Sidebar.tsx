@@ -79,11 +79,11 @@ const navItems: NavItem[] = [
 
 const LogoMark = ({ size = "md" }: { size?: "sm" | "md" }) => (
   <Image
-    src="/ace_white_logo.png"
+    src="/landing/logo_navbar.svg"
     alt="Ace"
     width={size === "sm" ? 55 : 65}
     height={size === "sm" ? 34 : 40}
-    className="flex-shrink-0"
+    className="flex-shrink-0 brightness-0 invert"
   />
 );
 

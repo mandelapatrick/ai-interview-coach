@@ -7,7 +7,7 @@ export default function SignInPage() {
     <div className="min-h-screen bg-gray-50 flex items-center justify-center">
       <div className="bg-white p-8 rounded-xl border border-gray-200 w-full max-w-md shadow-sm">
         <Link href="/" className="flex items-center justify-center mb-8">
-          <Image src="/ace_logo.png" alt="Ace" width={65} height={40} />
+          <Image src="/landing/logo_navbar.svg" alt="Ace" width={65} height={40} />
         </Link>
 
         <h1 className="text-2xl font-bold text-gray-900 text-center mb-2 font-display">

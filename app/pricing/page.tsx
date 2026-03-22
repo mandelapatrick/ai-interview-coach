@@ -109,7 +109,7 @@ export default function PricingPage() {
       <nav className="border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="flex items-center">
-            <Image src="/ace_logo.png" alt="Ace" width={65} height={40} />
+            <Image src="/landing/logo_navbar.svg" alt="Ace" width={65} height={40} />
           </Link>
           <Link
             href="/dashboard"
